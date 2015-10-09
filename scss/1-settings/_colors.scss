@@ -3,10 +3,10 @@
  */
 
 // Brand Colors
-$white       : #FFFFFF !default;
-$red         : #DF1F26 !default;
-$dark-grey   : #231F20 !default;
-$cool-grey   : #97999b !default;
+$white       : #FFFFFF;
+$red         : #DF1F26;
+$dark-grey   : #231F20;
+$cool-grey   : #97999b;
 
 // Supporting Colors
 // $tbc         : #FFFFFF;
@@ -15,16 +15,15 @@ $cool-grey   : #97999b !default;
 // $tbc         : #FFFFFF;
 
 // Web Colors
-$keyline     : #E0E0E2 !default;
+$keyline     : #E0E0E2;
 // $tbc         : #FFFFFF;
 // $tbc         : #FFFFFF;
 // $tbc         : #FFFFFF;
 
 // We use these as default colors throughout
-$primary-color: $red !default;
-$secondary-color: #f5f5f5 !default;
-
-$alert-color: #F2DEDE !default;     // red
-$success-color: #DFF0D8 !default;   // green
-$warning-color: #FCF8E3 !default;   // yellow
-$info-color: #D9EDF7 !default;      // blue
+$primary-color: $red;
+$secondary-color: #f5f5f5;
+$alert-color: #F2DEDE;     // red
+$success-color: #DFF0D8;   // green
+$warning-color: #FCF8E3;   // yellow
+$info-color: #D9EDF7;      // blue
