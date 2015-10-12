@@ -1,73 +1,36 @@
-/*
-Error: Undefined variable: "$brand-primary-color".
-        on line 6 of src/scss/6-components/_c-button.scss
-        from line 23 of src/scss/main.scss
+/**
+ * Matalan Brand Colors
+ */
+/**
+ * Matalan Sizes
+ */
+/**
+ * Matalan Buttons
+ */
+.c-button {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  background-color: #DF1F26;
+  color: white;
+  -webkit-transition: background-color 0.2s;
+          transition: background-color 0.2s;
+  border: 1px solid #DF1F26; }
+  .c-button:hover, .c-button:focus {
+    background-color: #f5f5f5;
+    color: #DF1F26;
+    border: 1px solid #f5f5f5; }
 
-1: // Base sizes and branding colors
-2: @import "1-settings/_global";
-3: @import "1-settings/_colors";
-4: @import "1-settings/_sizes";
-5: 
-6: // Core style functions and mixins
-7: @import "2-tools/_functions";
-8: @import "2-tools/_mixins";
-9: 
-10: // Default fonts and cross browser fixes
-11: @import "3-generic/font-face";
+/**
+ *  Various developer rules for testing and such
+ */
+body {
+  background: #eee;
+  color: #444; }
 
-Backtrace:
-src/scss/6-components/_c-button.scss:6
-src/scss/main.scss:23
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:469:in `visit_variable'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `map'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:88:in `block in with_import'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:88:in `with_import'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/engine.rb:296:in `block in render_with_sourcemap'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/util.rb:503:in `silence_sass_warnings'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/engine.rb:296:in `render_with_sourcemap'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
-/Users/macuser/.rvm/gems/ruby-2.2.1/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
-/Users/macuser/.rvm/gems/ruby-2.2.1/bin/sass:23:in `load'
-/Users/macuser/.rvm/gems/ruby-2.2.1/bin/sass:23:in `<main>'
-/Users/macuser/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `eval'
-/Users/macuser/.rvm/gems/ruby-2.2.1/bin/ruby_executable_hooks:15:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$brand-primary-color\".\A         on line 6 of src/scss/6-components/_c-button.scss\A         from line 23 of src/scss/main.scss\A \A 1: // Base sizes and branding colors\A 2: @import \"1-settings/_global\";\A 3: @import \"1-settings/_colors\";\A 4: @import \"1-settings/_sizes\";\A 5: \A 6: // Core style functions and mixins\A 7: @import \"2-tools/_functions\";\A 8: @import \"2-tools/_mixins\";\A 9: \A 10: // Default fonts and cross browser fixes\A 11: @import \"3-generic/font-face\";"; }
+p {
+  outline: 1px solid; }
+
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBY0EsU0FBVTtFQUNSLE9BQU8sRUFBRSxZQUFZO0VBQ3JCLE9BQU8sRUFBRSxTQUE2QztFQUN0RCxlQUFlLEVBQUUsSUFBSTtFQUNyQixnQkFBZ0IsRUFOUSxPQUFjO0VBT3RDLEtBQUssRUFaYSxLQUFLO0VBYXZCLFVBQVUsRUFBRSxxQkFBcUI7RUFDakMsTUFBTSxFQUFFLGlCQUFrQztFQUMxQyxnQ0FDUTtJQUNOLGdCQUFnQixFQWRZLE9BQWdCO0lBZTVDLEtBQUssRUFiaUIsT0FBYztJQWNwQyxNQUFNLEVBQUUsaUJBQXdDOzs7OztBQ3RCcEQsSUFBSztFQUNILFVBQVUsRUFBRSxJQUFJO0VBQ2hCLEtBQUssRUFBRSxJQUFJOztBQUdiLENBQUU7RUFDQSxPQUFPLEVBQUUsU0FBUyIsInNvdXJjZXMiOlsiNi1jb21wb25lbnRzL19jLWJ1dHRvbi5zY3NzIiwiOS10cnVtcHMvX2RldmVsb3Blci5zY3NzIl0sIm5hbWVzIjpbXSwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlUm9vdCI6Ii9zb3VyY2UvIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBNYXRhbGFuIEJ1dHRvbnNcbiAqL1xuXG4vLyBEZWZhdWx0IGJ1dHRvbiBjb2xvcnNcbiRidXR0b24tYmFja2dyb3VuZC1jb2xvcjogJHByaW1hcnktY29sb3I7XG4kYnV0dG9uLWJvcmRlci1jb2xvcjogJHByaW1hcnktY29sb3I7XG4kYnV0dG9uLXRleHQtY29sb3I6IHdoaXRlO1xuXG4vLyBEZWZhdWx0IGJ1dHRvbiBob3ZlciBjb2xvcnNcbiRidXR0b24tYmFja2dyb3VuZC1ob3Zlci1jb2xvcjogJHNlY29uZGFyeS1jb2xvcjtcbiRidXR0b24tYm9yZGVyLWhvdmVyLWNvbG9yOiAkcHJpbWFyeS1jb2xvcjtcbiRidXR0b24tdGV4dC1ob3Zlci1jb2xvcjogJHByaW1hcnktY29sb3I7XG5cbi5jLWJ1dHRvbiB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcGFkZGluZzogKDAuNSAqICRiYXNlLXNwYWNpbmctdW5pdCkgJGJhc2Utc3BhY2luZy11bml0O1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGJhY2tncm91bmQtY29sb3I6ICRidXR0b24tYmFja2dyb3VuZC1jb2xvcjtcbiAgY29sb3I6ICRidXR0b24tdGV4dC1jb2xvcjtcbiAgdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciAwLjJzO1xuICBib3JkZXI6IDFweCBzb2xpZCAkYnV0dG9uLWJhY2tncm91bmQtY29sb3I7XG4gICY6aG92ZXIsXG4gICY6Zm9jdXMge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICRidXR0b24tYmFja2dyb3VuZC1ob3Zlci1jb2xvcjtcbiAgICBjb2xvcjogJGJ1dHRvbi10ZXh0LWhvdmVyLWNvbG9yO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICRidXR0b24tYmFja2dyb3VuZC1ob3Zlci1jb2xvcjtcbiAgfVxufVxuIiwiLyoqXG4gKiAgVmFyaW91cyBkZXZlbG9wZXIgcnVsZXMgZm9yIHRlc3RpbmcgYW5kIHN1Y2hcbiAqL1xuXG5ib2R5IHtcbiAgYmFja2dyb3VuZDogI2VlZTtcbiAgY29sb3I6ICM0NDQ7XG59XG5cbnAge1xuICBvdXRsaW5lOiAxcHggc29saWQ7XG59XG4iXX0= */
