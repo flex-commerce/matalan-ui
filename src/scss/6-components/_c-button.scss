@@ -1,0 +1,36 @@
+/**
+ * Matalan Buttons
+ */
+
+// Default button colors
+$button-background-color:  $brand-primary-color;
+$button-border-color:      $brand-primary-color;
+$button-text-color:        $white;
+
+// Default button hover colors
+$button-background-hover-color:  $brand-secondary-color;
+$button-border-hover-color:      $brand-primary-color;
+$button-text-hover-color:        $brand-primary-color;
+
+
+.c-button {
+    display:          inline-block;
+    padding:          (0.5 * $base-spacing-unit) $base-spacing-unit;
+    text-decoration:  none;
+    background-color: $button-background-color;
+    color:            $button-text-color;
+    transition:       background-color 0.2s;
+    border:           1px solid $button-background-color;
+
+    &:hover,
+    &:focus {
+        background-color: $button-background-hover-color;
+        color:            $button-text-hover-color;
+        border:           1px solid $button-background-hover-color;
+    }
+
+}
+
+
+
+

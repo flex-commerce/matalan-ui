@@ -2,11 +2,12 @@
  * Matalan Brand Colors
  */
 
-// Brand Colors
-$white       : #FFFFFF;
-$red         : #DF1F26;
-$dark-grey   : #231F20;
-$cool-grey   : #97999b;
+// Colors
+$color-white       : #FFFFFF;
+$color-red         : #DF1F26;
+$color-dark-grey   : #231F20;
+$color-cool-grey   : #97999b;
+
 
 // Supporting Colors
 // $tbc         : #FFFFFF;
@@ -15,15 +16,17 @@ $cool-grey   : #97999b;
 // $tbc         : #FFFFFF;
 
 // Web Colors
-$keyline     : #E0E0E2;
+$color-keyline     : #E0E0E2;
 // $tbc         : #FFFFFF;
 // $tbc         : #FFFFFF;
 // $tbc         : #FFFFFF;
 
 // We use these as default colors throughout
-$primary-color: $red;
-$secondary-color: #f5f5f5;
-$alert-color: #F2DEDE;     // red
+$brand-primary-color: $red;
+$brand-secondary-color: #f5f5f5; // light grey
+
+
+$error-color: #F2DEDE;     // red
 $success-color: #DFF0D8;   // green
 $warning-color: #FCF8E3;   // yellow
 $info-color: #D9EDF7;      // blue
