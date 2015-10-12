@@ -1,0 +1,10 @@
+# Ignore .DS_store files
+**.DS_Store
+
+# Ignore SASS map / cache files
+**.css.map
+**.sass-cache
+
+# Ignore vendor components
+node_modules
+bower_components
