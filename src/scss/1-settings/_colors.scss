@@ -4,7 +4,7 @@
 
 // Colors
 $color-white       : #FFFFFF;
-$color-red         : #DF1F26;
+$matalan-red         : #DF1F26;
 $color-dark-grey   : #231F20;
 $color-cool-grey   : #97999b;
 
@@ -22,8 +22,6 @@ $color-keyline     : #E0E0E2;
 // $tbc         : #FFFFFF;
 
 // We use these as default colors throughout
-<<<<<<< HEAD:src/scss/1-settings/_colors.scss
-$brand-primary-color: $red;
 $brand-secondary-color: #f5f5f5; // light grey
 
 
@@ -31,11 +29,9 @@ $error-color: #F2DEDE;     // red
 $success-color: #DFF0D8;   // green
 $warning-color: #FCF8E3;   // yellow
 $info-color: #D9EDF7;      // blue
-=======
-$primary-color  : $red;
+$primary-color  : $matalan-red;
 $secondary-color: #f5f5f5;
 $alert-color    : #F2DEDE;     // red
 $success-color  : #DFF0D8;   // green
 $warning-color  : #FCF8E3;   // yellow
 $info-color     : #D9EDF7;      // blue
->>>>>>> f3fc8ddc4e47851ea0b7c762e62a88b3f0d59e2d:scss/1-settings/_colors.scss

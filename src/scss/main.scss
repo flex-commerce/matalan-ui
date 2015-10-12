@@ -1,37 +1,37 @@
 // Base sizes and branding colors
-@import "1-settings._global";
-@import "1-settings._colors";
-@import "1-settings._sizes";
+@import "1-settings/_global";
+@import "1-settings/_colors";
+@import "1-settings/_sizes";
 
 // Core style functions and mixins
-@import "2-tools._functions";
-@import "2-tools._mixins";
+@import "2-tools/_functions";
+@import "2-tools/_mixins";
 
 // Default fonts and cross browser fixes
-@import "3-generic.font-face";
-@import "3-generic.normalize";
-@import "3-generic.reset";
+@import "3-generic/font-face";
+@import "3-generic/normalize";
+@import "3-generic/reset";
 
 // Global elements only containg html tags e.g. h1,li,ol,ul
-@import "4-elements._global";
+@import "4-elements/_global";
 
-// Objects e.g grid or media object
-@import "5-objects._o-grid";
+// Objects e/g grid or media object
+@import "5-objects/_o-grid";
 
-// More detailed components such as buttons, alerts etc.
-// @import "6-components._c-alert";
-@import "6-components._c-button";
-// @import "6-components._c-label";
+// More detailed components such as buttons, alerts etc/
+// @import "6-components/_c-alert";
+@import "6-components/_c-button";
+// @import "6-components/_c-label";
 
 // Scopes e.g. blog styles
-// @import "7-scopes._s-blog";
+// @import "7-scopes/_s-blog";
 
 // Themes e.g. color changes based on seasons or promotions
-// @import "8-themes._t-autumn";
-// @import "8-themes._t-winter";
-// @import "8-themes._t-christmas";
+// @import "8-themes/_t-autumn";
+// @import "8-themes/_t-winter";
+// @import "8-themes/_t-christmas";
 
 // IE fixes and temporatry hacks
-// @import "9-trumps._s-hacks";
-// @import "9-trumps._s-iex";
-// @import "9-trumps._s-shame";
+// @import "9-trumps/_s-hacks";
+// @import "9-trumps/_s-iex";
+// @import "9-trumps/_s-shame";
