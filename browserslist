@@ -1,0 +1,17 @@
+# Browsers that we support - this file picked up buy autoprefixer
+
+Chrome > 43
+
+Firefox > 38
+
+IE >= 9
+
+Last 2 Safari versions
+
+last 2 iOS versions
+
+Last 2 Android versions
+
+Last 2 ChromeAndroid versions
+
+> 2%

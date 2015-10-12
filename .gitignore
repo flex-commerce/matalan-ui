@@ -8,3 +8,6 @@
 # Ignore vendor components
 node_modules
 bower_components
+
+# Ignore built files
+dist
