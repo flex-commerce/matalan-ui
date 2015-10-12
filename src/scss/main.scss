@@ -1,3 +1,10 @@
+/*!
+ *  Matalan UI Kit Docblock
+ *  Survives minification via ! after opening asterisk
+ *
+ */
+
+
 // Base sizes and branding colors
 @import "1-settings/_global";
 @import "1-settings/_colors";
@@ -8,9 +15,9 @@
 @import "2-tools/_mixins";
 
 // Default fonts and cross browser fixes
-@import "3-generic/font-face";
-@import "3-generic/normalize";
 @import "3-generic/reset";
+@import "3-generic/normalize";
+@import "3-generic/font-face";
 
 // Global elements only containg html tags e.g. h1,li,ol,ul
 @import "4-elements/_global";

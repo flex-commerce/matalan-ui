@@ -27,6 +27,11 @@ module.exports = {
         hbPage: src + '/hbassets/data-page',
         hbHelpers: src + '/hbassets/helpers',
         hbPartials: src + '/hbassets/partials'
-    }
+    },
 
+    production: {
+        cssSrc: dest + '/css/*.css',
+        jsSrc: dest + '/js/*.js',
+        dest: dest
+    }
 };
