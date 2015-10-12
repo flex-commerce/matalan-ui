@@ -2,15 +2,18 @@
   "name": "UI_Kit",
   "description": "Matalan Direct Flex Commerce UI Kit",
   "version": "0.0.1",
-  "license": "",
+  "license": "Matalan license details goes here",
   "homepage": "",
-  "author": [{
-    "name": "Ian Harvey",
-    "email": "ian.harvey@matalandirect.com"
-  }, {
-    "name": "",
-    "email": ""
-  }],
+  "author": [
+    {
+      "name": "Ian Harvey",
+      "email": "ian.harvey@matalandirect.com"
+    },
+    {
+      "name": "",
+      "email": ""
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/flex-commerce/ui-kit"
@@ -21,8 +24,11 @@
     "gulp-autoprefixer": "^3.0.2",
     "gulp-foreach": "^0.1.0",
     "gulp-hb": "^2.6.5",
+    "gulp-header": "^1.7.1",
     "gulp-jsbeautifier": "^1.0.1",
+    "gulp-minify-css": "^1.2.1",
     "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.6.0",
