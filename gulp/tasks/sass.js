@@ -37,7 +37,6 @@ gulp.task('sass', function () {
       advanced: false
     }))
     .pipe(header(banner, {pkg: pkg}))
-    .pipe(header(banner, {pkg: pkg}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}));
