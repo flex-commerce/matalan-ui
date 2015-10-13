@@ -2,33 +2,7 @@
 // Base styles
 $btn-font-weight: 500;
 $border-width: 1px;
-$primary-button-background-color: red;
-$primary-button-text-color: green;
-$primary-button-border-color: $primary-button-text-color;
-$primary-button-background-hover-color: #ddd;
-$primary-button-text-hover-color: #ddd;
-$primary-button-border-hover-color: #ddd;
 
-@mixin tab-focus() {
-  // Default
-  outline: thin dotted;
-  // WebKit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-
-@mixin button-size($padding-y, $padding-x, $font-size, $line-height) {
-  padding: $padding-y $padding-x;
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
-@mixin button-variant($color, $background, $border) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-}
 
 .c-btn.c-btn-primary {
   @include button-variant($primary-color, $secondary-color, $secondary-color);
@@ -58,7 +32,7 @@ $primary-button-border-hover-color: #ddd;
   cursor: pointer;
   user-select: none;
   border: $border-width solid transparent;
-  @include button-size(12px, 24px, 1em, 1.1);
+  @include button-size(12px, 16px, 1em, 1.1);
 
   &,
   &:active,
@@ -113,7 +87,9 @@ fieldset[disabled] .c-btn {
 // Link buttons
 //
 // Make a button look and behave like a link
-//
+
+
+
 // Button Sizes
 //
 .c-btn-lg {
