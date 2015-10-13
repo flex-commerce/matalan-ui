@@ -4,34 +4,47 @@
 
 // Colors
 
-$white: #FFFFFF;
-$matalan-red: #DF1F26;
-$darkgrey: #231F20;
+$white: #fff;
+$black: #000;
+
+$matalan-red: #df1f26;
+$darkgrey: #231f20;
 $coolgrey: #97999b;
-
-
-// Supporting Colors
-// $tbc         : #FFFFFF;
-// $tbc         : #FFFFFF;
-// $tbc         : #FFFFFF;
-// $tbc         : #FFFFFF;
-
-// Web Colors
-$color-keyline: #E0E0E2;
-// $tbc         : #FFFFFF;
-// $tbc         : #FFFFFF;
-// $tbc         : #FFFFFF;
-//
-// We use these as default colors throughout
 
 $primary-color: $matalan-red;
 $secondary-color: #f5f5f5; // light grey
 
-$error-color: #F2DEDE; // red
-$success-color: #DFF0D8; // green
-$warning-color: #FCF8E3; // yellow
-$info-color: #D9EDF7; // blue
-$alert-color: #F2DEDE; // red
-$success-color: #DFF0D8; // green
-$warning-color: #FCF8E3; // yellow
-$info-color: #D9EDF7; // blue
+$primary-color-darken: mix($black, $matalan-red, 10%);
+$primary-color-darker: mix($black, $matalan-red, 20%);
+$primary-color-lighten: mix($white, $matalan-red, 10%);
+$primary-color-lighter: mix($white, $matalan-red, 20%);
+
+$secondary-color-darken: mix($black, $secondary-color, 10%);
+$secondary-color-darker: mix($black, $secondary-color, 20%);
+$secondary-color-lighten: mix($white, $secondary-color, 10%);
+$secondary-color-lighter: mix($white, $secondary-color, 20%);
+
+
+// Supporting Colors
+// $tbc         : $white;
+// $tbc         : $white;
+// $tbc         : $white;
+// $tbc         : $white;
+
+// Web Colors
+$color-keyline: #e0e0e2;
+// $tbc         : $white;
+// $tbc         : $white;
+// $tbc         : $white;
+//
+// We use these as default colors throughout
+
+
+// $error-color: #F2DEDE; // red
+// $success-color: #DFF0D8; // green
+// $warning-color: #FCF8E3; // yellow
+// $info-color: #D9EDF7; // blue
+// $alert-color: #F2DEDE; // red
+// $success-color: #DFF0D8; // green
+// $warning-color: #FCF8E3; // yellow
+// $info-color: #D9EDF7; // blue

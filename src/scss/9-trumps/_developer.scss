@@ -30,7 +30,7 @@ p {
 
 .row {
   width: 100%;
-  min-height: 30em;
+  min-height: 15em;
   overflow: hidden;
 }
 
@@ -45,4 +45,11 @@ p {
   width: 80%;
   float:left;
   padding: 10px;
+}
+
+
+
+// hacks & trumps
+.c-btn-grp-dropdown {
+  margin-bottom: 1em;
 }

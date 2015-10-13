@@ -1,52 +1,18 @@
 //
 // Base styles
-$btn-font-weight: 500;
-$border-width: 1px;
-
-
-.c-btn.c-btn-primary {
-  @include button-variant($primary-color, $secondary-color, $secondary-color);
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    @include button-variant($primary-color, white, $secondary-color);
-  }
-}
-.c-btn.c-btn-secondary {
-  @include button-variant(white, $primary-color, $primary-color);
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    @include button-variant($primary-color, white, $primary-color);
-  }
-}
+// $btn-font-weight: 500;
+// $border-width: 1px;
 
 .c-btn {
   display: inline-block;
-  font-weight: $btn-font-weight;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  border: $border-width solid transparent;
+  border: 1px solid transparent;
   @include button-size(12px, 16px, 1em, 1.1);
 
-  &,
   &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab-focus();
-    }
-  }
-
-  &:active,
-  &.active {
-    background-image: none;
-    outline: 0;
+  &.active,
+  &:focus,
+  &.focus {
+    @include tab-focus();
   }
 
   &.disabled,
@@ -57,8 +23,112 @@ $border-width: 1px;
 
 }
 
+
+.c-btn.c-btn-primary {
+  @include button-variant($primary-color, $secondary-color, $secondary-color-darken);
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include button-variant($primary-color, $white, $secondary-color-darken);
+  }
+}
+
+.c-btn.c-btn-secondary {
+  @include button-variant($white, $primary-color, $primary-color);
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include button-variant($primary-color, $white, $primary-color);
+  }
+}
+
+
+.c-btn-grp-dropdown {
+// split button dropdown
+
+  .c-btn-dropdown {
+    margin-left: -5px;
+    position: relative;
+
+    &:after {
+      content: '';
+      @include absolute(top -1px bottom -1px left -1px);
+      border-style: none none none solid;
+      border-width: 1px;
+    }
+  }
+
+  .c-btn-secondary:hover + .c-btn-dropdown {
+    &:after {
+      border-color: transparent;
+    }
+  }
+
+  .c-btn-primary:last-of-type {
+    &:after {
+      border-color: $coolgrey;
+    }
+  }
+
+}
+
+ .c-btn .caret {
+
+ }
+
+.c-btn-grp-dropdown {
+  .c-btn-dropdown {
+  // margin-left: 0;
+
+   // outline: 1px solid blue;
+  }
+}
+
+
+.c-btn:not(.c-btn-dropdown) .caret {
+   // margin-left: 12px;
+  // outline: 1px solid green;
+}
+
+// .c-btn .caret {
+//   margin-left: 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Future-proof disabling of clicks on `<a>` elements
-.c-btn.disaabled,
+.c-btn.disabled,
 fieldset[disabled] .c-btn {
   pointer-events: none;
 }
@@ -115,13 +185,4 @@ fieldset[disabled] .c-btn {
   margin-top: 5px;
 }
 
-// Specificity overrides
-// input[type="submit"],
-// input[type="reset"],
-// input[type="button"] {
-//   &.c-btn-block {
-//     width: 100%;
-//   }
-// }
 
-/* ============================================================== */
