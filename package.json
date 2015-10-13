@@ -31,6 +31,8 @@
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.3.6",
+    "gulp-scss-lint-stylish2": "^2.0.2",
     "gulp-sourcemaps": "^1.6.0",
     "require-dir": "^0.3.0"
   }

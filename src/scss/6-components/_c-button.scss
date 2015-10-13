@@ -1,171 +1,151 @@
-/**
- * Matalan Buttons
- */
+//
+// Base styles
+$btn-font-weight: 500;
+$border-width: 1px;
+$primary-button-background-color: red;
+$primary-button-text-color: green;
+$primary-button-border-color: $primary-button-text-color;
+$primary-button-background-hover-color: #ddd;
+$primary-button-text-hover-color: #ddd;
+$primary-button-border-hover-color: #ddd;
 
-$brand-primary-color: #DF1F26;
-$brand-secondary-color: #f5f5f5; // light grey
-// Default button colors
-$primary-button-background-color: #DF1F26; // $brand-primary-color;
-$primary-button-border-color: #DF1F26; // $brand-primary-color;
-$primary-button-text-color: #ffffff; // $white;
-$secondary-button-background-color: #f5f5f5; // $brand-secondary-color;
-$secondary-button-border-color: #f5f5f5; // $brand-secondary-color;
-$secondary-button-text-color: #DF1F26; // $brand-primary-color;
-// Default button hover colors
-$primary-button-background-hover-color: #ffffff; // $white;
-$primary-button-border-hover-color: #DF1F26; // $brand-primary-color;
-$primary-button-text-hover-color: #DF1F26; // $brand-primary-color;
-$secondary-button-background-hover-color: #ffffff; // $white;
-$secondary-button-border-hover-color: #E0E0E2; // $keyline-color;
-$secondary-button-text-hover-color: #DF1F26; // $brand-primary-color;
-
-$dropdown-btn-arrow-color: #fff;
-$dropdown-btn-arrow-color-alt: #fff;
-// We use these to set the size of the pip in dropdown buttons
-$button-arrow: rem-calc(9) !default;
-// We use these to style medium dropdown buttons
-$dropdown-btn-padding: $button-arrow * 6 + rem-calc(3);
-$dropdown-btn-arrow-size: $button-arrow - rem-calc(3);
-$dropdown-btn-arrow-opposite: $button-arrow * 2.5;
-$dropdown-btn-arrow-top: (-$button-arrow / 2) + rem-calc(2);
-
-// We use these to control different shared styles for Split Buttons
-$split-button-function-factor: 10%;
-$split-button-pip-color: #fff;
-$split-button-pip-color-alt: #fff;
-$split-button-active-bg-tint: rgba(0,0,0,0.1);
-$split-button-span-border-color: rgba(255,255,255,0.5);
-
-// We use these to control medium split buttons
-$split-button-padding: $button-arrow * 9;
-$split-button-span-width: $button-arrow * 5.5;
-$split-button-pip-size: $button-arrow - rem-calc(3);
-$split-button-pip-top: $button-arrow * 1.5;
-$split-button-pip-default-float: rem-calc(-6);
-
-@mixin c-btn-style($bg, $text, $border) {
-    background-color: $bg;
-    border: 1px solid $border;
-    color: $text;
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
-// button styles
+
+
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+}
+
+.c-btn.c-btn-primary {
+  @include button-variant($primary-color, $secondary-color, $secondary-color);
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include button-variant($primary-color, white, $secondary-color);
+  }
+}
+.c-btn.c-btn-secondary {
+  @include button-variant(white, $primary-color, $primary-color);
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include button-variant($primary-color, white, $primary-color);
+  }
+}
+
 .c-btn {
-    // default button styles
-    position: relative;
-    display: inline-block;
-    zoom: 1;
-    vertical-align: bottom;
-    padding: 12px 24px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.5s;
-    cursor: pointer;
-    // primary button styles
-    &.c-btn-primary {
-        @include c-btn-style($primary-button-background-color, $primary-button-text-color, $primary-button-border-color);
-        &:hover,
-        &:focus {
-            @include c-btn-style($primary-button-background-hover-color, $primary-button-text-hover-color, $primary-button-border-hover-color);
-        }
-        // primary dropdown settings
-        &.c-btn-dropdown,
-        &.c-btn-split {
-          // color of the dropdown arrow
-          &::after {
-            border-color: $primary-button-text-color transparent transparent transparent;
-          }
-          // reset hover state back to none for background, text and border
-          &:hover {
-            @include c-btn-style($primary-button-background-color, $primary-button-text-color, $primary-button-border-color);
-          }
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $border-width solid transparent;
+  @include button-size(12px, 24px, 1em, 1.1);
 
-          span {
-            &:after {
-              border-color: $primary-button-text-color transparent transparent transparent;
-            }
-          }
-        }
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus();
     }
-    // secondary button styles
-    &.c-btn-secondary {
-        @include c-btn-style($secondary-button-background-color, $secondary-button-text-color, $secondary-button-border-color);
-        &:hover,
-        &:focus {
-            @include c-btn-style($secondary-button-background-hover-color, $secondary-button-text-hover-color, $secondary-button-border-hover-color);
-        }
-        &.c-btn-dropdown,
-        &.c-btn-split {
-          // color of the dropdown arrow
-          &::after {
-            border-color: $secondary-button-text-hover-color transparent transparent transparent;
-          }
-          // reset hover state back to none for background, text and border
-          &:hover {
-            @include c-btn-style($secondary-button-background-color, $secondary-button-text-hover-color, $secondary-button-border-color);
-          }
+  }
 
-          span {
-            &:after {
-              border-color: $secondary-button-text-color transparent transparent transparent;
-            }
-          }
-        }
-    }
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-    // dropdown button default styles
-    &.c-btn-dropdown {
-      position: relative;
-      padding-#{$opposite-direction}: $dropdown-btn-padding;
-      // This creates the base styles for the arrow
-      &::after {
-          border-color: $dropdown-btn-arrow-color transparent transparent transparent;
-          border-style: solid;
-          content: "";
-          display: block;
-          height: 0;
-          position: absolute;
-          top: 50%;
-          width: 0;
-          border-width: $dropdown-btn-arrow-size;
-          #{$opposite-direction}: $dropdown-btn-arrow-opposite;
-          margin-top: $dropdown-btn-arrow-top;
-      }
-    }
+  &:active,
+  &.active {
+    background-image: none;
+    outline: 0;
+  }
 
-    &.c-btn-split {
-      position: relative;
-      padding-#{$opposite-direction}: $split-button-padding;
-      // Styling for the split arrow clickable area
-      span {
-        width: $split-button-span-width;
-        display: block;
-        height: 100%;
-        position: absolute;
-        #{$opposite-direction}: 0;
-        top: 0;
-        border-#{$default-float}: solid 1px;
+  &.disabled,
+  &:disabled,
+  fieldset[disabled] & {
+    opacity: .65;
+  }
 
-        // Building the triangle pip indicator
-        &:after {
-          position: absolute;
-          content: "";
-          width: 0;
-          height: 0;
-          display: block;
-          border-style: inset;
-          top: 50%;
-          #{$default-float}: 50%;
-          border-top-style: solid;
-          border-width: $split-button-pip-size;
-          margin-#{$default-float}: $split-button-pip-default-float;
-          top: 48%;
-          border-#{$default-float}-color: rgba(255,255,255,0.5);
-        }
-
-        &:active { background-color: $split-button-active-bg-tint; }
-      }
-    }
 }
+
+// Future-proof disabling of clicks on `<a>` elements
+.c-btn.disaabled,
+fieldset[disabled] .c-btn {
+  pointer-events: none;
+}
+
+//
+// Alternate buttons
+//
+.c-btn-primary {
+  // @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.c-btn-secondary {
+  // @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+// Remove all backgrounds
+.c-btn-primary-outline {
+  // @include button-outline-variant($btn-primary-bg);
+}
+
+.c-btn-secondary-outline {
+  // @include button-outline-variant($btn-secondary-border);
+}
+
+//
+// Link buttons
+//
+// Make a button look and behave like a link
+//
+// Button Sizes
+//
+.c-btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  // @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+
+.c-btn-sm {
+  // line-height: ensure proper height of button next to small input
+  // @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+}
+
+//
+// Block button
+//
+.c-btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.c-btn-block + .c-btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+// input[type="submit"],
+// input[type="reset"],
+// input[type="button"] {
+//   &.c-btn-block {
+//     width: 100%;
+//   }
+// }
+
+/* ============================================================== */

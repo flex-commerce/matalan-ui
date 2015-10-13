@@ -6,6 +6,8 @@ var sass          = require('gulp-ruby-sass');
 var sourcemaps    = require('gulp-sourcemaps');
 var autoprefixer  = require('gulp-autoprefixer');
 var minifyCSS     = require('gulp-minify-css');
+// var scssLint      = require('gulp-scss-lint');
+// var stylish       = require('gulp-scss-lint-stylish2');
 var header        = require('gulp-header');
 var handleErrors  = require('../util/handleErrors');
 var config        = require('../config').sass;
@@ -20,6 +22,16 @@ var banner = [
   ' */',
   ''
 ].join('\n');
+
+gulp.task('scss-lint', function()
+{
+  var reporter = stylish();
+  gulp.src('/scss/**/*.scss')
+  .pipe( scssLint({ customReport: reporter.issues }) )
+  .pipe( reporter.printSummary );
+});
+
+
 
 gulp.task('sass', function () {
 
