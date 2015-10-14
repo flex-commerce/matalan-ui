@@ -2,127 +2,180 @@
 <html class="no-js" lang="">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>UI Kit</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>UI Kit</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Matalan Direct - Flex Commerce UI Kit</h1>
-        <h2>Buttons (_components/_buttons.scss)</h2>
-        <div class="row">
-            <div class="grid-20">
-                <h3>Button styles</h3>
-                <p>Buttons default to light grey style, but a number of functional classes can be applied for different color sytles</p>
-            </div>
-            <div class="grid-80">
-                <div class="button-group">
-                    <h3>Primary Buttons
-                        <span class="caret"></span>
-                    </h3>
-                    <a class="c-btn c-btn-primary">Default</a>
-                    <a class="c-btn c-btn-primary hover" data-dropdown="drop">Default hover</a>
-                    <a class="c-btn c-btn-primary focus">Default focus</a>
-                    <a class="c-btn c-btn-primary disabled">Default disabled</a>
-                    <h3>Secondary Buttons
-                        <span class="caret"></span>
-                    </h3>
-                    <a class="c-btn c-btn-secondary">Default</a>
-                    <a class="c-btn c-btn-secondary hover">Default hover</a>
-                    <a class="c-btn c-btn-secondary focus">Default focus</a>
-                    <a class="c-btn c-btn-secondary disabled">Default disabled</a>
-                </div>
-            </div>
-            <div class="grid-20">
-                <h3>Dropdown styling and ting</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-            </div>
-            <div class="grid-80">
-                <h3>Dropdown Buttons
-                    <span class="caret"></span>
-                </h3>
-                <a class="c-btn c-btn-primary c-btn-dropdown">Default<span class="caret"></span></a>
-                <a class="c-btn c-btn-secondary c-btn-dropdown">Default<span class="caret"></span></a>
-                <h3>Split Dropdown Buttons
-                    <span class="caret"></span>
-                </h3>
-                <div class="c-btn-group c-btn-grp-dropdown">
-                    <a class="c-btn c-btn-primary">Default 1</a>
-                    <a class="c-btn c-btn-primary c-btn-dropdown">
-                        <span class="caret"></span>
-                    </a>
-                </div>
-                <div class="c-btn-group c-btn-grp-dropdown">
-                    <a class="c-btn c-btn-primary">Default 2</a>
-                    <a class="c-btn c-btn-primary c-btn-dropdown">
-                        <span class="caret"></span>
-                    </a>
-                </div>
-                <div class="c-btn-group c-btn-grp-dropdown">
-                    <a class="c-btn c-btn-secondary">Default 3</a>
-                    <a class="c-btn c-btn-secondary c-btn-dropdown">
-                        <span class="caret"></span>
-                    </a>
-                </div>
-                <div class="c-btn-group c-btn-grp-dropdown">
-                    <a class="c-btn c-btn-secondary">Default 4</a>
-                    <a class="c-btn c-btn-secondary c-btn-dropdown">
-                        <span class="caret"></span>
-                    </a>
-                </div>
-            </div>
+  <div class="container">
+    <h1>Matalan Direct - Flex Commerce UI Kit</h1>
+    <h2>Buttons (_components/_buttons.scss)</h2>
+
+
+    <div class="row">
+      <div class="grid-20">
+        <h3>Button styles</h3>
+        <p>Buttons default to light grey style, but a number of functional classes can be applied for different color sytles</p>
+      </div>
+      <div class="grid-80">
+        <div class="button-group">
+          <h3>Primary Buttons </h3>
+          <a class="c-btn c-btn-primary">Default</a>
+          <a class="c-btn c-btn-primary hover" data-dropdown="drop">Default hover</a>
+          <a class="c-btn c-btn-primary focus">Default focus</a>
+          <a class="c-btn c-btn-primary disabled">Default disabled</a>
+          <h3>Secondary Buttons </h3>
+          <a class="c-btn c-btn-secondary">Default</a>
+          <a class="c-btn c-btn-secondary hover">Default hover</a>
+          <a class="c-btn c-btn-secondary focus">Default focus</a>
+          <a class="c-btn c-btn-secondary disabled">Default disabled</a>
         </div>
-        <div class="row">
-            <h2>Labels (_components/_label.scss)</h2>
-            <div class="grid-20">
-                <h3>Labels & Badges</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-            </div>
-            <div class="grid-80">
-                <h3>Labels
-                    <span class="caret"></span>
-                </h3>
-                <span class="c-lbl c-lbl-primary">Default</span>
-                <span class="c-lbl c-lbl-secondary">Default</span>
-                <a class="c-lbl c-lbl-primary">Default</a>
-                <a class="c-lbl c-lbl-secondary">Default</a>
-                <h3>Badges
-                    <span class="caret"></span>
-                </h3>
-                <span class="c-lbl c-lbl-primary c-lbl-bdg">200</span>
-                <span class="c-lbl c-lbl-secondary c-lbl-bdg">100</span>
-            </div>
-        </div>
-        <div class="row">
-            <h2>Progress Bars (_components/_progress.scss)</h2>
-            <div class="grid-20">
-                <h3>Progress bars</h3>
-                <p>Progress Bars are available in gradient, stripped and stacked versions. </p>
-            </div>
-            <div class="grid-80">
-                <h3>Basic
-                    <span class="caret"></span>
-                </h3>
-                <progress class="c-progress" value="75" max="100">
-                    <div class="c-progress">
-                        <span class="c-progress-bar" style="width: 75%;">75%</span>
-                    </div>
-                </progress>
-                <h3>Striped
-                    <span class="caret"></span>
-                </h3>
-                <progress class="c-progress c-progress-striped " value="75" max="100">
-                    <div class="c-progress">
-                        <span class="c-progress-bar" style="width: 75%;">75%</span>
-                    </div>
-                </progress>
-            </div>
-        </div>
+      </div>
     </div>
+
+
+    <div class="row">
+      <div class="grid-20">
+        <h3>Dropdown styling and ting</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+      </div>
+      <div class="grid-80">
+        <h3>Dropdown Buttons</h3>
+        <div class="grid-50">
+          <a class="c-btn c-btn-primary c-btn-dropdown">Default<span class="caret"></span></a>
+        </div>
+        <div class="grid-50">
+          <a class="c-btn c-btn-secondary c-btn-dropdown">Default<span class="caret"></span></a>
+        </div>
+        <h3>Split Dropdown Buttons</h3>
+        <div class="grid-50">
+          <div class="c-btn-grp-dropdown">
+            <a class="c-btn c-btn-primary">Default 1</a>
+            <a class="c-btn c-btn-primary c-btn-dropdown">
+              <span class="caret"></span>
+            </a>
+          </div>
+        </div>
+        <div class="grid-50">
+          <div class="c-btn-grp-dropdown">
+            <a class="c-btn c-btn-secondary">Default 2</a>
+            <a class="c-btn c-btn-secondary c-btn-dropdown">
+              <span class="caret"></span>
+            </a>
+          </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="grid-20">
+        <h3>Button groups</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+      </div>
+      <div class="grid-80">
+        <h3>Button Groups</h3>
+        <div class="grid-50">
+          <div class="o-btn-group">
+            <a class="c-btn c-btn-primary">Grp 1</a>
+            <a class="c-btn c-btn-primary">Grp 2</a>
+            <a class="c-btn c-btn-primary c-btn-dropdown">Default<span class="caret"></span></a>
+            <div class="c-btn-grp-dropdown">
+              <a class="c-btn c-btn-primary">Grp 3</a>
+              <a class="c-btn c-btn-primary c-btn-dropdown">
+                <span class="caret"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-50">
+          <div class="o-btn-group">
+            <a class="c-btn c-btn-secondary">Grp 4</a>
+            <a class="c-btn c-btn-secondary">Grp 5</a>
+            <a class="c-btn c-btn-secondary">Grp 6</a>
+            <a class="c-btn c-btn-secondary">Grp 7</a>
+            <a class="c-btn c-btn-secondary">Grp 8</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-20">
+        <h3>Button groups</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+      </div>
+      <div class="grid-80">
+        <h3>Button Bars</h3>
+        <div class="o-btn-group">
+          <div class="o-btn-group">
+            <a class="c-btn c-btn-secondary">Grp 4</a>
+            <a class="c-btn c-btn-primary">Grp 5</a>
+            <a class="c-btn c-btn-primary">Grp 6</a>
+            <a class="c-btn c-btn-secondary">Grp 4</a>
+          </div>
+
+          <div class="o-btn-group">
+            <a class="c-btn c-btn-secondary">Grp 4</a>
+            <a class="c-btn c-btn-secondary c-btn-dropdown">Default<span class="caret"></span></a>
+            <div class="c-btn-grp-dropdown">
+              <a class="c-btn c-btn-secondary">Grp 3</a>
+              <a class="c-btn c-btn-secondary c-btn-dropdown">
+                <span class="caret"></span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="row">
+      <h2>Labels (_components/_label.scss)</h2>
+      <div class="grid-20">
+        <h3>Labels &amp; Badges</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+      </div>
+      <div class="grid-80">
+        <h3>Labels </h3>
+        <span class="c-lbl c-lbl-primary">Default</span>
+        <span class="c-lbl c-lbl-secondary">Default</span>
+        <a class="c-lbl c-lbl-primary">Default</a>
+        <a class="c-lbl c-lbl-secondary">Default</a>
+        <h3>Badges </h3>
+        <span class="c-lbl c-lbl-primary c-lbl-bdg">200</span>
+        <span class="c-lbl c-lbl-secondary c-lbl-bdg">100</span>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h2>Progress Bars (_components/_progress.scss)</h2>
+      <div class="grid-20">
+        <h3>Progress bars</h3>
+        <p>Progress Bars are available in gradient, stripped and stacked versions. </p>
+      </div>
+      <div class="grid-80">
+        <h3>Basic</h3>
+        <progress class="c-progress" value="75" max="100">
+          <div class="c-progress">
+            <span class="c-progress-bar" style="width: 75%;">75%</span>
+          </div>
+        </progress>
+        <h3>Striped</h3>
+        <progress class="c-progress c-progress-striped " value="75" max="100">
+          <div class="c-progress">
+            <span class="c-progress-bar" style="width: 75%;">75%</span>
+          </div>
+        </progress>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
