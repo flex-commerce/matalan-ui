@@ -23,10 +23,7 @@ module.exports = {
     markup: {
         src: src + '/htdocs/*.{html,hbs}',
         dest: dest,
-        hbGlobal: src + '/hbassets/data-global',
-        hbPage: src + '/hbassets/data-page',
-        hbHelpers: src + '/hbassets/helpers',
-        hbPartials: src + '/hbassets/partials'
+        hbHelpers: src + '/hb-helpers/*.js',
     },
 
     production: {

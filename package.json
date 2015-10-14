@@ -34,6 +34,7 @@
     "gulp-scss-lint": "^0.3.6",
     "gulp-scss-lint-stylish2": "^2.0.2",
     "gulp-sourcemaps": "^1.6.0",
+    "helper-lorem": "^0.1.1",
     "require-dir": "^0.3.0"
   }
 }

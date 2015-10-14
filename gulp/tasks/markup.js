@@ -19,10 +19,11 @@ gulp.task('markup', function () {
     return gulp
         .src('./src/htdocs/*.html')
         .pipe(hb({
-            helpers: './src/assets/helpers/*.js',
+            helpers: config.hbHelpers,
             partials: './src/htdocs/*.hbs',
             bustCache: true
         }))
+        .on('error', handleErrors)
         .pipe(prettify({config: '.jsbeautifyrc'}))
         .pipe(gulp.dest(config.dest))
         .pipe(browserSync.reload({stream:true}));

@@ -24,6 +24,10 @@ p {
   font-weight: 300;
 }
 
+
+
+// fake grid for ui kit
+
 .container {
   max-width:1024px;
   margin: 0 auto;
@@ -34,13 +38,17 @@ p {
   width: 100%;
   min-height: 15em;
   overflow: hidden;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 2em;
 }
 
 .grid-20 {
   width: 20%;
   float: left;
   padding: 10px 10px 10px 0;
-
+  p {
+    font-size: 80%;
+  }
 }
 
 .grid-80 {
