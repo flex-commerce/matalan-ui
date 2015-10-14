@@ -1,7 +1,7 @@
 'use strict';
 
-var loremIpsum = require('helper-lorem/node_modules/lorem-ipsum');
-var extend = require('helper-lorem/node_modules/extend-shallow');
+var loremIpsum = require('lorem-ipsum');
+var extend = require('extend-shallow');
 
 module.exports = function lorem(locals) {
   var context = extend({}, this && this.context, locals);

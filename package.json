@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.9.11",
+    "extend-shallow": "^2.0.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
     "gulp-foreach": "^0.1.0",
@@ -34,7 +35,7 @@
     "gulp-scss-lint": "^0.3.6",
     "gulp-scss-lint-stylish2": "^2.0.2",
     "gulp-sourcemaps": "^1.6.0",
-    "helper-lorem": "^0.1.1",
+    "lorem-ipsum": "^1.0.3",
     "require-dir": "^0.3.0"
   }
 }
