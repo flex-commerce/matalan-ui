@@ -1,0 +1,98 @@
+$list-padding: rem-calc(12 16);
+$list-ui-active-bg: $secondary-color;
+$list-ui-active-border: $primary-color;
+$list-border: $coolgrey;
+
+
+@mixin not-list-heading {
+  &:not(.o-list-heading):hover,
+  &:not(.o-list-heading).active {
+    @content;
+  }
+}
+
+
+.o-list-text {
+  line-height: $base-line-height;
+  padding-left: 1.5em;
+  list-style: square;
+
+  > li {
+    margin-bottom: rem-calc(6);
+  }
+}
+
+
+.o-list-inline {
+  > li {
+    display: inline-block;
+  }
+}
+
+
+.o-list-inline__delimited > li + li {
+  &:before {
+    content: '/';
+    display: inline-block;
+    width: rem-calc(10);
+    opacity: .5;
+  }
+}
+
+
+.o-list-block {
+  .o-list__item {
+    position: relative;
+    display: block;
+    padding: $list-padding;
+  }
+}
+
+
+.o-list-ui {
+  .o-list__item {
+    display: block;
+    padding: $list-padding;
+
+    @include not-list-heading {
+      color: $primary-color;
+      background-color: $list-ui-active-bg;
+    }
+  }
+}
+
+
+.o-list-ui.o-list--bordered {
+  .o-list__item {
+    border: 1px solid $coolgrey;
+    margin-top: rem-calc(-1);
+
+    @include not-list-heading {
+      position: relative;
+      z-index: 2; // Place active items above their siblings for proper border styling
+      border-color: $list-ui-active-border;
+    }
+  }
+}
+
+
+.o-list--bordered {
+  > .o-list__item {
+    margin-top: -.0625rem;
+    border: .0625rem solid $list-border;
+  }
+}
+
+
+.o-list--vertical-sep {
+  > .o-list__item:not(:last-of-type) {
+    border-bottom: .0625rem solid $list-border;
+  }
+}
+
+
+// temp styles, to be continued
+.o-list-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}

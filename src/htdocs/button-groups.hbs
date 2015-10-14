@@ -1,48 +1,63 @@
+<h2>Button Groups
+  <small>(_objects/_o-button-grp.scss)</small>
+</h2>
 <div class="row">
-  <h2>Button Groups <small>(_objects/_o-button-grp.scss)</small></h2>
-
   <div class="grid-20">
     <h3>Button groups</h3>
-    <p>{{lorem count="2" unit="words"}}</p>
+    <p>{{lorem count="5"}}</p>
   </div>
-
   <div class="grid-80">
     <h3>Button Groups</h3>
-
     <div class="grid-50">
       <div class="o-btn-group">
-
-        <a class="c-btn c-btn-primary">Grp 1</a>
-        <a class="c-btn c-btn-primary">Grp 2</a>
-        <a class="c-btn c-btn-primary c-btn-dropdown">Default<span class="caret"></span></a>
-
+        {{# times 2}}
+        <a class="c-btn c-btn-primary">{{lorem}}</a> {{/ times}}
+        <a class="c-btn c-btn-primary c-btn-dropdown">{{lorem}}<span class="caret"></span></a>
         <div class="c-btn-grp-dropdown">
-          <a class="c-btn c-btn-primary">Grp 3</a>
+          <a class="c-btn c-btn-primary">{{lorem}}</a>
           <a class="c-btn c-btn-primary c-btn-dropdown">
             <span class="caret"></span>
           </a>
         </div>
-
       </div>
     </div>
-
-
     <div class="grid-50">
       <div class="o-btn-group">
-
-        {{# times 3}}
-          <a class="c-btn c-btn-secondary">Grp {{this}}</a>
-        {{/ times}}
-
+        {{# times 2}}
+        <a class="c-btn c-btn-secondary">{{lorem}}</a> {{/ times}}
         <div class="c-btn-grp-dropdown">
-          <a class="c-btn c-btn-secondary">Grp 3</a>
+          <a class="c-btn c-btn-secondary">{{lorem}}</a>
           <a class="c-btn c-btn-secondary c-btn-dropdown">
             <span class="caret"></span>
           </a>
         </div>
-
       </div>
     </div>
-
+  </div>
+</div>
+<div class="row">
+  <div class="grid-20">
+    <h3>Button groups Vert</h3>
+    <p>{{lorem count="5"}}</p>
+  </div>
+  <div class="grid-80">
+    <h3>Button Groups</h3>
+    <div class="row">
+      <h3>Button Groups Vertical</h3>
+      <div class="grid-50">
+        <div class="o-btn-group-vertical">
+          {{# times 2}}
+          <a class="c-btn c-btn-primary">{{lorem}}</a> {{/ times}}
+          <a class="c-btn c-btn-primary c-btn-dropdown">{{lorem}}<span class="caret"></span></a>
+        </div>
+      </div>
+      <div class="grid-50">
+        <div class="o-btn-group-vertical">
+          {{# times 2}}
+          <a class="c-btn c-btn-secondary">{{lorem}}</a> {{/ times}}
+          <a class="c-btn c-btn-secondary c-btn-dropdown">{{lorem}}<span class="caret"></span></a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

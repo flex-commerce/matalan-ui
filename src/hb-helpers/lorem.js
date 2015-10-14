@@ -3,7 +3,7 @@
 var loremIpsum = require('lorem-ipsum');
 var extend = require('extend-shallow');
 
-module.exports = function lorem(locals) {
+module.exports = function(locals) {
   var context = extend({}, this && this.context, locals);
 
   // Handlebars `root`

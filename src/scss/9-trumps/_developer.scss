@@ -3,7 +3,8 @@
  */
 
 body {
-  background-size: #e0e0e0
+  background: #fcfcfc;
+  color: #333;
 }
 
 h2 {
@@ -25,6 +26,16 @@ p {
 }
 
 
+// highlighters
+ ul, ol {
+  // outline: 1px dotted red;
+  // outline-offset: 3px;
+ }
+
+
+
+
+
 
 // fake grid for ui kit
 
@@ -40,7 +51,14 @@ p {
   overflow: hidden;
   border-bottom: 1px solid #aaa;
   padding-bottom: 2em;
+  .row {
+    border-style: none;
+    padding-bottom: 0;
+    min-height: 0;
+  }
 }
+
+
 
 .grid-20 {
   width: 20%;
@@ -64,3 +82,14 @@ p {
   padding: 10px;
 }
 
+.grid-33 {
+  width: 33%;
+  float:left;
+  padding: 10px;
+}
+
+.grid-66 {
+  width: 66%;
+  float:left;
+  padding: 10px;
+}
