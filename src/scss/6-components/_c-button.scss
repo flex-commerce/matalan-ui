@@ -2,48 +2,55 @@
 // Base styles
 // $btn-font-weight: 500;
 // $border-width: 1px;
+
 .c-btn {
   display: inline-block;
   border: 1px solid transparent;
   @include button-size(12px, 16px, 1em, 1.1);
+
   &:active,
   &.active,
   &:focus,
   &.focus {
     @include tab-focus();
   }
+
   &.disabled,
   &:disabled,
   fieldset[disabled] & {
     opacity: .65;
   }
+
 }
 
+
 .c-btn.c-btn-primary {
-  @include button-variant($primary-color, $secondary-color, $secondary-color);
+  @include primary-style();
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include button-variant($primary-color, $white, $secondary-color);
+    @include primary-style(hover);
   }
 }
 
 .c-btn.c-btn-secondary {
-  @include button-variant($white, $primary-color, $primary-color);
+  @include secondary-style(null);
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include button-variant($primary-color, $white, $primary-color);
+    @include secondary-style(hover);
   }
 }
 
 .c-btn-grp-dropdown {
-  // split button dropdown
+// split button dropdown
+
   .c-btn-dropdown {
     margin-left: -5px;
     position: relative;
+
     &:after {
       content: '';
       @include absolute(top -1px bottom -1px left -1px);
@@ -51,11 +58,13 @@
       border-width: 1px;
     }
   }
+
   .c-btn-secondary:hover + .c-btn-dropdown {
     &:after {
       border-color: transparent;
     }
   }
+
   .c-btn-primary:last-of-type {
     &:after {
       border-color: $coolgrey;

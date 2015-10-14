@@ -1,0 +1,57 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+//
+@mixin label-variant($color) {
+    background-color: $color;
+    &[href] {
+        &:hover,
+        &:focus {
+            background-color: darken($color, 10%);
+        }
+    }
+}
+
+.c-lbl {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    padding: 5px 20px;
+    @include border-radius();
+    // Empty labels collapse automatically
+    &:empty {
+        display: none;
+    }
+}
+
+// Add hover effects, but only for links
+a.c-lbl {
+
+}
+
+// Label badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+.c-lbl-bdg {
+    padding-left: .6em;
+    padding-right: .6em;
+    border-radius: 1rem;
+}
+
+// Colors
+//
+// Contextual variations (linked labels get darker on :hover).
+.c-lbl-primary {
+    @include primary-style();
+}
+
+.c-lbl-secondary {
+    @include secondary-style();
+}
