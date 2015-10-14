@@ -25,22 +25,22 @@
 
 
 .c-btn.c-btn-primary {
-  @include button-variant($primary-color, $secondary-color, $secondary-color-darken);
+  @include primary-style();
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include button-variant($primary-color, $white, $secondary-color-darken);
+    @include primary-style(hover);
   }
 }
 
 .c-btn.c-btn-secondary {
-  @include button-variant($white, $primary-color, $primary-color);
+  @include secondary-style(null);
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include button-variant($primary-color, $white, $primary-color);
+    @include secondary-style(hover);
   }
 }
 
