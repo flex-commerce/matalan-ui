@@ -1,0 +1,131 @@
+/* Copyright 2013-2015 etc Chris Tabor. Licensed under MIT. */
+
+// colors
+
+$inactive: #ccc;
+$active: $primary-color;
+$hover: #5671d0;
+$step-danger: #d3140f;
+$step-warning: #edb10a;
+$step-info: #5b32d6;
+
+// sizing
+
+$donut-size: 100px;
+$donut-line-thickness: 5px;
+$border-thickness: 5px;
+$darken-amount: 30%;
+
+// misc
+$mobile-size: 400px;
+
+@mixin donut-style($state, $color) {
+    //background-color: $color;
+    border: $border-thickness solid $color;
+    color: $color;
+    z-index: -1;
+    @if $state == 'completed' {
+        color: white;
+        background-color: $color;
+        content: "1";
+    }
+
+    &:before,
+    &:after {
+        background-color: $primary-color;
+        z-index: -2;
+    }
+}
+.flexer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flexer-element {
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    flex: 1;
+}
+.c-progress-checkout {
+    @extend .flexer;
+    margin: 0;
+    padding: 0;
+    font-size: 80%;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    > li {
+        @extend .flexer-element;
+        list-style: none;
+        text-align: center;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        text-overflow: ellipsis;
+        color: $inactive;
+        display: block;
+    }
+    > li .donut {
+        border-radius: 1000px;
+        width: $donut-size;
+        height: $donut-size;
+        background-color: white;
+        display: block;
+        margin: 0 auto 0.5em auto;
+        border: $border-thickness solid $inactive;
+        color: $inactive;
+        font-size: 2em;
+        line-height: 3.5em;
+    }
+
+    // line connectors
+
+    > li .donut:before,
+    > li .donut:after {
+        display: block;
+        position: absolute;
+        top: $donut-size / 2 - $border-thickness / 2;
+        width: 100%;
+        height: $donut-line-thickness;
+        content: '';
+        background-color: $inactive;
+        z-index:-2;
+    }
+
+    > li:first-child .donut:before,
+    > li:first-child .donut:after {
+        width:100%;
+    }
+
+    > li:last-child .donut:before,
+    > li:last-child .donut:after {
+        width:50%;
+    }
+
+    // completed state
+    //
+    > li.completed {
+        color: $active;
+        .donut {
+            @include donut-style("completed", $active);
+        }
+    }
+
+    > li.active {
+        color: $active;
+        .donut {
+            @include donut-style("active", $active);
+        }
+    }
+
+}
+
+@media handheld, screen and (max-width: $mobile-size) {
+    .c-progress-checkout {
+        font-size: 60%;
+    }
+}
