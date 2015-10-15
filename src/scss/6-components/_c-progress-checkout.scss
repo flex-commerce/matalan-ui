@@ -5,10 +5,12 @@ $inactive: #ccc;
 $active: $primary-color;
 $completed-bg: $primary-color;
 $default-bg: $white;
+
 // sizing
 $donut-size: 100px;
 $donut-line-thickness: 5px;
 $border-thickness: 5px;
+
 @mixin donut-style($state) {
     //background-color: $color;
     border: $border-thickness solid $active;
@@ -27,17 +29,10 @@ $border-thickness: 5px;
 }
 
 .flexer {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
 }
 
 .flexer-element {
-    -ms-flex: 1;
-    -webkit-flex: 1;
-    -moz-flex: 1;
     flex: 1;
 }
 

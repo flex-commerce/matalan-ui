@@ -15,8 +15,12 @@
           <div class="o-list__item o-list-heading">Block list<small>Unstyled</small>
           </div>
           {{#times 3}}
-          <li class="o-list__item">List Block <small>{{this}}</small></li>
-          <a class="o-list__item" href="">List Block <small>{{this}}</small></a>
+          <li class="o-list__item">List Block
+            <span class="c-lbl c-lbl-primary c-lbl-bdg u-fr">{{randomnum}}</span>
+          </li>
+          <a class="o-list__item" href="">List Block
+            <span class="c-lbl c-lbl-secondary c-lbl-bdg u-fr">{{randomnum}}</span>
+          </a>
           {{/times}}
         </ul>
 
@@ -28,8 +32,8 @@
         <ul class="o-list-block o-list--vertical-sep">
           <div class="o-list__item o-list-heading">Block list<small>Separator</small></div>
           {{#times 3}}
-          <li class="o-list__item">List Block <small>{{this}}</small></li>
-          <a class="o-list__item" href="">List Block <small>{{this}}</small></a>
+          <li class="o-list__item">List Block</li>
+          <a class="o-list__item" href="">List Block</a>
           {{/times}}
         </ul>
 
@@ -42,10 +46,13 @@
           <div class="o-list__item o-list-heading">Block list<small>Bordered</small>
           </div>
           {{#times 3}}
-          <li class="o-list__item">List Block Bordered <small>{{this}}</small></li>
+          <li class="o-list__item">List Block Bordered
+            <span class="c-lbl c-lbl-primary c-lbl-bdg u-fr">{{randomnum}}</span>
+          </li>
           <a class="o-list__item" href="">List Block Bordered <small>{{this}}</small></a>
           {{/times}}
         </ul>
+
 
 
       </div>
@@ -87,7 +94,9 @@
           <div class="o-list__item o-list-heading">List UI<small>Bordered</small>
           </div>
           {{#times 3}}
-          <li class="o-list__item">List UI <small>{{this}}</small></li>
+          <li class="o-list__item">List UI
+            <span class="c-lbl c-lbl-primary c-lbl-bdg u-fr">{{randomnum}}</span>
+          </li>
           <a class="o-list__item" href="">List UI <small>{{this}}</small></a>
           {{/times}}
         </ul>
@@ -124,6 +133,21 @@
           <li class="o-list__item">List Text <small>{{this}}</small> -<small>{{lorem count="14"}}</small></li>
           {{/times}}
         </ul>
+
+
+      </div>
+      <div class="grid-33">
+        <h3>Definition List</h3>
+
+
+        <dl class="o-dl-plain">
+          <dt>Definition Type</dt>
+          <dd>{{lorem count="5"}}</dd>
+          <dt>Definition Type</dt>
+          <dd>{{lorem count="5"}}</dd>
+          <dt>Definition Type</dt>
+          <dd>{{lorem count="5"}}</dd>
+        </dl>
 
 
       </div>

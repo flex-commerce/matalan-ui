@@ -3,7 +3,6 @@ $list-ui-active-bg: $secondary-color;
 $list-ui-active-border: $primary-color;
 $list-border: $coolgrey;
 
-
 @mixin not-list-heading {
   &:not(.o-list-heading):hover,
   &:not(.o-list-heading).active {
@@ -48,7 +47,6 @@ $list-border: $coolgrey;
   }
 }
 
-
 .o-list-ui {
   .o-list__item {
     display: block;
@@ -75,7 +73,6 @@ $list-border: $coolgrey;
   }
 }
 
-
 .o-list--bordered {
   > .o-list__item {
     margin-top: -.0625rem;
@@ -83,16 +80,33 @@ $list-border: $coolgrey;
   }
 }
 
-
 .o-list--vertical-sep {
-  > .o-list__item:not(:last-of-type) {
+  > .o-list__item:not(:last-child) {
     border-bottom: .0625rem solid $list-border;
   }
 }
 
 
-// temp styles, to be continued
+
+
+// temp styles below, to be continued
 .o-list-heading {
   margin-top: 0;
   margin-bottom: 5px;
 }
+
+
+.o-dl-plain {
+  dt {
+    font-size: rem-calc(16px);
+    line-height: 1.2;
+  }
+
+  dd {
+    margin: 0 0 10px 0;
+    font-size: rem-calc(14px);
+    line-height: 1.4;
+    color: #666;
+  }
+}
+
