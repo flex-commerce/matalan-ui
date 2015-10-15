@@ -1,36 +1,31 @@
 /* Copyright 2013-2015 etc Chris Tabor. Licensed under MIT. */
 
 // colors
-
 $inactive: #ccc;
 $active: $primary-color;
 $completed-bg: $primary-color;
 $default-bg: $white;
-
 // sizing
-
 $donut-size: 100px;
 $donut-line-thickness: 5px;
 $border-thickness: 5px;
-
-
 @mixin donut-style($state) {
     //background-color: $color;
     border: $border-thickness solid $active;
     color: $active;
     z-index: -1;
-    @if $state == 'completed' {
+    @if $state=='completed' {
         color: $white;
         background-color: $completed-bg;
         content: "1";
     }
-
     &:before,
     &:after {
         background-color: $active;
         z-index: -2;
     }
 }
+
 .flexer {
     display: -webkit-box;
     display: -moz-box;
@@ -45,6 +40,7 @@ $border-thickness: 5px;
     -moz-flex: 1;
     flex: 1;
 }
+
 .c-progress-checkout {
     @extend .flexer;
     font-size: 80%;
@@ -70,9 +66,7 @@ $border-thickness: 5px;
         font-size: 2em;
         line-height: 3.5em;
     }
-
     // line connectors
-
     > li .c-donut:before,
     > li .c-donut:after {
         display: block;
@@ -82,55 +76,45 @@ $border-thickness: 5px;
         height: $donut-line-thickness;
         content: '';
         background-color: $inactive;
-        z-index:-2;
+        z-index: -2;
     }
-
     > li:first-child .c-donut:before,
     > li:first-child .c-donut:after {
-        width:100%;
+        width: 100%;
     }
-
     > li:last-child .c-donut:before,
     > li:last-child .c-donut:after {
-        width:50%;
+        width: 0;
     }
-
     // completed state
     //
     > li.completed {
         color: $active;
-
-        &:after{
-          /*Add another block-level blank space*/
-          content: '';
-          display: block;
-
-          /*Make it a small rectangle so the border will create an L-shape*/
-          width: 13px;
-          height: 30px;
-
-          /*Add a white border on the bottom and left, creating that 'L' */
-          border: solid $white;
-          border-width: 0 5px 5px 0;
-
-          /*Rotate the L 45 degrees to turn it into a checkmark*/
-          transform: rotate(45deg);
-
-          /*Centre the position*/
-          position: absolute;
-          top: 25%;
-          left: 47%;
+        &:after {
+            /*Add another block-level blank space*/
+            content: '';
+            display: block;
+            /*Make it a small rectangle so the border will create an L-shape*/
+            width: 13px;
+            height: 30px;
+            /*Add a white border on the bottom and left, creating that 'L' */
+            border: solid $white;
+            border-width: 0 5px 5px 0;
+            /*Rotate the L 45 degrees to turn it into a checkmark*/
+            transform: rotate(45deg);
+            /*Centre the position*/
+            position: absolute;
+            top: 25%;
+            left: 47%;
         }
         .c-donut {
             @include donut-style("completed");
         }
     }
-
     > li.active {
         color: $active;
         .c-donut {
             @include donut-style("active");
         }
     }
-
 }
