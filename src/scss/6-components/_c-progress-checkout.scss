@@ -1,41 +1,31 @@
 /* Copyright 2013-2015 etc Chris Tabor. Licensed under MIT. */
 
 // colors
-
 $inactive: #ccc;
 $active: $primary-color;
-$hover: #5671d0;
-$step-danger: #d3140f;
-$step-warning: #edb10a;
-$step-info: #5b32d6;
-
+$completed-bg: $primary-color;
+$default-bg: $white;
 // sizing
-
 $donut-size: 100px;
 $donut-line-thickness: 5px;
 $border-thickness: 5px;
-$darken-amount: 30%;
-
-// misc
-$mobile-size: 400px;
-
-@mixin donut-style($state, $color) {
+@mixin donut-style($state) {
     //background-color: $color;
-    border: $border-thickness solid $color;
-    color: $color;
+    border: $border-thickness solid $active;
+    color: $active;
     z-index: -1;
-    @if $state == 'completed' {
-        color: white;
-        background-color: $color;
+    @if $state=='completed' {
+        color: $white;
+        background-color: $completed-bg;
         content: "1";
     }
-
     &:before,
     &:after {
-        background-color: $primary-color;
+        background-color: $active;
         z-index: -2;
     }
 }
+
 .flexer {
     display: -webkit-box;
     display: -moz-box;
@@ -50,30 +40,25 @@ $mobile-size: 400px;
     -moz-flex: 1;
     flex: 1;
 }
+
 .c-progress-checkout {
     @extend .flexer;
-    margin: 0;
-    padding: 0;
     font-size: 80%;
-    text-transform: uppercase;
     margin-bottom: 1em;
     > li {
         @extend .flexer-element;
         list-style: none;
         text-align: center;
         width: auto;
-        padding: 0;
-        margin: 0;
         position: relative;
         text-overflow: ellipsis;
         color: $inactive;
-        display: block;
     }
-    > li .donut {
-        border-radius: 1000px;
+    > li .c-donut {
+        border-radius: 50%;
         width: $donut-size;
         height: $donut-size;
-        background-color: white;
+        background-color: $default-bg;
         display: block;
         margin: 0 auto 0.5em auto;
         border: $border-thickness solid $inactive;
@@ -81,11 +66,9 @@ $mobile-size: 400px;
         font-size: 2em;
         line-height: 3.5em;
     }
-
     // line connectors
-
-    > li .donut:before,
-    > li .donut:after {
+    > li .c-donut:before,
+    > li .c-donut:after {
         display: block;
         position: absolute;
         top: $donut-size / 2 - $border-thickness / 2;
@@ -93,39 +76,45 @@ $mobile-size: 400px;
         height: $donut-line-thickness;
         content: '';
         background-color: $inactive;
-        z-index:-2;
+        z-index: -2;
     }
-
-    > li:first-child .donut:before,
-    > li:first-child .donut:after {
-        width:100%;
+    > li:first-child .c-donut:before,
+    > li:first-child .c-donut:after {
+        width: 100%;
     }
-
-    > li:last-child .donut:before,
-    > li:last-child .donut:after {
-        width:50%;
+    > li:last-child .c-donut:before,
+    > li:last-child .c-donut:after {
+        width: 0;
     }
-
     // completed state
     //
     > li.completed {
         color: $active;
-        .donut {
-            @include donut-style("completed", $active);
+        &:after {
+            /*Add another block-level blank space*/
+            content: '';
+            display: block;
+            /*Make it a small rectangle so the border will create an L-shape*/
+            width: 13px;
+            height: 30px;
+            /*Add a white border on the bottom and left, creating that 'L' */
+            border: solid $white;
+            border-width: 0 5px 5px 0;
+            /*Rotate the L 45 degrees to turn it into a checkmark*/
+            transform: rotate(45deg);
+            /*Centre the position*/
+            position: absolute;
+            top: 25%;
+            left: 47%;
+        }
+        .c-donut {
+            @include donut-style("completed");
         }
     }
-
     > li.active {
         color: $active;
-        .donut {
-            @include donut-style("active", $active);
+        .c-donut {
+            @include donut-style("active");
         }
-    }
-
-}
-
-@media handheld, screen and (max-width: $mobile-size) {
-    .c-progress-checkout {
-        font-size: 60%;
     }
 }
