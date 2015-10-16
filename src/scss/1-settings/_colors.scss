@@ -39,8 +39,22 @@ $color-keyline: #e0e0e2;
 //
 // We use these as default colors throughout
 
-$success-color: #DFF0D8; // green
-$warning-color: #FCF8E3; // yellow
-$info-color: #D9EDF7; // blue
-$error-color: #F2DEDE; // red
+$success-color-text: #c09853;
+$success-color-bg: #fcf8e3;
+$success-color-border: #fbeed5;
 
+$warning-color-text: #468847;
+$warning-color-bg: #dff0d8;
+$warning-color-border: #d6e9c6;
+
+$info-color-text: #3a87ad;
+$info-color-bg: #d9edf7;
+$info-color-border: #c2e5f2;
+
+$error-color-text: #de1f26;
+$error-color-bg: #f2dede;
+$error-color-border: #eed3d7;
+
+$global-alert-color-text: $white;
+$global-alert-color-bg: #333;
+$global-alert-color-border: transparent;

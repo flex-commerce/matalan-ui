@@ -1,0 +1,81 @@
+//
+// Base styles
+
+$alert-padding-v: 12px;
+$alert-padding-h: 24px;
+
+.c-alert {
+  padding: $alert-padding-v $alert-padding-h;
+  margin-bottom: 1em;
+  border: 1px solid transparent;
+  position: relative;
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+  > p + p {
+    margin-top: 5px;
+  }
+}
+
+// Headings for larger alerts
+.c-alert-heading {
+  margin-top: 0;
+  // Specified to prevent conflicts of changing $headings-color
+  color: inherit;
+}
+
+// Provide class for links that match alerts
+.c-alert-link {
+  font-weight: 400;
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.c-alert-dismissible {
+  padding-right: 2.5em;
+}
+
+// Adjust close link position
+.close {
+  position: absolute;
+  padding: $alert-padding-v;
+  right: 0;
+  top:  0;
+  &:hover,
+  &:focus {
+    opacity: black;
+  }
+}
+
+
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.c-alert-error {
+  @include style-variant($error-color-text, $error-color-bg,$error-color-border);
+}
+.c-alert-info {
+  @include style-variant($info-color-text, $info-color-bg,$info-color-border);
+}
+.c-alert-warning {
+  @include style-variant($warning-color-text, $warning-color-bg,$warning-color-border);
+}
+.c-alert-success {
+  @include style-variant($success-color-text, $success-color-bg,$success-color-border);
+}
+
+.c-alert-global {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  @include style-variant($global-alert-color-text, $global-alert-color-bg,$global-alert-color-border);
+
+}
