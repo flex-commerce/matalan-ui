@@ -34,7 +34,9 @@
 //
 // Expand the right padding and account for the close button's positioning.
 
-
+.c-alert-dismissible {
+  padding-right: 2em;
+}
 // Adjust close link position
 .close {
   position: absolute;
