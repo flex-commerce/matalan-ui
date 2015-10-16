@@ -1,7 +1,7 @@
 //
 // Textual form controls
 $input-padding-y: 1em;
-$input-padding-x: 1em;
+$input-padding-x: 0;
 $line-height: 1.5;
 $input-color: #666;
 
@@ -13,8 +13,8 @@ $input-color: #666;
   color: $input-color;
 }
 
-.o-form-label {
-  // outline: 1px dotted green;
+.o-form-label--contain {
+  outline: 2px dotted green;
 }
 
 .o-form-input {
@@ -28,11 +28,10 @@ $input-color: #666;
   }
 }
 
-.o-form-block {
- label {
-    display: block;
-  }
-}
+
+
+
+
 
 
 // positioning offsets
@@ -42,9 +41,55 @@ $input-color: #666;
   margin-right: 0.5em;
 }
 
-.o-form-inline label + label {
+.form-default .o-form-inline > label + label {
   margin-left: 0.5em;
 }
+
+
+
+// form wide
+
+.form-wide {
+  .o-form-label--contain {
+    // outline: 1px solid blue;
+    width: 33%;
+    float: left;
+  }
+  .o-form-input {
+    // outline: 1px solid red;
+    width: 66%;
+    float: left;
+  }
+}
+
+//////
+
+
+.o-form-row {
+ outline: 1px solid red;
+ @extend %clearfix;
+ overflow: hidden;
+}
+o-form-label
+.o-form-label--contain__primary {
+  display: block;
+  outline: 2px dotted maroon;
+}
+.o-form-label--contain__option {
+  display: inline;
+  outline: 1px solid orange;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

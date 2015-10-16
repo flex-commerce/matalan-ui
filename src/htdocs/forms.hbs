@@ -1,77 +1,175 @@
-<h2>Forms<small>(_objects/_o-lists.scss)</small></h2>
+<h2>Forms
+  <small>(_objects/_o-lists.scss)</small>
+</h2>
+<div class="row">
+  <div class="grid-50">
+  <h3>Default Form</h3>
 
-<h3>Default Row</h3>
-<form action="" class="form-default">
+    <form action="" class="form-default">
 
-  <div class="o-form-row">
-    <div class="o-form-label">
-      <label>Input Label</label>
-    </div>
-    <div class="o-form-input">
-      <input type="text" placeholder="placeholder" />
-    </div>
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Input Label</label>
+        </div>
+        <div class="o-form-input">
+          <input type="text" placeholder="placeholder" />
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Select Box</label>
+        </div>
+        <div class="o-form-input">
+          <select>
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Choose Option (inline)</label>
+        </div>
+        <div class="o-form-input o-form-inline">
+          <label>
+            <input type="radio" name="foo" value="Red" id="red1">Red</label>
+          <label>
+            <input type="radio" name="foo" value="Blue" id="blue1">Blue</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Choose Option (block)</label>
+        </div>
+        <div class="o-form-input o-label-block">
+          <label>
+            <input type="radio" name="foo" value="Red" id="red2">Red</label>
+          <label>
+            <input type="radio" name="foo" value="Blue" id="blue2">Blue</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Check it (inline)</label>
+        </div>
+        <div class="o-form-input o-form-inline">
+          <label for="checkbox1">
+            <input id="checkbox1" type="checkbox">Checkbox 1</label>
+          <label for="checkbox2">
+            <input id="checkbox2" type="checkbox">Checkbox 2</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Check it (block)</label>
+        </div>
+        <div class="o-form-input o-label-block">
+          <label for="checkbox3">
+            <input id="checkbox3" type="checkbox">Checkbox 1</label>
+          <label for="checkbox4">
+            <input id="checkbox4" type="checkbox">Checkbox 2</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Textarea Label</label>
+        </div>
+        <div class="o-form-input">
+          <textarea>raaa</textarea>
+        </div>
+      </div>
+
+    </form>
   </div>
 
-  <div class="o-form-row">
-    <div class="o-form-label">
-      <label>Select Box</label>
-    </div>
-    <div class="o-form-input">
-      <select>
-        <option value="foo">foo</option>
-        <option value="bar">bar</option>
-        <option value="baz">baz</option>
-      </select>
-    </div>
-  </div>
 
-  <div class="o-form-row">
-    <div class="o-form-label">
-      <label>Choose Option (inline)</label>
-    </div>
-    <div class="o-form-input o-form-inline">
-      <label for="red1"><input type="radio" name="foo" value="Red" id="red1">Red</label>
-      <label for="blue1"><input type="radio" name="foo" value="Blue" id="blue1">Blue</label>
-    </div>
-  </div>
+  <div class="grid-50">
+  <h3>Horizontal Form</h3>
+    <form action="" class="form-wide">
 
-  <div class="o-form-row">
-    <div class="o-form-label">
-      <label>Choose Option (block)</label>
-    </div>
-    <div class="o-form-input o-form-block">
-      <label for="red2"><input type="radio" name="foo" value="Red" id="red2">Red</label>
-      <label for="blue2"><input type="radio" name="foo" value="Blue" id="blue2">Blue</label>
-    </div>
-  </div>
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+         <label class="o-form-label__primary">Input Label</label>
+        </div>
+        <div class="o-form-input">
+          <input type="text" placeholder="placeholder" />
+        </div>
+      </div>
 
-  <div class="o-form-row">
-    <div class="o-form-label">
-      <label>Check it (inline)</label>
-    </div>
-    <div class="o-form-input o-form-inline">
-      <label for="checkbox1"><input id="checkbox1" type="checkbox">Checkbox 1</label>
-      <label for="checkbox2"><input id="checkbox2" type="checkbox">Checkbox 2</label>
-    </div>
-  </div>
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Select Box</label>
+        </div>
+        <div class="o-form-input">
+          <select>
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </select>
+        </div>
+      </div>
 
-  <div class="o-form-row">
-    <div class="o-form-label">
-      <label>Check it (block)</label>
-    </div>
-    <div class="o-form-input o-form-block">
-      <label for="checkbox3"><input id="checkbox3" type="checkbox">Checkbox 1</label>
-      <label for="checkbox4"><input id="checkbox4" type="checkbox">Checkbox 2</label>
-    </div>
-  </div>
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Choose Option (inline)</label>
+        </div>
+        <div class="o-form-input o-form-inline">
+          <label for="red1">
+            <input type="radio" name="foo" value="Red" id="red1">Red</label>
+          <label for="blue1">
+            <input type="radio" name="foo" value="Blue" id="blue1">Blue</label>
+        </div>
+      </div>
 
-  <div class="o-form-row">
-    <div class="o-form-label">
-      <label>Textarea Label</label>
-    </div>
-    <div class="o-form-input">
-      <textarea>raaa</textarea>
-    </div>
-  </div>
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Choose Option (block)</label>
+        </div>
+        <div class="o-form-input o-label-block">
+          <label for="red2">
+            <input type="radio" name="foo" value="Red" id="red2">Red</label>
+          <label for="blue2">
+            <input type="radio" name="foo" value="Blue" id="blue2">Blue</label>
+        </div>
+      </div>
 
-</form>
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+         <label class="o-form-label__primary">Check it (inline)</label>
+        </div>
+        <div class="o-form-input o-form-inline">
+          <label for="checkbox1">
+            <input id="checkbox1" type="checkbox">Checkbox 1</label>
+          <label for="checkbox2">
+            <input id="checkbox2" type="checkbox">Checkbox 2</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+         <label class="o-form-label o-form-label__primary">Check it (block)</label>
+        </div>
+        <div class="o-form-input o-label-block">
+          <label class="o-form-label o-form-label__option" for="checkbox3"><input id="checkbox3" type="checkbox">Checkbox 1</label>
+          <label class="o-form-label o-form-label__option" for="checkbox4"><input id="checkbox4" type="checkbox">Checkbox 2</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Textarea Label</label>
+        </div>
+        <div class="o-form-input">
+          <textarea>raaa</textarea>
+        </div>
+      </div>
+
+    </form>
+  </div>
