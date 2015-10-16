@@ -42,6 +42,7 @@ $alert-padding-h: 24px;
 
 // Adjust close link position
 .close {
+  cursor: pointer;
   position: absolute;
   padding: $alert-padding-v;
   right: 0;
