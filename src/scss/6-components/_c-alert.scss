@@ -37,21 +37,15 @@
 
 // Adjust close link position
 .close {
-    color: #444;
-    font-size: 1em;
-    opacity: .9;
-    padding: 0 1em;
-    top: 0;
-    bottom: 0;
-    text-decoration: none;
-    right: 0;
-    position: absolute;
-    background-color: red;
-
-
-
+  position: absolute;
+  right: 0;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  @include center(y);
   &:hover,
-  &:focus { opacity: black; }
+  &:focus {
+    opacity: black;
+  }
 }
 
 
