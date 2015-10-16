@@ -1,9 +1,11 @@
 //
 // Base styles
-//
+
+$alert-padding-v: 12px;
+$alert-padding-h: 24px;
 
 .c-alert {
-  padding: 12px 24px;
+  padding: $alert-padding-v $alert-padding-h;
   margin-bottom: 1em;
   border: 1px solid transparent;
   position: relative;
@@ -35,15 +37,15 @@
 // Expand the right padding and account for the close button's positioning.
 
 .c-alert-dismissible {
-  padding-right: 2em;
+  padding-right: 2.5em;
 }
+
 // Adjust close link position
 .close {
   position: absolute;
+  padding: $alert-padding-v;
   right: 0;
-  font-size: 1em;
-  padding: 0.5em 1em;
-  @include center(y);
+  top:  0;
   &:hover,
   &:focus {
     opacity: black;

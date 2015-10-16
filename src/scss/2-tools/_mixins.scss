@@ -1,6 +1,11 @@
-// center vertically and/or horizontally an absolute positioned element
-@mixin center($xy:xy) {
-  position: absolute;
+// center vertically and/or horizontally an absolute or relative positioned element
+// relative positioned elements require an explicit height to be set on the parent
+// absolute positioned elements require a relative parent for postioning
+
+@mixin center($xy:xy, $pos:null) {
+  @if $pos == 'abs' {
+    position: absolute;
+  }
     @if $xy==xy {
         left: 50%;
         top: 50%;
