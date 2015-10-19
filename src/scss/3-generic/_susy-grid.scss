@@ -1,0 +1,179 @@
+// this is work in progress of an example of Susy+mq() grid setup that mimics bootstrap grid.
+
+// dependencies: susy + sass-mq
+
+// @todo:
+// * handle offsets
+// * check and update produced classnames
+// * add some easy-to-use mixins
+
+
+
+// Susy
+
+$grid-gutter-width: rem-calc($susy-gutter-width * 2);
+$container-maxwidth: rem-calc($site-maxwidth);
+
+$susy: (
+  columns: $susy-columns,
+  gutter-position: inside-static, //fixed width gutters like bootstrap
+  gutter: $susy-gutter-width/120px
+);
+
+
+/* Base Classes and their mixins */
+
+// Fluid container
+@mixin make-container($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+  @include clearfix();
+}
+
+
+
+// Row
+// Rows contain and clear the floats of your columns.
+@mixin make-row($gutter: $grid-gutter-width) {
+  @include clearfix();
+  margin-left:  ($gutter / -2);
+  margin-right: ($gutter / -2);
+}
+
+.row {
+  @include make-row();
+}
+
+.container {
+  @include make-container();
+  max-width: $container-maxwidth;
+}
+
+// common styling applied to any column (class="col-*" in bootstrap)
+// /!\ you should not use this directly and see the column mixin
+%columnDefaultStyles {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  padding-left: $susy-gutter-width;
+  padding-right: $susy-gutter-width;
+}
+
+
+
+// common styling applied to any row (class="row" in bootstrap)
+// /!\ you should not use this directly and see the row mixin
+%rowDefaultStyles {
+  @include break;
+  @include susy-clearfix;
+  margin-left: -$susy-gutter-width;
+  margin-right: -$susy-gutter-width;
+}
+
+
+
+/// set something to behave as a row (like having a class="row" on your element in a bootstrap project)
+@mixin row() {
+  @extend %rowDefaultStyles;
+}
+
+
+
+/// pass a map of [sass-mq compatible breakpoint:column width] to define responsive column sizes
+/// this kinda matches bootstrap columns, and allows for more breakpoints if we want
+/// Instead of writing `<div class="col-xs-12 col-md-6 col-lg-3">` in your HTML,
+/// write `@include column((small: 12, desktop: 6, wide: 3))` in your Sass
+@mixin column($widthList) {
+  @extend %columnDefaultStyles;
+  @each $breakpoint, $width in $widthList {
+    @if ($breakpoint == small) {
+      width: span($width of $susy-columns);
+      } @else {
+        @include mq($from: $breakpoint) {
+          width: span($width of $susy-columns);
+        }
+      }
+    }
+  }
+
+
+//////////////////////////////
+
+// example!
+//
+// `<div class="MyComponent-wrapper">
+//    <div class="MyComponent-child"></div>
+//    <div class="MyComponent-child"></div>
+//    <div class="MyComponent-child"></div>
+//  </div>`
+//  .MyComponent-wrapper {
+//    @include row;
+//  }
+//    .MyComponent-child {
+//      @include column( (small: 12, tablet: 4, wide: 2) );
+//    }
+//
+// is the same as:
+// `<div class="MyComponent-wrapper row">
+//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
+//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
+//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
+//  </div>`
+
+
+
+///////////////////////////////
+
+// this is made only to easily test if our code is working correctly when copy/pasting some bootstrap html code
+// in the real world this is unnecessary
+@mixin make-bootstrap-breakpoint-classes($class) {
+
+  @for $i from 1 through $susy-columns {
+
+    .col-#{$class}-#{$i} {
+      width: span($i of $susy-columns);
+
+      @if ($output-developer-content == true) {
+        &:after {
+          content: "#{$i} of #{$susy-columns} @ #{$class}";
+          color: $coolgrey;
+        }
+      }
+    }
+  }
+}
+
+
+
+@mixin make-bootstrap-classes() {
+  // .row {
+  //   @include row();
+  // }
+
+  $list: ".col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xl-1";
+
+  @for $i from 2 through $susy-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i}";
+  }
+
+  #{$list} {
+    @extend %columnDefaultStyles;
+  }
+
+  // Loop through the breakpoints that should be shown
+  @each $mq-breakpoint-name in map-keys($mq-breakpoints) {
+
+    @if ($mq-breakpoint-name == 'xs') {
+      @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
+
+    } @else {
+      @include mq($from: $mq-breakpoint-name) {
+        @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
+      }
+    }
+  }
+}
+
+@include make-bootstrap-classes();
