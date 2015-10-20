@@ -6,10 +6,34 @@
 // * handle offsets
 // * check and update produced classnames
 // * add some easy-to-use mixins
+// * expand documentation
+
+//////////////////////////////
+
+// example!
+//
+// `<div class="MyComponent-wrapper">
+//    <div class="MyComponent-child"></div>
+//    <div class="MyComponent-child"></div>
+//    <div class="MyComponent-child"></div>
+//  </div>`
+//  .MyComponent-wrapper {
+//    @include row;
+//  }
+//    .MyComponent-child {
+//      @include column( (small: 12, tablet: 4, wide: 2) );
+//    }
+//
+// is the same as:
+// `<div class="MyComponent-wrapper row">
+//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
+//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
+//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
+//  </div>`
 
 
+///////////////////////////////
 
-// Susy
 
 $grid-gutter-width: rem-calc($susy-gutter-width * 2);
 $container-maxwidth: rem-calc($site-maxwidth);
@@ -40,6 +64,11 @@ $susy: (
   @include clearfix();
   margin-left:  ($gutter / -2);
   margin-right: ($gutter / -2);
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 .row {
@@ -99,32 +128,7 @@ $susy: (
   }
 
 
-//////////////////////////////
 
-// example!
-//
-// `<div class="MyComponent-wrapper">
-//    <div class="MyComponent-child"></div>
-//    <div class="MyComponent-child"></div>
-//    <div class="MyComponent-child"></div>
-//  </div>`
-//  .MyComponent-wrapper {
-//    @include row;
-//  }
-//    .MyComponent-child {
-//      @include column( (small: 12, tablet: 4, wide: 2) );
-//    }
-//
-// is the same as:
-// `<div class="MyComponent-wrapper row">
-//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
-//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
-//    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
-//  </div>`
-
-
-
-///////////////////////////////
 
 // this is made only to easily test if our code is working correctly when copy/pasting some bootstrap html code
 // in the real world this is unnecessary
@@ -139,6 +143,8 @@ $susy: (
         &:after {
           content: "#{$i} of #{$susy-columns} @ #{$class}";
           color: $coolgrey;
+          font-size: 70%;
+          text-transform: uppercase;
         }
       }
     }
@@ -148,9 +154,6 @@ $susy: (
 
 
 @mixin make-bootstrap-classes() {
-  // .row {
-  //   @include row();
-  // }
 
   $list: ".col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xl-1";
 
