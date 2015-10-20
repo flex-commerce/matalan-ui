@@ -2,4 +2,5 @@
 
 @import "functions";
 @import "mixins";
-@import "absolutepos";
+@import "../../../node_modules/sass-mq/mq";
+@import "positioning";

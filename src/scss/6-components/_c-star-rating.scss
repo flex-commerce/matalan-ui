@@ -1,0 +1,11 @@
+.rating {
+    span {
+      display: inline-block;
+    }
+    [class^="icon-"] {
+      margin-bottom: 0;
+      &:before {
+        padding-right: 0;
+      }
+    }
+}

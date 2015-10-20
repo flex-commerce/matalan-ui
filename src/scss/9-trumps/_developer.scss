@@ -32,20 +32,56 @@ ol {
   // outline-offset: 3px;
 }
 
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: block;
+  margin-bottom: 1em;
+  &:before {
+    font-size: 32px;
+    padding-right: 0.5em;
+    display: inline-block;
+    color: $cool-grey;
+  }
+  &:hover:before {
+    color: $primary-color;
+  }
+}
+
+// visualisation helper for grid
+[class^="col-"],
+[class*=" col-"] {
+  outline: 1px solid $cool-grey;
+  background: $secondary-color;
+  margin-bottom: 1em;
+}
+
+.island {
+  background: rgba($cool-grey, 0.5);
+  margin: rem-calc(15) 0;
+  min-height: 5em;
+  color: #fff;
+  display: block;
+  border-radius: 5px;
+}
+
+
+
+
 // fake grid for ui kit
-.container {
+.ui-container {
   max-width: 1024px;
   margin: 0 auto;
   display: block;
 }
 
-.row {
+.ui-row {
   width: 100%;
   min-height: 15em;
   overflow: hidden;
   border-bottom: 1px solid #aaa;
   padding-bottom: 2em;
-  .row {
+  .ui-row {
     border-style: none;
     padding-bottom: 0;
     min-height: 0;
@@ -93,10 +129,10 @@ ol {
     font-size: 32px;
     padding-right: 0.5em;
     display: inline-block;
-    color: $coolgrey;
+    color: $cool-grey;
   }
   &:hover:before {
-    color: $matalan-red;
+    color: $matalan-brand;
   }
   display: block;
   margin-bottom: 1em;
