@@ -1,7 +1,7 @@
 $list-padding: rem-calc(12 16);
 $list-ui-active-bg: $secondary-color;
 $list-ui-active-border: $primary-color;
-$list-border: $coolgrey;
+$list-border: $cool-grey;
 
 @mixin not-list-heading {
   &:not(.o-list-heading):hover,
@@ -62,7 +62,7 @@ $list-border: $coolgrey;
 
 .o-list-ui.o-list--bordered {
   .o-list__item {
-    border: 1px solid $coolgrey;
+    border: 1px solid $cool-grey;
     margin-top: rem-calc(-1);
 
     @include not-list-heading {

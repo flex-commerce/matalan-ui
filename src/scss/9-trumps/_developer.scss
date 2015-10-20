@@ -41,8 +41,10 @@ ol {
     font-size: 32px;
     padding-right: 0.5em;
     display: inline-block;
+    color: $cool-grey;
   }
   &:hover:before {
+    color: $primary-color;
   }
 }
 
@@ -118,3 +120,4 @@ ol {
   float: left;
   padding: 10px;
 }
+
