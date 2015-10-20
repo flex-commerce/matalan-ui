@@ -20,10 +20,17 @@ module.exports = {
         }
     },
 
+
+
     markup: {
         src: src + '/htdocs/*.{html,hbs}',
         dest: dest,
         hbHelpers: src + '/hb-helpers/*.js',
+    },
+
+    fonts: {
+        src: src + '/fonts/*.{eot,svg,ttf,woff}',
+        dest: dest + '/fonts/',
     },
 
     production: {

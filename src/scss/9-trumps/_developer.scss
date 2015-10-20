@@ -3,7 +3,8 @@
  */
 
 body {
-  background-size: #e0e0e0
+  background: #fcfcfc;
+  color: #333;
 }
 
 h2 {
@@ -24,12 +25,16 @@ p {
   font-weight: 300;
 }
 
-
+// highlighters
+ul,
+ol {
+  // outline: 1px dotted red;
+  // outline-offset: 3px;
+}
 
 // fake grid for ui kit
-
 .container {
-  max-width:1024px;
+  max-width: 1024px;
   margin: 0 auto;
   display: block;
 }
@@ -40,6 +45,11 @@ p {
   overflow: hidden;
   border-bottom: 1px solid #aaa;
   padding-bottom: 2em;
+  .row {
+    border-style: none;
+    padding-bottom: 0;
+    min-height: 0;
+  }
 }
 
 .grid-20 {
@@ -53,14 +63,39 @@ p {
 
 .grid-80 {
   width: 80%;
-  float:left;
+  float: left;
   padding: 10px;
 }
-
 
 .grid-50 {
   width: 50%;
-  float:left;
+  float: left;
   padding: 10px;
 }
 
+.grid-33 {
+  width: 33%;
+  float: left;
+  padding: 10px;
+}
+
+.grid-66 {
+  width: 66%;
+  float: left;
+  padding: 10px;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  &:before {
+    font-size: 32px;
+    padding-right: 0.5em;
+    display: inline-block;
+    color: $cool-grey;
+  }
+  &:hover:before {
+    color: $primary-color;
+  }
+  display: block;
+  margin-bottom: 1em;
+}
