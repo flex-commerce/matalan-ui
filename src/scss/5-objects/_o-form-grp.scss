@@ -1,77 +1,125 @@
-//
 // Textual form controls
-$input-padding-y: 1em;
-$input-padding-x: 0;
-$line-height: 1.5;
+
+// @TODO - split this file into form groups and form controls
+
 $input-color: #666;
 
+$form-row-padding-y: 1em;
+$form-row-padding-x: 0;
+$line-height: $base-line-height;
+
+$input-padding-x: $default-pad-x;
+$input-padding-y: $default-pad-y;
+
+
 .o-form-row {
-  display: block;
-  width: 100%;
-  padding: $input-padding-y $input-padding-x;
+  padding: $form-row-padding-y $form-row-padding-x;
   line-height: $line-height;
   color: $input-color;
 }
 
+.form-inline {
+  .o-form-row {
+    display: inline-block;
+    width: auto;
+  }
+  .o-form-label--contain {
+    display: inline-block;
+  }
+  .o-form-input:not(.o-form--input-group) {
+    display: inline-block;
+  }
+}
+
+.form-default,
+.form-wide {
+  .o-form-row {
+    display: block;
+    width: 100%;
+  }
+}
+
 .o-form-input {
+  input:not([type="radio"]):not([type="checkbox"]),
+  textarea {
+    border: 1px solid $cool-grey;
+  }
   input:not([type="radio"]):not([type="checkbox"]),
   optgroup,
   select,
   textarea {
     display: block;
     width: 100%;
+    // @TODO - rename this super useful sizing function
+    @include button-size($input-padding-y, $input-padding-x, 1em, $line-height);
   }
 }
 
-// positioning offsets
-.o-form-input > label [type="radio"],
-.o-form-input > label [type="checkbox"] {
+// spacing between inline options and their labels
+.o-form-label__option [type="radio"],
+.o-form-label__option [type="checkbox"] {
   margin-right: 0.5em;
 }
 
-.o-label-inline > label {
+
+// making inline labels
+.o-label-inline > .o-form-label__option {
   float: left;
-  + label {
-    margin-left: 0.5em;
+  + .o-form-label__option {
+    margin-left: 1em;
   }
 }
-.o-label-block > label {
+
+// spacing between multiple inline option labels
+.o-label-block > .o-form-label__option {
   display: block;
+  margin-bottom: rem-calc(12px);
 }
 
+.o-form--input-group {
+  display: inline-table;
+  > * {
+    display: table-cell;
+  }
+  .input-group--addon {
+    width: auto;
+    background: $primary-color;
+    color: $white;
+  }
+  .input-group--expand {
+    width: 100%;
+  }
+}
 
 // form wide dev rules
-
 .form-wide {
   .o-form-label--contain {
-    width: 33%;   // magic numbers, revisit with grid?
+    width: 33%; // magic numbers, revisit with grid?
     float: left;
   }
   .o-form-input {
-    width: 66%;  // magic numbers, revisit with grid?
+    width: 66%; // magic numbers, revisit with grid?
     float: left;
   }
 }
 
 //////
-
-
 .o-form-row {
- @include clearfix();
+  @include clearfix();
 }
 
 // main label styling
 .o-form-label__primary {
   display: block;
+  font-weight: bold;
 }
+
 // sub / option label styling
 .o-form-label__option {
   display: inline;
+  font-weight: 300;
+  font-size: 90%;
 }
-
-
-
-
 
 
 

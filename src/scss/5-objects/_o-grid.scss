@@ -142,9 +142,10 @@ $susy: (
       @if ($output-developer-content == true) {
         &:after {
           content: "#{$i} of #{$susy-columns} @ #{$class}";
-          color: $cool-grey;
+          color: #888;
           font-size: 70%;
-          text-transform: uppercase;
+          position: absolute;
+          @include center(y);
         }
       }
     }
