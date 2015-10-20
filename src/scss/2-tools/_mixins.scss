@@ -1,3 +1,5 @@
+// Clearfix
+// -----
 @mixin clearfix {
   :after {
     content: '';
@@ -5,7 +7,6 @@
     clear: both;
   }
 }
-
 
 
 // center vertically and/or horizontally an absolute or relative positioned element
