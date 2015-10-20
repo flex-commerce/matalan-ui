@@ -83,13 +83,26 @@ $input-padding-y: $default-pad-y;
   }
   .input-group--addon {
     width: auto;
-    background: $primary-color;
-    color: $white;
+    &:not(.unstyled) {
+      background: $primary-color;
+      color: $white;
+    }
   }
   .input-group--expand {
     width: 100%;
   }
 }
+
+
+.input-group--addon.input-group--addon__overlay {
+  position: absolute;
+  + .input-group--addon__overlain {
+    padding-left: 32px;
+  }
+}
+
+
+
 
 // form wide dev rules
 .form-wide {

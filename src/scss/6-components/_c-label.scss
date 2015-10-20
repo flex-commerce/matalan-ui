@@ -16,15 +16,15 @@
 .c-lbl {
     display: inline-block;
     padding: .25em .4em;
-    font-size: 75%;
+    font-size: rem-calc(12);
     font-weight: bold;
-    line-height: 1;
+    // line-height: 1;
     color: white;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    padding: 5px 20px;
-    @include border-radius();
+    padding: rem-calc(5 20);
+    // @include border-radius();
     // Empty labels collapse automatically
     &:empty {
         display: none;

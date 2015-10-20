@@ -1,12 +1,14 @@
-//
-// Base styles
-// $btn-font-weight: 500;
-// $border-width: 1px;
+
+
+$button-padding-x: $default-pad-x;
+$button-padding-y: $default-pad-y;
+
+
 
 .c-btn {
   display: inline-block;
   border: 1px solid transparent;
-  @include button-size($default-pad-y, $default-pad-x, 1em, $base-line-height);
+  @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
 
   &:active,
   &.active,
@@ -48,7 +50,7 @@
 // split button dropdown
 
   .c-btn-dropdown {
-    margin-left: -5px;
+    margin-left: rem-calc(-4);
     position: relative;
 
     &:after {

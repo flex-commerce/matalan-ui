@@ -4,7 +4,7 @@
 
 body {
   background: #fcfcfc;
-  color: #333;
+  color: #444;
 }
 
 h2 {
@@ -33,20 +33,6 @@ ol {
 }
 
 
-[class^="icon-"],
-[class*=" icon-"] {
-  display: block;
-  margin-bottom: 1em;
-  &:before {
-    font-size: 32px;
-    padding-right: 0.5em;
-    display: inline-block;
-    color: $cool-grey;
-  }
-  &:hover:before {
-    color: $primary-color;
-  }
-}
 
 // visualisation helper for grid
 [class^="col-"],
@@ -78,7 +64,7 @@ ol {
 .ui-row {
   width: 100%;
   min-height: 15em;
-  overflow: hidden;
+  @include clearfix;
   border-bottom: 1px solid #aaa;
   padding-bottom: 2em;
   .ui-row {
@@ -125,15 +111,18 @@ ol {
 // temp icon dev rules
 [class^="icon-"],
 [class*=" icon-"] {
+  margin-bottom: 1em; // todo - replace temp dev rule
   &:before {
-    font-size: 32px;
+    font-size: rem-calc(32px); // todo - replace temp dev rule
     padding-right: 0.5em;
     display: inline-block;
     color: $cool-grey;
   }
   &:hover:before {
-    color: $matalan-brand;
+    color: $primary-color;
   }
+}
+
+.block-icon {
   display: block;
-  margin-bottom: 1em;
 }

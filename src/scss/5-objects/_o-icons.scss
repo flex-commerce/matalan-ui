@@ -1,8 +1,7 @@
-[class^="icon-"], [class*=" icon-"] {
+%icon-base{
   &:before {
     vertical-align: middle;
   }
-
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -14,6 +13,12 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+
+  @extend %icon-base;
+
 }
 
 .icon-google-plus:before {

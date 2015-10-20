@@ -40,7 +40,7 @@ $list-border: $cool-grey;
 
 
 .o-list-block {
-  .o-list__item {
+  > .o-list__item {
     position: relative;
     display: block;
     padding: $list-padding;
@@ -48,7 +48,7 @@ $list-border: $cool-grey;
 }
 
 .o-list-ui {
-  .o-list__item {
+   > .o-list__item {
     display: block;
     padding: $list-padding;
 
@@ -60,8 +60,8 @@ $list-border: $cool-grey;
 }
 
 
-.o-list-ui.o-list--bordered {
-  .o-list__item {
+.o-list--bordered {
+  > .o-list__item {
     border: 1px solid $cool-grey;
     margin-top: rem-calc(-1);
 
@@ -73,16 +73,11 @@ $list-border: $cool-grey;
   }
 }
 
-.o-list--bordered {
-  > .o-list__item {
-    margin-top: -.0625rem;
-    border: .0625rem solid $list-border;
-  }
-}
+
 
 .o-list--vertical-sep {
   > .o-list__item:not(:last-child) {
-    border-bottom: .0625rem solid $list-border;
+    border-bottom: rem-calc(1) solid $list-border;
   }
 }
 
