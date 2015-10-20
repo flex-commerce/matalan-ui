@@ -121,3 +121,19 @@ ol {
   padding: 10px;
 }
 
+
+// temp icon dev rules
+[class^="icon-"],
+[class*=" icon-"] {
+  &:before {
+    font-size: 32px;
+    padding-right: 0.5em;
+    display: inline-block;
+    color: $cool-grey;
+  }
+  &:hover:before {
+    color: $matalan-brand;
+  }
+  display: block;
+  margin-bottom: 1em;
+}
