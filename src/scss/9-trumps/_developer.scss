@@ -4,7 +4,7 @@
 
 body {
   background: #fcfcfc;
-  color: #333;
+  color: #444;
 }
 
 h2 {
@@ -32,27 +32,49 @@ ol {
   // outline-offset: 3px;
 }
 
+
+
+// visualisation helper for grid
+[class^="col-"],
+[class*=" col-"] {
+  outline: 1px solid $cool-grey;
+  background: $secondary-color;
+  margin-bottom: 1em;
+}
+
+.island {
+  background: rgba($cool-grey, 0.5);
+  margin: rem-calc(15) 0;
+  min-height: 2em;
+  color: #fff;
+  display: block;
+  border-radius: 5px;
+}
+
+
+
+
 // fake grid for ui kit
-.container {
+.ui-container {
   max-width: 1024px;
   margin: 0 auto;
   display: block;
 }
 
-.row {
+.ui-row {
   width: 100%;
   min-height: 15em;
-  overflow: hidden;
+  @include clearfix;
   border-bottom: 1px solid #aaa;
   padding-bottom: 2em;
-  .row {
+  .ui-row {
     border-style: none;
     padding-bottom: 0;
     min-height: 0;
   }
 }
 
-.grid-20 {
+.ui-grid-20 {
   width: 20%;
   float: left;
   padding: 10px 10px 10px 0;
@@ -61,34 +83,37 @@ ol {
   }
 }
 
-.grid-80 {
+.ui-grid-80 {
   width: 80%;
   float: left;
   padding: 10px;
 }
 
-.grid-50 {
+.ui-grid-50 {
   width: 50%;
   float: left;
   padding: 10px;
 }
 
-.grid-33 {
+.ui-grid-33 {
   width: 33%;
   float: left;
   padding: 10px;
 }
 
-.grid-66 {
+.ui-grid-66 {
   width: 66%;
   float: left;
   padding: 10px;
 }
 
+
+// temp icon dev rules
 [class^="icon-"],
 [class*=" icon-"] {
+  margin-bottom: 1em; // todo - replace temp dev rule
   &:before {
-    font-size: 32px;
+    font-size: rem-calc(32px); // todo - replace temp dev rule
     padding-right: 0.5em;
     display: inline-block;
     color: $cool-grey;
@@ -96,6 +121,8 @@ ol {
   &:hover:before {
     color: $primary-color;
   }
+}
+
+.block-icon {
   display: block;
-  margin-bottom: 1em;
 }

@@ -1,29 +1,14 @@
-// center vertically and/or horizontally an absolute or relative positioned element
-// relative positioned elements require an explicit height to be set on the parent
-// absolute positioned elements require a relative parent for postioning
-
-@mixin center($xy:xy, $pos:null) {
-  @if $pos == 'abs' {
-    position: absolute;
+// Clearfix
+// -----
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
   }
-    @if $xy==xy {
-        left: 50%;
-        top: 50%;
-        bottom: auto;
-        right: auto;
-        transform: translateX(-50%), translateY(-50%);
-    }
-    @else if $xy==x {
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-    }
-    @else if $xy==y {
-        top: 50%;
-        bottom: auto;
-        transform: translateY(-50%);
-    }
 }
+
+
 
 
 // document this
@@ -68,11 +53,11 @@
 
 // We use this to control border radius.
 // $radius - Default: $global-radius || 4px
-@mixin border-radius($radius:$border-radius) {
-  @if $radius {
-    border-radius: $radius;
-  }
-}
+// @mixin border-radius($radius:$border-radius) {
+//   @if $radius {
+//     border-radius: $radius;
+//   }
+// }
 
 @mixin box-shadow($shadow) {
     box-shadow: $shadow;
@@ -148,3 +133,5 @@
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
   background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 }
+
+

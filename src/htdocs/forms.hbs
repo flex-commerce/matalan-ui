@@ -1,36 +1,222 @@
-<h2>Forms<small>(_objects/_o-lists.scss)</small></h2>
+<h2>Forms <small>(_objects/_o-lists.scss)</small></h2>
 
-<div class="o-form-input-group">
-  <label>Input Label
-    <input type="text" placeholder="large-12.columns" />
-  </label>
+<div class="ui-row">
+  <h3>Inline Forms</h3>
+  <div>
+
+    <form class="form-inline">
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Input Label</label>
+        </div>
+        <div class="o-form-input">
+          <input type="text" placeholder="placeholder" />
+        </div>
+        <div class="o-form-input">
+          <input type="text" placeholder="placeholder" />
+        </div>
+        <label class="o-form-label o-form-label__option">
+          <input type="checkbox">Remember me
+        </label>
+        <button type="submit" class="c-btn c-btn-secondary">Transfer cash</button>
+      </div>
+    </form>
+
+  </div>
+  <div>
+
+    <form class="form-inline">
+      <div class="o-form-row">
+        <div class="o-form--input-group o-form-input">
+          <div class="input-group--addon">$</div>
+          <input type="text" class="input-group--expand" placeholder="Amount">
+          <div class="input-group--addon">.00</div>
+        </div>
+        <button type="submit" class="c-btn c-btn-secondary">Transfer cash</button>
+      </div>
+    </form>
+
+  </div>
 </div>
 
-<div class="o-form-input-group">
-  <label>Select Box
-    <select>
-      <option value="husker">Husker</option>
-      <option value="starbuck">Starbuck</option>
-      <option value="hotdog">Hot Dog</option>
-      <option value="apollo">Apollo</option>
-    </select>
-  </label>
-</div>
 
-<div class="o-form-input-group">
-  <label>Choose Your Favorite</label>
-  <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-  <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Bl  ue</label>
-</div>
+<div class="ui-row">
+  <div class="ui-grid-50">
+    <h3>Default Form</h3>
 
-<div class="o-form-input-group">
-  <label>Check these out</label>
-  <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-  <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-</div>
+    <form action="" class="form-default">
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Input Label</label>
+        </div>
+        <div class="o-form-input">
+          <input type="text" placeholder="placeholder" />
+          <p class="o-form--help-text">example block-level help text here.</p>
+          <label class="o-form-label o-form-label__option">
+            <input type="checkbox">Remember me
+          </label>
+        </div>
+      </div>
 
-<div class="o-form-input-group">
-  <label>Textarea Label
-    <textarea placeholder="small-12.columns"></textarea>
-  </label>
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Select Box</label>
+        </div>
+        <div class="o-form-input">
+          <select>
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Choose Option (inline)</label>
+        </div>
+        <div class="o-form-input o-label-inline">
+          <label class="o-form-label__option">
+            <input type="radio" name="foo" value="Red">Red</label>
+          <label class="o-form-label__option">
+            <input type="radio" name="foo" value="Blue">Blue</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Choose Option (block)</label>
+        </div>
+        <div class="o-form-input o-label-block">
+          <label class="o-form-label__option">
+            <input type="radio" name="foo" value="Red">Red</label>
+          <label class="o-form-label__option">
+            <input type="radio" name="foo" value="Blue">Blue</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Check it (inline)</label>
+        </div>
+        <div class="o-form-input o-label-inline">
+          <label class="o-form-label__option">
+            <input type="checkbox">Checkbox 1</label>
+          <label class="o-form-label__option">
+            <input type="checkbox">Checkbox 2</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Check it (block)</label>
+        </div>
+        <div class="o-form-input o-label-block">
+          <label class="o-form-label__option">
+            <input type="checkbox">Checkbox 1</label>
+          <label class="o-form-label__option">
+            <input type="checkbox">Checkbox 2</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Textarea Label</label>
+        </div>
+        <div class="o-form-input">
+          <textarea>raaa</textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="ui-grid-50">
+    <h3>Horizontal Form</h3>
+
+    <form action="" class="form-wide">
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Input Label</label>
+        </div>
+        <div class="o-form-input">
+          <input type="text" placeholder="placeholder" />
+          <p class="o-form--help-text">example block-level help text here.</p>
+          <label class="o-form-label o-form-label__option">
+            <input type="checkbox">Remember me
+          </label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Select Box</label>
+        </div>
+        <div class="o-form-input">
+          <select>
+            <option value="foo">foo</option>
+            <option value="bar">bar</option>
+            <option value="baz">baz</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Choose Option (inline)</label>
+        </div>
+        <div class="o-form-input o-label-inline">
+          <label class="o-form-label__option">
+            <input type="radio" name="foo" value="Red">Red</label>
+          <label class="o-form-label__option">
+            <input type="radio" name="foo" value="Blue">Blue</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Choose Option (block)</label>
+        </div>
+        <div class="o-form-input o-label-block">
+          <label class="o-form-label__option">
+            <input type="radio" name="foo" value="Red">Red</label>
+          <label class="o-form-label__option">
+            <input type="radio" name="foo" value="Blue">Blue</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Check it (inline)</label>
+        </div>
+        <div class="o-form-input o-label-inline">
+          <label class="o-form-label__option">
+            <input type="checkbox">Checkbox 1</label>
+          <label class="o-form-label__option">
+            <input type="checkbox">Checkbox 2</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label o-form-label__primary">Check it (block)</label>
+        </div>
+        <div class="o-form-input o-label-block">
+          <label class="o-form-label o-form-label__option">
+            <input type="checkbox">Checkbox 1</label>
+          <label class="o-form-label o-form-label__option">
+            <input type="checkbox">Checkbox 2</label>
+        </div>
+      </div>
+
+      <div class="o-form-row">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Textarea Label</label>
+        </div>
+        <div class="o-form-input">
+          <textarea>raaa</textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+
 </div>

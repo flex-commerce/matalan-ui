@@ -2,7 +2,7 @@
 
 var gulp          = require('gulp');
 var browserSync   = require('browser-sync');
-var sass          = require('gulp-ruby-sass');
+var sass          = require('gulp-sass');
 var sourcemaps    = require('gulp-sourcemaps');
 var autoprefixer  = require('gulp-autoprefixer');
 var minifyCSS     = require('gulp-minify-css');
@@ -23,21 +23,13 @@ var banner = [
   ''
 ].join('\n');
 
-gulp.task('scss-lint', function()
-{
-  var reporter = stylish();
-  gulp.src('/scss/**/*.scss')
-  .pipe( scssLint({ customReport: reporter.issues }) )
-  .pipe( reporter.printSummary );
-});
-
-
 
 gulp.task('sass', function () {
 
-  return sass(config.src, config.settings)
+  return gulp.src(config.src)
 
     .pipe(sourcemaps.init())
+    .pipe(sass(config.settings))
     .on('error', handleErrors)
     .pipe(autoprefixer())
     .pipe(minifyCSS({
@@ -52,5 +44,36 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}));
-
 });
+
+
+gulp.task('scss-lint', function()
+{
+  var reporter = stylish();
+  gulp.src('/scss/**/*.scss')
+  .pipe( scssLint({ customReport: reporter.issues }) )
+  .pipe( reporter.printSummary );
+});
+
+
+// gulp.task('sass', function () {
+
+//   sass(config.src)
+
+//     .pipe(sourcemaps.init())
+//     .on('error', handleErrors)
+//     .pipe(autoprefixer())
+//     .pipe(minifyCSS({
+//       keepSpecialComments: "*",
+//       roundingPrecision: -1,
+//       restructuring: false,
+//       mediaMerging: false,
+//       keepBreaks: true,
+//       advanced: false
+//     }))
+//     .pipe(header(banner, {pkg: pkg}))
+//     .pipe(sourcemaps.write())
+//     .pipe(gulp.dest(config.dest))
+//     .pipe(browserSync.reload({stream:true}));
+
+// });

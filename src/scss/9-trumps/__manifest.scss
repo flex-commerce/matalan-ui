@@ -1,7 +1,8 @@
 // IE fixes and temporary hacks
 
-// @import "s-hacks";
-// @import "s-iex";
-// @import "s-shame";
+@import "hacks";
+@import "iex";
+@import "shame";
 @import "utility-classes";
 @import "developer";
+@import "dev-debug";

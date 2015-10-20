@@ -1,0 +1,14 @@
+.form-inline.search-form {
+
+}
+
+.input-group--addon__overlay {
+  &:before {
+    @extend %icon-base;
+    content: "\e2ca";
+    font-size: rem-calc(32px); // todo - replace temp dev rule
+    padding-right: 0.5em;
+    display: inline-block;
+    color: $cool-grey;
+  }
+}

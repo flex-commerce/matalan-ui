@@ -1,7 +1,36 @@
+// This is the default html and body font-size for the base rem value.
+$rem-base: 14px !default;
+
+$base-font-size: $rem-base;
+$base-line-height: 20px;
+
+
+
+$base-spacing-unit: $base-line-height;
+
+
+$base-background-color: #fff;
+$base-text-color: #111;
+
+
+
 $opposite-direction: right;
 $default-float: left;
-$border-radius: 4px;
 
-$spacer:                     1rem;
-$spacer-x:                   $spacer;
-$spacer-y:                   $spacer;
+
+
+// manual strip unit and rem calc method before tools are loaded
+$default-pad-x:  #{ 14 / ($rem-base / ($rem-base * 0 + 1))}rem;
+$default-pad-y:  #{ 7 / ($rem-base / ($rem-base * 0 + 1))}rem;
+
+
+$base-spacing-unit:           $base-line-height;
+$base-spacing-unit--tiny:     round($base-spacing-unit / 4);
+$base-spacing-unit--small:    round($base-spacing-unit / 2);
+$base-spacing-unit--large:    round($base-spacing-unit * 2);
+$base-spacing-unit--huge:     round($base-spacing-unit * 4);
+
+
+$spacer:   1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
