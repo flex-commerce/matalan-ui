@@ -13,12 +13,7 @@ $input-color: #666;
   color: $input-color;
 }
 
-.o-form-label--contain {
-  outline: 1px dotted green;
-}
-
 .o-form-input {
-  // outline: 1px dotted maroon;
   input:not([type="radio"]):not([type="checkbox"]),
   optgroup,
   select,
@@ -29,31 +24,31 @@ $input-color: #666;
 }
 
 // positioning offsets
-//
 .o-form-input > label [type="radio"],
 .o-form-input > label [type="checkbox"] {
   margin-right: 0.5em;
 }
 
-.o-form-inline > label {
+.o-label-inline > label {
   float: left;
   + label {
     margin-left: 0.5em;
   }
 }
+.o-label-block > label {
+  display: block;
+}
 
 
-// form wide
+// form wide dev rules
 
 .form-wide {
   .o-form-label--contain {
-    // outline: 1px solid blue;
-    width: 33%;
+    width: 33%;   // magic numbers, revisit with grid?
     float: left;
   }
   .o-form-input {
-    // outline: 1px solid red;
-    width: 66%;
+    width: 66%;  // magic numbers, revisit with grid?
     float: left;
   }
 }
@@ -62,17 +57,16 @@ $input-color: #666;
 
 
 .o-form-row {
- @include clearfix;
- // overflow: hidden;
+ @include clearfix();
 }
 
-.o-form-label--contain__primary {
+// main label styling
+.o-form-label__primary {
   display: block;
-  outline: 2px dotted maroon;
 }
-.o-form-label--contain__option {
+// sub / option label styling
+.o-form-label__option {
   display: inline;
-  outline: 1px solid orange;
 }
 
 
