@@ -2,6 +2,7 @@
   display: inline-block;
   .c-btn,
   .c-btn-grp-dropdown {
+    margin-left: rem-calc(-1);
     float: left;
   }
 }

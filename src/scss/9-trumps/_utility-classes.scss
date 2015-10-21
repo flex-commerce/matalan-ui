@@ -29,3 +29,11 @@
 .u-fsi {
   font-style: italic;
 }
+
+.u-no-underline {
+  text-decoration: none !important;
+  &:before,
+  &:after {
+    text-decoration: none !important;
+  }
+}

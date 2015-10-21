@@ -6,16 +6,18 @@
   .c-search__button {
     color: $white;
     background: $cool-grey-hover;
+    @extend .u-no-underline;
   }
   .icon-search:before {
     color: $keyline-color;
   }
+
   &.has-focus {
-    .icon-search:before {
-      color: $cool-grey-hover;
-    }
     .c-search__button {
       background: $primary-color;
+    }
+    .icon-search:before {
+      color: $cool-grey-hover;
     }
   }
 }
@@ -25,4 +27,3 @@
   margin-left: rem-calc(4);
 }
 
-// .o-form--input-group.has-focus {}

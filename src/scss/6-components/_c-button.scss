@@ -1,13 +1,10 @@
-
-
 $button-padding-x: $default-pad-x;
 $button-padding-y: $default-pad-y;
 
-
-
 .c-btn {
   display: inline-block;
-  border: 1px solid transparent;
+  border-style: solid;
+  border-width: 1px;
   @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
 
   &:active,
@@ -47,7 +44,6 @@ $button-padding-y: $default-pad-y;
 }
 
 .c-btn-grp-dropdown {
-// split button dropdown
 
   .c-btn-dropdown {
     margin-left: rem-calc(-4);
@@ -79,15 +75,24 @@ $button-padding-y: $default-pad-y;
 }
 
 .c-btn-grp-dropdown .c-btn-dropdown .caret {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 .c-btn-dropdown {
   .caret {}
 }
 
-.c-btn:not(.c-btn-dropdown) + .c-btn-dropdown {
-  // outline: 1px solid green;
+//
+// Block button
+//
+.c-btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.c-btn-block + .c-btn-block {
+  margin-top: 5px;
 }
 
 
@@ -133,15 +138,3 @@ fieldset[disabled] .c-btn {
   // @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }
 
-//
-// Block button
-//
-.c-btn-block {
-  display: block;
-  width: 100%;
-}
-
-// Vertically space out multiple block buttons
-.c-btn-block + .c-btn-block {
-  margin-top: 5px;
-}

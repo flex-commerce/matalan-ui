@@ -1,0 +1,44 @@
+// reusable mixin to justify a row of inline block level elements
+@mixin justify-children {
+    // width: 550px;
+    text-align: justify;
+    // background: firebrick;
+    font-size: 0;      /* IE6-9 only hack */
+    font-size: 12px\9; /* IE6-9 only hack */
+
+  > * {
+    // background: white;
+    display: inline-block;
+    font-size: rem-calc(12);
+    zoom: 1;
+    *display: inline;
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+}
+
+
+.c-navbar {
+  padding: 0 2rem;
+  @include justify-children;
+  @include border-tb-default;
+  > li {
+    text-transform: uppercase;
+    a {
+      display: inline-block;
+      line-height: 4em;
+      padding: 0 1em;
+      color: $base-text-color;
+      text-decoration: none;
+      &.active {
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+}

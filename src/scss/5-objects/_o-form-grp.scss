@@ -34,12 +34,12 @@ $line-height: $base-line-height;
 }
 
 .o-form--input-group {
-  display: table-row;
+  display: inline-table;
   > * {
     display: table-cell !important;
   }
   .input-group--addon {
-    width: 1%;
+    width: auto;
     &:not(.input-group--addon__inset) {
       padding: 0 em-calc(10px);
     }

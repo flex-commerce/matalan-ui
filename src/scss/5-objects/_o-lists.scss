@@ -94,6 +94,14 @@ $list-border: $cool-grey;
   margin-top: 0;
   margin-bottom: 5px;
 }
+.o-list__item {
+  position: relative;
+.list-addon__right {
+    @include center(y, abs);
+    right: 1em;
+  }
+}
+
 
 
 .o-dl-plain {
