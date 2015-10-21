@@ -1,14 +1,33 @@
 <div class="ui-row">
   <h2>Search Bars</h2>
 
-  <form class="form-inline search-form">
+  <form class="form-inline c-search-form">
     <div class="o-form-row">
       <div class="o-form--input-group o-form-input">
-        <div class="input-group--addon unstyled input-group--addon__overlay"></div>
-        <input type="text" class="input-group--expand input-group--addon__overlain" placeholder="Amount">
-        <div class="input-group--addon">Search</div>
+        <div class="input-group--addon unstyled input-group--addon__inset">
+          <i class="icon-search"></i>
+        </div>
+        <input type="text"
+          class="input--textual input-group--expand input-group--addon__inset-left"
+          placeholder="Enter Keyword or Product Code">
+        <div class="input-group--addon unstyled"><a class="c-btn" href="#">Search</a></div>
       </div>
-    </div>
+     </div>
+  </form>
+
+
+  <form class="form-inline c-search-form has-focus">
+    <div class="o-form-row">
+      <div class="o-form--input-group o-form-input">
+        <div class="input-group--addon unstyled input-group--addon__inset">
+          <i class="icon-search"></i>
+        </div>
+        <input type="text"
+          class="input--textual input-group--expand input-group--addon__inset-left"
+          placeholder="Enter Keyword or Product Code">
+        <div class="input-group--addon unstyled"><a class="c-btn" href="#">Search</a></div>
+      </div>
+     </div>
   </form>
 
 </div>

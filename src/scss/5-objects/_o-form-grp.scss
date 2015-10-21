@@ -16,6 +16,8 @@ $input-padding-y: $default-pad-y;
   padding: $form-row-padding-y $form-row-padding-x;
   line-height: $line-height;
   color: $input-color;
+  position: relative;
+  @include clearfix();
 }
 
 .form-inline {
@@ -40,11 +42,11 @@ $input-padding-y: $default-pad-y;
 }
 
 .o-form-input {
-  input:not([type="radio"]):not([type="checkbox"]),
+  .input--textual,
   textarea {
     border: 1px solid $cool-grey;
   }
-  input:not([type="radio"]):not([type="checkbox"]),
+  .input--textual,
   optgroup,
   select,
   textarea {
@@ -94,9 +96,9 @@ $input-padding-y: $default-pad-y;
 }
 
 
-.input-group--addon.input-group--addon__overlay {
-  position: absolute;
-  + .input-group--addon__overlain {
+.input-group--addon.input-group--addon__inset {
+  @include center($xy:y, $pos:abs);
+  + .input-group--addon__inset-left {
     padding-left: 32px;
   }
 }
@@ -117,9 +119,6 @@ $input-padding-y: $default-pad-y;
 }
 
 //////
-.o-form-row {
-  @include clearfix();
-}
 
 // main label styling
 .o-form-label__primary {
