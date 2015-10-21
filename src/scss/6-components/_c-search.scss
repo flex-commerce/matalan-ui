@@ -3,16 +3,19 @@
 }
 
 .c-search-form {
-  .c-btn {
-    background-color: $primary-color;
+  .c-search__button {
+    color: $white;
+    background: $cool-grey-hover;
   }
-
+  .icon-search:before {
+    color: $keyline-color;
+  }
   &.has-focus {
-    .c-btn {
-      background-color: $cool-grey-hover;
-    }
     .icon-search:before {
-      color: $primary-color;
+      color: $cool-grey-hover;
+    }
+    .c-search__button {
+      background: $primary-color;
     }
   }
 }

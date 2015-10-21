@@ -1,0 +1,61 @@
+$line-height: $base-line-height;
+$input-padding-x: $default-pad-x;
+$input-padding-y: $default-pad-y;
+
+.o-form-input--contain {
+  // outline: 1px solid red;
+}
+
+.o-form-input--contain {
+  .input--textual,
+  textarea {
+    border: 1px solid $cool-grey;
+  }
+  .input--textual,
+  optgroup,
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    // @TODO - rename this super useful sizing function
+    @include button-size($input-padding-y, $input-padding-x, 1em, $line-height);
+  }
+}
+
+// spacing between inline options and their labels
+.o-form-label__option [type="radio"],
+.o-form-label__option [type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+// main label styling
+.o-form-label__primary {
+  display: block;
+  font-weight: bold;
+}
+
+// sub / option label styling
+.o-form-label__option {
+  display: inline;
+  font-weight: 300;
+  font-size: 90%;
+}
+
+// making inline labels
+.o-label-inline > .o-form-label__option {
+  float: left;
+  + .o-form-label__option {
+    margin-left: 1em;
+  }
+}
+.o-form-input--contain.o-label-inline {
+  @include clearfix;
+}
+
+
+
+// spacing between multiple inline option labels
+.o-label-block > .o-form-label__option {
+  display: block;
+  margin-bottom: rem-calc(12px);
+}

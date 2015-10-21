@@ -1,16 +1,7 @@
-// Textual form controls
-
-// @TODO - split this file into form groups and form controls
-
 $input-color: #666;
-
 $form-row-padding-y: 1em;
 $form-row-padding-x: 0;
 $line-height: $base-line-height;
-
-$input-padding-x: $default-pad-x;
-$input-padding-y: $default-pad-y;
-
 
 .o-form-row {
   padding: $form-row-padding-y $form-row-padding-x;
@@ -25,10 +16,8 @@ $input-padding-y: $default-pad-y;
     display: inline-block;
     width: auto;
   }
-  .o-form-label--contain {
-    display: inline-block;
-  }
-  .o-form-input:not(.o-form--input-group) {
+  .o-form-label--contain,
+  .o-form-input--contain:not(.o-form--input-group) {
     display: inline-block;
   }
 }
@@ -39,71 +28,38 @@ $input-padding-y: $default-pad-y;
     display: block;
     width: 100%;
   }
-}
-
-.o-form-input {
-  .input--textual,
-  textarea {
-    border: 1px solid $cool-grey;
+  .o-form-label--contain {
+    margin-bottom: rem-calc(12)
   }
-  .input--textual,
-  optgroup,
-  select,
-  textarea {
-    display: block;
-    width: 100%;
-    // @TODO - rename this super useful sizing function
-    @include button-size($input-padding-y, $input-padding-x, 1em, $line-height);
-  }
-}
-
-// spacing between inline options and their labels
-.o-form-label__option [type="radio"],
-.o-form-label__option [type="checkbox"] {
-  margin-right: 0.5em;
-}
-
-
-// making inline labels
-.o-label-inline > .o-form-label__option {
-  float: left;
-  + .o-form-label__option {
-    margin-left: 1em;
-  }
-}
-
-// spacing between multiple inline option labels
-.o-label-block > .o-form-label__option {
-  display: block;
-  margin-bottom: rem-calc(12px);
 }
 
 .o-form--input-group {
-  display: inline-table;
+  display: table-row;
   > * {
-    display: table-cell;
+    display: table-cell !important;
   }
   .input-group--addon {
-    width: auto;
+    width: 1%;
+    &:not(.input-group--addon__inset) {
+      padding: 0 em-calc(10px);
+    }
     &:not(.unstyled) {
       background: $primary-color;
       color: $white;
     }
   }
-  .input-group--expand {
+  .input-addon--expand {
     width: 100%;
   }
 }
 
-
-.input-group--addon.input-group--addon__inset {
-  @include center($xy:y, $pos:abs);
-  + .input-group--addon__inset-left {
-    padding-left: 32px;
-  }
+.input-group--addon__inset {
+  @include center($xy: y, $pos: abs);
 }
-
-
+.input-group--addon__inset-left {
+  // offset input left padding to accommodate icon
+  padding-left: 48px !important;
+}
 
 
 // form wide dev rules
@@ -112,36 +68,13 @@ $input-padding-y: $default-pad-y;
     width: 33%; // magic numbers, revisit with grid?
     float: left;
   }
-  .o-form-input {
+  .o-form-input--contain {
     width: 66%; // magic numbers, revisit with grid?
     float: left;
   }
 }
 
 //////
-
-// main label styling
-.o-form-label__primary {
-  display: block;
-  font-weight: bold;
-}
-
-// sub / option label styling
-.o-form-label__option {
-  display: inline;
-  font-weight: 300;
-  font-size: 90%;
-}
-
-
-
-
-
-
-
-
-
-
 // background-color: $input-bg;
 // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
 // background-image: none;
