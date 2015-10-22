@@ -28,13 +28,17 @@ $list-border: $cool-grey;
   }
 }
 
+%list-inline__delimited--content {
+    content: '/';
+    display: inline-block;
+    width: rem-calc(15);
+    margin-left: rem-calc(5);
+}
 
 .o-list-inline__delimited > li + li {
   &:before {
-    content: '/';
-    display: inline-block;
-    width: rem-calc(10);
-    opacity: .5;
+    @extend %list-inline__delimited;
+    color: $cool-grey;
   }
 }
 

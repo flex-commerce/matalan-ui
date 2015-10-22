@@ -1,0 +1,31 @@
+// breadcrumbs
+//
+.c-breadcrumb-bar {
+  @extend .o-list-inline;
+
+  a {
+    @extend .u-no-underline;
+    color: $primary-color;
+  }
+}
+
+
+.c-breadcrumb-bar__item + .c-breadcrumb-bar__item {
+  &:before {
+    @extend %list-inline__delimited--content;
+  }
+}
+
+
+.c-breadcrumb-bar__item.no-link {
+  &:before {
+    color: $cool-grey;
+  }
+}
+
+
+.c-breadcrumb-bar__item + .c-breadcrumb-bar__item.has-link {
+  &:before {
+    color: $primary-color;
+  }
+}

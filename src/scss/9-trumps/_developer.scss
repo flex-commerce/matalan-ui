@@ -2,11 +2,6 @@
  *  Various developer rules for testing and such
  */
 
-body {
-  background: #fcfcfc;
-  color: #444;
-}
-
 h2 {
   font-size: 1.5em;
   padding: 10px 10px 10px 0;
@@ -125,4 +120,9 @@ ol {
 
 .block-icon {
   display: block;
+}
+
+
+.c-breadcrumb-bar {
+  margin-bottom: 1em;
 }
