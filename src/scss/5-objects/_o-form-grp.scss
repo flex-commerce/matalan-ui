@@ -2,6 +2,26 @@ $input-color: #666;
 $form-row-padding-y: 1em;
 $form-row-padding-x: 0;
 $line-height: $base-line-height;
+$input-padding-x: $default-pad-x;
+$input-padding-y: $default-pad-y;
+
+
+  // default form item sizer, covers labels, text inputs, buttons etc
+  // todo -
+  // add some size handling
+  // move this to mixn level
+@mixin form-item-size(
+  $padding-y :$input-padding-y,
+  $padding-x: $input-padding-x,
+  $font-size: 1em,
+  $line-height: $line-height) {
+
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+
 
 .o-form-row {
   padding: $form-row-padding-y $form-row-padding-x;
@@ -13,7 +33,6 @@ $line-height: $base-line-height;
 
 .form-inline {
   .o-form-row {
-    display: inline-block;
     width: auto;
   }
   .o-form-label--contain,
@@ -29,7 +48,7 @@ $line-height: $base-line-height;
     width: 100%;
   }
   .o-form-label--contain {
-    margin-bottom: rem-calc(12)
+    margin-bottom: rem-calc(12);
   }
 }
 
@@ -65,14 +84,35 @@ $line-height: $base-line-height;
 // form wide dev rules
 .form-wide {
   .o-form-label--contain {
-    width: 33%; // magic numbers, revisit with grid?
-    float: left;
+    @include span(4);
+    text-align: right;
   }
   .o-form-input--contain {
-    width: 66%; // magic numbers, revisit with grid?
-    float: left;
+    @include span(8);
   }
 }
+
+
+
+
+//testing new rules,
+.o-form-inline-fixed__threecol {
+  .o-form-label--contain {
+    @include span(3);
+    @include form-item-size;
+    text-align: right;
+  }
+  .o-form-input--contain {
+    @include span(3);
+  }
+  .o-form-message--contain {
+    @include span(6);
+    @include form-item-size;
+  }
+}
+
+
+
 
 //////
 // background-color: $input-bg;

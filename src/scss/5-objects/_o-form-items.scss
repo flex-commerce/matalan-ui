@@ -1,24 +1,19 @@
-$line-height: $base-line-height;
-$input-padding-x: $default-pad-x;
-$input-padding-y: $default-pad-y;
-
-.o-form-input--contain {
-  // outline: 1px solid red;
-}
-
 .o-form-input--contain {
   .input--textual,
   textarea {
-    border: 1px solid $cool-grey;
+    border-width: rem-calc(1);
+    border-style: solid;
+    border-color: $cool-grey;
+    color: $base-text-color;
   }
+
   .input--textual,
   optgroup,
   select,
   textarea {
     display: block;
     width: 100%;
-    // @TODO - rename this super useful sizing function
-    @include button-size($input-padding-y, $input-padding-x, 1em, $line-height);
+    @include form-item-size();
   }
 }
 
@@ -48,14 +43,15 @@ $input-padding-y: $default-pad-y;
     margin-left: 1em;
   }
 }
-.o-form-input--contain.o-label-inline {
-  @include clearfix;
-}
+// inline sub labels (options, radio etc)
+// .o-form-input--contain.o-label-inline {
+//   @include clearfix;
+// }
 
 
 
 // spacing between multiple inline option labels
 .o-label-block > .o-form-label__option {
   display: block;
-  margin-bottom: rem-calc(12px);
+  margin-bottom: rem-calc(12);
 }
