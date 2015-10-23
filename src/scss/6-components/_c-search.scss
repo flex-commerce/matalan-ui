@@ -3,11 +3,13 @@
 }
 
 .c-search-form {
+
   .c-search__button {
     color: $white;
     background: $cool-grey-hover;
     @extend .u-no-underline;
   }
+
   .icon-search:before {
     color: $keyline-color;
   }
@@ -20,10 +22,11 @@
       color: $cool-grey-hover;
     }
   }
+
 }
 
-.c-input-group--addon i:before {
+.input-group--addon i:before {
   font-size: 2em;
-  margin-left: rem-calc(4);
+  margin-left: rem-calc(6);
 }
 
