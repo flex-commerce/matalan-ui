@@ -58,7 +58,8 @@ $input-padding-y: $default-pad-y;
     display: table-cell !important;
   }
   .input-group--addon {
-    width: auto;
+    width: 1%;
+    text-align: center;
     &:not(.input-group--addon__inset) {
       padding: 0 em-calc(10px);
     }
@@ -95,7 +96,7 @@ $input-padding-y: $default-pad-y;
 
 
 
-//testing new rules,
+//testing new rules - invelstigate this as a pattern
 .o-form-inline-fixed__threecol {
   .o-form-label--contain {
     @include span(3);
