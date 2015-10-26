@@ -1,0 +1,124 @@
+Searching 29 files for "{{>"
+
+/Users/macuser/Web/matalan/ui-kit/src/htdocs/buttons.hbs:
+    1  <h1>Buttons</h1>
+    2
+    3:       {{> button-styles }}
+    4:       {{> button-groups }}
+    5:       {{> button-dropdowns }}
+    6
+
+/Users/macuser/Web/matalan/ui-kit/src/htdocs/forms.hbs:
+    4
+    5
+    6: {{> form-full }}
+    7: {{> form-inline }}
+    8: {{> form-validation }}
+    9: {{> form-sizing }}
+
+/Users/macuser/Web/matalan/ui-kit/src/htdocs/index.html:
+   16      <h1 class="ui-header">Matalan Bootsrap</h1>
+   17
+   18:       {{> grid }}
+   19:       {{> colors }}
+   20:       {{> typography }}
+   21
+   22:       {{> navigation }}
+   23:       {{> buttons }}
+   24
+   25
+   26
+   27:       {{> labels }}
+   28:       {{> alerts }}
+   29:       {{> progress-bars }}
+   30
+   31        product images todo
+   32
+   33
+   34:       {{> forms }}
+   35
+   36        tables todo
+   ..
+   40        roundels todo
+   41
+   42:       {{> lists }}
+   43:       {{> ratings }}
+   44:       {{> icons }}
+   45
+   46    </div>
+
+/Users/macuser/Web/matalan/ui-kit/src/htdocs/navigation.hbs:
+    1  <h1>Navigation</h1>
+    2
+    3:       {{> nav-navbar }}
+    4:       {{> nav-search }}
+    5:       {{> nav-breadcrumbs }}
+    6:       {{> nav-tabspills }}
+    7:       {{> nav-pagination }}
+
+24 matches across 4 files
+
+
+Searching 29 files for "{{ >"
+
+0 matches
+
+Searching 29 files for "{{>"
+
+/Users/macuser/Web/matalan/ui-kit/src/htdocs/buttons.hbs:
+    1  <h1>Buttons</h1>
+    2
+    3:       {{> button-styles }}
+    4:       {{> button-groups }}
+    5:       {{> button-dropdowns }}
+    6
+
+/Users/macuser/Web/matalan/ui-kit/src/htdocs/forms.hbs:
+    4
+    5
+    6: {{> form-full }}
+    7: {{> form-inline }}
+    8: {{> form-validation }}
+    9: {{> form-sizing }}
+
+/Users/macuser/Web/matalan/ui-kit/src/htdocs/index.html:
+   16      <h1 class="ui-header">Matalan Bootsrap</h1>
+   17
+   18:       {{> grid }}
+   19:       {{> colors }}
+   20:       {{> typography }}
+   21
+   22:       {{> navigation }}
+   23:       {{> buttons }}
+   24
+   25
+   26
+   27:       {{> labels }}
+   28:       {{> alerts }}
+   29:       {{> progress-bars }}
+   30
+   31        product images todo
+   32
+   33
+   34:       {{> forms }}
+   35
+   36        tables todo
+   ..
+   40        roundels todo
+   41
+   42:       {{> lists }}
+   43:       {{> ratings }}
+   44:       {{> icons }}
+   45
+   46    </div>
+
+/Users/macuser/Web/matalan/ui-kit/src/htdocs/navigation.hbs:
+    1  <h1>Navigation</h1>
+    2
+    3:       {{> nav-navbar }}
+    4:       {{> nav-search }}
+    5:       {{> nav-breadcrumbs }}
+    6:       {{> nav-tabspills }}
+    7:       {{> nav-pagination }}
+
+24 matches across 4 files
