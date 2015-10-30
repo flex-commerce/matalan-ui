@@ -32,8 +32,7 @@ $secondary-color: $light-grey;
 
 // ===============
 // Fading primary color
-//
-$primary-lighten-100: mix($white, $primary-color-hover, 0);
+
 $primary-lighten-90: mix($white, $primary-color-hover, 10);
 $primary-lighten-80: mix($white, $primary-color-hover, 20);
 $primary-lighten-70: mix($white, $primary-color-hover, 30);
@@ -46,7 +45,7 @@ $primary-lighten-10: mix($white, $primary-color-hover, 90);
 
 // ===============
 // Fading dark grey color
-$dark-grey-lighten-100: mix($white, $dark-grey, 0);
+
 $dark-grey-lighten-90: mix($white, $dark-grey, 10);
 $dark-grey-lighten-80: mix($white, $dark-grey, 20);
 $dark-grey-lighten-70: mix($white, $dark-grey, 30);

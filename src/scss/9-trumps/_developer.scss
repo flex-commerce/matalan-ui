@@ -1,37 +1,36 @@
 /**
  *  Various developer rules for testing and such
  */
-.ui-container > h1 {
-  margin-top: 2em;
+
+h1 {
   border-bottom: 1px solid $keyline-color;
 }
-.ui-grid-left {
-  h2 {
-    font-size: 1.5em;
-    padding: 10px 10px 10px 0;
-    font-weight: 600;
-    /*   margin-top: 2em; */
-  }
-  h3 {
-    font-size: 1.2em;
-    font-weight: 500;
-    margin: 20px 0 20px 0;
-    small {
-      font-size: 80%;
-      color: #888;
-      font-weight: 300;
-      display: block;
-    }
-  }
-  p {
+
+h2 {
+  font-size: 1.5em;
+  padding: 10px 10px 10px 0;
+  font-weight: 600;
+  /*   margin-top: 2em; */
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 20px 0 20px 0;
+  small {
+    font-size: 80%;
+    color: #888;
     font-weight: 300;
+    display: block;
   }
 }
-.ui-header {
-  font-weight: 700;
-  color: $cool-grey;
+
+p {
+  font-weight: 300;
 }
+
 // highlighters
+
 // visualisation helper for grid
 // [class^="col-"],
 // [class*=" col-"] {
@@ -39,6 +38,7 @@
 //   background: $secondary-color;
 //   margin-bottom: 1em;
 // }
+
 .island {
   background: rgba($cool-grey, 0.5);
   margin: rem-calc(15) 0;
@@ -51,13 +51,13 @@
 // fake grid for ui kit
 .ui-container {
   max-width: 1280px;
-  margin: 5em auto 0;
+  margin: 0 auto;
   display: block;
 }
 
 .ui-row {
   width: 100%;
-  // min-height: 15em;
+  min-height: 15em;
   @include clearfix;
   // border-bottom: 1px solid #aaa;
   padding-bottom: 2em;
@@ -135,21 +135,4 @@
 
 .c-breadcrumb-bar {
   margin-bottom: 1em;
-}
-
-// test class for ui colour pallette
-.ui-color-pall {
-  width: 100%;
-  padding-top: 100%;
-  margin-left: 50px;
-  margin-right: 50px;
-  border: 1px solid #bbb;
-}
-
-.ui-colors {
-  .span-wide-3 {
-    padding-left: 5em;
-    padding-right: 5em;
-    margin-bottom: 2em;
-  }
 }
