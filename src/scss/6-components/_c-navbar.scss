@@ -36,6 +36,9 @@
       padding: 0 1em;
       color: $base-text-color;
       text-decoration: none;
+      &:hover {
+        border-bottom: 2px solid $primary-lighten-40;
+      }
       &.active {
         border-bottom: 2px solid $primary-color;
       }

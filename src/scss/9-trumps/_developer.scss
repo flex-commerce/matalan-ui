@@ -141,10 +141,25 @@
 .ui-color-pall {
   width: 100%;
   padding-top: 100%;
-  margin-left: 50px;
-  margin-right: 50px;
+  // margin-left: 50px;
+  // margin-right: 50px;
   border: 1px solid #bbb;
 }
+.pallette__info {
+  margin: 0 -5em;
+  text-align: center;
+}
+
+code {
+    padding: 2px 4px;
+    margin-bottom: 4px;
+    font-size: 90%;
+    color: #444;
+    background-color: #eee;
+    border-radius: 4px;
+    display: inline-block;
+}
+
 
 .ui-colors {
   .span-wide-3 {

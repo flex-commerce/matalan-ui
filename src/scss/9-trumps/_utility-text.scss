@@ -1,7 +1,8 @@
 /* Text classes */
 
 .meta {
-
+  @extend %u-fade-el;
+  font-size: 80%
 }
 
 .u-font-pri {
@@ -10,7 +11,7 @@
 .u-font-sec {
   font-family:  'Archer', Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
 }
 .u-font-alt {
   font-family:  'Didot', Georgia, Times, 'Times New Roman', serif;

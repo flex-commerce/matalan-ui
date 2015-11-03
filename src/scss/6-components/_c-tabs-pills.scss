@@ -1,0 +1,113 @@
+// ========================
+// variants
+//
+// Tab Default (horizontal)
+.c-tabs-default {
+  .c-tabs--header {
+    @extend .u-cf;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    a {
+      text-decoration: none;
+      color: $primary-color;
+    }
+    .active a {
+      color: $base-text-color;
+    }
+  }
+  .c-tabs--header__item {
+    float: left;
+    margin-bottom: -1px;
+    &.active {
+      color: #555;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-bottom-color: transparent;
+    }
+    a {
+      margin-right: 2px;
+      border: 1px solid transparent;
+    }
+  }
+  .c-tabs--content {
+    border-width: 1px;
+    border-style: none solid solid solid;
+    border-color: #ddd;
+  }
+}
+
+// Tab Stacked (vertical)
+.c-tabs-stacked {
+  display: flex;
+
+  .c-tabs--header {
+    display: inline-block;
+    .c-tabs--header__item {
+      a {
+        text-decoration: none;
+      }
+      &.active a {
+        margin-right: -1px;
+      }
+      border-width: 1px;
+      border-color: $keyline-color;
+      border-style: solid none none solid;
+      &:last-child {
+        border-bottom-style: solid
+      }
+    }
+  }
+  .c-tabs--header:not(.inverted) {
+    .c-tabs--header__item {
+      a {
+        color: $base-text-color;
+        background-color: $white;
+      }
+      &.active a {
+        color: $primary-color;
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+  .c-tabs--header.inverted {
+    .c-tabs--header__item {
+      a {
+        color: $primary-color;
+        background-color: #f0f0f0;
+      }
+      &.active a {
+        color: $base-text-color;
+        background-color: $white;
+      }
+    }
+  }
+  .c-tabs--content {
+    flex-grow: 1;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd;
+  }
+}
+
+// ========================
+.c-tabs--header {
+  > .c-tabs--header__item {
+    > a {
+      line-height: 1.42857143;
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+    }
+  }
+  .c-tabs--header__item.active {
+    color: #555;
+    background-color: #fff;
+  }
+}
+
+.c-tabs--content {
+  padding: 10px 15px;
+  background-color: #fff;
+}
+
