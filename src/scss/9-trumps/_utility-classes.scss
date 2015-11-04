@@ -1,7 +1,3 @@
-.u-cf {
-  @include clearfix;
-}
-
 %u-pad-0,
 .u-pad-0 {
   padding: 0 !important;
@@ -17,8 +13,39 @@
   float: left;
 }
 
+// for light gray text (80% opacity)
+%u-fade-el,
+.u-fade-el {
+  opacity: 0.6;
+}
 
+// for bold text (600 weight)
+%u-fwb,
+.u-fwb {
+  font-weight: 600;
+}
 
-.u-round {
-  border-radius: 50%;
+// for light text (300 weight)
+%u-fwl,
+.u-fwl {
+  font-weight: 300;
+}
+
+// for italics text
+%u-fsi,
+.u-fsi {
+  font-style: italic;
+}
+
+%u-no-underline,
+.u-no-underline {
+  text-decoration: none !important;
+  &:before,
+  &:after {
+    text-decoration: none !important;
+  }
+}
+
+.u-cf {
+  @include clearfix;
 }

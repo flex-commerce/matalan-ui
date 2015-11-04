@@ -6,26 +6,26 @@
   border-bottom: 1px solid $keyline-color;
 }
 .ui-grid-left {
-  h2 {
-    font-size: 1.5em;
-    padding: 10px 10px 10px 0;
-    font-weight: 600;
-    /*   margin-top: 2em; */
-  }
-  h3 {
-    font-size: 1.2em;
-    font-weight: 500;
-    margin: 20px 0 20px 0;
-    small {
-      font-size: 80%;
-      color: #888;
-      font-weight: 300;
-      display: block;
-    }
-  }
-  p {
+h2 {
+  font-size: 1.5em;
+  padding: 10px 10px 10px 0;
+  font-weight: 600;
+  /*   margin-top: 2em; */
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 20px 0 20px 0;
+  small {
+    font-size: 80%;
+    color: #888;
     font-weight: 300;
+    display: block;
   }
+}
+p {
+  font-weight: 300;
+}
 }
 .ui-header {
   font-weight: 700;
