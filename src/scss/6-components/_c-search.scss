@@ -1,14 +1,29 @@
-.form-inline.search-form {
-
+.c-search-form .input-group--addon {
+  text-transform: uppercase;
 }
 
-.input-group--addon__overlay {
-  &:before {
-    @extend %icon-base;
-    content: "\e2ca";
-    font-size: rem-calc(32px); // todo - replace temp dev rule
-    padding-right: 0.5em;
-    display: inline-block;
-    color: $cool-grey;
+.c-search-form {
+  .c-search__button {
+    color: $white;
+    background: $cool-grey-hover;
+    @extend .u-no-underline;
+  }
+  .icon-search:before {
+    color: $keyline-color;
+  }
+
+  &.has-focus {
+    .c-search__button {
+      background: $primary-color;
+    }
+    .icon-search:before {
+      color: $cool-grey-hover;
+    }
   }
 }
+
+.c-input-group--addon i:before {
+  font-size: 2em;
+  margin-left: rem-calc(4);
+}
+

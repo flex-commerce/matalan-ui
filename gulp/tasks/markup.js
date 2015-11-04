@@ -18,7 +18,7 @@ gulp.task('markup', function () {
         .src('./src/htdocs/*.html')
         .pipe(hb({
             helpers: config.hbHelpers,
-            partials: './src/htdocs/*.hbs',
+            partials: './src/htdocs/{,**/}*.hbs',
             bustCache: true
         }))
         .on('error', handleErrors)

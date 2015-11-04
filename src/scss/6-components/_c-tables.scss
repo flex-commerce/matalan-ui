@@ -1,0 +1,24 @@
+.c-table  {
+  width: 100%;
+  text-align: left;
+  th {
+    font-weight: bold;
+    @extend .u-color-pri
+  }
+}
+
+.c-table__default {
+  font-size: rem-calc(14);
+  td, th {
+    padding: 0.65em;
+  }
+}
+
+.c-table__striped {
+  tbody tr:nth-of-type(odd) {
+    @extend .u-bgcolor-lgrey-hover;
+  }
+  tbody tr {
+    border-top: 1px solid $keyline-color
+  }
+}

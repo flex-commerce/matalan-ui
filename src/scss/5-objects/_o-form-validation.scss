@@ -1,0 +1,30 @@
+.form-validate__warning {
+  color: $warning-color;
+  .input--textual {
+    border-color: $warning-color;
+  }
+}
+
+.form-validate__error {
+  color: $error-color;
+  .input--textual {
+    border-color: $error-color;
+  }
+}
+
+.form-validate__info {
+  color: $info-color;
+  .input--textual {
+    border-color: $info-color;
+  }
+}
+
+.form-validate__success {
+  color: $success-color;
+  .input--textual {
+    border-color: $success-color;
+  }
+}
+
+
+

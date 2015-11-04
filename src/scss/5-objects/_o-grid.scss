@@ -38,11 +38,22 @@
 $grid-gutter-width: rem-calc($susy-gutter-width * 2);
 $container-maxwidth: rem-calc($site-maxwidth);
 
+// $susy: (
+//   columns: $susy-columns,
+//   gutter-position: inside-static, //fixed width gutters like bootstrap
+//   gutter: $susy-gutter-width/120px
+// );
+
+
 $susy: (
-  columns: $susy-columns,
-  gutter-position: inside-static, //fixed width gutters like bootstrap
-  gutter: $susy-gutter-width/120px
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  // container: 1140px,
+  gutter-position: inside,
 );
+
 
 
 /* Base Classes and their mixins */

@@ -6,16 +6,11 @@ $base-line-height: 20px;
 
 
 
-$base-spacing-unit: $base-line-height;
+$base-space: $base-line-height;
 
 
-$base-background-color: #fff;
+$base-background-color: #f8f8f8;
 $base-text-color: #111;
-
-
-
-$opposite-direction: right;
-$default-float: left;
 
 
 
@@ -24,13 +19,14 @@ $default-pad-x:  #{ 14 / ($rem-base / ($rem-base * 0 + 1))}rem;
 $default-pad-y:  #{ 7 / ($rem-base / ($rem-base * 0 + 1))}rem;
 
 
-$base-spacing-unit:           $base-line-height;
-$base-spacing-unit--tiny:     round($base-spacing-unit / 4);
-$base-spacing-unit--small:    round($base-spacing-unit / 2);
-$base-spacing-unit--large:    round($base-spacing-unit * 2);
-$base-spacing-unit--huge:     round($base-spacing-unit * 4);
+$base-space:           $base-line-height;
+$base-space--tiny:     round($base-space / 4);
+$base-space--small:    round($base-space / 2);
+$base-space--large:    round($base-space * 2);
+$base-space--huge:     round($base-space * 4);
 
 
+// progress bar
 $spacer:   1rem;
 $spacer-x: $spacer;
 $spacer-y: $spacer;

@@ -1,32 +1,42 @@
-// Textual form controls
-
-// @TODO - split this file into form groups and form controls
-
 $input-color: #666;
-
 $form-row-padding-y: 1em;
 $form-row-padding-x: 0;
 $line-height: $base-line-height;
-
 $input-padding-x: $default-pad-x;
 $input-padding-y: $default-pad-y;
+
+
+  // default form item sizer, covers labels, text inputs, buttons etc
+  // todo -
+  // add some size handling
+  // move this to mixn level
+@mixin form-item-size(
+  $padding-y :$input-padding-y,
+  $padding-x: $input-padding-x,
+  $font-size: 1em,
+  $line-height: $line-height) {
+
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
 
 
 .o-form-row {
   padding: $form-row-padding-y $form-row-padding-x;
   line-height: $line-height;
   color: $input-color;
+  position: relative;
+  @include clearfix();
 }
 
 .form-inline {
   .o-form-row {
-    display: inline-block;
     width: auto;
   }
-  .o-form-label--contain {
-    display: inline-block;
-  }
-  .o-form-input:not(.o-form--input-group) {
+  .o-form-label--contain,
+  .o-form-input--contain:not(.o-form--input-group) {
     display: inline-block;
   }
 }
@@ -37,112 +47,75 @@ $input-padding-y: $default-pad-y;
     display: block;
     width: 100%;
   }
-}
-
-.o-form-input {
-  input:not([type="radio"]):not([type="checkbox"]),
-  textarea {
-    border: 1px solid $cool-grey;
+  .o-form-label--contain {
+    margin-bottom: rem-calc(12);
   }
-  input:not([type="radio"]):not([type="checkbox"]),
-  optgroup,
-  select,
-  textarea {
-    display: block;
-    width: 100%;
-    // @TODO - rename this super useful sizing function
-    @include button-size($input-padding-y, $input-padding-x, 1em, $line-height);
-  }
-}
-
-// spacing between inline options and their labels
-.o-form-label__option [type="radio"],
-.o-form-label__option [type="checkbox"] {
-  margin-right: 0.5em;
-}
-
-
-// making inline labels
-.o-label-inline > .o-form-label__option {
-  float: left;
-  + .o-form-label__option {
-    margin-left: 1em;
-  }
-}
-
-// spacing between multiple inline option labels
-.o-label-block > .o-form-label__option {
-  display: block;
-  margin-bottom: rem-calc(12px);
 }
 
 .o-form--input-group {
   display: inline-table;
   > * {
-    display: table-cell;
+    display: table-cell !important;
   }
   .input-group--addon {
-    width: auto;
+    width: 1%;
+    text-align: center;
+    &:not(.input-group--addon__inset) {
+      padding: 0 em-calc(10px);
+    }
     &:not(.unstyled) {
       background: $primary-color;
       color: $white;
     }
   }
-  .input-group--expand {
+  .input-addon--expand {
     width: 100%;
   }
 }
 
-
-.input-group--addon.input-group--addon__overlay {
-  position: absolute;
-  + .input-group--addon__overlain {
-    padding-left: 32px;
-  }
+.input-group--addon__inset {
+  @include center($xy: y, $pos: abs);
 }
-
-
+.input-group--addon__inset-left {
+  // offset input left padding to accommodate icon
+  padding-left: 48px !important;
+}
 
 
 // form wide dev rules
 .form-wide {
   .o-form-label--contain {
-    width: 33%; // magic numbers, revisit with grid?
-    float: left;
+    @include span(4);
+    text-align: right;
   }
-  .o-form-input {
-    width: 66%; // magic numbers, revisit with grid?
-    float: left;
+  .o-form-input--contain {
+    @include span(8);
   }
 }
+
+
+
+
+//testing new rules - invelstigate this as a pattern
+.o-form-inline-fixed__threecol {
+  .o-form-label--contain {
+    @include span(3);
+    @include form-item-size;
+    text-align: right;
+  }
+  .o-form-input--contain {
+    @include span(3);
+  }
+  .o-form-message--contain {
+    @include span(6);
+    @include form-item-size;
+  }
+}
+
+
+
 
 //////
-.o-form-row {
-  @include clearfix();
-}
-
-// main label styling
-.o-form-label__primary {
-  display: block;
-  font-weight: bold;
-}
-
-// sub / option label styling
-.o-form-label__option {
-  display: inline;
-  font-weight: 300;
-  font-size: 90%;
-}
-
-
-
-
-
-
-
-
-
-
 // background-color: $input-bg;
 // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
 // background-image: none;

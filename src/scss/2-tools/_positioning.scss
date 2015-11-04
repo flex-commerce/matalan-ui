@@ -88,39 +88,30 @@
 // .a {
 //   @include absolute();
 // }
-
 // .b {
 //   @include absolute(top);
 // }
-
 // .c {
 //   @include absolute(top right);
 // }
-
 // .d {
 //   @include absolute(top right bottom);
 // }
-
 // .e {
 //   @include absolute(top right bottom left);
 // }
-
 // .f {
 //   @include absolute(top right 1em);
 // }
-
 // .g {
 //   @include absolute(top 1em right);
 // }
-
 // .h {
 //   @include absolute(top 1em right 100%);
 // }
-
 // .i {
 //   @include absolute(top right mistake);
 // }
-
 // .j {
 //   @include absolute(top 1em right 1em bottom 1em left 1em)
 // }
