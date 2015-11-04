@@ -37,6 +37,11 @@ module.exports = {
         dest: dest + '/img/',
     },
 
+    js: {
+        src: src + '/js/*.js',
+        dest: dest + '/js/',
+    },
+
     production: {
         cssSrc: dest + '/css/*.css',
         jsSrc: dest + '/js/*.js',

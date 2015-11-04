@@ -45,6 +45,12 @@
       {{> icons }}
 
   </div>
+  <script src="js/highlight.pack.js"></script>
+  <script>
+    hljs.configure({useBR: true});
+    hljs.initHighlighting();
+    console.log(hljs.listLanguages())
+  </script>
 </body>
 
 </html>
