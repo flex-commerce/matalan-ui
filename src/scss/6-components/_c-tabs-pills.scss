@@ -1,11 +1,24 @@
 // ========================
 // variants
-//
+
 // Tab Default (horizontal)
-.c-tabs-default {
+
+.c-tabs--header {
+  @extend .u-cf;
+  display: block;
+}
+
+.c-tabs__pills {
+  .c-tabs--header--item > a {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.c-tabs__horizontal {
+
+  // horizontal tabs only
   .c-tabs--header {
-    @extend .u-cf;
-    display: block;
     border-bottom: 1px solid #ddd;
     a {
       text-decoration: none;
@@ -15,20 +28,25 @@
       color: $base-text-color;
     }
   }
-  .c-tabs--header__item {
-    float: left;
-    margin-bottom: -1px;
+
+  .c-tabs--header--item {
+    float: left;  // horizontal only
+    margin-bottom: -1px;  // tabs only
+
+    border-width: 1px;  // tabs only
+    border-style: solid solid none;
+    border-color: transparent;
+
     &.active {
-      color: #555;
       background-color: #fff;
-      border: 1px solid #ddd;
-      border-bottom-color: transparent;
+      border-color: #ddd;
     }
     a {
       margin-right: 2px;
       border: 1px solid transparent;
     }
   }
+
   .c-tabs--content {
     border-width: 1px;
     border-style: none solid solid solid;
@@ -37,12 +55,12 @@
 }
 
 // Tab Stacked (vertical)
-.c-tabs-stacked {
+.c-tabs__vertical {
   display: flex;
 
   .c-tabs--header {
     display: inline-block;
-    .c-tabs--header__item {
+    .c-tabs--header--item {
       a {
         text-decoration: none;
       }
@@ -58,7 +76,7 @@
     }
   }
   .c-tabs--header:not(.inverted) {
-    .c-tabs--header__item {
+    .c-tabs--header--item {
       a {
         color: $base-text-color;
         background-color: $white;
@@ -71,7 +89,7 @@
   }
 
   .c-tabs--header.inverted {
-    .c-tabs--header__item {
+    .c-tabs--header--item {
       a {
         color: $primary-color;
         background-color: #f0f0f0;
@@ -90,9 +108,18 @@
   }
 }
 
+
+.c-tabs--header__pills {
+  @extend .u-cf;
+  display: block;
+  border: 1px solid red;
+}
+
+
+// misc to sort
 // ========================
 .c-tabs--header {
-  > .c-tabs--header__item {
+  > .c-tabs--header--item {
     > a {
       line-height: 1.42857143;
       position: relative;
@@ -100,7 +127,7 @@
       padding: 10px 15px;
     }
   }
-  .c-tabs--header__item.active {
+  .c-tabs--header--item.active {
     color: #555;
     background-color: #fff;
   }
