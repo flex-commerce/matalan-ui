@@ -2,33 +2,11 @@
 // variants
 
 // Tab Default (horizontal)
-
-.c-tabs--header {
-  @extend .u-cf;
-  display: block;
-}
-
-.c-tabs__pills {
-  .c-tabs--header--item > a {
-    background-color: $primary-color;
-    color: $white;
-  }
-}
-
-.c-tabs__horizontal {
-
+.c-tabs.c-tabs__horizontal {
   // horizontal tabs only
   .c-tabs--header {
     border-bottom: 1px solid #ddd;
-    a {
-      text-decoration: none;
-      color: $primary-color;
-    }
-    .active a {
-      color: $base-text-color;
-    }
   }
-
   .c-tabs--header--item {
     float: left;  // horizontal only
     margin-bottom: -1px;  // tabs only
@@ -55,11 +33,12 @@
 }
 
 // Tab Stacked (vertical)
-.c-tabs__vertical {
+.c-tabs.c-tabs__vertical {
   display: flex;
 
   .c-tabs--header {
     display: inline-block;
+
     .c-tabs--header--item {
       a {
         text-decoration: none;
@@ -75,57 +54,48 @@
       }
     }
   }
-  .c-tabs--header:not(.inverted) {
-    .c-tabs--header--item {
-      a {
-        color: $base-text-color;
-        background-color: $white;
-      }
-      &.active a {
-        color: $primary-color;
-        background-color: #f0f0f0;
-      }
-    }
+
+
+  .inverted a {
+      background-color: $white;
   }
 
-  .c-tabs--header.inverted {
-    .c-tabs--header--item {
-      a {
-        color: $primary-color;
-        background-color: #f0f0f0;
-      }
-      &.active a {
-        color: $base-text-color;
-        background-color: $white;
-      }
-    }
-  }
   .c-tabs--content {
     flex-grow: 1;
     border-width: 1px;
     border-style: solid;
     border-color: #ddd;
   }
+
 }
 
-
-.c-tabs--header__pills {
+.c-pills--header {
   @extend .u-cf;
   display: block;
-  border: 1px solid red;
+  .header--item {
+    float: left;  // horizontal only
+    line-height: 1.42857143;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    background-color: red;
+
+    > a {
+      color: white; // @ TODO - sort this
+
+    }
+  }
 }
 
 
 // misc to sort
 // ========================
 .c-tabs--header {
-  > .c-tabs--header--item {
-    > a {
-      line-height: 1.42857143;
-      position: relative;
-      display: block;
-      padding: 10px 15px;
-    }
+  .c-tabs--header--item > a{
+    line-height: 1.42857143;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
   }
   .c-tabs--header--item.active {
     color: #555;
@@ -138,3 +108,54 @@
   background-color: #fff;
 }
 
+
+.c-tabs__horizontal .c-tabs--header {
+  @extend .u-cf;
+  display: block;
+}
+
+.c-pills .c-tabs--header--item  [role="tab"] {
+  background-color: $primary-color;
+  color: $white;
+}
+
+
+.c-tabs__horizontal .c-tabs--header {
+  border-bottom: 1px solid #ddd;
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+  .active a {
+    color: $base-text-color;
+  }
+}
+
+
+
+  // .c-tabs--header:not(.inverted) {
+  //   .c-tabs--header--item {
+  //     a {
+  //       // color: $base-text-color;
+  //       // background-color: $white;
+  //     }
+  //     &.active a {
+  //       // color: $primary-color;
+  //       // background-color: #f0f0f0;
+  //     }
+  //   }
+  // }
+
+  // .c-tabs--header.inverted {
+  //   .c-tabs--header--item {
+  //     a {
+  //       // color: $primary-color;
+  //       // background-color: #f0f0f0;
+  //     }
+  //     &.active a {
+  //       // color: $base-text-color;
+  //       background-color: $white;
+  //     }
+  //   }
+  // }
+  //
