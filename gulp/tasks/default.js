@@ -2,4 +2,10 @@
 
 var gulp = require('gulp');
 
-gulp.task('default', ['markup', 'sass', 'fonts', 'watch']);
+gulp.task('default', [
+  'fonts',
+  'icons',
+  'markup',
+  'sass',
+  'watch'
+  ]);

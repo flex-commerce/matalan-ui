@@ -5,6 +5,7 @@ $button-padding-y: $default-pad-y;
   display: inline-block;
   border-style: solid;
   border-width: 1px;
+  cursor: pointer;
   @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
 
   &:active,
