@@ -6,7 +6,7 @@
     "indentSize": 2,
     "maxPreserveNewlines": 0,
     "preserveNewlines": true,
-    "unformatted": ["a", "sub", "sup", "b", "i", "u"],
+    "unformatted": ["a", "sub", "sup", "b", "i", "u", "pre", "code"],
     "wrapLineLength": 70
   },
   "css": {
