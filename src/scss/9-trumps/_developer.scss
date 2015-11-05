@@ -184,10 +184,17 @@ code {
   }
 }
 
-.back-to-top {
-  position: absolute;
-  bototm: 20px;
-  right: 20px;
-  border: 1px solid $primary-color;
-  background-color: cool-grey;
+.back-to-top{
+  background-color: $primary-color;
+  bottom: 2em;
+  color: #fff;
+  opacity:0.6;
+  padding: 1.5em;
+  position: fixed;
+  right: 1.5em;
+  text-decoration: none;
+  &:hover{
+    opacity:1;
+    transition:0.5s;
+  }
 }
