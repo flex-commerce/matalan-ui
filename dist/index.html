@@ -1,0 +1,2666 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>UI Kit</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div  id="top" class="ui-container">
+
+    <h1 class="ui-header">Matalan UI Kit</h1>
+      <div class="o-btn-group-vertical">
+        <a class="c-btn c-btn-primary" href="#grid">Grid</a>
+        <a class="c-btn c-btn-primary" href="#logo">Logos</a>
+        <a class="c-btn c-btn-primary" href="#colors">Colours</a>
+        <a class="c-btn c-btn-primary" href="#typography">Typography</a>
+        <a class="c-btn c-btn-primary" href="#buttons">Buttons</a>
+        <a class="c-btn c-btn-primary" href="#navigation">Navigation</a>
+        <a class="c-btn c-btn-primary" href="#labels">Labels</a>
+        <a class="c-btn c-btn-primary" href="#alerts">Alerts</a>
+        <a class="c-btn c-btn-primary" href="#progress-bars">Progress bars</a>
+        <a class="c-btn c-btn-primary" href="#forms">Forms</a>
+        <a class="c-btn c-btn-primary" href="#tables">Tables</a>
+        <a class="c-btn c-btn-primary" href="#roundels">Roundels</a>
+        <a class="c-btn c-btn-primary" href="#lists">Lists</a>
+        <a class="c-btn c-btn-primary" href="#ratings">Ratings</a>
+        <a class="c-btn c-btn-primary" href="#icons">Icons</a>
+      </div>
+
+      <div id="grid"><div class="ui-row">
+  <h1>Default Grid</h1>
+
+  <div class="row">
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+    <div class="col-sm-1"><div class="island"></div></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"><div class="island"></div></div>
+    <div class="col-sm-2"><div class="island"></div></div>
+    <div class="col-sm-2"><div class="island"></div></div>
+    <div class="col-sm-3"><div class="island"></div></div>
+    <div class="col-sm-3"><div class="island"></div></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"><div class="island"></div></div>
+    <div class="col-sm-4"><div class="island"></div></div>
+    <div class="col-sm-4"><div class="island"></div></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-5"><div class="island"></div></div>
+    <div class="col-sm-5"><div class="island"></div></div>
+    <div class="col-sm-2"><div class="island"></div></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6"><div class="island"></div></div>
+    <div class="col-sm-6"><div class="island"></div></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12"><div class="island"></div></div>
+  </div>
+  <div class="row">
+    <div class="ui-grid-33">
+      <pre>
+        <code class="HTML">//12 column row<br />
+          &lt;div class=&quot;row&quot;&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;<br />
+          &lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="ui-grid-33">
+      <pre>
+        <code class="HTML">//Column mix<br />
+          &lt;div class=&quot;row&quot;&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-3&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-3&quot;&gt;&lt;/div&gt;<br />
+          &lt;/div&gt;<br /><br />
+          //3 column<br />
+          &lt;div class=&quot;row&quot;&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;&lt;/div&gt;<br />
+          &lt;/div&gt;<br /><br />
+        </code>
+      </pre>
+    </div>
+    <div class="ui-grid-33">
+      <pre>
+        <code class="HTML">//Alternative column mix<br />
+          &lt;div class=&quot;row&quot;&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-5&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-5&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;/div&gt;<br />
+          &lt;/div&gt;<br /><br />
+          //2 column<br />
+          &lt;div class=&quot;row&quot;&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-6&quot;&gt;&lt;/div&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-6&quot;&gt;&lt;/div&gt;<br />
+          &lt;/div&gt;<br /><br />
+          //Full column<br />
+          &lt;div class=&quot;row&quot;&gt;<br />
+          &nbsp; &lt;div class=&quot;col-sm-12&quot;&gt;&lt;/div&gt;<br />
+          &lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+</div>
+      <div id="logo"><div class="ui-row">
+
+
+  <div class="ui-grid-left">
+    <h2>Logo Usage</h2>
+  </div>
+
+  <div class="ui-grid-right">
+
+    <div style="width: 170px; float: left; margin-right: 3em">
+      <br>Desktop <span class="meta">(170px wide)</span><br><br>
+      <img src="img/matalan-logo-responsive.svg" alt="">
+    </div>
+
+    <div style="width: 130px; float: left; margin-right: 3em">
+    <br>Tablet <span class="meta">(130px wide)</span><br><br>
+      <img src="img/matalan-logo-responsive.svg" alt="">
+    </div>
+
+    <div style="width: 130px; float: left; margin-right: 3em">
+    <br>Tablet <span class="meta">(130px wide)</span><br><br>
+      <img src="img/matalan-logo-responsive.svg" alt="">
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+      <div id="colors"><div class="ui-row">
+  <h1>Colour Pallette</h1>
+
+  <div class="ui-row ui-colors">
+    <div class="ui-grid-left">
+      <h3>Brand Colours</h3>
+      <p>Core colours from brand elements.</p>
+    </div>
+
+    <div class="ui-grid-right">
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri">
+        </div>
+        <div class="pallette__info">
+          <h5>Red </h5>
+          <code>#eb0000</code>
+          <p class="u-bgcolor-pri">.u-bgcolor-pri</p>
+          <p class="u-color-pri">.u-color-pri</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-dgrey">
+        </div>
+        <div class="pallette__info">
+          <h5>Dark Grey </h5>
+          <code>#383838</code>
+          <p class="u-bgcolor-dgrey">.u-bgcolor-dgrey</p>
+          <p class="u-color-dgrey">.u-color-dgrey</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-cgrey">
+        </div>
+        <div class="pallette__info">
+          <h5>Cool Grey </h5>
+          <code>#383838</code>
+          <p class="u-bgcolor-cgrey">.u-bgcolor-cgrey</p>
+          <p class="u-color-cgrey">.u-color-cgrey</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-white">
+        </div>
+        <div class="pallette__info">
+          <h5>White</h5>
+          <code>#ffffff</code>
+          <p class="u-bgcolor-white">.u-bgcolor-white</p>
+          <p class="u-bgcolor-dgrey u-color-white">.u-color-white</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="ui-row ui-colors">
+    <div class="ui-grid-left">
+      <h3>Supporting Colours</h3>
+      <p>Seasonal or secondary colour set. Will be reproduced for every season or promotion event with a new set of colours.</p>
+    </div>
+
+    <div class="ui-grid-right">
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-gold">
+        </div>
+        <div class="pallette__info">
+          <h5>Gold </h5>
+          <code>#ffb400</code>
+          <p class="u-bgcolor-gold">.u-bgcolor-gold</p>
+          <p class="u-color-gold">.u-color-gold</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-orange">
+        </div>
+        <div class="pallette__info">
+          <h5>Orange </h5>
+          <code>#fe6001</code>
+          <p class="u-bgcolor-orange">.u-bgcolor-orange</p>
+          <p class="u-color-orange">.u-color-orange</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-magenta">
+        </div>
+        <div class="pallette__info">
+          <h5>Magenta </h5>
+          <code>#e51d9b</code>
+          <p class="u-bgcolor-magenta">.u-bgcolor-magenta</p>
+          <p class="u-color-magenta">.u-color-magenta</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-purple">
+        </div>
+        <div class="pallette__info">
+          <h5>Purple </h5>
+          <code>#690b7a</code>
+          <p class="u-bgcolor-purple">.u-bgcolor-purple</p>
+          <p class="u-color-purple">.u-color-purple</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="ui-row ui-colors">
+    <div class="ui-grid-left">
+      <h3>Web Colours</h3>
+      <p>Brand colours to support UX and used online only.</p>
+    </div>
+
+    <div class="ui-grid-right">
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri-hover">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State </h5>
+          <code>#c11e2a</code>
+          <p class="u-bgcolor-pri-hover">.u-bgcolor-pri-hover</p>
+          <p class="u-color-pri-hover">.u-color-pri-hover</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-dgrey-hover">
+        </div>
+        <div class="pallette__info">
+          <h5>Dark Grey Hover State</h5>
+          <code>#2d2a2b</code>
+          <p class="u-bgcolor-dgrey-hover">.u-bgcolor-dgrey-hover</p>
+          <p class="u-color-dgrey-hover">.u-color-dgrey-hover</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-cgrey-hover">
+        </div>
+        <div class="pallette__info">
+          <h5>Cool grey Hover State</h5>
+          <code>#a2a2a3</code>
+          <p class="u-bgcolor-cgrey-hover">.u-bgcolor-cgrey-hover</p>
+          <p class="u-color-cgrey-hover">.u-color-cgrey-hover</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-lgrey-hover">
+        </div>
+        <div class="pallette__info">
+          <h5>Light Grey Hover</h5>
+          <code>#f5f5f5</code>
+          <p class="u-bgcolor-lgrey-hover">.u-bgcolor-lgrey-hover</p>
+          <p class="u-color-lgrey-hover">.u-color-lgrey-hover</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="ui-row ui-colors">
+    <div class="ui-grid-left">
+    </div>
+
+    <div class="ui-grid-right">
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri10">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 10%</h5>
+          <p class="u-bgcolor-pri10">.u-bgcolor-pri10</p>
+          <p class="u-color-pri10">.u-color-pri10</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri20">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 20%</h5>
+          <p class="u-bgcolor-pri20">.u-bgcolor-pri20</p>
+          <p class="u-color-pri20">.u-color-pri20</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri30">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 30%</h5>
+          <p class="u-bgcolor-pri30">.u-bgcolor-pri30</p>
+          <p class="u-color-pri30">.u-color-pri30</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri40">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 40%</h5>
+          <p class="u-bgcolor-pri40">.u-bgcolor-pri40</p>
+          <p class="u-color-pri40">.u-color-pri40</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri50">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 50%</h5>
+          <p class="u-bgcolor-pri50">.u-bgcolor-pri50</p>
+          <p class="u-color-pri50">.u-color-pri50</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri60">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 60%</h5>
+          <p class="u-bgcolor-pri60">.u-bgcolor-pri60</p>
+          <p class="u-color-pri60">.u-color-pri60</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri70">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 70%</h5>
+          <p class="u-bgcolor-pri70">.u-bgcolor-pri70</p>
+          <p class="u-color-pri70">.u-color-pri70</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri80">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 80%</h5>
+          <p class="u-bgcolor-pri80">.u-bgcolor-pri80</p>
+          <p class="u-color-pri80">.u-color-pri80</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri90">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 90%</h5>
+          <p class="u-bgcolor-pri90">.u-bgcolor-pri90</p>
+          <p class="u-color-pri90">.u-color-pri90</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-pri100">
+        </div>
+        <div class="pallette__info">
+          <h5>Red Hover State 100%</h5>
+          <p class="u-bgcolor-pri100">.u-bgcolor-pri100</p>
+          <p class="u-color-pri100">.u-color-pri100</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="ui-row ui-colors">
+    <div class="ui-grid-left">
+    </div>
+
+    <div class="ui-grid-right">
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey10">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 10%</h5>
+          <p class="u-bgcolor-grey10 u-color-white">.u-bgcolor-grey10</p>
+          <p class="u-color-grey10">.u-color-grey10</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey20">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 20%</h5>
+          <p class="u-bgcolor-grey20 u-color-white">.u-bgcolor-grey20</p>
+          <p class="u-color-grey20">.u-color-grey20</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey30">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 30%</h5>
+          <p class="u-bgcolor-grey30 u-color-white">.u-bgcolor-grey30</p>
+          <p class="u-color-grey30">.u-color-grey30</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey40">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 40%</h5>
+          <p class="u-bgcolor-grey40 u-color-white">.u-bgcolor-grey40</p>
+          <p class="u-color-grey40">.u-color-grey40</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey50">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 50%</h5>
+          <p class="u-bgcolor-grey50 u-color-white">.u-bgcolor-grey50</p>
+          <p class="u-color-grey50">.u-color-grey50</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey60">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 60%</h5>
+          <p class="u-bgcolor-grey60 u-color-white">.u-bgcolor-grey60</p>
+          <p class="u-color-grey60">.u-color-grey60</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey70">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 70%</h5>
+          <p class="u-bgcolor-grey70 u-color-white">.u-bgcolor-grey70</p>
+          <p class="u-color-grey70">.u-color-grey70</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey80">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 80%</h5>
+          <p class="u-bgcolor-grey80 u-color-white">.u-bgcolor-grey80</p>
+          <p class="u-color-grey80">.u-color-grey80</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey90">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 90%</h5>
+          <p class="u-bgcolor-grey90 u-color-white">.u-bgcolor-grey90</p>
+          <p class="u-color-grey90">.u-color-grey90</p>
+        </div>
+      </div>
+      <div class="span-wide-3">
+        <div class="ui-color-pall u-round u-bgcolor-grey100">
+        </div>
+        <div class="pallette__info">
+          <h5>Grey Hover State 100%</h5>
+          <p class="u-bgcolor-grey100 u-color-white">.u-bgcolor-grey100</p>
+          <p class="u-color-grey100">.u-color-grey100</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-grid-50">
+    <pre>
+      <code class="css">/**<br />
+     * Matalan UI Kit Colors<br />
+     */<br /><br />
+
+    $white: #fff;<br />
+    $black: #000;<br /><br />
+
+    /* <br />
+     * BRanding colours<br />
+     */<br />
+    $matalan-brand: #eb0000;<br />
+    $dark-grey: #383838;<br />
+    $cool-grey: #b2b3b5;<br />
+    $light-grey: #ececec;<br /><br />
+
+    /* <br />
+     * Supporting Colors - requested names tbc<br />
+     */<br />
+    $supp-gold: #ffb400;<br />
+    $supp-orange: #fe6001;<br />
+    $supp-magenta: #e51d9b;<br />
+    $supp-purple: #690b7a;<br /><br />
+
+    /* <br />
+     * Web Coloursr<br />
+     */<br />
+    $matalan-brand-hover: #c11e2a;<br />
+    $dark-grey-hover: #2d2a2b;<br />
+    $cool-grey-hover: #a2a2a3;<br />
+    $light-grey-hover: #f5f5f5;<br />
+    $keyline-color: #e0e0e2;
+
+      </code>
+    </pre>
+  </div>
+  <div class="ui-grid-50">
+    <pre>
+      <code class="css">/* <br />
+     * Mappings<br />
+     */<br />
+    $primary-color: $matalan-brand;<br />
+    $primary-color-hover: $matalan-brand-hover;<br />
+    $secondary-color: $light-grey;<br /><br />
+    /* <br />
+     * Fading primary color<br />
+     */<br />
+    $primary-lighten-100<br />
+    $primary-lighten-90<br />
+    $primary-lighten-80<br />
+    $primary-lighten-70<br />
+    $primary-lighten-60<br />
+    $primary-lighten-50<br />
+    $primary-lighten-40<br />
+    $primary-lighten-30<br />
+    $primary-lighten-20<br />
+    $primary-lighten-10<br /><br />
+
+    /* <br />
+     * Fading Dark to grey<br />
+     */<br />
+    $dark-grey-lighten-100<br />
+    $dark-grey-lighten-90<br />
+    $dark-grey-lighten-80<br />
+    $dark-grey-lighten-70<br />
+    $dark-grey-lighten-60<br />
+    $dark-grey-lighten-50<br />
+    $dark-grey-lighten-40<br />
+    $dark-grey-lighten-30<br />
+    $dark-grey-lighten-20<br />
+    $dark-grey-lighten-10
+      </code>
+    </pre>
+  </div>
+</div></div>
+      <div id="typography"><h1>Typography</h1>
+
+<div class="ui-row">
+  <div class="span-wide-5">
+    <h2>Body Copy</h2>
+    <p>Matalan&#39;s global default font-size is 14px, with a line-height of 20px. This is applied to the &lt;body&gt; and all paragraphs. In addition, &lt;p&gt; (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
+  </div>
+</div>
+
+<div class="ui-row">
+  <div class="span-wide-4 u-font-pri">
+    <h5>Primary Font</h5>
+    <h2>Helvetica Neue</h2>
+    <h4>ABCDEFGHIJKLMNOPQRSTUVWXYZ</h4>
+    <h4>abcdefghijklmnopqrstuvwxyz</h4>
+    <h1>h1. Heading 1</h1>
+    <h2>h2. Heading 2</h2>
+    <h3>h3. Heading 3</h3>
+    <h4>h4. Heading 4</h4>
+    <h5>h5. Heading 5</h5>
+    <h6>h6. Heading 6</h6>
+  </div>
+
+  <div class="span-wide-4 u-font-sec">
+    <h5>Secondary Font</h5>
+    <h2>Archer</h2>
+    <h4>ABCDEFGHIJKLMNOPQRSTUVWXYZ</h4>
+    <h4>abcdefghijklmnopqrstuvwxyz</h4>
+    <h1>h1. Heading 1</h1>
+    <h2>h2. Heading 2</h2>
+    <h3>h3. Heading 3</h3>
+    <h4>h4. Heading 4</h4>
+    <h5>h5. Heading 5</h5>
+    <h6>h6. Heading 6</h6>
+  </div>
+
+  <div class="span-wide-4 u-font-alt">
+    <h5>Alt Font</h5>
+    <h2>Didot</h2>
+    <h4>ABCDEFGHIJKLMNOPQRSTUVWXYZ</h4>
+    <h4>abcdefghijklmnopqrstuvwxyz</h4>
+    <h1>h1. Heading 1</h1>
+    <h2>h2. Heading 2</h2>
+    <h3>h3. Heading 3</h3>
+    <h4>h4. Heading 4</h4>
+    <h5>h5. Heading 5</h5>
+    <h6>h6. Heading 6</h6>
+  </div>
+</div></div>
+
+      <div id="buttons"><h1>Buttons</h1>
+
+      <div class="ui-row">
+        <h2>Buttons <small>(_components/_c-button.scss)</small></h2>
+      
+          <div class="ui-grid-left">
+          <h3>Button styles</h3>
+          <p>Buttons default to light grey style, but a number of functional classes can be applied for different color sytles</p>
+        </div>
+      
+        <div class="ui-grid-right">
+      
+          <div class="button-group">
+            <h3>Primary Buttons </h3>
+            <a class="c-btn c-btn-primary u-no-underline">+</a>
+            <a class="c-btn c-btn-primary">Default</a>
+            <a class="c-btn c-btn-primary hover">Default hover</a>
+            <a class="c-btn c-btn-primary focus">Default focus</a>
+            <a class="c-btn c-btn-primary disabled">Default disabled</a>
+            <pre>
+              <code class="XML">//primary button</br>&lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Default&lt;/a&gt;</code>
+            </pre>
+            <h3>Secondary Buttons </h3>
+            <a class="c-btn c-btn-secondary u-no-underline">+</a>
+            <a class="c-btn c-btn-secondary">Default</a>
+            <a class="c-btn c-btn-secondary hover">Default hover</a>
+            <a class="c-btn c-btn-secondary focus">Default focus</a>
+            <a class="c-btn c-btn-secondary disabled">Default disabled</a>
+            <pre>
+              <code class="XML">//secondary button</br>&lt;a class=&quot;c-btn c-btn-secondary&quot;&gt;Default&lt;/a&gt;</code>
+            </pre>
+          </div>
+        </div>
+      
+      </div>
+      <div class="ui-row">
+        <div class="ui-grid-left">
+          <h3>Button Groups <small>(_objects/_o-button-grp.scss)</small></h3>
+          <p>Buttons groups can be displayed horzontally or verticlally and grouped together with any combination of button. e.g. Standalone button, dropdown button, split dropdown button</p>
+        </div>
+      
+        <div class="ui-grid-right">
+      
+          <div class="ui-row">
+            <h3>Button Groups Default</h3>
+      
+            <div class="ui-grid-50">
+              <div class="o-btn-group">
+                <a class="c-btn c-btn-primary">elit</a>
+                <a class="c-btn c-btn-primary">sint</a>
+                <a class="c-btn c-btn-primary c-btn-dropdown">cillum<span class="caret"></span></a>
+                <div class="c-btn-grp-dropdown">
+                  <a class="c-btn c-btn-primary">est</a>
+                  <a class="c-btn c-btn-primary c-btn-dropdown">
+                    <span class="caret"></span>
+                  </a>
+                </div>
+              </div>
+              <pre>
+                <code class="HTML">//primary horizontal button group<br />
+                  &lt;div class=&quot;o-btn-group&quot;&gt;<br />
+                  &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-1&lt;/a&gt;<br />
+                  &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-2&lt;/a&gt;<br />
+                  &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;Item-3<br />
+                  &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
+                  &nbsp; &lt;/a&gt;<br />
+                  &nbsp; &lt;div class=&quot;c-btn-grp-dropdown&quot;&gt;<br />
+                  &nbsp; &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-4&lt;/a&gt;<br />
+                  &nbsp; &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;<br />
+                  &nbsp; &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
+                  &nbsp; &nbsp; &lt;/a&gt;<br />
+                  &nbsp; &lt;/div&gt;<br />
+                  &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+            <div class="ui-grid-50">
+              <div class="o-btn-group">
+                <a class="c-btn c-btn-secondary">consectetur</a>           <a class="c-btn c-btn-secondary">voluptate</a> 
+                <div class="c-btn-grp-dropdown">
+                  <a class="c-btn c-btn-secondary">qui</a>
+                  <a class="c-btn c-btn-secondary c-btn-dropdown">
+                    <span class="caret"></span>
+                  </a>
+                </div>
+              </div>
+              <pre>
+                <code class="HTML">//secondary horizontal button group<br />
+                  &lt;div class=&quot;o-btn-group&quot;&gt;<br />
+                  &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-1&lt;/a&gt;<br />
+                  &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-2&lt;/a&gt;<br />
+                  &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;Item-3<br />
+                  &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
+                  &nbsp; &lt;/a&gt;<br />
+                  &nbsp; &lt;div class=&quot;c-btn-grp-dropdown&quot;&gt;<br />
+                  &nbsp; &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-4&lt;/a&gt;<br />
+                  &nbsp; &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;<br />
+                  &nbsp; &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
+                  &nbsp; &nbsp; &lt;/a&gt;<br />
+                  &nbsp; &lt;/div&gt;<br />
+                  &lt;/div&gt;
+                </code>
+              </pre>
+            </div>
+          </div>
+      
+          <div class="ui-row">
+      
+            <div class="ui-row">
+              <h3>Button Groups Vertical</h3>
+      
+              <div class="ui-grid-50">
+      
+      
+                <div class="o-btn-group-vertical">
+                  <a class="c-btn c-btn-primary">sit</a>             <a class="c-btn c-btn-primary">consequat</a> 
+                  <a class="c-btn c-btn-primary c-btn-dropdown">sunt<span class="caret"></span></a>
+                </div>
+                <pre>
+                  <code class="HTML">//primary vertical button group<br />
+                    &lt;div class=&quot;o-btn-group-vertical&quot;&gt;<br />
+                    &nbsp;&lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-1&lt;/a&gt;<br />
+                    &nbsp;&lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-2&lt;/a&gt;<br />
+                    &nbsp;&lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;Item-3<br />
+                    &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
+                    &nbsp;&lt;/a&gt;<br />
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+      
+              </div>
+              <div class="ui-grid-50">
+      
+      
+                <div class="o-btn-group-vertical">
+                  <a class="c-btn c-btn-secondary">magna</a>             <a class="c-btn c-btn-secondary">nostrud</a> 
+                  <a class="c-btn c-btn-secondary c-btn-dropdown">laborum<span class="caret"></span></a>
+                </div>
+                <pre>
+                  <code class="HTML">//secondary vertical button group<br />
+                    &lt;div class=&quot;o-btn-group-vertical&quot;&gt;<br />
+                    &nbsp;&lt;a class=&quot;c-btn c-btn-secondary&quot;&gt;Item-1&lt;/a&gt;<br />
+                    &nbsp;&lt;a class=&quot;c-btn c-btn-secondary&quot;&gt;Item-2&lt;/a&gt;<br />
+                    &nbsp;&lt;a class=&quot;c-btn c-btn-secondary c-btn-dropdown&quot;&gt;Item-3<br />
+                    &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
+                    &nbsp;&lt;/a&gt;<br />
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+          <div class="ui-row">
+            <h2>Dropdowns <small>(_components/_c-button.scss)</small></h2>
+      
+              <div class="ui-grid-left">
+              <h3>Dropdown styling</h3>
+              <p>Dropdowns can easily be created from standard buttons by adding c-btn-dropdown class and appending a span with a class of caret</p>
+            </div>
+      
+            <div class="ui-grid-right">
+              <h3>Dropdown Buttons</h3>
+              <div class="ui-grid-50">
+                <a class="c-btn c-btn-primary c-btn-dropdown">Default<span class="caret"></span></a>
+              </div>
+              <div class="ui-grid-50">
+                <a class="c-btn c-btn-secondary c-btn-dropdown">Default<span class="caret"></span></a>
+              </div>
+              <div class="ui-grid-100">
+                <pre>
+                  <code class="HTML">//primary dropdown button<br />
+                    &lt;a class=&quot;c-btn c-btn-primary&nbsp;c-btn-dropdown&quot;&gt;Default&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br /><br />
+                    //secondary dropdown button<br />
+                    &lt;a class=&quot;c-btn c-btn-secondary&nbsp;c-btn-dropdown&quot;&gt;Default&lt;span&nbsp;class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                  </code>
+                </pre>
+              </div>
+      
+              <h3>Split Dropdown Buttons</h3>
+              <div class="ui-grid-50">
+                <div class="c-btn-grp-dropdown">
+                  <a class="c-btn c-btn-primary">Default 1</a>
+                  <a class="c-btn c-btn-primary c-btn-dropdown">
+                    <span class="caret"></span>
+                  </a>
+                </div>
+                <pre>
+                  <code class="HTML">//primary split dropdown button<br />
+                    &lt;div class=&quot;c-btn-grp-dropdown&quot;&gt;<br />
+                    &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Default&lt;/a&gt;<br />
+                    &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;<br />
+                    &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
+                    &nbsp; &lt;/a&gt;<br />
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+      
+              <div class="ui-grid-50">
+                <div class="c-btn-grp-dropdown">
+                  <a class="c-btn c-btn-secondary">Default 2</a>
+                  <a class="c-btn c-btn-secondary c-btn-dropdown">
+                    <span class="caret"></span>
+                  </a>
+                </div>
+                <pre>
+                  <code class="HTML">//secondary split dropdown button<br />
+                    &lt;div class=&quot;c-btn-grp-dropdown&quot;&gt;<br />
+                    &nbsp; &lt;a class=&quot;c-btn c-btn-secondary&quot;&gt;Default&lt;/a&gt;<br />
+                    &nbsp; &lt;a class=&quot;c-btn c-btn-secondary c-btn-dropdown&quot;&gt;<br />
+                    &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
+                    &nbsp; &lt;/a&gt;<br />
+                    &lt;/div&gt;
+                  </code>
+                </pre>
+              </div>
+      
+              <h3>Select Box Replacement</h3>
+              <div class="ui-grid-50">
+                <select name="" id=""></select> todo
+              </div>
+      
+            </div>
+          </div>
+</div>
+
+     <div id="navigation"><h1>Navigation</h1>
+
+      <div class="ui-row">
+      
+        <nav data-app="accessible-navmenu">
+          <ul class="accessible-navmenu c-navbar">
+      
+      
+            <!-- category menu block -->
+            <li class="navbar--top-item">
+              <a class="active" href="">Category 0</a>
+              <div class="sub-nav">
+                <h2 class="sub-nav-header">Section Header</h2>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">ipsum fugiat</a></li>
+                  <li class="sub-nav-item"><a href="">ut aliquip</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">esse ad</a></li>
+                  <li class="sub-nav-item"><a href="">qui mollit</a></li>
+                  <li class="sub-nav-item"><a href="">adipisicing mollit</a></li>
+                  <li class="sub-nav-item"><a href="">qui laborum</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">aliquip elit</a></li>
+                  <li class="sub-nav-item"><a href="">fugiat anim</a></li>
+                  <li class="sub-nav-item"><a href="">Lorem ex</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">deserunt consequat</a></li>
+                  <li class="sub-nav-item"><a href="">aliquip enim</a></li>
+                  <li class="sub-nav-item"><a href="">labore tempor</a></li>
+                  <li class="sub-nav-item"><a href="">non id</a></li>
+                  <li class="sub-nav-item"><a href="">officia id</a></li>
+                  <li class="sub-nav-item"><a href="">labore veniam</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">est exercitation</a></li>
+                  <li class="sub-nav-item"><a href="">cupidatat eiusmod</a></li>
+                  <li class="sub-nav-item"><a href="">culpa voluptate</a></li>
+                  <li class="sub-nav-item"><a href="">non pariatur</a></li>
+                  <li class="sub-nav-item"><a href="">nisi consectetur</a></li>
+                  <li class="sub-nav-item"><a href="">proident mollit</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">officia occaecat</a></li>
+                  <li class="sub-nav-item"><a href="">tempor dolor</a></li>
+                  <li class="sub-nav-item"><a href="">esse nisi</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">ut velit</a></li>
+                  <li class="sub-nav-item"><a href="">ut proident</a></li>
+                  <li class="sub-nav-item"><a href="">culpa quis</a></li>
+                  <li class="sub-nav-item"><a href="">sit dolore</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">labore aliqua</a></li>
+                  <li class="sub-nav-item"><a href="">magna ea</a></li>
+                  <li class="sub-nav-item"><a href="">occaecat nulla</a></li>
+                  <li class="sub-nav-item"><a href="">ea laboris</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">officia irure</a></li>
+                  <li class="sub-nav-item"><a href="">commodo cupidatat</a></li>
+                  <li class="sub-nav-item"><a href="">pariatur labore</a></li>
+                  <li class="sub-nav-item"><a href="">nisi elit</a></li>
+                  <li class="sub-nav-item"><a href="">amet ad</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">culpa Lorem</a></li>
+                  <li class="sub-nav-item"><a href="">ullamco non</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">velit cupidatat</a></li>
+                  <li class="sub-nav-item"><a href="">reprehenderit amet</a></li>
+                  <li class="sub-nav-item"><a href="">sint cillum</a></li>
+                  <li class="sub-nav-item"><a href="">et cupidatat</a></li>
+                  <li class="sub-nav-item"><a href="">minim commodo</a></li>
+                  <li class="sub-nav-item"><a href="">commodo et</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">elit aliquip</a></li>
+                  <li class="sub-nav-item"><a href="">cillum voluptate</a></li>
+                  <li class="sub-nav-item"><a href="">cupidatat nostrud</a></li>
+                  <li class="sub-nav-item"><a href="">irure nisi</a></li>
+                  <li class="sub-nav-item"><a href="">consequat incididunt</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- end category menu block -->
+      
+      
+            <!-- repeat menu block -->
+            <li class="navbar--top-item">
+              <a class="" href="">Category 1</a>
+              <div class="sub-nav">
+                <h2 class="sub-nav-header">Section Header</h2>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">quis in</a></li>
+                  <li class="sub-nav-item"><a href="">Lorem voluptate</a></li>
+                  <li class="sub-nav-item"><a href="">culpa officia</a></li>
+                  <li class="sub-nav-item"><a href="">anim nostrud</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">sit sunt</a></li>
+                  <li class="sub-nav-item"><a href="">consectetur consectetur</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">eu officia</a></li>
+                  <li class="sub-nav-item"><a href="">ex nostrud</a></li>
+                  <li class="sub-nav-item"><a href="">sint nulla</a></li>
+                  <li class="sub-nav-item"><a href="">et ut</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">excepteur et</a></li>
+                  <li class="sub-nav-item"><a href="">eiusmod deserunt</a></li>
+                  <li class="sub-nav-item"><a href="">aliqua Lorem</a></li>
+                  <li class="sub-nav-item"><a href="">commodo id</a></li>
+                  <li class="sub-nav-item"><a href="">duis culpa</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">sunt nostrud</a></li>
+                  <li class="sub-nav-item"><a href="">ipsum culpa</a></li>
+                  <li class="sub-nav-item"><a href="">proident ea</a></li>
+                  <li class="sub-nav-item"><a href="">quis ad</a></li>
+                  <li class="sub-nav-item"><a href="">velit laboris</a></li>
+                  <li class="sub-nav-item"><a href="">officia exercitation</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">incididunt ullamco</a></li>
+                  <li class="sub-nav-item"><a href="">anim pariatur</a></li>
+                  <li class="sub-nav-item"><a href="">ex elit</a></li>
+                  <li class="sub-nav-item"><a href="">qui ex</a></li>
+                  <li class="sub-nav-item"><a href="">cupidatat cillum</a></li>
+                  <li class="sub-nav-item"><a href="">tempor dolore</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">dolore nulla</a></li>
+                  <li class="sub-nav-item"><a href="">officia ea</a></li>
+                  <li class="sub-nav-item"><a href="">ex proident</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">duis proident</a></li>
+                  <li class="sub-nav-item"><a href="">nulla consequat</a></li>
+                  <li class="sub-nav-item"><a href="">in nostrud</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">in id</a></li>
+                  <li class="sub-nav-item"><a href="">voluptate consequat</a></li>
+                  <li class="sub-nav-item"><a href="">laborum sunt</a></li>
+                  <li class="sub-nav-item"><a href="">ullamco velit</a></li>
+                  <li class="sub-nav-item"><a href="">ipsum est</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">consequat ea</a></li>
+                  <li class="sub-nav-item"><a href="">dolore sunt</a></li>
+                  <li class="sub-nav-item"><a href="">aliqua culpa</a></li>
+                  <li class="sub-nav-item"><a href="">amet ullamco</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">proident adipisicing</a></li>
+                  <li class="sub-nav-item"><a href="">nostrud ipsum</a></li>
+                  <li class="sub-nav-item"><a href="">occaecat quis</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">commodo cillum</a></li>
+                  <li class="sub-nav-item"><a href="">nisi ad</a></li>
+                  <li class="sub-nav-item"><a href="">et cillum</a></li>
+                  <li class="sub-nav-item"><a href="">mollit deserunt</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar--top-item">
+              <a class="" href="">Category 2</a>
+              <div class="sub-nav">
+                <h2 class="sub-nav-header">Section Header</h2>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">veniam eiusmod</a></li>
+                  <li class="sub-nav-item"><a href="">aliqua aliqua</a></li>
+                  <li class="sub-nav-item"><a href="">aliqua id</a></li>
+                  <li class="sub-nav-item"><a href="">pariatur culpa</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">ea ea</a></li>
+                  <li class="sub-nav-item"><a href="">laborum ex</a></li>
+                  <li class="sub-nav-item"><a href="">ea consectetur</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">ad ad</a></li>
+                  <li class="sub-nav-item"><a href="">consectetur tempor</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">fugiat ullamco</a></li>
+                  <li class="sub-nav-item"><a href="">minim ut</a></li>
+                  <li class="sub-nav-item"><a href="">fugiat reprehenderit</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">enim eiusmod</a></li>
+                  <li class="sub-nav-item"><a href="">irure magna</a></li>
+                  <li class="sub-nav-item"><a href="">culpa esse</a></li>
+                  <li class="sub-nav-item"><a href="">do labore</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">dolore anim</a></li>
+                  <li class="sub-nav-item"><a href="">consequat irure</a></li>
+                  <li class="sub-nav-item"><a href="">sunt cupidatat</a></li>
+                  <li class="sub-nav-item"><a href="">magna reprehenderit</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">in fugiat</a></li>
+                  <li class="sub-nav-item"><a href="">laboris anim</a></li>
+                  <li class="sub-nav-item"><a href="">culpa dolore</a></li>
+                  <li class="sub-nav-item"><a href="">elit ad</a></li>
+                  <li class="sub-nav-item"><a href="">eiusmod in</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">mollit enim</a></li>
+                  <li class="sub-nav-item"><a href="">ullamco nulla</a></li>
+                  <li class="sub-nav-item"><a href="">veniam in</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">eiusmod labore</a></li>
+                  <li class="sub-nav-item"><a href="">qui culpa</a></li>
+                  <li class="sub-nav-item"><a href="">cupidatat in</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">cupidatat sint</a></li>
+                  <li class="sub-nav-item"><a href="">ex dolor</a></li>
+                  <li class="sub-nav-item"><a href="">incididunt deserunt</a></li>
+                  <li class="sub-nav-item"><a href="">id sunt</a></li>
+                  <li class="sub-nav-item"><a href="">culpa ex</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">id non</a></li>
+                  <li class="sub-nav-item"><a href="">deserunt amet</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">in laborum</a></li>
+                  <li class="sub-nav-item"><a href="">ex pariatur</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar--top-item">
+              <a class="" href="">Category 3</a>
+              <div class="sub-nav">
+                <h2 class="sub-nav-header">Section Header</h2>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">ad ad</a></li>
+                  <li class="sub-nav-item"><a href="">elit aliquip</a></li>
+                  <li class="sub-nav-item"><a href="">cillum adipisicing</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">veniam sunt</a></li>
+                  <li class="sub-nav-item"><a href="">cupidatat nisi</a></li>
+                  <li class="sub-nav-item"><a href="">eiusmod labore</a></li>
+                  <li class="sub-nav-item"><a href="">dolor quis</a></li>
+                  <li class="sub-nav-item"><a href="">do reprehenderit</a></li>
+                  <li class="sub-nav-item"><a href="">duis mollit</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">esse et</a></li>
+                  <li class="sub-nav-item"><a href="">proident dolore</a></li>
+                  <li class="sub-nav-item"><a href="">occaecat nisi</a></li>
+                  <li class="sub-nav-item"><a href="">sit ea</a></li>
+                  <li class="sub-nav-item"><a href="">voluptate eiusmod</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">culpa ea</a></li>
+                  <li class="sub-nav-item"><a href="">voluptate non</a></li>
+                  <li class="sub-nav-item"><a href="">magna irure</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">veniam mollit</a></li>
+                  <li class="sub-nav-item"><a href="">pariatur sit</a></li>
+                  <li class="sub-nav-item"><a href="">adipisicing irure</a></li>
+                  <li class="sub-nav-item"><a href="">minim sit</a></li>
+                  <li class="sub-nav-item"><a href="">anim dolor</a></li>
+                  <li class="sub-nav-item"><a href="">non amet</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">mollit culpa</a></li>
+                  <li class="sub-nav-item"><a href="">dolore do</a></li>
+                  <li class="sub-nav-item"><a href="">eu eu</a></li>
+                  <li class="sub-nav-item"><a href="">velit id</a></li>
+                  <li class="sub-nav-item"><a href="">et incididunt</a></li>
+                  <li class="sub-nav-item"><a href="">proident mollit</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">in enim</a></li>
+                  <li class="sub-nav-item"><a href="">sunt mollit</a></li>
+                  <li class="sub-nav-item"><a href="">cillum nisi</a></li>
+                  <li class="sub-nav-item"><a href="">sit qui</a></li>
+                  <li class="sub-nav-item"><a href="">adipisicing fugiat</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">nisi officia</a></li>
+                  <li class="sub-nav-item"><a href="">nulla cupidatat</a></li>
+                  <li class="sub-nav-item"><a href="">velit sit</a></li>
+                  <li class="sub-nav-item"><a href="">enim magna</a></li>
+                  <li class="sub-nav-item"><a href="">cupidatat sunt</a></li>
+                  <li class="sub-nav-item"><a href="">est voluptate</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">ex et</a></li>
+                  <li class="sub-nav-item"><a href="">consequat proident</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">eu enim</a></li>
+                  <li class="sub-nav-item"><a href="">reprehenderit Lorem</a></li>
+                  <li class="sub-nav-item"><a href="">mollit sint</a></li>
+                  <li class="sub-nav-item"><a href="">voluptate consequat</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">amet dolor</a></li>
+                  <li class="sub-nav-item"><a href="">in elit</a></li>
+                  <li class="sub-nav-item"><a href="">labore eu</a></li>
+                  <li class="sub-nav-item"><a href="">qui laboris</a></li>
+                  <li class="sub-nav-item"><a href="">adipisicing do</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">anim quis</a></li>
+                  <li class="sub-nav-item"><a href="">veniam quis</a></li>
+                  <li class="sub-nav-item"><a href="">proident exercitation</a></li>
+                  <li class="sub-nav-item"><a href="">ex sunt</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar--top-item">
+              <a class="" href="">Category 4</a>
+              <div class="sub-nav">
+                <h2 class="sub-nav-header">Section Header</h2>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">aliqua eiusmod</a></li>
+                  <li class="sub-nav-item"><a href="">enim enim</a></li>
+                  <li class="sub-nav-item"><a href="">aute mollit</a></li>
+                  <li class="sub-nav-item"><a href="">qui ad</a></li>
+                  <li class="sub-nav-item"><a href="">culpa do</a></li>
+                  <li class="sub-nav-item"><a href="">esse labore</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">excepteur nostrud</a></li>
+                  <li class="sub-nav-item"><a href="">nostrud velit</a></li>
+                  <li class="sub-nav-item"><a href="">deserunt eiusmod</a></li>
+                  <li class="sub-nav-item"><a href="">reprehenderit magna</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">veniam officia</a></li>
+                  <li class="sub-nav-item"><a href="">laborum dolore</a></li>
+                  <li class="sub-nav-item"><a href="">deserunt occaecat</a></li>
+                  <li class="sub-nav-item"><a href="">exercitation culpa</a></li>
+                  <li class="sub-nav-item"><a href="">occaecat eiusmod</a></li>
+                  <li class="sub-nav-item"><a href="">aute id</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">officia laborum</a></li>
+                  <li class="sub-nav-item"><a href="">est pariatur</a></li>
+                  <li class="sub-nav-item"><a href="">aliqua mollit</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">nostrud ad</a></li>
+                  <li class="sub-nav-item"><a href="">veniam sint</a></li>
+                  <li class="sub-nav-item"><a href="">incididunt consectetur</a></li>
+                  <li class="sub-nav-item"><a href="">ad labore</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">proident laboris</a></li>
+                  <li class="sub-nav-item"><a href="">reprehenderit amet</a></li>
+                  <li class="sub-nav-item"><a href="">nulla aliqua</a></li>
+                  <li class="sub-nav-item"><a href="">excepteur cillum</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">enim sit</a></li>
+                  <li class="sub-nav-item"><a href="">dolor sunt</a></li>
+                  <li class="sub-nav-item"><a href="">ex ea</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">eu amet</a></li>
+                  <li class="sub-nav-item"><a href="">ipsum proident</a></li>
+                  <li class="sub-nav-item"><a href="">culpa duis</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">exercitation quis</a></li>
+                  <li class="sub-nav-item"><a href="">ullamco reprehenderit</a></li>
+                  <li class="sub-nav-item"><a href="">sit laborum</a></li>
+                  <li class="sub-nav-item"><a href="">nostrud minim</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">officia est</a></li>
+                  <li class="sub-nav-item"><a href="">Lorem ullamco</a></li>
+                </ul>
+                <ul class="sub-nav-group">
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">nisi deserunt</a></li>
+                  <li class="sub-nav-item"><a href="">eiusmod occaecat</a></li>
+                  <li class="sub-nav-item"><a href="">dolor esse</a></li>
+                  <li class="sub-nav-item"><a href="">id incididunt</a></li>
+                  <li class="sub-nav-title">Category</li>
+                  <li class="sub-nav-item"><a href="">elit cillum</a></li>
+                  <li class="sub-nav-item"><a href="">labore incididunt</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- end repeat menu block -->
+      
+      
+          </ul>
+        </nav>
+      
+      
+      
+      </div>
+      
+      
+      
+      <!-- include jquery -->
+      <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+      <!-- include the jquery-accessibleMegaMenu plugin script -->
+      <script src="js/menu-accessible.js"></script>
+      <!-- initialize a selector as an accessibleMegaMenu -->
+      <script>
+        $("[data-app~=accessible-navmenu]").accessibleMegaMenu({
+          /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+          uuidPrefix: "accessible-menu",
+          menuClass: "c-navbar",
+          topNavItemClass: "navbar--top-item",
+          panelClass: "sub-nav",
+          panelGroupClass: "sub-nav-group",
+          hoverClass: "hover",
+          focusClass: "focus",
+          openClass: "open"
+        });
+      </script>
+      
+
+      <div class="ui-row">
+          <div class="ui-grid-left">
+          <h2>Search</h2>
+          <p>Sitewide search tool. Selected and de-selected</p>
+        </div>
+      
+        <div class="ui-grid-right">
+      
+      
+            <form class="form-inline c-search-form">
+              <div class="o-form-row">
+                <div class="o-form--input-group o-form-input--contain span-wide-6">
+                  <div class="input-group--addon unstyled input-group--addon__inset">
+                    <i class="icon-search"></i>
+                  </div>
+                  <input type="text"
+                  class="input--textual input-addon--expand input-group--addon__inset-left"
+                  placeholder="Enter Keyword or Product Code">
+                  <a href="" class="input-group--addon unstyled c-search__button">Search</a>
+                </div>
+              </div>
+            </form>
+      
+            <form class="form-inline c-search-form has-focus">
+              <div class="o-form-row">
+                <div class="o-form--input-group o-form-input--contain span-wide-6">
+                  <div class="input-group--addon unstyled input-group--addon__inset">
+                    <i class="icon-search"></i>
+                  </div>
+                  <input type="text"
+                  class="input--textual input-addon--expand input-group--addon__inset-left"
+                  placeholder="Enter Keyword or Product Code">
+                  <a href="" class="input-group--addon unstyled c-search__button">Search</a>
+                </div>
+              </div>
+            </form>
+            <pre>
+              <code class="HTML">//Default Form - add class of has-focus to highlight in red<br />
+                &lt;form class=&quot;form-inline c-search-form has-focus&quot;&gt;<br />
+                &nbsp; &lt;div class=&quot;o-form-row&quot;&gt;<br />
+                &nbsp; &nbsp; &lt;div class=&quot;o-form--input-group o-form-input--contain&nbsp;span-wide-6&quot;&gt;<br />
+                &nbsp; &nbsp; &nbsp; &lt;div class=&quot;input-group--addon&nbsp;unstyled&nbsp;input-group--addon__inset&quot;&gt;<br />
+                &nbsp; &nbsp; &nbsp; &nbsp; &lt;i class=&quot;icon-search&quot;&gt;&lt;/i&gt;<br />
+                &nbsp; &nbsp; &nbsp; &lt;/div&gt;<br />
+                &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot;&nbsp;class=&quot;input--textual&nbsp;input-addon--expand&nbsp;input-group--addon__inset-left&quot;&nbsp;placeholder=&quot;Enter&nbsp;Keyword&nbsp;or&nbsp;Product&nbsp;Code&quot;&gt;<br />
+                &nbsp; &nbsp; &nbsp; &lt;a href=&quot;&quot;&nbsp;class=&quot;input-group--addon&nbsp;unstyled&nbsp;c-search__button&quot;&gt;Search&lt;/a&gt;<br />
+                &nbsp; &nbsp; &lt;/div&gt;<br />
+                &nbsp; &lt;/div&gt;<br />
+                &lt;/form&gt;
+              </code>
+            </pre>
+      
+      
+        </div>
+      </div>
+      <div class="ui-row">
+          <div class="ui-grid-left">
+          <h2>Breadcrumbs</h2>
+          <p>Site navigation and location.</p>
+        </div>
+        <div class="ui-grid-right">
+          <h3>Breadcrumbs Bar</h3>
+          <hr>
+          <ul class="c-breadcrumb-bar">
+            <li class="c-breadcrumb-bar__item no-link">Breadcrumb</li>
+          </ul>
+      
+          <ul class="c-breadcrumb-bar">
+            <li class="c-breadcrumb-bar__item has-link"><a href="">Breadcrumb</a></li>
+            <li class="c-breadcrumb-bar__item no-link">Breadcrumb</li>
+          </ul>
+      
+      
+          <ul class="c-breadcrumb-bar">
+            <li class="c-breadcrumb-bar__item has-link hover"><a href="">Breadcrumb</a></li>
+            <li class="c-breadcrumb-bar__item has-link"><a href="">Breadcrumb</a></li>
+            <li class="c-breadcrumb-bar__item has-link"><a href="">Breadcrumb</a></li>
+            <li class="c-breadcrumb-bar__item no-link">Breadcrumb</li>
+          </ul>
+      
+          <pre>
+            <code class="HTML">//breadcrumbs<br />
+              &lt;ul class=&quot;c-breadcrumb-bar&quot;&gt;<br />
+              &nbsp; &lt;li class=&quot;c-breadcrumb-bar__item has-link&quot;&gt;&lt;a&nbsp;href=&quot;&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/li&gt;<br />
+              &nbsp; &lt;li class=&quot;c-breadcrumb-bar__item has-link&quot;&gt;&lt;a&nbsp;href=&quot;&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/li&gt;<br />
+              &nbsp; &lt;li class=&quot;c-breadcrumb-bar__item has-link&quot;&gt;&lt;a&nbsp;href=&quot;&quot;&gt;Breadcrumb&lt;/a&gt;&lt;/li&gt;<br />
+              &nbsp; &lt;li class=&quot;c-breadcrumb-bar__item no-link&quot;&gt;Breadcrumb&lt;/li&gt;<br />
+              &lt;/ul&gt;
+            </code>
+          </pre>
+      
+        </div>
+      </div>
+      
+      <div class="ui-row">
+        <div class="ui-grid-left">
+          <h2>Tabs &amp; Pills<small>(..)</small></h2>
+          <p>Tabs and pills are horizontal by default, just add a second class, .nav-stacked, to make them appear vertically stacked.</p>
+        </div>
+        <div class="ui-grid-right">
+      
+          <!-- pills horizontal -->
+          <h4>Pills Horizontal</h4>
+          <div class="c-section c-section__pills c-section__pills__horizontal">
+            <ul class="c-section--header">
+              <li role="presentation" class="c-section--header--item"><a href="#home" role="tab">Home</a></li>
+              <li role="presentation" class="c-section--header--item active"><a href="#profile" role="tab">Profile</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#messages" role="tab">Messages</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#settings" role="tab">Settings</a></li>
+            </ul>
+            <div class="c-section--content">
+              <div role="tabpanel" class="c-section--content__pane" id="home">Pills Horizontal. consectetur adipisicing elit. Reiciendis temporibus dolores at ut maiores.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse mollitia quibusdam odio iusto alias dolore.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nihil, ducimus quaerat quae, suscipit.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus sed non voluptas placeat.</div>
+            </div>
+          </div>
+      
+          <hr>
+      
+          <!-- pills vertical -->
+          <h4>Pills Vertical</h4>
+          <div class="c-section c-section__pills c-section__pills__vertical">
+            <ul class="c-section--header">
+              <li role="presentation" class="c-section--header--item"><a href="#home" role="tab">Home</a></li>
+              <li role="presentation" class="c-section--header--item active"><a href="#profile" role="tab">Profile</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#messages" role="tab">Messages</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#settings" role="tab">Settings</a></li>
+            </ul>
+            <div class="c-section--content">
+              <div role="tabpanel" class="c-section--content__pane" id="home">Pills Horizontal. consectetur adipisicing elit. Reiciendis temporibus dolores at ut maiores.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse mollitia quibusdam odio iusto alias dolore.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nihil, ducimus quaerat quae, suscipit.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus sed non voluptas placeat.</div>
+            </div>
+          </div>
+      
+          <hr>
+      
+          <!-- tabs horizontal -->
+          <h4>Tabs Horizontal</h4>
+          <div class="c-section c-section__tab c-section__tab__horizontal">
+            <ul class="c-section--header">
+              <li role="presentation" class="c-section--header--item"><a href="#home" role="tab">Home</a></li>
+              <li role="presentation" class="c-section--header--item active"><a href="#profile" role="tab">Profile</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#messages" role="tab">Messages</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#settings" role="tab">Settings</a></li>
+            </ul>
+            <div class="c-section--content">
+              <div role="tabpanel" class="c-section--content__pane" id="home">Tabs Horizontal. consectetur adipisicing elit. Reiciendis temporibus dolores at ut maiores.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse mollitia quibusdam odio iusto alias dolore.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nihil, ducimus quaerat quae, suscipit.</div>
+              <div role="tabpanel" class="c-section--content__pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus sed non voluptas placeat.</div>
+            </div>
+          </div>
+      
+          <hr>
+      
+          <!-- tabs vertical -->
+          <h4>Tabs Vertical</h4>
+          <div class="c-section c-section__tab c-section__tab__vertical">
+            <ul class="c-section--header">
+              <li role="presentation" class="c-section--header--item"><a href="#home" role="tab">Home</a></li>
+              <li role="presentation" class="c-section--header--item active"><a href="#profile" role="tab">Profile</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#messages" role="tab">Messages</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#settings" role="tab">Settings</a></li>
+            </ul>
+            <div class="c-section--content">
+              <div role="tabpanel" class="c-section--content--pane" id="home">Tabs Vertical. consectetur adipisicing elit. Reiciendis temporibus dolores at ut maiores. </div>
+              <div role="tabpanel" class="c-section--content--pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse mollitia quibusdam odio iusto alias dolore </div>
+              <div role="tabpanel" class="c-section--content--pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nihil, ducimus quaerat quae, suscipit </div>
+              <div role="tabpanel" class="c-section--content--pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus sed non voluptas placeat </div>
+            </div>
+          </div>
+      
+          <hr>
+      
+          <!-- tabs vertical inverted -->
+          <h4>Tabs Vertical (inverted)</h4>
+          <div class="c-section c-section__tab c-section__tab__vertical">
+            <ul class="c-section--header c-section--header__inverted">
+              <li role="presentation" class="c-section--header--item"><a href="#home" role="tab">Home</a></li>
+              <li role="presentation" class="c-section--header--item active"><a href="#profile" role="tab">Profile</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#messages" role="tab">Messages</a></li>
+              <li role="presentation" class="c-section--header--item"><a href="#settings" role="tab">Settings</a></li>
+            </ul>
+            <div class="c-section--content">
+              <div role="tabpanel" class="c-tabs--content--pane" id="home">Tabs vertical inverted. Consectetur adipisicing elit. Reiciendis temporibus dolores at ut maiores. </div>
+              <div role="tabpanel" class="c-tabs--content--pane" id="profile">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse mollitia quibusdam odio iusto alias dolore </div>
+              <div role="tabpanel" class="c-tabs--content--pane" id="messages">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nihil, ducimus quaerat quae, suscipit </div>
+              <div role="tabpanel" class="c-tabs--content--pane" id="settings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatibus sed non voluptas placeat </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      <div class="ui-row">
+      
+        <div class="ui-grid-left">
+          <h2>Pagination
+            <small>(..)</small>
+          </h2>
+          <p>Simple pagination inspired by Rdio, great for apps and search results.</p>
+          <p>Previous and next links for pagination.</p>
+        </div>
+      
+        <div class="ui-grid-right">
+      
+          <div class="c-pagination-bar">
+            <div class="c-pagination-bar__prev">
+              <a href="" class="c-btn c-btn-paginate__alt">Previous</a>
+            </div>
+            <div class="c-pagination-bar__list o-btn-group">
+              <a href="" class="c-btn c-btn-paginate__alt">&laquo;</a> 
+              <a href="" class="c-btn c-btn-paginate">1</a> 
+              <a href="" class="c-btn c-btn-paginate">2</a> 
+              <a href="" class="c-btn c-btn-paginate">3</a> 
+              <a href="" class="c-btn c-btn-paginate">4</a> 
+              <a href="" class="c-btn c-btn-paginate">5</a> 
+              <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
+            </div>
+            <div class="c-pagination-bar__next">
+              <a href="" class="c-btn c-btn-paginate__alt">Next</a>
+            </div>
+          </div>
+          <pre>
+              <code class="HTML">//Pagination<br />
+                &lt;div class=&quot;pagination-bar&quot;&gt;<br />
+                &nbsp; &lt;div class=&quot;pagination-bar__prev&quot;&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate__alt&quot;&gt;Previous&lt;/a&gt;<br />
+                &nbsp; &lt;/div&gt;<br />
+                &nbsp; &lt;div class=&quot;pagination-bar__list o-btn-group&quot;&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate__alt&quot;&gt;&amp;laquo;&lt;/a&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate&quot;&gt;1&lt;/a&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate&quot;&gt;2&lt;/a&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate&quot;&gt;3&lt;/a&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate&quot;&gt;4&lt;/a&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate&quot;&gt;5&lt;/a&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate__alt&quot;&gt;&amp;raquo;&lt;/a&gt;<br />
+                &nbsp; &lt;/div&gt;<br />
+                &nbsp; &lt;div class=&quot;pagination-bar__next&quot;&gt;<br />
+                &nbsp; &nbsp; &lt;a href=&quot;&quot; class=&quot;c-btn c-btn-paginate__alt&quot;&gt;Next&lt;/a&gt;<br />
+                &nbsp; &lt;/div&gt;<br />
+                &lt;/div&gt;
+              </code>
+            </pre>
+        </div>
+      
+      </div>
+</div>
+
+
+      <div id="labels"><h1>Labels &amp; Badges</h1>
+
+<div class="ui-row">
+  <h2>Labels <small>(6-components/_label.scss)</small></h2>
+
+  <div class="ui-grid-left">
+    <p>To mark up and inform, to aid the user experience.</p>
+  </div>
+
+  <div class="ui-grid-right">
+
+    <h3>Labels </h3>
+    <span class="c-lbl c-lbl-primary">irure</span>
+    <span class="c-lbl c-lbl-secondary">enim</span>
+    <br><br>
+
+    <a class="c-lbl c-lbl-primary" href="">occaecat</a>
+    <a class="c-lbl c-lbl-secondary" href="">tempor</a>
+
+
+    <h3>Badges </h3>
+    <span class="c-lbl c-lbl-primary c-lbl-bdg">849</span>
+    <span class="c-lbl c-lbl-secondary c-lbl-bdg">617</span>
+    <br><br>
+
+    <a class="c-lbl c-lbl-primary c-lbl-bdg" href="">238</a>
+    <a class="c-lbl c-lbl-secondary c-lbl-bdg" href="">267</a>
+
+  </div>
+
+</div>
+</div>
+      <div id="alerts"><div class="ui-row">
+
+  <div class="ui-grid-left">
+    <h2>Alerts</h2>
+    <p>do incididunt pariatur cupidatat incididunt</p>
+  </div>
+  <div class="ui-grid-right">
+    <h3>Standard Alerts</h3>
+    <div class="ui-row">
+      <div class="c-alert c-alert-dismissible" role="alert">
+        <strong>Well done!</strong> You successfully read this important alert message.
+        <span class="close">&times;</span>
+      </div>
+    </div>
+    <h3>Global Alerts</h3>
+    <div class="ui-row">
+      <p>Global alert fixed to page head</p>
+      <div class="c-alert c-alert-global c-alert-dismissible" role="alert">
+        <div class="container">
+          sint tempor consectetur excepteur ad sint qui proident commodo eiusmod <span class="close">&times;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+     <div id="progress-bars"> <div class="ui-row">
+  <h2>Progress Bars (_components/_progress.scss)</h2>
+
+    <div class="ui-grid-left">
+    <h3>Progress bars</h3>
+    <p>Progress Bars are available in gradient, stripped and stacked versions. </p>
+  </div>
+
+  <div class="ui-grid-right">
+    <h3>Basic</h3>
+    <progress class="c-progress" value="75" max="100">
+      <div class="c-progress">
+        <span class="c-progress-bar" style="width: 75%;">75%</span>
+      </div>
+    </progress>
+
+    <h3>Striped</h3>
+    <progress class="c-progress c-progress-striped " value="75" max="100">
+      <div class="c-progress">
+        <span class="c-progress-bar" style="width: 75%;">75%</span>
+      </div>
+    </progress>
+    <pre>
+      <code class="HTML">//Checkout Bars<br />
+        &lt;progress class=&quot;c-progress c-progress-striped&quot;&nbsp;value=&quot;75&quot;&nbsp;max=&quot;100&quot;&gt;<br />
+        &nbsp; //IE9 Fallback<br />
+        &nbsp; &lt;div class=&quot;c-progress&quot;&gt;<br />
+        &nbsp; &nbsp; &lt;span class=&quot;c-progress-bar&quot; style=&quot;width:&nbsp;75%;&quot;&gt;75%&lt;/span&gt;<br />
+        &nbsp; &lt;/div&gt;<br />
+        &lt;/progress&gt;
+      </code>
+    </pre>
+  </div>
+
+    <div class="ui-grid-left">
+    <h3>Checkout Progress</h3>
+    <p>the "completed" class to the li adds the tick, the active is the current position and no class are the remaining</p>
+  </div>
+
+  <div class="ui-grid-right">
+    <h3>Chcekout</h3>
+    <ul class="c-progress-checkout">
+      <li class="completed"><span class="c-donut"></span>Billing Address</li>
+      <li class="completed"><span class="c-donut"></span>Delivery Address</li>
+      <li class="active"><span class="c-donut">3</span>Delivery Method</li>
+      <li><span class="c-donut">4</span>Payment Method</li>
+      <li><span class="c-donut">5</span>Confirmation</li>
+    </ul>
+    <pre>
+      <code class="HTML">//Checkout Progress<br />
+        &lt;ul class=&quot;c-progress-checkout&quot;&gt;<br />
+        &nbsp; &lt;li class=&quot;completed&quot;&gt;&lt;span class=&quot;c-donut&quot;&gt;&lt;/span&gt;Billing&nbsp;Address&lt;/li&gt;<br />
+        &nbsp; &lt;li class=&quot;completed&quot;&gt;&lt;span class=&quot;c-donut&quot;&gt;&lt;/span&gt;Delivery&nbsp;Address&lt;/li&gt;<br />
+        &nbsp; &lt;li class=&quot;active&quot;&gt;&lt;span class=&quot;c-donut&quot;&gt;3&lt;/span&gt;Delivery&nbsp;Method&lt;/li&gt;<br />
+        &nbsp; &lt;li&gt;&lt;span class=&quot;c-donut&quot;&gt;4&lt;/span&gt;Payment&nbsp;Method&lt;/li&gt;<br />
+        &nbsp; &lt;li&gt;&lt;span class=&quot;c-donut&quot;&gt;5&lt;/span&gt;Confirmation&lt;/li&gt;<br />
+        &lt;/ul&gt;
+      </code>
+    </pre>
+  </div>
+</div>
+</div>
+
+      product images todo
+
+     <div id="forms"><h1>Forms
+  <small></small>
+</h1>
+
+
+<div class="ui-row">
+  <div class="ui-grid-left">
+    <h3>Form Grid Sizing</h3>
+  </div>
+  <div class="ui-grid-right">
+    <div class="ui-grid-50">
+      <h3>Default Form</h3>
+
+
+      <form action="" class="form-default">
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Input Label</label>
+          </div>
+          <div class="o-form-input--contain">
+            <input type="text" class="input--textual" placeholder="placeholder" />
+            <p class="o-form--help-text">example block-level help text here.</p>
+            <label class="o-form-label o-form-label__option">
+              <input type="checkbox">Remember me
+            </label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Select Box</label>
+          </div>
+          <div class="o-form-input--contain">
+            <select>
+              <option value="foo">foo</option>
+              <option value="bar">bar</option>
+              <option value="baz">baz</option>
+            </select>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Choose Option (inline)</label>
+          </div>
+          <div class="o-form-input--contain o-label-inline">
+            <label class="o-form-label__option">
+              <input type="radio" name="foo" value="Red">Red</label>
+            <label class="o-form-label__option">
+              <input type="radio" name="foo" value="Blue">Blue</label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Choose Option (block)</label>
+          </div>
+          <div class="o-form-input--contain o-label-block">
+            <label class="o-form-label__option">
+              <input type="radio" name="foo" value="Red">Red</label>
+            <label class="o-form-label__option">
+              <input type="radio" name="foo" value="Blue">Blue</label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Check it (inline)</label>
+          </div>
+          <div class="o-form-input--contain o-label-inline">
+            <label class="o-form-label__option">
+              <input type="checkbox">Checkbox 1</label>
+            <label class="o-form-label__option">
+              <input type="checkbox">Checkbox 2</label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Check it (block)</label>
+          </div>
+          <div class="o-form-input--contain o-label-block">
+            <label class="o-form-label__option">
+              <input type="checkbox">Checkbox 1</label>
+            <label class="o-form-label__option">
+              <input type="checkbox">Checkbox 2</label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Textarea Label</label>
+          </div>
+          <div class="o-form-input--contain">
+            <textarea>raaa</textarea>
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+    <div class="ui-grid-50">
+      <h3>Horizontal Form</h3>
+
+
+      <form action="" class="form-wide">
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Input Label</label>
+          </div>
+          <div class="o-form-input--contain">
+            <input type="text" class="input--textual" placeholder="placeholder" />
+            <p class="o-form--help-text">example block-level help text here.</p>
+            <label class="o-form-label o-form-label__option">
+              <input type="checkbox">Remember me
+            </label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Select Box</label>
+          </div>
+          <div class="o-form-input--contain">
+            <select>
+              <option value="foo">foo</option>
+              <option value="bar">bar</option>
+              <option value="baz">baz</option>
+            </select>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Choose Option (inline)</label>
+          </div>
+          <div class="o-form-input--contain o-label-inline">
+            <label class="o-form-label__option">
+              <input type="radio" name="foo" value="Red">Red</label>
+            <label class="o-form-label__option">
+              <input type="radio" name="foo" value="Blue">Blue</label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Choose Option (block)</label>
+          </div>
+          <div class="o-form-input--contain o-label-block">
+            <label class="o-form-label__option">
+              <input type="radio" name="foo" value="Red">Red</label>
+            <label class="o-form-label__option">
+              <input type="radio" name="foo" value="Blue">Blue</label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Check it (inline)</label>
+          </div>
+          <div class="o-form-input--contain o-label-inline">
+            <label class="o-form-label__option">
+              <input type="checkbox">Checkbox 1</label>
+            <label class="o-form-label__option">
+              <input type="checkbox">Checkbox 2</label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label o-form-label__primary">Check it (block)</label>
+          </div>
+          <div class="o-form-input--contain o-label-block">
+            <label class="o-form-label o-form-label__option">
+              <input type="checkbox">Checkbox 1</label>
+            <label class="o-form-label o-form-label__option">
+              <input type="checkbox">Checkbox 2</label>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Textarea Label</label>
+          </div>
+          <div class="o-form-input--contain">
+            <textarea>raaa</textarea>
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+    <div class="ui-grid-100">
+      <pre>
+        <code class="HTML">//Forms - to add once compelte<br />
+
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="ui-row">
+  <div class="ui-grid-left">
+    <h3>Inline Forms</h3>
+  </div>
+  <div class="ui-grid-right">
+
+
+    <div>
+      <form class="form-inline">
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Input Label</label>
+          </div>
+          <div class="o-form-input--contain">
+            <input type="text" class="input--textual" placeholder="placeholder" />
+          </div>
+          <div class="o-form-input--contain">
+            <input type="text" class="input--textual" placeholder="placeholder" />
+          </div>
+          <label class="o-form-label o-form-label__option">
+            <input type="checkbox">Remember me
+          </label>
+          <button type="submit" class="c-btn c-btn-secondary">Transfer cash</button>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <form class="form-inline">
+        <div class="o-form-row">
+          <div class="o-form--input-group o-form-input--contain span-wide-4">
+            <div class="input-group--addon">$</div>
+            <input type="text" class="input--textual input-addon--expand" placeholder="Amount">
+            <div class="input-group--addon">.00</div>
+          </div>
+          <button type="submit" class="c-btn c-btn-secondary">Transfer cash</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div><div class="ui-row">
+    <div class="ui-grid-left">
+    <h3>Validation States</h3>
+    <p>Matalan has various validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding .o-form-row</p>
+  </div>
+  <div class="ui-grid-right">
+    <h3>Validation States</h3>
+    <hr>
+
+    <form class="o-form-inline-fixed__threecol">
+
+      <div class="o-form-row form-validate__warning">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Input with warning</label>
+        </div>
+        <div class="o-form-input--contain">
+          <input type="text" class="input--textual" placeholder="placeholder" />
+        </div>
+        <div class="o-form-message--contain">
+          <label class="o-form-label__message">Something may have gone wrong</label>
+        </div>
+      </div>
+
+
+      <div class="o-form-row form-validate__error">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Input with error</label>
+        </div>
+        <div class="o-form-input--contain">
+          <input type="text" class="input--textual" placeholder="placeholder" />
+        </div>
+        <div class="o-form-message--contain">
+          <label class="o-form-label__message">Please correct the error</label>
+        </div>
+      </div>
+
+
+      <div class="o-form-row form-validate__info">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Input with info</label>
+        </div>
+        <div class="o-form-input--contain">
+          <input type="text" class="input--textual" placeholder="placeholder" />
+        </div>
+        <div class="o-form-message--contain">
+          <label class="o-form-label__message">Username is taken</label>
+        </div>
+      </div>
+
+
+      <div class="o-form-row form-validate__success">
+        <div class="o-form-label--contain">
+          <label class="o-form-label__primary">Input with success</label>
+        </div>
+        <div class="o-form-input--contain">
+          <input type="text" class="input--textual" placeholder="placeholder" />
+        </div>
+        <div class="o-form-message--contain">
+          <label class="o-form-label__message">Whohoo!</label>
+        </div>
+      </div>
+
+    </form>
+    <pre>
+      <code class="HTML">// Validation states for forms<br />
+        &lt;form class=&quot;o-form-inline-fixed__threecol&quot;&gt;<br /><br />
+        // Warnings<br />
+        &nbsp; &lt;div class=&quot;o-form-row form-validate__warning&quot;&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Input&nbsp;with&nbsp;warning&lt;/label&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot;&nbsp;placeholder=&quot;placeholder&quot;&nbsp;/&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-message--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__message&quot;&gt;Something&nbsp;may&nbsp;have&nbsp;gone&nbsp;wrong&lt;/label&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &lt;/div&gt;<br /><br />
+        // Errors<br />
+        &nbsp; &lt;div class=&quot;o-form-row form-validate__error&quot;&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Input&nbsp;with&nbsp;error&lt;/label&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot;&nbsp;placeholder=&quot;placeholder&quot;&nbsp;/&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-message--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__message&quot;&gt;Please&nbsp;correct&nbsp;the&nbsp;error&lt;/label&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &lt;/div&gt;<br /><br />
+        // Information<br />
+        &nbsp; &lt;div class=&quot;o-form-row form-validate__info&quot;&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Input&nbsp;with&nbsp;info&lt;/label&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot;&nbsp;placeholder=&quot;placeholder&quot;&nbsp;/&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-message--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__message&quot;&gt;Username&nbsp;is&nbsp;taken&lt;/label&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &lt;/div&gt;<br /><br />
+        // Succes<br />
+        &nbsp; &lt;div class=&quot;o-form-row form-validate__success&quot;&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Input&nbsp;with&nbsp;success&lt;/label&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot;&nbsp;placeholder=&quot;placeholder&quot;&nbsp;/&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &nbsp; &lt;div class=&quot;o-form-message--contain&quot;&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__message&quot;&gt;Whohoo!&lt;/label&gt;<br />
+        &nbsp; &nbsp; &lt;/div&gt;<br />
+        &nbsp; &lt;/div&gt;<br /><br />
+
+        &lt;/form&gt;
+      </code>
+    </pre>
+
+
+  </div>
+</div>
+<div class="ui-row">
+  <div class="ui-grid-left">
+    <h3>Form controls</h3>
+    <p>Examples of standard form controls supported in an example form layout.</p>
+  </div>
+  <div class="ui-grid-right">
+    <h3>Inputs</h3>
+    <hr>
+
+
+    <div class="u-cf">
+      <form action="" class="form-wide span-wide-6">
+
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Text Input</label>
+          </div>
+          <div class="o-form-input--contain">
+            <input type="text" class="input--textual" placeholder="Text Input" />
+          </div>
+        </div>
+        <pre>
+          <code class="HTML">//Text Input<br />
+            &lt;div class=&quot;o-form-row&quot;&gt;<br />
+            &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
+            &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Text Input&lt;/label&gt;<br />
+            &nbsp; &lt;/div&gt;<br />
+            &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
+            &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot; placeholder=&quot;Text Input&quot; /&gt;<br />
+            &nbsp; &lt;/div&gt;<br />
+            &lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Prepended</label>
+          </div>
+          <div class="o-form--input-group o-form-input--contain">
+            <div class="input-group--addon">@</div>
+            <input type="text" class="input--textual input-addon--expand" placeholder="Username">
+          </div>
+        </div>
+        <pre>
+          <code class="HTML">//Prepended<br />
+            &lt;div class=&quot;o-form-row&quot;&gt;<br />
+            &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
+            &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Prepended&lt;/label&gt;<br />
+            &nbsp; &lt;/div&gt;<br />
+            &nbsp; &lt;div class=&quot;o-form--input-group o-form-input--contain&quot;&gt;<br />
+            &nbsp; &nbsp; &lt;div class=&quot;input-group--addon&quot;&gt;@&lt;/div&gt;<br />
+            &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual input-addon--expand&quot; placeholder=&quot;Username&quot;&gt;<br />
+            &nbsp; &lt;/div&gt;<br />
+            &lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Appended</label>
+          </div>
+          <div class="o-form--input-group o-form-input--contain">
+            <input type="text" class="input--textual input-addon--expand" placeholder="Username">
+            <div class="input-group--addon">.00</div>
+          </div>
+        </div>
+        <pre>
+          <code class="HTML">//Prepended<br />
+            &lt;div class=&quot;o-form-row&quot;&gt;<br />
+            &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
+            &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Appended&lt;/label&gt;<br />
+            &nbsp; &lt;/div&gt;<br />
+            &nbsp; &lt;div class=&quot;o-form--input-group o-form-input--contain&quot;&gt;<br />
+            &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual input-addon--expand&quot; placeholder=&quot;Username&quot;&gt;<br />
+            &nbsp; &nbsp; &lt;div class=&quot;input-group--addon&quot;&gt;.00&lt;/div&gt;<br />
+            &nbsp; &lt;/div&gt;<br />
+            &lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">With a Button</label>
+          </div>
+          <div class="o-form--input-group o-form-input--contain">
+            <input type="text" class="input--textual input-addon--expand" placeholder="Username">
+            <div class="input-group--addon">
+              <a href="">Go</a>
+            </div>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+
+
+    <h3>Form Grid Sizing</h3>
+    <hr>
+
+    <div class="o-form-row">
+      <div class="o-form-input--contain span-wide-2">
+        <input type="text" class="input--textual" placeholder=".span-wide-2" />
+      </div>
+    </div>
+
+    <div class="o-form-row">
+      <div class="o-form-input--contain span-wide-4">
+        <input type="text" class="input--textual" placeholder=".span-wide-4" />
+      </div>
+    </div>
+
+    <div class="o-form-row">
+      <div class="o-form-input--contain span-wide-6">
+        <input type="text" class="input--textual" placeholder=".span-wide-6" />
+      </div>
+    </div>
+
+    <div class="o-form-row">
+      <div class="o-form-input--contain span-wide-8">
+        <input type="text" class="input--textual" placeholder=".span-wide-8" />
+      </div>
+    </div>
+
+    <div class="o-form-row">
+      <div class="o-form-input--contain span-wide-10">
+        <input type="text" class="input--textual" placeholder=".span-wide-10" />
+      </div>
+    </div>
+
+    <div class="o-form-row">
+      <div class="o-form-input--contain span-wide-12">
+        <input type="text" class="input--textual" placeholder=".span-wide-12" />
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+      filters todo
+
+      <div id="tables"><div class="ui-row">
+  <h1>Tables</h1>
+  <div class="ui-grid-left">
+    <h3>Default style</h3>
+    <p>For basic styling—light padding and horizonal stripes.</p>
+  </div>
+
+  <div class="ui-grid-right">
+
+    <table class="c-table c-table__default c-table__striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Gaz</td>
+          <td>Battersby</td>
+          <td>@iamgaz</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Gaz</td>
+          <td>Battersby</td>
+          <td>@iamgaz</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Gaz</td>
+          <td>Battersby</td>
+          <td>@iamgaz</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <pre>
+      <code class="HTML">// Tables<br />
+        &lt;table class=&quot;c-table c-table__default c-table__striped&quot;&gt;<br />
+        &nbsp; &lt;thead&gt;<br />
+        &nbsp; &nbsp; &lt;tr&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;th&gt;#&lt;/th&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;th&gt;First Name&lt;/th&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;th&gt;Last Name&lt;/th&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;th&gt;Username&lt;/th&gt;<br />
+        &nbsp; &nbsp; &lt;/tr&gt;<br />
+        &nbsp; &lt;/thead&gt;<br />
+        &nbsp; &lt;tbody&gt;<br />
+        &nbsp; &nbsp; &lt;tr&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;td&gt;1&lt;/td&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;td&gt;Gaz&lt;/td&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;td&gt;Battersby&lt;/td&gt;<br />
+        &nbsp; &nbsp; &nbsp; &lt;td&gt;@iamgaz&lt;/td&gt;<br />
+        &nbsp; &nbsp; &lt;/tr&gt;<br />
+        &nbsp; &lt;/tbody&gt;<br />
+        &lt;/table&gt;
+      </code>
+    </pre>
+
+
+  </div>
+
+</div>
+</div>
+      <div id="roundels"><div class="ui-row">
+  <h1>Roundels</h1>
+  <div class="ui-grid-left">
+    <h2>Product List page</h2>
+      Help communicate KSP for products. <br>
+      Still requires sizing classes
+  </div>
+  <div class="ui-grid-right">
+
+    <div class="u-cf">
+      <div class="col-sm-2"><div class="c-roundel c-roundel__pri c-roundel--non-iron"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__pri c-roundel--cabin-case"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__pri c-roundel--100-cotton"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__pri c-roundel--more-prints"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__pri c-roundel--real-leather"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__pri c-roundel--coming-soon"></div></div>
+    </div>
+    <hr>
+    <div class="u-cf">
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--100-cotton"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--adjustable-waist"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--coated-leather"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--easy-iron"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--permanent-pleats"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--real-leather"></div></div>
+    </div>
+    <div class="u-cf">
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--scuff-resistant"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--shower-proof"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--stain-resistant"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--with-stretch"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--lights-up"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--plays-music"></div></div>
+    </div>
+    <div class="u-cf">
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--teflon-coated"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--smart-crease"></div></div>
+      <div class="col-sm-2"><div class="c-roundel c-roundel__sec c-roundel--free-accessory"></div></div>
+    </div>
+    <hr>
+    <div class="u-cf">
+      <div class="col-sm-2"><div data-content="custom 1" class="c-roundel c-roundel__sec c-roundel--custom"></div></div>
+      <div class="col-sm-2"><div data-content="custom 2" class="c-roundel c-roundel__sec c-roundel--custom"></div></div>
+      <div class="col-sm-2"><div data-content="custom 3" class="c-roundel c-roundel__sec c-roundel--custom"></div></div>
+    </div>
+
+    <pre>
+      <code class="HTML">// Roundels<br />
+        &lt;div class=&quot;u-cf&quot;&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__pri&nbsp;c-roundel--non-iron&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__pri&nbsp;c-roundel--cabin-case&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__pri&nbsp;c-roundel--100-cotton&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__pri&nbsp;c-roundel--more-prints&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__pri&nbsp;c-roundel--real-leather&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__pri&nbsp;c-roundel--coming-soon&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &lt;/div&gt;<br />
+        &lt;hr&gt;<br />
+        &lt;div class=&quot;u-cf&quot;&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--100-cotton&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--adjustable-waist&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--coated-leather&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--easy-iron&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--permanent-pleats&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--real-leather&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &lt;/div&gt;<br />
+        &lt;div class=&quot;u-cf&quot;&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--scuff-resistant&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--shower-proof&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--stain-resistant&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--with-stretch&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--lights-up&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--plays-music&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &lt;/div&gt;<br />
+        &lt;div class=&quot;u-cf&quot;&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--teflon-coated&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--smart-crease&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--free-accessory&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &lt;/div&gt;<br />
+        &lt;hr&gt;<br />
+        &lt;div class=&quot;u-cf&quot;&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div data-content=&quot;custom&nbsp;1&quot;&nbsp;class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--custom&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div data-content=&quot;custom&nbsp;2&quot;&nbsp;class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--custom&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;div data-content=&quot;custom&nbsp;&quot;&nbsp;class=&quot;c-roundelc-roundel__sec&nbsp;c-roundel--custom&quot;&gt;&lt;/div&gt;&lt;/div&gt;<br />
+        &lt;/div&gt;
+      </code>
+    </pre>
+
+  </div>
+</div>
+
+
+</div>
+
+     <div id="lists"> <h1>Lists<small>(_objects/_o-lists.scss)</small></h1>
+
+<div class="ui-row">
+    <div class="ui-grid-left">
+    <h3>Lists</h3>
+    <p>Lists of things</p>
+  </div>
+  <div class="ui-grid-right">
+    <div class="ui-row">
+      <h3>Lists</h3>
+      <div class="ui-grid-33">
+
+
+        <ul class="o-list-block">
+          <div class="o-list__item o-list-heading">Block list<small>Unstyled</small></div>
+          <li class="o-list__item">List Block
+            <span class="c-lbl c-lbl-primary c-lbl-bdg list-addon__right">30</span>
+          </li>
+          <a class="o-list__item" href="">List Block
+            <span class="c-lbl c-lbl-secondary c-lbl-bdg list-addon__right">98</span>
+          </a>
+          <li class="o-list__item">List Block
+            <span class="c-lbl c-lbl-primary c-lbl-bdg list-addon__right">44</span>
+          </li>
+          <a class="o-list__item" href="">List Block
+            <span class="c-lbl c-lbl-secondary c-lbl-bdg list-addon__right">99</span>
+          </a>
+          <li class="o-list__item">List Block
+            <span class="c-lbl c-lbl-primary c-lbl-bdg list-addon__right">94</span>
+          </li>
+          <a class="o-list__item" href="">List Block
+            <span class="c-lbl c-lbl-secondary c-lbl-bdg list-addon__right">2</span>
+          </a>
+        </ul>
+
+
+      </div>
+      <div class="ui-grid-33">
+
+
+        <ul class="o-list-block o-list--vertical-sep">
+          <div class="o-list__item o-list-heading">Block list<small>Separator</small></div>
+          <li class="o-list__item">List Block</li>
+          <a class="o-list__item" href="">List Block</a>
+          <li class="o-list__item">List Block</li>
+          <a class="o-list__item" href="">List Block</a>
+          <li class="o-list__item">List Block</li>
+          <a class="o-list__item" href="">List Block</a>
+        </ul>
+
+
+      </div>
+      <div class="ui-grid-33">
+
+
+        <ul class="o-list-block o-list--bordered">
+          <div class="o-list__item o-list-heading">Block list<small>Bordered</small></div>
+          <li class="o-list__item">List Block Bordered
+            <span class="c-lbl c-lbl-secondary c-lbl-bdg list-addon__right">83</span>
+          </li>
+          <a class="o-list__item" href="">List Block Bordered <small>1</small></a>
+          <li class="o-list__item">List Block Bordered
+            <span class="c-lbl c-lbl-secondary c-lbl-bdg list-addon__right">45</span>
+          </li>
+          <a class="o-list__item" href="">List Block Bordered <small>2</small></a>
+          <li class="o-list__item">List Block Bordered
+            <span class="c-lbl c-lbl-secondary c-lbl-bdg list-addon__right">21</span>
+          </li>
+          <a class="o-list__item" href="">List Block Bordered <small>3</small></a>
+        </ul>
+
+
+
+      </div>
+    </div>
+    <div class="ui-row">
+      <h3>Lists</h3>
+      <div class="ui-grid-33">
+
+
+        <ul class="o-list-ui">
+          <div class="o-list__item o-list-heading">List UI<small>Borderless</small></div>
+          <li class="o-list__item">List UI <small>1</small></li>
+          <a class="o-list__item" href="">List UI <small>1</small></a>
+          <li class="o-list__item">List UI <small>2</small></li>
+          <a class="o-list__item" href="">List UI <small>2</small></a>
+          <li class="o-list__item">List UI <small>3</small></li>
+          <a class="o-list__item" href="">List UI <small>3</small></a>
+        </ul>
+
+
+      </div>
+      <div class="ui-grid-33">
+
+
+        <ul class="o-list-ui o-list--vertical-sep">
+          <div class="o-list__item o-list-heading">List UI<small>Separator</small></div>
+          <li class="o-list__item">List UI <small>1</small></li>
+          <a class="o-list__item" href="">List UI <small>1</small></a>
+          <li class="o-list__item">List UI <small>2</small></li>
+          <a class="o-list__item" href="">List UI <small>2</small></a>
+          <li class="o-list__item">List UI <small>3</small></li>
+          <a class="o-list__item" href="">List UI <small>3</small></a>
+        </ul>
+
+
+      </div>
+      <div class="ui-grid-33">
+
+
+        <ul class="o-list-ui o-list--bordered">
+          <div class="o-list__item o-list-heading">List UI<small>Bordered</small></div>
+          <li class="o-list__item">List UI
+            <span class="c-lbl c-lbl-primary c-lbl-bdg list-addon__right">22</span>
+          </li>
+          <a class="o-list__item" href="">List UI <small>1</small></a>
+          <li class="o-list__item">List UI
+            <span class="c-lbl c-lbl-primary c-lbl-bdg list-addon__right">26</span>
+          </li>
+          <a class="o-list__item" href="">List UI <small>2</small></a>
+          <li class="o-list__item">List UI
+            <span class="c-lbl c-lbl-primary c-lbl-bdg list-addon__right">73</span>
+          </li>
+          <a class="o-list__item" href="">List UI <small>3</small></a>
+        </ul>
+
+
+      </div>
+    </div>
+    <div class="ui-row">
+      <h3>Lists</h3>
+      <div class="ui-grid-66">
+
+
+        <ul class="o-list-inline">
+          <li>List Inline <small>1</small></li>
+          <li>List Inline <small>2</small></li>
+          <li>List Inline <small>3</small></li>
+        </ul>
+        <br>
+        <br>
+
+
+        <ul class="o-list-inline o-list-inline__delimited">
+          <li>List Inline Delim <small>1</small></li>
+          <li>List Inline Delim <small>2</small></li>
+          <li>List Inline Delim <small>3</small></li>
+        </ul>
+        <br>
+        <br>
+
+
+        <ul class="o-list-text">
+        </li>
+          <li class="o-list__item">List Text <small>1</small> -<small>veniam ut qui deserunt ex proident Lorem ea culpa sint qui proident tempor magna</small></li>
+        </li>
+          <li class="o-list__item">List Text <small>2</small> -<small>culpa laboris culpa velit aute consequat adipisicing ad exercitation ex cupidatat deserunt exercitation deserunt</small></li>
+        </li>
+          <li class="o-list__item">List Text <small>3</small> -<small>est culpa ut sit sint officia elit magna veniam consequat sint incididunt amet pariatur</small></li>
+        </ul>
+
+
+      </div>
+      <div class="ui-grid-33">
+        <h3>Definition List</h3>
+
+
+        <dl class="o-dl-plain">
+          <dt>Definition Type</dt>
+          <dd>culpa nulla voluptate amet sit</dd>
+          <dt>Definition Type</dt>
+          <dd>nulla esse sint reprehenderit aliqua</dd>
+          <dt>Definition Type</dt>
+          <dd>ut nostrud nostrud in eiusmod</dd>
+        </dl>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+     <div id="ratings"> <div class="ui-row">
+  <h1>Ratings</h1>
+    <div class="ui-grid-left">
+    <h3>Star Ratings</h3>
+  </div>
+  <div class="ui-grid-right">
+
+    <div class="rating">
+      <span>0 star</span>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+    </div>
+
+    <div class="rating">
+      <span>1 star</span>
+      <i class="icon-star"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+    </div>
+
+    <div class="rating">
+      <span>2 star</span>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+    </div>
+
+    <div class="rating">
+      <span>3 star</span>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star_o"></i>
+      <i class="icon-star_o"></i>
+    </div>
+    <div class="rating">
+      <span>4 star</span>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star_o"></i>
+    </div>
+    <div class="rating">
+      <span>5 star</span>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+    </div>
+    <pre>
+      <code class="HTML">//Star Ratings<br />
+        &lt;div class=&quot;rating&quot;&gt;<br />
+        &nbsp; &lt;span&gt;3 star&lt;/span&gt;<br />
+        &nbsp; &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;<br />
+        &nbsp; &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;<br />
+        &nbsp; &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;<br />
+        &nbsp; &lt;i class=&quot;icon-star_o&quot;&gt;&lt;/i&gt;<br />
+        &nbsp; &lt;i class=&quot;icon-star_o&quot;&gt;&lt;/i&gt;<br />
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </div>
+
+</div>
+</div>
+     <div id="icons"> <div class="ui-row">
+  <h1>Icons</h1>
+    <div class="ui-grid-left">
+    <h3>Icons</h3>
+  </div>
+  <div class="ui-grid-right">
+    <h3>Social</h3>
+
+    <div class="ui-grid-50">
+      <i class="block-icon icon-plus_circle">icon-plus_circle</i>
+      <i class="block-icon icon-plus_circle_o">icon-plus_circle_o</i>
+      <i class="block-icon icon-edit">icon-create</i>
+      <i class="block-icon icon-email">icon-email</i>
+      <i class="block-icon icon-minus_circle">icon-minus_circle</i>
+      <i class="block-icon icon-minus_circle_o">icon-minus_circle_o</i>
+      <i class="block-icon icon-view_comfortable">icon-view_comfortable</i>
+      <i class="block-icon icon-apps">icon-apps</i>
+      <i class="block-icon icon-menu">icon-menu</i>
+      <i class="block-icon icon-star">icon-star</i>
+      <i class="block-icon icon-phone">icon-phone</i>
+      <i class="block-icon icon-star_half">icon-star_half</i>
+    </div>
+    <div class="ui-grid-50">
+      <i class="block-icon icon-star_o">icon-star_o</i>
+      <i class="block-icon icon-info">icon-info</i>
+      <i class="block-icon icon-info_o">icon-info_o</i>
+      <i class="block-icon icon-payment">icon-payment</i>
+      <i class="block-icon icon-search">icon-search</i>
+      <i class="block-icon icon-basket">icon-basket</i>
+      <i class="block-icon icon-google-plus">icon-google</i>
+      <i class="block-icon icon-facebook">icon-facebook</i>
+      <i class="block-icon icon-twitter">icon-twitter</i>
+      <i class="block-icon icon-rss">icon-rss</i>
+      <i class="block-icon icon-youtube">icon-youtube</i>
+      <i class="block-icon icon-pinterest">icon-pinterest</i>
+    </div>
+    <div class="ui-grid-100">
+      <pre>
+        <code class="HTML">//Icon style<br />
+          &lt;i class=&quot;block-icon icon-plus_circle&quot;&gt;icon-plus_circle&lt;/i&gt;
+        </code>
+      </pre>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+  </div>
+  <a href="#top" class="back-to-top">Back to top</a>
+  <script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
+  <script src="js/highlight.pack.js"></script>
+  <script src="js/menu-accessible.js"></script>
+  <script>
+    hljs.configure({useBR: true});
+    hljs.initHighlighting();
+  </script>
+</body>
+
+</html>
