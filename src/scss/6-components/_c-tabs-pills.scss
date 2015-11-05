@@ -61,7 +61,7 @@ $tab-background-colour: $light-grey;
 .c-section__pills {
   .c-section--header--item {
     > a:hover {
-        background-color: $primary-lighten-20;
+        background-color: $tab-background-colour;
     }
     &.active a {
       background-color: $primary-color;
