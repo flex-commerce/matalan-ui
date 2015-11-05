@@ -22,7 +22,7 @@ module.exports = {
 
 
     markup: {
-        src: src + '/htdocs/{,**/}/*.{html,hbs}',
+        src: src + '/htdocs/{,**/}*.{html,hbs}',
         dest: dest,
         hbHelpers: src + '/hb-helpers/*.js',
     },

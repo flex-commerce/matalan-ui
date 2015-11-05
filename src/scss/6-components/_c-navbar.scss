@@ -1,47 +1,41 @@
-// reusable mixin to justify a row of inline block level elements
-@mixin justify-children {
-    // width: 550px;
-    text-align: justify;
-    // background: firebrick;
-    font-size: 0;      /* IE6-9 only hack */
-    font-size: 12px\9; /* IE6-9 only hack */
-
-  > * {
-    // background: white;
-    display: inline-block;
-    font-size: rem-calc(12);
-    zoom: 1;
-    *display: inline;
-  }
-
-  &:after {
-    content: "";
-    width: 100%;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-  }
-}
-
-
 .c-navbar {
   padding: 0 2rem;
-  @include justify-children;
-  @include border-tb-default;
-  > li {
+  @include border-tb-default(2px);
+  .navbar--top-item {
     text-transform: uppercase;
-    a {
+    > a {
       display: inline-block;
       line-height: 4em;
       padding: 0 1em;
       color: $base-text-color;
       text-decoration: none;
+      &.active,
       &:hover {
-        border-bottom: 2px solid $primary-lighten-40;
-      }
-      &.active {
         border-bottom: 2px solid $primary-color;
       }
     }
   }
+  @extend .justify-parent;
+  .navbar--top-item {
+    @extend .justified-child;
+  }
+}
+
+// todo - sort these for oocs, vars, naming etc
+.sub-nav {
+  padding: 15px;
+  text-transform: initial;
+  .sub-nav-title {
+    @extend .u-font-sec;
+    @extend .h4;
+    margin: 1em 0;
+  }
+  .sub-nav-header {
+    @extend .u-font-sec;
+  }
+}
+
+.sub-nav-group {
+  min-width: 190px; // @todo - magic
+  .sub-nav-item {}
 }

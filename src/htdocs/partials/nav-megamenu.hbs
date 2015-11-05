@@ -1,0 +1,76 @@
+<div class="ui-row">
+
+  <nav data-app="accessible-navmenu">
+    <ul class="accessible-navmenu c-navbar">
+
+
+      <!-- category menu block -->
+      <li class="navbar--top-item">
+        <a class="active" href="">Category 0</a>
+        <div class="sub-nav">
+          <h2 class="sub-nav-header">Section Header</h2>
+          {{# times 6}}
+          <ul class="sub-nav-group">
+            {{# times 2}}
+            <li class="sub-nav-title">Category</li>
+            {{# timesrand 2 6}}
+            <li class="sub-nav-item"><a href="">{{lorem count=2}}</a></li>
+            {{/ timesrand }}
+            {{/ times }}
+          </ul>
+          {{/ times }}
+        </div>
+      </li>
+      <!-- end category menu block -->
+
+
+      <!-- repeat menu block -->
+      {{# times 4}}
+      <li class="navbar--top-item">
+        <a class="" href="">Category {{this}}</a>
+        <div class="sub-nav">
+          <h2 class="sub-nav-header">Section Header</h2>
+          {{# times 6}}
+          <ul class="sub-nav-group">
+            {{# times 2}}
+            <li class="sub-nav-title">Category</li>
+            {{# timesrand 2 6}}
+            <li class="sub-nav-item"><a href="">{{lorem count=2}}</a></li>
+            {{/ timesrand }}
+            {{/ times }}
+          </ul>
+          {{/ times }}
+        </div>
+      </li>
+      {{/ times }}
+      <!-- end repeat menu block -->
+
+
+    </ul>
+  </nav>
+
+
+
+</div>
+
+
+
+<!-- include jquery -->
+<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+<!-- include the jquery-accessibleMegaMenu plugin script -->
+<script src="js/menu-accessible.js"></script>
+<!-- initialize a selector as an accessibleMegaMenu -->
+<script>
+  $("[data-app~=accessible-navmenu]").accessibleMegaMenu({
+    /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+    uuidPrefix: "accessible-menu",
+    menuClass: "c-navbar",
+    topNavItemClass: "navbar--top-item",
+    panelClass: "sub-nav",
+    panelGroupClass: "sub-nav-group",
+    hoverClass: "hover",
+    focusClass: "focus",
+    openClass: "open"
+  });
+</script>
+
