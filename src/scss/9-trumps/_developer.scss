@@ -180,3 +180,11 @@ code {
     margin-bottom: 2em;
   }
 }
+
+.back-to-top {
+  position: absolute;
+  bototm: 20px;
+  right: 20px;
+  border: 1px solid $primary-color;
+  background-color: cool-grey;
+}

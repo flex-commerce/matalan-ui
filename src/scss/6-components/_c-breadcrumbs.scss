@@ -7,6 +7,16 @@
     @extend .u-no-underline;
     color: $primary-color;
   }
+  li {
+    &.has-link {
+      &.hover,
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        @include primary-style(hover);
+      }
+    }
+  }
 }
 
 
