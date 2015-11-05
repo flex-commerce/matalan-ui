@@ -4,15 +4,10 @@ $rem-base: 14px !default;
 $base-font-size: $rem-base;
 $base-line-height: 20px;
 
-
-
 $base-space: $base-line-height;
 
-
-$base-background-color: #f8f8f8;
+$base-background-color: #fff;
 $base-text-color: #111;
-
-
 
 // manual strip unit and rem calc method before tools are loaded
 $default-pad-x:  #{ 14 / ($rem-base / ($rem-base * 0 + 1))}rem;
