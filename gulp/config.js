@@ -22,7 +22,7 @@ module.exports = {
 
 
     markup: {
-        src: src + '/htdocs/{,**/}/*.{html,hbs}',
+        src: src + '/htdocs/{,**/}*.{html,hbs}',
         dest: dest,
         hbHelpers: src + '/hb-helpers/*.js',
     },
@@ -35,6 +35,11 @@ module.exports = {
     img: {
         src: src + '/img/*',
         dest: dest + '/img/',
+    },
+
+    js: {
+        src: src + '/js/*.js',
+        dest: dest + '/js/',
     },
 
     production: {

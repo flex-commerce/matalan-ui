@@ -1,0 +1,45 @@
+// reusable mixin to justify a row of inline block level elements
+// todo - move to mixins and check for reuasability
+@mixin justify-children {
+  // width: 550px;
+  text-align: justify;
+  // background: firebrick;
+  font-size: 0;
+  /* IE6-9 only hack */
+  font-size: 12px\9;
+  /* IE6-9 only hack */
+  > * {
+    // background: white;
+    display: inline-block;
+    font-size: rem-calc(12);
+    zoom: 1;
+    *display: inline;
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+}
+
+.justify-parent {
+  text-align: justify;
+  font-size: 0;  /* IE6-9 only hack */
+  font-size: 12px\9;  /* IE6-9 only hack */
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+}
+
+.justified-child {
+  display: inline-block;
+  font-size: rem-calc(12);
+  zoom: 1;
+  *display: inline;
+}

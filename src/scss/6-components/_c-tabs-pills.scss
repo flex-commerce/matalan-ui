@@ -1,73 +1,44 @@
+$pill-spacing: rem-calc(4);
+$tab-border-width: rem-calc(1);
+$tab-background-colour: $light-grey;
+
 // ========================
-// variants
-
+// Tab Rules
+// ========================
 // Tab Default (horizontal)
-
-.c-tabs--header {
-  @extend .u-cf;
-  display: block;
-}
-
-.c-tabs__pills {
-  .c-tabs--header--item > a {
-    background-color: $primary-color;
-    color: $white;
-  }
-}
-
-.c-tabs__horizontal {
-
-  // horizontal tabs only
-  .c-tabs--header {
+.c-section__tab__horizontal {
+  .c-section--header {
     border-bottom: 1px solid #ddd;
-    a {
-      text-decoration: none;
-      color: $primary-color;
-    }
-    .active a {
-      color: $base-text-color;
-    }
   }
-
-  .c-tabs--header--item {
-    float: left;  // horizontal only
-    margin-bottom: -1px;  // tabs only
-
-    border-width: 1px;  // tabs only
+  .c-section--header--item {
+    margin-bottom: -($tab-border-width);
+    float: left;
+    margin-right: $pill-spacing;
+    border-width: $tab-border-width;
     border-style: solid solid none;
     border-color: transparent;
-
+    &:not(.active) a:hover {
+      background: $light-grey;
+      margin-bottom: $pill-spacing;
+      padding-bottom: 6px;
+    }
     &.active {
-      background-color: #fff;
       border-color: #ddd;
     }
-    a {
-      margin-right: 2px;
-      border: 1px solid transparent;
-    }
   }
-
-  .c-tabs--content {
-    border-width: 1px;
+  .c-section--content {
+    border-width: $tab-border-width;
     border-style: none solid solid solid;
     border-color: #ddd;
   }
 }
 
 // Tab Stacked (vertical)
-.c-tabs__vertical {
+.c-section__tab__vertical {
   display: flex;
-
-  .c-tabs--header {
-    display: inline-block;
-    .c-tabs--header--item {
-      a {
-        text-decoration: none;
-      }
-      &.active a {
-        margin-right: -1px;
-      }
-      border-width: 1px;
+  .c-section--header {
+    .c-section--header--item {
+      border-width: $tab-border-width;
       border-color: $keyline-color;
       border-style: solid none none solid;
       &:last-child {
@@ -75,66 +46,105 @@
       }
     }
   }
-  .c-tabs--header:not(.inverted) {
-    .c-tabs--header--item {
-      a {
-        color: $base-text-color;
-        background-color: $white;
-      }
-      &.active a {
-        color: $primary-color;
-        background-color: #f0f0f0;
-      }
-    }
-  }
-
-  .c-tabs--header.inverted {
-    .c-tabs--header--item {
-      a {
-        color: $primary-color;
-        background-color: #f0f0f0;
-      }
-      &.active a {
-        color: $base-text-color;
-        background-color: $white;
-      }
-    }
-  }
-  .c-tabs--content {
+  .c-section--content {
     flex-grow: 1;
-    border-width: 1px;
+    border-width: $tab-border-width;
     border-style: solid;
     border-color: #ddd;
   }
 }
 
-
-.c-tabs--header__pills {
-  @extend .u-cf;
-  display: block;
-  border: 1px solid red;
-}
-
-
-// misc to sort
 // ========================
-.c-tabs--header {
-  > .c-tabs--header--item {
-    > a {
-      line-height: 1.42857143;
-      position: relative;
-      display: block;
-      padding: 10px 15px;
+// Pills Rules
+// ========================
+// pills global
+.c-section__pills {
+  .c-section--header--item {
+    > a:hover {
+        background-color: $tab-background-colour;
+    }
+    &.active a {
+      background-color: $primary-color;
+      color: $white;
+      &:hover {
+        background-color: $primary-color-hover;
+      }
     }
   }
-  .c-tabs--header--item.active {
-    color: #555;
-    background-color: #fff;
+}
+// pills horizontal
+.c-section__pills__horizontal {
+  .c-section--header {
+    @extend .u-cf;
+  }
+  .c-section--header--item {
+    margin-right: $pill-spacing;
+    float: left;
+  }
+}
+// pills vertical
+.c-section__pills__vertical {
+  display: flex;
+  .c-section--content {
+    flex-grow: 1;
+  }
+  .c-section--header--item {
+    margin-bottom: $pill-spacing;
   }
 }
 
-.c-tabs--content {
+// misc rules - to be sorted
+// ========================
+.c-section--header--item > a {
+  line-height: 1.42857143;
+  position: relative;
+  display: block;
   padding: 10px 15px;
-  background-color: #fff;
 }
 
+.c-section__tab__horizontal .c-section--header--item.active {
+  background-color: $white;
+}
+
+.c-section--content {
+  padding: 10px 15px;
+  background-color: $white;
+}
+
+.c-section__tab__horizontal .c-section--header {
+  @extend .u-cf;
+}
+
+.c-section--header--item > a {
+  text-decoration: none;
+}
+
+
+// global tab colours
+.c-section--header {
+  a {
+    color: $primary-color;
+  }
+  .active a {
+    color: $base-text-color;
+  }
+}
+
+// vertical tab colours
+.c-section__tab__vertical .c-section--header--item {
+  &.active a {
+    background-color: $tab-background-colour;
+  }
+}
+// vertical tab colours inverted
+.c-section--header__inverted .c-section--header--item {
+  a {
+    background-color: $tab-background-colour;
+  }
+  &.active {
+    margin-right: -($tab-border-width);
+    a {
+      background-color: $white;
+    }
+  }
+}

@@ -17,21 +17,21 @@
 
 
 // basic version
-.pagination-bar {
+.c-pagination-bar {
   position: relative;
   padding: 0.75em 0;
   @include border-tb-default;
   @include clearfix;
 }
 
-.pagination-bar__list {
+.c-pagination-bar__list {
   text-align: center;
   @include center(x, abs);
 }
 
-.pagination-bar__prev {
+.c-pagination-bar__prev {
   float: left;
 }
-.pagination-bar__next {
+.c-pagination-bar__next {
   float: right;
 }

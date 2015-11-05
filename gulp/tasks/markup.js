@@ -22,7 +22,7 @@ gulp.task('markup', function () {
             bustCache: true
         }))
         .on('error', handleErrors)
-        .pipe(prettify({config: '.jsbeautifyrc'}))
+        // .pipe(prettify({config: '.jsbeautifyrc'}))
         .pipe(gulp.dest(config.dest))
         .pipe(browserSync.reload({stream:true}));
 });

@@ -11,40 +11,64 @@
 </head>
 
 <body>
-  <div class="ui-container">
+  <div  id="top" class="ui-container">
 
-    <h1 class="ui-header">Matalan Boostrap</h1>
+    <h1 class="ui-header">Matalan UI Kit</h1>
+      <div class="o-btn-group-vertical">
+        <a class="c-btn c-btn-primary" href="#grid">Grid</a>
+        <a class="c-btn c-btn-primary" href="#logo">Logos</a>
+        <a class="c-btn c-btn-primary" href="#colors">Colours</a>
+        <a class="c-btn c-btn-primary" href="#typography">Typography</a>
+        <a class="c-btn c-btn-primary" href="#buttons">Buttons</a>
+        <a class="c-btn c-btn-primary" href="#navigation">Navigation</a>
+        <a class="c-btn c-btn-primary" href="#labels">Labels</a>
+        <a class="c-btn c-btn-primary" href="#alerts">Alerts</a>
+        <a class="c-btn c-btn-primary" href="#progress-bars">Progress bars</a>
+        <a class="c-btn c-btn-primary" href="#forms">Forms</a>
+        <a class="c-btn c-btn-primary" href="#tables">Tables</a>
+        <a class="c-btn c-btn-primary" href="#roundels">Roundels</a>
+        <a class="c-btn c-btn-primary" href="#lists">Lists</a>
+        <a class="c-btn c-btn-primary" href="#ratings">Ratings</a>
+        <a class="c-btn c-btn-primary" href="#icons">Icons</a>
+      </div>
+
+      <div id="grid">{{> grid }}</div>
+      <div id="logo">{{> logo }}</div>
+      <div id="colors">{{> colors }}</div>
+      <div id="typography">{{> typography }}</div>
+
+      <div id="buttons">{{> buttons }}</div>
+
+     <div id="navigation">{{> navigation }}</div>
 
 
-      {{> grid }}
-      {{> logo }}
-      {{> colors }}
-      {{> typography }}
-
-      {{> buttons }}
-
-      {{> navigation }}
-
-
-      {{> labels }}
-      {{> alerts }}
-      {{> progress-bars }}
+      <div id="labels">{{> labels }}</div>
+      <div id="alerts">{{> alerts }}</div>
+     <div id="progress-bars"> {{> progress-bars }}</div>
 
       product images todo
 
-      {{> forms }}
+     <div id="forms">{{> forms }}</div>
 
 
       filters todo
 
-      {{> tables}}
-      {{> roundels}}
+      <div id="tables">{{> tables}}</div>
+      <div id="roundels">{{> roundels}}</div>
 
-      {{> lists }}
-      {{> ratings }}
-      {{> icons }}
+     <div id="lists"> {{> lists }}</div>
+     <div id="ratings"> {{> ratings }}</div>
+     <div id="icons"> {{> icons }}</div>
 
   </div>
+  <a href="#top" class="back-to-top">Back to top</a>
+  <script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
+  <script src="js/highlight.pack.js"></script>
+  <script src="js/menu-accessible.js"></script>
+  <script>
+    hljs.configure({useBR: true});
+    hljs.initHighlighting();
+  </script>
 </body>
 
 </html>

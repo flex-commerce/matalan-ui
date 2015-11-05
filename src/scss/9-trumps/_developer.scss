@@ -5,6 +5,9 @@
   margin-top: 2em;
   border-bottom: 1px solid $keyline-color;
 }
+.ui-container h4 {
+  margin-bottom: 1em;
+}
 .ui-grid-left {
 h2 {
   font-size: 1.5em;
@@ -90,6 +93,12 @@ p {
   width: 20%;
 }
 
+.ui-grid-25 {
+  width: 25%;
+  float: left;
+  padding: 10px;
+}
+
 .ui-grid-80 {
   width: 80%;
   float: left;
@@ -110,6 +119,12 @@ p {
 
 .ui-grid-66 {
   width: 66%;
+  float: left;
+  padding: 10px;
+}
+
+.ui-grid-100 {
+  width: 100%;
   float: left;
   padding: 10px;
 }
@@ -166,5 +181,20 @@ code {
     padding-left: 5em;
     padding-right: 5em;
     margin-bottom: 2em;
+  }
+}
+
+.back-to-top{
+  background-color: $primary-color;
+  bottom: 2em;
+  color: #fff;
+  opacity:0.6;
+  padding: 1.5em;
+  position: fixed;
+  right: 1.5em;
+  text-decoration: none;
+  &:hover{
+    opacity:1;
+    transition:0.5s;
   }
 }
