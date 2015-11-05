@@ -288,7 +288,8 @@ limitations under the License.
          * @private
          */
         _clickHandler = function (event) {
-            var target = $(event.target).closest(':tabbable'),
+            // var target = $(event.target).closest(':tabbable'),
+            var target = $(event.currentTarget),
                 topli = target.closest('.' + this.settings.topNavItemClass),
                 panel = target.closest('.' + this.settings.panelClass);
             if (topli.length === 1
