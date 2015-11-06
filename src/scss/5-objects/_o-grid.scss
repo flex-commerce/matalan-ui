@@ -52,7 +52,7 @@ $susy: (
   output: float,
   // container: 1140px,
   gutter-position: inside,
-);
+  );
 
 
 
@@ -151,12 +151,14 @@ $susy: (
       width: span($i of $susy-columns);
 
       @if ($output-developer-content == true) {
-        &:after {
-          content: "#{$i} of #{$susy-columns} @ #{$class}";
-          color: #888;
-          font-size: 70%;
-          position: absolute;
-          @include center(y);
+        .row.dev-uikit & {
+          &:after {
+            content: "#{$i} of #{$susy-columns} @ #{$class}";
+            color: #888;
+            font-size: 70%;
+            text-align: center;
+            @include center(xy, abs);
+          }
         }
       }
     }
@@ -183,12 +185,12 @@ $susy: (
     @if ($mq-breakpoint-name == 'xs') {
       @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
 
-    } @else {
-      @include mq($from: $mq-breakpoint-name) {
-        @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
+      } @else {
+        @include mq($from: $mq-breakpoint-name) {
+          @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
+        }
       }
     }
   }
-}
 
-@include make-bootstrap-classes();
+  @include make-bootstrap-classes();

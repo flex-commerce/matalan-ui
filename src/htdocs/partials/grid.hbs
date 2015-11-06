@@ -1,13 +1,13 @@
 <div class="ui-row">
   <h1>Default Grid</h1>
 
-  <div class="row">
+  <div class="row dev-uikit">
     {{#times 12}}
     <div class="col-sm-1"><div class="island"></div></div>
     {{/ times}}
   </div>
 
-  <div class="row">
+  <div class="row dev-uikit">
     {{#times 3}}
     <div class="col-sm-2"><div class="island"></div></div>
     {{/ times}}
@@ -42,75 +42,9 @@
 
   <div class="row">
 
-    <div class="ui-grid-100">
-      <div class="panel__callout island">
-        <h4 class="u-color-dgrey">Using the grid..</h4>
-        <p class="u-color-dgrey" >Grid units are mobile first - define your grid for the smallest viewport, and append classes referencing a higher breakpoint to override when required.</p>
-      </div>
-    </div>
 
-    <div class="ui-grid-33">
-      <pre>
-        <code class="HTML">
-  /**
-   * Grid Units
-   *
-   * @object {.col-xs-#  xtra small (0px - 320px)}
-   * @object {.col-sm-#  small (321px - 719px)}
-   * @object {.col-md-#  medium (720px - 1023px)}
-   * @object {.col-lg-#  large (1024px - 1279px)}
-   * @object {.col-xl-#  xtra large (1280px +)}
-   */
 
-  &lt;div class=&quot;row&quot;&gt;
-    &nbsp;&lt;div class=&quot;col-sm-2 col-xl-2&quot;&gt;&lt;/div&gt;
-    &nbsp;&lt;div class=&quot;col-sm-2 col-xl-2&quot;&gt;&lt;/div&gt;
-    &nbsp;&lt;div class=&quot;col-sm-2 col-xl-2&quot;&gt;&lt;/div&gt;
-    &nbsp;&lt;div class=&quot;col-sm-2 col-xl-2&quot;&gt;&lt;/div&gt;
-    &nbsp;&lt;div class=&quot;col-sm-2 col-xl-2&quot;&gt;&lt;/div&gt;
-    &nbsp;&lt;div class=&quot;col-sm-2 col-xl-2&quot;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-        </code>
-      </pre>
-    </div>
-    <div class="ui-grid-33">
-      <pre>
-        <code class="HTML">//Column mix<br />
-          &lt;div class=&quot;row&quot;&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-3&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-3&quot;&gt;&lt;/div&gt;<br />
-          &lt;/div&gt;<br /><br />
-          //3 column<br />
-          &lt;div class=&quot;row&quot;&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-4&quot;&gt;&lt;/div&gt;<br />
-          &lt;/div&gt;<br /><br />
-        </code>
-      </pre>
-    </div>
-    <div class="ui-grid-33">
-      <pre>
-        <code class="HTML">//Alternative column mix<br />
-          &lt;div class=&quot;row&quot;&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-5&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-5&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-2&quot;&gt;&lt;/div&gt;<br />
-          &lt;/div&gt;<br /><br />
-          //2 column<br />
-          &lt;div class=&quot;row&quot;&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-6&quot;&gt;&lt;/div&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-6&quot;&gt;&lt;/div&gt;<br />
-          &lt;/div&gt;<br /><br />
-          //Full column<br />
-          &lt;div class=&quot;row&quot;&gt;<br />
-          &nbsp; &lt;div class=&quot;col-sm-12&quot;&gt;&lt;/div&gt;<br />
-          &lt;/div&gt;
-        </code>
-      </pre>
-    </div>
+{{> code/grid }}
+
   </div>
 </div>

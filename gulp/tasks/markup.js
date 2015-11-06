@@ -18,11 +18,11 @@ gulp.task('markup', function () {
         .src('./src/htdocs/*.html')
         .pipe(hb({
             helpers: config.hbHelpers,
-            partials: './src/htdocs/{,**/}*.hbs',
+            partials: 'src/htdocs/**/*.hbs',
             bustCache: true
         }))
         .on('error', handleErrors)
-        .pipe(prettify({config: '.jsbeautifyrc'}))
+        // .pipe(prettify({config: '.jsbeautifyrc'}))
         .pipe(gulp.dest(config.dest))
         .pipe(browserSync.reload({stream:true}));
 });
