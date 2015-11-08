@@ -9,9 +9,8 @@
 
 .o-btn-group-vertical {
   .c-btn {
-    display: block;
-    float: none;
     width: 100%;
     max-width: 100%;
+    border: 1px solid $white;
   }
 }
