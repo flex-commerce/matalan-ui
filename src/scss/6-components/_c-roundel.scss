@@ -3,7 +3,7 @@
   position: relative;
   border-radius: 50%;
   padding-top: 50%;
-  width: 50%;         /// @TODO - magic number - size
+  width: 50%; /// @TODO - magic number - size
   font-size: 80%;
   text-align: center;
   line-height: 1.2;
@@ -25,65 +25,82 @@
   font-weight: 600;
 }
 
-
 .c-roundel--custom:after {
   content: attr(data-content);
 }
 
 .c-roundel--easy-iron:after {
-  content: 'Easy Iron'
+  content: 'Easy Iron';
 }
+
 .c-roundel--non-iron:after {
-  content: 'Non Iron'
+  content: 'Non Iron';
 }
+
 .c-roundel--cabin-case:after {
-  content: 'Cabin Case'
+  content: 'Cabin Case';
 }
+
 .c-roundel--100-cotton:after {
-  content: '100% Cotton'
+  content: '100% Cotton';
 }
+
 .c-roundel--more-prints:after {
-  content: 'More Prints'
+  content: 'More Prints';
 }
+
 .c-roundel--real-leather:after {
-  content: 'Real Leather'
+  content: 'Real Leather';
 }
+
 .c-roundel--coming-soon:after {
-  content: 'Coming Soon'
+  content: 'Coming Soon';
 }
+
 .c-roundel--adjustable-waist:after {
-  content: 'Adjustable Waist'
+  content: 'Adjustable Waist';
 }
+
 .c-roundel--coated-leather:after {
-  content: 'Coated Leather'
+  content: 'Coated Leather';
 }
+
 .c-roundel--permanent-pleats:after {
-  content: 'Permanent Pleats'
+  content: 'Permanent Pleats';
 }
+
 .c-roundel--scuff-resistant:after {
-  content: 'Scuff Resistant'
+  content: 'Scuff Resistant';
 }
+
 .c-roundel--shower-proof:after {
-  content: 'Shower Proof'
+  content: 'Shower Proof';
 }
+
 .c-roundel--stain-resistant:after {
-  content: 'Stain Resistant'
+  content: 'Stain Resistant';
 }
+
 .c-roundel--with-stretch:after {
-  content: 'With Stretch'
+  content: 'With Stretch';
 }
+
 .c-roundel--lights-up:after {
-  content: 'Lights Up'
+  content: 'Lights Up';
 }
+
 .c-roundel--plays-music:after {
-  content: 'Plays Music'
+  content: 'Plays Music';
 }
+
 .c-roundel--teflon-coated:after {
-  content: 'Teflon Coated'
+  content: 'Teflon Coated';
 }
+
 .c-roundel--smart-crease:after {
-  content: 'Smart Crease'
+  content: 'Smart Crease';
 }
+
 .c-roundel--free-accessory:after {
-  content: 'Free Accessory'
+  content: 'Free Accessory';
 }

@@ -2,13 +2,15 @@ $pill-spacing: rem-calc(4);
 $tab-border-width: rem-calc(1);
 $tab-background-colour: $light-grey;
 
+$tab-border-color: #ddd;
+
 // ========================
 // Tab Rules
 // ========================
 // Tab Default (horizontal)
 .c-section__tab__horizontal {
   .c-section--header {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $tab-border-color;
   }
   .c-section--header--item {
     margin-bottom: -($tab-border-width);
@@ -23,13 +25,13 @@ $tab-background-colour: $light-grey;
       padding-bottom: 6px;
     }
     &.active {
-      border-color: #ddd;
+      border-color: $tab-border-color;
     }
   }
   .c-section--content {
     border-width: $tab-border-width;
     border-style: none solid solid solid;
-    border-color: #ddd;
+    border-color: $tab-border-color;
   }
 }
 
@@ -50,7 +52,7 @@ $tab-background-colour: $light-grey;
     flex-grow: 1;
     border-width: $tab-border-width;
     border-style: solid;
-    border-color: #ddd;
+    border-color: $tab-border-color;
   }
 }
 

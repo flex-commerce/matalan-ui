@@ -1,3 +1,5 @@
+// scss-lint:disable all
+
 /**
  *  Various developer rules for testing and such
  */
@@ -60,9 +62,9 @@ p {
 }
 
 .ui-row {
+  @include clearfix;
   width: 100%;
   // min-height: 15em;
-  @include clearfix;
   // border-bottom: 1px solid #aaa;
   padding-bottom: 2em;
   margin-top: 2em;

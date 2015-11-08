@@ -1,0 +1,164 @@
+// scss-lint:disable all
+$selectbox-border-color: $cool-grey;
+
+/* Dropdown control */
+
+.selectBox-dropdown {
+  max-width: 100%;
+  min-width: 50px;
+  position: relative;
+  border: solid 1px $selectbox-border-color;
+  line-height: 1.5;
+  text-decoration: none;
+  text-align: left;
+  outline: none;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: default;
+}
+
+// .selectBox-dropdown:focus,
+// .selectBox-dropdown:focus .selectBox-arrow {
+//   border-color: #666;
+// }
+
+.selectBox-active, .selectBox-active:hover {
+  // hover here is only triggered during open state, otherwise only options show focus
+  @include tab-focus;
+}
+.selectBox-dropdown.selectBox-menuShowing-bottom {}
+
+.selectBox-dropdown.selectBox-menuShowing-top {}
+
+.selectBox-dropdown .selectBox-label {
+  padding: $default-pad-y $default-pad-x;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.selectBox-dropdown {
+  // truncate the text if it overspills
+  overflow: hidden;
+  .selectBox-label {
+    white-space: nowrap;
+  }
+}
+
+.selectBox-dropdown .selectBox-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 23px;
+  height: 100%;
+  background: url(jquery.selectBox-arrow.gif) 50% center no-repeat;
+  border-left: solid 1px $selectbox-border-color;
+}
+
+
+/* Dropdown menu */
+
+.selectBox-dropdown-menu {
+  position: absolute;
+  z-index: 99999;
+  max-height: 200px;
+  min-height: 1em;
+  border: solid 1px $selectbox-border-color;
+  /* should be the same border width as .selectBox-dropdown */
+  background: #FFF;
+  box-shadow: 0px 3px 0px -1px rgba(0, 0, 0, .1);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* Inline control */
+
+.selectBox-inline {
+  min-width: 150px;
+  outline: none;
+  border: solid 1px $selectbox-border-color;
+  background: #FFF;
+  display: inline-block;
+  // -webkit-border-radius: 4px;
+  // -moz-border-radius: 4px;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+// .selectBox-inline:focus {
+//   border-color: #666;
+// }
+
+/* Options */
+
+.selectBox-options,
+.selectBox-options LI,
+.selectBox-options LI A {
+  list-style: none;
+  display: block;
+  cursor: default;
+  padding: 0;
+  margin: 0;
+}
+
+.selectBox-options.selectBox-options-top {
+  // border-bottom: none;
+  // box-shadow: 0px -3px 0px -1px rgba(0,0,0,.1);
+  margin-top: 1px;
+}
+
+.selectBox-options.selectBox-options-bottom {
+  box-shadow: 0px 3px 0px -1px rgba(0, 0, 0, .1);
+  // border-top: none;
+}
+
+.selectBox-options LI A {
+  line-height: 1.5;
+  padding: 0 .5em;
+  white-space: nowrap;
+  overflow: hidden;
+  background: 6px center no-repeat;
+}
+
+.selectBox-options LI.selectBox-hover A {
+  background-color: #EEE;
+}
+
+.selectBox-options LI.selectBox-disabled A {
+  color: #888;
+  background-color: transparent;
+}
+
+.selectBox-options LI.selectBox-selected A {
+  background-color: #C8DEF4;
+}
+
+.selectBox-options .selectBox-optgroup {
+  color: #666;
+  background: #EEE;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 0 .3em;
+  white-space: nowrap;
+}
+
+
+/* Disabled state */
+
+.selectBox.selectBox-disabled {
+  color: #888 !important;
+}
+
+.selectBox-dropdown.selectBox-disabled .selectBox-arrow {
+  opacity: .5;
+  filter: alpha(opacity=50);
+  border-color: #666;
+}
+
+.selectBox-inline.selectBox-disabled {
+  color: #888 !important;
+}
+
+.selectBox-inline.selectBox-disabled .selectBox-options A {
+  background-color: transparent !important;
+}

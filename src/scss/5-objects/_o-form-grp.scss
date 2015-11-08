@@ -5,23 +5,15 @@ $line-height: $base-line-height;
 $input-padding-x: $default-pad-x;
 $input-padding-y: $default-pad-y;
 
-
-  // default form item sizer, covers labels, text inputs, buttons etc
-  // todo -
-  // add some size handling
-  // move this to mixn level
-@mixin form-item-size(
-  $padding-y :$input-padding-y,
-  $padding-x: $input-padding-x,
-  $font-size: 1em,
-  $line-height: $line-height) {
-
-    padding: $padding-y $padding-x;
-    font-size: $font-size;
-    line-height: $line-height;
+// default form item sizer, covers labels, text inputs, buttons etc
+// todo -
+// add some size handling
+// move this to mixn level
+@mixin form-item-size( $padding-y:$input-padding-y, $padding-x: $input-padding-x, $font-size: 1em, $line-height: $line-height) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
 }
-
-
 
 .o-form-row {
   padding: $form-row-padding-y $form-row-padding-x;
@@ -46,9 +38,6 @@ $input-padding-y: $default-pad-y;
   .o-form-row {
     display: block;
     width: 100%;
-  }
-  .o-form-label--contain {
-    margin-bottom: rem-calc(12);
   }
 }
 
@@ -76,11 +65,11 @@ $input-padding-y: $default-pad-y;
 .input-group--addon__inset {
   @include center($xy: y, $pos: abs);
 }
+
 .input-group--addon__inset-left {
   // offset input left padding to accommodate icon
   padding-left: 48px !important;
 }
-
 
 // form wide dev rules
 .form-wide {
@@ -92,9 +81,6 @@ $input-padding-y: $default-pad-y;
     @include span(8);
   }
 }
-
-
-
 
 //testing new rules - invelstigate this as a pattern
 .o-form-inline-fixed__threecol {
@@ -112,45 +98,13 @@ $input-padding-y: $default-pad-y;
   }
 }
 
+.form-default .o-form-row .o-form-label--contain {
+  // vertical form label bottom margin
+  margin-bottom: rem-calc(7);
+}
 
-
-
-//////
-// background-color: $input-bg;
-// Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
-// background-image: none;
-// border: $border-width solid $input-border;
-// Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-// @include border-radius($input-border-radius);
-// @include box-shadow($input-box-shadow);
-// @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
-// Unstyle the caret on `<select>`s in IE10+.
-// &::-ms-expand {
-//   background-color: transparent;
-//   border: 0;
-// }
-// Customize the `:focus` state to imitate native WebKit styles.
-// @include form-control-focus();
-// Placeholder
-// &::placeholder {
-//   color: $input-color-placeholder;
-//   // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-//   opacity: 1;
-// }
-// Disabled and read-only inputs
-//
-// HTML5 says that controls under a fieldset > legend:first-child won't be
-// disabled if the fieldset is disabled. Due to implementation difficulty, we
-// don't honor that edge case; we style them as disabled anyway.
-// &:disabled,
-// &[readonly],
-// fieldset[disabled] & {
-//   // background-color: $input-bg-disabled;
-//   // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-//   opacity: 1;
-// }
-// &[disabled],
-// fieldset[disabled] & {
-//   // cursor: $cursor-disabled;
-// }
-// }
+// labels
+.form-wide .o-form-label--contain {
+  // keep first line of text inline with input for wide form
+  padding-top: 0.5em;
+}

@@ -20,9 +20,12 @@
   },
   "devDependencies": {
     "browser-sync": "^2.9.11",
+    "csslint-stylish": "^0.0.2",
+    "del": "^2.0.2",
     "extend-shallow": "^2.0.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
+    "gulp-csslint": "^0.2.0",
     "gulp-foreach": "^0.1.0",
     "gulp-hb": "^2.6.5",
     "gulp-header": "^1.7.1",
@@ -32,12 +35,13 @@
     "gulp-postcss": "^6.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
-    "gulp-scss-lint": "^0.3.6",
+    "gulp-scss-lint": "^0.3.7",
     "gulp-scss-lint-stylish2": "^2.0.2",
     "gulp-sourcemaps": "^1.6.0",
     "lorem-ipsum": "^1.0.3",
     "require-dir": "^0.3.0",
     "sass-mq": "^3.3.0-beta.1",
-    "susy": "^2.2.6"
+    "susy": "^2.2.6",
+    "vinyl-paths": "^2.0.0"
   }
 }

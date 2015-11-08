@@ -47,7 +47,7 @@ $container-maxwidth: rem-calc($site-maxwidth);
 
 $susy: (
   columns: 12,
-  gutters: 1/4,
+  gutters: 1 / 4,
   math: fluid,
   output: float,
   // container: 1140px,
@@ -62,7 +62,7 @@ $susy: (
 @mixin make-container($gutter: $grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;
-  padding-left:  ($gutter / 2);
+  padding-left: ($gutter / 2);
   padding-right: ($gutter / 2);
   @include clearfix();
 }
@@ -73,7 +73,7 @@ $susy: (
 // Rows contain and clear the floats of your columns.
 @mixin make-row($gutter: $grid-gutter-width) {
   @include clearfix();
-  margin-left:  ($gutter / -2);
+  margin-left: ($gutter / -2);
   margin-right: ($gutter / -2);
   &:after {
     content: '';
@@ -127,16 +127,18 @@ $susy: (
 /// write `@include column((small: 12, desktop: 6, wide: 3))` in your Sass
 @mixin column($widthList) {
   @extend %columnDefaultStyles;
-  @each $breakpoint, $width in $widthList {
-    @if ($breakpoint == small) {
+  @each $breakpoint,
+  $width in $widthList {
+    @if ($breakpoint==small) {
       width: span($width of $susy-columns);
-      } @else {
-        @include mq($from: $breakpoint) {
-          width: span($width of $susy-columns);
-        }
+    }
+    @else {
+      @include mq($from: $breakpoint) {
+        width: span($width of $susy-columns);
       }
     }
   }
+}
 
 
 
@@ -144,20 +146,17 @@ $susy: (
 // this is made only to easily test if our code is working correctly when copy/pasting some bootstrap html code
 // in the real world this is unnecessary
 @mixin make-bootstrap-breakpoint-classes($class) {
-
   @for $i from 1 through $susy-columns {
-
     .col-#{$class}-#{$i} {
       width: span($i of $susy-columns);
-
-      @if ($output-developer-content == true) {
+      @if ($output-developer-content==true) {
         .row.dev-uikit & {
           &:after {
+            @include center(xy, abs);
             content: "#{$i} of #{$susy-columns} @ #{$class}";
             color: #888;
             font-size: 70%;
             text-align: center;
-            @include center(xy, abs);
           }
         }
       }

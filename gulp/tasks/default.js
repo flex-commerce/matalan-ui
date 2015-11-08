@@ -3,9 +3,12 @@
 var gulp = require('gulp');
 
 gulp.task('default', [
+  // 'clean',
+  'sass',
+  'markup',
+  'js',
   'fonts',
   'images',
-  'markup',
-  'sass',
-  'watch'
+  'watch',
+  'browserSync'
   ]);

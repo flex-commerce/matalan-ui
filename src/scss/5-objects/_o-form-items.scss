@@ -32,26 +32,33 @@
 // sub / option label styling
 .o-form-label__option {
   display: inline;
-  font-weight: 300;
   font-size: 90%;
 }
 
 // making inline labels
-.o-label-inline > .o-form-label__option {
+.o-option__inline > .o-form-label__option {
   float: left;
   + .o-form-label__option {
     margin-left: 1em;
   }
 }
+
 // inline sub labels (options, radio etc)
-// .o-form-input--contain.o-label-inline {
+// .o-form-input--contain.o-option__inline {
 //   @include clearfix;
 // }
 
 
 
+// keep text labels in line
+.o-form-input--contain{
+  &.o-option__inline, &.o-option__block {
+    padding: $default-pad-y $default-pad-x;
+  }
+}
+
 // spacing between multiple inline option labels
-.o-label-block > .o-form-label__option {
+.o-option__block > .o-form-label__option {
   display: block;
   margin-bottom: rem-calc(12);
 }
