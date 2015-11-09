@@ -3,7 +3,20 @@
       display: inline-block;
     }
     [class^="icon-"] {
+      cursor: pointer;
       margin-bottom: 0;
+      &.active,
+      &.hover {
+        &:before {
+          color: $primary-color;
+        }
+      }
+      &.un-hover {
+        &:before {
+          color: #b2b3b5;
+        }
+      }
+
       &:before {
         padding-right: 0;
       }
