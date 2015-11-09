@@ -59,15 +59,16 @@
   box-shadow: $shadow;
 }
 
-// @mixin position(top,-1 bottom -1) {
-//     position: absolute;
-//     top: $val;
-//     bottom: $val;
-//     left: $val;
-//     right: $val;
-// }
-//
-//
+@mixin auto-columns($number) {
+  -webkit-columns: $number;
+}
+
+@for $i from 2 through 4 {
+  .auto-column-#{$i} {
+    @include auto-columns(#{$i})
+  }
+}
+
 @mixin progress-variant($color) {
   &[value]::-webkit-progress-value {
     background-color: $color;
@@ -87,11 +88,11 @@
 //
 // Creates two color stops, start and end, by specifying a color and position for each color stop.
 // Color stops are not available in IE9.
-@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
-  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9
-}
+// @mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+//   background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+//   background-repeat: repeat-x;
+//   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9
+// }
 
 // Vertical gradient, from top to bottom
 //
