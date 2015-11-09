@@ -37,7 +37,7 @@ module.exports = {
     },
 
     js: {
-        src: src + '/js/*.js',
+        src: src + '/js/**/*.js',
         dest: dest + '/js/',
     },
 

@@ -1,7 +1,8 @@
 $pill-spacing: rem-calc(4);
+$tab-spacing: rem-calc(2);
+
 $tab-border-width: rem-calc(1);
 $tab-background-colour: $light-grey;
-
 $tab-border-color: #ddd;
 
 // ========================
@@ -15,7 +16,7 @@ $tab-border-color: #ddd;
   .c-section--header--item {
     margin-bottom: -($tab-border-width);
     float: left;
-    margin-right: $pill-spacing;
+    margin-right: $tab-spacing;
     border-width: $tab-border-width;
     border-style: solid solid none;
     border-color: transparent;

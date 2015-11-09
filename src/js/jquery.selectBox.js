@@ -39,8 +39,12 @@
 
     // Disable for iOS devices (their native controls are more suitable for a touch device)
     this.isMob = !options.mobile && navigator.userAgent.match(/iPad|iPhone|Android|IEMobile|BlackBerry/i)
+
     if (this.isMob) {
-      return false;
+      $(this.selectElement).parent().addClass('selectbox--contain__mobile');
+      // return false;
+    } else {
+      $(this.selectElement).parent().addClass('selectbox--contain__desktop');
     }
 
     // Element must be a select control
@@ -64,11 +68,11 @@
   SelectBox.prototype.init = function(options) {
     var select = $(this.selectElement);
     // return if already initialised
-    if (select.data('selectBox-control')) {
+    if (select.data('selectbox-control')) {
       return false;
     }
 
-    var control = $('<a class="selectBox" />'),
+    var control = $('<a class="selectbox" />'),
       // set inline flag if a multi select (multi select currently disabled)
       inline = select.attr('multiple') || parseInt(select.attr('size')) > 1,
       settings = options || {},
@@ -81,54 +85,52 @@
       .attr('title', select.attr('title') || '')
       .attr('tabindex', tabIndex)
       .css({
-        'display': 'inline-block',
-        'outline': '1px solid orange'
+        'display': 'inline-block'
       });
 
 
-      control.bind('focus.selectBox', function() {
+      control.bind('focus.selectbox', function() {
         if (this !== document.activeElement && document.body !== document.activeElement) {
           $(document.activeElement).blur();
         }
-        if (control.hasClass('selectBox-active')) {
+        if (control.hasClass('selectbox-active')) {
           return;
         }
-        control.addClass('selectBox-active');
+        control.addClass('selectbox-active');
         select.trigger('focus');
       })
 
-      .bind('blur.selectBox', function() {
-        if (!control.hasClass('selectBox-active')) {
+      .bind('blur.selectbox', function() {
+        if (!control.hasClass('selectbox-active')) {
           return;
         }
-        control.removeClass('selectBox-active');
+        control.removeClass('selectbox-active');
         select.trigger('blur');
       });
 
-    if (!$(window).data('selectBox-bindings')) {
+    if (!$(window).data('selectbox-bindings')) {
       $(window)
-        .data('selectBox-bindings', true)
-        .bind('scroll.selectBox', (settings.hideOnWindowScroll) ? this.hideMenus : $.noop)
-        .bind('resize.selectBox', this.hideMenus);
+        .data('selectbox-bindings', true)
+        .bind('scroll.selectbox', (settings.hideOnWindowScroll) ? this.hideMenus : $.noop)
+        .bind('resize.selectbox', this.hideMenus);
     }
 
     if (select.attr('disabled')) {
-      control.addClass('selectBox-disabled');
+      control.addClass('selectbox-disabled');
     }
 
     // Focus on control when label is clicked
-    select.bind('click.selectBox', function(event) {
+    select.bind('click.selectbox', function(event) {
       event.preventDefault();
-      // override here, removed control.focus() to retain access to native behaviour
-      // todo - re-enable this for mobile
-      // if (!this.isMob) {
-      //   control.focus();
-      // }
+      // override here, removed control.focus() to retain access to native behaviour on mob
+      if (!this.isMob) {
+        // control.focus();
+      }
     });
 
 
     // New method - select changes, update fake control
-    select.on('change.selectBox', function(event) {
+    select.on('change.selectbox', function(event) {
       var select = $(this.selectElement);
       event.preventDefault();
       self.setLabel();
@@ -146,21 +148,21 @@
 
       // control
       //   .append(options)
-      //   .data('selectBox-options', options).addClass('selectBox-inline selectBox-menuShowing')
-      //   .bind('keydown.selectBox', function(event) {
+      //   .data('selectbox-options', options).addClass('selectbox-inline selectbox-menuShowing')
+      //   .bind('keydown.selectbox', function(event) {
       //     self.handleKeyDown(event);
       //   })
-      //   .bind('keypress.selectBox', function(event) {
+      //   .bind('keypress.selectbox', function(event) {
       //     self.handleKeyPress(event);
       //   })
-      //   .bind('mousedown.selectBox', function(event) {
+      //   .bind('mousedown.selectbox', function(event) {
       //     if (1 !== event.which) {
       //       return;
       //     }
-      //     if ($(event.target).is('A.selectBox-inline')) {
+      //     if ($(event.target).is('A.selectbox-inline')) {
       //       event.preventDefault();
       //     }
-      //     if (!control.hasClass('selectBox-focus')) {
+      //     if (!control.hasClass('selectbox-focus')) {
       //       control.focus();
       //     }
       //   })
@@ -179,16 +181,16 @@
       //     })
       //     .show()
       //     .appendTo('body');
-      //   tmp.find('.selectBox-options').html('<li><a>\u00A0</a></li>');
-      //   var optionHeight = parseInt(tmp.find('.selectBox-options A:first').html('&nbsp;').outerHeight());
+      //   tmp.find('.selectbox-options').html('<li><a>\u00A0</a></li>');
+      //   var optionHeight = parseInt(tmp.find('.selectbox-options A:first').html('&nbsp;').outerHeight());
       //   tmp.remove();
       //   control.height(optionHeight * size);
       // }
       // this.disableSelection(control);
     } else {
       // Dropdown controls
-      var label = $('<span class="selectBox-label" />'),
-        arrow = $('<span class="selectBox-arrow" />');
+      var label = $('<span class="selectbox-label" />'),
+        arrow = $('<span class="selectbox-arrow"><span class="caret" /></span>');
 
       // Update label
       label.attr('class', this.getLabelClass()).text(this.getLabelText());
@@ -196,42 +198,42 @@
       options.appendTo('BODY');
 
       control
-        .data('selectBox-options', options)
-        .addClass('selectBox-dropdown')
+        .data('selectbox-options', options)
+        .addClass('selectbox-dropdown')
         .append(label)
         .append(arrow)
 
-        .bind('mousedown.selectBox', function(event) {
+        .bind('mousedown.selectbox', function(event) {
           if (1 === event.which) {
-            if (control.hasClass('selectBox-menuShowing')) {
+            if (control.hasClass('selectbox-menuShowing')) {
               self.hideMenus();
             } else {
               event.stopPropagation();
               // Webkit fix to prevent premature selection of options
               options
-                .data('selectBox-down-at-x', event.screenX)
-                .data('selectBox-down-at-y', event.screenY);
+                .data('selectbox-down-at-x', event.screenX)
+                .data('selectbox-down-at-y', event.screenY);
               self.showMenu();
             }
           }
         })
 
-        .bind('keydown.selectBox', function(event) {
+        .bind('keydown.selectbox', function(event) {
           self.handleKeyDown(event);
         })
 
-        .bind('keypress.selectBox', function(event) {
+        .bind('keypress.selectbox', function(event) {
           self.handleKeyPress(event);
         })
 
-        .bind('open.selectBox', function(event, triggerData) {
+        .bind('open.selectbox', function(event, triggerData) {
           if (triggerData && triggerData._selectBox === true) {
             return;
           }
           self.showMenu();
         })
 
-        .bind('close.selectBox', function(event, triggerData) {
+        .bind('close.selectbox', function(event, triggerData) {
           if (triggerData && triggerData._selectBox === true) {
             return;
           }
@@ -252,10 +254,10 @@
     }
     // Store data for later use and show the control
     select
-      .addClass('selectBox')
-      .data('selectBox-control', control)
-      .data('selectBox-settings', settings)
-      .css('opacity', '0.5');
+      .addClass('selectbox')
+      .data('selectbox-control', control)
+      .data('selectbox-settings', settings)
+      .css('opacity', '0');
 
   };
 
@@ -284,7 +286,7 @@
           }
         } else {
           // If the element is an option group, add the group and call this function on it.
-          var optgroup = $('<li class="selectBox-optgroup" />');
+          var optgroup = $('<li class="selectbox-optgroup" />');
           optgroup.text($(this).attr('label'));
           options.append(optgroup);
           options = _getOptions($(this), options);
@@ -298,26 +300,26 @@
       case 'inline':
         // disabled during dev, no multi form required
         //
-        // options = $('<ul class="selectBox-options" />');
+        // options = $('<ul class="selectbox-options" />');
         // options = _getOptions(select, options);
         // options
         //   .find('A')
-        //   .bind('mouseover.selectBox', function(event) {
+        //   .bind('mouseover.selectbox', function(event) {
         //     self.addHover($(this).parent());
         //   })
-        //   .bind('mouseout.selectBox', function(event) {
+        //   .bind('mouseout.selectbox', function(event) {
         //     self.removeHover($(this).parent());
         //   })
-        //   .bind('mousedown.selectBox', function(event) {
+        //   .bind('mousedown.selectbox', function(event) {
         //     if (1 !== event.which) {
         //       return
         //     }
         //     event.preventDefault(); // Prevent options from being "dragged"
-        //     if (!select.selectBox('control').hasClass('selectBox-active')) {
-        //       select.selectBox('control').focus();
+        //     if (!select.selectbox('control').hasClass('selectbox-active')) {
+        //       select.selectbox('control').focus();
         //     }
         //   })
-        //   .bind('mouseup.selectBox', function(event) {
+        //   .bind('mouseup.selectbox', function(event) {
         //     if (1 !== event.which) {
         //       return;
         //     }
@@ -331,20 +333,20 @@
       case 'dropdown':
       // begin mobile viewport render modification
 
-        options = $('<ul class="selectBox-dropdown-menu selectBox-options" />');
+        options = $('<ul class="selectbox-dropdown-menu selectbox-options" />');
         options = _getOptions(select, options);
 
         options
-          .data('selectBox-select', select)
+          .data('selectbox-select', select)
           .css('display', 'none')
           .appendTo('BODY')
           .find('A')
-          .bind('mousedown.selectBox', function(event) {
+          .bind('mousedown.selectbox', function(event) {
             if (event.which === 1) {
               event.preventDefault(); // Prevent options from being "dragged"
-              if (event.screenX === options.data('selectBox-down-at-x') &&
-                event.screenY === options.data('selectBox-down-at-y')) {
-                options.removeData('selectBox-down-at-x').removeData('selectBox-down-at-y');
+              if (event.screenX === options.data('selectbox-down-at-x') &&
+                event.screenY === options.data('selectbox-down-at-y')) {
+                options.removeData('selectbox-down-at-x').removeData('selectbox-down-at-y');
                 if (/android/i.test(navigator.userAgent.toLowerCase()) &&
                   /chrome/i.test(navigator.userAgent.toLowerCase())) {
                   self.selectOption($(this).parent());
@@ -353,23 +355,23 @@
               }
             }
           })
-          .bind('mouseup.selectBox', function(event) {
+          .bind('mouseup.selectbox', function(event) {
             if (1 !== event.which) {
               return;
             }
-            if (event.screenX === options.data('selectBox-down-at-x') &&
-              event.screenY === options.data('selectBox-down-at-y')) {
+            if (event.screenX === options.data('selectbox-down-at-x') &&
+              event.screenY === options.data('selectbox-down-at-y')) {
               return;
             } else {
-              options.removeData('selectBox-down-at-x').removeData('selectBox-down-at-y');
+              options.removeData('selectbox-down-at-x').removeData('selectbox-down-at-y');
             }
             self.selectOption($(this).parent());
             self.hideMenus();
           })
-          .bind('mouseover.selectBox', function(event) {
+          .bind('mouseover.selectbox', function(event) {
             self.addHover($(this).parent());
           })
-          .bind('mouseout.selectBox', function(event) {
+          .bind('mouseout.selectbox', function(event) {
             self.removeHover($(this).parent());
           });
 
@@ -380,7 +382,7 @@
         if ('' !== classes) {
           classes = classes.split(' ');
           for (var i = 0; i < classes.length; i++) {
-            options.addClass(classes[i] + '-selectBox-dropdown-menu');
+            options.addClass(classes[i] + '-selectbox-dropdown-menu');
           }
 
         }
@@ -396,7 +398,7 @@
    */
   SelectBox.prototype.getLabelClass = function() {
     var selected = $(this.selectElement).find('OPTION:selected');
-    return ('selectBox-label ' + (selected.attr('class') || '')).replace(/\s+$/, '');
+    return ('selectbox-label ' + (selected.attr('class') || '')).replace(/\s+$/, '');
   };
 
   /**
@@ -416,13 +418,13 @@
   SelectBox.prototype.setLabel = function() {
     var select = $(this.selectElement);
     console.log(select)
-    var control = select.data('selectBox-control');
+    var control = select.data('selectbox-control');
     if (!control) {
       return;
     }
 
     control
-      .find('.selectBox-label')
+      .find('.selectbox-label')
       .attr('class', this.getLabelClass())
       .text(this.getLabelText());
   };
@@ -433,20 +435,20 @@
    */
   SelectBox.prototype.destroy = function() {
     var select = $(this.selectElement);
-    var control = select.data('selectBox-control');
+    var control = select.data('selectbox-control');
     if (!control) {
       return;
     }
 
-    var options = control.data('selectBox-options');
+    var options = control.data('selectbox-options');
     options.remove();
     control.remove();
     select
-      .removeClass('selectBox')
-      .removeData('selectBox-control')
-      .data('selectBox-control', null)
-      .removeData('selectBox-settings')
-      .data('selectBox-settings', null)
+      .removeClass('selectbox')
+      .removeData('selectbox-control')
+      .data('selectbox-control', null)
+      .removeData('selectbox-settings')
+      .data('selectbox-settings', null)
       .show();
   };
 
@@ -455,16 +457,16 @@
    */
   SelectBox.prototype.refresh = function() {
     var select = $(this.selectElement),
-      control = select.data('selectBox-control'),
-      type = control.hasClass('selectBox-dropdown') ? 'dropdown' : 'inline',
+      control = select.data('selectbox-control'),
+      type = control.hasClass('selectbox-dropdown') ? 'dropdown' : 'inline',
       options;
 
     // Remove old options
-    control.data('selectBox-options').remove();
+    control.data('selectbox-options').remove();
 
     // Generate new options
     options = this.getOptions(type);
-    control.data('selectBox-options', options);
+    control.data('selectbox-options', options);
 
     switch (type) {
       case 'inline':
@@ -478,7 +480,7 @@
     }
 
     // Restore opened dropdown state (original menu was trashed)
-    if ('dropdown' === type && control.hasClass('selectBox-menuShowing')) {
+    if ('dropdown' === type && control.hasClass('selectbox-menuShowing')) {
       this.showMenu();
     }
   };
@@ -489,11 +491,11 @@
   SelectBox.prototype.showMenu = function() {
     var self = this,
       select = $(this.selectElement),
-      control = select.data('selectBox-control'),
-      settings = select.data('selectBox-settings'),
-      options = control.data('selectBox-options');
+      control = select.data('selectbox-control'),
+      settings = select.data('selectbox-settings'),
+      options = control.data('selectbox-options');
 
-    if (control.hasClass('selectBox-disabled')) {
+    if (control.hasClass('selectbox-disabled')) {
       return false;
     }
 
@@ -548,7 +550,7 @@
         left: control.offset().left
       })
       // Add Top and Bottom class based on position
-      .addClass('selectBox-options selectBox-options-' + (posTop ? 'top' : 'bottom'));
+      .addClass('selectbox-options selectBox-options-' + (posTop ? 'top' : 'bottom'));
 
 
     if (select.triggerHandler('beforeopen')) {
@@ -579,14 +581,14 @@
     }
 
     // Center on selected option
-    var li = options.find('.selectBox-selected:first');
+    var li = options.find('.selectbox-selected:first');
     this.keepOptionInView(li, true);
     this.addHover(li);
-    control.addClass('selectBox-menuShowing selectBox-menuShowing-' + (posTop ? 'top' : 'bottom'));
+    control.addClass('selectbox-menuShowing selectBox-menuShowing-' + (posTop ? 'top' : 'bottom'));
 
-    $(document).bind('mousedown.selectBox', function(event) {
+    $(document).bind('mousedown.selectbox', function(event) {
       if (1 === event.which) {
-        if ($(event.target).parents().andSelf().hasClass('selectBox-options')) {
+        if ($(event.target).parents().andSelf().hasClass('selectbox-options')) {
           return;
         }
         self.hideMenus();
@@ -598,16 +600,16 @@
    * Hides the menu of all instances.
    */
   SelectBox.prototype.hideMenus = function() {
-    if ($(".selectBox-dropdown-menu:visible").length === 0) {
+    if ($(".selectbox-dropdown-menu:visible").length === 0) {
       return;
     }
 
-    $(document).unbind('mousedown.selectBox');
-    $(".selectBox-dropdown-menu").each(function() {
+    $(document).unbind('mousedown.selectbox');
+    $(".selectbox-dropdown-menu").each(function() {
       var options = $(this),
-        select = options.data('selectBox-select'),
-        control = select.data('selectBox-control'),
-        settings = select.data('selectBox-settings'),
+        select = options.data('selectbox-select'),
+        control = select.data('selectbox-control'),
+        settings = select.data('selectbox-settings'),
         posTop = options.data('posTop');
 
       if (select.triggerHandler('beforeclose')) {
@@ -634,18 +636,18 @@
         if (!settings.menuSpeed) {
           dispatchCloseEvent();
         }
-        control.removeClass('selectBox-menuShowing selectBox-menuShowing-' + (posTop ? 'top' : 'bottom'));
+        control.removeClass('selectbox-menuShowing selectBox-menuShowing-' + (posTop ? 'top' : 'bottom'));
       } else {
         $(this).hide();
         $(this).triggerHandler('close', {
           _selectBox: true
         });
-        $(this).removeClass('selectBox-menuShowing selectBox-menuShowing-' + (posTop ? 'top' : 'bottom'));
+        $(this).removeClass('selectbox-menuShowing selectBox-menuShowing-' + (posTop ? 'top' : 'bottom'));
       }
 
       options.css('max-height', '');
       //Remove Top or Bottom class based on position
-      options.removeClass('selectBox-options-' + (posTop ? 'top' : 'bottom'));
+      options.removeClass('selectbox-options-' + (posTop ? 'top' : 'bottom'));
       options.data('posTop', false);
     });
   };
@@ -661,57 +663,57 @@
     var select = $(this.selectElement);
     li = $(li);
 
-    var control = select.data('selectBox-control'),
-      settings = select.data('selectBox-settings');
+    var control = select.data('selectbox-control'),
+      settings = select.data('selectbox-settings');
 
-    if (control.hasClass('selectBox-disabled')) {
+    if (control.hasClass('selectbox-disabled')) {
       return false;
     }
 
-    if (0 === li.length || li.hasClass('selectBox-disabled')) {
+    if (0 === li.length || li.hasClass('selectbox-disabled')) {
       return false;
     }
 
     if (select.attr('multiple')) {
       // If event.shiftKey is true, this will select all options between li and the last li selected
-      if (event.shiftKey && control.data('selectBox-last-selected')) {
-        li.toggleClass('selectBox-selected');
+      if (event.shiftKey && control.data('selectbox-last-selected')) {
+        li.toggleClass('selectbox-selected');
         var affectedOptions;
-        if (li.index() > control.data('selectBox-last-selected').index()) {
+        if (li.index() > control.data('selectbox-last-selected').index()) {
           affectedOptions = li
             .siblings()
-            .slice(control.data('selectBox-last-selected').index(), li.index());
+            .slice(control.data('selectbox-last-selected').index(), li.index());
         } else {
           affectedOptions = li
             .siblings()
-            .slice(li.index(), control.data('selectBox-last-selected').index());
+            .slice(li.index(), control.data('selectbox-last-selected').index());
         }
-        affectedOptions = affectedOptions.not('.selectBox-optgroup, .selectBox-disabled');
-        if (li.hasClass('selectBox-selected')) {
-          affectedOptions.addClass('selectBox-selected');
+        affectedOptions = affectedOptions.not('.selectbox-optgroup, .selectbox-disabled');
+        if (li.hasClass('selectbox-selected')) {
+          affectedOptions.addClass('selectbox-selected');
         } else {
-          affectedOptions.removeClass('selectBox-selected');
+          affectedOptions.removeClass('selectbox-selected');
         }
       } else if ((this.isMac && event.metaKey) || (!this.isMac && event.ctrlKey)) {
-        li.toggleClass('selectBox-selected');
+        li.toggleClass('selectbox-selected');
       } else {
-        li.siblings().removeClass('selectBox-selected');
-        li.addClass('selectBox-selected');
+        li.siblings().removeClass('selectbox-selected');
+        li.addClass('selectbox-selected');
       }
     } else {
-      li.siblings().removeClass('selectBox-selected');
-      li.addClass('selectBox-selected');
+      li.siblings().removeClass('selectbox-selected');
+      li.addClass('selectbox-selected');
     }
 
-    if (control.hasClass('selectBox-dropdown')) {
-      control.find('.selectBox-label').text(li.text());
+    if (control.hasClass('selectbox-dropdown')) {
+      control.find('.selectbox-label').text(li.text());
     }
 
     // Update original control's value
     var i = 0,
       selection = [];
     if (select.attr('multiple')) {
-      control.find('.selectBox-selected A').each(function() {
+      control.find('.selectbox-selected A').each(function() {
         selection[i++] = $(this).attr('rel');
       });
     } else {
@@ -719,7 +721,7 @@
     }
 
     // Remember most recently selected item
-    control.data('selectBox-last-selected', li);
+    control.data('selectbox-last-selected', li);
 
     // Change callback
     if (select.val() !== selection) {
@@ -739,11 +741,11 @@
   SelectBox.prototype.addHover = function(li) {
     li = $(li);
     var select = $(this.selectElement),
-      control = select.data('selectBox-control'),
-      options = control.data('selectBox-options');
+      control = select.data('selectbox-control'),
+      options = control.data('selectbox-options');
 
-    options.find('.selectBox-hover').removeClass('selectBox-hover');
-    li.addClass('selectBox-hover');
+    options.find('.selectbox-hover').removeClass('selectbox-hover');
+    li.addClass('selectbox-hover');
   };
 
   /**
@@ -763,10 +765,10 @@
   SelectBox.prototype.removeHover = function(li) {
     li = $(li);
     var select = $(this.selectElement),
-      control = select.data('selectBox-control'),
-      options = control.data('selectBox-options');
+      control = select.data('selectbox-control'),
+      options = control.data('selectbox-options');
 
-    options.find('.selectBox-hover').removeClass('selectBox-hover');
+    options.find('.selectbox-hover').removeClass('selectbox-hover');
   };
 
   /**
@@ -781,9 +783,9 @@
     }
 
     var select = $(this.selectElement),
-      control = select.data('selectBox-control'),
-      options = control.data('selectBox-options'),
-      scrollBox = control.hasClass('selectBox-dropdown') ? options : options.parent(),
+      control = select.data('selectbox-control'),
+      options = control.data('selectbox-options'),
+      scrollBox = control.hasClass('selectbox-dropdown') ? options : options.parent(),
       top = parseInt(li.offset().top - scrollBox.position().top),
       bottom = parseInt(top + li.outerHeight());
 
@@ -809,13 +811,13 @@
    */
   SelectBox.prototype.handleKeyDown = function(event) {
     var select = $(this.selectElement),
-      control = select.data('selectBox-control'),
-      options = control.data('selectBox-options'),
-      settings = select.data('selectBox-settings'),
+      control = select.data('selectbox-control'),
+      options = control.data('selectbox-options'),
+      settings = select.data('selectbox-settings'),
       totalOptions = 0,
       i = 0;
 
-    if (control.hasClass('selectBox-disabled')) {
+    if (control.hasClass('selectbox-disabled')) {
       return;
     }
 
@@ -834,9 +836,9 @@
         break;
       case 13:
         // enter
-        if (control.hasClass('selectBox-menuShowing')) {
-          this.selectOption(options.find('LI.selectBox-hover:first'), event);
-          if (control.hasClass('selectBox-dropdown')) {
+        if (control.hasClass('selectbox-menuShowing')) {
+          this.selectOption(options.find('LI.selectbox-hover:first'), event);
+          if (control.hasClass('selectbox-dropdown')) {
             this.hideMenus();
           }
         } else {
@@ -848,12 +850,12 @@
       case 37:
         // left
         event.preventDefault();
-        if (control.hasClass('selectBox-menuShowing')) {
-          var prev = options.find('.selectBox-hover').prev('LI');
-          totalOptions = options.find('LI:not(.selectBox-optgroup)').length;
+        if (control.hasClass('selectbox-menuShowing')) {
+          var prev = options.find('.selectbox-hover').prev('LI');
+          totalOptions = options.find('LI:not(.selectbox-optgroup)').length;
           i = 0;
-          while (prev.length === 0 || prev.hasClass('selectBox-disabled') ||
-            prev.hasClass('selectBox-optgroup')) {
+          while (prev.length === 0 || prev.hasClass('selectbox-disabled') ||
+            prev.hasClass('selectbox-optgroup')) {
             prev = prev.prev('LI');
             if (prev.length === 0) {
               if (settings.loopOptions) {
@@ -878,12 +880,12 @@
       case 39:
         // right
         event.preventDefault();
-        if (control.hasClass('selectBox-menuShowing')) {
-          var next = options.find('.selectBox-hover').next('LI');
-          totalOptions = options.find('LI:not(.selectBox-optgroup)').length;
+        if (control.hasClass('selectbox-menuShowing')) {
+          var next = options.find('.selectbox-hover').next('LI');
+          totalOptions = options.find('LI:not(.selectbox-optgroup)').length;
           i = 0;
-          while (0 === next.length || next.hasClass('selectBox-disabled') ||
-            next.hasClass('selectBox-optgroup')) {
+          while (0 === next.length || next.hasClass('selectbox-disabled') ||
+            next.hasClass('selectbox-optgroup')) {
             next = next.next('LI');
             if (next.length === 0) {
               if (settings.loopOptions) {
@@ -914,11 +916,11 @@
    */
   SelectBox.prototype.handleKeyPress = function(event) {
     var select = $(this.selectElement),
-      control = select.data('selectBox-control'),
-      options = control.data('selectBox-options'),
+      control = select.data('selectbox-control'),
+      options = control.data('selectbox-options'),
       self = this;
 
-    if (control.hasClass('selectBox-disabled')) {
+    if (control.hasClass('selectbox-disabled')) {
       return;
     }
 
@@ -941,7 +943,7 @@
         break;
       default:
         // Type to find
-        if (!control.hasClass('selectBox-menuShowing')) {
+        if (!control.hasClass('selectbox-menuShowing')) {
           this.showMenu();
         }
         event.preventDefault();
@@ -969,11 +971,11 @@
   SelectBox.prototype.enable = function() {
     var select = $(this.selectElement);
     select.prop('disabled', false);
-    var control = select.data('selectBox-control');
+    var control = select.data('selectbox-control');
     if (!control) {
       return;
     }
-    control.removeClass('selectBox-disabled');
+    control.removeClass('selectbox-disabled');
   };
 
   /**
@@ -982,11 +984,11 @@
   SelectBox.prototype.disable = function() {
     var select = $(this.selectElement);
     select.prop('disabled', true);
-    var control = select.data('selectBox-control');
+    var control = select.data('selectbox-control');
     if (!control) {
       return;
     }
-    control.addClass('selectBox-disabled');
+    control.addClass('selectbox-disabled');
   };
 
   /**
@@ -1004,29 +1006,29 @@
       select.val(value);
     }
 
-    var control = select.data('selectBox-control');
+    var control = select.data('selectbox-control');
     if (!control) {
       return;
     }
 
-    var settings = select.data('selectBox-settings'),
-      options = control.data('selectBox-options');
+    var settings = select.data('selectbox-settings'),
+      options = control.data('selectbox-options');
 
     // Update label
     this.setLabel();
 
     // Update control values
-    options.find('.selectBox-selected').removeClass('selectBox-selected');
+    options.find('.selectbox-selected').removeClass('selectbox-selected');
     options.find('A').each(function() {
       if (typeof(value) === 'object') {
         for (var i = 0; i < value.length; i++) {
           if ($(this).attr('rel') == value[i]) {
-            $(this).parent().addClass('selectBox-selected');
+            $(this).parent().addClass('selectbox-selected');
           }
         }
       } else {
         if ($(this).attr('rel') == value) {
-          $(this).parent().addClass('selectBox-selected');
+          $(this).parent().addClass('selectbox-selected');
         }
       }
     });
@@ -1063,10 +1065,10 @@
     a.attr('rel', self.val()).text(self.text());
     li.append(a);
     if (self.attr('disabled')) {
-      li.addClass('selectBox-disabled');
+      li.addClass('selectbox-disabled');
     }
     if (self.attr('selected')) {
-      li.addClass('selectBox-selected');
+      li.addClass('selectbox-selected');
     }
     options.append(li);
   };
@@ -1083,7 +1085,7 @@
      */
     setOptions: function(options) {
       var select = $(this),
-        control = select.data('selectBox-control');
+        control = select.data('selectbox-control');
 
 
       switch (typeof(options)) {
@@ -1125,21 +1127,21 @@
 
       switch (method) {
         case 'control':
-          return $(this).data('selectBox-control');
+          return $(this).data('selectbox-control');
 
         case 'settings':
           if (!options) {
-            return $(this).data('selectBox-settings');
+            return $(this).data('selectbox-settings');
           }
           $(this).each(function() {
-            $(this).data('selectBox-settings', $.extend(true, $(this).data('selectBox-settings'), options));
+            $(this).data('selectbox-settings', $.extend(true, $(this).data('selectbox-settings'), options));
           });
           break;
 
         case 'options':
           // Getter
           if (undefined === options) {
-            return $(this).data('selectBox-control').data('selectBox-options');
+            return $(this).data('selectbox-control').data('selectbox-options');
           }
           // Setter
           $(this).each(function() {
@@ -1153,7 +1155,7 @@
             return $(this).val();
           }
           $(this).each(function() {
-            if (selectBox = $(this).data('selectBox')) {
+            if (selectBox = $(this).data('selectbox')) {
               selectBox.setValue(options);
             }
           });
@@ -1161,7 +1163,7 @@
 
         case 'refresh':
           $(this).each(function() {
-            if (selectBox = $(this).data('selectBox')) {
+            if (selectBox = $(this).data('selectbox')) {
               selectBox.refresh();
             }
           });
@@ -1169,7 +1171,7 @@
 
         case 'enable':
           $(this).each(function() {
-            if (selectBox = $(this).data('selectBox')) {
+            if (selectBox = $(this).data('selectbox')) {
               selectBox.enable(this);
             }
           });
@@ -1177,7 +1179,7 @@
 
         case 'disable':
           $(this).each(function() {
-            if (selectBox = $(this).data('selectBox')) {
+            if (selectBox = $(this).data('selectbox')) {
               selectBox.disable();
             }
           });
@@ -1185,19 +1187,19 @@
 
         case 'destroy':
           $(this).each(function() {
-            if (selectBox = $(this).data('selectBox')) {
+            if (selectBox = $(this).data('selectbox')) {
               selectBox.destroy();
-              $(this).data('selectBox', null);
+              $(this).data('selectbox', null);
             }
           });
           break;
 
         case 'instance':
-          return $(this).data('selectBox');
+          return $(this).data('selectbox');
         default:
           $(this).each(function(idx, select) {
-            if (!$(select).data('selectBox')) {
-              $(select).data('selectBox', new SelectBox(select, method));
+            if (!$(select).data('selectbox')) {
+              $(select).data('selectbox', new SelectBox(select, method));
             }
           });
           break;

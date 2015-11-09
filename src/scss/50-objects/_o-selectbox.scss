@@ -4,13 +4,13 @@ $selectbox-border-color: $cool-grey;
 
 /* Make webkit behave */
 select.selectbox {
-  -webkit-appearance: none;
   position: absolute;
 }
-.selectbox-desktop > select.selectbox {
+.selectbox--contain__desktop > select.selectbox {
+  -webkit-appearance: none;
   display: none;
 }
-.selectbox-mobile > a.selectbox {
+.selectbox--contain__mobile > a.selectbox {
   pointer-events: none;
 }
 
@@ -32,10 +32,6 @@ select.selectbox {
   cursor: default;
 }
 
-// .selectbox-dropdown:focus,
-// .selectbox-dropdown:focus .selectbox-arrow {
-//   border-color: #666;
-// }
 
 .selectbox-active, .selectbox-active:hover {
   &:not(.selectbox-disabled) {
@@ -44,18 +40,17 @@ select.selectbox {
   }
 }
 .selectbox-dropdown.selectbox-menushowing-bottom {}
-
 .selectbox-dropdown.selectbox-menushowing-top {}
 
 .selectbox-dropdown .selectbox-label {
+  // truncate the label text if it overspills
   padding: $default-pad-y $default-pad-x;
   display: inline-block;
   white-space: nowrap;
 }
 
 .selectbox-dropdown {
-  // truncate the text if it overspills
-  // overflow: hidden;
+  // truncate the option text if it overspills
   .selectbox-label {
     max-width: 100%;      // set to full width
     padding-right: 2em;   // allow for the right hand arrow
@@ -72,7 +67,6 @@ select.selectbox {
   right: 0;
   width: 1.5em;
   height: 100%;
-  background: $white;
   border-left: solid 1px $selectbox-border-color;
   .caret {
     @include center(y, abs);
@@ -89,8 +83,8 @@ select.selectbox {
   min-height: 1em;
   border: solid 1px $selectbox-border-color;
   /* should be the same border width as .selectbox-dropdown */
-  background: #FFF;
-  box-shadow: 0px 3px 0px -1px rgba(0, 0, 0, .1);
+  background: #fff;
+  box-shadow: 0px 3px 0px -1px rgba($black, .1);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -127,19 +121,17 @@ select.selectbox {
 }
 
 .selectbox-options.selectbox-options-top {
-  // border-bottom: none;
-  // box-shadow: 0px -3px 0px -1px rgba(0,0,0,.1);
   margin-top: 1px;
 }
 
 .selectbox-options.selectbox-options-bottom {
   box-shadow: 0px 3px 0px -1px rgba(0, 0, 0, .1);
-  // border-top: none;
 }
+
 
 .selectbox-options li a {
   line-height: 1.5;
-  padding: 0 .5em;
+  padding: 0.5em 1em;
   // this handles overflow for the options - disable for multi line
   // white-space: nowrap;
   overflow: hidden;
