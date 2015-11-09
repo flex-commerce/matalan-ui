@@ -1,10 +1,10 @@
 <div class="ui-row">
 
-  <div class="ui-grid-left">
+  <div class="col-sm-12">
     <h2>Alerts</h2>
     <p>{{lorem count="5"}}</p>
   </div>
-  <div class="ui-grid-right">
+  <div class="col-sm-12">
     <h3>Standard Alerts</h3>
     <div class="ui-row">
       <div class="c-alert c-alert-dismissible" role="alert">
@@ -14,8 +14,8 @@
     </div>
     <h3>Global Alerts</h3>
     <div class="ui-row">
-      <p>Global alert fixed to page head</p>
-      <div class="c-alert c-alert-global c-alert-dismissible" role="alert">
+      <p><a class="global-test c-btn c-btn-secondary">Click to view</a></p>
+      <div class="c-alert c-alert-global fixed c-alert-dismissible" role="alert">
         <div class="container">
           {{lorem count=10}} <span class="close">&times;</span>
         </div>
@@ -23,4 +23,10 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(".global-test").click(function(){
+    $(".c-alert-global").toggleClass("active");
+  });
+</script>
 

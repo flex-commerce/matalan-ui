@@ -1,60 +1,59 @@
 <div class="ui-row">
-  <h1>Ratings</h1>
-    <div class="ui-grid-left">
+  <div class="col-sm-12">
     <h3>Star Ratings</h3>
   </div>
-  <div class="ui-grid-right">
+  <div class="col-sm-12">
 
     <div class="rating">
       <span>0 star</span>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
     </div>
 
     <div class="rating">
       <span>1 star</span>
+      <i class="icon-star active"></i>
       <i class="icon-star"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
+      <i class="icon-star"></i>
     </div>
 
     <div class="rating">
       <span>2 star</span>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
       <i class="icon-star"></i>
       <i class="icon-star"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
+      <i class="icon-star"></i>
     </div>
 
     <div class="rating">
       <span>3 star</span>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
       <i class="icon-star"></i>
       <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star_o"></i>
-      <i class="icon-star_o"></i>
     </div>
     <div class="rating">
       <span>4 star</span>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
       <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star_o"></i>
     </div>
     <div class="rating">
       <span>5 star</span>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
+      <i class="icon-star active"></i>
     </div>
     <pre>
       <code class="HTML">//Star Ratings<br />
@@ -63,11 +62,22 @@
         &nbsp; &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;<br />
         &nbsp; &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;<br />
         &nbsp; &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;<br />
-        &nbsp; &lt;i class=&quot;icon-star_o&quot;&gt;&lt;/i&gt;<br />
-        &nbsp; &lt;i class=&quot;icon-star_o&quot;&gt;&lt;/i&gt;<br />
+        &nbsp; &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;<br />
+        &nbsp; &lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;<br />
         &lt;/div&gt;
       </code>
     </pre>
   </div>
 
 </div>
+<script>
+$("i.icon-star").hover(function() {
+    $(this).prevAll(".icon-star:not(active)").toggleClass("hover");
+    $(this).nextAll(".icon-star.active").toggleClass("un-hover");
+});
+
+$("i.icon-star").click(function() {
+    $(this).prevAll(".icon-star").andSelf().addClass("active");
+    $(this).nextAll(".icon-star").removeClass("active");
+});
+</script>

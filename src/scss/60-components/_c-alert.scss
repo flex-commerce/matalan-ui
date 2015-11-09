@@ -58,6 +58,10 @@ $alert-padding-h: 18px;
   top: 0;
   left: 0;
   width: 100%;
+  display:none;
+  &.active {
+    display: inline;
+  }
   &.fixed {
     position: fixed;
   }
