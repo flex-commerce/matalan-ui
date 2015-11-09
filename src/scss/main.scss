@@ -4,28 +4,28 @@
  */
 
 // Base sizes and branding colors
-@import '1-settings/__manifest';
+@import '10-settings/__manifest';
 
 // Core style functions and mixins
-@import '2-tools/__manifest';
+@import '20-tools/__manifest';
 
 // Default fonts and cross browser normalisation
-@import '3-generic/__manifest';
+@import '30-generic/__manifest';
 
 // Global elements only containg html tags e.g. h1,li,ol,ul
-@import '4-elements/__manifest';
+@import '40-elements/__manifest';
 
 // Objects e/g grid or media object
-@import '5-objects/__manifest';
+@import '50-objects/__manifest';
 
 // More detailed components such as buttons, alerts etc/
-@import '6-components/__manifest';
+@import '60-components/__manifest';
 
 // Scopes e.g. blog styles
-@import '7-scopes/__manifest';
+@import '70-scopes/__manifest';
 
 // Themes e.g. color changes based on seasons or promotions
-@import '8-themes/__manifest';
+@import '80-themes/__manifest';
 
 // IE fixes and temporatry hacks
-@import '9-trumps/__manifest';
+@import '90-trumps/__manifest';

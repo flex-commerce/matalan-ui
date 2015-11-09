@@ -11,13 +11,23 @@
 </head>
 
 <body>
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+      {{> partials/form-full }}
+    </div>
+    <div class="col-sm-12 col-md-12">
+      {{> partials/buttons }}
+    </div>
+  </div>
 
-      <div class="c-alert c-alert-global c-alert-dismissible" role="alert">
-        <div class="container">
-          {{lorem count=10}} <span class="close">&times;</span>
-        </div>
-      </div>
-
+  <script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
+  <script src="js/jquery.selectbox.js"></script>
+  <script>
+    $('select').selectBox({
+      mobile: false,
+      loopOptions: true
+    });
+  </script>
 
 </body>
 

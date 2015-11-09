@@ -1,15 +1,16 @@
-.c-table  {
+.c-table {
   width: 100%;
   text-align: left;
   th {
+    @extend .u-color-pri;
     font-weight: bold;
-    @extend .u-color-pri
   }
 }
 
 .c-table__default {
   font-size: rem-calc(14);
-  td, th {
+  td,
+  th {
     padding: 0.65em;
   }
 }
@@ -19,6 +20,6 @@
     @extend .u-bgcolor-lgrey-hover;
   }
   tbody tr {
-    border-top: 1px solid $keyline-color
+    border-top: 1px solid $keyline-color;
   }
 }
