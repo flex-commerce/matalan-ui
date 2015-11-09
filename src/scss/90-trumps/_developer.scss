@@ -8,9 +8,7 @@
   margin-bottom: 1em;
   border-bottom: 1px solid $keyline-color;
 }
-.ui-container h4 {
-  margin-bottom: 1em;
-}
+
 .ui-grid-left {
 h2 {
   font-size: 1.5em;
@@ -68,13 +66,12 @@ p {
   width: 100%;
   // min-height: 15em;
   // border-bottom: 1px solid #aaa;
-  padding-bottom: 2em;
   margin-top: 2em;
   // outline: 1px solid;
   .ui-row {
     border-style: none;
     padding-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 0.2em;
     min-height: 0;
   }
 }
@@ -166,7 +163,6 @@ p {
   border: 1px solid #bbb;
 }
 .pallette__info {
-  margin: 0 -5em;
   text-align: center;
 }
 
