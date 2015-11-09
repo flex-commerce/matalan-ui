@@ -94,9 +94,15 @@
   }
 
 .nav-mobile-button {
-  position: absolute;
-  top: 15px;
-  right: -60px;
+  position: relative;
+  span {
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+  }
+  &:before {
+    padding: 0.1em !important;
+  }
   i {
     margin-bottom: 0;
   }
