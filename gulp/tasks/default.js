@@ -7,5 +7,6 @@ gulp.task('default', [
   'images',
   'markup',
   'sass',
-  'watch'
+  'watch',
+  'js'
   ]);

@@ -1,6 +1,20 @@
   /* Rudimentary mega menu CSS for demonstration */
   /* should be extended for dropdowns, selects etc */
-
+  .c-navbar-container {
+    @media (max-width:768px){
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 13.755em;
+      left: -13.755em;
+      height: 100%;
+      transform: translate(0px, 0px);
+      background-color: $white;
+      &.active {
+        transform: translate(13.755em, 0px);
+      }
+    }
+  }
   /* mega menu list */
   .c-navbar {
     display: block;
@@ -78,3 +92,16 @@
     margin: 0;
     padding: 0;
   }
+
+.nav-mobile-button {
+  position: absolute;
+  top: 15px;
+  right: -60px;
+  i {
+    margin-bottom: 0;
+  }
+  @media (min-width:768px){
+    display: none;
+  }
+}
+

@@ -69,6 +69,16 @@
 // }
 //
 //
+//
+@mixin auto-columns($number) {
+  -webkit-columns: $number;
+}
+
+@for $i from 2 through 4 {
+    .auto-column-#{$i} {
+        @include auto-columns(#{$i})
+    }
+}
 
 
 @mixin progress-variant($color) {
