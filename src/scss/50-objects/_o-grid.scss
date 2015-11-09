@@ -140,9 +140,6 @@ $susy: (
   }
 }
 
-
-
-
 // this is made only to easily test if our code is working correctly when copy/pasting some bootstrap html code
 // in the real world this is unnecessary
 @mixin make-bootstrap-breakpoint-classes($class) {
@@ -164,11 +161,10 @@ $susy: (
   }
 }
 
-
-
 @mixin make-bootstrap-classes() {
 
   $list: ".col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xl-1";
+
 
   @for $i from 2 through $susy-columns {
     $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, .col-xl-#{$i}";
@@ -185,11 +181,20 @@ $susy: (
       @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
 
       } @else {
+        .hidden-#{$mq-breakpoint-name}-up {
+          @include mq($from: $mq-breakpoint-name) {
+            display: none !important;
+          }
+        }
+        .hidden-#{$mq-breakpoint-name}-down {
+          @include mq($until: $mq-breakpoint-name) {
+            display: none !important;
+          }
+        }
         @include mq($from: $mq-breakpoint-name) {
           @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
         }
       }
     }
   }
-
   @include make-bootstrap-classes();
