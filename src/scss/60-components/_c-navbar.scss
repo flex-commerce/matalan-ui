@@ -1,0 +1,68 @@
+// @todo - either make this reusable, or duplicate it...
+@mixin black-link {
+  color: $base-text-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: $primary-color-hover;
+  }
+}
+
+.c-navbar {
+  padding: 0 2rem;
+  @include border-tb-default(2px);
+  .navbar--top-item {
+    text-transform: uppercase;
+    > a {
+      display: inline-block;
+      line-height: 4em;
+      padding: 0 1em;
+      color: $base-text-color;
+      text-decoration: none;
+      &.active,
+      &:hover {
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+  @extend .justify-parent;
+  .navbar--top-item {
+    @extend .justified-child;
+  }
+}
+
+// todo - sort these for oocs, vars, naming etc
+.sub-nav {
+  padding: 15px;
+  text-transform: initial;
+  .sub-nav-title {
+    @extend .u-font-sec;
+    @extend .h4;
+    color: $primary-color;
+    margin: 1em 0 0.75em;
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      display: block;
+      background: linear-gradient(
+        to right,
+        rgba($dark-grey-lighten-20,0) 0%,
+        rgba($dark-grey-lighten-20,1) 40%,
+        rgba($dark-grey-lighten-20,1) 60%,
+        rgba($dark-grey-lighten-20,0) 100%);
+    }
+  }
+  .sub-nav-header {
+    @extend .u-font-sec;
+    color: $primary-color;
+  }
+}
+
+.sub-nav-group {
+  min-width: 190px; // @todo - magic
+  .sub-nav-item a {
+    @include black-link;
+    @include font-size(14px, 1.8);
+  }
+}

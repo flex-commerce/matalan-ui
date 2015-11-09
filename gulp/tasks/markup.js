@@ -15,10 +15,10 @@ var gulp         = require('gulp'),
 
 gulp.task('markup', function () {
     return gulp
-        .src('./src/htdocs/*.html')
+        .src('./src/htdocs/**/*.html')
         .pipe(hb({
             helpers: config.hbHelpers,
-            partials: './src/htdocs/{,**/}*.hbs',
+            partials: 'src/htdocs/**/*.hbs',
             bustCache: true
         }))
         .on('error', handleErrors)

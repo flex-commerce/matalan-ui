@@ -1,0 +1,110 @@
+$input-color: #666;
+$form-row-padding-y: 1em;
+$form-row-padding-x: 0;
+$line-height: $base-line-height;
+$input-padding-x: $default-pad-x;
+$input-padding-y: $default-pad-y;
+
+// default form item sizer, covers labels, text inputs, buttons etc
+// todo -
+// add some size handling
+// move this to mixn level
+@mixin form-item-size( $padding-y:$input-padding-y, $padding-x: $input-padding-x, $font-size: 1em, $line-height: $line-height) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+.o-form-row {
+  padding: $form-row-padding-y $form-row-padding-x;
+  line-height: $line-height;
+  color: $input-color;
+  position: relative;
+  @include clearfix();
+}
+
+.form-inline {
+  .o-form-row {
+    width: auto;
+  }
+  .o-form-label--contain,
+  .o-form-input--contain:not(.o-form--input-group) {
+    display: inline-block;
+  }
+}
+
+.form-default,
+.form-wide {
+  .o-form-row {
+    display: block;
+    width: 100%;
+  }
+}
+
+.o-form--input-group {
+  display: inline-table;
+  > * {
+    display: table-cell !important;
+  }
+  .input-group--addon {
+    width: 1%;
+    text-align: center;
+    &:not(.input-group--addon__inset) {
+      padding: 0 em-calc(10px);
+    }
+    &:not(.unstyled) {
+      background: $primary-color;
+      color: $white;
+    }
+  }
+  .input-addon--expand {
+    width: 100%;
+  }
+}
+
+.input-group--addon__inset {
+  @include center($xy: y, $pos: abs);
+}
+
+.input-group--addon__inset-left {
+  // offset input left padding to accommodate icon
+  padding-left: 48px !important;
+}
+
+// form wide dev rules
+.form-wide {
+  .o-form-label--contain {
+    @include span(4);
+    text-align: right;
+  }
+  .o-form-input--contain {
+    @include span(8);
+  }
+}
+
+//testing new rules - invelstigate this as a pattern
+.o-form-inline-fixed__threecol {
+  .o-form-label--contain {
+    @include span(3);
+    @include form-item-size;
+    text-align: right;
+  }
+  .o-form-input--contain {
+    @include span(3);
+  }
+  .o-form-message--contain {
+    @include span(6);
+    @include form-item-size;
+  }
+}
+
+.form-default .o-form-row .o-form-label--contain {
+  // vertical form label bottom margin
+  margin-bottom: rem-calc(7);
+}
+
+// labels
+.form-wide .o-form-label--contain {
+  // keep first line of text inline with input for wide form
+  padding-top: 0.5em;
+}

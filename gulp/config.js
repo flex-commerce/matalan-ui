@@ -20,7 +20,6 @@ module.exports = {
         }
     },
 
-
     markup: {
         src: src + '/htdocs/{,**/}*.{html,hbs}',
         dest: dest,
@@ -38,7 +37,7 @@ module.exports = {
     },
 
     js: {
-        src: src + '/js/*.js',
+        src: src + '/js/**/*.js',
         dest: dest + '/js/',
     },
 
