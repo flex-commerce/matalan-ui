@@ -1,0 +1,16 @@
+.o-btn-group {
+  display: inline-block;
+  .c-btn,
+  .c-btn-grp-dropdown {
+    margin-left: rem-calc(-1);
+    float: left;
+  }
+}
+
+.o-btn-group-vertical {
+  .c-btn {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid $white;
+  }
+}

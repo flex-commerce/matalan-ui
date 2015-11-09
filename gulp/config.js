@@ -20,7 +20,6 @@ module.exports = {
         }
     },
 
-
     markup: {
         src: src + '/htdocs/{,**/}*.{html,hbs}',
         dest: dest,

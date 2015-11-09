@@ -6,8 +6,8 @@ var sass          = require('gulp-sass');
 var sourcemaps    = require('gulp-sourcemaps');
 var autoprefixer  = require('gulp-autoprefixer');
 var minifyCSS     = require('gulp-minify-css');
-// var scssLint      = require('gulp-scss-lint');
-// var stylish       = require('gulp-scss-lint-stylish2');
+var scssLint      = require('gulp-scss-lint');
+var stylish       = require('gulp-scss-lint-stylish2');
 var header        = require('gulp-header');
 var handleErrors  = require('../util/handleErrors');
 var config        = require('../config').sass;
@@ -47,33 +47,11 @@ gulp.task('sass', function () {
 });
 
 
-gulp.task('scss-lint', function()
+gulp.task('sass:lint', function()
 {
   var reporter = stylish();
-  gulp.src('/scss/**/*.scss')
-  .pipe( scssLint({ customReport: reporter.issues }) )
+  gulp.src('src/scss/**/*.scss')
+  .pipe( scssLint({ customReport: reporter.issues, config: '.scsslint.yml' }) )
+  .on('error', handleErrors)
   .pipe( reporter.printSummary );
 });
-
-
-// gulp.task('sass', function () {
-
-//   sass(config.src)
-
-//     .pipe(sourcemaps.init())
-//     .on('error', handleErrors)
-//     .pipe(autoprefixer())
-//     .pipe(minifyCSS({
-//       keepSpecialComments: "*",
-//       roundingPrecision: -1,
-//       restructuring: false,
-//       mediaMerging: false,
-//       keepBreaks: true,
-//       advanced: false
-//     }))
-//     .pipe(header(banner, {pkg: pkg}))
-//     .pipe(sourcemaps.write())
-//     .pipe(gulp.dest(config.dest))
-//     .pipe(browserSync.reload({stream:true}));
-
-// });

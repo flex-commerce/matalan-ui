@@ -5,8 +5,6 @@
   <div class="ui-grid-right">
     <div class="ui-grid-50">
       <h3>Default Form</h3>
-
-
       <form action="" class="form-default">
         <div class="o-form-row">
           <div class="o-form-label--contain">
@@ -22,10 +20,22 @@
         </div>
         <div class="o-form-row">
           <div class="o-form-label--contain">
-            <label class="o-form-label__primary">Select Box</label>
+            <label for="select-a" class="o-form-label__primary">Select Box</label>
           </div>
           <div class="o-form-input--contain">
-            <select>
+            <select id="select-a">
+              <option value="foo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid, minima error libero ducimus.</option>
+              <option value="bar">bar</option>
+              <option value="baz">baz</option>
+            </select>
+          </div>
+        </div>
+        <div class="o-form-row">
+          <div class="o-form-label--contain">
+            <label class="o-form-label__primary">Select Box (disabled)</label>
+          </div>
+          <div class="o-form-input--contain">
+            <select disabled>
               <option value="foo">foo</option>
               <option value="bar">bar</option>
               <option value="baz">baz</option>
@@ -36,7 +46,7 @@
           <div class="o-form-label--contain">
             <label class="o-form-label__primary">Choose Option (inline)</label>
           </div>
-          <div class="o-form-input--contain o-label-inline">
+          <div class="o-form-input--contain o-option__inline">
             <label class="o-form-label__option">
               <input type="radio" name="foo" value="Red">Red</label>
             <label class="o-form-label__option">
@@ -47,7 +57,7 @@
           <div class="o-form-label--contain">
             <label class="o-form-label__primary">Choose Option (block)</label>
           </div>
-          <div class="o-form-input--contain o-label-block">
+          <div class="o-form-input--contain o-option__block">
             <label class="o-form-label__option">
               <input type="radio" name="foo" value="Red">Red</label>
             <label class="o-form-label__option">
@@ -58,7 +68,7 @@
           <div class="o-form-label--contain">
             <label class="o-form-label__primary">Check it (inline)</label>
           </div>
-          <div class="o-form-input--contain o-label-inline">
+          <div class="o-form-input--contain o-option__inline">
             <label class="o-form-label__option">
               <input type="checkbox">Checkbox 1</label>
             <label class="o-form-label__option">
@@ -69,7 +79,7 @@
           <div class="o-form-label--contain">
             <label class="o-form-label__primary">Check it (block)</label>
           </div>
-          <div class="o-form-input--contain o-label-block">
+          <div class="o-form-input--contain o-option__block">
             <label class="o-form-label__option">
               <input type="checkbox">Checkbox 1</label>
             <label class="o-form-label__option">
@@ -85,13 +95,9 @@
           </div>
         </div>
       </form>
-
-
     </div>
     <div class="ui-grid-50">
       <h3>Horizontal Form</h3>
-
-
       <form action="" class="form-wide">
         <div class="o-form-row">
           <div class="o-form-label--contain">
@@ -107,10 +113,10 @@
         </div>
         <div class="o-form-row">
           <div class="o-form-label--contain">
-            <label class="o-form-label__primary">Select Box</label>
+            <label name="select-b" class="o-form-label__primary">Select Box</label>
           </div>
           <div class="o-form-input--contain">
-            <select>
+            <select id="select-b">
               <option value="foo">foo</option>
               <option value="bar">bar</option>
               <option value="baz">baz</option>
@@ -121,7 +127,7 @@
           <div class="o-form-label--contain">
             <label class="o-form-label__primary">Choose Option (inline)</label>
           </div>
-          <div class="o-form-input--contain o-label-inline">
+          <div class="o-form-input--contain o-option__inline">
             <label class="o-form-label__option">
               <input type="radio" name="foo" value="Red">Red</label>
             <label class="o-form-label__option">
@@ -132,7 +138,7 @@
           <div class="o-form-label--contain">
             <label class="o-form-label__primary">Choose Option (block)</label>
           </div>
-          <div class="o-form-input--contain o-label-block">
+          <div class="o-form-input--contain o-option__block">
             <label class="o-form-label__option">
               <input type="radio" name="foo" value="Red">Red</label>
             <label class="o-form-label__option">
@@ -143,7 +149,7 @@
           <div class="o-form-label--contain">
             <label class="o-form-label__primary">Check it (inline)</label>
           </div>
-          <div class="o-form-input--contain o-label-inline">
+          <div class="o-form-input--contain o-option__inline">
             <label class="o-form-label__option">
               <input type="checkbox">Checkbox 1</label>
             <label class="o-form-label__option">
@@ -154,7 +160,7 @@
           <div class="o-form-label--contain">
             <label class="o-form-label o-form-label__primary">Check it (block)</label>
           </div>
-          <div class="o-form-input--contain o-label-block">
+          <div class="o-form-input--contain o-option__block">
             <label class="o-form-label o-form-label__option">
               <input type="checkbox">Checkbox 1</label>
             <label class="o-form-label o-form-label__option">
@@ -170,8 +176,6 @@
           </div>
         </div>
       </form>
-
-
     </div>
     <div class="ui-grid-100">
       <pre>
