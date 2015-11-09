@@ -8,6 +8,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    pre {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -68,13 +73,23 @@
 
   </div>
   <a href="#top" class="back-to-top">Back to top</a>
+
+
   <script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
   <script src="js/highlight.pack.js"></script>
+  <script src="js/jquery.selectbox.js"></script>
   <script src="js/menu-accessible.js"></script>
   <script>
     hljs.configure({useBR: false, fixMarkup: true});
     hljs.initHighlighting();
+
+    $('select').selectBox({
+      mobile: false,
+      loopOptions: true
+    });
   </script>
+
+
 </body>
 
 </html>

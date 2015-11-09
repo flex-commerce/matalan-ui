@@ -1,12 +1,12 @@
 # Browsers that we support - this file picked up buy autoprefixer
 
-Chrome > 43
+Last 4 Chrome versions
 
-Firefox > 38
+Last 4 Firefox versions
 
 IE >= 9
 
-Last 2 Safari versions
+Last 3 Safari versions
 
 last 2 iOS versions
 
