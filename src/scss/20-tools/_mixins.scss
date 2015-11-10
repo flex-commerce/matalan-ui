@@ -44,7 +44,9 @@
 @mixin secondary-style($hover: null) {
   @include style-variant($secondary-color, $primary-color, $primary-color);
   @if $hover {
-    @include style-variant($primary-color, $white, $primary-color);
+    &:hover {
+      @include style-variant($primary-color, $white, $primary-color);
+    }
   }
 }
 
@@ -60,7 +62,7 @@
 }
 
 @mixin auto-columns($number) {
-  -webkit-columns: $number;
+  -webkit-columns: $number 12em;
 }
 
 @for $i from 2 through 4 {

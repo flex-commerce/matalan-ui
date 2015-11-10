@@ -5,6 +5,7 @@ $selectbox-border-color: $cool-grey;
 /* Make webkit behave */
 select.selectbox {
   position: absolute;
+  padding: 0 1.5em;
 }
 .selectbox--contain__desktop > select.selectbox {
   -webkit-appearance: none;
@@ -53,7 +54,7 @@ select.selectbox {
   // truncate the option text if it overspills
   .selectbox-label {
     max-width: 100%;      // set to full width
-    padding-right: 2em;   // allow for the right hand arrow
+    padding-right: 2.5em;   // allow for the right hand arrow - selectbox-arrow + default padding x
     white-space: nowrap;      // truncate with ellipses 1
     text-overflow: ellipsis;  // truncate with ellipses 2
     overflow: hidden;         // truncate with ellipses 3

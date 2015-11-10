@@ -60,7 +60,6 @@
 }
 
 .sub-nav-group {
-  min-width: 190px; // @todo - magic
   .sub-nav-item a {
     @include black-link;
     @include font-size(14px, 1.8);
