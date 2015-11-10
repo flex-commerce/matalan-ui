@@ -2,26 +2,27 @@
 
 .meta {
   @extend %u-fade-el;
-  font-size: 80%
+  font-size: 80%;
 }
 
 .u-font-pri {
-  font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
 .u-font-sec {
-  font-family:  'Archer', Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Archer', Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
   font-weight: 500;
 }
-.u-font-alt {
-  font-family:  'Didot', Georgia, Times, 'Times New Roman', serif;
-}
 
+.u-font-alt {
+  font-family: 'Didot', Georgia, Times, 'Times New Roman', serif;
+}
 
 // for light gray text (80% opacity)
 %u-fade-el,
 .u-fade-el {
-  opacity: 0.6;
+  opacity: .6;
 }
 
 // for bold text (600 weight)
@@ -45,6 +46,7 @@
 %u-no-underline,
 .u-no-underline {
   text-decoration: none !important;
+
   &:before,
   &:after {
     text-decoration: none !important;

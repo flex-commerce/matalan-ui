@@ -23,6 +23,8 @@ li {
   }
 }
 
+
+
 /*------------------------------------*\
     #ANCHOR
 \*------------------------------------*/
@@ -36,6 +38,7 @@ a {
 
 p a {
   border-bottom: 1px dotted $base-text-color;
+  text-decoration: none;
   &:hover, &:active, &:focus {
     color: $primary-color;
   }
