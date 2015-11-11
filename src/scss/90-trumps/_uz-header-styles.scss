@@ -1,0 +1,37 @@
+.super-header--container {
+  padding: 0.5em 0;
+  background-color: $dark-grey-lighten-50;
+  color: $white;
+}
+
+.header--container {
+
+}
+
+.header-brand {
+  width: 170px;
+  padding: 15px 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq($from: lg) {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+.o-list-inline-seperated {
+  > li {
+    display: inline-block;
+    padding: 5px 15px;
+  }
+  li + li {
+   border-left: 2px solid #8d8d8d;
+  }
+}
+
+.auto-width {
+  width: auto;
+  display: inline-block;
+  @include clearfix;
+}
