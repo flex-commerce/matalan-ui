@@ -1,21 +1,55 @@
   /* Rudimentary mega menu CSS for demonstration */
   /* should be extended for dropdowns, selects etc */
+
+  // styles for off canvas version - < 1024px
+@include mq($until: lg) {
   .c-navbar-container {
-    @media (max-width:768px){
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      width: 13.755em;
-      left: -13.755em;
-      height: 100%;
-      transform: translate(0px, 0px);
-      background-color: $white;
-      &.active {
-        transform: translate(13.755em, 0px);
-      }
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 13.755em;
+    left: -13.755em;
+    background-color: #eee;
+    z-index: 1;
+    &.active {
+      left: 0;
     }
   }
+
+  &.active .navbar--top-item {
+    display: block;
+    a {
+      display: block;
+    }
+  }
+
+  .sub-nav {
+    display: block;
+  }
+  .sub-nav-header {
+    display: none;
+  }
+  .sub-nav-item {
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
+  .sub-nav-item--list {
+    display: none;
+  }
+  .sub-nav-group {
+    display: block;
+  }
+  .sub-nav-title .open {
+    + .sub-nav-item--list {
+      display: block;
+    }
+  }
+
+}
   /* mega menu list */
+
   .c-navbar {
     display: block;
     position: relative;
@@ -24,16 +58,16 @@
     padding: 0;
     z-index: 15;
   }
-
   /* a top level navigation item in the mega menu */
+
   .navbar--top-item {
     list-style: none;
     display: inline-block;
     padding: 0;
     margin: 0;
   }
-
   /* first descendant link within a top level navigation item */
+
   .navbar--top-item > a {
     position: relative;
     display: inline-block;
@@ -41,73 +75,96 @@
     margin: 0 0 -1px 0;
     border: 1px solid transparent;
   }
-
   /* focus/open states of first descendant link within a top level navigation item */
+
   .navbar--top-item > a:focus,
   .navbar--top-item > a.open {
     // border: 1px solid #dedede;
   }
-
   /* open state of first descendant link within a top level navigation item */
+
   .navbar--top-item > a.open {
-    background-color: #fff;
+    // background-color: #fff;
     border-bottom: none;
     z-index: 1;
   }
-
   /* sub-navigation panel */
+
   .sub-nav {
-    position: absolute;
+    @include mq($from: lg) {
+      position: absolute;
+    }
     display: none;
     top: rem-calc(51); // @TODO - magic number, height of menu
     left: 0;
     right: 0;
     margin-top: -1px;
-    border: 1px solid #ececec;
-    background-color: #fff;
-    @extend .justify-parent;
+    // border: 1px solid #ececec;
+    // background-color: #fff;
+    & > div {
+      @extend .justify-parent;
+    }
   }
+
   .sub-nav-group {
     @extend .justified-child;
+    vertical-align: top;
   }
-
-
   /* sub-navigation panel open state */
+
   .sub-nav.open {
     display: block;
+    background: $white;
   }
-
   /* list of items within sub-navigation panel */
-  .sub-nav ul {
-    display: inline-block;
+
+  .sub-nav > ul {
+    @include mq($until: lg) {
+      display: block;
+    }
+    @include mq($from: lg) {
+      display: inline-block;
+    }
     vertical-align: top;
     margin: 0 1em 0 0;
     padding: 0;
   }
-
   /* list item within sub-navigation panel */
+
   .sub-nav li {
-    display: block;
+    // display: block;
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
 
-.nav-mobile-button {
-  position: relative;
-  span {
-    position: absolute;
-    left: 0;
-    bottom: -22px;
+  .nav-mobile-button {
+    @extend .u-cf;
+    @include mq($from: lg) {
+      display: none;
+    }
   }
-  &:before {
-    padding: 0.1em !important;
+
+
+
+/* misc */
+.sub-nav-title a,
+.sub-nav-item a {
+  @include black-link;
+}
+
+@include mq($until: lg) {
+  .c-navbar-container {
+    background: $dark-grey-lighten-10;
   }
-  i {
-    margin-bottom: 0;
+  .sub-nav {
+    background: $dark-grey-lighten-20;
   }
-  @media (min-width:768px){
-    display: none;
+  .sub-nav-item.open {
+    background: $dark-grey-lighten-30;
   }
 }
 
+.sub-nav--title {
+  color: red;
+}

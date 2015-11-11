@@ -1,62 +1,70 @@
-<div class="ui-row">
-  <div class="col-sm-12">
-    <i class="nav-mobile-button icon-menu"><span>Menu</span></i>
-    <nav class="c-navbar-container" data-app="accessible-navmenu">
+<div class="col-xs-12">
 
-      <ul class="accessible-navmenu c-navbar">
+  <i class="nav-mobile-button icon-menu"><span>Menu</span></i>
 
+  <nav class="c-navbar-container" data-app="accessible-navmenu">
+    <ul class="accessible-navmenu c-navbar">
 
-        <!-- category menu block -->
-        <li class="navbar--top-item">
-          <a class="active" href="">Category 0</a>
-          <div class="sub-nav">
-            <h2 class="sub-nav-header">Section Header</h2>
+      <li class="navbar--header">
+        <a class="u-fl">
+          <i class="nav-mobile-button icon-menu"></i>
+        </a>
+        <a class="u-fl">
+          <i class="nav-mobile-button icon-menu"></i>
+        </a>
+        <a class="u-fl">
+          <i class="nav-mobile-button icon-menu"></i>
+        </a>
+      </li>
+
+      <li class="navbar--top-item">
+        <a class="open" href="#">Section 0</a>
+        <div class="sub-nav open">
+          <h2 class="sub-nav-header">Section Header</h2>
+          <div>
             {{# times 6}}
             <ul class="sub-nav-group">
               {{# times 2}}
-              <li class="sub-nav-title">Category</li>
-              {{# timesrand 2 6}}
-              <li class="sub-nav-item"><a href="">{{lorem count=2}}</a></li>
-              {{/ timesrand }}
+              <li class="sub-nav-title">
+                <a href="">Category {{this}}</a>
+                {{# timesrand 2 6}}
+                <li class="sub-nav-item"><a href="">Collection {{this}}</a></li>
+                {{/ timesrand }}
+              </li>
               {{/ times }}
             </ul>
             {{/ times }}
           </div>
-        </li>
-        <!-- end category menu block -->
+        </div>
+      </li>
 
 
-        <!-- repeat menu block -->
-        {{# times 4}}
-        <li class="navbar--top-item">
-          <a class="" href="">Category {{this}}</a>
-          <div class="sub-nav">
-            <h2 class="sub-nav-header">Section Header</h2>
+      {{# times 10}}
+      <li class="navbar--top-item">
+        <a class="" href="#">Section {{this}}</a>
+        <div class="sub-nav">
+          <h2 class="sub-nav-header">Section Header</h2>
+          <div>
             {{# times 6}}
             <ul class="sub-nav-group">
               {{# times 2}}
-              <li class="sub-nav-title">Category</li>
-              {{# timesrand 2 6}}
-              <li class="sub-nav-item"><a href="">{{lorem count=2}}</a></li>
-              {{/ timesrand }}
-              {{/ times }}
+              <li class="sub-nav-title">
+                <a href="">Category</a>
+                {{# timesrand 2 6}}
+                <li class="sub-nav-item"><a href="">Collection</a></li>
+                {{/ timesrand }} {{/ times }}
+              </li>
             </ul>
             {{/ times }}
           </div>
-        </li>
-        {{/ times }}
-        <!-- end repeat menu block -->
+        </div>
+      </li>
+      {{/ times }}
 
 
-      </ul>
-    </nav>
-
-  </div>
-
+    </ul>
+  </nav>
 </div>
-
-
-
 <!-- include jquery -->
 <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
 <!-- include the jquery-accessibleMegaMenu plugin script -->
@@ -75,7 +83,26 @@
     openClass: "open"
   });
 
+  $('nav a').on('click', function(e) {
+    e.preventDefault();
+  })
 
+  var parentNavMenu = $('[data-app="accessible-navmenu"]')
+
+  parentNavMenu.on('click', '.navbar--top-item > a', function(e){
+    e.preventDefault();
+    if (!$(this).hasClass('open')) {
+      parentNavMenu.find('.open').removeClass('open');
+    }
+    $(this).toggleClass('open').next('.sub-nav').toggleClass('open');
+  })
+
+  parentNavMenu.on('click', '.sub-nav-title', function(e){
+    e.preventDefault();
+    if (!$(this).hasClass('open')) {
+      $(this).closest('.sub-nav').find('.open').removeClass('open');
+    }
+    $(this).toggleClass('open').nextUntil('.sub-nav-title').toggleClass('open');
+  });
 
 </script>
-
