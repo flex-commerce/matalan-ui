@@ -8,15 +8,59 @@
 
 }
 
+@mixin same-height() {
+  padding-bottom: 1000px;
+  margin-bottom: -1000px;
+  height: 100%;
+}
+
 .header-brand {
   width: 170px;
-  padding: 15px 0;
+  padding: 20px 0;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+
   @include mq($from: lg) {
     text-align: left;
     margin-left: 0;
+  }
+}
+
+.tempHeightClass {
+  @include mq($from: lg) {
+    height: 90px;
+  }
+}
+
+.header-button-wrapper,
+.header-search {
+  text-align: center;
+  @include mq($until: md) {
+    text-align: right;
+  }
+
+  @include mq($from: lg) {
+    text-align: right;
+    @include center(y);
+  }
+}
+
+.menu-button {
+  @include mq($until: md) {
+    text-align: left;
+  }
+  i {
+    line-height: 1.3em;
+  }
+}
+
+.header-search {
+  @include mq($until: md) {
+    padding: 20px 0;
+  }
+  .o-form-row {
+    padding: 0;
   }
 }
 
@@ -33,5 +77,11 @@
 .auto-width {
   width: auto;
   display: inline-block;
+  white-space: nowrap;
   @include clearfix;
+}
+
+.va {
+  padding: 5px 0;
+  margin-bottom: 0;
 }

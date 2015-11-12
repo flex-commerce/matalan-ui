@@ -200,6 +200,7 @@ $susy: (
             display: none !important;
           }
         }
+
         @include mq($from: $mq-breakpoint-name) {
           @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
         }
