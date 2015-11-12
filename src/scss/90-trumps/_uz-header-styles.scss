@@ -1,0 +1,115 @@
+.super-header--container {
+  padding: 0.5em 0;
+  background-color: $dark-grey-lighten-50;
+  color: $white;
+}
+
+.header--container {
+
+}
+
+@mixin same-height() {
+  padding-bottom: 1000px;
+  margin-bottom: -1000px;
+  height: 100%;
+}
+
+.header-brand {
+  width: 170px;
+  padding: 20px 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq($from: lg) {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+.tempHeightClass {
+  @include mq($from: lg) {
+    height: 90px;
+  }
+}
+
+.header-button-wrapper,
+.header-search {
+  text-align: center;
+  @include mq($until: md) {
+    text-align: right;
+  }
+
+  @include mq($from: lg) {
+    text-align: right;
+    @include center(y);
+  }
+}
+
+.header-button-group {
+
+  @include mq($until: lg) {
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
+
+  @include mq($until: md) {
+    margin: 0;
+    padding: 0 !important;
+
+  }
+}
+
+.header-checkout {
+  @include mq($until: lg) {
+    margin-bottom:20px;
+  }
+}
+
+.menu-button {
+  @include mq($until: md) {
+    text-align: left;
+  }
+  i {
+    line-height: 1.3em;
+  }
+}
+
+.header-search {
+  @include mq($until: md) {
+    padding: 15px 0;
+  }
+  .o-form-row {
+    padding: 0;
+  }
+  .span-wide-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.o-list-inline-seperated {
+  > li {
+    display: inline-block;
+    padding: 5px 15px;
+  }
+  li + li {
+   border-left: 2px solid #8d8d8d;
+  }
+}
+
+.auto-width {
+  width: auto;
+  display: inline-block;
+  white-space: nowrap;
+  @include clearfix;
+}
+
+.va {
+  padding: 5px 0;
+  margin-bottom: 0;
+}
+
+.font-11 {
+  font-size: 11px;
+}

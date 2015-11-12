@@ -158,6 +158,15 @@ $susy: (
         }
       }
     }
+    .col-#{$class}-push-#{$i} {
+      left: span($i of $susy-columns);
+    }
+    .col-#{$class}-pull-#{$i} {
+      right: span($i of $susy-columns);
+    }
+    .col-#{$class}-offset-#{$i} {
+      margin-left: span($i of $susy-columns);
+    }
   }
 }
 
@@ -191,6 +200,7 @@ $susy: (
             display: none !important;
           }
         }
+
         @include mq($from: $mq-breakpoint-name) {
           @include make-bootstrap-breakpoint-classes(#{$mq-breakpoint-name});
         }
