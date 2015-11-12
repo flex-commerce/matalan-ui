@@ -46,6 +46,26 @@
   }
 }
 
+.header-button-group {
+
+  @include mq($until: lg) {
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
+
+  @include mq($until: md) {
+    margin: 0;
+    padding: 0 !important;
+
+  }
+}
+
+.header-checkout {
+  @include mq($until: lg) {
+    margin-bottom:20px;
+  }
+}
+
 .menu-button {
   @include mq($until: md) {
     text-align: left;
@@ -57,10 +77,14 @@
 
 .header-search {
   @include mq($until: md) {
-    padding: 20px 0;
+    padding: 15px 0;
   }
   .o-form-row {
     padding: 0;
+  }
+  .span-wide-12 {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -84,4 +108,8 @@
 .va {
   padding: 5px 0;
   margin-bottom: 0;
+}
+
+.font-11 {
+  font-size: 11px;
 }
