@@ -21,7 +21,7 @@
         <a class="open" href="#">Section 0</a>
         <div class="sub-nav open">
           <h2 class="sub-nav-header">Section Header</h2>
-          <div>
+          <div class="sub-nav--group--container">
             {{# times 6}}
             <ul class="sub-nav-group">
               {{# times 2}}
@@ -34,6 +34,9 @@
               {{/ times }}
             </ul>
             {{/ times }}
+            <ul class="sub-nav-group sub-nav-group__image">
+              <li><img src="http://placehold.it/150x350"></li>
+            </ul>
           </div>
         </div>
       </li>
@@ -44,7 +47,7 @@
         <a class="" href="#">Section {{this}}</a>
         <div class="sub-nav">
           <h2 class="sub-nav-header">Section Header</h2>
-          <div>
+          <div class="sub-nav--group--container">
             {{# times 6}}
             <ul class="sub-nav-group">
               {{# times 2}}
@@ -52,16 +55,18 @@
                 <a href="">Category</a>
                 {{# timesrand 2 6}}
                 <li class="sub-nav-item"><a href="">Collection</a></li>
-                {{/ timesrand }} {{/ times }}
+                {{/ timesrand }}
+              {{/ times }}
               </li>
             </ul>
             {{/ times }}
+            <ul class="sub-nav-group sub-nav-group__image">
+              <li><img src="http://placehold.it/150x350"></li>
+            </ul>
           </div>
         </div>
       </li>
       {{/ times }}
-
-
     </ul>
   </nav>
 </div>
