@@ -6,6 +6,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,111 +15,96 @@
   }
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   @extend %icon-base;
 }
 
+.icon-ui-gt:before {
+  content: '\e900';
+}
+.icon-ui-minus:before {
+  content: '\e901';
+}
+.icon-ui-plus:before {
+  content: '\e902';
+}
 .icon-radio:before {
-  content: "\e806";
+  content: '\e806';
 }
-
 .icon-check:before {
-  content: "\e807";
+  content: '\e807';
 }
-
 .icon-search:before {
-  content: "\e808";
+  content: '\e808';
 }
-
 .icon-phone:before {
-  content: "\e03f";
+  content: '\e03f';
 }
-
 .icon-plus_circle:before {
-  content: "\e06b";
+  content: '\e06b';
 }
-
 .icon-plus_circle_o:before {
-  content: "\e06c";
+  content: '\e06c';
 }
-
 .icon-edit:before {
-  content: "\e074";
+  content: '\e074';
 }
-
 .icon-email:before {
-  content: "\e07c";
+  content: '\e07c';
 }
-
 .icon-minus_circle:before {
-  content: "\e080";
+  content: '\e080';
 }
-
 .icon-minus_circle_o:before {
-  content: "\e081";
+  content: '\e081';
 }
-
 .icon-view_comfortable:before {
-  content: "\e1bb";
+  content: '\e1bb';
 }
-
 .icon-apps:before {
-  content: "\e1ff";
+  content: '\e1ff';
 }
-
 .icon-menu:before {
-  content: "\e20e";
+  content: '\e20e';
 }
-
 .icon-star:before {
-  content: "\e260";
+  content: '\e260';
 }
-
 .icon-star_half:before {
-  content: "\e261";
+  content: '\e261';
 }
-
 .icon-star_o:before {
-  content: "\e262";
+  content: '\e262';
 }
-
 .icon-info:before {
-  content: "\e2a2";
+  content: '\e2a2';
 }
-
 .icon-info_o:before {
-  content: "\e2a3";
+  content: '\e2a3';
 }
-
 .icon-payment:before {
-  content: "\e2b5";
+  content: '\e2b5';
 }
-
 .icon-basket:before {
-  content: "\e2de";
+  content: '\e2de';
 }
-
 .icon-google-plus:before {
-  content: "\e800";
+  content: '\e800';
 }
-
 .icon-facebook:before {
-  content: "\e801";
+  content: '\e801';
 }
-
 .icon-twitter:before {
-  content: "\e802";
+  content: '\e802';
 }
-
 .icon-rss:before {
-  content: "\e803";
+  content: '\e803';
 }
-
 .icon-youtube:before {
-  content: "\e804";
+  content: '\e804';
+}
+.icon-pinterest:before {
+  content: '\e805';
 }
 
-.icon-pinterest:before {
-  content: "\e805";
-}

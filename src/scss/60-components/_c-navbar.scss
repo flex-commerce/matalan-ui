@@ -9,13 +9,11 @@
 }
 
 .c-navbar {
-
   @include border-tb-default(2px);
   .navbar--top-item {
     text-transform: uppercase;
     > a {
       display: inline-block;
-      line-height: 4em;
       // padding: 0 1em;
       color: $base-text-color;
       text-decoration: none;
@@ -26,6 +24,9 @@
     }
   }
   @extend .justify-parent;
+  .navbar--header {
+    overflow: hidden;
+  }
   .navbar--top-item {
     @extend .justified-child;
     font-size: rem-calc(12);
@@ -37,12 +38,13 @@
   // padding: 15px; // disabled while syling off canvas
   text-transform: initial;
   .sub-nav-title {
-    @extend .u-font-sec;
-    @extend .h4;
+
+
     @include mq($from: lg) {
       // todo - revisit
       color: $primary-color;
-      margin: 1em 0 0.75em;
+      margin: 0.75em 0;
+      padding-bottom: 0.5em;
       border-bottom: 1px solid $cool-grey;
     }
   }
@@ -53,11 +55,10 @@
 }
 
 .sub-nav-group {
-  outline: 1px solid red;
   width: auto;
   .sub-nav-item a {
     @include black-link;
-    @include font-size(14px, 1.8);
+    // @include font-size(14px, 1.8);
   }
 }
 

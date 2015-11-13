@@ -18,17 +18,31 @@
       </li>
 
       <li class="navbar--top-item">
-        <a class="open" href="#">Section 0</a>
-        <div class="sub-nav open">
+        <a class="link" href="#">
+          Section 0
+          <span class="nav-menu-icons u-fr">
+            <span><i class="icon-ui-minus"></i></span>
+            <span><i class="icon-ui-plus"></i></span>
+            <span><i class="icon-ui-gt"></i></span>
+          </span>
+        </a>
+        <div class="sub-nav">
           <h2 class="sub-nav-header">Section Header</h2>
           <div class="sub-nav--group--container">
             {{# times 6}}
             <ul class="sub-nav-group">
               {{# times 2}}
               <li class="sub-nav-title">
-                <a href="">Category {{this}}</a>
+                <a class="link" href="">
+                  Category {{this}}
+                  <span class="nav-menu-icons u-fr">
+                    <span><i class="icon-ui-minus"></i></span>
+                    <span><i class="icon-ui-plus"></i></span>
+                    <span><i class="icon-ui-gt"></i></span>
+                  </span>
+                </a>
                 {{# timesrand 2 6}}
-                <li class="sub-nav-item"><a href="">Collection {{this}}</a></li>
+                <li class="sub-nav-item"><a class="link" href="">Collection {{this}}</a></li>
                 {{/ timesrand }}
               </li>
               {{/ times }}
@@ -44,7 +58,14 @@
 
       {{# times 10}}
       <li class="navbar--top-item">
-        <a class="" href="#">Section {{this}}</a>
+        <a class="link" href="#">
+          Section {{this}}
+          <span class="nav-menu-icons u-fr">
+            <span><i class="icon-ui-minus"></i></span>
+            <span><i class="icon-ui-plus"></i></span>
+            <span><i class="icon-ui-gt"></i></span>
+          </span>
+        </a>
         <div class="sub-nav">
           <h2 class="sub-nav-header">Section Header</h2>
           <div class="sub-nav--group--container">
@@ -52,9 +73,16 @@
             <ul class="sub-nav-group">
               {{# times 2}}
               <li class="sub-nav-title">
-                <a href="">Category</a>
+                <a class="link" href="">
+                  Category
+                  <span class="nav-menu-icons u-fr">
+                    <span><i class="icon-ui-minus"></i></span>
+                    <span><i class="icon-ui-plus"></i></span>
+                    <span><i class="icon-ui-gt"></i></span>
+                  </span>
+                </a>
                 {{# timesrand 2 6}}
-                <li class="sub-nav-item"><a href="">Collection</a></li>
+                <li class="sub-nav-item"><a class="link" href="">Collection</a></li>
                 {{/ timesrand }}
               {{/ times }}
               </li>
@@ -71,7 +99,7 @@
   </nav>
 </div>
 <!-- include jquery -->
-<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
 <!-- include the jquery-accessibleMegaMenu plugin script -->
 <script src="/js/menu-accessible.js"></script>
 <!-- initialize a selector as an accessibleMegaMenu -->
@@ -107,7 +135,14 @@
     if (!$(this).hasClass('open')) {
       $(this).closest('.sub-nav').find('.open').removeClass('open');
     }
+    $(this).find('.link').toggleClass('open');
     $(this).toggleClass('open').nextUntil('.sub-nav-title').toggleClass('open');
+  });
+
+  parentNavMenu.on('click', '.icon-ui-gt', function(e){
+    e.stopPropagation();
+    console.log($(this).closest('a').attr('href'));
+    // alert('target link', $(this).closest('a').attr('href'))
   });
 
 </script>
