@@ -6,7 +6,7 @@
   .c-search__button {
     color: $white;
     background: $cool-grey-hover;
-    @extend .u-no-underline;
+    @extend .u-font-no-underline;
   }
   .icon-search:before {
     color: $keyline-color;

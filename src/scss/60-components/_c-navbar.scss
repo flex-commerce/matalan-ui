@@ -9,27 +9,47 @@
 }
 
 .c-navbar {
-  @include border-tb-default(2px);
   .navbar--top-item {
-    text-transform: uppercase;
-    > a {
-      display: inline-block;
-      // padding: 0 1em;
-      color: $base-text-color;
-      text-decoration: none;
-      &.active,
-      &:hover {
-        // border-bottom: 2px solid $primary-color;
+    font-size: rem-calc(12);
+  }
+  .navbar--top-item .link {
+    // display: inline-block;
+    // color: $base-text-color;
+    // text-decoration: none;
+  }
+}
+
+@include mq($until: lg) {
+  .c-navbar {
+    @extend .justify-parent;
+    .navbar--top-item {
+      @extend .justified-child;
+    }
+    .navbar--header, .navbar--footer {
+      overflow: hidden;
+      padding: 0.5rem 0.75rem;
+      > a {
+        width: 33%;
       }
     }
   }
-  @extend .justify-parent;
-  .navbar--header {
-    overflow: hidden;
+}
+
+@include mq($from: lg) {
+  .c-navbar {
+    @include border-tb-default(2px);
+    .navbar--header, .navbar--footer {
+      display: none;
+    }
   }
-  .navbar--top-item {
-    @extend .justified-child;
-    font-size: rem-calc(12);
+}
+
+
+
+.nav-mobile-button {
+  @extend .u-cf;
+  @include mq($from: lg) {
+    display: none;
   }
 }
 
@@ -38,8 +58,6 @@
   // padding: 15px; // disabled while syling off canvas
   text-transform: initial;
   .sub-nav-title {
-
-
     @include mq($from: lg) {
       // todo - revisit
       color: $primary-color;
@@ -62,10 +80,8 @@
   }
 }
 
-
 .c-navbar {
   @include mq($from: lg) {
-    padding: 0 2rem;
+    // padding: 0 2rem;
   }
 }
-

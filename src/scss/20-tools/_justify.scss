@@ -1,5 +1,7 @@
 // reusable mixin to justify a row of inline block level elements
 // todo - move to mixins and check for reuasability
+
+// mixin method - justify all children
 @mixin justify-children {
   text-align: justify;
   font-size: 0;
@@ -14,6 +16,8 @@
   }
 }
 
+
+// mixin method - class method, specify children
 .justify-parent {
   text-align: justify;
   font-size: 0;

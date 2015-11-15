@@ -5,15 +5,18 @@
   <nav class="c-navbar-container" data-app="accessible-navmenu">
     <ul class="accessible-navmenu c-navbar">
 
-      <li class="navbar--header">
-        <a class="u-fl">
+      <li class="navbar--header justify-parent">
+        <a class="link justified-child u-font-ta-c">
           <i class="nav-mobile-button icon-menu"></i>
+          <span>foo</span>
         </a>
-        <a class="u-fl">
+        <a class="link justified-child u-font-ta-c">
           <i class="nav-mobile-button icon-menu"></i>
+          <span>foo</span>
         </a>
-        <a class="u-fl">
+        <a class="link justified-child u-font-ta-c">
           <i class="nav-mobile-button icon-menu"></i>
+          <span>foo</span>
         </a>
       </li>
 
@@ -42,7 +45,14 @@
                   </span>
                 </a>
                 {{# timesrand 2 6}}
-                <li class="sub-nav-item"><a class="link" href="">Collection {{this}}</a></li>
+                <li class="sub-nav-item">
+                  <a class="link" href="">
+                    Collection {{this}}
+                    <span class="nav-menu-icons u-fr">
+                      <span><i class="icon-ui-gt"></i></span>
+                    </span>
+                  </a>
+                </li>
                 {{/ timesrand }}
               </li>
               {{/ times }}
@@ -82,9 +92,16 @@
                   </span>
                 </a>
                 {{# timesrand 2 6}}
-                <li class="sub-nav-item"><a class="link" href="">Collection</a></li>
+                <li class="sub-nav-item">
+                  <a class="link" href="">
+                  Collection
+                  <span class="nav-menu-icons u-fr">
+                    <span><i class="icon-ui-gt"></i></span>
+                  </span>
+                  </a>
+                </li>
                 {{/ timesrand }}
-              {{/ times }}
+                {{/ times }}
               </li>
             </ul>
             {{/ times }}
@@ -95,6 +112,19 @@
         </div>
       </li>
       {{/ times }}
+
+      <li class="navbar--footer justify-parent">
+        <a class="link justified-child u-font-ta-c">
+          <span>foo</span>
+        </a>
+        <a class="link justified-child u-font-ta-c">
+          <span>foo</span>
+        </a>
+        <a class="link justified-child u-font-ta-c">
+          <span>foo</span>
+        </a>
+      </li>
+
     </ul>
   </nav>
 </div>
@@ -104,24 +134,59 @@
 <script src="/js/menu-accessible.js"></script>
 <!-- initialize a selector as an accessibleMegaMenu -->
 <script>
-  $("[data-app~=accessible-navmenu]").accessibleMegaMenu({
-    /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
-    uuidPrefix: "accessible-menu",
-    menuClass: "c-navbar",
-    topNavItemClass: "navbar--top-item",
-    panelClass: "sub-nav",
-    panelGroupClass: "sub-nav-group",
-    hoverClass: "hover",
-    focusClass: "focus",
-    openClass: "open"
+$( document ).ready(function() {
+
+  function initPageLarge() {
+    $("[data-app~=accessible-navmenu]").accessibleMegaMenu({
+      /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+      uuidPrefix: "accessible-menu",
+      menuClass: "c-navbar",
+      topNavItemClass: "navbar--top-item",
+      panelClass: "sub-nav",
+      panelGroupClass: "sub-nav-group",
+      hoverClass: "hover",
+      focusClass: "focus",
+      openClass: "open"
+    });
+  }
+
+  initPageLarge();
+
+
+  // megamenu init
+
+
+  // ===========================
+
+  // off canvas navigation rules
+  var parentNavMenu = $('[data-app="accessible-navmenu"]')
+  var clickCatcher = '<div id="js-clickcatcher" class="js-clickcatcher"></div>'
+
+  function closeOffCanvas(){
+    $('html').removeClass("off-canvas--active");
+    $("[data-app~=accessible-navmenu]").removeClass("active");
+    $('#js-clickcatcher').remove();
+  }
+  function openOffCanvas(){
+    $('html').addClass("off-canvas--active");
+    $("[data-app~=accessible-navmenu]").addClass("active");
+    $('body').append(clickCatcher);
+  }
+
+  // off canvas event handler
+  $(".nav-mobile-button").click(function(){
+    if ($('html').hasClass('off-canvas--active')) {
+      closeOffCanvas();
+    } else {
+      openOffCanvas();
+    }
   });
 
-  $('nav a').on('click', function(e) {
-    e.preventDefault();
+  $('body').on('click', '#js-clickcatcher', function(){
+    closeOffCanvas();
   })
 
-  var parentNavMenu = $('[data-app="accessible-navmenu"]')
-
+  // toggle top level nav item
   parentNavMenu.on('click', '.navbar--top-item > a', function(e){
     e.preventDefault();
     if (!$(this).hasClass('open')) {
@@ -130,6 +195,7 @@
     $(this).toggleClass('open').next('.sub-nav').toggleClass('open');
   })
 
+  // toggle sub nav item
   parentNavMenu.on('click', '.sub-nav-title', function(e){
     e.preventDefault();
     if (!$(this).hasClass('open')) {
@@ -139,10 +205,35 @@
     $(this).toggleClass('open').nextUntil('.sub-nav-title').toggleClass('open');
   });
 
+  // open menu item chevron click
   parentNavMenu.on('click', '.icon-ui-gt', function(e){
     e.stopPropagation();
     console.log($(this).closest('a').attr('href'));
-    // alert('target link', $(this).closest('a').attr('href'))
   });
+
+  // ===========================
+
+  // DEVELOPER RULE - stop links from acting on click
+  $('nav a').on('click', function(e) {
+    e.preventDefault();
+  })
+
+  // ===========================
+
+  function handleWindowResize() {
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      console.log('handling resize');
+      closeOffCanvas();
+    }
+  }
+
+  $(window).on('resize', _.debounce(function(){
+    handleWindowResize();
+  }, 250));
+
+
+
+
+});
 
 </script>

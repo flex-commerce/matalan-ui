@@ -9,9 +9,10 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 13.755em;
-    left: -13.755em;
+    width: 85%;
+    left: -85%;
     z-index: 1;
+    border-right: 1px solid #aaa;
     &.active {
       left: 0;
     }
@@ -48,6 +49,21 @@
 }
 
 
+/* first descendant link within a top level navigation item */
+
+@include mq($from: lg) {
+  .navbar--top-item,
+  .sub-nav-item > {
+    .link {
+      // margin-bottom: -1px;
+      // border-color: #aaa;
+      // border-width: 1px;
+      // border-style: solid none;
+    }
+  }
+}
+
+
 /* mega menu list */
 
 .c-navbar {
@@ -61,34 +77,22 @@
 .navbar--top-item {}
 
 
-/* first descendant link within a top level navigation item */
-.navbar--top-item,
-.sub-nav-item > {
-  .link {
-    margin-bottom: -1px;
-    border-color: #aaa;
-    border-width: 1px;
-    border-style: solid none;
-  }
-}
-
 /* focus/open states of first descendant link within a top level navigation item */
 
-@include mq($from: lg) {
-  .navbar--top-item > .link.open,
-  a.active,
-  a:focus {
-    border-bottom: 2px solid $primary-color;
-  }
-}
-
+// @include mq($from: lg) {
+//   .navbar--top-item > .link {
+//     a.active,
+//     a:focus {
+//       border-bottom: 2px solid $primary-color;
+//     }
+//   }
+// }
 
 /* open state of first descendant link within a top level navigation item */
 
-.navbar--top-item > .link.open {
-  z-index: 1;
-}
-
+// .navbar--top-item > .link.open {
+//   z-index: 1;
+// }
 
 /* sub-navigation panel */
 
@@ -123,16 +127,18 @@
 
 /* list of items within sub-navigation panel */
 
-.sub-nav > ul {
-  @include mq($until: lg) {
-    display: block;
-  }
-  @include mq($from: lg) {
-    display: inline-block;
-  }
-  vertical-align: top;
-  margin: 0 1em 0 0;
-  padding: 0;
+.sub-nav .sub-nav-group {
+  // @include mq($until: lg) {
+  //   display: block;
+  //   outline: 2px dotted red;
+  // }
+  // @include mq($from: lg) {
+  //   display: inline-block;
+  //   outline: 2px dotted green;
+  // }
+  // vertical-align: top;
+  // margin: 0 1em 0 0;
+  // padding: 0;
 }
 
 
@@ -140,16 +146,9 @@
 
 .sub-nav li {
   // display: block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-mobile-button {
-  @extend .u-cf;
-  @include mq($from: lg) {
-    display: none;
-  }
+  // list-style-type: none;
+  // margin: 0;
+  // padding: 0;
 }
 
 
@@ -160,30 +159,42 @@
   // @include black-link;
 }
 
-
-
-
 // typography for the mega menu and off canvas menu
-.navbar--top-item,
-.sub-nav-title,
-.sub-nav-item {
-  a {
-    @include font-size(12px, 1.8);
-    text-decoration: none;
+.navbar--header span,
+.navbar--top-item > .link,
+.sub-nav-title > .link {
+  text-transform: uppercase;
+}
+
+.navbar--header span,
+.navbar--top-item > .link,
+.sub-nav-title > .link,
+.sub-nav-item > .link {
+  @include font-size(12px, 1.8);
+  text-decoration: none;
+}
+
+@include mq($from: lg) {
+  .navbar--top-item {
+    padding: 1.25em 0.5em;
   }
 }
 
 @include mq($until: lg) {
+
   .navbar--top-item > .link,
   .sub-nav-title > .link,
   .sub-nav-item > .link {
-    padding: 0.5em 0.5em 0.5em 1em;
-  }
-  .navbar--top-item > .link, .sub-nav-title > .link  {
-    text-transform: uppercase;
+    padding: 1.25em 1em;
   }
 
   // off canvas icon management
+  .link {
+    position: relative;
+    overflow: hidden;
+  }
+
+  // default icon rules & display
   .nav-menu-icons {
     i:before {
       font-size: 21px;
@@ -197,21 +208,50 @@
     }
   }
 
-  .open > .nav-menu-icons {
-    .icon-ui-minus {
-      display: initial;
-    }
-    .icon-ui-plus {
-      display: none;
-    }
-    .icon-ui-gt {
-      display: initial;
+  // always show bottom level gt symbol
+  .sub-nav-item .icon-ui-gt {
+    display: initial;
+  }
+
+  // .navbar--top-item > .link.open {
+  //   .icon-ui-minus {
+  //     display: initial;
+  //   }
+  // }
+
+  .navbar--top-item, .sub-nav-title{
+
+    > .link.open {
+      .icon-ui-plus {
+        display: none;
+      }
+      .icon-ui-minus {
+        display: initial;
+      }
+      .icon-ui-gt {
+        display: initial;
+      }
     }
   }
-  .link {
-    position: relative;
-    overflow: hidden;
-  }
+
+  .sub-nav-item {
+
+    }
+
+
+  // .open > .nav-menu-icons {
+  //   .icon-ui-minus {
+  //     display: initial;
+  //     outline: 1px solid red;
+  //   }
+  //   .icon-ui-plus {
+  //     display: none;
+  //   }
+  //   .icon-ui-gt {
+  //     display: initial;
+  //   }
+  // }
+
   .icon-ui-minus {
     margin-right: 1em;
     &:after {
@@ -220,56 +260,36 @@
       top: 0;
       bottom: 0;
       width: 1px;
-      background-color: #aaa;
-      right: 2.5em;
+      background-color: $dark-grey-lighten-20;
+      right: 3em;
     }
   }
+
 }
-
-
-@include mq($from: lg) {
-  .navbar--top-item > .link,
-  .sub-nav-title > .link,
-  .sub-nav-item > .link {
-
-  }
-  .navbar--top-item > .link {
-  }
-  .sub-nav-title > .link {
-    // outline: 1px solid green;
-  }
-  .sub-nav-item > .link {
-    // outline: 1px solid blue;
-  }
-}
-
-
-
-
-
-
-
-
-
 
 @include mq($until: lg) {
   .c-navbar-container {
-    background: $dark-grey-lighten-10;
+    background: $white;
   }
   .sub-nav {
-    background: $dark-grey-lighten-20;
+    background: $dark-grey-lighten-10;
   }
   .sub-nav-item.open {
-    background: $dark-grey-lighten-30;
+    background: $dark-grey-lighten-20;
+  }
+  .navbar--top-item {
+    border-top: 1px solid $dark-grey-lighten-20;
+    &:last-child {
+      border-bottom: 1px solid $dark-grey-lighten-20;
+    }
+  }
+  .sub-nav-title {
+    border-top: 1px solid $dark-grey-lighten-30;
+  }
+  .sub-nav-item {
+    border-top: 1px solid $dark-grey-lighten-30;
   }
 }
-
-.sub-nav--title {
-  // color: red;
-}
-
-.navbar--addon {}
-
 
 
 @include mq($until: lg) {
@@ -292,6 +312,8 @@
   }
   .sub-nav.open {
     @include bleed(50vw);
+    padding-top: 1em;
+    padding-bottom: 1em;
     max-width: 100%;
     margin: 0 auto;
     border-bottom: 1px solid $secondary-color;
@@ -319,5 +341,29 @@
 @include mq($from: lg) {
   .sub-nav-group:not(:last-child) {
     padding-right: 1em;
+  }
+}
+
+// temp
+html.off-canvas--active {
+  overflow-y: hidden;
+  .js-clickcatcher {
+    @include position(absolute, top 0 right 0 bottom 0 left 0);
+    background-color: rgba($black, 0.5);
+  }
+}
+
+@include mq($from: lg) {
+  .nav-menu-icons {
+    display: none;
+  }
+  .sub-nav {
+    background-color: $white;
+  }
+}
+
+@include mq($until: lg) {
+  .c-navbar-container {
+    overflow-y: auto;
   }
 }
