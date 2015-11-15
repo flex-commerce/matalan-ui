@@ -1,81 +1,239 @@
-<div class="row">
-  <div class="col-sm-12">
-    <i class="nav-mobile-button icon-menu"><span>Menu</span></i>
-    <nav class="c-navbar-container" data-app="accessible-navmenu">
+<div class="col-xs-12">
 
-      <ul class="accessible-navmenu c-navbar">
+  <i class="nav-mobile-button icon-menu"><span>Menu</span></i>
 
+  <nav class="c-navbar-container" data-app="accessible-navmenu">
+    <ul class="accessible-navmenu c-navbar">
 
-        <!-- category menu block -->
-        <li class="navbar--top-item">
-          <a class="active" href="">Category 0</a>
-          <div class="sub-nav">
-            <h2 class="sub-nav-header">Section Header</h2>
+      <li class="navbar--header justify-parent">
+        <a class="link justified-child u-font-ta-c">
+          <i class="nav-mobile-button icon-menu"></i>
+          <span>foo</span>
+        </a>
+        <a class="link justified-child u-font-ta-c">
+          <i class="nav-mobile-button icon-menu"></i>
+          <span>foo</span>
+        </a>
+        <a class="link justified-child u-font-ta-c">
+          <i class="nav-mobile-button icon-menu"></i>
+          <span>foo</span>
+        </a>
+      </li>
+
+      <li class="navbar--top-item">
+        <a class="link" href="#">
+          Section 0
+          <span class="nav-menu-icons u-fr">
+            <span><i class="icon-ui-minus"></i></span>
+            <span><i class="icon-ui-plus"></i></span>
+            <span><i class="icon-ui-gt"></i></span>
+          </span>
+        </a>
+        <div class="sub-nav">
+          <h2 class="sub-nav-header">Section Header</h2>
+          <div class="sub-nav--group--container">
             {{# times 6}}
             <ul class="sub-nav-group">
               {{# times 2}}
-              <li class="sub-nav-title">Category</li>
-              {{# timesrand 2 6}}
-              <li class="sub-nav-item"><a href="">{{lorem count=2}}</a></li>
-              {{/ timesrand }}
+              <li class="sub-nav-title">
+                <a class="link" href="">
+                  Category {{this}}
+                  <span class="nav-menu-icons u-fr">
+                    <span><i class="icon-ui-minus"></i></span>
+                    <span><i class="icon-ui-plus"></i></span>
+                    <span><i class="icon-ui-gt"></i></span>
+                  </span>
+                </a>
+                {{# timesrand 2 6}}
+                <li class="sub-nav-item">
+                  <a class="link" href="">
+                    Collection {{this}}
+                    <span class="nav-menu-icons u-fr">
+                      <span><i class="icon-ui-gt"></i></span>
+                    </span>
+                  </a>
+                </li>
+                {{/ timesrand }}
+              </li>
               {{/ times }}
             </ul>
             {{/ times }}
+            <ul class="sub-nav-group sub-nav-group__image">
+              <li><img src="http://placehold.it/150x350"></li>
+            </ul>
           </div>
-        </li>
-        <!-- end category menu block -->
+        </div>
+      </li>
 
 
-        <!-- repeat menu block -->
-        {{# times 8}}
-        <li class="navbar--top-item">
-          <a class="" href="">Category {{this}}</a>
-          <div class="sub-nav">
-            <h2 class="sub-nav-header">Section Header</h2>
+      {{# times 10}}
+      <li class="navbar--top-item">
+        <a class="link" href="#">
+          Section {{this}}
+          <span class="nav-menu-icons u-fr">
+            <span><i class="icon-ui-minus"></i></span>
+            <span><i class="icon-ui-plus"></i></span>
+            <span><i class="icon-ui-gt"></i></span>
+          </span>
+        </a>
+        <div class="sub-nav">
+          <h2 class="sub-nav-header">Section Header</h2>
+          <div class="sub-nav--group--container">
             {{# times 6}}
             <ul class="sub-nav-group">
               {{# times 2}}
-              <li class="sub-nav-title">Category</li>
-              {{# timesrand 2 6}}
-              <li class="sub-nav-item"><a href="">{{lorem count=2}}</a></li>
-              {{/ timesrand }}
-              {{/ times }}
+              <li class="sub-nav-title">
+                <a class="link" href="">
+                  Category
+                  <span class="nav-menu-icons u-fr">
+                    <span><i class="icon-ui-minus"></i></span>
+                    <span><i class="icon-ui-plus"></i></span>
+                    <span><i class="icon-ui-gt"></i></span>
+                  </span>
+                </a>
+                {{# timesrand 2 6}}
+                <li class="sub-nav-item">
+                  <a class="link" href="">
+                  Collection
+                  <span class="nav-menu-icons u-fr">
+                    <span><i class="icon-ui-gt"></i></span>
+                  </span>
+                  </a>
+                </li>
+                {{/ timesrand }}
+                {{/ times }}
+              </li>
             </ul>
             {{/ times }}
+            <ul class="sub-nav-group sub-nav-group__image">
+              <li><img src="http://placehold.it/150x350"></li>
+            </ul>
           </div>
-        </li>
-        {{/ times }}
-        <!-- end repeat menu block -->
+        </div>
+      </li>
+      {{/ times }}
 
+      <li class="navbar--footer justify-parent">
+        <a class="link justified-child u-font-ta-c">
+          <span>foo</span>
+        </a>
+        <a class="link justified-child u-font-ta-c">
+          <span>foo</span>
+        </a>
+        <a class="link justified-child u-font-ta-c">
+          <span>foo</span>
+        </a>
+      </li>
 
-      </ul>
-    </nav>
-
-  </div>
-
+    </ul>
+  </nav>
 </div>
-
-
-
 <!-- include jquery -->
-<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
 <!-- include the jquery-accessibleMegaMenu plugin script -->
 <script src="/js/menu-accessible.js"></script>
 <!-- initialize a selector as an accessibleMegaMenu -->
 <script>
-  $("[data-app~=accessible-navmenu]").accessibleMegaMenu({
-    /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
-    uuidPrefix: "accessible-menu",
-    menuClass: "c-navbar",
-    topNavItemClass: "navbar--top-item",
-    panelClass: "sub-nav",
-    panelGroupClass: "sub-nav-group",
-    hoverClass: "hover",
-    focusClass: "focus",
-    openClass: "open"
+$( document ).ready(function() {
+
+  function initPageLarge() {
+    $("[data-app~=accessible-navmenu]").accessibleMegaMenu({
+      /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+      uuidPrefix: "accessible-menu",
+      menuClass: "c-navbar",
+      topNavItemClass: "navbar--top-item",
+      panelClass: "sub-nav",
+      panelGroupClass: "sub-nav-group",
+      hoverClass: "hover",
+      focusClass: "focus",
+      openClass: "open"
+    });
+  }
+
+  initPageLarge();
+
+
+  // megamenu init
+
+
+  // ===========================
+
+  // off canvas navigation rules
+  var parentNavMenu = $('[data-app="accessible-navmenu"]')
+  var clickCatcher = '<div id="js-clickcatcher" class="js-clickcatcher"></div>'
+
+  function closeOffCanvas(){
+    $('html').removeClass("off-canvas--active");
+    $("[data-app~=accessible-navmenu]").removeClass("active");
+    $('#js-clickcatcher').remove();
+  }
+  function openOffCanvas(){
+    $('html').addClass("off-canvas--active");
+    $("[data-app~=accessible-navmenu]").addClass("active");
+    $('body').append(clickCatcher);
+  }
+
+  // off canvas event handler
+  $(".nav-mobile-button").click(function(){
+    if ($('html').hasClass('off-canvas--active')) {
+      closeOffCanvas();
+    } else {
+      openOffCanvas();
+    }
   });
 
+  $('body').on('click', '#js-clickcatcher', function(){
+    closeOffCanvas();
+  })
 
+  // toggle top level nav item
+  parentNavMenu.on('click', '.navbar--top-item > a', function(e){
+    e.preventDefault();
+    if (!$(this).hasClass('open')) {
+      parentNavMenu.find('.open').removeClass('open');
+    }
+    $(this).toggleClass('open').next('.sub-nav').toggleClass('open');
+  })
+
+  // toggle sub nav item
+  parentNavMenu.on('click', '.sub-nav-title', function(e){
+    e.preventDefault();
+    if (!$(this).hasClass('open')) {
+      $(this).closest('.sub-nav').find('.open').removeClass('open');
+    }
+    $(this).find('.link').toggleClass('open');
+    $(this).toggleClass('open').nextUntil('.sub-nav-title').toggleClass('open');
+  });
+
+  // open menu item chevron click
+  parentNavMenu.on('click', '.icon-ui-gt', function(e){
+    e.stopPropagation();
+    console.log($(this).closest('a').attr('href'));
+  });
+
+  // ===========================
+
+  // DEVELOPER RULE - stop links from acting on click
+  $('nav a').on('click', function(e) {
+    e.preventDefault();
+  })
+
+  // ===========================
+
+  function handleWindowResize() {
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      console.log('handling resize');
+      closeOffCanvas();
+    }
+  }
+
+  $(window).on('resize', _.debounce(function(){
+    handleWindowResize();
+  }, 250));
+
+
+
+
+});
 
 </script>
-

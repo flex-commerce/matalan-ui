@@ -135,10 +135,9 @@
 // temp icon dev rules
 [class^="icon-"],
 [class*=" icon-"] {
-  margin-bottom: 1em; // todo - replace temp dev rule
   &:before {
     font-size: rem-calc(32px); // todo - replace temp dev rule
-    padding-right: 0.5em; // todo - replace temp dev rule
+    // padding-right: 0.5em; // todo - replace temp dev rule
     display: inline-block;
     color: $cool-grey;
   }

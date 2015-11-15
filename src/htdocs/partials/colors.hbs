@@ -1,11 +1,9 @@
-<div class="ui-row">
-
-  <div class="ui-row ui-colors">
-    <div class="col-sm-12">
-      <h1>Colour Pallette</h1>
-    </div>
-
-    <div class="col-md-6 u-pad-0">
+<div class="row ui-colors">
+  <div class="col-sm-12">
+    <h1>Colour Pallette</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
       <div class="col-sm-12">
         <h3>Brand Colours</h3>
         <p>Core colours from brand elements.</p>
@@ -51,10 +49,10 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 u-pad-0">
+    <div class="col-md-6">
       <div class="col-sm-12">
         <h3>Supporting Colours</h3>
-        <p>Seasonal or secondary colour set. Will be reproduced for every season or promotion event with a new set of colours.</p>
+        <p>Seasonal or secondary colour set.</p>
       </div>
       <div class="col-sm-3">
         <div class="ui-color-pall u-round u-bgcolor-gold">
@@ -97,11 +95,13 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12">
-      <h3>Web Colours</h3>
-      <p>Brand colours to support UX and used online only.</p>
-    </div>
-    <div class="col-md-6 u-pad-0">
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="col-md-12">
+        <h3>Web Colours</h3>
+        <p>Brand colours to support UX and used online only.</p>
+      </div>
       <div class="col-sm-3">
         <div class="ui-color-pall u-round u-bgcolor-pri-hover">
         </div>
@@ -144,45 +144,45 @@
       </div>
     </div>
   </div>
-  <div class="ui-row">
-    <div class="col-md-6 u-pad-0">
-      <div class="col-sm-12">
-        <h3>Red Variations</h3>
-        <p>Different variations of red</p>
-      </div>
-      {{# times 10}}
-      <div class="col-sm-3">
-        <div class="ui-color-pall u-round u-bgcolor-pri{{this}}0">
-        </div>
-        <div class="pallette__info">
-          <h5>Red Hover State {{this}}0%</h5>
-          <p class="u-bgcolor-pri{{this}}0">.u-bgcolor-pri{{this}}0</p>
-          <p class="u-color-pri{{this}}0">.u-color-pri{{this}}0</p>
-        </div>
-      </div>
-      {{/ times }}
+</div>
+<div class="ui-row">
+  <div class="col-md-6 u-pad-0">
+    <div class="col-sm-12">
+      <h3>Red Variations</h3>
+      <p>Different variations of red</p>
     </div>
-
-    <div class="col-md-6 u-pad-0">
-      <div class="col-sm-12">
-        <h3>Grey Variations</h3>
-        <p>Different variations of red</p>
+    {{# times 10}}
+    <div class="col-sm-3">
+      <div class="ui-color-pall u-round u-bgcolor-pri{{this}}0">
       </div>
-      {{# times 10}}
-      <div class="col-sm-3">
-        <div class="ui-color-pall u-round u-bgcolor-grey{{this}}0">
-        </div>
-        <div class="pallette__info">
-          <h5>Grey Hover State {{this}}0%</h5>
-          <p class="u-bgcolor-grey{{this}}0 u-color-white">.u-bgcolor-grey{{this}}0</p>
-          <p class="u-color-grey{{this}}0">.u-color-grey{{this}}0</p>
-        </div>
+      <div class="pallette__info">
+        <h5>Red Hover State {{this}}0%</h5>
+        <p class="u-bgcolor-pri{{this}}0">.u-bgcolor-pri{{this}}0</p>
+        <p class="u-color-pri{{this}}0">.u-color-pri{{this}}0</p>
       </div>
-      {{/ times }}
     </div>
+    {{/ times }}
   </div>
-  <div class="ui-grid-50">
-    <pre>
+  <div class="col-md-6 u-pad-0">
+    <div class="col-sm-12">
+      <h3>Grey Variations</h3>
+      <p>Different variations of red</p>
+    </div>
+    {{# times 10}}
+    <div class="col-sm-3">
+      <div class="ui-color-pall u-round u-bgcolor-grey{{this}}0">
+      </div>
+      <div class="pallette__info">
+        <h5>Grey Hover State {{this}}0%</h5>
+        <p class="u-bgcolor-grey{{this}}0 u-color-white">.u-bgcolor-grey{{this}}0</p>
+        <p class="u-color-grey{{this}}0">.u-color-grey{{this}}0</p>
+      </div>
+    </div>
+    {{/ times }}
+  </div>
+</div>
+<div class="ui-grid-50">
+  <pre>
       <code class="css">/**<br />
      * Matalan UI Kit Colors<br />
      */<br /><br />
@@ -217,9 +217,9 @@
 
       </code>
     </pre>
-  </div>
-  <div class="ui-grid-50">
-    <pre>
+</div>
+<div class="ui-grid-50">
+  <pre>
       <code class="css">/* <br />
      * Mappings<br />
      */<br />
@@ -255,5 +255,4 @@
     $dark-grey-lighten-10
       </code>
     </pre>
-  </div>
 </div>

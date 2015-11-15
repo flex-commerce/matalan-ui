@@ -125,7 +125,7 @@ $input-padding-y: $default-pad-y;
   border-right-style: none;
 }
 // input with both trailing & leading addon
-.input-addon--expand:nth-child(2):nth-last-child(n+2):not(.input-group--addon__inset-left):not(.input-group--addon__inset-right)     {
+.input-addon--expand:nth-child(2):nth-last-child(n+2):not(.input-group--addon__inset-left):not(.input-group--addon__inset-right) {
   border-right-style: none;
   border-left-style: none;
 }

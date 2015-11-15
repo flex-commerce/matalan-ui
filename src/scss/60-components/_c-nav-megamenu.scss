@@ -1,113 +1,369 @@
-  /* Rudimentary mega menu CSS for demonstration */
-  /* should be extended for dropdowns, selects etc */
+/* Rudimentary mega menu CSS for demonstration */
+
+
+/* should be extended for dropdowns, selects etc */
+
+// styles for off canvas version - < 1024px
+@include mq($until: lg) {
   .c-navbar-container {
-    @media (max-width:768px){
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      width: 13.755em;
-      left: -13.755em;
-      height: 100%;
-      transform: translate(0px, 0px);
-      background-color: $white;
-      &.active {
-        transform: translate(13.755em, 0px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 85%;
+    left: -85%;
+    z-index: 1;
+    border-right: 1px solid #aaa;
+    &.active {
+      left: 0;
+    }
+  }
+  &.active .navbar--top-item {
+    display: block;
+    a {
+      display: block;
+    }
+  }
+  .sub-nav {
+    display: block;
+  }
+  .sub-nav-header {
+    display: none;
+  }
+  .sub-nav-item {
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
+  .sub-nav-item--list {
+    display: none;
+  }
+  .sub-nav-group {
+    display: block;
+  }
+  .sub-nav-title .open {
+    + .sub-nav-item--list {
+      display: block;
+    }
+  }
+}
+
+
+/* first descendant link within a top level navigation item */
+
+@include mq($from: lg) {
+  .navbar--top-item,
+  .sub-nav-item > {
+    .link {
+      // margin-bottom: -1px;
+      // border-color: #aaa;
+      // border-width: 1px;
+      // border-style: solid none;
+    }
+  }
+}
+
+
+/* mega menu list */
+
+.c-navbar {
+  position: relative;
+  z-index: 15;
+}
+
+
+/* a top level navigation item in the mega menu */
+
+.navbar--top-item {}
+
+
+/* focus/open states of first descendant link within a top level navigation item */
+
+// @include mq($from: lg) {
+//   .navbar--top-item > .link {
+//     a.active,
+//     a:focus {
+//       border-bottom: 2px solid $primary-color;
+//     }
+//   }
+// }
+
+/* open state of first descendant link within a top level navigation item */
+
+// .navbar--top-item > .link.open {
+//   z-index: 1;
+// }
+
+/* sub-navigation panel */
+
+.sub-nav {
+  @include mq($from: lg) {
+    position: absolute;
+  }
+  display: none;
+  top: rem-calc(52); // @TODO - magic number, height of menu
+  left: 0;
+  right: 0;
+  margin-top: -1px;
+  // border: 1px solid #ececec;
+  // background-color: #fff;
+  & > div {
+    // @extend .justify-parent;
+  }
+}
+
+.sub-nav-group {
+  // @extend .justified-child;
+  vertical-align: top;
+}
+
+
+/* sub-navigation panel open state */
+
+.sub-nav.open {
+  display: block;
+}
+
+
+/* list of items within sub-navigation panel */
+
+.sub-nav .sub-nav-group {
+  // @include mq($until: lg) {
+  //   display: block;
+  //   outline: 2px dotted red;
+  // }
+  // @include mq($from: lg) {
+  //   display: inline-block;
+  //   outline: 2px dotted green;
+  // }
+  // vertical-align: top;
+  // margin: 0 1em 0 0;
+  // padding: 0;
+}
+
+
+/* list item within sub-navigation panel */
+
+.sub-nav li {
+  // display: block;
+  // list-style-type: none;
+  // margin: 0;
+  // padding: 0;
+}
+
+
+/* misc */
+
+.sub-nav-title a,
+.sub-nav-item a {
+  // @include black-link;
+}
+
+// typography for the mega menu and off canvas menu
+.navbar--header span,
+.navbar--top-item > .link,
+.sub-nav-title > .link {
+  text-transform: uppercase;
+}
+
+.navbar--header span,
+.navbar--top-item > .link,
+.sub-nav-title > .link,
+.sub-nav-item > .link {
+  @include font-size(12px, 1.8);
+  text-decoration: none;
+}
+
+@include mq($from: lg) {
+  .navbar--top-item {
+    padding: 1.25em 0.5em;
+  }
+}
+
+@include mq($until: lg) {
+
+  .navbar--top-item > .link,
+  .sub-nav-title > .link,
+  .sub-nav-item > .link {
+    padding: 1.25em 1em;
+  }
+
+  // off canvas icon management
+  .link {
+    position: relative;
+    overflow: hidden;
+  }
+
+  // default icon rules & display
+  .nav-menu-icons {
+    i:before {
+      font-size: 21px;
+      line-height: 21px;
+    }
+    .icon-ui-minus {
+      display: none;
+    }
+    .icon-ui-gt {
+      display: none;
+    }
+  }
+
+  // always show bottom level gt symbol
+  .sub-nav-item .icon-ui-gt {
+    display: initial;
+  }
+
+  // .navbar--top-item > .link.open {
+  //   .icon-ui-minus {
+  //     display: initial;
+  //   }
+  // }
+
+  .navbar--top-item, .sub-nav-title{
+
+    > .link.open {
+      .icon-ui-plus {
+        display: none;
+      }
+      .icon-ui-minus {
+        display: initial;
+      }
+      .icon-ui-gt {
+        display: initial;
       }
     }
   }
-  /* mega menu list */
-  .c-navbar {
-    display: block;
-    position: relative;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    z-index: 15;
+
+  .sub-nav-item {
+
+    }
+
+
+  // .open > .nav-menu-icons {
+  //   .icon-ui-minus {
+  //     display: initial;
+  //     outline: 1px solid red;
+  //   }
+  //   .icon-ui-plus {
+  //     display: none;
+  //   }
+  //   .icon-ui-gt {
+  //     display: initial;
+  //   }
+  // }
+
+  .icon-ui-minus {
+    margin-right: 1em;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: $dark-grey-lighten-20;
+      right: 3em;
+    }
   }
 
-  /* a top level navigation item in the mega menu */
-  .navbar--top-item {
-    list-style: none;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-  }
+}
 
-  /* first descendant link within a top level navigation item */
-  .navbar--top-item > a {
-    position: relative;
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 0 0 -1px 0;
-    border: 1px solid transparent;
+@include mq($until: lg) {
+  .c-navbar-container {
+    background: $white;
   }
-
-  /* focus/open states of first descendant link within a top level navigation item */
-  .navbar--top-item > a:focus,
-  .navbar--top-item > a.open {
-    // border: 1px solid #dedede;
-  }
-
-  /* open state of first descendant link within a top level navigation item */
-  .navbar--top-item > a.open {
-    background-color: #fff;
-    border-bottom: none;
-    z-index: 1;
-  }
-
-  /* sub-navigation panel */
   .sub-nav {
-    position: absolute;
-    display: none;
-    top: rem-calc(51); // @TODO - magic number, height of menu
-    left: 0;
-    right: 0;
-    margin-top: -1px;
-    border: 1px solid #ececec;
-    background-color: #fff;
-    @extend .justify-parent;
+    background: $dark-grey-lighten-10;
   }
-  .sub-nav-group {
-    @extend .justified-child;
+  .sub-nav-item.open {
+    background: $dark-grey-lighten-20;
   }
+  .navbar--top-item {
+    border-top: 1px solid $dark-grey-lighten-20;
+    &:last-child {
+      border-bottom: 1px solid $dark-grey-lighten-20;
+    }
+  }
+  .sub-nav-title {
+    border-top: 1px solid $dark-grey-lighten-30;
+  }
+  .sub-nav-item {
+    border-top: 1px solid $dark-grey-lighten-30;
+  }
+}
 
 
-  /* sub-navigation panel open state */
-  .sub-nav.open {
-    display: block;
-  }
-
-  /* list of items within sub-navigation panel */
-  .sub-nav ul {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 1em 0 0;
-    padding: 0;
-  }
-
-  /* list item within sub-navigation panel */
-  .sub-nav li {
-    display: block;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-.nav-mobile-button {
-  position: relative;
-  span {
-    position: absolute;
-    left: 0;
-    bottom: -22px;
-  }
-  &:before {
-    padding: 0.1em !important;
-  }
-  i {
-    margin-bottom: 0;
-  }
-  @media (min-width:768px){
+@include mq($until: lg) {
+  .sub-nav-group__image {
     display: none;
   }
 }
 
+// element bleed mixin - @todo - investigate why this breaks when moved to mixin file
+@mixin bleed($bleedVal: 50vw) {
+  margin-left: -$bleedVal;
+  margin-right: -$bleedVal;
+  padding-left: $bleedVal;
+  padding-right: $bleedVal;
+}
+
+@include mq($from: lg) {
+  .c-navbar {
+    @include bleed(50vw);
+  }
+  .sub-nav.open {
+    @include bleed(50vw);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    max-width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid $secondary-color;
+  }
+}
+
+// header flex rules
+.sub-nav--group--container {
+  @include mq($from: lg) {
+    display: flex;
+    .sub-nav-group {
+      float: left;
+      flex: 1 0;
+    }
+  }
+  @include mq($from: xl) {
+    max-width: 1250px;
+  }
+  @include mq($from: lg, $until: xl) {
+    max-width: 100vw;
+  }
+  margin: 0 auto;
+}
+
+@include mq($from: lg) {
+  .sub-nav-group:not(:last-child) {
+    padding-right: 1em;
+  }
+}
+
+// temp
+html.off-canvas--active {
+  overflow-y: hidden;
+  .js-clickcatcher {
+    @include position(absolute, top 0 right 0 bottom 0 left 0);
+    background-color: rgba($black, 0.5);
+  }
+}
+
+@include mq($from: lg) {
+  .nav-menu-icons {
+    display: none;
+  }
+  .sub-nav {
+    background-color: $white;
+  }
+}
+
+@include mq($until: lg) {
+  .c-navbar-container {
+    overflow-y: auto;
+  }
+}
