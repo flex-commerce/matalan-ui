@@ -67,11 +67,22 @@
 }
 
 .menu-button {
+  // @todo - check me
+  outline: 2px dotted red;
+  position: relative;
+  i {
+    // provides enough width for the icon and some margin
+    margin-right: 2.5em;
+    &:before {
+      // abs positioning so the doesnt affect button height
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0.25em;
+    }
+  }
   @include mq($until: md) {
     text-align: left;
-  }
-  i {
-    line-height: 1.3em;
   }
 }
 
