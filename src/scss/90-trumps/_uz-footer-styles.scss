@@ -1,7 +1,16 @@
 .footer--container {
   margin-top: 60px;
   border-top: 1px solid $dark-grey-lighten-30;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
+
+  .o-list-block>.o-list__item {
+    padding: 4px 0;
+    min-width: 200px;
+    h4 {
+      font-size: 1.2em;
+      font-weight: 600px;
+    }
+  }
 }
 
 .card-svg-wrapper-small {
@@ -35,9 +44,12 @@
     // magic number footer offset
     top: -40px;
     background-color: $white;
-    width: calc(50% + 200px);
-    margin-left: -200px;
-    padding-left: 200px;
+    width: calc(50% + 400px);
+    @include mq($from: lg) {
+      width: calc(35% + 400px);
+    }
+    margin-left: -400px;
+    padding-left: 400px;
     float: left;
   }
 
@@ -47,14 +59,21 @@
     border-color: $dark-grey-lighten-30;
     left: 0;
     height: 40px;
-    margin-left: -200px;
-    padding-left: 200px;
+    margin-left: -400px;
+    padding-left: 400px;
   }
   .footer--title {
     margin-top:-30px;
   }
   .footer--social {
     margin-top: 20px;
+    > div {
+      padding: 0;
+    }
+
+    i:before {
+      color: $dark-grey-lighten-70;
+    }
   }
   .footer--list {
     text-align: left;
@@ -92,5 +111,8 @@
 .footer-right {
   float: left;
   width: 50%;
+  @include mq($from: lg) {
+    width: 35%;
+  }
   @include clearfix();
 }
