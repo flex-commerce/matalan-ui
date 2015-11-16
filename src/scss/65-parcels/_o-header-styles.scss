@@ -18,19 +18,20 @@
 
   .o-icon-with-addon {
     i:before {
-      color: $primary-color;
+      color: $dark-grey-lighten-60;
     }
     position: relative;
     span {
+      color: $white;
       position: absolute;
-      background-color: #fff;
+      background-color: $primary-color;
       min-width: 25px;
       line-height: 1.2em;
       height: 20px;
-      bottom: -18px;
-      right: -8px;
+      top: 12px;
+      left: 12px;
       text-align: center;
-      border: 2px solid #eb0000;
+      border: 2px solid #fff;
       border-radius: 11px;
       font-size: 1em;
     }
@@ -42,8 +43,6 @@
   }
   //c ustom button styles for the header icons
   .c-btn {
-    background-color: $white;
-    color: $dark-grey-lighten-60;
     border-color: transparent;
     text-transform: uppercase;
     font-size: 0.9em;
@@ -90,6 +89,9 @@
   @include mq($from: lg) {
     text-align: center;
   }
+  i:before {
+    color: $dark-grey-lighten-60;
+  }
 }
 
 .o-header--menu-button {
@@ -97,10 +99,9 @@
   position: relative;
   display: block;
   cursor: pointer;
-  .c-btn {
-    padding: 0;
-    text-align: center;
-    &:hover {
+  color: $dark-grey-lighten-60;
+  a {
+    :hover {
       border-color: $white;
     }
   }
@@ -109,6 +110,7 @@
     // provides enough width for the icon and some margin
     // margin-right: 1em;
     &:before {
+      color: $dark-grey-lighten-60;
       // abs positioning so the doesnt affect button height
       // position: absolute;
       // top: 0;
@@ -117,9 +119,11 @@
     }
   }
   span {
-    // position: absolute;
-    // left: 0.7em;
+    color: $dark-grey-lighten-60;
+    position: absolute;
+    left: 1em;
     display:block;
+    font-size: 0.8em;
 
   }
   @include mq($until: md) {

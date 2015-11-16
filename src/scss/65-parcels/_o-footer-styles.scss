@@ -11,6 +11,14 @@
       font-weight: 600px;
     }
   }
+  .c-search-form.has-focus .c-search__button {
+    background-color: #dadada;
+    color: $primary-color;
+  }
+
+  .input-group--addon__inset-left {
+    padding-left: 10px !important;
+  }
 }
 
 .o-footer--card-svg-wrapper-small {
