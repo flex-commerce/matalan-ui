@@ -143,6 +143,14 @@ $susy: (
 // this is made only to easily test if our code is working correctly when copy/pasting some bootstrap html code
 // in the real world this is unnecessary
 @mixin make-bootstrap-breakpoint-classes($class) {
+  .col-xs-offset-0,
+  .col-sm-offset-0,
+  .col-md-offset-0,
+  .col-lg-offset-0,
+  .col-xl-offset-0 {
+    margin-left: 0;
+  }
+
   @for $i from 1 through $susy-columns {
     .col-#{$class}-#{$i} {
       width: span($i of $susy-columns);

@@ -1,19 +1,52 @@
-.super-header--container {
+/* Initial css for header */
+
+// Global message container
+.o-super-header--container {
   padding: 0.5em 0;
   background-color: $dark-grey-lighten-50;
   color: $white;
+  // overide default padding to keep text center
+  p {
+    margin-bottom: 0;
+  }
 }
 
-.header--container {
-  border-bottom: 2px solid $dark-grey-lighten-10;
+// main header container coopnsisting of the logo, search bar, checkout
+// and bag buttons and off canvass menu button
+.o-header--container {
+  border-bottom: 1px solid $dark-grey-lighten-10;
 
+  .o-icon-with-addon {
+    i:before {
+      color: $primary-color;
+    }
+    position: relative;
+    span {
+      position: absolute;
+      background-color: #fff;
+      min-width: 25px;
+      line-height: 1.2em;
+      height: 20px;
+      bottom: -18px;
+      right: -8px;
+      text-align: center;
+      border: 2px solid #eb0000;
+      border-radius: 11px;
+      font-size: 1em;
+    }
+  }
+
+  //remove default padding on the search bar
   .o-form-row {
     padding: 0;
   }
-
+  //c ustom button styles for the header icons
   .c-btn {
     background-color: $white;
     border-color: transparent;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: $dark-grey-lighten-60;
     &:hover {
       border-color: transparent;
     }
@@ -28,18 +61,7 @@
   }
 }
 
-// bototm border on row
-.row-b-b {
-
-}
-
-@mixin same-height() {
-  padding-bottom: 1000px;
-  margin-bottom: -1000px;
-  height: 100%;
-}
-
-.header-brand {
+.o-header--brand {
   max-width: 130px;
 
   @include mq($from: md) {
@@ -51,45 +73,22 @@
   }
 
   img {
-    margin-top: 15px;
-    @include mq($until: md) {
-      margin-top: 25px;
-    }
-  }
-
-
-}
-
-.tempHeightClass {
-    height: 70px;
+    margin-top: 25px;
     @include mq($from: md) {
-      height:90px;
+      margin-top: 15px;
     }
+  }
+
 }
 
-.header-button-wrapper {
-  a {
-      color: $dark-grey-lighten-60;
-      text-transform: uppercase;
-      font-size: 11px;
+.o-header--search {
+  text-align: right;
+  @include mq($from: lg) {
+    text-align: center;
   }
 }
 
-.header-button-group {
-  @include mq($until: lg) {
-    margin: 0;
-    padding: 0 !important;
-
-  }
-}
-
-.header-checkout {
-  @include mq($until: lg) {
-    margin-bottom:20px;
-  }
-}
-
-.menu-button {
+.o-header--menu-button {
   // @todo - check me
   position: relative;
   display: block;
@@ -115,52 +114,51 @@
     position: absolute;
     left: 0.7em;
     display:block;
-    color: $dark-grey-lighten-60;
+
   }
   @include mq($until: md) {
     text-align: left;
   }
 }
 
-
-
 .o-list-inline-seperated {
-  color: $dark-grey-lighten-60;
   margin-top: 10px;
+  text-align: right;
+  font-size: 11px;
+  a {
+    color: $dark-grey-lighten-60;
+  }
   > li {
     display: inline-block;
     padding: 5px 15px;
   }
   li + li {
    border-left: 2px solid $dark-grey-lighten-10;
+
   }
-}
-
-.auto-width {
-  width: auto;
-  display: inline-block;
-  white-space: nowrap;
-  @include clearfix;
-}
-
-.va {
-  padding: 5px 0;
-  margin-bottom: 0;
-}
-
-.font-11 {
-  font-size: 11px;
 }
 
 .header--search-bar {
   @include mq($until: lg) {
     display: none;
   }
+
   &.active {
     display: inline;
+
+    @include mq($until: lg) {
+      margin-top: 10px;
+    }
+
+    @include mq($until: md) {
+      margin-bottom: 20px;
+    }
   }
 }
 
+//header utility classes
+
+//margin-top-20
 .header-mt-20 {
   margin-top: 20px;
   @include mq($until: lg) {

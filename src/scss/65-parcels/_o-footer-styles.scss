@@ -1,4 +1,4 @@
-.footer--container {
+.o-footer--container {
   margin-top: 60px;
   border-top: 1px solid $dark-grey-lighten-30;
   padding-bottom: 40px;
@@ -13,7 +13,7 @@
   }
 }
 
-.card-svg-wrapper-small {
+.o-footer--card-svg-wrapper-small {
   width: 20%;
   float:left;
   height: 50px;
@@ -25,7 +25,7 @@
     height: 100%;
   }
 }
-.card-svg-wrapper-medium {
+.o-footer--card-svg-wrapper-medium {
   width: 33.3%;
   float:left;
   height: 70px;
@@ -39,7 +39,7 @@
 }
 
 @include mq($from: md) {
-  .footer-offset {
+  .o-footer--offset {
     position: relative;
     // magic number footer offset
     top: -40px;
@@ -53,7 +53,7 @@
     float: left;
   }
 
-  .footer-t-r {
+  .o-footer-t-r {
     border-width: 1px;
     border-style: solid solid none none;
     border-color: $dark-grey-lighten-30;
@@ -62,10 +62,10 @@
     margin-left: -400px;
     padding-left: 400px;
   }
-  .footer--title {
+  .o-footer--title {
     margin-top:-30px;
   }
-  .footer--social {
+  .o-footer--social {
     margin-top: 20px;
     > div {
       padding: 0;
@@ -75,13 +75,13 @@
       color: $dark-grey-lighten-70;
     }
   }
-  .footer--list {
+  .o-footer--list {
     text-align: left;
   }
 }
 
 @include mq($until: md) {
-  .footer--title {
+  .o-footer--title {
     margin-top:20px;
     font-size: 16px;
     text-align: center;
@@ -89,7 +89,7 @@
 
 
 
-  .footer--social {
+  .o-footer--social {
     margin-top: 10px;
     i:before {
       color: $dark-grey-lighten-60;
@@ -98,7 +98,7 @@
 
 }
 
-.footer--list {
+.o-footer--list {
   margin-top: 10px;
   font-size: 12px;
   color: $dark-grey-lighten-70;
@@ -108,7 +108,7 @@
     padding-bottom: 5px;
   }
 }
-.footer-right {
+.o-footer--right {
   float: left;
   width: 50%;
   @include mq($from: lg) {
