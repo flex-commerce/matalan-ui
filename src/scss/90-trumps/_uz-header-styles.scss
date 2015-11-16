@@ -6,6 +6,26 @@
 
 .header--container {
   border-bottom: 2px solid $dark-grey-lighten-10;
+
+  .o-form-row {
+    padding: 0;
+  }
+
+  .c-btn {
+    background-color: $white;
+    border-color: transparent;
+    &:hover {
+      border-color: transparent;
+    }
+    &.c-btn-header-checkout {
+      background-color: $primary-color;
+      display: block;
+      text-align: center;
+      color: $white;
+      font-size: 1em;
+      font-weight: 500;
+    }
+  }
 }
 
 // bototm border on row
@@ -20,19 +40,24 @@
 }
 
 .header-brand {
-  padding: 20px 0;
   max-width: 130px;
-  @include mq($until: lg) {
-    @include center(xy);
-    max-width: 170px;
+
+  @include mq($from: md) {
+    max-width: 155px;
+  }
+
+  @include mq($from: lg) {
+    max-width: 270px;
   }
 
   img {
     margin-top: 15px;
+    @include mq($until: md) {
+      margin-top: 25px;
+    }
   }
-  @include mq($from: lg) {
-    max-width: 240px;
-  }
+
+
 }
 
 .tempHeightClass {
@@ -43,7 +68,6 @@
 }
 
 .header-button-wrapper {
-  @include center(xy);
   a {
       color: $dark-grey-lighten-60;
       text-transform: uppercase;
@@ -68,19 +92,11 @@
 .menu-button {
   // @todo - check me
   position: relative;
-  margin-top: -7px;
   display: block;
   cursor: pointer;
   a {
     :hover {
       border-color: $white;
-    }
-  }
-  .c-btn {
-    background-color: $white;
-    border-color: transparent;
-    &:hover {
-      border-color: transparent;
     }
   }
 
@@ -109,12 +125,14 @@
 
 
 .o-list-inline-seperated {
+  color: $dark-grey-lighten-60;
+  margin-top: 10px;
   > li {
     display: inline-block;
     padding: 5px 15px;
   }
   li + li {
-   border-left: 2px solid #8d8d8d;
+   border-left: 2px solid $dark-grey-lighten-10;
   }
 }
 
@@ -141,4 +159,22 @@
   &.active {
     display: inline;
   }
+}
+
+.header-mt-20 {
+  margin-top: 20px;
+  @include mq($until: lg) {
+    margin-top: 10px;
+  }
+}
+
+.header-pb-20 {
+  padding-bottom: 0px;
+  @include mq($from: md) {
+    padding-bottom: 20px;
+  }
+}
+
+.header-p-0 {
+  padding: 0;
 }
