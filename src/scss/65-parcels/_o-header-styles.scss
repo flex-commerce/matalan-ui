@@ -47,8 +47,8 @@
     text-transform: uppercase;
     font-size: 0.9em;
     @include mq($until: md) {
-      padding-left: 0;
-      padding-right: 0;
+      padding: 0;
+      text-align: center;
     }
     &:hover {
       border-color: transparent;
@@ -100,11 +100,11 @@
   display: block;
   cursor: pointer;
   color: $dark-grey-lighten-60;
-  a {
-    :hover {
-      border-color: $white;
-    }
-  }
+  // .c-btn {
+  //   &:hover {
+  //     border-color: $white;
+  //   }
+  // }
 
   i {
     // provides enough width for the icon and some margin
@@ -119,9 +119,8 @@
     }
   }
   span {
+    margin-top: -.7em;
     color: $dark-grey-lighten-60;
-    position: absolute;
-    left: 1em;
     display:block;
     font-size: 0.8em;
 
