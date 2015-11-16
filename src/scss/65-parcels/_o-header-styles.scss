@@ -18,19 +18,20 @@
 
   .o-icon-with-addon {
     i:before {
-      color: $primary-color;
+      color: $dark-grey-lighten-60;
     }
     position: relative;
     span {
+      color: $white;
       position: absolute;
-      background-color: #fff;
+      background-color: $primary-color;
       min-width: 25px;
       line-height: 1.2em;
       height: 20px;
-      bottom: -18px;
-      right: -8px;
+      top: 12px;
+      left: 12px;
       text-align: center;
-      border: 2px solid #eb0000;
+      border: 2px solid #fff;
       border-radius: 11px;
       font-size: 1em;
     }
@@ -86,6 +87,9 @@
   @include mq($from: lg) {
     text-align: center;
   }
+  i:before {
+    color: $dark-grey-lighten-60;
+  }
 }
 
 .o-header--menu-button {
@@ -93,6 +97,7 @@
   position: relative;
   display: block;
   cursor: pointer;
+  color: $dark-grey-lighten-60;
   a {
     :hover {
       border-color: $white;
@@ -103,6 +108,7 @@
     // provides enough width for the icon and some margin
     margin-right: 1em;
     &:before {
+      color: $dark-grey-lighten-60;
       // abs positioning so the doesnt affect button height
       position: absolute;
       top: 0;
