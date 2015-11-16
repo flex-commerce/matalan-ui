@@ -20,3 +20,8 @@
  .dev-grid-container .row:nth-of-type(6) .island {
    @extend .u-bgcolor-grey70;
  }
+
+[class^='col-'],
+[class*=' col-'] {
+  outline: 1px solid #ccc;
+}

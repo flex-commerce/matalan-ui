@@ -272,20 +272,18 @@
   .sub-nav {
     background: $dark-grey-lighten-10;
   }
-  .sub-nav-item.open {
+  .sub-nav-item {
     background: $dark-grey-lighten-20;
   }
+
   .navbar--top-item {
     border-top: 1px solid $dark-grey-lighten-20;
-    &:last-child {
-      border-bottom: 1px solid $dark-grey-lighten-20;
-    }
   }
-  .sub-nav-title {
+  .sub-nav-title, .sub-nav-item  {
     border-top: 1px solid $dark-grey-lighten-30;
   }
-  .sub-nav-item {
-    border-top: 1px solid $dark-grey-lighten-30;
+  .navbar--footer {
+    border-top: 1px solid $dark-grey-lighten-20;
   }
 }
 
