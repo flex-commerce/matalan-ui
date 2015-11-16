@@ -118,6 +118,7 @@ $input-padding-y: $default-pad-y;
 
 
 // custom border rules for inputs with addons
+// hides the left / right borders around prepended / appended input fields
 // @todo - find a cleaner way to approach this with minimal extra markup
 // input with leading addon
 .input-group--addon:not(.unstyled) + .input-addon--expand:not(.input-group--addon__inset-left)  {
