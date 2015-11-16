@@ -43,7 +43,6 @@
   }
   //c ustom button styles for the header icons
   .c-btn {
-    background-color: $white;
     border-color: transparent;
     text-transform: uppercase;
     font-size: 0.9em;
@@ -117,9 +116,11 @@
     }
   }
   span {
+    color: $dark-grey-lighten-60;
     position: absolute;
-    left: 0.7em;
+    left: 1em;
     display:block;
+    font-size: 0.8em;
 
   }
   @include mq($until: md) {
