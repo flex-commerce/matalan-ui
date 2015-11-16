@@ -21,6 +21,8 @@
    * @param {Object}             options
    * @constructor
    */
+
+  // Setup
   var SelectBox = this.SelectBox = function(select, options) {
     if (select instanceof jQuery) {
       if (select.length > 0) {
@@ -65,6 +67,7 @@
    *
    * @returns {Boolean}
    */
+  // Init
   SelectBox.prototype.init = function(options) {
     var select = $(this.selectElement);
     // return if already initialised
@@ -134,7 +137,6 @@
       var select = $(this.selectElement);
       event.preventDefault();
       self.setLabel();
-      console.log('1');
       $("BODY").append(options);
     });
 
@@ -417,7 +419,6 @@
    */
   SelectBox.prototype.setLabel = function() {
     var select = $(this.selectElement);
-    console.log(select)
     var control = select.data('selectbox-control');
     if (!control) {
       return;

@@ -11,6 +11,14 @@
       font-weight: 600px;
     }
   }
+  .c-search-form.has-focus .c-search__button {
+    background-color: #dadada;
+    color: $primary-color;
+  }
+
+  .input-group--addon__inset-left {
+    padding-left: 10px !important;
+  }
 }
 
 .o-footer--card-svg-wrapper-small {
@@ -42,7 +50,7 @@
   .o-footer--offset {
     position: relative;
     // magic number footer offset
-    top: -40px;
+    top: -30px;
     background-color: $white;
     width: calc(50% + 400px);
     @include mq($from: lg) {
@@ -58,15 +66,18 @@
     border-style: solid solid none none;
     border-color: $dark-grey-lighten-30;
     left: 0;
-    height: 40px;
+    height: 30px;
     margin-left: -400px;
     padding-left: 400px;
   }
   .o-footer--title {
-    margin-top:-30px;
+    margin-top:-18px;
   }
   .o-footer--social {
     margin-top: 20px;
+    div:first-child {
+       margin-top: -4px;
+    }
     > div {
       padding: 0;
     }

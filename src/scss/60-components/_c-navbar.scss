@@ -28,8 +28,10 @@
     .navbar--header, .navbar--footer {
       overflow: hidden;
       padding: 0.5rem 0.75rem;
-      > a {
+      > .link {
+        display: inline-block;
         width: 33%;
+        // outline: 1px solid red;
       }
     }
   }

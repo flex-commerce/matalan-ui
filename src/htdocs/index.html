@@ -11,11 +11,14 @@
 </head>
 
 <body>
-  <div id="top" class="ui-container">
-    <div class="col-sm-12">
-      <h1 class="ui-header">Matalan UI Kit</h1>
+  <div id="top" class="container">
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="ui-header">Matalan UI Kit</h1>
+      </div>
     </div>
-    <div class="ui-row">
+    <div class="row">
       <div class="col-sm-12">
         <h2>Parcels</h2>
         <div class="o-btn-group-vertical">
@@ -25,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="ui-row">
+    <div class="row">
       <div class="col-sm-12">
         <h2>Kit Contents</h2>
         <div class="o-btn-group-vertical auto-column-3">
@@ -48,30 +51,29 @@
       </div>
     </div>
 
+    <div class="row" id="grid">{{> partials/grid }}</div>
 
-    <div id="grid">{{> partials/grid }}</div>
+    <div class="row" id="logo">{{> partials/logo }}</div>
+    <div class="row" id="colors">{{> partials/colors }}</div>
+    <div class="row" id="typography">{{> partials/typography }}</div>
 
-    <div id="logo">{{> partials/logo }}</div>
-    <div id="colors">{{> partials/colors }}</div>
-    <div id="typography">{{> partials/typography }}</div>
+    <div class="row" id="buttons">{{> partials/buttons }}</div>
 
-    <div id="buttons">{{> partials/buttons }}</div>
-
-    <div id="navigation">{{> partials/navigation }}</div>
+    <div class="row" id="navigation">{{> partials/navigation }}</div>
 
 
-    <div id="labels">{{> partials/labels }}</div>
-    <div id="alerts">{{> partials/alerts }}</div>
-    <div id="progress-bars"> {{> partials/progress-bars }}</div>
+    <div class="row" id="labels">{{> partials/labels }}</div>
+    <div class="row" id="alerts">{{> partials/alerts }}</div>
+    <div class="row" id="progress-bars"> {{> partials/progress-bars }}</div>
 
-    <div id="forms">{{> partials/forms }}</div>
+    <div class="row" id="forms">{{> partials/forms }}</div>
 
-    <div id="tables">{{> partials/tables}}</div>
-    <div id="roundels">{{> partials/roundels}}</div>
+    <div class="row" id="tables">{{> partials/tables}}</div>
+    <div class="row" id="roundels">{{> partials/roundels}}</div>
 
-    <div id="lists"> {{> partials/lists }}</div>
-    <div id="ratings"> {{> partials/ratings }}</div>
-    <div id="icons"> {{> partials/icons }}</div>
+    <div class="row" id="lists"> {{> partials/lists }}</div>
+    <div class="row" id="ratings"> {{> partials/ratings }}</div>
+    <div class="row" id="icons"> {{> partials/icons }}</div>
 
   </div>
   <a href="#top" class="back-to-top">Back to top</a>
@@ -86,11 +88,6 @@
   <script>
     hljs.configure({useBR: false, fixMarkup: true});
     hljs.initHighlighting();
-
-    $('select').selectBox({
-      mobile: false,
-      loopOptions: true
-    });
   </script>
 
 
