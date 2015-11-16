@@ -1,4 +1,4 @@
-$list-padding: rem-calc(12 16);
+$list-padding: $default-pad-y $default-pad-x;
 $list-ui-active-bg: $secondary-color;
 $list-ui-active-border: $primary-color;
 $list-border: $cool-grey;

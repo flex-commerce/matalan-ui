@@ -15,5 +15,7 @@ $mq-breakpoints: (
 );
 
 // this developer flag will output the current class names & breakpoint as an :after pseudo element
-$output-developer-content: true;
-$mq-show-breakpoints: (xs, sm, md, lg, xl);
+$output-developer-content: false;
+@if ($output-developer-content==true) {
+  $mq-show-breakpoints: (xs, sm, md, lg, xl);
+}

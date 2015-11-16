@@ -44,23 +44,21 @@
 @mixin secondary-style($hover: null) {
   @include style-variant($secondary-color, $primary-color, $primary-color);
   @if $hover {
-    @include style-variant($primary-color, $white, $primary-color);
+    &:hover {
+      @include style-variant($primary-color, $white, $primary-color);
+    }
   }
 }
 
-// We use this to control border radius.
-// $radius - Default: $global-radius || 4px
-// @mixin border-radius($radius:$border-radius) {
-//   @if $radius {
-//     border-radius: $radius;
-//   }
-// }
+
+
+
 @mixin box-shadow($shadow) {
   box-shadow: $shadow;
 }
 
 @mixin auto-columns($number) {
-  -webkit-columns: $number;
+  -webkit-columns: $number 12em;
 }
 
 @for $i from 2 through 4 {

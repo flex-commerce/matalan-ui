@@ -90,8 +90,8 @@ $border-thickness: 5px;
             content: '';
             display: block;
             /*Make it a small rectangle so the border will create an L-shape*/
-            width: 12px;
-            height: 26px;
+            width: 1.2em;
+            height: 1.5em;
             /*Add a white border on the bottom and left, creating that 'L' */
             border: solid $white;
             border-width: 0 5px 5px 0;

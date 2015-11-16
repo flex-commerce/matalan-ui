@@ -1,81 +1,137 @@
-<div class="ui-row">
-  <div class="col-sm-12">
-    <i class="nav-mobile-button icon-menu"><span>Menu</span></i>
-    <nav class="c-navbar-container" data-app="accessible-navmenu">
+<div class="row">
+  <div class="col-xs-12">
 
+    <nav class="c-navbar-container" data-app="accessible-navmenu">
       <ul class="accessible-navmenu c-navbar">
 
+        <li class="navbar--header justify-parent">
+          <a class="link justified-child u-font-ta-c">
+            <i class="nav-mobile-button icon-menu"></i>
+            <span>foo</span>
+          </a>
+          <a class="link justified-child u-font-ta-c">
+            <i class="nav-mobile-button icon-menu"></i>
+            <span>foo</span>
+          </a>
+          <a class="link justified-child u-font-ta-c">
+            <i class="nav-mobile-button icon-menu"></i>
+            <span>foo</span>
+          </a>
+        </li>
 
-        <!-- category menu block -->
         <li class="navbar--top-item">
-          <a class="active" href="">Category 0</a>
+          <a class="link" href="#">
+            Section 0
+            <span class="nav-menu-icons u-fr">
+              <span><i class="icon-ui-minus"></i></span>
+              <span><i class="icon-ui-plus"></i></span>
+              <span><i class="icon-ui-gt"></i></span>
+            </span>
+          </a>
           <div class="sub-nav">
             <h2 class="sub-nav-header">Section Header</h2>
-            {{# times 6}}
-            <ul class="sub-nav-group">
-              {{# times 2}}
-              <li class="sub-nav-title">Category</li>
-              {{# timesrand 2 6}}
-              <li class="sub-nav-item"><a href="">{{lorem count=2}}</a></li>
-              {{/ timesrand }}
+            <div class="sub-nav--group--container">
+              {{# times 6}}
+              <ul class="sub-nav-group">
+                {{# times 2}}
+                <li class="sub-nav-title">
+                  <a class="link" href="">
+                    Category {{this}}
+                    <span class="nav-menu-icons u-fr">
+                      <span><i class="icon-ui-minus"></i></span>
+                      <span><i class="icon-ui-plus"></i></span>
+                      <span><i class="icon-ui-gt"></i></span>
+                    </span>
+                  </a>
+                  {{# timesrand 2 6}}
+                  <li class="sub-nav-item">
+                    <a class="link" href="">
+                      Collection {{this}}
+                      <span class="nav-menu-icons u-fr">
+                        <span><i class="icon-ui-gt"></i></span>
+                      </span>
+                    </a>
+                  </li>
+                  {{/ timesrand }}
+                </li>
+                {{/ times }}
+              </ul>
               {{/ times }}
-            </ul>
-            {{/ times }}
+              <ul class="sub-nav-group sub-nav-group__image">
+                <li><img src="http://placehold.it/150x350"></li>
+              </ul>
+            </div>
           </div>
         </li>
-        <!-- end category menu block -->
 
 
-        <!-- repeat menu block -->
-        {{# times 4}}
+        {{# times 10}}
         <li class="navbar--top-item">
-          <a class="" href="">Category {{this}}</a>
+          <a class="link" href="#">
+            Section {{this}}
+            <span class="nav-menu-icons u-fr">
+              <span><i class="icon-ui-minus"></i></span>
+              <span><i class="icon-ui-plus"></i></span>
+              <span><i class="icon-ui-gt"></i></span>
+            </span>
+          </a>
           <div class="sub-nav">
             <h2 class="sub-nav-header">Section Header</h2>
-            {{# times 6}}
-            <ul class="sub-nav-group">
-              {{# times 2}}
-              <li class="sub-nav-title">Category</li>
-              {{# timesrand 2 6}}
-              <li class="sub-nav-item"><a href="">{{lorem count=2}}</a></li>
-              {{/ timesrand }}
+            <div class="sub-nav--group--container">
+              {{# times 6}}
+              <ul class="sub-nav-group">
+                {{# times 2}}
+                <li class="sub-nav-title">
+                  <a class="link" href="">
+                    Category
+                    <span class="nav-menu-icons u-fr">
+                      <span><i class="icon-ui-minus"></i></span>
+                      <span><i class="icon-ui-plus"></i></span>
+                      <span><i class="icon-ui-gt"></i></span>
+                    </span>
+                  </a>
+                  {{# timesrand 2 6}}
+                  <li class="sub-nav-item">
+                    <a class="link" href="">
+                    Collection
+                    <span class="nav-menu-icons u-fr">
+                      <span><i class="icon-ui-gt"></i></span>
+                    </span>
+                    </a>
+                  </li>
+                  {{/ timesrand }}
+                  {{/ times }}
+                </li>
+              </ul>
               {{/ times }}
-            </ul>
-            {{/ times }}
+              <ul class="sub-nav-group sub-nav-group__image">
+                <li><img src="http://placehold.it/150x350"></li>
+              </ul>
+            </div>
           </div>
         </li>
         {{/ times }}
-        <!-- end repeat menu block -->
 
+        <li class="navbar--footer justify-parent">
+          <a class="link justified-child u-font-ta-c">
+            <span>foo</span>
+          </a>
+          <a class="link justified-child u-font-ta-c">
+            <span>foo</span>
+          </a>
+          <a class="link justified-child u-font-ta-c">
+            <span>foo</span>
+          </a>
+        </li>
 
       </ul>
     </nav>
-
   </div>
-
 </div>
 
-
-
 <!-- include jquery -->
-<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
 <!-- include the jquery-accessibleMegaMenu plugin script -->
 <script src="/js/menu-accessible.js"></script>
-<!-- initialize a selector as an accessibleMegaMenu -->
-<script>
-  $("[data-app~=accessible-navmenu]").accessibleMegaMenu({
-    /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
-    uuidPrefix: "accessible-menu",
-    menuClass: "c-navbar",
-    topNavItemClass: "navbar--top-item",
-    panelClass: "sub-nav",
-    panelGroupClass: "sub-nav-group",
-    hoverClass: "hover",
-    focusClass: "focus",
-    openClass: "open"
-  });
-
-
-
-</script>
+<script src="/js/off-canvas.js"></script>
 

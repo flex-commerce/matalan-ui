@@ -3,6 +3,7 @@
 /**
  *  Various developer rules for testing and such
  */
+
 .ui-container > h1 {
   margin-top: 2em;
   margin-bottom: 1em;
@@ -10,31 +11,33 @@
 }
 
 .ui-grid-left {
-h2 {
-  font-size: 1.5em;
-  padding: 10px 10px 10px 0;
-  font-weight: 600;
-  /*   margin-top: 2em; */
-}
-h3 {
-  font-size: 1.2em;
-  font-weight: 500;
-  margin: 20px 0 20px 0;
-  small {
-    font-size: 80%;
-    color: #888;
+  h2 {
+    font-size: 1.5em;
+    padding: 10px 10px 10px 0;
+    font-weight: 600;
+    /*   margin-top: 2em; */
+  }
+  h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 20px 0 20px 0;
+    small {
+      font-size: 80%;
+      color: #888;
+      font-weight: 300;
+      display: block;
+    }
+  }
+  p {
     font-weight: 300;
-    display: block;
   }
 }
-p {
-  font-weight: 300;
-}
-}
+
 .ui-header {
   font-weight: 700;
   color: $cool-grey;
 }
+
 // highlighters
 // visualisation helper for grid
 // [class^="col-"],
@@ -58,8 +61,6 @@ p {
   margin: 5em auto 0;
   display: block;
 }
-
-
 
 .ui-row {
   @include clearfix;
@@ -134,10 +135,9 @@ p {
 // temp icon dev rules
 [class^="icon-"],
 [class*=" icon-"] {
-  margin-bottom: 1em; // todo - replace temp dev rule
   &:before {
     font-size: rem-calc(32px); // todo - replace temp dev rule
-    padding-right: 0.5em; // todo - replace temp dev rule
+    // padding-right: 0.5em; // todo - replace temp dev rule
     display: inline-block;
     color: $cool-grey;
   }
@@ -162,20 +162,20 @@ p {
   // margin-right: 50px;
   border: 1px solid #bbb;
 }
+
 .pallette__info {
   text-align: center;
 }
 
 code {
-    padding: 2px 4px;
-    margin-bottom: 4px;
-    font-size: 90%;
-    color: #444;
-    background-color: #eee;
-    border-radius: 4px;
-    display: inline-block;
+  padding: 2px 4px;
+  margin-bottom: 4px;
+  font-size: 90%;
+  color: #444;
+  background-color: #eee;
+  border-radius: 4px;
+  display: inline-block;
 }
-
 
 .ui-colors {
   .span-wide-3 {
@@ -185,21 +185,26 @@ code {
   }
 }
 
-.back-to-top{
+.back-to-top {
   background-color: $primary-color;
   bottom: 2em;
   color: #fff;
-  opacity:0.6;
+  opacity: 0.6;
   padding: 1.5em;
   position: fixed;
   right: 1.5em;
   text-decoration: none;
-  &:hover{
-    opacity:1;
-    transition:0.5s;
+  &:hover {
+    opacity: 1;
+    transition: 0.5s;
   }
 }
 
 .no-pad {
   padding: 0;
 }
+
+pre {
+  display: none;
+}
+

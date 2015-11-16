@@ -1,0 +1,178 @@
+/* Initial css for header */
+
+// Global message container
+.o-super-header--container {
+  padding: 0.5em 0;
+  background-color: $dark-grey-lighten-50;
+  color: $white;
+  // overide default padding to keep text center
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// main header container coopnsisting of the logo, search bar, checkout
+// and bag buttons and off canvass menu button
+.o-header--container {
+  border-bottom: 1px solid $dark-grey-lighten-10;
+
+  .o-icon-with-addon {
+    i:before {
+      color: $primary-color;
+    }
+    position: relative;
+    span {
+      position: absolute;
+      background-color: #fff;
+      min-width: 25px;
+      line-height: 1.2em;
+      height: 20px;
+      bottom: -18px;
+      right: -8px;
+      text-align: center;
+      border: 2px solid #eb0000;
+      border-radius: 11px;
+      font-size: 1em;
+    }
+  }
+
+  //remove default padding on the search bar
+  .o-form-row {
+    padding: 0;
+  }
+  //c ustom button styles for the header icons
+  .c-btn {
+    background-color: $white;
+    border-color: transparent;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: $dark-grey-lighten-60;
+    &:hover {
+      border-color: transparent;
+    }
+    &.c-btn-header-checkout {
+      background-color: $primary-color;
+      display: block;
+      text-align: center;
+      color: $white;
+      font-size: 1em;
+      font-weight: 500;
+    }
+  }
+}
+
+.o-header--brand {
+  max-width: 130px;
+
+  @include mq($from: md) {
+    max-width: 155px;
+  }
+
+  @include mq($from: lg) {
+    max-width: 270px;
+  }
+
+  img {
+    margin-top: 25px;
+    @include mq($from: md) {
+      margin-top: 15px;
+    }
+  }
+
+}
+
+.o-header--search {
+  text-align: right;
+  @include mq($from: lg) {
+    text-align: center;
+  }
+}
+
+.o-header--menu-button {
+  // @todo - check me
+  position: relative;
+  display: block;
+  cursor: pointer;
+  a {
+    :hover {
+      border-color: $white;
+    }
+  }
+
+  i {
+    // provides enough width for the icon and some margin
+    margin-right: 1em;
+    &:before {
+      // abs positioning so the doesnt affect button height
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0.25em;
+    }
+  }
+  span {
+    position: absolute;
+    left: 0.7em;
+    display:block;
+
+  }
+  @include mq($until: md) {
+    text-align: left;
+  }
+}
+
+.o-list-inline-seperated {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 11px;
+  a {
+    color: $dark-grey-lighten-60;
+  }
+  > li {
+    display: inline-block;
+    padding: 5px 15px;
+  }
+  li + li {
+   border-left: 2px solid $dark-grey-lighten-10;
+
+  }
+}
+
+.header--search-bar {
+  @include mq($until: lg) {
+    display: none;
+  }
+
+  &.active {
+    display: inline;
+
+    @include mq($until: lg) {
+      margin-top: 10px;
+    }
+
+    @include mq($until: md) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+//header utility classes
+
+//margin-top-20
+.header-mt-20 {
+  margin-top: 20px;
+  @include mq($until: lg) {
+    margin-top: 10px;
+  }
+}
+
+.header-pb-20 {
+  padding-bottom: 0px;
+  @include mq($from: md) {
+    padding-bottom: 20px;
+  }
+}
+
+.header-p-0 {
+  padding: 0;
+}

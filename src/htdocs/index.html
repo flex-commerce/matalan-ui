@@ -8,15 +8,10 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
-  <style>
-    pre {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
-  <div  id="top" class="ui-container">
+  <div id="top" class="ui-container">
     <div class="col-sm-12">
       <h1 class="ui-header">Matalan UI Kit</h1>
     </div>
@@ -24,7 +19,9 @@
       <div class="col-sm-12">
         <h2>Parcels</h2>
         <div class="o-btn-group-vertical">
-          <a class="c-btn c-btn-primary" href="/parcels/header.html">header</a>
+          <a class="c-btn c-btn-primary" href="header.html">header</a>
+          <a class="c-btn c-btn-primary" href="footer.html">footer</a>
+          <a class="c-btn c-btn-primary" href="headerandfooter.html">header with footer</a>
         </div>
       </div>
     </div>
@@ -52,29 +49,29 @@
     </div>
 
 
-      <div id="grid">{{> partials/grid }}</div>
+    <div id="grid">{{> partials/grid }}</div>
 
-      <div id="logo">{{> partials/logo }}</div>
-      <div id="colors">{{> partials/colors }}</div>
-      <div id="typography">{{> partials/typography }}</div>
+    <div id="logo">{{> partials/logo }}</div>
+    <div id="colors">{{> partials/colors }}</div>
+    <div id="typography">{{> partials/typography }}</div>
 
-      <div id="buttons">{{> partials/buttons }}</div>
+    <div id="buttons">{{> partials/buttons }}</div>
 
-     <div id="navigation">{{> partials/navigation }}</div>
+    <div id="navigation">{{> partials/navigation }}</div>
 
 
-      <div id="labels">{{> partials/labels }}</div>
-      <div id="alerts">{{> partials/alerts }}</div>
-     <div id="progress-bars"> {{> partials/progress-bars }}</div>
+    <div id="labels">{{> partials/labels }}</div>
+    <div id="alerts">{{> partials/alerts }}</div>
+    <div id="progress-bars"> {{> partials/progress-bars }}</div>
 
-     <div id="forms">{{> partials/forms }}</div>
+    <div id="forms">{{> partials/forms }}</div>
 
-      <div id="tables">{{> partials/tables}}</div>
-      <div id="roundels">{{> partials/roundels}}</div>
+    <div id="tables">{{> partials/tables}}</div>
+    <div id="roundels">{{> partials/roundels}}</div>
 
-     <div id="lists"> {{> partials/lists }}</div>
-     <div id="ratings"> {{> partials/ratings }}</div>
-     <div id="icons"> {{> partials/icons }}</div>
+    <div id="lists"> {{> partials/lists }}</div>
+    <div id="ratings"> {{> partials/ratings }}</div>
+    <div id="icons"> {{> partials/icons }}</div>
 
   </div>
   <a href="#top" class="back-to-top">Back to top</a>
@@ -84,6 +81,8 @@
   <script src="js/highlight.pack.js"></script>
   <script src="js/jquery.selectbox.js"></script>
   <script src="js/menu-accessible.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+
   <script>
     hljs.configure({useBR: false, fixMarkup: true});
     hljs.initHighlighting();

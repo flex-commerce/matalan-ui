@@ -6,7 +6,7 @@
   .c-search__button {
     color: $white;
     background: $cool-grey-hover;
-    @extend .u-no-underline;
+    @extend .u-font-no-underline;
   }
   .icon-search:before {
     color: $keyline-color;
@@ -22,7 +22,7 @@
   }
 }
 
-.c-input-group--addon i:before {
+.input-group--addon i:before {
   font-size: 2em;
   margin-left: rem-calc(4);
 }
