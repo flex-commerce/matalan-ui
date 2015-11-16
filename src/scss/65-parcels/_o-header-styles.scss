@@ -46,7 +46,10 @@
     border-color: transparent;
     text-transform: uppercase;
     font-size: 0.9em;
-    color: $dark-grey-lighten-60;
+    @include mq($until: md) {
+      padding: 0;
+      text-align: center;
+    }
     &:hover {
       border-color: transparent;
     }
@@ -97,28 +100,27 @@
   display: block;
   cursor: pointer;
   color: $dark-grey-lighten-60;
-  a {
-    :hover {
-      border-color: $white;
-    }
-  }
+  // .c-btn {
+  //   &:hover {
+  //     border-color: $white;
+  //   }
+  // }
 
   i {
     // provides enough width for the icon and some margin
-    margin-right: 1em;
+    // margin-right: 1em;
     &:before {
       color: $dark-grey-lighten-60;
       // abs positioning so the doesnt affect button height
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0.25em;
+      // position: absolute;
+      // top: 0;
+      // bottom: 0;
+      // left: 0.25em;
     }
   }
   span {
+    margin-top: -.7em;
     color: $dark-grey-lighten-60;
-    position: absolute;
-    left: 1em;
     display:block;
     font-size: 0.8em;
 
