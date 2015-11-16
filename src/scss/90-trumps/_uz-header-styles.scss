@@ -5,6 +5,31 @@
 }
 
 .header--container {
+  border-bottom: 2px solid $dark-grey-lighten-10;
+
+  .o-form-row {
+    padding: 0;
+  }
+
+  .c-btn {
+    background-color: $white;
+    border-color: transparent;
+    &:hover {
+      border-color: transparent;
+    }
+    &.c-btn-header-checkout {
+      background-color: $primary-color;
+      display: block;
+      text-align: center;
+      color: $white;
+      font-size: 1em;
+      font-weight: 500;
+    }
+  }
+}
+
+// bototm border on row
+.row-b-b {
 
 }
 
@@ -15,45 +40,43 @@
 }
 
 .header-brand {
-  width: 170px;
-  padding: 20px 0;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 130px;
+
+  @include mq($from: md) {
+    max-width: 155px;
+  }
 
   @include mq($from: lg) {
-    text-align: left;
-    margin-left: 0;
+    max-width: 270px;
   }
+
+  img {
+    margin-top: 15px;
+    @include mq($until: md) {
+      margin-top: 25px;
+    }
+  }
+
+
 }
 
 .tempHeightClass {
-  @include mq($from: lg) {
-    height: 90px;
-  }
+    height: 70px;
+    @include mq($from: md) {
+      height:90px;
+    }
 }
 
-.header-button-wrapper,
-.header-search {
-  text-align: center;
-  @include mq($until: md) {
-    text-align: right;
-  }
-
-  @include mq($from: lg) {
-    text-align: right;
-    @include center(y);
+.header-button-wrapper {
+  a {
+      color: $dark-grey-lighten-60;
+      text-transform: uppercase;
+      font-size: 11px;
   }
 }
 
 .header-button-group {
-
   @include mq($until: lg) {
-    margin-top: -50px;
-    margin-bottom: 50px;
-  }
-
-  @include mq($until: md) {
     margin: 0;
     padding: 0 !important;
 
@@ -68,11 +91,18 @@
 
 .menu-button {
   // @todo - check me
-  outline: 2px dotted red;
   position: relative;
+  display: block;
+  cursor: pointer;
+  a {
+    :hover {
+      border-color: $white;
+    }
+  }
+
   i {
     // provides enough width for the icon and some margin
-    margin-right: 2.5em;
+    margin-right: 1em;
     &:before {
       // abs positioning so the doesnt affect button height
       position: absolute;
@@ -81,31 +111,28 @@
       left: 0.25em;
     }
   }
+  span {
+    position: absolute;
+    left: 0.7em;
+    display:block;
+    color: $dark-grey-lighten-60;
+  }
   @include mq($until: md) {
     text-align: left;
   }
 }
 
-.header-search {
-  @include mq($until: md) {
-    padding: 15px 0;
-  }
-  .o-form-row {
-    padding: 0;
-  }
-  .span-wide-12 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+
 
 .o-list-inline-seperated {
+  color: $dark-grey-lighten-60;
+  margin-top: 10px;
   > li {
     display: inline-block;
     padding: 5px 15px;
   }
   li + li {
-   border-left: 2px solid #8d8d8d;
+   border-left: 2px solid $dark-grey-lighten-10;
   }
 }
 
@@ -123,4 +150,31 @@
 
 .font-11 {
   font-size: 11px;
+}
+
+.header--search-bar {
+  @include mq($until: lg) {
+    display: none;
+  }
+  &.active {
+    display: inline;
+  }
+}
+
+.header-mt-20 {
+  margin-top: 20px;
+  @include mq($until: lg) {
+    margin-top: 10px;
+  }
+}
+
+.header-pb-20 {
+  padding-bottom: 0px;
+  @include mq($from: md) {
+    padding-bottom: 20px;
+  }
+}
+
+.header-p-0 {
+  padding: 0;
 }
