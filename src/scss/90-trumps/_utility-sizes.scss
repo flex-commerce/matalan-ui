@@ -26,6 +26,15 @@
   }
 */
 
+/*
+Sizing Sizes
+  tiny
+  small
+  medium
+  large
+  huge
+*/
+
 @each $key, $val in $sizing-sizes {
 
   .u-pad-#{$key} {
