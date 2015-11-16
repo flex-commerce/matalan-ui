@@ -5,9 +5,7 @@
 }
 
 .header--container {
-  .row {
-    border-bottom: 2px solid $dark-grey-lighten-10;
-  }
+  border-bottom: 2px solid $dark-grey-lighten-10;
 }
 
 // bototm border on row
@@ -24,12 +22,16 @@
 .header-brand {
   padding: 20px 0;
   max-width: 130px;
-  @include center(xy);
+  @include mq($until: lg) {
+    @include center(xy);
+    max-width: 170px;
+  }
+
   img {
     margin-top: 15px;
   }
-  @include mq($from: md) {
-    max-width: 170px;
+  @include mq($from: lg) {
+    max-width: 240px;
   }
 }
 
@@ -65,11 +67,26 @@
 
 .menu-button {
   // @todo - check me
-  outline: 2px dotted red;
   position: relative;
+  margin-top: -7px;
+  display: block;
+  cursor: pointer;
+  a {
+    :hover {
+      border-color: $white;
+    }
+  }
+  .c-btn {
+    background-color: $white;
+    border-color: transparent;
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
   i {
     // provides enough width for the icon and some margin
-    margin-right: 2.5em;
+    margin-right: 1em;
     &:before {
       // abs positioning so the doesnt affect button height
       position: absolute;
@@ -77,6 +94,12 @@
       bottom: 0;
       left: 0.25em;
     }
+  }
+  span {
+    position: absolute;
+    left: 0.7em;
+    display:block;
+    color: $dark-grey-lighten-60;
   }
   @include mq($until: md) {
     text-align: left;
@@ -109,4 +132,13 @@
 
 .font-11 {
   font-size: 11px;
+}
+
+.header--search-bar {
+  @include mq($until: lg) {
+    display: none;
+  }
+  &.active {
+    display: inline;
+  }
 }
