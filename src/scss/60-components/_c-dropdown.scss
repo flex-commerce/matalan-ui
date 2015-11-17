@@ -42,13 +42,13 @@ $dropdown-pad-y: $default-pad-y;
   // display none by default, but block on "open" of the menu
   display: none;
   min-width: 160px;
-  padding: $dropdown-pad-y;
+  padding: $dropdown-pad-y 0;
   margin: 2px 0 0;
   background-color: $white;
   border: 1px solid $cool-grey;
   // Ensures proper alignment if parent has it changed (e.g., modal footer)
   text-align: left;
-
+  box-shadow: 0px 3px 0px -1px rgba($black, .1);
   // Links within the dropdown menu
   > li > a {
     clear: both;
@@ -63,7 +63,7 @@ $dropdown-pad-y: $default-pad-y;
   // Dividers (basically an hr) within the dropdown
   .divider {
     height: 1px;
-    margin: 9px -0.5em; // @todo - sort magic
+    margin: 9px 0; //-0.5em; // @todo - sort magic
     overflow: hidden;
     background-color: #e5e5e5;
   }
