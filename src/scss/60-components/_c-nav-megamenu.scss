@@ -252,7 +252,7 @@
   // }
 
   .icon-ui-minus {
-    margin-right: 1em;
+    margin-right: 2em;
     &:after {
       content: '';
       position: absolute;
@@ -260,7 +260,7 @@
       bottom: 0;
       width: 1px;
       background-color: $dark-grey-lighten-20;
-      right: 3em;
+      right: 3.5em;
     }
   }
 

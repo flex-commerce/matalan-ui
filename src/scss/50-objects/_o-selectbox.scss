@@ -21,7 +21,7 @@ select.selectbox {
 
 .selectbox-dropdown {
   max-width: 100%;
-  min-width: 50px;
+  min-width: 120px;
   position: relative;
   border: solid 1px $selectbox-border-color;
   line-height: 1.5;
@@ -66,7 +66,7 @@ select.selectbox {
   position: absolute;
   top: 0;
   right: 0;
-  width: 1.5em;
+  width: 1.8em;
   height: 100%;
   border-left: solid 1px $selectbox-border-color;
   .caret {
