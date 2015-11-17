@@ -47,14 +47,14 @@
 @include mq($from: lg) {
   .c-navbar {
     @include border-tb-default(2px);
-    @extend .justify-parent;
+    @include justify-parent;
   }
   .navbar--header,
   .navbar--footer {
     display: none;
   }
   .navbar--top-item {
-    @extend .justified-child;
+    @include justified-child;
     > .link {
       display: inline-block;
       padding: 1.25em 0.5em;

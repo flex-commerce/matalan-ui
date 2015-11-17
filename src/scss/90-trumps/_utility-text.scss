@@ -1,4 +1,5 @@
 /* Text classes */
+
 .meta {
   @extend %u-fade-el;
   font-size: 80%;
@@ -24,19 +25,19 @@
   opacity: .6;
 }
 
-// for bold text (600 weight)
+// for bold text - weight bold
 %u-font-wb,
 .u-font-wb {
   font-weight: 600;
 }
 
-// for light text (300 weight)
+// for light text - weight light
 %u-font-wl,
 .u-font-wl {
   font-weight: 300;
 }
 
-// for italics text
+// for italics text - style italic
 %u-font-si,
 .u-font-si {
   font-style: italic;
@@ -45,22 +46,50 @@
 %u-font-no-underline,
 .u-font-no-underline {
   text-decoration: none !important;
-
   &:before,
   &:after {
     text-decoration: none !important;
   }
 }
 
+// text align center
 .u-font-ta-c {
   text-align: center;
 }
 
+// text align left
 .u-font-ta-l {
   text-align: left;
 }
 
+// text align right
 .u-font-ta-r {
   text-align: right;
 }
 
+// non-relative font sizer
+.u-font-small {
+  font-size: .925rem;
+}
+
+.u-font-smaller {
+  font-size: .85rem;
+}
+
+.u-font-smallest {
+  font-size: .715rem;
+}
+
+
+// relative font sizer
+.u-font-small-rel {
+  font-size: .925em;
+}
+
+.u-font-smaller-rel {
+  font-size: .85em;
+}
+
+.u-font-smallest-rel {
+  font-size: .715em;
+}

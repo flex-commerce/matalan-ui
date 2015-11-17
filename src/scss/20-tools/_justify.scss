@@ -17,8 +17,7 @@
 }
 
 
-// mixin method - class method, specify children
-.justify-parent {
+@mixin justify-parent {
   text-align: justify;
   font-size: 0;
   &:after {
@@ -28,7 +27,7 @@
   }
 }
 
-.justified-child {
+@mixin justified-child {
   display: inline-block;
-  font-size: 1rem !important;
+  font-size: 1rem ;
 }
