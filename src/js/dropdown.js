@@ -164,6 +164,6 @@
     .on('click.ui.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
     .on('click.ui.dropdown.data-api', toggle, Dropdown.prototype.toggle)
     .on('keydown.ui.dropdown.data-api', toggle, Dropdown.prototype.keydown)
-    .on('keydown.ui.dropdown.data-api', '.c-dropdown-menu', Dropdown.prototype.keydown)
+    .on('keydown.ui.dropdown.data-api', '.c-dropdown-holder', Dropdown.prototype.keydown)
 
 }(jQuery);

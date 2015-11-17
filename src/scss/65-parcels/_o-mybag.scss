@@ -1,0 +1,85 @@
+//temp def list rules
+// todo tidy and merge into lists
+dl.deflist-2col {
+  dt {
+    float: left;
+    clear: left;
+    width: 100px;
+  }
+  dd {
+    text-align: right;
+    margin: 0 0 0 110px;
+    padding: 0 0 0.5em 0;
+  }
+}dl.deflist-2col {
+  dt {
+    float: left;
+    clear: left;
+    width: 100px;
+  }
+  dd {
+    text-align: right;
+    margin: 0 0 0 110px;
+    padding: 0 0 0.5em 0;
+  }
+}
+
+//temp dev rules for bag
+// todo will want extending to cover modal usage
+.o-mybag {
+  width: 300px;
+  position: absolute;
+  right: 0;
+  border: 1px solid $primary-color;
+  background: $white;
+  z-index: 10;
+}
+
+.o-mybag--list--contain {
+  @include clearfix;
+  padding: 1.5em 0.75em;
+}
+
+.o-mybag--list:not(:last-child) {
+  &:after {
+    content: '';
+    width: 100%;
+    padding-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid $cool-grey;
+  }
+}
+
+.o-mybag--list-item--contain {}
+
+.o-mybag--list-item--image {
+  padding: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.o-mybag--list-item--control {
+  padding: 0;
+  .mybag--control--select,
+  .mybag--control--remove {
+    float: right;
+  }
+}
+
+.o-mybag {
+  .deflist--leftright,
+  .o-mybag--list-actions,
+  .callout {
+    margin: 0 1em;
+  }
+}
+
+
+// header override
+.c-dropdown-holder {
+  display: none;
+}
+&.open > .c-dropdown-holder {
+  display: block;
+}
