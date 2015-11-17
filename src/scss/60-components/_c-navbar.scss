@@ -21,17 +21,24 @@
 
 @include mq($until: lg) {
   .c-navbar {
-    @extend .justify-parent;
-    .navbar--top-item {
-      @extend .justified-child;
-    }
-    .navbar--header, .navbar--footer {
+    .navbar--header {
       overflow: hidden;
       padding: 0.5rem 0.75rem;
       > .link {
         display: inline-block;
-        width: 33%;
-        // outline: 1px solid red;
+        width: 75px;
+        &:last-of-type{
+          float: right;
+        }
+      }
+    }
+    .navbar--footer {
+      padding: 0.5rem 0.75rem;
+      > .link {
+        display: block;
+        text-align: left;
+        padding: 0.75em 0;
+        font-size: 0.925em;
       }
     }
   }
@@ -40,12 +47,14 @@
 @include mq($from: lg) {
   .c-navbar {
     @include border-tb-default(2px);
+    @extend .justify-parent;
   }
   .navbar--header,
   .navbar--footer {
     display: none;
   }
   .navbar--top-item {
+    @extend .justified-child;
     > .link {
       display: inline-block;
       padding: 1.25em 0.5em;
