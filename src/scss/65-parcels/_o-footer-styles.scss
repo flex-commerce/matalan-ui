@@ -1,8 +1,10 @@
+$footer-bg-color: $light-grey-hover;
+
 .o-footer--container {
   margin-top: 60px;
   border-top: 1px solid $dark-grey-lighten-30;
   padding-bottom: 40px;
-
+  background-color: $footer-bg-color;
   .o-list-block>.o-list__item {
     padding: 4px 0;
     min-width: 200px;
@@ -49,9 +51,9 @@
 @include mq($from: md) {
   .o-footer--offset {
     position: relative;
+    background-color: $footer-bg-color;
     // magic number footer offset
     top: -30px;
-    background-color: $white;
     width: calc(50% + 400px);
     @include mq($from: lg) {
       width: calc(35% + 400px);
