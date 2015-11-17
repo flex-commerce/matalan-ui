@@ -2,19 +2,20 @@
 //
 .c-breadcrumb-bar {
   @extend .o-list-inline;
-
+  background-color: $light-grey;
+  padding: 0.25em 0.5em;
   a {
     @extend .u-font-no-underline;
     color: $primary-color;
   }
   li {
     &.has-link {
-      &.hover,
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-        @include primary-style(hover);
-      }
+      // &.hover,
+      // &:hover,
+      // &:focus {
+      //   text-decoration: underline;
+      //   @include primary-style(hover);
+      // }
     }
   }
 }

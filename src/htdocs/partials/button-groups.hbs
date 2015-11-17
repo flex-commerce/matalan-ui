@@ -7,63 +7,58 @@
     <div class="col-sm-12">
       <h3>Button Groups Default</h3>
       <div class="o-btn-group">
+
         {{# times 2}}
         <a class="c-btn c-btn-primary">{{lorem}}</a>
         {{/ times}}
-        <a class="c-btn c-btn-primary c-btn-dropdown">{{lorem}}<span class="caret"></span></a>
+
         <div class="c-btn-grp-dropdown">
-          <a class="c-btn c-btn-primary">{{lorem}}</a>
-          <a class="c-btn c-btn-primary c-btn-dropdown">
-            <span class="caret"></span>
-          </a>
+          <div class="c-dropdown">
+            <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
+              Dropdown
+              <span class="caret"></span>
+            </button>
+            <ul class="c-dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li class="active"><a href="#">Active item</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Header</li>
+              <li class="disabled"><a href="#">Disabled link</a></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <pre>
-        <code class="HTML">//primary horizontal button group<br />
-          &lt;div class=&quot;o-btn-group&quot;&gt;<br />
-          &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-1&lt;/a&gt;<br />
-          &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-2&lt;/a&gt;<br />
-          &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;Item-3<br />
-          &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
-          &nbsp; &lt;/a&gt;<br />
-          &nbsp; &lt;div class=&quot;c-btn-grp-dropdown&quot;&gt;<br />
-          &nbsp; &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-4&lt;/a&gt;<br />
-          &nbsp; &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;<br />
-          &nbsp; &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
-          &nbsp; &nbsp; &lt;/a&gt;<br />
-          &nbsp; &lt;/div&gt;<br />
-          &lt;/div&gt;
-        </code>
-      </pre>
+
     </div>
     <div class="col-sm-12">
       <div class="o-btn-group">
         {{# times 2}}
-        <a class="c-btn c-btn-secondary">{{lorem}}</a> {{/ times}}
-        <div class="c-btn-grp-dropdown">
           <a class="c-btn c-btn-secondary">{{lorem}}</a>
-          <a class="c-btn c-btn-secondary c-btn-dropdown">
-            <span class="caret"></span>
-          </a>
+        {{/ times}}
+
+        <a class="c-btn c-btn-secondary">{{lorem}}</a>
+        <div class="c-btn-grp-dropdown">
+          <div class="c-dropdown">
+            <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
+              Dropdown
+              <span class="caret"></span>
+            </button>
+            <ul class="c-dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li class="active"><a href="#">Active item</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Header</li>
+              <li class="disabled"><a href="#">Disabled link</a></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
         </div>
+
       </div>
-      <pre>
-        <code class="HTML">//secondary horizontal button group<br />
-          &lt;div class=&quot;o-btn-group&quot;&gt;<br />
-          &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-1&lt;/a&gt;<br />
-          &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-2&lt;/a&gt;<br />
-          &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;Item-3<br />
-          &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
-          &nbsp; &lt;/a&gt;<br />
-          &nbsp; &lt;div class=&quot;c-btn-grp-dropdown&quot;&gt;<br />
-          &nbsp; &nbsp; &lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-4&lt;/a&gt;<br />
-          &nbsp; &nbsp; &lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;<br />
-          &nbsp; &nbsp; &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
-          &nbsp; &nbsp; &lt;/a&gt;<br />
-          &nbsp; &lt;/div&gt;<br />
-          &lt;/div&gt;
-        </code>
-      </pre>
+
     </div>
   </div>
 
@@ -77,19 +72,23 @@
         {{# times 2}}
         <a class="c-btn c-btn-primary">{{lorem}}</a>
         {{/ times}}
-        <a class="c-btn c-btn-primary c-btn-dropdown">{{lorem}}<span class="caret"></span></a>
+        <div class="c-dropdown">
+          <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="c-dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li class="active"><a href="#">Active item</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Header</li>
+            <li class="disabled"><a href="#">Disabled link</a></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
       </div>
-      <pre>
-        <code class="HTML">//primary vertical button group<br />
-          &lt;div class=&quot;o-btn-group-vertical&quot;&gt;<br />
-          &nbsp;&lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-1&lt;/a&gt;<br />
-          &nbsp;&lt;a class=&quot;c-btn c-btn-primary&quot;&gt;Item-2&lt;/a&gt;<br />
-          &nbsp;&lt;a class=&quot;c-btn c-btn-primary c-btn-dropdown&quot;&gt;Item-3<br />
-          &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
-          &nbsp;&lt;/a&gt;<br />
-          &lt;/div&gt;
-        </code>
-      </pre>
+
 
     </div>
     <div class="col-sm-6">
@@ -97,21 +96,28 @@
 
       <div class="o-btn-group-vertical span-wide-6">
         {{# times 2}}
-        <a class="c-btn c-btn-secondary">{{lorem}}</a>
+          <a class="c-btn c-btn-secondary">{{lorem}}</a>
         {{/ times}}
-        <a class="c-btn c-btn-secondary c-btn-dropdown">{{lorem}}<span class="caret"></span></a>
+        <div class="c-dropdown">
+          <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="c-dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li class="active"><a href="#">Active item</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Header</li>
+            <li class="disabled"><a href="#">Disabled link</a></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
       </div>
-      <pre>
-        <code class="HTML">//secondary vertical button group<br />
-          &lt;div class=&quot;o-btn-group-vertical&quot;&gt;<br />
-          &nbsp;&lt;a class=&quot;c-btn c-btn-secondary&quot;&gt;Item-1&lt;/a&gt;<br />
-          &nbsp;&lt;a class=&quot;c-btn c-btn-secondary&quot;&gt;Item-2&lt;/a&gt;<br />
-          &nbsp;&lt;a class=&quot;c-btn c-btn-secondary c-btn-dropdown&quot;&gt;Item-3<br />
-          &nbsp; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;<br />
-          &nbsp;&lt;/a&gt;<br />
-          &lt;/div&gt;
-        </code>
-      </pre>
+
+
+
+
     </div>
   </div>
 </div>

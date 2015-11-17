@@ -34,19 +34,19 @@
 
 // Set the default primary styles
 @mixin primary-style($hover: null) {
-  @include style-variant($primary-color, $secondary-color, $secondary-color);
   @if $hover {
     @include style-variant($primary-color, $white, $secondary-color);
+  } @else {
+    @include style-variant($primary-color, $secondary-color, $secondary-color);
   }
 }
 
 // Set the default secondary styles
 @mixin secondary-style($hover: null) {
-  @include style-variant($secondary-color, $primary-color, $primary-color);
   @if $hover {
-    &:hover {
-      @include style-variant($primary-color, $white, $primary-color);
-    }
+    @include style-variant($primary-color, $white, $primary-color);
+  } @else {
+    @include style-variant($secondary-color, $primary-color, $primary-color);
   }
 }
 

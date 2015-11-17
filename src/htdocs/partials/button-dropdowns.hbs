@@ -9,59 +9,97 @@
   <div class="col-sm-12">
     <h3>Dropdown Buttons</h3>
     <div class="ui-grid-50">
-      <a class="c-btn c-btn-primary c-btn-dropdown">Default<span class="caret"></span></a>
-      <ul class="c-btn-dropdown--content">
-        <li class="c-btn-dropdown--item">Option 1</li>
-        <li class="c-btn-dropdown--item">Option 2</li>
-        <li class="c-btn-dropdown--item">Option 3</li>
+
+    <div class="c-dropdown">
+      <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
+        Dropdown Single Pri
+        <span class="caret"></span>
+      </button>
+      <ul class="c-dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li class="active"><a href="#">Active item</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li class="dropdown-header">Header</li>
+        <li class="disabled"><a href="#">Disabled link</a></li>
+        <li><a href="#">Separated link</a></li>
       </ul>
     </div>
+
+
+    </div>
     <div class="ui-grid-50">
-      <a class="c-btn c-btn-secondary c-btn-dropdown">Default<span class="caret"></span></a>
-      <ul class="c-btn-dropdown--content">
-        <li class="c-btn-dropdown--item">Option 1</li>
-        <li class="c-btn-dropdown--item">Option 2</li>
-        <li class="c-btn-dropdown--item">Option 3</li>
+
+    <div class="c-dropdown">
+      <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
+        Dropdown Single Sec
+        <span class="caret"></span>
+      </button>
+      <ul class="c-dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li class="active"><a href="#">Active item</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li class="dropdown-header">Header</li>
+        <li class="disabled"><a href="#">Disabled link</a></li>
+        <li><a href="#">Separated link</a></li>
       </ul>
+    </div>
+
     </div>
     <h3>Split Dropdown Buttons</h3>
     <div class="ui-grid-50">
+
       <div class="c-btn-grp-dropdown">
-        <a class="c-btn c-btn-primary">Default 1x</a>
-        <a class="c-btn c-btn-primary c-btn-dropdown">
-          <span class="caret"></span>
-        </a>
-        <ul class="c-btn-dropdown--content">
-          <li class="c-btn-dropdown--item">Option 1</li>
-          <li class="c-btn-dropdown--item">Option 2</li>
-          <li class="c-btn-dropdown--item">Option 3</li>
-        </ul>
+        <a class="c-btn c-btn-primary">Split Pri</a>
+
+        <div class="c-dropdown">
+          <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
+            <span class="caret"></span>
+          </button>
+          <ul class="c-dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li class="active"><a href="#">Active item</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Header</li>
+            <li class="disabled"><a href="#">Disabled link</a></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
       </div>
+
     </div>
     <div class="ui-grid-50">
       <div class="c-btn-grp-dropdown">
-        <a class="c-btn c-btn-secondary">Default 2</a>
-        <a class="c-btn c-btn-secondary c-btn-dropdown">
-          <span class="caret"></span>
-        </a>
-        <ul class="c-btn-dropdown--content">
-          <li class="c-btn-dropdown--item">Option 1</li>
-          <li class="c-btn-dropdown--item">Option 2</li>
-          <li class="c-btn-dropdown--item">Option 3</li>
-        </ul>
+        <a class="c-btn c-btn-secondary">Split Sec</a>
+        <div class="c-dropdown">
+          <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
+            <span class="caret"></span>
+          </button>
+          <ul class="c-dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li class="active"><a href="#">Active item</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Header</li>
+            <li class="disabled"><a href="#">Disabled link</a></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <h3>Select Box Replacement</h3>
     <div class="ui-grid-50">
-      <select id="gender" multiple>
+      <select id="gender">
         <option>Male</option>
         <option>Female</option>
         <option>Cylon</option>
       </select>
-      <br> todo match native funtionality at mobile / tablet desktop gets simple styling non select version to match?
     </div>
 
 
   </div>
 </div>
+
