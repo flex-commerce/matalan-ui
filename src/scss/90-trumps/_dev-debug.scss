@@ -24,7 +24,7 @@ $debug-mode : false;
  * Are there any empty elements in your page?
  */
 :empty{
-    outline:5px solid yellow;
+    // outline:5px solid yellow;
 }
 
 
@@ -78,7 +78,7 @@ a[target]{
 ul,
 ol{
     > *:not(li){
-        outline:5px solid red;
+        outline:5px dotted red;
     }
 }
 

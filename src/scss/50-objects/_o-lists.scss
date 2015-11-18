@@ -122,3 +122,18 @@ $list-border: $cool-grey;
   }
 }
 
+
+
+// def list 2 column fixed
+.o-deflist-2col {
+  dt {
+    float: left;
+    clear: left;
+    width: 50%;
+  }
+  dd {
+    text-align: right;
+    margin-left: 50%;
+    padding-left: 0.5em;
+  }
+}
