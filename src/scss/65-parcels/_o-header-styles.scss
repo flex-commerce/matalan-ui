@@ -92,6 +92,10 @@
   i:before {
     color: $dark-grey-lighten-60;
   }
+
+  .input-group--addon__inset-left:focus + a {
+    background: $dark-grey;
+  }
 }
 
 .o-header--menu-button {
