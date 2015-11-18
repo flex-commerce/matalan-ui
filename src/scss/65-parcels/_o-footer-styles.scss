@@ -24,6 +24,10 @@ $footer-bg-color: $light-grey-hover;
   .input-group--addon__inset-left {
     padding-left: 10px !important;
   }
+
+  .offset-20 {
+    left: 20%;
+  }
 }
 
 .o-footer--card-svg-wrapper-small {
@@ -38,6 +42,8 @@ $footer-bg-color: $light-grey-hover;
     height: 100%;
   }
 }
+
+
 
 @include mq($from: md) {
 
