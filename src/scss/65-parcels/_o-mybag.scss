@@ -1,0 +1,130 @@
+$mybag-border-color: $cool-grey;
+
+// layout begin
+.o-mybag {
+  border: 1px solid $primary-color;
+  background: $white;
+  z-index: 10;
+  @include mq($until: md) {
+    border-color: purple;
+    position: absolute;
+    width: 300px;
+    right: 0;
+  }
+  @include mq($from: md, $until: lg) {
+    position: fixed;
+    width: 80vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  @include mq($from: lg) {
+    border-color: blue;
+    position: absolute;
+    width: 300px;
+    right: 0;
+  }
+}
+// layout end
+
+
+// separators, borders, and padding begin
+.o-mybag {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  .o-mybag--header,
+  .o-mybag--inner,
+  .o-mybag--footer {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.o-mybag--inner {
+  padding-top: 1em;
+  max-height: 420px; // magic height
+  overflow-y: scroll;
+}
+
+.o-mybag--header {
+  border-bottom: 1px solid $mybag-border-color;
+}
+
+// separator within the markup
+.o-mybag .separator {
+  padding-top: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid $mybag-border-color;
+}
+
+// auto separator for the list
+.o-mybag--list-item:not(:last-child):after {
+  content: '';
+  display: block;
+  padding-top: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid $mybag-border-color;
+}
+
+// separators, borders, and padding end
+
+
+@include mq($from: md, $until: lg) {
+  .o-mybag--list-item--detail {
+    .detail--description {
+      float: left;
+    }
+    .detail--vars {
+      clear: both;
+      float: left;
+    }
+    .detail--price {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.o-mybag--list-item--image {
+  img {
+    width: 100%;
+  }
+}
+
+.o-mybag--list-item--control {
+  text-align: right;
+}
+
+.o-mybag--list-total {
+  line-height: 1.3;
+}
+
+
+// header override
+.c-dropdown-holder {
+  display: none;
+}
+
+&.open > .c-dropdown-holder {
+  display: block;
+}
+
+
+
+
+// some dev rules for highlights
+.o-mybag--list-item--image,
+.o-mybag--list-item--detail,
+.o-mybag--list-item--control {
+  @include mq($until: md) {
+    outline: 1px solid green;
+  }
+  @include mq($from: md, $until: lg) {
+    outline: 1px solid red;
+  }
+  @include mq($from: lg) {
+    outline: 1px solid blue;
+  }
+}
+// some dev rules end

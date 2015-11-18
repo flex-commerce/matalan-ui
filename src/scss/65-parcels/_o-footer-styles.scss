@@ -13,70 +13,43 @@ $footer-bg-color: $light-grey-hover;
       font-weight: 600px;
     }
   }
-  .c-search-form.has-focus .c-search__button {
-    background-color: #dadada;
-    color: $primary-color;
+
+  .input-group--addon__inset-left:focus {
+    + a,
+    + button {
+      background-color: $dark-grey;
+    }
   }
 
   .input-group--addon__inset-left {
     padding-left: 10px !important;
   }
+
+  .offset-20 {
+    left: 20%;
+  }
 }
 
 .o-footer--card-svg-wrapper-small {
   width: 20%;
-  float:left;
+  float: left;
   height: 50px;
   padding: 5px;
   //replace with class
-  margin-top: 40px;
+  margin-top: 5px;
   img {
     @include center(xy);
     height: 100%;
   }
 }
-.o-footer--card-svg-wrapper-medium {
-  width: 33.3%;
-  float:left;
-  height: 70px;
-  padding: 5px;
-  //replace with class
-  margin-top: 20px;
-  img {
-    @include center(xy);
-    height: 100%;
-  }
-}
+
+
 
 @include mq($from: md) {
-  .o-footer--offset {
-    position: relative;
-    background-color: $footer-bg-color;
-    // magic number footer offset
-    top: -30px;
-    width: calc(50% + 400px);
-    @include mq($from: lg) {
-      width: calc(35% + 400px);
-    }
-    margin-left: -400px;
-    padding-left: 400px;
-    float: left;
-  }
 
-  .o-footer-t-r {
-    border-width: 1px;
-    border-style: solid solid none none;
-    border-color: $dark-grey-lighten-30;
-    left: 0;
-    height: 30px;
-    margin-left: -400px;
-    padding-left: 400px;
-  }
-  .o-footer--title {
-    margin-top:-18px;
-  }
   .o-footer--social {
     margin-top: 20px;
+    margin-bottom: 12px;
     div:first-child {
        margin-top: -4px;
     }
@@ -91,6 +64,10 @@ $footer-bg-color: $light-grey-hover;
   .o-footer--list {
     text-align: left;
   }
+}
+
+.o-footer--title {
+  margin-top:10px;
 }
 
 @include mq($until: md) {
@@ -128,4 +105,12 @@ $footer-bg-color: $light-grey-hover;
     width: 35%;
   }
   @include clearfix();
+}
+
+.c-frame-caption {
+  width: 250px;
+  @include mq($until: md) {
+    @include center(x);
+  }
+
 }

@@ -1,4 +1,6 @@
-
+.u-cf {
+  @include clearfix;
+}
 
 %u-fr,
 .u-fr {
@@ -16,24 +18,10 @@
   opacity: 0.6;
 }
 
-
-
-.u-cf {
-  @include clearfix;
-}
-
 .u-round {
   border-radius: 50%
 }
 
 .u-r-0 {
   right: 0;
-}
-
-.u-font-c{
-  text-align: center;
-}
-
-.u-font-r{
-  text-align: right;
 }
