@@ -30,7 +30,7 @@
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+      // selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
     }
 
     var $parent = selector && $(selector)
@@ -96,6 +96,7 @@
   }
 
   Dropdown.prototype.keydown = function (e) {
+
     if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
 
     var $this = $(this)
@@ -161,7 +162,7 @@
 
   $(document)
     .on('click.ui.dropdown.data-api', clearMenus)
-    .on('click.ui.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
+    .on('click.ui.dropdown.data-api', '.c-dropdown form', function (e) { e.stopPropagation() })
     .on('click.ui.dropdown.data-api', toggle, Dropdown.prototype.toggle)
     .on('keydown.ui.dropdown.data-api', toggle, Dropdown.prototype.keydown)
     .on('keydown.ui.dropdown.data-api', '.c-dropdown-holder', Dropdown.prototype.keydown)
