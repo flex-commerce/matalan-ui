@@ -171,8 +171,9 @@
 .navbar--top-item > .link,
 .sub-nav-title > .link,
 .sub-nav-item > .link {
-  @include font-size(12px, 1.8);
+  @include font-size(10px, 1.6);
   text-decoration: none;
+  color: $dark-grey;
 }
 
 @include mq($from: lg) {
