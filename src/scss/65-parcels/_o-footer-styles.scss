@@ -60,6 +60,10 @@ $footer-bg-color: $light-grey-hover;
   }
 }
 
+.o-footer--title {
+  margin-top:10px;
+}
+
 @include mq($until: md) {
   .o-footer--title {
     margin-top:20px;
@@ -95,4 +99,12 @@ $footer-bg-color: $light-grey-hover;
     width: 35%;
   }
   @include clearfix();
+}
+
+.c-frame-caption {
+  width: 250px;
+  @include mq($until: md) {
+    @include center(x);
+  }
+
 }
