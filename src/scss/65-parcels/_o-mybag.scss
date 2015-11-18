@@ -13,6 +13,8 @@ $mybag-border-color: $cool-grey;
   }
   @include mq($from: md, $until: lg) {
     position: fixed;
+    max-width: 580px; //rem-calc(580);
+    max-height: 780px; //rem-calc(780);
     width: 80vw;
     left: 0;
     right: 0;
