@@ -24,7 +24,7 @@ html {
     line-height: $base-line-height / $base-font-size; /* [1] */
     // background-color: $base-background-color;
     color: $base-text-color;
-    overflow-y: scroll; /* [2] */
+
     min-height: 100%; /* [3] */
     -webkit-text-size-adjust: 100%; /* [4] */
         -ms-text-size-adjust: 100%; /* [4] */
@@ -32,10 +32,20 @@ html {
      -webkit-font-smoothing: antialiased; /* [5] */
 }
 
+body {
+  overflow-x: hidden;
+  // overflow-y: scroll; /* [2] */
+}
+
+html, body {
+  min-height: 100%;
+}
+
+
+// DEV - body colours
 html {
   background-color: #f2f2f2;
 }
 body {
   background-color: $white;
-  overflow-x: hidden;
-}
+  }

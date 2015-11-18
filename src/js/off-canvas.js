@@ -1,8 +1,15 @@
-var $parentNavMenu = $('[data-app="accessible-navmenu"]');
+/*
+  Off canvas / megamenu init
+ */
 
-  // megamenu init
-  // function for init of megamenu, called when window > 1024px
+(function() {
 
+  var $parentNavMenu = $('[data-app="accessible-navmenu"]');
+
+
+  // ===========================
+  // Megamenu init
+  // ===========================
   function initPageLarge() {
     $parentNavMenu.accessibleMegaMenu({
       /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
@@ -21,18 +28,18 @@ var $parentNavMenu = $('[data-app="accessible-navmenu"]');
   // ===========================
   // Off Canvas
   // ===========================
-  var clickCatcher = '<div id="js-clickcatcher" class="js-clickcatcher"></div>'
+  var clickCatcher = '<div id="js-clickcatcher-canvas" class="js-clickcatcher"></div>'
   var offCanvasActive;
 
-  function closeOffCanvas(){
-    $('html').removeClass("off-canvas--active");
+  function closeOffCanvas() {
+    $('html').removeClass("body--scroll-lock");
     $parentNavMenu.removeClass("active");
-    $('#js-clickcatcher').remove();
+    $('#js-clickcatcher-canvas').remove();
     offCanvasActive = false;
   }
 
-  function openOffCanvas(){
-    $('html').addClass("off-canvas--active");
+  function openOffCanvas() {
+    $('html').addClass("body--scroll-lock");
     $parentNavMenu.addClass("active");
     $('body').append(clickCatcher);
     offCanvasActive = true;
@@ -41,12 +48,12 @@ var $parentNavMenu = $('[data-app="accessible-navmenu"]');
 
   // off canvas navigation rules
   function offCanvas() {
-    $('body').on('click', '#js-clickcatcher', function(){
+    $('body').on('click', '#js-clickcatcher-canvas', function() {
       closeOffCanvas();
     })
 
     // toggle top level nav item
-    $parentNavMenu.on('click', '.navbar--top-item > .link', function(e){
+    $parentNavMenu.on('click', '.navbar--top-item > .link', function(e) {
       e.preventDefault();
       if (!$(this).hasClass('open')) {
         // if this isn't already open, close any open siblings before proceeding
@@ -57,7 +64,7 @@ var $parentNavMenu = $('[data-app="accessible-navmenu"]');
 
 
     // toggle second level (sub nav) item
-    $parentNavMenu.on('click', '.sub-nav-title', function(e){
+    $parentNavMenu.on('click', '.sub-nav-title', function(e) {
       e.preventDefault();
       if (!$(this).hasClass('open')) {
         // if this isn't already open, close any open siblings before proceeding
@@ -68,7 +75,7 @@ var $parentNavMenu = $('[data-app="accessible-navmenu"]');
     });
 
     // open menu item chevron click - href handling to go here
-    $parentNavMenu.on('click', '.icon-ui-gt', function(e){
+    $parentNavMenu.on('click', '.icon-ui-gt', function(e) {
       e.stopPropagation();
     });
 
@@ -77,8 +84,8 @@ var $parentNavMenu = $('[data-app="accessible-navmenu"]');
 
   // ===========================
   // off canvas button event handler
-  $(".nav-mobile-button").on('click', function(){
-    if ($('html').hasClass('off-canvas--active')) {
+  $(".nav-mobile-button").on('click', function() {
+    if ($('html').hasClass('body--scroll-lock')) {
       closeOffCanvas();
     } else {
       openOffCanvas();
@@ -104,14 +111,16 @@ var $parentNavMenu = $('[data-app="accessible-navmenu"]');
 
 
   // ===========================
-$( document ).ready(function() {
-  handleWindowSize();
-
-  $(window).on('resize', _.debounce(function(){
-    if (offCanvasActive === true) {
-      closeOffCanvas();
-    }
+  $(document).ready(function() {
     handleWindowSize();
-  }, 250));
 
-});
+    $(window).on('resize', _.debounce(function() {
+      if (offCanvasActive === true) {
+        closeOffCanvas();
+      }
+      handleWindowSize();
+    }, 250));
+
+  });
+
+})()

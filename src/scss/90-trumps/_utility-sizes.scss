@@ -27,12 +27,12 @@
 */
 
 /*
-Sizing Sizes
-  tiny
-  small
-  medium
-  large
-  huge
+Sizing Sizes Legend
+  tiny:   $base-space--tiny    =  round($base-space / 4)  == 4px;
+  small:  $base-space--small   =  round($base-space / 2)  == 7px;
+  medium: $base-space--medium  =  $base-space             == 14px;
+  large:  $base-space--large   =  round($base-space * 2)  == 21px;
+  huge:   $base-space--huge    =  round($base-space * 4)  == 36px;
 */
 
 @each $key, $val in $sizing-sizes {
@@ -103,5 +103,5 @@ Sizing Sizes
 }
 
 .u-mar-0 {
-  padding: 0 !important;
+  margin: 0 !important;
 }
