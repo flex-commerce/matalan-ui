@@ -60,6 +60,9 @@
       color: $white;
       font-size: 1em;
       font-weight: 500;
+      &:hover {
+        background-color: $primary-color-hover;
+      }
     }
   }
 }
@@ -72,13 +75,13 @@
   }
 
   @include mq($from: lg) {
-    max-width: 270px;
+    max-width: 250px;
   }
 
   img {
     margin-top: 25px;
     @include mq($from: md) {
-      margin-top: 15px;
+      margin-top: 20px;
     }
   }
 
@@ -86,9 +89,14 @@
 
 .o-header--search {
   text-align: right;
-  @include mq($from: lg) {
-    text-align: center;
+  a {
+    color: $cool-grey;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
   }
+
   i:before {
     color: $dark-grey-lighten-60;
   }
@@ -138,8 +146,13 @@
   margin-top: 10px;
   text-align: right;
   font-size: 11px;
+
   a {
     color: $dark-grey-lighten-60;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   > li {
     display: inline-block;
