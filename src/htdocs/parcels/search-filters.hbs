@@ -1,1 +1,48 @@
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit aliquid dolorum nulla amet autem tenetur repudiandae, laborum quidem eaque facere sapiente debitis dolore optio vel voluptatibus, incidunt accusamus aperiam culpa?
+<div class="o-filters-contain">
+  <div class="o-filters">
+
+    <div class="o-filters--header">
+      <div class="u-cf">
+        <h2 class="u-fl hidden-lg-up">Filter Products</h2>
+        <h4 class="u-fl hidden-lg-down">Filter Products by:</h4>
+        <a class="o-filters--close link u-font-ta-c u-fr hidden-lg-up">
+          <i class="icon-ui-plus rotate-icon-45"></i>
+          <div class="">Close</div>
+        </a>
+      </div>
+      <div class="separator u-mar-0"></div>
+    </div>
+
+    <div class="o-filters--inner">
+      <ul class="o-filters--list-contain">
+
+        <li class="o-filters--list o-filters--list-item u-cf">
+          <div class="o-filters--list-item--detail col-xs-9 col-md-10 col-lg-6 u-pad-h-none">
+            <p class="filter--title u-font-wb">Filter Type</p>
+              <div class="o-form-input--contain o-option__block filter--list--checkbox">
+                {{# times 10 }}
+                <label class="o-form-label o-form-label__option">
+                  <input type="checkbox">
+                  <span></span>
+                  Option {{ this }}
+                </label>
+                {{/ times }}
+              </div>
+          </div>
+        </li>
+
+        <li class="o-filters--list o-filters--list-item u-cf">
+          <div class="o-filters--list-item--detail col-xs-9 col-md-10 col-lg-6 u-pad-h-none">
+            <p class="detail--description u-font-wb">Colours</p>
+            <ul class="detail--vars u-pad-b-small">
+              {{# times 8 }}
+              <li>Color</li>
+              {{/ times }}
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
