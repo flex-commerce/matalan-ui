@@ -20,9 +20,9 @@
     }
   }
   @include mq($until: lg) {
-    // .search--header--products {
-    //   padding-left: 0;
-    // }
+    .search--header--filter {
+      padding-right: 0;
+    }
     .search--header--sort {
       padding-left: 0;
     }
@@ -50,11 +50,20 @@
 }
 
 @include mq($from: lg) {
-  .search-results__wide {
+  .search-results__tight {
     .search-results--item {
       @include column( (lg: 3) );
     }
   }
+  .search-results__wide {
+    .search-results--item {
+      @include column( (lg: 4) );
+    }
+  }
 }
 
-
+.js-results-tight, .js-results-wide {
+  &.active i:before {
+    color: $primary-color;
+  }
+}
