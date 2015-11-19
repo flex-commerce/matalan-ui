@@ -38,10 +38,6 @@ $filters-border-color: $cool-grey;
 // small screen specific tweaks to details layout ======================================
 @include mq($until: lg) {
   .o-filters--list-item--detail {
-    .filter--title {
-      float: left;
-      max-width: 40%;
-    }
     .detail--vars {
       clear: both;
       float: left;
@@ -78,7 +74,6 @@ $filters-border-color: $cool-grey;
   z-index: 10;
 }
 .o-filters {
-  border: 1px solid $primary-color;
   background: $white;
 }
 
@@ -93,9 +88,11 @@ $filters-border-color: $cool-grey;
 .filter--list--checkbox {
   padding: 0 !important;
   label {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.2em !important;
   }
 }
+
+
 
 // .o-filters--header {
 //   border-bottom: 1px solid $filters-border-color;
@@ -125,9 +122,21 @@ $filters-border-color: $cool-grey;
 
 
 .filter--title,
-.detail--vars,
-.detail--price {
+.detail--colours {
   @include font-size(12px, 1.1);
+}
+
+.filter--colours  {
+  li {
+    display: inline-block;
+    width:30px;
+    height:30px;
+    border-radius:15px;
+    background:#000;
+    cursor: pointer;
+  }
+
+
 }
 
 
@@ -160,7 +169,6 @@ $filters-border-color: $cool-grey;
 @include mq($from: lg) {
   .o-filters {
     padding-top: 0;
-    border-color: blue;
   }
   .o-filters--inner {
     padding-left: 0;
