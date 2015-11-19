@@ -50,11 +50,20 @@
 }
 
 @include mq($from: lg) {
-  .search-results__wide {
+  .search-results__tight {
     .search-results--item {
       @include column( (lg: 3) );
     }
   }
+  .search-results__wide {
+    .search-results--item {
+      @include column( (lg: 4) );
+    }
+  }
 }
 
-
+.js-results-tight, .js-results-wide {
+  &.active i:before {
+    color: $primary-color;
+  }
+}
