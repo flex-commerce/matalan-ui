@@ -6,6 +6,9 @@ $selectbox-border-color: $cool-grey;
 select.selectbox {
   position: absolute;
   padding: 0 1.5em;
+  &.select-full {
+    width: 100%;
+  }
 }
 .selectbox--contain__desktop > select.selectbox {
   -webkit-appearance: none;
@@ -68,7 +71,7 @@ select.selectbox {
   right: 0;
   width: 1.8em;
   height: 100%;
-  border-left: solid 1px $selectbox-border-color;
+  // border-left: solid 1px $selectbox-border-color;
   .caret {
     @include center(y, abs);
   }
