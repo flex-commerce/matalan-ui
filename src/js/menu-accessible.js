@@ -1,4 +1,8 @@
 /*
+  Mega menu JS
+ */
+
+/*
 Copyright © 2013 Adobe Systems Incorporated.
 
 Licensed under the Apache License, Version 2.0 (the “License”);

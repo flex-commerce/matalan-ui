@@ -11,7 +11,7 @@
     bottom: 0;
     width: 85%;
     left: -85%;
-    z-index: 1;
+    z-index: 5;
     border-right: 1px solid #aaa;
     &.active {
       left: 0;
@@ -101,7 +101,7 @@
     position: absolute;
   }
   display: none;
-  top: rem-calc(54); // @TODO - magic number, height of menu
+  top: calc(100% + 2px);
   left: 0;
   right: 0;
   margin-top: -1px;
@@ -344,13 +344,19 @@
 }
 
 // temp
-html.off-canvas--active {
+.js-clickcatcher {
+  display: none;
+}
+html.body--scroll-lock {
   overflow-y: hidden;
   .js-clickcatcher {
-    @include position(absolute, top 0 right 0 bottom 0 left 0);
+    display: block;
+    @include position(fixed, top 0 right 0 bottom 0 left 0);
     background-color: rgba($black, 0.5);
+    z-index: 3;
   }
 }
+
 
 @include mq($from: lg) {
   .nav-menu-icons {
