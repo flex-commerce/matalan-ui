@@ -12,6 +12,7 @@
   }
 
   function openFilters(scope) {
+    console.log('trigger')
     $('html').addClass("body--scroll-lock");
     console.log($(scope).parent());
     $(scope).closest('.container').addClass("open");
