@@ -61,7 +61,7 @@
   -webkit-columns: $number 12em;
 }
 
-@for $i from 2 through 4 {
+@for $i from 2 through 6 {
   .auto-column-#{$i} {
     @include auto-columns(#{$i})
   }
