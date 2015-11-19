@@ -2,8 +2,7 @@
 //
 .c-breadcrumb-bar {
   @extend .o-list-inline;
-  background-color: $light-grey;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 0;
   a {
     @extend .u-font-no-underline;
     color: $primary-color;
