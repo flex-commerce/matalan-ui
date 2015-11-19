@@ -71,7 +71,7 @@ $filters-border-color: $cool-grey;
 // misc rules ======================================
 .o-filters-contain {
   position: relative;
-  z-index: 10;
+  z-index: 4;
 }
 .o-filters {
   background: $white;
@@ -88,6 +88,7 @@ $filters-border-color: $cool-grey;
 .filter--list--checkbox {
   padding: 0 !important;
   label {
+    cursor: pointer;
     margin-bottom: 0.2em !important;
   }
 }

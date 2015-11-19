@@ -7,7 +7,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="search-results--side hidden-lg-down">
+  <div class="search-results--side">
     {{> parcels/search-filters }}
   </div>
   <div class="search-results--main search-results__wide">
@@ -55,9 +55,9 @@
           </div>
         </div>
       </div>
-      <div class="search--header--filter hidden-lg-up">
+      <div class="search--header--filter col-xs-6 hidden-lg-up js-filters">
         <div>
-          <select id="filterby" class="selectbox select-full">
+          <select id="filterby" class="selectbox select-full" disabled>
             <option>Filter By</option>
             <option>Option 2</option>
             <option>Option 3</option>
