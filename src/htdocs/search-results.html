@@ -34,8 +34,11 @@
       loopOptions: true
     });
 
-    var slider = document.getElementById('range');
-
+    var slider = document.getElementById('filters--range');
+    var sliderValues = [
+      document.getElementById('slider-value-lower'),
+      document.getElementById('slider-value-upper')
+    ];
     noUiSlider.create(slider, {
       start: [20, 80],
       connect: true,
@@ -43,6 +46,9 @@
         'min': 0,
         'max': 100
       }
+    });
+    slider.noUiSlider.on('update', function( values, handle ) {
+      sliderValues[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
     });
   </script>
 </body>
