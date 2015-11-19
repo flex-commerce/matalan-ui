@@ -136,7 +136,7 @@
 [class^="icon-"],
 [class*=" icon-"] {
   &:before {
-    font-size: rem-calc(32px); // todo - replace temp dev rule
+    font-size: 2em; // todo - replace temp dev rule
     // padding-right: 0.5em; // todo - replace temp dev rule
     display: inline-block;
     color: $cool-grey;

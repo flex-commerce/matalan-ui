@@ -20,6 +20,12 @@
   @extend %icon-base;
 }
 
+.icon-view_tight-o:before {
+  content: "\e90b";
+}
+.icon-view_wide-o:before {
+  content: "\e90c";
+}
 .icon-social-facebook:before {
   content: "\e903";
 }

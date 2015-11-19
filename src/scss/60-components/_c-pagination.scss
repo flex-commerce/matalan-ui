@@ -7,6 +7,7 @@
     border-color: $secondary-color;
   }
 }
+
 .c-btn-paginate {
   color: $base-text-color;
 }
@@ -14,24 +15,22 @@
   color: $primary-color;
 }
 
-
-
 // basic version
-.c-pagination-bar {
+.c-pagination-bar__wide {
   position: relative;
   padding: 0.75em 0;
   @include border-tb-default;
   @include clearfix;
+  .c-pagination-bar__list {
+    text-align: center;
+    @include center(x, abs);
+  }
+  .c-pagination-bar__prev {
+    float: left;
+  }
+  .c-pagination-bar__next {
+    float: right;
+  }
 }
 
-.c-pagination-bar__list {
-  text-align: center;
-  @include center(x, abs);
-}
 
-.c-pagination-bar__prev {
-  float: left;
-}
-.c-pagination-bar__next {
-  float: right;
-}
