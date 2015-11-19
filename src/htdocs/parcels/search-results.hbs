@@ -5,35 +5,120 @@
       <li class="c-breadcrumb-bar__item no-link">Search Term</li>
     </ul>
   </div>
-  </div>
-  <div class="row">
-  <div class="col-xs-3">
+</div>
+<div class="row">
+  <div class="search-results--side hidden-lg-down">
     {{> parcels/search-filters }}
   </div>
-  <div class="col-xs-9">
+  <div class="search-results--main search-results__wide">
     <h4>Search Term</h4>
-    <div class="col-xs-6">
-      <div>
-        <select id="sortby" class="selectbox select-full" style="opacity: 0;">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-      </div>
-    </div>
-    <div class="col-xs-6">
-      <div class="">
-        <select id="filterby" class="selectbox select-full" style="opacity: 0;">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-      </div>
-    </div>
+    <hr>
+    <div class="search-results--header row">
 
+      <!-- <div class="col-xs-6 col-lg-3 hidden-lg-down"> -->
+      <div class="search--header--products hidden-lg-down">
+        <p>253 - 228 of 1800 products</p>
+      </div>
+
+      <!-- <div class="col-lg-5 hidden-lg-down u-pad-0"> -->
+      <div class="search--header--pagination hidden-lg-down">
+        <div class="c-pagination-bar">
+          <div class="c-pagination-bar__list u-fl">
+            <a href="" class="c-btn c-btn-paginate">View All</a>
+            <a href="" class="c-btn c-btn-paginate">1</a>
+            <a href="" class="c-btn c-btn-paginate">2</a>
+            <a href="" class="c-btn c-btn-paginate">3</a>
+            <a href="" class="c-btn c-btn-paginate">4</a>
+            <a href="" class="c-btn c-btn-paginate">5</a>
+            <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
+          </div>
+          <div class="u-fl">
+            <a href="" class="js-results-tight">
+              <i class="icon-view_tight"></i>
+            </a>
+            <a href="" class="js-results-wide">
+              <i class="icon-view_wide"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-xs-6 col-lg-4"> -->
+      <div class="search--header--sort">
+
+        <div class="row">
+
+          <div class="col-lg-3 hidden-lg-down u-font-ta-r u-pad-0">
+            <label for="sortby" class="">
+              <small class="meta">Sort By</small>
+            </label>
+          </div>
+          <div class="col-xs-12 col-lg-9">
+            <div>
+              <select id="sortby" class="selectbox select-full">
+                <option>Sort By</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="search--header--filter hidden-lg-up">
+        <div>
+          <select id="filterby" class="selectbox select-full">
+            <option>Filter By</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+
+
+    <div class="search-results--inner row">
+      {{# times 8 }}
+      <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
+        <div class="results--image">
+          <img class="img" src="http://placehold.it/180x254">
+          <div data-content="overlay 1" class="c-roundel c-roundel__sec c-roundel--custom roundel-pos-tl"></div>
+          <div data-content="overlay 2" class="c-roundel c-roundel__sec c-roundel--custom roundel-pos-tr"></div>
+          <div data-content="overlay 3" class="c-roundel c-roundel__sec c-roundel--custom roundel-pos-br"></div>
+        </div>
+        <div class="results--detail">
+          <div>x View more colours</div>
+          <div>Product Name</div>
+          <div>Price</div>
+          <div class="c-btn c-btn-primary">View</div>
+          <div class="rating">
+            <i class="icon-star active"></i>
+            <i class="icon-star active"></i>
+            <i class="icon-star active"></i>
+            <i class="icon-star active"></i>
+            <i class="icon-star active"></i>
+          </div>
+        </div>
+      </div>
+      {{/ times }}
+    </div>
+    <hr>
+
+    <div class="search-results--footer u-fr">
+      <div class="c-pagination-bar">
+        <div class="c-pagination-bar__list">
+          <a href="" class="c-btn c-btn-paginate">View All</a>
+          <a href="" class="c-btn c-btn-paginate">1</a>
+          <a href="" class="c-btn c-btn-paginate">2</a>
+          <a href="" class="c-btn c-btn-paginate">3</a>
+          <a href="" class="c-btn c-btn-paginate">4</a>
+          <a href="" class="c-btn c-btn-paginate">5</a>
+          <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
+        </div>
+      </div>
+    </div>
   </div>
-
-
-
-</div>
 </div>

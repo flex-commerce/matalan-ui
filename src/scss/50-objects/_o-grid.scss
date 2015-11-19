@@ -94,7 +94,7 @@ $susy: (
 // common styling applied to any column (class="col-*" in bootstrap)
 // /!\ you should not use this directly and see the column mixin
 %columnDefaultStyles {
-  box-sizing: border-box;
+  // box-sizing: border-box;
   position: relative;
   float: left;
   padding-left: $susy-gutter-width;

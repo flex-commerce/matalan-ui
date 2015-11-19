@@ -1,0 +1,61 @@
+.search-results--side {
+  @include column( (xs: 2.5) );
+}
+
+.search-results--main {
+  @include column( (xs: 12, lg: 9.5) );
+  outline: 1px solid red;
+}
+
+
+
+// <!-- <div class="col-xs-6 col-lg-3 hidden-lg-down"> -->
+.search--header--products {
+  outline: 1px solid red;
+  @include column( (xs: 6, lg: 3) );
+}
+// <!-- <div class="col-lg-5 hidden-lg-down u-pad-0"> -->
+.search--header--pagination {
+  outline: 1px solid green;
+  @include column( (lg: 6) );
+  padding: 0;
+
+}
+// <!-- <div class="col-xs-6 col-lg-4"> -->
+.search--header--sort {
+  outline: 1px solid blue;
+  @include column( (xs: 6, lg: 3) );
+}
+
+.search--header--filter {
+  @include column( (xs: 6) );
+  outline: 1px solid orange;
+}
+
+.search-results--item {
+
+  .results--image {
+    position: relative;
+    .img {
+      width: 100%;
+    }
+  }
+  .results--detail {}
+}
+
+.search--header--products {
+  @include font-size(12px);
+}
+
+
+@include mq($until: md) {
+  .search-results--item {}
+}
+
+@include mq($from: lg) {
+  .search-results__wide {
+    .search-results--item {
+      @include column( (lg: 3) );
+    }
+  }
+}

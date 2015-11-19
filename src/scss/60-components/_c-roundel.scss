@@ -2,8 +2,8 @@
   @extend .u-round;
   position: relative;
   border-radius: 50%;
-  padding-top: 50%;
-  width: 50%; /// @TODO - magic number - size
+  width: 30%; /// @TODO - magic number - size
+  padding-top: 30%; /// @TODO - magic number - size
   font-size: 80%;
   text-align: center;
   line-height: 1.2;
@@ -24,6 +24,25 @@
   border: 1px dashed;
   font-weight: 600;
 }
+
+
+.roundel-pos-tl {
+  @include absolute(top 0.75em left 0.75em);
+}
+.roundel-pos-tr {
+  @include absolute(top 0.75em right 0.75em);
+}
+.roundel-pos-br {
+  @include absolute(bottom 1em right 0.75em);
+}
+
+
+
+
+
+
+
+
 
 .c-roundel--custom:after {
   content: attr(data-content);
