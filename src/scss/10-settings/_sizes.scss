@@ -15,11 +15,12 @@ $default-pad-y:  ($default-pad-x / 2);
 $base-space--tiny: round($base-space / 4);
 $base-space--small: round($base-space / 2);
 $base-space--medium: $base-space;
-$base-space--large: round($base-space * 2);
-$base-space--huge: round($base-space * 4);
+$base-space--large: round($base-space * 1.5);
+$base-space--huge: round($base-space * 2.6);
 
 
 $sizing-sizes: (
+  none: 0,
   tiny: $base-space--tiny,
   small: $base-space--small,
   medium: $base-space--medium,

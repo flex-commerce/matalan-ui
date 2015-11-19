@@ -1,11 +1,17 @@
 // scss-lint:disable all
 $selectbox-border-color: $cool-grey;
+$selectbox-active-color: $primary-color;
+$selectbox-hover-bg-color: $light-grey-hover;
+$selectbox-hover-txt-color: $primary-color;
 
 
 /* Make webkit behave */
 select.selectbox {
   position: absolute;
   padding: 0 1.5em;
+  &.select-full {
+    width: 100%;
+  }
 }
 .selectbox--contain__desktop > select.selectbox {
   -webkit-appearance: none;
@@ -18,10 +24,13 @@ select.selectbox {
 
 
 /* Dropdown control */
+select, .selectbox-dropdown {
+  min-width: 65px;
+}
 
 .selectbox-dropdown {
   max-width: 100%;
-  min-width: 65px;
+  min-width: 100%;
   position: relative;
   border: solid 1px $selectbox-border-color;
   line-height: 1.5;
@@ -34,7 +43,7 @@ select.selectbox {
 }
 
 
-.selectbox-active, .selectbox-active:hover {
+.selectbox-active {
   &:not(.selectbox-disabled) {
     // hover here is only triggered during open state, otherwise only options show focus
     @include tab-focus;
@@ -68,7 +77,7 @@ select.selectbox {
   right: 0;
   width: 1.8em;
   height: 100%;
-  border-left: solid 1px $selectbox-border-color;
+  // border-left: solid 1px $selectbox-border-color;
   .caret {
     @include center(y, abs);
   }
@@ -140,7 +149,7 @@ select.selectbox {
 }
 
 .selectbox-options li.selectbox-hover a {
-  background-color: #EEE;
+  background-color: $selectbox-hover-bg-color;
 }
 
 .selectbox-options li.selectbox-disabled a {
@@ -149,7 +158,8 @@ select.selectbox {
 }
 
 .selectbox-options li.selectbox-selected a {
-  background-color: #C8DEF4;
+  color: $selectbox-active-color;
+
 }
 
 .selectbox-options .selectbox-optgroup {

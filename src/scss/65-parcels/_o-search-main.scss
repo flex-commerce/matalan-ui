@@ -1,0 +1,69 @@
+.search-results--side {
+  @include column( (xs: 2.5) );
+}
+.search-results--main {
+  @include column( (xs: 12, lg: 9.5) );
+}
+
+
+.search-results--header {
+  @include border-tb-default(1px);
+  padding: 0.5em 0;
+  margin-bottom: 1em;
+
+  @include mq($from: lg) {
+    .search--header--products {
+      padding-left: 0;
+    }
+    .search--header--sort {
+      padding-right: 0;
+    }
+  }
+  @include mq($until: lg) {
+    .search--header--filter {
+      padding-right: 0;
+    }
+    .search--header--sort {
+      padding-left: 0;
+    }
+  }
+}
+
+
+.search-results--item {
+  .results--image {
+    position: relative;
+    .img {
+      width: 100%;
+    }
+  }
+}
+
+
+.search--header--products {
+  @include font-size(12px);
+}
+
+
+@include mq($until: md) {
+  .search-results--item {}
+}
+
+@include mq($from: lg) {
+  .search-results__tight {
+    .search-results--item {
+      @include column( (lg: 3) );
+    }
+  }
+  .search-results__wide {
+    .search-results--item {
+      @include column( (lg: 4) );
+    }
+  }
+}
+
+.js-results-tight, .js-results-wide {
+  &.active i:before {
+    color: $primary-color;
+  }
+}

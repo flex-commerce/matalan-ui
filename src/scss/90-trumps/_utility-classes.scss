@@ -1,6 +1,21 @@
+// clearfixes
 .u-cf {
   @include clearfix;
 }
+.u-cr {
+  clear: right;
+}
+.u-cl {
+  clear: left;
+}
+.u-cb {
+  clear: both;
+}
+// clearfixes end
+
+
+
+
 
 %u-fr,
 .u-fr {
@@ -24,4 +39,8 @@
 
 .u-r-0 {
   right: 0;
+}
+
+.rotate-icon-45 {
+  transform: rotate(45deg);
 }

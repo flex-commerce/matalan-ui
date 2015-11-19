@@ -1,0 +1,161 @@
+<div class="o-filters-contain">
+  <div class="o-filters">
+
+    <div class="o-filters--header">
+      <div class="u-cf">
+        <h2 class="u-fl hidden-lg-up">Filter Products</h2>
+        <h4 class="u-fl hidden-lg-down">Filter Products by:</h4>
+        <a class="o-filters--close link u-font-ta-c u-fr hidden-lg-up">
+          <i class="icon-ui-plus rotate-icon-45"></i>
+          <div class="">Close</div>
+        </a>
+      </div>
+      <div class="separator u-mar-0"></div>
+    </div>
+
+    <div class="o-filters--inner">
+      <ul class="o-filters--list-contain">
+
+        <li class="o-filters--list o-filters--list-item u-cf">
+          <div class="o-filters--list-item--detail col-xs-9 col-md-10 col-lg-6 u-pad-h-none">
+            <p class="filter--title u-font-wb">Filter Type</p>
+              <div class="o-form-input--contain o-option__block filter--list--checkbox">
+                {{# times 10 }}
+                <label class="o-form-label o-form-label__option">
+                  <input type="checkbox">
+                  <span></span>
+                  Option {{ this }} ({{ randomnum }})
+                </label>
+                {{/ times }}
+              </div>
+          </div>
+        </li>
+
+        <li class="o-filters--list o-filters--list-item u-cf">
+          <div class="o-filters--list-item--detail col-xs-12 col-sm-12 col-md-12 col-lg-12 u-pad-h-none">
+            <p class="filter--title u-font-wb">Colours</p>
+            <ul class="filter--colours u-pad-b-small">
+              {{# times 20 }}
+              <li style="background-color:{{ randomcolour }}"></li>
+              {{/ times }}
+            </ul>
+          </div>
+        </li>
+
+        <li class="o-filters--list o-filters--list-item u-cf">
+          <div class="o-filters--list-item--detail col-xs-9 col-md-10 col-lg-12 u-pad-h-none">
+            <p class="filter--title u-font-wb">Rating</p>
+            <div class="o-form-input--contain o-option__block filter--list--checkbox">
+              <label class="o-form-label o-form-label__option">
+                <input type="checkbox">
+                <span></span>
+                <div class="rating rating__inline">
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                </div>
+              </label>
+              <label class="o-form-label o-form-label__option">
+                <input type="checkbox">
+                <span></span>
+                <div class="rating rating__inline">
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star"></i>
+                </div>
+              </label>
+              <label class="o-form-label o-form-label__option">
+                <input type="checkbox">
+                <span></span>
+                <div class="rating rating__inline">
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                </div>
+              </label>
+              <label class="o-form-label o-form-label__option">
+                <input type="checkbox">
+                <span></span>
+                <div class="rating rating__inline">
+                  <i class="icon-star active"></i>
+                  <i class="icon-star active"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                </div>
+              </label>
+              <label class="o-form-label o-form-label__option">
+                <input type="checkbox">
+                <span></span>
+                <div class="rating rating__inline">
+                  <i class="icon-star active"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                </div>
+              </label>
+              <label class="o-form-label o-form-label__option">
+                <input type="checkbox">
+                <span></span>
+                <div class="rating rating__inline">
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                  <i class="icon-star"></i>
+                </div>
+              </label>
+            </div>
+
+          </div>
+        </li>
+        <li class="o-filters--list o-filters--list-item u-cf">
+          <div class="o-filters--list-item--detail col-xs-9 col-md-10 col-lg-6 u-pad-h-none">
+            <p class="filter--title u-font-wb">Price</p>
+              <div class="o-form-input--contain o-option__block filter--list--checkbox">
+                <label class="o-form-label o-form-label__option">
+                  <input type="radio" name="priceRange">
+                  <span></span>
+                  £0 - £10 ({{ randomnum }})
+                </label>
+                <label class="o-form-label o-form-label__option">
+                  <input type="radio" name="priceRange">
+                  <span></span>
+                  £10 - £20 ({{ randomnum }})
+                </label>
+                <label class="o-form-label o-form-label__option">
+                  <input type="radio" name="priceRange">
+                  <span></span>
+                  £20 - £30 ({{ randomnum }})
+                </label>
+                <label class="o-form-label o-form-label__option">
+                  <input type="radio" name="priceRange">
+                  <span></span>
+                  £30 - £40 ({{ randomnum }})
+                </label>
+                <label class="o-form-label o-form-label__option">
+                  <input type="radio" name="priceRange">
+                  <span></span>
+                  £40 - £50 ({{ randomnum }})
+                </label>
+              </div>
+          </div>
+        </li>
+         <li class="o-filters--list o-filters--list-item u-cf">
+          <div class="o-filters--list-item--detail col-xs-9 col-md-10 col-lg-6 u-pad-h-none">
+            <p class="filter--title u-font-wb">Price</p>
+            <div id="range" class="filters--range"></div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
