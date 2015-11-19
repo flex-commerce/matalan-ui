@@ -4,57 +4,74 @@
   </div>
   <div class="col-sm-12">
 
-    <div class="rating">
-      <span>0 star</span>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-    </div>
-
-    <div class="rating">
-      <span>1 star</span>
-      <i class="icon-star active"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-    </div>
-
-    <div class="rating">
-      <span>2 star</span>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-    </div>
-
-    <div class="rating">
-      <span>3 star</span>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star"></i>
-      <i class="icon-star"></i>
-    </div>
-    <div class="rating">
-      <span>4 star</span>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star"></i>
-    </div>
-    <div class="rating">
-      <span>5 star</span>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-      <i class="icon-star active"></i>
-    </div>
+   <div class="o-form-input--contain o-option__block filter--list--checkbox">
+     <label class="o-form-label o-form-label__option">
+       <input type="checkbox">
+       <span></span>
+       <div class="rating">
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+       </div>
+     </label>
+     <label class="o-form-label o-form-label__option">
+       <input type="checkbox">
+       <span></span>
+       <div class="rating">
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star"></i>
+       </div>
+     </label>
+     <label class="o-form-label o-form-label__option">
+       <input type="checkbox">
+       <span></span>
+       <div class="rating">
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+       </div>
+     </label>
+     <label class="o-form-label o-form-label__option">
+       <input type="checkbox">
+       <span></span>
+       <div class="rating">
+         <i class="icon-star active"></i>
+         <i class="icon-star active"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+       </div>
+     </label>
+     <label class="o-form-label o-form-label__option">
+       <input type="checkbox">
+       <span></span>
+       <div class="rating">
+         <i class="icon-star active"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+       </div>
+     </label>
+     <label class="o-form-label o-form-label__option">
+       <input type="checkbox">
+       <span></span>
+       <div class="rating">
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+         <i class="icon-star"></i>
+       </div>
+     </label>
+   </div>
     <pre>
       <code class="HTML">//Star Ratings<br />
         &lt;div class=&quot;rating&quot;&gt;<br />
@@ -71,13 +88,13 @@
 
 </div>
 <script>
-$("i.icon-star").hover(function() {
-    $(this).prevAll(".icon-star:not(active)").toggleClass("hover");
-    $(this).nextAll(".icon-star.active").toggleClass("un-hover");
-});
+// $("i.icon-star").hover(function() {
+//     $(this).prevAll(".icon-star:not(active)").toggleClass("hover");
+//     $(this).nextAll(".icon-star.active").toggleClass("un-hover");
+// });
 
-$("i.icon-star").click(function() {
-    $(this).prevAll(".icon-star").andSelf().addClass("active");
-    $(this).nextAll(".icon-star").removeClass("active");
-});
+// $("i.icon-star").click(function() {
+//     $(this).prevAll(".icon-star").andSelf().addClass("active");
+//     $(this).nextAll(".icon-star").removeClass("active");
+// });
 </script>
