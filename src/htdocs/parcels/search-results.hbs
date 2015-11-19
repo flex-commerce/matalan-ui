@@ -10,7 +10,7 @@
   <div class="search-results--side">
     {{> parcels/search-filters }}
   </div>
-  <div class="search-results--main search-results__wide">
+  <div class="search-results--main search-results__tight">
     <h4>Search Term</h4>
     <div class="search-results--header u-cf">
       <div class="search--header--products col-xs-6 col-lg-3 hidden-lg-down">
@@ -27,8 +27,8 @@
             <a href="" class="c-btn c-btn-paginate">5</a>
             <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
           </div>
-          <div class="u-fl">
-            <a href="" class="js-results-tight">
+          <div class="results-layout">
+            <a href="" class="js-results-tight active">
               <i class="icon-view_tight"></i>
             </a>
             <a href="" class="js-results-wide">
@@ -76,11 +76,11 @@
           <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div>
         </div>
         <div class="results--detail">
-          <div class="hidden-lg-down">x View more colours</div>
-          <div>Product Name</div>
-          <div>Price</div>
-          <div class="c-btn c-btn-primary hidden-lg-down">View</div>
-          <div class="rating rating__small">
+          <a class="hidden-lg-down meta u-mar-v-medium">x View more colours</a>
+          <div class="u-mar-v-medium u-font-wb">Product Name</div>
+          <div class="u-mar-v-medium u-font-wb u-color-grey70">£0.00</div>
+          <div class="c-btn c-btn-primary u-mar-v-medium hidden-lg-down">View</div>
+          <div class="u-mar-v-medium rating rating__small">
             <i class="icon-star active"></i>
             <i class="icon-star active"></i>
             <i class="icon-star active"></i>
@@ -106,3 +106,28 @@
     </div>
   </div>
 </div>
+<script>
+  // todo - this doesnt belong here
+  $('.js-results-tight').on('click', function(e) {
+    e.preventDefault();
+    if (!$(this).hasClass('active')) {
+      $(this).addClass('active')
+        .siblings().removeClass('active')
+        .closest('.search-results--main')
+        .removeClass('search-results__wide')
+        .addClass('search-results__tight');
+    }
+  })
+
+  $('.js-results-wide').on('click', function(e) {
+    e.preventDefault();
+    if (!$(this).hasClass('active')) {
+        $(this).addClass('active')
+        .siblings().removeClass('active')
+        .closest('.search-results--main')
+        .removeClass('search-results__tight')
+        .addClass('search-results__wide');
+    }
+  })
+
+</script>
