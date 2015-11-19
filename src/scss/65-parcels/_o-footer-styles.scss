@@ -1,11 +1,9 @@
 $footer-bg-color: $light-grey-hover;
-
 .o-footer--container {
   margin-top: 60px;
   padding-bottom: 40px;
   border-top: 1px solid $dark-grey-lighten-30;
   background-color: $footer-bg-color;
-
   .o-list-block > .o-list__item {
     padding: 4px 0;
   }
@@ -15,22 +13,18 @@ $footer-bg-color: $light-grey-hover;
     // @include font-size(14px);
     // font-weight: 600;
   }
-
   .input-addon--expand:focus {
     + a,
     + button {
       background-color: $dark-grey;
     }
   }
-
   // .input-group--addon__inset-left {
   //   padding-left: 10px !important;
   // }
-
   // .offset-20 {
   //   left: 20%;
   // }
-
 }
 
 .o-footer--card-svg-wrapper-small {
@@ -46,10 +40,7 @@ $footer-bg-color: $light-grey-hover;
   }
 }
 
-
-
 @include mq($from: md) {
-
   .o-footer--social {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -59,7 +50,6 @@ $footer-bg-color: $light-grey-hover;
     // > div {
     //   padding: 0;
     // }
-
     i:before {
       color: $dark-grey-lighten-70;
     }
@@ -70,37 +60,35 @@ $footer-bg-color: $light-grey-hover;
 }
 
 .o-footer--title {
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 @include mq($until: md) {
   .o-footer--title {
-    margin-top:20px;
+    margin-top: 20px;
     font-size: 16px;
     text-align: center;
   }
-
-
-
   .o-footer--social {
-    margin-top: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
     i:before {
       color: $dark-grey-lighten-60;
     }
   }
-
 }
 
 .o-footer--list {
-  margin-top: 10px;
+  margin-top: 1em;
   font-size: 12px;
   color: $dark-grey-lighten-70;
-
   li {
     padding-top: 5px;
     padding-bottom: 5px;
   }
 }
+
 .o-footer--right {
   float: left;
   width: 50%;
@@ -115,5 +103,4 @@ $footer-bg-color: $light-grey-hover;
   @include mq($until: md) {
     @include center(x);
   }
-
 }
