@@ -20,9 +20,9 @@
     }
   }
   @include mq($until: lg) {
-    // .search--header--products {
-    //   padding-left: 0;
-    // }
+    .search--header--filter {
+      padding-right: 0;
+    }
     .search--header--sort {
       padding-left: 0;
     }
