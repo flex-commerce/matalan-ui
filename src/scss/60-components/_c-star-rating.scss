@@ -6,11 +6,11 @@
     margin-bottom: 0;
     &.active {
       &:before {
-        color: $primary-color;
+        color: $supp-gold;
       }
       &:hover {
         &:before {
-          color: $primary-color;
+          color: $supp-gold;
         }
       }
     }
