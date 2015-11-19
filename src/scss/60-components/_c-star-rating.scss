@@ -1,32 +1,38 @@
 .rating {
+  span {
     display: inline-block;
-    span {
-      display: inline-block;
-    }
-    [class^="icon-"] {
-      margin-bottom: 0;
-      &.active {
+  }
+  [class^="icon-"] {
+    margin-bottom: 0;
+    &.active {
+      &:before {
+        color: $primary-color;
+      }
+      &:hover {
         &:before {
           color: $primary-color;
         }
-
-        &:hover {
-          &:before {
-            color: $primary-color;
-          }
-        }
-      }
-
-      &:hover {
-        &:before {
-          color: $cool-grey;
-        }
-      }
-
-      &:before {
-        font-size:1.6em;
-        padding-right: 0;
-        margin-top: -6px;
       }
     }
+    &:hover {
+      &:before {
+        color: $cool-grey;
+      }
+    }
+    &:before {
+      font-size: 1.6em;
+      padding-right: 0;
+      margin-top: -6px;
+    }
+  }
+}
+
+
+.rating__small {
+  font-size: 75%;
+}
+
+
+.rating__inline {
+  display: inline-block;
 }
