@@ -123,10 +123,10 @@ $barHeight: 0.4em;
 
 .filters--range-value-left,
 .filters--range-value-right {
-  position: absolute;
-  top: 2em;
+  float: left;
+  margin-top: 1em;
 }
 
 .filters--range-value-right {
-  right: 0;
+  float: right;
 }
