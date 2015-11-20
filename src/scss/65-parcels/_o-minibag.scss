@@ -1,4 +1,4 @@
-$minibag-border-color: $cool-grey;
+$minibag-border-color: $keyline-color;
 
 // flexbox here to allow the inner panel to expand to max allowed size
 // flex start ======================================
@@ -193,6 +193,6 @@ $minibag-border-color: $cool-grey;
 // an id!
 @include mq($from: lg) {
   #js-clickcatcher-minibag {
-    background-color: transparent;
+    // background-color: transparent;
   }
 }

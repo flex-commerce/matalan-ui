@@ -45,6 +45,17 @@ $button-padding-y: $default-pad-y;
   }
 }
 
+.c-btn.c-btn-primary__alt {
+  @include style-variant($dark-grey, $secondary-color, $secondary-color);
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include style-variant($primary-color, $white, $secondary-color);
+
+  }
+}
+
 .c-btn-grp-dropdown {
 
   .c-btn-dropdown {

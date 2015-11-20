@@ -171,7 +171,7 @@
 .navbar--top-item > .link,
 .sub-nav-title > .link,
 .sub-nav-item > .link {
-  @include font-size(10px, 1.6);
+  // @include font-size(10px, 1.6);
   text-decoration: none;
   color: $dark-grey;
 }
@@ -345,7 +345,7 @@
 
 // temp
 .js-clickcatcher {
-  display: none;
+  // display: none;
 }
 html.body--scroll-lock {
   overflow-y: hidden;

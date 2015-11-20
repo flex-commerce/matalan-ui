@@ -26,14 +26,16 @@
   <script src="./js/nouislider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
   <script>
-    hljs.configure({useBR: false, fixMarkup: true});
-    hljs.initHighlighting();
+    // hljs.configure({useBR: false, fixMarkup: true});
+    // hljs.initHighlighting();
 
+    // select box replacer
     $('select').selectBox({
       mobile: false,
       loopOptions: true
     });
 
+    // range slider
     var slider = document.getElementById('filters--range');
     var sliderValues = [
       document.getElementById('slider-value-lower'),
@@ -51,6 +53,7 @@
       sliderValues[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
     });
 
+    // filter collapse / expand
     $('body').on('click', '.filter--title', function (){
       $(this).toggleClass('collapse');
       $(this).find('i').toggleClass("icon-ui-plus icon-ui-minus");

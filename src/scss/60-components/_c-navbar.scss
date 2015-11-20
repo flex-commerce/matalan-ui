@@ -102,6 +102,7 @@
   width: auto;
   .sub-nav-item a {
     @include black-link;
+    line-height: 1.8;
     // @include font-size(14px, 1.8);
   }
 }

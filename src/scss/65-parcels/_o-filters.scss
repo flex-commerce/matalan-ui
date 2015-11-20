@@ -1,4 +1,4 @@
-$filters-border-color: $cool-grey;
+$filters-border-color: $keyline-color;
 
 // flexbox here to allow the inner panel to expand to max allowed size
 // flex start ======================================
@@ -81,9 +81,6 @@ $filters-border-color: $cool-grey;
 
 // separators, borders, and padding begin ======================================
 
-.o-filters--inner {
-  padding-top: 1em;
-}
 
 .filter--list--checkbox {
   padding: 0 !important;
@@ -125,6 +122,11 @@ $filters-border-color: $cool-grey;
 .filter--title {
   @include font-size(12px, 1.1);
   cursor: pointer;
+  padding: 0.5em 0;
+  margin-bottom: 0;
+  + * {
+    margin-top: 1em;
+  }
 }
 
 .filter--title i {
@@ -148,6 +150,10 @@ $filters-border-color: $cool-grey;
     border-radius:15px;
     background:#000;
     cursor: pointer;
+    border: 4px solid $white;
+    // &:hover {
+    //   border-style: none;
+    // }
   }
 
 
