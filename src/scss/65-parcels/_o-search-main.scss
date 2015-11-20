@@ -1,16 +1,15 @@
 .search-results--side {
-  @include column( (xs: 2.5) );
-}
-.search-results--main {
-  @include column( (xs: 12, lg: 9.5) );
+  @include column( (xs: 2.5));
 }
 
+.search-results--main {
+  @include column( (xs: 12, lg: 9.5));
+}
 
 .search-results--header {
   @include border-tb-default(1px);
   padding: 0.5em 0;
   margin-bottom: 1em;
-
   @include mq($from: lg) {
     .search--header--products {
       padding-left: 0;
@@ -29,7 +28,6 @@
   }
 }
 
-
 .search-results--item {
   .results--image {
     position: relative;
@@ -39,32 +37,30 @@
   }
 }
 
-
 .search--header--products {
   @include font-size(12px);
 }
 
-
 @include mq($from: xs, $until: md) {
   .search-results--item {
-      &:nth-child(2n+1) {
-        clear: left;
-      }
+    &:nth-child(2n+1) {
+      clear: left;
+    }
   }
 }
 
 @include mq($from: md, $until: lg) {
   .search-results--item {
-      &:nth-child(3n+1) {
-        clear: left;
-      }
+    &:nth-child(3n+1) {
+      clear: left;
+    }
   }
 }
 
 @include mq($from: lg) {
   .search-results__tight {
     .search-results--item {
-      @include column( (lg: 3) );
+      @include column( (lg: 3));
       &:nth-child(4n+1) {
         clear: left;
       }
@@ -72,7 +68,7 @@
   }
   .search-results__wide {
     .search-results--item {
-      @include column( (lg: 4) );
+      @include column( (lg: 4));
       &:nth-child(3n+1) {
         clear: left;
       }
@@ -80,7 +76,15 @@
   }
 }
 
-.js-results-tight, .js-results-wide {
+.js-results-tight {
+  margin-left: 1em;
+}
+
+.js-results-tight,
+.js-results-wide {
+  i:before {
+    font-size: 2.4em;
+  }
   &.active i:before {
     color: $primary-color;
   }

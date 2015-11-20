@@ -24,6 +24,7 @@
     .navbar--header {
       overflow: hidden;
       padding: 0.5rem 0.75rem;
+      @include font-size(12px);
       > .link {
         display: inline-block;
         width: 75px;
@@ -46,7 +47,7 @@
 
 @include mq($from: lg) {
   .c-navbar {
-    @include border-tb-default(2px);
+    @include border-tb-default(1px);
     @include justify-parent;
   }
   .navbar--header,
@@ -102,6 +103,7 @@
   width: auto;
   .sub-nav-item a {
     @include black-link;
+    line-height: 1.8;
     // @include font-size(14px, 1.8);
   }
 }

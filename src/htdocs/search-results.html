@@ -17,46 +17,7 @@
   </div>
   {{> parcels/footer }}
 
-  <script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
-  <script src="./js/highlight.pack.js"></script>
-  <script src="./js/jquery.selectbox.js"></script>
-  <script src="./js/menu-accessible.js"></script>
-  <script src="./js/dropdown.js"></script>
-  <script src="./js/filters.js"></script>
-  <script src="./js/nouislider.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
-  <script>
-    hljs.configure({useBR: false, fixMarkup: true});
-    hljs.initHighlighting();
-
-    $('select').selectBox({
-      mobile: false,
-      loopOptions: true
-    });
-
-    var slider = document.getElementById('filters--range');
-    var sliderValues = [
-      document.getElementById('slider-value-lower'),
-      document.getElementById('slider-value-upper')
-    ];
-    noUiSlider.create(slider, {
-      start: [20, 80],
-      connect: true,
-      range: {
-        'min': 0,
-        'max': 100
-      }
-    });
-    slider.noUiSlider.on('update', function( values, handle ) {
-      sliderValues[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
-    });
-
-    $('body').on('click', '.filter--title', function (){
-      console.log('click');
-      $(this).toggleClass('collapse');
-      $(this).find('i').toggleClass("icon-ui-plus icon-ui-minus");
-    })
-  </script>
+  {{> partials/js-footer}}
 </body>
 
 
