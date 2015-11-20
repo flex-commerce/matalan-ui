@@ -204,13 +204,13 @@
     .icon-ui-minus {
       display: none;
     }
-    .icon-ui-gt {
+    .icon-ui-arr-right {
       display: none;
     }
   }
 
   // always show bottom level gt symbol
-  .sub-nav-item .icon-ui-gt {
+  .sub-nav-item .icon-ui-arr-right {
     display: initial;
   }
 
@@ -229,7 +229,7 @@
       .icon-ui-minus {
         display: initial;
       }
-      .icon-ui-gt {
+      .icon-ui-arr-right {
         display: initial;
       }
     }
@@ -248,12 +248,12 @@
   //   .icon-ui-plus {
   //     display: none;
   //   }
-  //   .icon-ui-gt {
+  //   .icon-ui-arr-right {
   //     display: initial;
   //   }
   // }
 
-  .icon-ui-minus {
+  .c-navbar-container  .icon-ui-minus {
     margin-right: 2em;
     &:after {
       content: '';

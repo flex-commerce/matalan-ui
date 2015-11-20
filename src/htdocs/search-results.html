@@ -55,6 +55,7 @@
 
     // filter collapse / expand
     $('body').on('click', '.filter--title', function (){
+      console.log('click');
       $(this).toggleClass('collapse');
       $(this).find('i').toggleClass("icon-ui-plus icon-ui-minus");
     })
