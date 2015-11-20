@@ -50,6 +50,12 @@
     slider.noUiSlider.on('update', function( values, handle ) {
       sliderValues[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
     });
+
+    $('body').on('click', '.filter--title', function (){
+      console.log('click');
+      $(this).toggleClass('collapse');
+      $(this).find('i').toggleClass("icon-ui-plus icon-ui-minus");
+    })
   </script>
 </body>
 

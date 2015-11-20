@@ -75,7 +75,7 @@
     });
 
     // open menu item chevron click - href handling to go here
-    $parentNavMenu.on('click', '.icon-ui-gt', function(e) {
+    $parentNavMenu.on('click', '.icon-ui-arr-right', function(e) {
       e.stopPropagation();
     });
 

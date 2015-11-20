@@ -122,9 +122,22 @@ $filters-border-color: $cool-grey;
 }
 
 
-.filter--title,
-.detail--colours {
+.filter--title {
   @include font-size(12px, 1.1);
+  cursor: pointer;
+}
+
+.filter--title i {
+  float: right;
+  margin-top: -2px;
+  &:before {
+    font-size: 1.5em;
+  }
+}
+
+.filter--title.collapse + div,
+.filter--title.collapse + ul {
+  display: none;
 }
 
 .filter--colours  {
