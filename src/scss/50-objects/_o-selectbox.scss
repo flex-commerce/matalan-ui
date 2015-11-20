@@ -29,8 +29,6 @@ select, .selectbox-dropdown {
 }
 
 .selectbox-dropdown {
-  max-width: 100%;
-  min-width: 100%;
   position: relative;
   border: solid 1px $selectbox-border-color;
   line-height: 1.5;
@@ -41,7 +39,14 @@ select, .selectbox-dropdown {
   display: inline-block;
   cursor: default;
 }
-
+.selectbox-dropdown:not(.selectbox-dropdown__inline) {
+  max-width: 100%;
+  min-width: 100%;
+}
+.selectbox-dropdown__inline {
+  // max-width: 100%;
+  // min-width: 100%;
+}
 
 .selectbox-active {
   &:not(.selectbox-disabled) {

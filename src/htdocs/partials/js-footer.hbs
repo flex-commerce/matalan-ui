@@ -1,0 +1,93 @@
+<script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+<script src="./js/highlight.pack.js"></script>
+<script src="./js/jquery.selectbox.js"></script>
+<script src="./js/menu-accessible.js"></script>
+<script src="./js/dropdown.js"></script>
+<script src="./js/minibag.js"></script>
+<script src="./js/filters.js"></script>
+<script src="./js/nouislider.js"></script>
+
+<script>
+$('select').selectBox({
+  mobile: false,
+  loopOptions: true
+});
+</script>
+
+<script>
+// header - show mobile search input field
+$('.header--mobile-search').on('click', function() {
+  $('.header--search-bar').toggleClass('active');
+});
+</script>
+
+<script>
+// search results layotu switch
+$('.js-results-tight').on('click', function(e) {
+  e.preventDefault();
+  if (!$(this).hasClass('active')) {
+    $(this).addClass('active')
+      .siblings().removeClass('active')
+      .closest('.search-results--main')
+      .removeClass('search-results__wide')
+      .addClass('search-results__tight');
+  }
+})
+
+$('.js-results-wide').on('click', function(e) {
+  e.preventDefault();
+  if (!$(this).hasClass('active')) {
+    $(this).addClass('active')
+      .siblings().removeClass('active')
+      .closest('.search-results--main')
+      .removeClass('search-results__tight')
+      .addClass('search-results__wide');
+  }
+})
+</script>
+
+<script>
+// global alert event
+$(".global-test").click(function() {
+  $(".c-alert-global").toggleClass("active");
+});
+</script>
+
+<script>
+// range slider
+var slider = document.getElementById('filters--range');
+var sliderValues = [
+  document.getElementById('slider-value-lower'),
+  document.getElementById('slider-value-upper')
+];
+noUiSlider.create(slider, {
+  start: [20, 80],
+  connect: true,
+  range: {
+    'min': 0,
+    'max': 100
+  }
+});
+slider.noUiSlider.on('update', function(values, handle) {
+  sliderValues[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
+});
+</script>
+
+<script>
+// filter collapse / expand
+$('body').on('click', '.filter--title', function() {
+  console.log('click');
+  $(this).toggleClass('collapse');
+  $(this).find('i').toggleClass("icon-ui-plus icon-ui-minus");
+})
+</script>
+
+<script>
+// syntax highlighter
+hljs.configure({
+  useBR: false,
+  fixMarkup: true
+});
+hljs.initHighlighting();
+</script>
