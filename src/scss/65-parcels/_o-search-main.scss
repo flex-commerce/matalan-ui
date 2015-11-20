@@ -45,19 +45,37 @@
 }
 
 
-@include mq($until: md) {
-  .search-results--item {}
+@include mq($from: xs, $until: md) {
+  .search-results--item {
+      &:nth-child(2n+1) {
+        clear: left;
+      }
+  }
+}
+
+@include mq($from: md, $until: lg) {
+  .search-results--item {
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+  }
 }
 
 @include mq($from: lg) {
   .search-results__tight {
     .search-results--item {
       @include column( (lg: 3) );
+      &:nth-child(4n+1) {
+        clear: left;
+      }
     }
   }
   .search-results__wide {
     .search-results--item {
       @include column( (lg: 4) );
+      &:nth-child(3n+1) {
+        clear: left;
+      }
     }
   }
 }
