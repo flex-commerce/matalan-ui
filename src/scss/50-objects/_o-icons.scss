@@ -20,7 +20,7 @@
   @extend %icon-base;
 }
 
-.icon-view_tight-o:before {
+icon-view_tight-o:before {
   content: "\e90b";
 }
 .icon-view_wide-o:before {
@@ -119,4 +119,9 @@
 .icon-basket:before {
   content: "\e2de";
 }
-
+.icon-location:before {
+  content: "\e90d";
+}
+.icon-user:before {
+  content: "\e90e";
+}
