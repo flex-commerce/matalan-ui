@@ -71,7 +71,10 @@ $filters-border-color: $keyline-color;
 // misc rules ======================================
 .o-filters-contain {
   position: relative;
-  z-index: 4;
+  @include mq($until: lg) {
+    // TODO - this is a hack, rewrite JS to fix
+    z-index: 4;
+  }
 }
 .o-filters {
   background: $white;

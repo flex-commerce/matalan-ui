@@ -23,8 +23,8 @@
             <a href="" class="c-btn c-btn-paginate">1</a>
             <a href="" class="c-btn c-btn-paginate">2</a>
             <a href="" class="c-btn c-btn-paginate">3</a>
-            <a href="" class="c-btn c-btn-paginate">4</a>
-            <a href="" class="c-btn c-btn-paginate">5</a>
+            <!-- <a href="" class="c-btn c-btn-paginate">4</a> -->
+            <!-- <a href="" class="c-btn c-btn-paginate">5</a> -->
             <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
           </div>
           <div class="results-layout">
@@ -106,28 +106,3 @@
     </div>
   </div>
 </div>
-<script>
-  // todo - this doesnt belong here
-  $('.js-results-tight').on('click', function(e) {
-    e.preventDefault();
-    if (!$(this).hasClass('active')) {
-      $(this).addClass('active')
-        .siblings().removeClass('active')
-        .closest('.search-results--main')
-        .removeClass('search-results__wide')
-        .addClass('search-results__tight');
-    }
-  })
-
-  $('.js-results-wide').on('click', function(e) {
-    e.preventDefault();
-    if (!$(this).hasClass('active')) {
-        $(this).addClass('active')
-        .siblings().removeClass('active')
-        .closest('.search-results--main')
-        .removeClass('search-results__tight')
-        .addClass('search-results__wide');
-    }
-  })
-
-</script>

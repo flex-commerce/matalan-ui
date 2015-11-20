@@ -17,21 +17,7 @@
   </div>
   {{> parcels/footer }}
 
-  <script src='//code.jquery.com/jquery-2.1.4.min.js'></script>
-  <script src="./js/highlight.pack.js"></script>
-  <script src="./js/jquery.selectbox.js"></script>
-  <script src="./js/menu-accessible.js"></script>
-  <script src="./js/dropdown.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
-  <script>
-    hljs.configure({useBR: false, fixMarkup: true});
-    hljs.initHighlighting();
-
-    $('select').selectBox({
-      mobile: false,
-      loopOptions: true
-    });
-  </script>
+  {{> partials/js-footer}}
 </body>
 
 
