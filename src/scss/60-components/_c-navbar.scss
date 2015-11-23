@@ -100,18 +100,15 @@
 }
 
 // indentation of menu items
-.sub-nav-group {
-  width: auto;
-  .sub-nav-title > .link {
-    padding-left: 1.5em;
-  }
-  .sub-nav-item > .link {
-    padding-left: 2.5em;
+@include mq($until: lg) {
+  .sub-nav-group {
+    width: auto;
+    .sub-nav-title > .link {
+      padding-left: 1.5em;
+    }
+    .sub-nav-item > .link {
+      padding-left: 2.5em;
+    }
   }
 }
 
-.c-navbar {
-  @include mq($from: lg) {
-    // padding: 0 2rem;
-  }
-}
