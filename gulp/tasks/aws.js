@@ -11,7 +11,7 @@ gulp.task('publish:aws', function() {
   var day = dateObj.getUTCDate();
   var year = dateObj.getUTCFullYear();
 
-  var newdate = year + "-" + month + "-" + day;
+  var newdate = day + "-" + month + "-" + year;
 
   gulp.src(['dist/**/*']).pipe(gulp.dest('aws/' + newdate));
 
