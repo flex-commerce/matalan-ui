@@ -203,9 +203,9 @@ $filters-border-color: $keyline-color;
   }
 
   .filters--show-more {
-    text-align: right;
-    font-size: 90%;
+    float: right;
     display:none;
+    text-decoration: none;
     &:nth-child(n+10) {
       display:block;
     }
@@ -217,3 +217,12 @@ $filters-border-color: $keyline-color;
   -webkit-columns: 3 12em;
 }
 
+.icon-ui-plus ~ .collapse,
+.icon-ui-minus ~ .expand  {
+  display:none;
+}
+
+.icon-ui-minus ~ .meta,
+.icon-ui-plus ~ .meta {
+  float: right;
+}
