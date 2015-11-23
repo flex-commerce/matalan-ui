@@ -1,19 +1,18 @@
 'use strict';
 var gulp = require('gulp'),
     awspublish = require('gulp-awspublish'),
-    awssecret = require('../../aws-secret.json'),
-    rename = require('gulp-rename');
+    awssecret = require('../../aws-secret.json');
 
 gulp.task('publish:aws', function() {
 
-  var dateObj = new Date();
-  var month = dateObj.getUTCMonth() + 1; //months from 1-12
-  var day = dateObj.getUTCDate();
-  var year = dateObj.getUTCFullYear();
+  // var dateObj = new Date();
+  // var month = dateObj.getUTCMonth() + 1; //months from 1-12
+  // var day = dateObj.getUTCDate();
+  // var year = dateObj.getUTCFullYear();
 
-  var newdate = day + "-" + month + "-" + year;
+  // var newdate = day + "-" + month + "-" + year;
 
-  gulp.src(['dist/**/*']).pipe(gulp.dest('aws/' + newdate));
+  // gulp.src(['dist/**/*']).pipe(gulp.dest('aws/' + newdate));
 
   // create a new publisher using S3 options
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property
@@ -21,15 +20,14 @@ gulp.task('publish:aws', function() {
 
   // define custom headers
   var headers = {
-    'Cache-Control': 'max-age=1, no-transform, public'
+    'Cache-Control': 'max-age=315360000, no-transform, public'
     // ...
   };
 
-  return gulp.src('./aws/**/*')
+  return gulp.src('./dist/**/*')
     // publisher will add Content-Length, Content-Type and headers specified above
     // If not specified it will set x-amz-acl to public-read by default
     .pipe(publisher.publish(headers))
-    .pipe(publisher.sync())
     // create a cache file to speed up consecutive uploads
     .pipe(publisher.cache())
 
