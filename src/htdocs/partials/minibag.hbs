@@ -1,96 +1,110 @@
 <div class="o-minibag-contain">
-  <form action="" class="u-cf">
+  <form action="" class="">
     <div class="o-minibag">
 
       <div class="o-minibag--header hidden-lg-up">
-      <div class="u-cf">
-      <h2 class="u-fl">Shopping Bag</h2>
-      <a class="o-minibag--close link u-font-ta-c u-fr">
-      <i class="icon-ui-cross"></i>
-      </a>
+        <div class="u-cf">
+          <h2 class="u-fl">Shopping Bag</h2>
+          <a class="o-minibag--close link u-font-ta-c u-fr">
+            <i class="icon-ui-cross"></i>
+          </a>
+        </div>
       </div>
-      </div>
+
       <div class="separator u-mar-0 hidden-lg-up"></div>
 
-
       <div class="o-minibag--inner js-scroll-hold">
-      <a class="c-btn c-btn-secondary c-btn-block hidden-md-up u-mar-v-large">Checkout</a>
-      <div class="u-cf u-mar-b-large hidden-lg-up">
-      <p class="u-fl u-pad-v-medium u-mar-0">
-      x Items in your bag
-      </p>
-      <a class="c-btn c-btn-primary u-fr hidden-md-up">Edit</a>
-      </div>
-      <ul class="o-minibag--list-contain">
-      {{# times 8 }}
-      <li class="o-minibag--list o-minibag--list-item u-cf">
-      <div class="o-minibag--list-item--image col-xs-3 col-md-2 col-lg-3 u-pad-0">
-      <img src="http://placehold.it/136x190">
-      </div>
-      <div class="o-minibag--list-item--detail col-xs-9 col-md-10 col-lg-6 ">
-      <p class="detail--description u-font-wb">{{this}} Product name to go here on a few lines for space</p>
-      <ul class="detail--vars u-pad-b-small list-space__small">
-      <li class="list--item">Color: <span class="color-swatch__inline u-bgcolor-cgrey"></span></li>
-      <li class="list--item">Size: val</li>
-      </ul>
-      <ul class="detail--price list-space__small">
-      <li class="list--item"><strong>Price: £XX.xx</strong></li>
-      <li class="list--item hidden-lg-up">Save: £XX.xx</li>
-      </ul>
-      </div>
-      <div class="o-minibag--list-item--control col-md-10 col-lg-3 hidden-md-down">
-      <select class="o-minibag--control--select selectbox-dropdown__inline hidden-md-down">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      </select>
-      <div class="o-minibag--control--remove">
-      <a class="u-font-no-underline hidden-lg-down" href="#"><span>&times;</span> remove</a>
-      </div>
-      </div>
-      </li>
-      {{/ times }}
-      </ul>
+        <a class="c-btn c-btn-secondary c-btn-block hidden-md-up u-mar-v-large">Checkout</a>
+        <div class="u-cf u-mar-b-large hidden-lg-up">
+          <p class="u-fl u-pad-v-medium u-mar-0">
+            x Items in your bag
+          </p>
+          <a class="c-btn c-btn-primary u-fr hidden-md-up">Edit</a>
+        </div>
+        <ul class="o-minibag--list-contain">
+          {{# times 8 }}
+          <li class="o-minibag--list o-minibag--list-item u-cf">
+            <div class="o-minibag--list-item--image col-xs-3 col-md-2 col-lg-3 u-pad-0">
+              <img src="http://placehold.it/136x190">
+            </div>
+            <div class="o-minibag--list-item--detail col-xs-9 col-md-10 col-lg-6 ">
+              <p class="detail--description u-font-wb">{{this}} Product name to go here on a few lines for space</p>
+              <ul class="detail--vars u-pad-b-small list-space__small">
+                <li class="list--item">Color:
+                  <span class="color-swatch__inline u-bgcolor-cgrey"></span>
+                </li>
+                <li class="list--item">Size: val</li>
+              </ul>
+              <ul class="detail--price list-space__small">
+                <li class="list--item">
+                  <strong>Price: £XX.xx</strong>
+                </li>
+                <li class="list--item hidden-lg-up">Save: £XX.xx</li>
+              </ul>
+            </div>
+            <div class="o-minibag--list-item--control col-md-10 col-lg-3 hidden-lg-down">
+              <select class="o-minibag--control--select selectbox-dropdown__inline hidden-md-down">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <div class="o-minibag--control--remove">
+                <a class="u-font-no-underline hidden-lg-down" href="#">
+                  <span>&times;</span> remove</a>
+              </div>
+            </div>
+            <div class="o-minibag--list-item--control col-md-4 col-lg-3 col-md-offset-6 hidden-md-down hidden-lg-up">
+              <div class="o-form-input--contain__quantity">
+                <a class="c-btn c-btn-primary u-no-underline">-</a>
+                <input type="text" class="input--textual">
+                <a class="c-btn c-btn-primary u-no-underline">+</a>
+              </div>
+            </div>
+          </li>
+          {{/ times }}
+        </ul>
       </div>
 
       <div class="o-minibag--footer">
-      <ul class="o-minibag--action--contain">
-      <li class="separator"></li>
-      <li class="o-minibag--list o-minibag--list-total">
-      <dl class="o-deflist-2col">
-      <dt>Shipping</dt>
-      <dd>£xx.xx</dd>
-      <dt>Total Saving</dt>
-      <dd>£xx.xx</dd>
-      <dt class="u-font-wb u-mar-t-medium">Sub Total</dt>
-      <dd class="u-font-wb u-mar-t-medium">£xx.xx</dd>
-      </dl>
-      </li>
-      <li class="separator"></li>
-      <li class="o-minibag--list o-minibag--list-checkout">
-      <div class="callout-panel u-mar-b-large">
-      <p>You are
-      <span class="u-font-wb">£xx.xx</span> away from qualifying for
-      <span class="u-font-wb">FREE</span> standard home delivery.
-      </p>
-      <p>Our click &amp; collect service is
-      <span class="u-font-wb">FREE</span> whatever your order value.
-      </p>
+        <ul class="o-minibag--action--contain">
+          <li class="separator"></li>
+          <li class="o-minibag--list o-minibag--list-total">
+            <dl class="o-deflist-2col">
+              <dt>Shipping</dt>
+              <dd>£xx.xx</dd>
+              <dt>Total Saving</dt>
+              <dd>£xx.xx</dd>
+              <dt class="u-font-wb u-mar-t-medium">Sub Total</dt>
+              <dd class="u-font-wb u-mar-t-medium">£xx.xx</dd>
+            </dl>
+          </li>
+          <li class="separator"></li>
+          <li class="o-minibag--list o-minibag--list-checkout">
+            <div class="callout-panel u-mar-b-large">
+              <p>You are
+                <span class="u-font-wb">£xx.xx</span> away from qualifying for
+                <span class="u-font-wb">FREE</span> standard home delivery.
+              </p>
+              <p>Our click &amp; collect service is
+                <span class="u-font-wb">FREE</span> whatever your order value.
+              </p>
+            </div>
+            <div class="o-minibag--list-actions">
+              <div class="flexer">
+                <a class="c-btn c-btn-secondary col-xs-6 flexer-element u-mar-r-small">View Bag</a>
+                <a class="c-btn c-btn-secondary col-xs-6 flexer-element">Checkout</a>
+              </div>
+              <div class="separator__inline-text">
+                <span>or</span>
+              </div>
+              <a class="c-btn c-btn-block c-btn-primary">
+                Checkout with
+                <img style="vertical-align: middle; height: 24px; margin-left: 0.5em;" src="./img/card-paypal.svg">
+              </a>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="o-minibag--list-actions">
-      <div class="flexer">
-      <a class="c-btn c-btn-secondary col-xs-6 flexer-element u-mar-r-small">View Bag</a>
-      <a class="c-btn c-btn-secondary col-xs-6 flexer-element">Checkout</a>
-      </div>
-      <div class="separator__inline-text"><span>or</span></div>
-      <a class="c-btn c-btn-block c-btn-primary">
-      Checkout with
-      <img style="vertical-align: middle; height: 24px; margin-left: 0.5em;" src="./img/card-paypal.svg"></a>
-      </div>
-      </li>
-      </ul>
-      </div>
-
     </div>
   </form>
 </div>
