@@ -197,9 +197,23 @@ $filters-border-color: $keyline-color;
     padding-left: 0;
     height: auto;
   }
+
+  .filter--list--checkbox label:nth-child(n+9) {
+    display:none;
+  }
+
+  .filters--show-more {
+    text-align: right;
+    font-size: 90%;
+    display:none;
+    &:nth-child(n+10) {
+      display:block;
+    }
+  }
 }
 
 
 .auto-column__medium {
   -webkit-columns: 3 12em;
 }
+

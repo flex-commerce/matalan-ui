@@ -91,3 +91,10 @@ hljs.configure({
 });
 hljs.initHighlighting();
 </script>
+
+<script>
+  $('body').on('click', '.filters--show-more', function() {
+    $(this).hide();
+    $(this).parent().find('label').css('display', 'block');
+  });
+</script>
