@@ -1,3 +1,10 @@
+.input--textual,
+optgroup,
+select,
+textarea {
+  @include form-item-size();
+}
+
 .o-form-input--contain {
   .input--textual,
   textarea {
@@ -12,9 +19,20 @@
   textarea {
     display: block;
     width: 100%;
-    @include form-item-size();
   }
 }
+
+// modified rules currently only used for minibag quantities
+.o-form-input--contain__quantity {
+  input {
+    max-width: 90px;
+    // @TODO - vertical below should be 7px - find out why its 6px - border-box maybe?
+    padding: 6px 14px;
+  }
+
+}
+
+
 
 // spacing between inline options and their labels
 .o-form-label__option [type="radio"],
