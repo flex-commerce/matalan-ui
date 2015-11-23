@@ -192,4 +192,32 @@ $filters-border-color: $keyline-color;
     padding-left: 0;
     height: auto;
   }
+
+  .filter--list--checkbox label:nth-child(n+9) {
+    display:none;
+  }
+
+  .filters--show-more {
+    float: right;
+    display:none;
+    text-decoration: none;
+    &:nth-child(n+10) {
+      display:block;
+    }
+  }
+}
+
+
+.auto-column__medium {
+  -webkit-columns: 3 12em;
+}
+
+.icon-ui-plus ~ .collapse,
+.icon-ui-minus ~ .expand  {
+  display:none;
+}
+
+.icon-ui-minus ~ .meta,
+.icon-ui-plus ~ .meta {
+  float: right;
 }

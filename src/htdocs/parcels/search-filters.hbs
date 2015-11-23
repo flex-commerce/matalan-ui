@@ -18,8 +18,8 @@
 
         <li class="o-filters--list o-filters--list-item u-cf">
           <div class="o-filters--list-item--detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
-            <p class="filter--title collapse u-font-wb u-color-grey60">Filter Type<i class="icon-ui-plus"></i></p>
-              <div class="o-form-input--contain o-option__block filter--list--checkbox">
+            <p class="filter--title collapse u-font-wb u-color-grey60">Filter Type<i class="meta-icon icon-ui-plus"></i><span class="meta expand">expand</span><span class="meta collapse">collapse</span></p>
+              <div class="o-form-input--contain o-option__block filter--list--checkbox auto-column__medium">
                 {{# times 10 }}
                 <label class="o-form-label o-form-label__option u-color-grey60">
                   <input type="checkbox">
@@ -27,13 +27,14 @@
                   Option {{ this }} ({{ randomnum }})
                 </label>
                 {{/ times }}
+                <span class="filters--show-more meta" href="#"><span class="meta expand">show more</span><i class="meta-icon icon-ui-arr-down"></i></span>
               </div>
           </div>
         </li>
 
         <li class="o-filters--list o-filters--list-item u-cf">
           <div class="o-filters--list-item--detail col-xs-12 col-sm-12 col-md-12 col-lg-12 u-pad-h-none">
-            <p class="filter--title collapse u-font-wb u-color-grey60">Colours<i class="icon-ui-plus"></i></p>
+            <p class="filter--title collapse u-font-wb u-color-grey60">Colours<i class="meta-icon icon-ui-plus"></i><span class="meta expand">expand</span><span class="meta collapse">collapse</span></p>
             <ul class="filter--colours u-pad-b-small">
               {{# times 20 }}
               <li style="background-color:{{ randomcolour }}"></li>
@@ -44,8 +45,8 @@
 
         <li class="o-filters--list o-filters--list-item u-cf">
           <div class="o-filters--list-item--detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
-            <p class="filter--title collapse u-font-wb u-color-grey60">Rating<i class="icon-ui-plus"></i></p>
-            <div class="o-form-input--contain o-option__block filter--list--checkbox">
+            <p class="filter--title collapse u-font-wb u-color-grey60">Rating<i class="meta-icon icon-ui-plus"></i><span class="meta expand">expand</span><span class="meta collapse">collapse</span></p>
+            <div class="o-form-input--contain o-option__block filter--list--checkbox auto-column__medium ">
               <label class="o-form-label o-form-label__option">
                 <input type="checkbox">
                 <span></span>
@@ -118,7 +119,7 @@
         </li>
         <li class="o-filters--list o-filters--list-item u-cf">
           <div class="o-filters--list-item--detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
-            <p class="filter--title collapse u-font-wb u-color-grey60">Price<i class="icon-ui-plus"></i></p>
+            <p class="filter--title collapse u-font-wb u-color-grey60">Price<i class="meta-icon icon-ui-plus"></i><span class="meta expand">expand</span><span class="meta collapse">collapse</span></p>
             <div id="filters--range" class="filters--range">
               <span class="filters--range-value-left u-color-grey60" id="slider-value-lower">20</span>
               <span class="filters--range-value-right u-color-grey60" id="slider-value-upper">80</span>
@@ -127,8 +128,8 @@
         </li>
         <li class="o-filters--list o-filters--list-item u-cf">
           <div class="o-filters--list-item--detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
-            <p class="filter--title collapse u-font-wb u-color-grey60">Price - Alternative<i class="icon-ui-plus"></i></p>
-              <div class="o-form-input--contain o-option__block filter--list--checkbox">
+            <p class="filter--title collapse u-font-wb u-color-grey60">Price - Alternative<i class="meta-icon icon-ui-plus"></i><span class="meta expand">expand</span><span class="meta collapse">collapse</span></p>
+              <div class="o-form-input--contain o-option__block filter--list--checkbox auto-column__medium">
                 <label class="o-form-label o-form-label__option u-color-grey60">
                   <input type="radio" name="priceRange">
                   <span></span>
