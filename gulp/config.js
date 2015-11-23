@@ -5,6 +5,10 @@ var src = './src';
 
 module.exports = {
 
+    aws: {
+        src: dest + '/**/*'
+    },
+
     browserSync: {
         server: {
             baseDir: dest
