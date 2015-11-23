@@ -6,6 +6,9 @@ $minibag-border-color: $keyline-color;
   .o-minibag {
     display: flex;
     flex-direction: column;
+    // form {
+
+    // }
     .o-minibag--inner {
       flex-grow: 1;
       overflow-y: scroll;
@@ -57,7 +60,7 @@ $minibag-border-color: $keyline-color;
     right: 0;
   }
   .o-minibag--inner {
-    max-height: 280px; // magic height
+    max-height: 260px; // magic height
   }
   .o-minibag--list-item--control {
     text-align: right;
@@ -150,6 +153,14 @@ $minibag-border-color: $keyline-color;
   line-height: 1.3;
 }
 
+.o-minibag--list-total, .o-minibag--list-checkout {
+  @include mq($from: lg) {
+    padding-left:  0.75em;
+    padding-right: 0.75em;
+  }
+}
+
+
 
 .detail--description,
 .detail--vars,
@@ -158,8 +169,13 @@ $minibag-border-color: $keyline-color;
 }
 
 .o-minibag--control--remove {
-  @include font-size(11px, 1.2);
+  @include font-size(10px, 1.2);
   text-transform: uppercase;
+  color: $dark-grey-lighten-60;
+  margin-top: 1em;
+  span {
+    font-size: 1.5em;
+  }
 }
 
 
@@ -190,9 +206,41 @@ $minibag-border-color: $keyline-color;
 
 // some dev rules end
 
+// inline color swatch - todo - move this somehwre more reusable
+
+.color-swatch__inline {
+  width: 1em;
+  padding-top: 1em;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+
 // an id!
 @include mq($from: lg) {
   #js-clickcatcher-minibag {
     // background-color: transparent;
+  }
+}
+
+
+// todo - move this separator?
+.separator__inline-text {
+  position: relative;
+  height: 2em;
+  span {
+    position: absolute;
+    padding: 0 0.5em;
+    background: $white;
+    @include center($pos: abs);
+    @include font-size(12px);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background-color: $keyline-color;
   }
 }

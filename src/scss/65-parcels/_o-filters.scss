@@ -182,12 +182,7 @@ $filters-border-color: $keyline-color;
 
 // some dev rules end
 
-// an id!
-@include mq($from: lg) {
-  #js-clickcatcher-filters {
-    background-color: transparent;
-  }
-}
+
 
 @include mq($from: lg) {
   .o-filters {
