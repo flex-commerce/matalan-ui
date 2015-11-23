@@ -6,6 +6,15 @@ var gulp = require('gulp'),
 
 gulp.task('publish:aws', function() {
 
+  var dateObj = new Date();
+  var month = dateObj.getUTCMonth() + 1; //months from 1-12
+  var day = dateObj.getUTCDate();
+  var year = dateObj.getUTCFullYear();
+
+  var newdate = year + "-" + month + "-" + day;
+
+  gulp.src(['dist/**/*']).pipe(gulp.dest('aws/' + newdate));
+
   // create a new publisher using S3 options
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property
   var publisher = awspublish.create(awssecret);
@@ -16,7 +25,7 @@ gulp.task('publish:aws', function() {
     // ...
   };
 
-  return gulp.src('./dist/**/*')
+  return gulp.src('./aws/**/*')
     // publisher will add Content-Length, Content-Type and headers specified above
     // If not specified it will set x-amz-acl to public-read by default
     .pipe(publisher.publish(headers))

@@ -11,5 +11,8 @@ bower_components
 
 # Ignore built files
 dist
+aws
 
 aws-secret.json
+**.awspublish-matalan-ui-kit
+.awspublish-matalan-ui-kit
