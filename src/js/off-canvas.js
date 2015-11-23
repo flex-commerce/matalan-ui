@@ -32,14 +32,14 @@
   var offCanvasActive;
 
   function closeOffCanvas() {
-    $('html').removeClass("body--scroll-lock");
+    $('html').removeClass("body--modal-open");
     $parentNavMenu.removeClass("active");
     $('#js-clickcatcher-canvas').remove();
     offCanvasActive = false;
   }
 
   function openOffCanvas() {
-    $('html').addClass("body--scroll-lock");
+    $('html').addClass("body--modal-open");
     $parentNavMenu.addClass("active");
     $('body').append(clickCatcher);
     offCanvasActive = true;
@@ -85,7 +85,7 @@
   // ===========================
   // off canvas button event handler
   $(".nav-mobile-button").on('click', function() {
-    if ($('html').hasClass('body--scroll-lock')) {
+    if ($('html').hasClass('body--modal-open')) {
       closeOffCanvas();
     } else {
       openOffCanvas();

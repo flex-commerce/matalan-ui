@@ -47,22 +47,26 @@
           <div class="col-xs-12 col-lg-9">
             <div>
               <select id="sortby" class="selectbox select-full">
-                <option>Sort By</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
+                <option selected="selected" disabled="disabled">Sort By</option>
+                <option value="">Price, High-Low</option>
+                <option value="">Price, Low-High</option>
+                <option value="">New Arrivals</option>
+                <option value="">Best Sellers</option>
+                <option value="">Customer Rating</option>
               </select>
             </div>
           </div>
         </div>
       </div>
       <div class="search--header--filter col-xs-6 hidden-lg-up js-filters">
-        <div>
-          <select id="filterby" class="selectbox select-full" disabled>
-            <option>Filter By</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
-        </div>
+
+        <!-- <div> -->
+          <a class="selectbox selectbox-fake">
+            <span class="selectbox-label">Filter By</span>
+            <span class="selectbox-arrow"><span class="caret"></span></span>
+          </a>
+        <!-- </div> -->
+
       </div>
     </div>
     <div class="search-results--inner row">

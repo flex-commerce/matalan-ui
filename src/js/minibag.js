@@ -7,14 +7,14 @@
 
 
   function closeMiniBag(scope) {
-    $('html').removeClass("body--scroll-lock");
+    $('html').removeClass("body--modal-open");
     $(scope).parent().removeClass("open");
     $('#js-clickcatcher-minibag').remove();
     miniBagActive = false;
   }
 
   function openMiniBag(scope) {
-    $('html').addClass("body--scroll-lock");
+    $('html').addClass("body--modal-open");
     $(scope).parent().addClass("open");
     $('body').append(clickCatcher);
     miniBagActive = true;

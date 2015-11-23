@@ -49,21 +49,6 @@
 }
 
 
-/* first descendant link within a top level navigation item */
-
-@include mq($from: lg) {
-  .navbar--top-item,
-  .sub-nav-item > {
-    .link {
-      // margin-bottom: -1px;
-      // border-color: #aaa;
-      // border-width: 1px;
-      // border-style: solid none;
-    }
-  }
-}
-
-
 /* mega menu list */
 
 .c-navbar {
@@ -74,25 +59,13 @@
 
 /* a top level navigation item in the mega menu */
 
-.navbar--top-item {}
-
 
 /* focus/open states of first descendant link within a top level navigation item */
 
-// @include mq($from: lg) {
-//   .navbar--top-item > .link {
-//     a.active,
-//     a:focus {
-//       border-bottom: 2px solid $primary-color;
-//     }
-//   }
-// }
 
 /* open state of first descendant link within a top level navigation item */
 
-// .navbar--top-item > .link.open {
-//   z-index: 1;
-// }
+
 
 /* sub-navigation panel */
 
@@ -104,16 +77,9 @@
   top: calc(100% + 2px);
   left: 0;
   right: 0;
-  margin-top: -1px;
-  // border: 1px solid #ececec;
-  // background-color: #fff;
-  & > div {
-    // @extend .justify-parent;
-  }
 }
 
 .sub-nav-group {
-  // @extend .justified-child;
   vertical-align: top;
 }
 
@@ -143,22 +109,10 @@
 }
 
 
-/* list item within sub-navigation panel */
-
-.sub-nav li {
-  // display: block;
-  // list-style-type: none;
-  // margin: 0;
-  // padding: 0;
-}
-
 
 /* misc */
 
-.sub-nav-title a,
-.sub-nav-item a {
-  // @include black-link;
-}
+
 
 // typography for the mega menu and off canvas menu
 .navbar--header span,
@@ -169,16 +123,20 @@
 
 .navbar--header span,
 .navbar--top-item > .link,
-.sub-nav-title > .link,
 .sub-nav-item > .link {
-  // @include font-size(10px, 1.6);
   text-decoration: none;
   color: $dark-grey;
 }
-
-@include mq($from: lg) {
-
+.sub-nav-title .link {
+  text-decoration: none;
+  @include mq($from: lg) {
+    color: $primary-color;
+    font-weight: bold;
+  }
 }
+
+
+
 
 @include mq($until: lg) {
 
@@ -214,14 +172,8 @@
     display: initial;
   }
 
-  // .navbar--top-item > .link.open {
-  //   .icon-ui-minus {
-  //     display: initial;
-  //   }
-  // }
-
+  // left inset icons display rules
   .navbar--top-item, .sub-nav-title{
-
     > .link.open {
       .icon-ui-plus {
         display: none;
@@ -344,11 +296,8 @@
 }
 
 // temp
-.js-clickcatcher {
-  // display: none;
-}
-html.body--scroll-lock {
-  overflow-y: hidden;
+
+html.body--modal-open {
   .js-clickcatcher {
     display: block;
     @include position(fixed, top 0 right 0 bottom 0 left 0);

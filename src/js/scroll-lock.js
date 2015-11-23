@@ -4,6 +4,7 @@
 // TODO - check this is needed - Ian
 
 $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
+    console.log(this);
 
     var $this = $(this),
         scrollTop = this.scrollTop,
@@ -21,7 +22,7 @@ $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
         return false;
     }
 
-    if (window.matchMedia("(min-width: 1024px)").matches) {
+    // if (window.matchMedia("(min-width: 1024px)").matches) {
       if (!up && -delta > scrollHeight - height - scrollTop) {
           // Scrolling down, but this will take us past the bottom.
           $this.scrollTop(scrollHeight);
@@ -31,6 +32,6 @@ $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
           $this.scrollTop(0);
           return prevent();
       }
-    }
+    // }
 });
 
