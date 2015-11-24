@@ -137,3 +137,38 @@ $list-border: $cool-grey;
     padding-left: 0.5em;
   }
 }
+
+
+
+
+// ================================
+
+.list--text {
+  list-style-type: disc;
+  margin-left: 1.5em;
+}
+.list-space__tiny {
+  .list--item {
+    @extend .u-mar-v-tiny;
+  }
+}
+.list-space__small {
+  .list--item {
+    @extend .u-mar-v-small;
+  }
+}
+.list-space__medium {
+  .list--item {
+    @extend .u-mar-v-medium;
+  }
+}
+.list-space__large {
+  .list--item {
+    @extend .u-mar-v-large;
+  }
+}
+.list-space__huge {
+  .list--item {
+    @extend .u-mar-v-huge;
+  }
+}

@@ -134,7 +134,7 @@ $filters-border-color: $keyline-color;
 
 .filter--title i {
   float: right;
-  margin-top: -2px;
+  margin-top: -5px;
   &:before {
     font-size: 1.5em;
   }
@@ -182,12 +182,7 @@ $filters-border-color: $keyline-color;
 
 // some dev rules end
 
-// an id!
-@include mq($from: lg) {
-  #js-clickcatcher-filters {
-    background-color: transparent;
-  }
-}
+
 
 @include mq($from: lg) {
   .o-filters {
@@ -197,4 +192,38 @@ $filters-border-color: $keyline-color;
     padding-left: 0;
     height: auto;
   }
+
+  .filter--list--checkbox label:nth-child(n+9) {
+    display:none;
+  }
+
+  .filters--show-more {
+    float: right;
+    display:none;
+    text-decoration: none;
+    &:nth-child(n+10) {
+      display:block;
+    }
+  }
+}
+
+
+.auto-column__medium {
+  -webkit-columns: 3 12em;
+}
+
+.icon-ui-plus ~ .collapse,
+.icon-ui-minus ~ .expand  {
+  display:none;
+}
+
+.icon-ui-minus ~ .meta,
+.icon-ui-plus ~ .meta {
+  float: right;
+}
+
+.clear__filters {
+  float: right;
+  margin-top: 8px;
+  cursor: pointer;
 }

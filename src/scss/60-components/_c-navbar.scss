@@ -10,7 +10,7 @@
 
 .c-navbar {
   .navbar--top-item {
-    font-size: rem-calc(12);
+    @include font-size(11px);
   }
   .navbar--top-item .link {
     // display: inline-block;
@@ -99,17 +99,16 @@
   }
 }
 
-.sub-nav-group {
-  width: auto;
-  .sub-nav-item a {
-    @include black-link;
-    line-height: 1.8;
-    // @include font-size(14px, 1.8);
+// indentation of menu items
+@include mq($until: lg) {
+  .sub-nav-group {
+    width: auto;
+    .sub-nav-title > .link {
+      padding-left: 1.5em;
+    }
+    .sub-nav-item > .link {
+      padding-left: 2.5em;
+    }
   }
 }
 
-.c-navbar {
-  @include mq($from: lg) {
-    // padding: 0 2rem;
-  }
-}

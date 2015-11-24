@@ -7,6 +7,7 @@
 <script src="./js/minibag.js"></script>
 <script src="./js/filters.js"></script>
 <script src="./js/nouislider.js"></script>
+<script src="./js/scroll-lock.js"></script>
 
 <script>
 $('select').selectBox({
@@ -75,12 +76,21 @@ slider.noUiSlider.on('update', function(values, handle) {
 </script>
 
 <script>
+var isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
+
 // filter collapse / expand
+var toggleFilterCollapse = function(target){
+  $(target).toggleClass('collapse');
+  $(target).find('i').toggleClass("icon-ui-plus icon-ui-minus");
+}
+
 $('body').on('click', '.filter--title', function() {
-  console.log('click');
-  $(this).toggleClass('collapse');
-  $(this).find('i').toggleClass("icon-ui-plus icon-ui-minus");
-})
+  toggleFilterCollapse($(this));
+});
+console.log(isMobileOrTablet);
+if (!isMobileOrTablet.matches) {
+    toggleFilterCollapse('.filter--title');
+}
 </script>
 
 <script>
@@ -90,4 +100,11 @@ hljs.configure({
   fixMarkup: true
 });
 hljs.initHighlighting();
+</script>
+
+<script>
+  $('body').on('click', '.filters--show-more', function() {
+    $(this).hide();
+    $(this).parent().find('label').css('display', 'block');
+  });
 </script>

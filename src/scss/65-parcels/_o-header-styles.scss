@@ -40,6 +40,9 @@
   //remove default padding on the search bar
   .o-form-row {
     padding: 0;
+    @include mq($until: lg) {
+      margin:10px;
+    }
   }
   //custom button styles for the header icons
 
@@ -71,6 +74,7 @@
 
 .o-header--search {
   text-align: right;
+
   a {
     color: $cool-grey;
     text-decoration: underline;
@@ -153,14 +157,6 @@
 
   &.active {
     display: inline;
-
-    @include mq($until: lg) {
-      margin-top: 10px;
-    }
-
-    @include mq($until: md) {
-      margin-bottom: 20px;
-    }
   }
 }
 
@@ -176,11 +172,26 @@
 
 .header-pb-20 {
   padding-bottom: 0px;
-  @include mq($from: md) {
+  @include mq($from: lg) {
     padding-bottom: 20px;
   }
 }
 
 .header-p-0 {
   padding: 0;
+}
+
+@include mq($until: lg) {
+  .header--border-bottom {
+    border-bottom: 1px solid $keyline-color;
+  }
+  .header--border-top {
+    border-top: 1px solid $keyline-color;
+  }
+}
+
+@include mq($from: lg) {
+  .margin-bottom-lg {
+    margin-bottom: 20px;
+  }
 }

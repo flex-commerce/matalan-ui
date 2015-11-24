@@ -2,7 +2,12 @@
 
 .meta {
   @extend %u-fade-el;
-  font-size: 80%;
+  @include font-size(11px, 1.1em);
+}
+
+.meta-icon {
+  font-size: 5px;
+  padding: 8px;
 }
 
 .u-font-pri {

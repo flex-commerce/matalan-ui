@@ -6,15 +6,20 @@
     var clickCatcher = '<div data-app="toggle" data-toggle=".filters" id="js-clickcatcher-filters" class="js-clickcatcher"></div>';
     var filtersActive = false;
 
+  function limitFilters () {
+
+  }
+
   function closeFilters(scope) {
-    $('html').removeClass("body--scroll-lock");
+    $('html').removeClass("body--modal-open");
     $(scope).closest('.container').removeClass("open");
     $('#js-clickcatcher-filters').remove();
+
     filtersActive = false;
   }
 
   function openFilters(scope) {
-    $('html').addClass("body--scroll-lock");
+    $('html').addClass("body--modal-open");
     $(scope).closest('.container').addClass("open");
     $('body').append(clickCatcher);
     filtersActive = true;
@@ -42,6 +47,7 @@
         closeFilters(filtersControl);
       }
     }, 250));
+    limitFilters();
   });
 
 

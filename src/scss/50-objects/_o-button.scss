@@ -46,15 +46,26 @@ $button-padding-y: $default-pad-y;
 }
 
 .c-btn.c-btn-primary__alt {
-  @include style-variant($dark-grey, $secondary-color, $secondary-color);
+  @include style-variant($color: $dark-grey, $background: $secondary-color, $border: $secondary-color);
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include style-variant($primary-color, $white, $secondary-color);
-
+    @include style-variant($color: $primary-color, $background: $white, $border: $secondary-color);
   }
 }
+
+.c-btn.c-btn-secondary__alt {
+  @include style-variant($color: $white, $background: $primary-color, $border: $primary-color);
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include style-variant($color: $white, $background: $primary-color-hover, $border: $primary-color-hover);
+  }
+}
+
+
 
 .c-btn-grp-dropdown {
 
