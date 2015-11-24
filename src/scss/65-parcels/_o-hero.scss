@@ -1,0 +1,14 @@
+.o-hero {
+  position:   relative;
+  min-height:465px;
+}
+
+.hero--bg {
+  background-size: cover;
+  background-position: top center;
+}
+
+.hero--detail--right {
+  @include center(y, abs);
+  right: 1em;
+}
