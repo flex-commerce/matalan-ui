@@ -134,7 +134,7 @@ $filters-border-color: $keyline-color;
 
 .filter--title i {
   float: right;
-  margin-top: -2px;
+  margin-top: -5px;
   &:before {
     font-size: 1.5em;
   }
@@ -220,4 +220,10 @@ $filters-border-color: $keyline-color;
 .icon-ui-minus ~ .meta,
 .icon-ui-plus ~ .meta {
   float: right;
+}
+
+.clear__filters {
+  float: right;
+  margin-top: 8px;
+  cursor: pointer;
 }
