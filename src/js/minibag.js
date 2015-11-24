@@ -30,11 +30,11 @@
 
   });
 
-  // $('.o-minibag-contain').on('mouseout', function() {
-  //   if (miniBagActive === true) {
-  //     closeMiniBag(miniBagControl);
-  //   }
-  // });
+  $('.o-minibag').on('mouseleave', function() {
+    if (miniBagActive === true) {
+      closeMiniBag(miniBagControl);
+    }
+  });
 
   miniBagClose.on('click', function() {
     closeMiniBag(miniBagControl);
