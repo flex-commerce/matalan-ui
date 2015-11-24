@@ -1,15 +1,17 @@
-<div class="section-layout">
-  {{# times 16 }}
-  <div class="section-layout--item col-xs-6 col-md-6 u-font-ta-c u-mar-b-huge">
-    <div class="section--image">
-      <!-- <img class="img" src="http://placehold.it/180x254"> -->
-      <img class="img" src="http://placehold.it/224x320">
-    </div>
+<div class="section">
+  {{# times 1 }}
+  <div class="section--item section--item--full section--bg section--full-{{ this }} col-xs-12 col-md-12 u-font-ta-c u-mar-b-small">
+    <div class="section--bg"></div>
     <div class="section--detail">
       <div class="section--detail-title u-mar-v-medium u-font-wb">{{lorem count=5}}</div>
       <div class="section--detail-sub u-mar-v-medium u-font-wb u-color-grey70">{{lorem count=12}}</div>
       <div class="section--detail-btn c-btn c-btn-primary__alt u-mar-v-medium hidden-lg-down">View</div>
     </div>
   </div>
+  <style>
+    .section--full-{{ this }} {
+        background-image: url("../img/full-{{ this }}.jpg");
+    }
+  </style>
   {{/ times }}
 </div>
