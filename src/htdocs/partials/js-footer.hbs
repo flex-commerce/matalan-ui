@@ -82,12 +82,21 @@ slider.noUiSlider.on('update', function(values, handle) {
 
 
 <script>
-// filter title collapse / expand
+var isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
+
+// filter collapse / expand
+var toggleFilterCollapse = function(target){
+  $(target).toggleClass('collapse');
+  $(target).find('i').toggleClass("icon-ui-plus icon-ui-minus");
+}
+
 $('body').on('click', '.filter--title', function() {
-  console.log('click');
-  $(this).toggleClass('collapse');
-  $(this).find('i').toggleClass("icon-ui-plus icon-ui-minus");
-})
+  toggleFilterCollapse($(this));
+});
+console.log(isMobileOrTablet);
+if (!isMobileOrTablet.matches) {
+    toggleFilterCollapse('.filter--title');
+}
 </script>
 
 
@@ -103,10 +112,10 @@ hljs.initHighlighting();
 
 <script>
 // Filters Show more
-$('body').on('click', '.filters--show-more', function() {
-  $(this).hide();
-  $(this).parent().find('label').css('display', 'block');
-});
+  $('body').on('click', '.filters--show-more', function() {
+    $(this).hide();
+    $(this).parent().find('label').css('display', 'block');
+  });
 </script>
 
 <script type='text/javascript'>
