@@ -1,6 +1,6 @@
 (function() {
 
-  var miniBagControl = $('.js-minibag');
+  var miniBagControl = $('.js-minibag, .js-minibag--view ');
   var miniBagClose = $('.o-minibag--close');
   var clickCatcher = '<div id="js-clickcatcher-minibag" class="js-clickcatcher"></div>';
   var miniBagActive = false;
@@ -24,13 +24,17 @@
     closeMiniBag(miniBagControl);
   });
 
-  miniBagControl.on('click', function() {
-    if (miniBagActive === true) {
-      closeMiniBag(miniBagControl);
-    } else {
+  miniBagControl.on('mouseover', function() {
+
       openMiniBag(miniBagControl);
-    }
+
   });
+
+  // $('.o-minibag-contain').on('mouseout', function() {
+  //   if (miniBagActive === true) {
+  //     closeMiniBag(miniBagControl);
+  //   }
+  // });
 
   miniBagClose.on('click', function() {
     closeMiniBag(miniBagControl);

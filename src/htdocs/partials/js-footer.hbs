@@ -9,12 +9,14 @@
 <script src="./js/nouislider.js"></script>
 <script src="./js/scroll-lock.js"></script>
 
+
 <script>
 $('select').selectBox({
   mobile: false,
   loopOptions: true
 });
 </script>
+
 
 <script>
 // header - show mobile search input field
@@ -23,8 +25,9 @@ $('.header--mobile-search').on('click', function() {
 });
 </script>
 
+
 <script>
-// search results layotu switch
+// search results layout switch
 $('.js-results-tight').on('click', function(e) {
   e.preventDefault();
   if (!$(this).hasClass('active')) {
@@ -48,12 +51,14 @@ $('.js-results-wide').on('click', function(e) {
 })
 </script>
 
+
 <script>
 // global alert event
 $(".global-test").click(function() {
   $(".c-alert-global").toggleClass("active");
 });
 </script>
+
 
 <script>
 // range slider
@@ -75,14 +80,16 @@ slider.noUiSlider.on('update', function(values, handle) {
 });
 </script>
 
+
 <script>
-// filter collapse / expand
+// filter title collapse / expand
 $('body').on('click', '.filter--title', function() {
   console.log('click');
   $(this).toggleClass('collapse');
   $(this).find('i').toggleClass("icon-ui-plus icon-ui-minus");
 })
 </script>
+
 
 <script>
 // syntax highlighter
@@ -93,9 +100,21 @@ hljs.configure({
 hljs.initHighlighting();
 </script>
 
+
 <script>
-  $('body').on('click', '.filters--show-more', function() {
-    $(this).hide();
-    $(this).parent().find('label').css('display', 'block');
-  });
+// Filters Show more
+$('body').on('click', '.filters--show-more', function() {
+  $(this).hide();
+  $(this).parent().find('label').css('display', 'block');
+});
+</script>
+
+<script type='text/javascript'>
+// bugherd
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=uswxmej5ryhotdtsi4yw9g';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
 </script>
