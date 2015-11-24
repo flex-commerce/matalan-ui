@@ -16,7 +16,15 @@ module.exports = function(env) {
 
   var webpackConfig = {
     context: jsSrc,
-    plugins: [],
+    plugins: [
+      new webpack.ProvidePlugin({
+        // Automtically detect jQuery and $ as free var in modules
+        // and inject the jquery library
+        // This is required by many jquery plugins
+        jQuery: "jquery",
+        $: "jquery"
+      })
+    ],
     resolve: {
       root: jsSrc,
       extensions: [''].concat(extensions)

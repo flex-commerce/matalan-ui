@@ -7,22 +7,7 @@
   var $parentNavMenu = $('[data-app="accessible-navmenu"]');
 
 
-  // ===========================
-  // Megamenu init
-  // ===========================
-  function initPageLarge() {
-    $parentNavMenu.accessibleMegaMenu({
-      /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
-      uuidPrefix: "accessible-menu",
-      menuClass: "c-navbar",
-      topNavItemClass: "navbar--top-item",
-      panelClass: "sub-nav",
-      panelGroupClass: "sub-nav-group",
-      hoverClass: "hover",
-      focusClass: "focus",
-      openClass: "open"
-    });
-  }
+
 
 
   // ===========================
@@ -104,7 +89,7 @@
         window.smallScreen = true;
       }
     } else {
-      initPageLarge();
+      // initPageLarge();
       window.smallScreen = false;
     }
   }

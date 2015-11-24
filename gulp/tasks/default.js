@@ -1,6 +1,5 @@
 'use strict';
 
-
 var gulp            = require('gulp');
 var gulpSequence    = require('gulp-sequence');
 var getEnabledTasks = require('../util/getEnabledTasks');

@@ -51,7 +51,6 @@ limitations under the License.
 (function($, window, document) {
   "use strict";
 
-
   var pluginName = "accessibleMegaMenu",
     defaults = {
       uuidPrefix: "accessible-megamenu", // unique ID's are required to indicate aria-owns, aria-controls and aria-labelledby

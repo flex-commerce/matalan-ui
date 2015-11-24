@@ -19,7 +19,7 @@ var package = require('../../package.json');
 var path    = require('path');
 
 var settings = {
-  url: package.homepage,
+  url: package.repository.url,
   src: path.join(config.app.dest, '/**/*'),
   ghPages: {
     cacheDir: path.join(os.tmpdir(), package.name)
