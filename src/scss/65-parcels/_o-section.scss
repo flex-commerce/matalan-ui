@@ -63,9 +63,21 @@
   background-position: top center;
 }
 
-.section--detail {
+.section--detail--center {
   @include center(xy,abs);
   background-color: $white;
+}
+
+.section--detail--top {
+  @include center(x,abs);
+  background-color: $white;
+  top: 1em;
+}
+
+.section--detail--bottom {
+  @include center(x,abs);
+  background-color: $white;
+  bottom: 1em;
 }
 
 // @include mq($from: xs, $until: md) {
