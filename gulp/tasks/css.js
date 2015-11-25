@@ -23,6 +23,8 @@ var sourcemaps   = require('gulp-sourcemaps');
 var handleErrors = require('../util/handleErrors');
 var autoprefixer = require('gulp-autoprefixer');
 var path         = require('path');
+var duration     = require('gulp-duration');
+var logger        = require('../util/compileLogger');
 
 var paths = {
   src: path.join(config.app.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}'),
@@ -37,6 +39,7 @@ var scssTask = function () {
     .pipe(autoprefixer(config.tasks.css.autoprefixer))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dest))
+    .pipe(duration('rebuilding styles'))
     .pipe(browserSync.stream());
 }
 

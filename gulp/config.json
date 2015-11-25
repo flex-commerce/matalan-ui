@@ -17,7 +17,7 @@
       "dest": "js",
       "extractSharedJs": false,
       "entries": {
-        "app": ["./main.js"]
+        "app": ["./app.js"]
       },
       "extensions": ["js"]
     },
