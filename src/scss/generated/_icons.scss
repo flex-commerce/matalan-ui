@@ -3,20 +3,24 @@
   //from gulp/tasks/iconFont/template.scss
 
 @font-face {
-  font-family: icons;
-  src: url("../fonts/icons.eot");
-  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
+  font-family: flex-icons;
+  src: url('../fonts/flex-icons.eot');
+  src:
+    url('../fonts/flex-icons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/flex-icons.woff') format('woff'),
+    url('../fonts/flex-icons.ttf') format('truetype'),
+    url('../fonts/flex-icons.svg#flex-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 
-@mixin icon($content: "") {
+@mixin icon($content: '') {
   &:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     content: $content;
-    font-family: "icons";
+    font-family: 'flex-icons';
     font-style: normal;
     font-variant: normal;
     font-weight: normal;
@@ -32,52 +36,157 @@
 }
 
 // Save variable
-$icon-basket: "\EA01";
+$icon-aeroplane: '\EA01';
 
 // Save mixin
-@mixin icon--basket {
-  @include icon($icon-basket) {
+@mixin icon--aeroplane {
+  @include icon($icon-aeroplane) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-basket:before {
-  content: $icon-basket;
+.icon.icon-aeroplane:before {
+  content: $icon-aeroplane;
 }
 
 // Save variable
-$icon-check: "\EA02";
+$icon-arr-back: '\EA02';
 
 // Save mixin
-@mixin icon--check {
-  @include icon($icon-check) {
+@mixin icon--arr-back {
+  @include icon($icon-arr-back) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-check:before {
-  content: $icon-check;
+.icon.icon-arr-back:before {
+  content: $icon-arr-back;
 }
 
 // Save variable
-$icon-edit: "\EA03";
+$icon-arr-down: '\EA03';
 
 // Save mixin
-@mixin icon--edit {
-  @include icon($icon-edit) {
+@mixin icon--arr-down {
+  @include icon($icon-arr-down) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-edit:before {
-  content: $icon-edit;
+.icon.icon-arr-down:before {
+  content: $icon-arr-down;
 }
 
 // Save variable
-$icon-email: "\EA04";
+$icon-arr-forward: '\EA04';
+
+// Save mixin
+@mixin icon--arr-forward {
+  @include icon($icon-arr-forward) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-arr-forward:before {
+  content: $icon-arr-forward;
+}
+
+// Save variable
+$icon-arr-up: '\EA05';
+
+// Save mixin
+@mixin icon--arr-up {
+  @include icon($icon-arr-up) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-arr-up:before {
+  content: $icon-arr-up;
+}
+
+// Save variable
+$icon-blog: '\EA06';
+
+// Save mixin
+@mixin icon--blog {
+  @include icon($icon-blog) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-blog:before {
+  content: $icon-blog;
+}
+
+// Save variable
+$icon-click-collect: '\EA07';
+
+// Save mixin
+@mixin icon--click-collect {
+  @include icon($icon-click-collect) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-click-collect:before {
+  content: $icon-click-collect;
+}
+
+// Save variable
+$icon-cross: '\EA08';
+
+// Save mixin
+@mixin icon--cross {
+  @include icon($icon-cross) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-cross:before {
+  content: $icon-cross;
+}
+
+// Save variable
+$icon-delivery-van: '\EA09';
+
+// Save mixin
+@mixin icon--delivery-van {
+  @include icon($icon-delivery-van) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-delivery-van:before {
+  content: $icon-delivery-van;
+}
+
+// Save variable
+$icon-desktop: '\EA0A';
+
+// Save mixin
+@mixin icon--desktop {
+  @include icon($icon-desktop) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-desktop:before {
+  content: $icon-desktop;
+}
+
+// Save variable
+$icon-email: '\EA0B';
 
 // Save mixin
 @mixin icon--email {
@@ -92,37 +201,67 @@ $icon-email: "\EA04";
 }
 
 // Save variable
-$icon-info: "\EA05";
+$icon-eye: '\EA0C';
 
 // Save mixin
-@mixin icon--info {
-  @include icon($icon-info) {
+@mixin icon--eye {
+  @include icon($icon-eye) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-info:before {
-  content: $icon-info;
+.icon.icon-eye:before {
+  content: $icon-eye;
 }
 
 // Save variable
-$icon-info_o: "\EA06";
+$icon-home: '\EA0D';
 
 // Save mixin
-@mixin icon--info_o {
-  @include icon($icon-info_o) {
+@mixin icon--home {
+  @include icon($icon-home) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-info_o:before {
-  content: $icon-info_o;
+.icon.icon-home:before {
+  content: $icon-home;
 }
 
 // Save variable
-$icon-menu: "\EA07";
+$icon-location: '\EA0E';
+
+// Save mixin
+@mixin icon--location {
+  @include icon($icon-location) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-location:before {
+  content: $icon-location;
+}
+
+// Save variable
+$icon-love: '\EA0F';
+
+// Save mixin
+@mixin icon--love {
+  @include icon($icon-love) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-love:before {
+  content: $icon-love;
+}
+
+// Save variable
+$icon-menu: '\EA10';
 
 // Save mixin
 @mixin icon--menu {
@@ -137,112 +276,112 @@ $icon-menu: "\EA07";
 }
 
 // Save variable
-$icon-minus_circle: "\EA08";
+$icon-minibag: '\EA11';
 
 // Save mixin
-@mixin icon--minus_circle {
-  @include icon($icon-minus_circle) {
+@mixin icon--minibag {
+  @include icon($icon-minibag) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-minus_circle:before {
-  content: $icon-minus_circle;
+.icon.icon-minibag:before {
+  content: $icon-minibag;
 }
 
 // Save variable
-$icon-minus_circle_o: "\EA09";
+$icon-minus: '\EA12';
 
 // Save mixin
-@mixin icon--minus_circle_o {
-  @include icon($icon-minus_circle_o) {
+@mixin icon--minus {
+  @include icon($icon-minus) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-minus_circle_o:before {
-  content: $icon-minus_circle_o;
+.icon.icon-minus:before {
+  content: $icon-minus;
 }
 
 // Save variable
-$icon-payment: "\EA0A";
+$icon-mobile: '\EA13';
 
 // Save mixin
-@mixin icon--payment {
-  @include icon($icon-payment) {
+@mixin icon--mobile {
+  @include icon($icon-mobile) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-payment:before {
-  content: $icon-payment;
+.icon.icon-mobile:before {
+  content: $icon-mobile;
 }
 
 // Save variable
-$icon-phone: "\EA0B";
+$icon-offer: '\EA14';
 
 // Save mixin
-@mixin icon--phone {
-  @include icon($icon-phone) {
+@mixin icon--offer {
+  @include icon($icon-offer) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-phone:before {
-  content: $icon-phone;
+.icon.icon-offer:before {
+  content: $icon-offer;
 }
 
 // Save variable
-$icon-plus_circle: "\EA0C";
+$icon-plus: '\EA15';
 
 // Save mixin
-@mixin icon--plus_circle {
-  @include icon($icon-plus_circle) {
+@mixin icon--plus {
+  @include icon($icon-plus) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-plus_circle:before {
-  content: $icon-plus_circle;
+.icon.icon-plus:before {
+  content: $icon-plus;
 }
 
 // Save variable
-$icon-plus_circle_o: "\EA0D";
+$icon-return: '\EA16';
 
 // Save mixin
-@mixin icon--plus_circle_o {
-  @include icon($icon-plus_circle_o) {
+@mixin icon--return {
+  @include icon($icon-return) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-plus_circle_o:before {
-  content: $icon-plus_circle_o;
+.icon.icon-return:before {
+  content: $icon-return;
 }
 
 // Save variable
-$icon-radio: "\EA0E";
+$icon-reward-card: '\EA17';
 
 // Save mixin
-@mixin icon--radio {
-  @include icon($icon-radio) {
+@mixin icon--reward-card {
+  @include icon($icon-reward-card) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-radio:before {
-  content: $icon-radio;
+.icon.icon-reward-card:before {
+  content: $icon-reward-card;
 }
 
 // Save variable
-$icon-search: "\EA0F";
+$icon-search: '\EA18';
 
 // Save mixin
 @mixin icon--search {
@@ -257,7 +396,22 @@ $icon-search: "\EA0F";
 }
 
 // Save variable
-$icon-social-facebook: "\EA10";
+$icon-signal: '\EA19';
+
+// Save mixin
+@mixin icon--signal {
+  @include icon($icon-signal) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-signal:before {
+  content: $icon-signal;
+}
+
+// Save variable
+$icon-social-facebook: '\EA1A';
 
 // Save mixin
 @mixin icon--social-facebook {
@@ -272,22 +426,37 @@ $icon-social-facebook: "\EA10";
 }
 
 // Save variable
-$icon-social-google-plus: "\EA11";
+$icon-social-google: '\EA1B';
 
 // Save mixin
-@mixin icon--social-google-plus {
-  @include icon($icon-social-google-plus) {
+@mixin icon--social-google {
+  @include icon($icon-social-google) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-social-google-plus:before {
-  content: $icon-social-google-plus;
+.icon.icon-social-google:before {
+  content: $icon-social-google;
 }
 
 // Save variable
-$icon-social-pinterest: "\EA12";
+$icon-social-instagram: '\EA1C';
+
+// Save mixin
+@mixin icon--social-instagram {
+  @include icon($icon-social-instagram) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-social-instagram:before {
+  content: $icon-social-instagram;
+}
+
+// Save variable
+$icon-social-pinterest: '\EA1D';
 
 // Save mixin
 @mixin icon--social-pinterest {
@@ -302,22 +471,7 @@ $icon-social-pinterest: "\EA12";
 }
 
 // Save variable
-$icon-social-rss: "\EA13";
-
-// Save mixin
-@mixin icon--social-rss {
-  @include icon($icon-social-rss) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-social-rss:before {
-  content: $icon-social-rss;
-}
-
-// Save variable
-$icon-social-twitter: "\EA14";
+$icon-social-twitter: '\EA1E';
 
 // Save mixin
 @mixin icon--social-twitter {
@@ -332,7 +486,7 @@ $icon-social-twitter: "\EA14";
 }
 
 // Save variable
-$icon-social-youtube: "\EA15";
+$icon-social-youtube: '\EA1F';
 
 // Save mixin
 @mixin icon--social-youtube {
@@ -347,183 +501,93 @@ $icon-social-youtube: "\EA15";
 }
 
 // Save variable
-$icon-star: "\EA16";
+$icon-star-empty: '\EA20';
 
 // Save mixin
-@mixin icon--star {
-  @include icon($icon-star) {
+@mixin icon--star-empty {
+  @include icon($icon-star-empty) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-star:before {
-  content: $icon-star;
+.icon.icon-star-empty:before {
+  content: $icon-star-empty;
 }
 
 // Save variable
-$icon-star_half: "\EA17";
+$icon-star-fill: '\EA21';
 
 // Save mixin
-@mixin icon--star_half {
-  @include icon($icon-star_half) {
+@mixin icon--star-fill {
+  @include icon($icon-star-fill) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-star_half:before {
-  content: $icon-star_half;
+.icon.icon-star-fill:before {
+  content: $icon-star-fill;
 }
 
 // Save variable
-$icon-star_o: "\EA18";
+$icon-tablet: '\EA22';
 
 // Save mixin
-@mixin icon--star_o {
-  @include icon($icon-star_o) {
+@mixin icon--tablet {
+  @include icon($icon-tablet) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-star_o:before {
-  content: $icon-star_o;
+.icon.icon-tablet:before {
+  content: $icon-tablet;
 }
 
 // Save variable
-$icon-ui-arr-down: "\EA19";
+$icon-telephone: '\EA23';
 
 // Save mixin
-@mixin icon--ui-arr-down {
-  @include icon($icon-ui-arr-down) {
+@mixin icon--telephone {
+  @include icon($icon-telephone) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-ui-arr-down:before {
-  content: $icon-ui-arr-down;
+.icon.icon-telephone:before {
+  content: $icon-telephone;
 }
 
 // Save variable
-$icon-ui-arr-right: "\EA1A";
+$icon-user-female: '\EA24';
 
 // Save mixin
-@mixin icon--ui-arr-right {
-  @include icon($icon-ui-arr-right) {
+@mixin icon--user-female {
+  @include icon($icon-user-female) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-ui-arr-right:before {
-  content: $icon-ui-arr-right;
+.icon.icon-user-female:before {
+  content: $icon-user-female;
 }
 
 // Save variable
-$icon-ui-cross: "\EA1B";
+$icon-user-male: '\EA25';
 
 // Save mixin
-@mixin icon--ui-cross {
-  @include icon($icon-ui-cross) {
+@mixin icon--user-male {
+  @include icon($icon-user-male) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-ui-cross:before {
-  content: $icon-ui-cross;
-}
-
-// Save variable
-$icon-ui-minus: "\EA1C";
-
-// Save mixin
-@mixin icon--ui-minus {
-  @include icon($icon-ui-minus) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-ui-minus:before {
-  content: $icon-ui-minus;
-}
-
-// Save variable
-$icon-ui-plus: "\EA1D";
-
-// Save mixin
-@mixin icon--ui-plus {
-  @include icon($icon-ui-plus) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-ui-plus:before {
-  content: $icon-ui-plus;
-}
-
-// Save variable
-$icon-view_tight-o: "\EA1E";
-
-// Save mixin
-@mixin icon--view_tight-o {
-  @include icon($icon-view_tight-o) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-view_tight-o:before {
-  content: $icon-view_tight-o;
-}
-
-// Save variable
-$icon-view_tight: "\EA1F";
-
-// Save mixin
-@mixin icon--view_tight {
-  @include icon($icon-view_tight) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-view_tight:before {
-  content: $icon-view_tight;
-}
-
-// Save variable
-$icon-view_wide-o: "\EA20";
-
-// Save mixin
-@mixin icon--view_wide-o {
-  @include icon($icon-view_wide-o) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-view_wide-o:before {
-  content: $icon-view_wide-o;
-}
-
-// Save variable
-$icon-view_wide: "\EA21";
-
-// Save mixin
-@mixin icon--view_wide {
-  @include icon($icon-view_wide) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-view_wide:before {
-  content: $icon-view_wide;
+.icon.icon-user-male:before {
+  content: $icon-user-male;
 }
 
 
