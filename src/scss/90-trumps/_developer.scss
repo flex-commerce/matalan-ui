@@ -137,7 +137,6 @@
 [class*=" icon-"] {
   &:before {
     font-size: 2em; // todo - replace temp dev rule
-    // padding-right: 0.5em; // todo - replace temp dev rule
     display: inline-block;
     color: $cool-grey;
   }
@@ -148,6 +147,11 @@
 
 .block-icon {
   display: block;
+  padding-top: 1em;
+  &:before {
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
 }
 
 // test class for ui colour pallette

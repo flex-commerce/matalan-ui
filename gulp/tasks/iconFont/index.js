@@ -1,15 +1,15 @@
-var config      = require('../../config')
-if(!config.tasks.iconFont) return
+var config      = require('../../config');
+if(!config.tasks.iconFont) return;
 
-var gulp             = require('gulp')
-var iconfont         = require('gulp-iconfont')
-var generateIconSass = require('./generateIconSass')
-var handleErrors     = require('../../util/handleErrors')
-var package          = require('../../../package.json')
-var path             = require('path')
+var gulp             = require('gulp');
+var iconfont         = require('gulp-iconfont');
+var generateIconSass = require('./generateIconSass');
+var handleErrors     = require('../../util/handleErrors');
+var package          = require('../../../package.json');
+var path             = require('path');
 
-var fontPath = path.join(config.app.dest, config.tasks.iconFont.dest)
-var cssPath = path.join(config.app.dest, config.tasks.css.dest)
+var fontPath = path.join(config.app.dest, config.tasks.iconFont.dest);
+var cssPath = path.join(config.app.dest, config.tasks.css.dest);
 
 var settings = {
   name: package.name + ' icons',
@@ -23,20 +23,20 @@ var settings = {
   options: {
     svg: true,
     timestamp: 0, // see https://github.com/fontello/svg2ttf/issues/33
-    fontName: 'icons',
+    fontName: 'flex-icons',
     appendUnicode: true,
     normalize: false,
     formats: config.tasks.iconFont.extensions
   }
-}
+};
 
 var iconFontTask = function() {
   return gulp.src(settings.src)
     .pipe(iconfont(settings.options))
     .on('glyphs', generateIconSass(settings))
     .on('error', handleErrors)
-    .pipe(gulp.dest(settings.dest))
-}
+    .pipe(gulp.dest(settings.dest));
+};
 
-gulp.task('iconFont', iconFontTask)
-module.exports = iconFontTask
+gulp.task('iconFont', iconFontTask);
+module.exports = iconFontTask;
