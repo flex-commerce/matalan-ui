@@ -4,11 +4,11 @@
 
 .section-department--slick .slick-slide {
   min-height: 150px;
-
 }
 
 .section-department--outer {
   // outline: 1px solid red;
+  min-height: 150px;
   padding: 0.5em;
   position: relative;
   &:focus {
@@ -30,7 +30,10 @@
   background-color: $white;
   top: -18px;
   padding: 5px 40px;
-  @include font-size(20px, 22px)
+  @include font-size(20px, 22px);
+  @include mq($until: lg) {
+    color: $primary-color;
+  }
 }
 
 .section-department--link {
@@ -39,7 +42,7 @@
   background-color: $white;
   bottom: -18px;
   padding: 5px 40px;
-  @include font-size(12px, 22px)
+  @include font-size(12px, 22px);
   text-transform: uppercase;
   text-decoration: none;
 }
