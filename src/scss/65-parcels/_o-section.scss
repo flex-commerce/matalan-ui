@@ -1,6 +1,74 @@
 .section {
   @include column( (xs: 12));
 }
+
+.section-department--slick .slick-slide {
+  min-height: 150px;
+
+}
+
+.section-department--outer {
+  // outline: 1px solid red;
+  padding: 0.5em;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+}
+
+.section-department--inner {
+  outline: 1px solid $cool-grey;
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  content: "";
+}
+.section-department--title {
+  @include center(x,abs)
+  background-color: $white;
+  top: -18px;
+  padding: 5px 40px;
+  @include font-size(20px, 22px)
+}
+
+.section-department--link {
+  border: 1px solid $cool-grey;
+  @include center(x,abs)
+  background-color: $white;
+  bottom: -18px;
+  padding: 5px 40px;
+  @include font-size(12px, 22px)
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.section-department--list {
+  width: 66%;
+  padding: 10px;
+  float: left;
+  height: 100%;
+  ul {
+    -webkit-columns: 2 8px;
+    height: 100%;
+  }
+}
+
+.section-department--image {
+  width: 33%;
+  height: 100%;
+  float: right;
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height:130px;
+  }
+}
+
 .section--item {
   //outline: 1px solid red;
 }
