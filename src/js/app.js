@@ -1,7 +1,7 @@
 // ===========================
 // jQuery auto require testing
 // ===========================
-console.log($);
+// console.log($);
 // ===========================
 // jQuery testing end
 // ===========================
@@ -11,7 +11,7 @@ console.log($);
 // Lodash testing
 // ===========================
 require("lodash");
-console.log(_);
+// console.log(_);
 // ===========================
 // Lodash testing end
 // ===========================
@@ -100,24 +100,27 @@ $('.section-department--slick').slick({
 // Range Slider init
 // ===========================
 (function() {
-  var noUiSlider = require("./modules/nouislider");
+    if(  $("#filters--range").is(":visible") == true ) {
+    var noUiSlider = require("./modules/nouislider");
 
-  var slider = document.getElementById('filters--range');
-  var sliderValues = [
-    document.getElementById('slider-value-lower'),
-    document.getElementById('slider-value-upper')
-  ];
-  noUiSlider.create(slider, {
-    start: [20, 80],
-    connect: true,
-    range: {
-      'min': 0,
-      'max': 100
-    }
-  });
-  slider.noUiSlider.on('update', function(values, handle) {
-    sliderValues[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
-  });
+    var slider = document.getElementById('filters--range');
+    var sliderValues = [
+      document.getElementById('slider-value-lower'),
+      document.getElementById('slider-value-upper')
+    ];
+
+    noUiSlider.create(slider, {
+      start: [20, 80],
+      connect: true,
+      range: {
+        'min': 0,
+        'max': 100
+      }
+    });
+    slider.noUiSlider.on('update', function(values, handle) {
+      sliderValues[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
+    });
+  }
 })();
 // ===========================
 // Range Slider End
@@ -189,7 +192,7 @@ require("./modules/scroll-lock");
   $('body').on('click', '.filter--title', function() {
     toggleFilterCollapse($(this));
   });
-  console.log(isMobileOrTablet);
+  // console.log(isMobileOrTablet);
   if (!isMobileOrTablet.matches) {
     toggleFilterCollapse('.filter--title');
   }
