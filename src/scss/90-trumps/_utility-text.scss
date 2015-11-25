@@ -2,13 +2,13 @@
 
 .meta {
   @extend %u-fade-el;
-  @include font-size(11px, 1.1em);
+  @include font-size(11px, 1.1);
 }
 
-.meta-icon {
-  font-size: 5px;
-  padding: 8px;
-}
+// .meta-icon {
+//   font-size: 5px;
+//   padding: 8px;
+// }
 
 .u-font-pri {
   font-family: 'texheros', Helvetica, Arial, sans-serif;

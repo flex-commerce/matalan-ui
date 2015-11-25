@@ -132,9 +132,11 @@ $filters-border-color: $keyline-color;
   }
 }
 
-.filter--title i {
+.filter--title .icon {
   float: right;
-  margin-top: -5px;
+  margin-top: -3px; // magic line heihgt fix
+  // font-size: 5px;
+  // padding: 8px;
   &:before {
     font-size: 1.5em;
   }
@@ -212,13 +214,13 @@ $filters-border-color: $keyline-color;
   -webkit-columns: 3 12em;
 }
 
-.icon-ui-plus ~ .collapse,
-.icon-ui-minus ~ .expand  {
+.icon-plus ~ .collapse,
+.icon-minus ~ .expand  {
   display:none;
 }
 
-.icon-ui-minus ~ .meta,
-.icon-ui-plus ~ .meta {
+.icon-minus ~ .meta,
+.icon-plus ~ .meta {
   float: right;
 }
 
