@@ -6,8 +6,9 @@ var getEnabledTasks = require('../util/getEnabledTasks');
 
 var defaultTask = function(cb) {
   var tasks = getEnabledTasks('watch');
-  // gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'watch', cb);
-  gulpSequence('clean', tasks.codeTasks, 'watch', cb);
+  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'watch', cb);
+  // gulpSequence('clean', tasks.codeTasks, 'watch', cb);
+  //
 }
 
 gulp.task('default', defaultTask);
