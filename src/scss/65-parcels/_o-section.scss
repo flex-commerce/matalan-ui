@@ -1,0 +1,98 @@
+.section {
+  @include column( (xs: 12));
+}
+.section--item {
+  //outline: 1px solid red;
+}
+@include mq($from: xs) {
+  .section--item--full {
+    min-height:465px;
+  }
+
+  .section--item--half {
+    min-height:465px;
+  }
+
+  .section--item--third {
+    min-height:365px;
+  }
+
+  .section--item--quarter {
+    min-height:265px;
+  }
+}
+
+@include mq($from: md) {
+  .section--item--full {
+    min-height:465px;
+  }
+
+  .section--item--half {
+    min-height:465px;
+  }
+
+  .section--item--third {
+    min-height:365px;
+  }
+
+  .section--item--quarter {
+    min-height:265px;
+  }
+}
+
+@include mq($from: lg) {
+  .section--item--full {
+    min-height:465px;
+  }
+
+  .section--item--half {
+    min-height:465px;
+  }
+
+  .section--item--third {
+    min-height:365px;
+  }
+
+  .section--item--quarter {
+    min-height:265px;
+  }
+}
+
+.section--bg {
+  background-size: cover;
+  background-position: top center;
+}
+
+.section--detail--center {
+  @include center(xy,abs);
+  background-color: $white;
+}
+
+.section--detail--top {
+  @include center(x,abs);
+  background-color: $white;
+  top: 1em;
+}
+
+.section--detail--bottom {
+  @include center(x,abs);
+  background-color: $white;
+  bottom: 1em;
+}
+
+// @include mq($from: xs, $until: md) {
+//   .section--item {
+//     &:nth-child(2n+1) {
+//       clear: left;
+//     }
+//   }
+// }
+
+// @include mq($from: md, $until: lg) {
+//   .section--item {
+//     &:nth-child(3n+1) {
+//       clear: left;
+//     }
+//   }
+// }
+
