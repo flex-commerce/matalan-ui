@@ -54,6 +54,12 @@
       "extensions": ["jpg", "png", "svg", "gif"]
     },
 
+    "favicon": {
+      "src": "favicon",
+      "dest": "./",
+      "extensions": ["ico"]
+    },
+
     "fonts": {
       "src": "fonts",
       "dest": "fonts",
