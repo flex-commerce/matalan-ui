@@ -157,7 +157,7 @@ require("./modules/scroll-lock");
   // filter collapse / expand
   var toggleFilterCollapse = function(target) {
     $(target).toggleClass('collapse');
-    $(target).find('i').toggleClass("icon-ui-plus icon-ui-minus");
+    $(target).find('.icon').toggleClass("icon-plus icon-minus");
   };
 
   $('body').on('click', '.filter--title', function() {

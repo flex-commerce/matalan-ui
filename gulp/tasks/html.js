@@ -21,23 +21,23 @@ var exclude = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(','
 var paths = {
   src: [path.join(config.app.src, config.tasks.html.src, '/**/*'), exclude],
   dest: path.join(config.app.dest, config.tasks.html.dest),
-}
+};
 
 var htmlTask = function() {
 
   return gulp.src(paths.src)
+    // .pipe(changed(paths.dest)) // Ignore unchanged files
     .pipe(hb({
-        helpers: 'src/hb-helpers/*.js',
-        partials: 'src/htdocs/**/*.hbs',
+        helpers:  path.join(config.app.src, config.tasks.hbs.helpers, '/*.js'),
+        partials: path.join(config.app.src, config.tasks.hbs.partials, '/**/*.hbs'),
         bustCache: true
     }))
     .on('error', handleErrors)
     .pipe(gulpif(process.env.NODE_ENV == 'production', htmlmin(config.tasks.html.htmlmin)))
-    .pipe(changed(paths.dest)) // Ignore unchanged files
     // .pipe(prettify({config: '.jsbeautifyrc'}))
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream());
-}
+};
 
 gulp.task('html', htmlTask);
 module.exports = htmlTask;

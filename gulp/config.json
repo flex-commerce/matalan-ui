@@ -37,8 +37,15 @@
       "htmlmin": {
         "collapseWhitespace": true
       },
-      "extensions": ["html"],
+      "extensions": ["html", "hbs"],
       "excludeFolders": ["parcels", "partials"]
+    },
+
+    "hbs": {
+      "src": "htdocs",
+      "helpers": "hb-helpers",
+      "partials": "htdocs",
+      "extensions": ["hbs"]
     },
 
     "images": {
