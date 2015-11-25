@@ -72,7 +72,7 @@ $('select').selectBox({
 var slick = require("./modules/slick");
 
 $('.section-department--slick').slick({
-  infinite: false,
+  infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,
   responsive: [

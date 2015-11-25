@@ -7,17 +7,17 @@
 }
 
 .section-department--outer {
-  // outline: 1px solid red;
+  // border: 1px solid red;
   min-height: 150px;
   padding: 0.5em;
   position: relative;
   &:focus {
-    outline: none;
+    border: none;
   }
 }
 
 .section-department--inner {
-  outline: 1px solid $cool-grey;
+  border: 1px solid $cool-grey;
   position: absolute;
   top: 20px;
   bottom: 20px;
@@ -53,7 +53,7 @@
   float: left;
   height: 100%;
   ul {
-    -webkit-columns: 2 8px;
+    column-count: 2;
     height: 100%;
   }
 }
@@ -72,9 +72,6 @@
   }
 }
 
-.section--item {
-  //outline: 1px solid red;
-}
 @include mq($from: xs) {
   .section--item--full {
     min-height:465px;
@@ -150,20 +147,4 @@
   background-color: $white;
   bottom: 1em;
 }
-
-// @include mq($from: xs, $until: md) {
-//   .section--item {
-//     &:nth-child(2n+1) {
-//       clear: left;
-//     }
-//   }
-// }
-
-// @include mq($from: md, $until: lg) {
-//   .section--item {
-//     &:nth-child(3n+1) {
-//       clear: left;
-//     }
-//   }
-// }
 
