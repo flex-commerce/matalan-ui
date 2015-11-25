@@ -1,5 +1,4 @@
 .o-hero {
-<<<<<<< HEAD
   position: relative;
   overflow: hidden;
 }
@@ -9,10 +8,6 @@
   @include make-container();
   max-width: $container-maxwidth;
   min-height: 465px;
-=======
-  position:   relative;
-  min-height:465px;
->>>>>>> dev
 }
 
 .hero--bg {
@@ -23,7 +18,6 @@
 .hero--detail--right {
   @include center(y, abs);
   right: 1em;
-<<<<<<< HEAD
   text-align: right;
 }
 
@@ -42,6 +36,7 @@
     border-color: $white;
   }
 }
+
 .hero-ribbon{
   width: 220px;
   background: $white;
@@ -62,8 +57,7 @@
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+
 .hero-ribbon.red {
   background: $primary-color;
-=======
->>>>>>> dev
 }
