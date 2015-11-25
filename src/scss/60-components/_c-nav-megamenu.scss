@@ -159,29 +159,29 @@
       line-height: 21px;
       color: $primary-color;
     }
-    .icon-ui-minus {
+    .icon-minus {
       display: none;
     }
-    .icon-ui-arr-right {
+    .icon-arr-forward {
       display: none;
     }
   }
 
   // always show bottom level gt symbol
-  .sub-nav-item .icon-ui-arr-right {
+  .sub-nav-item .icon-arr-forward {
     display: initial;
   }
 
   // left inset icons display rules
   .navbar--top-item, .sub-nav-title{
     > .link.open {
-      .icon-ui-plus {
+      .icon-plus {
         display: none;
       }
-      .icon-ui-minus {
+      .icon-minus {
         display: initial;
       }
-      .icon-ui-arr-right {
+      .icon-arr-forward {
         display: initial;
       }
     }
@@ -193,19 +193,19 @@
 
 
   // .open > .nav-menu-icons {
-  //   .icon-ui-minus {
+  //   .icon-minus {
   //     display: initial;
   //     outline: 1px solid red;
   //   }
-  //   .icon-ui-plus {
+  //   .icon-plus {
   //     display: none;
   //   }
-  //   .icon-ui-arr-right {
+  //   .icon-arr-forward {
   //     display: initial;
   //   }
   // }
 
-  .c-navbar-container  .icon-ui-minus {
+  .c-navbar-container  .icon-minus {
     margin-right: 2em;
     &:after {
       content: '';
