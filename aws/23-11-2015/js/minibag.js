@@ -14,10 +14,13 @@
   }
 
   function openMiniBag(scope) {
-    $('html').addClass("body--modal-open");
-    $(scope).parent().addClass("open");
-    $('body').append(clickCatcher);
-    miniBagActive = true;
+    console.log('miniBagActive', miniBagActive);
+    if (!miniBagActive) {
+      $('html').addClass("body--modal-open");
+      $(scope).parent().addClass("open");
+      $('body').append(clickCatcher);
+      miniBagActive = true;
+    };
   }
 
   $('body').on('click', '#js-clickcatcher-minibag', function() {

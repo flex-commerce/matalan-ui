@@ -219,7 +219,11 @@ $minibag-border-color: $keyline-color;
 // an id!
 @include mq($from: lg) {
   #js-clickcatcher-minibag {
-    background-color: transparent;
+    // background-color: transparent;
+  }
+  .body--modal-open .js-minibag {
+    position: relative;
+    z-index: 5;
   }
 }
 
