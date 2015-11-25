@@ -1,12 +1,12 @@
-'use strict';
-
 (function() {
-    var filtersControl = $('.js-filters');
-    var filtersClose = $('.o-filters--close');
-    var clickCatcher = '<div data-app="toggle" data-toggle=".filters" id="js-clickcatcher-filters" class="js-clickcatcher"></div>';
-    var filtersActive = false;
+  'use strict';
 
-  function limitFilters () {
+  var filtersControl = $('.js-filters');
+  var filtersClose = $('.o-filters--close');
+  var clickCatcher = '<div data-app="toggle" data-toggle=".filters" id="js-clickcatcher-filters" class="js-clickcatcher"></div>';
+  var filtersActive = false;
+
+  function limitFilters() {
 
   }
 
