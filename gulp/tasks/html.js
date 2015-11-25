@@ -1,0 +1,43 @@
+/*jslint node: true */
+'use strict';
+
+var config       = require('../config');
+  if(!config.tasks.html) return;
+
+var gulp         = require('gulp'),
+    foreach      = require('gulp-foreach'),
+    hb           = require('gulp-hb'),
+    path         = require('path'),
+    prettify     = require('gulp-jsbeautifier'),
+    rename       = require('gulp-rename'),
+    handleErrors = require('../util/handleErrors'),
+    browserSync  = require('browser-sync'),
+    changed     = require('gulp-changed'),
+    gulpif       = require('gulp-if'),
+    htmlmin      = require('gulp-htmlmin');
+
+var exclude = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**');
+
+var paths = {
+  src: [path.join(config.app.src, config.tasks.html.src, '/**/*'), exclude],
+  dest: path.join(config.app.dest, config.tasks.html.dest),
+}
+
+var htmlTask = function() {
+
+  return gulp.src(paths.src)
+    .pipe(hb({
+        helpers: 'src/hb-helpers/*.js',
+        partials: 'src/htdocs/**/*.hbs',
+        bustCache: true
+    }))
+    .on('error', handleErrors)
+    .pipe(gulpif(process.env.NODE_ENV == 'production', htmlmin(config.tasks.html.htmlmin)))
+    .pipe(changed(paths.dest)) // Ignore unchanged files
+    // .pipe(prettify({config: '.jsbeautifyrc'}))
+    .pipe(gulp.dest(paths.dest))
+    .pipe(browserSync.stream());
+}
+
+gulp.task('html', htmlTask);
+module.exports = htmlTask;
