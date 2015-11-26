@@ -1,5 +1,3 @@
-'use strict';
-
 var config  = require('../config');
 var ghPages = require('gulp-gh-pages');
 var gulp    = require('gulp');
