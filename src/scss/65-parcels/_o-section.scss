@@ -131,8 +131,22 @@
   background-position: top center;
 }
 
+.section-detail--outer {
+  border: 1px solid $white;
+  padding: 5px;
+  width: 50%;
+}
+
+.section-detail--outer:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
 .section--detail {
   background-color: $white;
+  padding: 5px 5px;
+  color: $primary-color;
 }
 
 .section--detail--center {
@@ -160,6 +174,10 @@
   left: 1em;
 }
 
+.section--detail-title {
+  @include font-size(24px, 24px);
+}
+
 // .section--pos__top {
 
 // }
@@ -175,3 +193,70 @@
 // .section--pos__midleft {
 
 // }
+//
+.left-box-arrow,
+.right-box-arrow {
+  background-color: $primary-color;
+}
+$arrow-size: 40px;
+@mixin bottom-box-arrow() {
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 40px);
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: solid $arrow-size $primary-color;
+  border-left: solid $arrow-size / 1.5 transparent;
+  border-right: solid $arrow-size / 1.5 transparent;
+  z-index: 4;
+}
+.left-box-arrow:before {
+  @include bottom-box-arrow();
+
+  @include mq($from: md) {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: -$arrow-size /2 ;
+    margin-left: -$arrow-size;
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: solid $arrow-size $primary-color;
+    border-bottom: solid $arrow-size / 1.5 transparent;
+    border-top: solid $arrow-size / 1.5 transparent;
+    z-index: 4;
+  }
+}
+
+.right-box-arrow:before {
+  @include bottom-box-arrow();
+
+  @include mq($from: md) {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: 100%;
+    right: 0;
+    margin-right: $arrow-size;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: solid $arrow-size $primary-color;
+    border-bottom: solid $arrow-size / 1.5 transparent;
+    border-top: solid $arrow-size / 1.5 transparent;
+    z-index: 4;
+  }
+}
+
+.section-detail--link {
+  @include center(x, abs);
+  bottom: 4em;
+  @include font-size(20px, 40px);
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    color: $white;
+  }
+}
