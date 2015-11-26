@@ -1,7 +1,8 @@
 (function() {
 
-  var miniBagControl = $('.js-minibag, .js-minibag--view ');
+  var miniBagControl = $('.js-minibag, .js-minibag--view');
   var miniBagClose = $('.o-minibag--close');
+  var miniBagAll = $('.o-minibag');
   var clickCatcher = '<div id="js-clickcatcher-minibag" class="js-clickcatcher"></div>';
   var miniBagActive = false;
 
@@ -14,7 +15,6 @@
   }
 
   function openMiniBag(scope) {
-    console.log('miniBagActive', miniBagActive);
     if (!miniBagActive) {
       $('html').addClass("body--modal-open");
       $(scope).parent().addClass("open");
@@ -23,18 +23,19 @@
     };
   }
 
-  $('body').on('click', '#js-clickcatcher-minibag', function() {
-    closeMiniBag(miniBagControl);
-  });
-
   miniBagControl.on('mouseover', function() {
-
-      openMiniBag(miniBagControl);
-
+    openMiniBag(miniBagControl);
   });
 
-  $('.o-minibag').on('mouseleave', function() {
-    if (miniBagActive === true) {
+
+
+  $('body').on('mouseover', '#js-clickcatcher-minibag', function() {
+    if(!window.isMobileOrTablet.matches) {
+      closeMiniBag(miniBagControl);
+    }
+  });
+  $('body').on('click', '#js-clickcatcher-minibag', function() {
+    if(window.isMobileOrTablet.matches) {
       closeMiniBag(miniBagControl);
     }
   });
@@ -42,6 +43,7 @@
   miniBagClose.on('click', function() {
     closeMiniBag(miniBagControl);
   });
+
 
 
   $(document).ready(function() {
