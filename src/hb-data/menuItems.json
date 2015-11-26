@@ -1,0 +1,340 @@
+[
+  {
+    "secTitle": "Home",
+    "seclink": "#"
+  },
+
+  {
+    "secTitle": "Christmas",
+    "seclink": "#",
+
+    "categories": [{
+      "catTitle": "Beanie vs Bobble",
+      "catLink": "#",
+      "collection": {
+        "Buy A Hat": "#",
+        "Beanie or Bobble?": "#",
+        "Alder Hey Children's Hospital Charity": "#",
+        "Alphabet Scarves Round Up": "#"
+      }
+    },
+
+    {
+      "catTitle": "Christmas at Home",
+      "catLink": "#",
+      "collection": {
+        "Shop All": "#",
+        "Shop TV Advert": "#",
+        "Christmas at Home": "#",
+        "Christmas Decorations": "#",
+        "Christmas Trees": "#",
+        "Christmas Cards &amp; Wrap": "#",
+        "Christmas Tableware": "#",
+        "Christmas Cooking &amp; Baking": "#",
+        "Christmas Home Accessories &amp; Cushions": "#",
+        "Christmas Bedroom": "#",
+        "Christmas Bathroom": "#"
+      }
+    },
+
+    {
+      "catTitle": "Christmas Gifts",
+      "catLink": "#",
+      "collection": {
+        "Shop All": "#",
+        "Christmas Gift Guide": "#",
+        "Womens Gifts": "#",
+        "Mens Gifts": "#",
+        "Girls Gifts": "#",
+        "Boys Gifts": "#",
+        "Baby's First Christmas": "#",
+        "Stocking Fillers &amp; Secret Santa": "#",
+        "Cards &amp; Wrap": "#",
+        "Top 10 Christmas Gifts": "#"
+      }
+    },
+
+    {
+      "catTitle": "Christmas Novelty &amp; Jumpers",
+      "catLink": "#",
+      "collection": {
+        "Christmas Jumpers": "#",
+        "Christmas Novelty": "#",
+        "Christmas Pyjamas": "#"
+      }
+    },
+
+    {
+      "catTitle": "Shop the Trends",
+      "catLink": "#",
+      "collection": {
+        "Christmas Trends": "#",
+        "Kids Grotto": "#",
+        "Heritage": "#",
+        "Frosted Rose": "#",
+        "Nordic": "#",
+        "Illusion": "#"
+      }
+    },
+
+    {
+      "catTitle": "Partywear",
+      "catLink": "#",
+      "collection": {
+        "Shop All": "#",
+        "Womens Partywear": "#",
+        "Mens Partywear": "#",
+        "Girls Partywear": "#",
+        "Boys Partywear": "#",
+        "Black Dresses": "#",
+        "Womens Heels": "#",
+        "Mens Party Shoes": "#",
+        "Kids Party Shoes": "#"
+      }
+    },
+
+    {
+      "catTitle": "Offers",
+      "catLink": "#",
+      "collection": {
+        "£5 Off Decorations": "#",
+        "3 for 2 Christmas": "#"
+      }
+    }]
+  },
+
+  {
+    "secTitle": "Womens",
+    "seclink": "#",
+
+    "categories": [
+      {
+        "catTitle": "New Arrivals",
+        "catLink": "#",
+        "collection": {
+          "Shop All": "#",
+          "New In Christmas Brochure": "#",
+          "New In Clothing": "#",
+          "New In Shoes": "#",
+          "New In Beanie vs Bobble": "#",
+          "New In Shop TV Advert": "#",
+          "New In Christmas Novelty": "#",
+          "New In Partywear": "#",
+          "New In Gift Shop": "#",
+          "New In Abbey Clancy": "#"
+        }
+      },
+
+      {
+        "catTitle": "Highlights",
+        "catLink": "#",
+        "collection": {
+          "Christmas Brochure": "#",
+          "Beanie vs Bobble": "#",
+          "Winter Warmers": "#",
+          "Christmas Jumpers": "#",
+          "Christmas Novelty": "#",
+          "Party &amp; Occasionwear": "#",
+          "Black Dresses": "#",
+          "Into the Wilderness": "#",
+          "Denim Shop": "#",
+          "As Seen in Press": "#",
+          "Made for Modern Families": "#"
+        }
+      },
+
+      {
+        "catTitle": "Clothing",
+        "catLink": "#",
+        "collection": {
+          "Shop All": "#",
+          "Blouses": "#",
+          "Coats &amp; Jackets": "#",
+          "Dresses": "#",
+          "Jeans &amp; Jeggings": "#",
+          "Knitwear &amp; Shawls": "#",
+          "Leggings": "#",
+          "Lingerie": "#",
+          "Nightwear": "#",
+          "Playsuits &amp; Jumpsuits": "#",
+          "Plus Size": "#",
+          "Sportswear": "#",
+          "Skirts": "#",
+          "Suits &amp; Workwear": "#",
+          "Swim &amp; Beachwear": "#",
+          "Tops &amp; Blouses": "#",
+          "Trousers": "#"
+        }
+      },
+
+      {
+        "catTitle": "Shoes",
+        "catLink": "#",
+        "collection": {
+          "Shop All": "#",
+          "Ballet Shoes &amp; Flats": "#",
+          "Boots &amp; Wellies": "#",
+          "Heels": "#",
+          "Slippers": "#",
+          "SoleFlex": "#",
+          "Trainers &amp; Canvas": "#"
+        }
+      },
+
+      {
+        "catTitle": "Accessories",
+        "catLink": "#",
+        "collection": {
+          "Shop All": "#",
+          "Bags": "#",
+          "Hats &amp; Scarves": "#"
+        }
+      },
+
+      {
+        "catTitle": "Lingerie &amp; Nightwear",
+        "catLink": "#",
+        "collection": {
+          "Shop All Lingerie": "#",
+          "Bras": "#",
+          "Knickers": "#",
+          "Shapewear": "#",
+          "Socks &amp; Tights": "#",
+          "Nightwear": "#",
+          "3 For £7 Knickers": "#"
+        }
+      },
+
+      {
+        "catTitle": "Shop by Brand",
+        "catLink": "#",
+        "collection": {
+          "Abbey by Abbey Clancy - NEW": "#",
+          "Classic": "#",
+          "Falmer Heritage": "#",
+          "FWM by Fenn Wright Manson": "#",
+          "Julien Macdonald - NEW": "#",
+          "Rogers &amp; Rogers": "#",
+          "SoleFlex": "#",
+          "Soon": "#",
+          "Souluxe": "#"
+        }
+      },
+
+      {
+        "catTitle": "Offers",
+        "catLink": "#",
+        "collection": {
+          "All Offers": "#",
+          "£5 Off Coats": "#",
+          "£8 Jeans": "#",
+          "£18 Tote Bags": "#",
+          "Knitwear Offers": "#",
+          "Nightwear Offers": "#",
+          "3 for 2 Gifts": "#",
+          "3 For £7 Knickers": "#",
+          "£10 Off Adult Frozen Dresses": "#"
+        }
+      }
+    ]
+  },
+
+  {
+    "secTitle": "Mens",
+    "seclink": "#",
+    "categories": [{
+        "catTitle": "New Arrivals",
+        "catLink": "#",
+        "collection": {
+          "New In Christmas Brochure": "#",
+          "New In Beanie vs Bobble": "#",
+          "New In Shop TV Advert": "#"
+        }
+      },
+
+      {
+        "catTitle": "Highlights",
+        "catLink": "#",
+        "collection": {
+          "Christmas Brochure": "#",
+          "Christmas Jumpers": "#",
+          "Beanie vs Bobble": "#",
+          "Made For Modern Families": "#"
+        }
+      },
+
+      {
+        "catTitle": "Suits Shop",
+        "catLink": "#",
+        "collection": {
+          "Suits": "#",
+          "Suit Fit Guide": "#",
+          "Party &amp; Occasionwear": "#",
+          "Formal Shoes": "#"
+        }
+      },
+
+      {
+        "catTitle": "Clothing",
+        "catLink": "#",
+        "collection": {
+          "Shop All": "#",
+          "Coats, Jackets &amp; Blazers": "#",
+          "Jeans": "#",
+          "Knitwear": "#",
+          "Nightwear": "#",
+          "Shirts": "#",
+          "Socks": "#",
+          "Suits": "#",
+          "Tops": "#",
+          "Underwear": "#"
+        }
+      },
+
+      {
+        "catTitle": "Shoes",
+        "catLink": "#",
+        "collection": {
+          "Shop All": "#",
+          "New Arrivals": "#",
+          "Casual Shoes": "#",
+          "Boots &amp; Wellies": "#",
+          "Formal Shoes": "#",
+          "Slippers": "#"
+        }
+      },
+
+      {
+        "catTitle": "Accessories",
+        "catLink": "#",
+        "collection": {
+          "Shop All": "#"
+        }
+      },
+
+      {
+        "catTitle": "Shop by Brand",
+        "catLink": "#",
+        "collection": {
+          "Lincoln - NEW": "#",
+          "Morley": "#",
+          "Pringle": "#"
+        }
+      },
+
+      {
+        "catTitle": "Offers",
+        "catLink": "#",
+        "collection": {
+          "All Offers": "#",
+          "£5 Off Lambswool Knitwear": "#",
+          "2 for £12 Boxers": "#",
+          "2 for £15 Boxers": "#",
+          "2 for £15 Pyjama Bottoms": "#",
+          "Morley Outlet": "#"
+        }
+      }
+    ]
+  }
+
+]

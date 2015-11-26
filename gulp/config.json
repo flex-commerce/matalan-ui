@@ -45,6 +45,7 @@
       "src": "htdocs",
       "helpers": "hb-helpers",
       "partials": "htdocs",
+      "data": "hb-data",
       "extensions": ["hbs"]
     },
 
