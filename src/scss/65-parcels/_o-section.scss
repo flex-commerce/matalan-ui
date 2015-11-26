@@ -26,7 +26,7 @@
   content: "";
 }
 .section-department--title {
-  @include center(x,abs)
+  @include center(x,abs);
   background-color: $white;
   top: -18px;
   padding: 5px 40px;
@@ -38,7 +38,7 @@
 
 .section-department--link {
   border: 1px solid $cool-grey;
-  @include center(x,abs)
+  @include center(x,abs);
   background-color: $white;
   bottom: -18px;
   padding: 5px 40px;
@@ -131,20 +131,47 @@
   background-position: top center;
 }
 
+.section--detail {
+  background-color: $white;
+}
+
 .section--detail--center {
   @include center(xy,abs);
-  background-color: $white;
 }
 
 .section--detail--top {
   @include center(x,abs);
-  background-color: $white;
   top: 1em;
 }
 
 .section--detail--bottom {
   @include center(x,abs);
-  background-color: $white;
   bottom: 1em;
 }
 
+.section--detail--midright {
+  @include center(y,abs);
+  right: 1em;
+}
+
+
+.section--detail--midleft {
+  @include center(y,abs);
+  left: 1em;
+}
+
+// .section--pos__top {
+
+// }
+// .section--pos__bottom {
+//   @include absolute(bottom 1em);
+// }
+// .section--pos__center {
+
+// }
+// .section--pos__midright {
+
+// }
+// .section--pos__midleft {
+
+// }
