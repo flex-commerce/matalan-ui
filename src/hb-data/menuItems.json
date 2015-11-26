@@ -340,8 +340,7 @@
     "secTitle": "Girls",
     "seclink": "#",
 
-    "categories": [
-    {
+    "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
       "collection": {
@@ -470,8 +469,7 @@
     "secTitle": "Boys",
     "seclink": "#",
 
-    "categories": [
-    {
+    "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
       "collection": {

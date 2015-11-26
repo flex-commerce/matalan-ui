@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body>
+
+  <ul class="list--text auto-column-6" >
+    {{#each menuItems}}
+    <li style="outline: 1px solid #777">
+
+      <h3><a href="{{secLink}}">{{secTitle}}</a></h3>
+
+
+      {{#with collection}}
+      <ul class="list--text" style="outline: 1px solid #aaa">
+        {{#each this}}
+        <li><a href="{{this}}">{{{@key}}}</a></li>
+        {{/each}}
+      </ul>
+      {{/with}}
+
+
+      {{#with categories}} {{#each this}}
+        <h4><a href="{{catLink}}">{{catTitle}}</a></h4>
+        <ul class="list--text" style="outline: 1px solid #ddd">
+          {{#with collection}} {{#each this}}
+          <li><a href="{{this}}">{{{@key}}}</a></li>
+          {{/each}} {{/with}}
+        </ul>
+      {{/each}} {{/with}}
+
+    </li>
+    {{/each}}
+  </ul>
+
+</body>
+
+</html>
