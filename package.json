@@ -32,6 +32,7 @@
     "babel-loader": "^5.3.2",
     "browser-sync": "^2.9.11",
     "compression": "^1.5.1",
+    "concurrent-transform": "^1.0.0",
     "del": "^2.0.2",
     "express": "^4.13.1",
     "extend-shallow": "^2.0.1",

@@ -1,14 +1,4 @@
-// 'use strict';
-
-// var gulp = require('gulp');
-
-// gulp.task('deploy:aws', [
-//     'clean:aws',
-//     'awspush'
-//   ]);
-
-
-// todo - check gh-pages
+'use strict';
 
 var config  = require('../config');
 var ghPages = require('gulp-gh-pages');
@@ -26,7 +16,7 @@ var settings = {
   }
 };
 
-var deployTask = function() {
+var ghDeployTask = function() {
   return gulp.src(settings.src)
     .pipe(ghPages(settings.ghPages))
     .on('end', function(){
@@ -34,5 +24,5 @@ var deployTask = function() {
     });
 };
 
-gulp.task('deploy', ['production'], deployTask);
-module.exports = deployTask;
+gulp.task('deploy:gh', ['production'], ghDeployTask);
+module.exports = ghDeployTask;
