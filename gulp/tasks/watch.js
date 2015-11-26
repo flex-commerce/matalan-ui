@@ -6,7 +6,7 @@ var path   = require('path');
 var watch  = require('gulp-watch');
 
 var watchTask = function() {
-  var watchableTasks = ['fonts', 'iconFont', 'images', 'svgSprite', 'html', 'css', 'favicon'];
+  var watchableTasks = ['fonts', 'iconFont', 'images', 'svgSprite', 'html', 'css'];
 
   watchableTasks.forEach(function(taskName) {
     var task = config.tasks[taskName];
@@ -17,14 +17,6 @@ var watchTask = function() {
       });
     }
   });
-
-  // var hbs = config.tasks.hbs;
-  // var hbsGlob = path.join(config.app.src, hbs.src, '**/*.{' + hbs.extensions.join(',') + '}');
-  // watch(hbsGlob, function() {
-  //   console.log(hbsGlob);
-  //  require('./html')();
-  // });
-
 };
 
 gulp.task('watch', ['browserSync'], watchTask);

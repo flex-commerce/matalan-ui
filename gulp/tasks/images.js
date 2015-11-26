@@ -1,20 +1,5 @@
 'use strict';
 
-// var gulp         = require('gulp'),
-//     config       = require('../config').img,
-//     browserSync  = require('browser-sync');
-
-// gulp.task('images', function() {
-
-//   gulp
-//     .src(config.src)
-//     .pipe(gulp.dest(config.dest))
-//     .pipe(browserSync.reload({stream:true}));
-
-// });
-
-// todo - check this doesnt break svg
-
 var config      = require('../config');
 if(!config.tasks.images) return;
 

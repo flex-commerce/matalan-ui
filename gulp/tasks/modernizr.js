@@ -4,8 +4,8 @@ var config      = require('../config');
 // if(!config.tasks.modernizr) return
 
 var gulp        = require('gulp');
-var modernizr = require('gulp-modernizr');
-var uglify = require('gulp-uglify');
+var modernizr   = require('gulp-modernizr');
+var uglify      = require('gulp-uglify');
 var path        = require('path');
 
 var modernizrSettings = {
