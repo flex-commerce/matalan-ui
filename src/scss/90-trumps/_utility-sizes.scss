@@ -36,72 +36,86 @@ Sizing Sizes Legend
 */
 
 @each $key, $val in $sizing-sizes {
-
+  %u-pad-#{$key},
   .u-pad-#{$key} {
     padding: halve($val) $val;
   }
 
+  %u-pad-v-#{$key},
   .u-pad-v-#{$key} {
     padding-top: halve($val);
     padding-bottom: halve($val);
   }
 
+  %u-pad-h-#{$key},
   .u-pad-h-#{$key} {
     padding-left: $val;
     padding-right: $val;
   }
 
+  %u-pad-t-#{$key},
   .u-pad-t-#{$key} {
     padding-top: halve($val);
   }
 
+  %u-pad-b-#{$key},
   .u-pad-b-#{$key} {
     padding-bottom: halve($val);
   }
 
+  %u-pad-r-#{$key},
   .u-pad-r-#{$key} {
     padding-right: $val;
   }
 
+  %u-pad-l-#{$key},
   .u-pad-l-#{$key} {
     padding-left: $val;
   }
 
+  %u-mar-#{$key},
   .u-mar-#{$key} {
     margin: halve($val) $val;
   }
-
+  %u-mar-v-#{$key},
   .u-mar-v-#{$key} {
     margin-top: halve($val);
     margin-bottom: halve($val);
   }
 
+  %u-mar-h-#{$key},
   .u-mar-h-#{$key} {
     margin-left: $val;
     margin-right: $val;
   }
 
+  %u-mar-t-#{$key},
   .u-mar-t-#{$key} {
     margin-top: halve($val);
   }
 
+  %u-mar-b-#{$key},
   .u-mar-b-#{$key} {
     margin-bottom: halve($val);
   }
 
+  %u-mar-r-#{$key},
   .u-mar-r-#{$key} {
     margin-right: $val;
   }
 
+  %u-mar-l-#{$key},
   .u-mar-l-#{$key} {
     margin-left: $val;
   }
 }
 
+%u-pad-0,
 .u-pad-0 {
   padding: 0 !important;
 }
 
+%u-mar-0,
 .u-mar-0 {
   margin: 0 !important;
 }

@@ -50,6 +50,12 @@
     border-color: transparent;
     text-transform: uppercase;
   }
+
+  .u-mar-t-huge {
+    @include mq($until: lg) {
+      margin-top: 0.8em;
+    }
+  }
 }
 
 .o-header--brand {
@@ -65,7 +71,11 @@
 
   img {
     margin-top: 25px;
-    @include mq($from: md) {
+    @include mq($from: md, $until: lg) {
+      margin-top: 1em;
+      margin-bottom:0.5em;
+    }
+    @include mq($from: lg) {
       margin-top: 20px;
     }
   }
