@@ -12,6 +12,7 @@ $minibag-desktop-width: 364px; // magic
     .o-minibag--inner {
       flex-grow: 1;
       overflow-y: scroll;
+      will-change: transform;
     }
   }
 }
