@@ -24,15 +24,22 @@
   }
 
   miniBagControl.on('mouseover', function() {
-    openMiniBag(miniBagControl);
+    if(!window.isMobileOrTablet.matches) {
+      openMiniBag(miniBagControl);
+    }
   });
-
+  miniBagControl.on('click', function() {
+    if(window.isMobileOrTablet.matches) {
+      openMiniBag(miniBagControl);
+    }
+  });
 
 
   $('body').on('mouseover', '#js-clickcatcher-minibag', function() {
     if(!window.isMobileOrTablet.matches) {
       closeMiniBag(miniBagControl);
     }
+
   });
   $('body').on('click', '#js-clickcatcher-minibag', function() {
     if(window.isMobileOrTablet.matches) {
