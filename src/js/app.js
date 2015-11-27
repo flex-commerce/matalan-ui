@@ -28,32 +28,49 @@ require("./modules/dropdown");
 // ===========================
 
 
+window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
 
+$(document).ready(function() {
+  $(window).on('resize', _.debounce(function() {
+    window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
+  }, 250));
+});
 
 // ===========================
 // Megamenu init
 // ===========================
-var accessibleMegaMenu = require("./modules/menu-accessible");
+function megamenuInit() {
+  var accessibleMegaMenu = require("./modules/menu-accessible");
+  var parentNavMenu = $('[data-app="accessible-navmenu"]');
 
-var parentNavMenu = $('[data-app="accessible-navmenu"]');
+  parentNavMenu.accessibleMegaMenu({
+    /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
+    uuidPrefix: "accessible-menu",
+    menuClass: "c-navbar",
+    topNavItemClass: "navbar--top-item",
+    panelClass: "sub-nav",
+    panelGroupClass: "sub-nav-group",
+    hoverClass: "hover",
+    focusClass: "focus",
+    openClass: "open"
+  });
+}
 
-parentNavMenu.accessibleMegaMenu({
-  /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
-  uuidPrefix: "accessible-menu",
-  menuClass: "c-navbar",
-  topNavItemClass: "navbar--top-item",
-  panelClass: "sub-nav",
-  panelGroupClass: "sub-nav-group",
-  hoverClass: "hover",
-  focusClass: "focus",
-  openClass: "open"
-});
+console.log('mm', window.isMobileOrTablet.matches);
+
+if (!window.isMobileOrTablet.matches) {
+  megamenuInit();
+}
+
+
 // ===========================
 // Megamenu end
 // ===========================
 
 
-
+if (window.isMobileOrTablet.matches) {
+  require("./modules/off-canvas");
+}
 
 // ===========================
 // SelectBox init
@@ -133,7 +150,6 @@ $('.o-section-department--slick').slick({
 
 
 // Self Initialising...
-require("./modules/off-canvas");
 require("./modules/minibag");
 require("./modules/filters");
 require("./modules/scroll-lock");
@@ -185,7 +201,6 @@ require("./modules/scroll-lock");
 
 
 (function() {
-  var isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
 
   // filter collapse / expand
   var toggleFilterCollapse = function(target) {
@@ -197,7 +212,7 @@ require("./modules/scroll-lock");
     toggleFilterCollapse($(this));
   });
   // console.log(isMobileOrTablet);
-  if (!isMobileOrTablet.matches) {
+  if (!window.isMobileOrTablet.matches) {
     toggleFilterCollapse('.filter--title');
   }
 })();

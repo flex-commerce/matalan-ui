@@ -45,17 +45,22 @@
   }
 }
 
+
+
 @include mq($from: lg) {
-  .c-navbar {
-    @include border-tb-default(1px);
-    @include justify-parent;
-  }
   .navbar--header,
   .navbar--footer {
     display: none;
   }
+  .c-navbar {
+    @include border-tb-default(1px);
+    // @include justify-parent;
+  }
   .navbar--top-item {
-    @include justified-child;
+    // @include justified-child;
+    display: inline-block;
+    color: $base-text-color;
+    text-decoration: none;
     > .link {
       display: inline-block;
       padding: 1.25em 0.5em;
@@ -64,9 +69,6 @@
         border-bottom: 2px solid $primary-color;
       }
     }
-    // display: inline-block;
-    // color: $base-text-color;
-    // text-decoration: none;
   }
 }
 
@@ -103,6 +105,8 @@
 @include mq($until: lg) {
   .sub-nav-group {
     width: auto;
+    .sub-nav-item {
+    }
     .sub-nav-title > .link {
       padding-left: 1.5em;
     }

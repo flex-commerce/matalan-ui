@@ -1,6 +1,5 @@
 <div class="row">
   <div class="col-xs-12">
-
     <nav class="c-navbar-container" data-app="accessible-navmenu">
       <ul class="accessible-navmenu c-navbar">
 
@@ -19,9 +18,12 @@
           </a>
         </li>
 
+
+        {{#each menuItems}}
+
         <li class="navbar--top-item">
-          <a class="link" href="#">
-            section 0
+          <a class="link" href="{{secLink}}">
+            {{secTitle}}
             <span class="nav-menu-icons u-fr">
               <span><i class="icon icon-minus"></i></span>
               <span><i class="icon icon-plus"></i></span>
@@ -30,85 +32,51 @@
           </a>
           <div class="sub-nav">
             <div class="sub-nav--group--container">
-              {{# times 6}}
+
+              {{#with categories}} {{#each this}}
               <ul class="sub-nav-group">
-                {{# times 2}}
                 <li class="sub-nav-title">
                   <a class="link" href="">
-                    Category {{this}}
+                    {{catTitle}}
                     <span class="nav-menu-icons u-fr">
                       <span><i class="icon icon-minus"></i></span>
                       <span><i class="icon icon-plus"></i></span>
                       <span><i class="icon icon-arr-forward"></i></span>
                     </span>
                   </a>
-                  {{# timesrand 2 6}}
+                  </li>
+                  {{#with collection}} {{#each this}}
                   <li class="sub-nav-item">
-                    <a class="link" href="">
-                      Collection {{this}}
+                    <a class="link" href="{{this}}">
+                      {{{@key}}}
                       <span class="nav-menu-icons u-fr">
                         <span><i class="icon icon-arr-forward"></i></span>
                       </span>
                     </a>
                   </li>
-                  {{/ timesrand }}
+                  {{/each}} {{/with}}
                 </li>
-                {{/ times }}
               </ul>
-              {{/ times }}
-              <ul class="sub-nav-group sub-nav-group__image">
-                <li><img src="http://placehold.it/150x350"></li>
-              </ul>
-            </div>
-          </div>
-        </li>
+              {{/each}} {{/with}}
 
-
-        {{# times 10}}
-        <li class="navbar--top-item">
-          <a class="link" href="#">
-            section {{this}}
-            <span class="nav-menu-icons u-fr">
-              <span><i class="icon icon-minus"></i></span>
-              <span><i class="icon icon-plus"></i></span>
-              <span><i class="icon icon-arr-forward"></i></span>
-            </span>
-          </a>
-          <div class="sub-nav">
-            <div class="sub-nav--group--container">
-              {{# times 6}}
+              {{#with collection}}
               <ul class="sub-nav-group">
-                {{# times 2}}
-                <li class="sub-nav-title">
-                  <a class="link" href="">
-                    Category
-                    <span class="nav-menu-icons u-fr">
-                      <span><i class="icon icon-minus"></i></span>
-                      <span><i class="icon icon-plus"></i></span>
-                      <span><i class="icon icon-arr-forward"></i></span>
-                    </span>
-                  </a>
-                  {{# timesrand 2 6}}
-                  <li class="sub-nav-item">
-                    <a class="link" href="">
-                    Collection
-                    <span class="nav-menu-icons u-fr">
-                      <span><i class="icon icon-arr-forward"></i></span>
-                    </span>
-                    </a>
-                  </li>
-                  {{/ timesrand }}
-                  {{/ times }}
-                </li>
+                {{#each this}}
+                <li class="sub-nav-item"><a href="{{this}}">{{{@key}}}</a></li>
+                {{/each}}
               </ul>
-              {{/ times }}
-              <ul class="sub-nav-group sub-nav-group__image">
-                <li><img src="http://placehold.it/150x350"></li>
+              {{/with}}
+
+              <ul class="sub-nav-group__image">
+                <li><img src="img/quarter-{{ @index }}.jpg"></li>
               </ul>
+
             </div>
           </div>
         </li>
-        {{/ times }}
+        {{/each }}
+
+
 
         <li class="navbar--footer">
           <a class="link u-font-ta-c">

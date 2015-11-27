@@ -1,0 +1,10 @@
+{
+    "templateName": "globalglobal",
+    "foo": [
+      "foo",
+      "bar",
+      "baz"
+      ],
+    "global1": "root",
+    "global2": "root"
+}

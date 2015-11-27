@@ -1,3 +1,5 @@
+/* https://github.com/shannonmoeller/gulp-hb */
+
 /*jslint node: true */
 'use strict';
 
@@ -28,9 +30,11 @@ var htmlTask = function() {
   return gulp.src(paths.src)
     // .pipe(changed(paths.dest)) // Ignore unchanged files
     .pipe(hb({
-        helpers:  path.join(config.app.src, config.tasks.hbs.helpers, '/*.js'),
+        data: path.join(config.app.src, config.tasks.hbs.data, '/*.{js,json}'),
+        helpers: path.join(config.app.src, config.tasks.hbs.helpers, '/*.js'),
         partials: path.join(config.app.src, config.tasks.hbs.partials, '/**/*.hbs'),
-        bustCache: true
+        bustCache: true,
+        debug: true
     }))
     .on('error', handleErrors)
     .pipe(gulpif(process.env.NODE_ENV == 'production', htmlmin(config.tasks.html.htmlmin)))
