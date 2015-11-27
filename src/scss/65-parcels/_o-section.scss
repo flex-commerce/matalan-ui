@@ -1,5 +1,6 @@
 .o-section {
   @include column( (xs: 12));
+  margin: 5px 0;
 }
 
 .o-section-department--slick .slick-slide {
@@ -36,7 +37,7 @@
   }
 }
 
-.o-section-department--link {
+.o-section-department--link.o-section-department--link {
   border: 1px solid $cool-grey;
   @include center(x,abs);
   background-color: $white;
@@ -71,6 +72,8 @@
     max-height:130px;
   }
 }
+
+.o-section
 
 .o-section--item--full {
   min-height:465px;

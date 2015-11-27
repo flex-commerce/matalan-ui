@@ -48,7 +48,12 @@ p a {
   }
 }
 
+
+input[type="text"], input[type="submit"], input[type="password"], input[type="email"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
 input:focus {
-  @include tab-focus();
+  @include input-focus();
 }
 
