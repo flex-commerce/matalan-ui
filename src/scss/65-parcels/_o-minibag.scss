@@ -1,4 +1,6 @@
 $minibag-border-color: $keyline-color;
+$minibag-desktop-width: 364px; // magic
+
 
 // flexbox here to allow the inner panel to expand to max allowed size
 // flex start ======================================
@@ -6,9 +8,7 @@ $minibag-border-color: $keyline-color;
   .o-minibag {
     display: flex;
     flex-direction: column;
-    // form {
 
-    // }
     .o-minibag--inner {
       flex-grow: 1;
       overflow-y: scroll;
@@ -56,7 +56,7 @@ $minibag-border-color: $keyline-color;
   .o-minibag {
     border-color: blue;
     position: absolute;
-    width: 300px;
+    width: $minibag-desktop-width;
     right: 0;
   }
   .o-minibag--inner {
@@ -175,6 +175,11 @@ $minibag-border-color: $keyline-color;
   margin-top: 1em;
   span {
     font-size: 1.5em;
+  }
+  @include mq($until: lg) {
+    border: 1px dotted red;
+    display: inline-block;
+    // todo - bring buttons rules in here
   }
 }
 

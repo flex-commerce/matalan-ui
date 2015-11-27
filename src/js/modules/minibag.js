@@ -23,6 +23,23 @@
     };
   }
 
+
+
+// function delayWithClear(element, funcCall) {
+//   var timer;
+//   var delay = 1000;
+//   $('#element').hover(function() {
+//       timer = setTimeout(function() {
+//           funcCall;
+//       }, delay);
+//   }, function() {
+//       clearTimeout(timer);
+//   });
+// }
+
+
+
+
   miniBagControl.on('mouseover', function() {
     if(!window.isMobileOrTablet.matches) {
       openMiniBag(miniBagControl);

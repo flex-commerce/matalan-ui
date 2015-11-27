@@ -23,6 +23,8 @@
 
 .hero--detail-title {
     @include font-size(50px, 60px);
+    // kerning for large hero title
+    letter-spacing: -0.04em;
 }
 
 .hero--detail-sub {
