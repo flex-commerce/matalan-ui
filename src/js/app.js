@@ -205,6 +205,7 @@ require("./modules/scroll-lock");
   // filter collapse / expand
   var toggleFilterCollapse = function(target) {
     $(target).toggleClass('collapse');
+    console.log($(target));
     $(target).find('.icon').toggleClass("icon-plus icon-minus");
   };
 

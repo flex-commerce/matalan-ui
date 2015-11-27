@@ -13,13 +13,12 @@
 
       <div class="separator u-mar-0 hidden-lg-up"></div>
 
-      <div class="o-minibag--inner js-scroll-hold">
+      <div class="o-minibag--inner js-scroll-hold u-scrollbar">
         <a class="c-btn c-btn-secondary c-btn-block hidden-md-up u-mar-v-large">Checkout</a>
         <div class="u-cf u-mar-b-large hidden-lg-up">
           <p class="u-fl u-pad-v-medium u-mar-0">
             x Items in your bag
           </p>
-          <a class="c-btn c-btn-primary u-fr hidden-md-up">Edit</a>
         </div>
         <ul class="o-minibag--list-contain">
           {{# times 8 }}
@@ -42,21 +41,21 @@
                 <li class="list--item hidden-lg-up">Save: £XX.xx</li>
               </ul>
             </div>
-            <div class="o-minibag--list-item--control col-md-10 col-lg-3 hidden-lg-down">
-              <select class="o-minibag--control--select selectbox-dropdown__inline hidden-md-down">
+            <div class="o-minibag--list-item--control col-xs-4 col-md-5 col-lg-3">
+              <select class="o-minibag--control--select selectbox-dropdown__inline hidden-lg-down">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
               </select>
               <div class="o-minibag--control--remove">
-                <a class="u-font-no-underline hidden-lg-down" href="#">
+                <a class="u-font-no-underline" href="#">
                   <span>&times;</span> remove</a>
               </div>
             </div>
-            <div class="o-minibag--list-item--control col-md-4 col-lg-3 col-md-offset-6 hidden-md-down hidden-lg-up">
+            <div class="o-minibag--list-item--control col-xs-4 col-md-4 col-md-offset-1 col-lg-3  col-lg-offset-0 hidden-lg-up">
               <div class="o-form-input--contain__quantity">
                 <a class="c-btn c-btn-primary u-no-underline">-</a>
-                <input type="text" class="input--textual">
+                <input type="number" class="input--textual" value="1" readonly>
                 <a class="c-btn c-btn-primary u-no-underline">+</a>
               </div>
             </div>
