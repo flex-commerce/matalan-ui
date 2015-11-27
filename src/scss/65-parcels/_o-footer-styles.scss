@@ -31,7 +31,7 @@ $footer-bg-color: $light-grey-hover;
   width: 20%;
   float: left;
   height: 50px;
-  padding: 5px;
+  padding: 5px 0;
   //replace with class
   margin-top: 5px;
   img {
@@ -42,14 +42,7 @@ $footer-bg-color: $light-grey-hover;
 
 @include mq($from: md) {
   .o-footer--social {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    // div:first-child {
-    //    margin-top: -4px;
-    // }
-    // > div {
-    //   padding: 0;
-    // }
+    margin-top: 1.3em;
     i:before {
       color: $dark-grey-lighten-70;
     }
