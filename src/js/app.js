@@ -71,7 +71,7 @@ $('select').selectBox({
 
 var slick = require("./modules/slick");
 
-$('.section-department--slick').slick({
+$('.o-section-department--slick').slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,

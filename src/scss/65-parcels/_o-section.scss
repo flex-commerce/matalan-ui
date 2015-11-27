@@ -1,12 +1,12 @@
-.section {
+.o-section {
   @include column( (xs: 12));
 }
 
-.section-department--slick .slick-slide {
+.o-section-department--slick .slick-slide {
   min-height: 150px;
 }
 
-.section-department--outer {
+.o-section-department--outer {
   // border: 1px solid red;
   min-height: 150px;
   padding: 0.5em;
@@ -16,7 +16,7 @@
   }
 }
 
-.section-department--inner {
+.o-section-department--inner {
   border: 1px solid $cool-grey;
   position: absolute;
   top: 20px;
@@ -25,7 +25,7 @@
   right: 20px;
   content: "";
 }
-.section-department--title {
+.o-section-department--title {
   @include center(x,abs);
   background-color: $white;
   top: -18px;
@@ -36,7 +36,7 @@
   }
 }
 
-.section-department--link {
+.o-section-department--link {
   border: 1px solid $cool-grey;
   @include center(x,abs);
   background-color: $white;
@@ -47,7 +47,7 @@
   text-decoration: none;
 }
 
-.section-department--list {
+.o-section-department--list {
   width: 66%;
   padding: 10px;
   float: left;
@@ -58,7 +58,7 @@
   }
 }
 
-.section-department--image {
+.o-section-department--image {
   width: 33%;
   height: 100%;
   float: right;
@@ -72,127 +72,94 @@
   }
 }
 
-@include mq($from: xs) {
-  .section--item--full {
-    min-height:465px;
-  }
-
-  .section--item--half {
-    min-height:465px;
-  }
-
-  .section--item--third {
-    min-height:365px;
-  }
-
-  .section--item--quarter {
-    min-height:265px;
-  }
+.o-section--item--full {
+  min-height:465px;
 }
 
-@include mq($from: md) {
-  .section--item--full {
-    min-height:465px;
-  }
-
-  .section--item--half {
-    min-height:465px;
-  }
-
-  .section--item--third {
-    min-height:365px;
-  }
-
-  .section--item--quarter {
-    min-height:265px;
-  }
+.o-section--item--half {
+  min-height:465px;
 }
 
-@include mq($from: lg) {
-  .section--item--full {
-    min-height:465px;
-  }
-
-  .section--item--half {
-    min-height:465px;
-  }
-
-  .section--item--third {
-    min-height:365px;
-  }
-
-  .section--item--quarter {
-    min-height:265px;
-  }
+.o-section--item--third {
+  min-height:265px;
 }
 
-.section--bg {
+.o-section--item--quarter {
+  min-height:265px;
+}
+
+
+.o-section--bg {
   background-size: cover;
   background-position: top center;
 }
 
-.section-detail--outer {
+.o-section-detail--outer {
   padding: 5px;
-  width: 50%;
-  &__border {
-    border: 1px solid $white;
-  }
+  width: 70%;
 }
 
-.section-detail--outer:after {
+.o-section-detail--outer__border {
+  padding: 5px;
+  width: 50%;
+  border: 1px solid $white;
+}
+
+.o-section-detail--outer:after {
   content:"";
   display:table;
   clear:both;
 }
 
-.section--detail {
+.o-section--detail {
   background-color: $white;
   padding: 5px 5px;
   color: $primary-color;
 }
 
-.section--detail--center {
+.o-section--detail--center {
   @include center(xy,abs);
 }
 
-.section--detail--top {
+.o-section--detail--top {
   @include center(x,abs);
   top: 1em;
 }
 
-.section--detail--bottom {
+.o-section--detail--bottom {
   @include center(x,abs);
   bottom: 1em;
 }
 
-.section--detail--midright {
+.o-section--detail--midright {
   @include center(y,abs);
   right: 1em;
 }
 
 
-.section--detail--midleft {
+.o-section--detail--midleft {
   @include center(y,abs);
   left: 1em;
 }
 
-.section--detail-title {
-  @include font-size(24px, 24px);
+.o-section--detail-title {
+  @include font-size(22px, 24px);
+  color: $dark-grey;
 }
 
-// .section--pos__top {
+// .o-section--pos__top {
 
 // }
-// .section--pos__bottom {
+// .o-section--pos__bottom {
 //   @include absolute(bottom 1em);
 // }
-// .section--pos__center {
+// .o-section--pos__center {
 
 // }
-// .section--pos__midright {
+// .o-section--pos__midright {
 
 // }
-// .section--pos__midleft {
+// .o-section--pos__midleft {
 
 // }
 //
@@ -200,7 +167,7 @@
 .right-box-arrow {
   background-color: $primary-color;
 }
-.left-box-arrow:before {
+.left-box-arrow {
   @include arrow(bottom, center, $primary-color);
 
   @include mq($from: md) {
@@ -208,7 +175,7 @@
   }
 }
 
-.right-box-arrow:before {
+.right-box-arrow{
   @include arrow(bottom, center, $primary-color);
 
   @include mq($from: md) {
@@ -216,7 +183,7 @@
   }
 }
 
-.section-detail--link {
+.o-section--link {
   @include center(x, abs);
   bottom: 4em;
   @include font-size(20px, 40px);
@@ -227,4 +194,9 @@
   &:hover {
     color: $white;
   }
+}
+
+.o-section-detail--link {
+  text-decoration: underline;
+  padding: 1em;
 }
