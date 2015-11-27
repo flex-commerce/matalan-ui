@@ -41,7 +41,7 @@
   .o-form-row {
     padding: 0;
     @include mq($until: lg) {
-      margin:10px;
+      margin:10px 0;
     }
   }
   //custom button styles for the header icons
