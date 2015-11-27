@@ -28,7 +28,7 @@
       min-width: 25px;
       line-height: 1.2em;
       height: 20px;
-      top: 12px;
+      top: 2px;
       left: 12px;
       text-align: center;
       border: 2px solid #fff;
@@ -41,7 +41,7 @@
   .o-form-row {
     padding: 0;
     @include mq($until: lg) {
-      margin:10px;
+      margin:10px 0;
     }
   }
   //custom button styles for the header icons
@@ -49,6 +49,12 @@
   .c-btn {
     border-color: transparent;
     text-transform: uppercase;
+  }
+
+  .u-mar-t-huge {
+    @include mq($until: lg) {
+      margin-top: 0.8em;
+    }
   }
 }
 
@@ -65,7 +71,11 @@
 
   img {
     margin-top: 25px;
-    @include mq($from: md) {
+    @include mq($from: md, $until: lg) {
+      margin-top: 1em;
+      margin-bottom:0.5em;
+    }
+    @include mq($from: lg) {
       margin-top: 20px;
     }
   }

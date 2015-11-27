@@ -1,0 +1,65 @@
+.o-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--container {
+  position: relative;
+  @include make-container();
+  max-width: $container-maxwidth;
+  min-height: 465px;
+}
+
+.hero--bg {
+  background-size: cover;
+  background-position: top center;
+}
+
+.hero--detail--right {
+  @include center(y, abs);
+  right: 1em;
+  text-align: right;
+}
+
+.hero--detail-title {
+    @include font-size(50px, 60px);
+    // kerning for large hero title
+    letter-spacing: -0.04em;
+}
+
+.hero--detail-sub {
+  @include font-size(18px, 20px);
+}
+
+.hero--detail-btn-group {
+  .c-btn {
+    background-color: $white;
+    border-style: 1px solid;
+    border-color: $white;
+  }
+}
+
+.hero-ribbon{
+  width: 220px;
+  background: $white;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  color: $white;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.hero-ribbon.top-right{
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.hero-ribbon.red {
+  background: $primary-color;
+}

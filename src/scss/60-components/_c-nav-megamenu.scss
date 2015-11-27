@@ -6,11 +6,8 @@
 // styles for off canvas version - < 1024px
 @include mq($until: lg) {
   .c-navbar-container {
-    position: fixed;
-    top: 0;
-    bottom: 0;
+    @include fixed(top 0 bottom 0 left -85%);
     width: 85%;
-    left: -85%;
     z-index: 5;
     border-right: 1px solid #aaa;
     &.active {
@@ -47,25 +44,12 @@
     }
   }
 }
-
-
 /* mega menu list */
 
 .c-navbar {
   position: relative;
   // z-index: 15;
 }
-
-
-/* a top level navigation item in the mega menu */
-
-
-/* focus/open states of first descendant link within a top level navigation item */
-
-
-/* open state of first descendant link within a top level navigation item */
-
-
 
 /* sub-navigation panel */
 
@@ -74,9 +58,10 @@
     position: absolute;
   }
   display: none;
-  top: calc(100% + 2px);
   left: 0;
   right: 0;
+  // megamenu open nav border offset
+  top: calc(100% + 1px);
 }
 
 .sub-nav-group {
@@ -93,25 +78,6 @@
 
 
 /* list of items within sub-navigation panel */
-
-.sub-nav .sub-nav-group {
-  // @include mq($until: lg) {
-  //   display: block;
-  //   outline: 2px dotted red;
-  // }
-  // @include mq($from: lg) {
-  //   display: inline-block;
-  //   outline: 2px dotted green;
-  // }
-  // vertical-align: top;
-  // margin: 0 1em 0 0;
-  // padding: 0;
-}
-
-
-
-/* misc */
-
 
 
 // typography for the mega menu and off canvas menu
@@ -139,7 +105,6 @@
 
 
 @include mq($until: lg) {
-
   .navbar--top-item > .link,
   .sub-nav-title > .link,
   .sub-nav-item > .link {
@@ -149,69 +114,49 @@
   // off canvas icon management
   .link {
     position: relative;
-    overflow: hidden;
   }
 
   // default icon rules & display
   .nav-menu-icons {
-    i:before {
-      font-size: 21px;
-      line-height: 21px;
-      color: $primary-color;
+    .icon:before {
+      font-size: 1.5em;
+      line-height: 0;
+      color: $dark-grey-lighten-60;
+      vertical-align: middle;
     }
-    .icon-ui-minus {
+    .icon-minus {
       display: none;
     }
-    .icon-ui-arr-right {
+    .icon-arr-forward {
       display: none;
     }
   }
 
   // always show bottom level gt symbol
-  .sub-nav-item .icon-ui-arr-right {
+  .sub-nav-item .icon-arr-forward {
     display: initial;
   }
 
   // left inset icons display rules
   .navbar--top-item, .sub-nav-title{
     > .link.open {
-      .icon-ui-plus {
+      .icon-plus {
         display: none;
       }
-      .icon-ui-minus {
+      .icon-minus {
         display: initial;
       }
-      .icon-ui-arr-right {
+      .icon-arr-forward {
         display: initial;
       }
     }
   }
 
-  .sub-nav-item {
-
-    }
-
-
-  // .open > .nav-menu-icons {
-  //   .icon-ui-minus {
-  //     display: initial;
-  //     outline: 1px solid red;
-  //   }
-  //   .icon-ui-plus {
-  //     display: none;
-  //   }
-  //   .icon-ui-arr-right {
-  //     display: initial;
-  //   }
-  // }
-
-  .c-navbar-container  .icon-ui-minus {
+  .c-navbar-container  .icon-minus {
     margin-right: 2em;
     &:after {
       content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
+      @include absolute(top 0 bottom 0);
       width: 1px;
       background-color: $dark-grey-lighten-20;
       right: 3.5em;
@@ -243,12 +188,6 @@
 }
 
 
-@include mq($until: lg) {
-  .sub-nav-group__image {
-    display: none;
-  }
-}
-
 // element bleed mixin - @todo - investigate why this breaks when moved to mixin file
 @mixin bleed($bleedVal: 50vw) {
   margin-left: -$bleedVal;
@@ -260,25 +199,37 @@
 @include mq($from: lg) {
   .c-navbar {
     @include bleed(50vw);
+    @include justify-parent;
+  }
+  .navbar--top-item {
+    @include justified-child;
   }
   .sub-nav.open {
     @include bleed(50vw);
     padding-top: 1em;
     padding-bottom: 1em;
-    max-width: 100%;
     margin: 0 auto;
+    max-width: 100%;
     border-bottom: 1px solid $secondary-color;
+    // reset justify above
+    text-align: left;
   }
 }
 
 // header flex rules
 .sub-nav--group--container {
   @include mq($from: lg) {
-    display: flex;
+    position: relative;
+    // @TODO - this little ruleset will be used again...
+    column-count: 5;
+    column-gap: 1em;
     .sub-nav-group {
-      float: left;
-      flex: 1 0;
+       background: #f4f4f4; // todo - get rid
+       display: inline-block;
+       margin-bottom: 1em;
+       width: 100%;
     }
+    // end this little ruleset
   }
   @include mq($from: xl) {
     max-width: 1250px;
@@ -289,9 +240,22 @@
   margin: 0 auto;
 }
 
+
+@include mq($until: lg) {
+  .sub-nav-group__image {
+    display: none;
+  }
+}
 @include mq($from: lg) {
-  .sub-nav-group:not(:last-child) {
-    padding-right: 1em;
+  // rules for displaying the image within the menu
+  // TODO - check final dimensions for image, using min height px values for abs image
+  .sub-nav-group__image {
+    width: 170px;
+    @include absolute(top 0 right 0);
+  }
+  .sub-nav--group--container {
+    padding-right: 185px;
+    min-height: 300px;
   }
 }
 

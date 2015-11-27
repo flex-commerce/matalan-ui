@@ -1,0 +1,18 @@
+<div class="o-section">
+  {{# times 6 }}
+  <div class="o-section--item o-section--item--third o-section--bg o-section--third-{{ this }} col-xs-6 col-md-4 u-font-ta-c">
+    <div class="o-section-detail--outer o-section--detail--center">
+      <div class="o-section--detail">
+        <div class="o-section--detail-title u-mar-v-medium">Childresn summer wear</div>
+        <a class="o-section-detail--link">{{ lorem }}</a>
+        <a class="o-section-detail--link">{{ lorem }}</a>
+      </div>
+    </div>
+  </div>
+  <style>
+    .o-section--third-{{ this }} {
+        background-image: url("img/third-{{ this }}.jpg");
+    }
+  </style>
+  {{/ times }}
+</div>

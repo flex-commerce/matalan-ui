@@ -1,0 +1,12 @@
+<div class="o-section">
+  {{# times 8 }}
+  <div class="o-section--item o-section--item--quarter o-section--bg o-section--quarter-{{ this }} col-xs-12 col-sm-6 col-md-3 u-font-ta-c">
+
+  </div>
+  <style>
+    .o-section--quarter-{{ this }} {
+        background-image: url("img/quarter-{{ this }}.jpg");
+    }
+  </style>
+  {{/ times }}
+</div>

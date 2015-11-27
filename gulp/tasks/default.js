@@ -1,14 +1,13 @@
 'use strict';
 
-var gulp = require('gulp');
+var gulp            = require('gulp');
+var gulpSequence    = require('gulp-sequence');
+var getEnabledTasks = require('../util/getEnabledTasks');
 
-gulp.task('default', [
-  // 'clean',
-  'sass',
-  'markup',
-  'js',
-  'fonts',
-  'images',
-  'watch',
-  'browserSync'
-  ]);
+var defaultTask = function(cb) {
+  var tasks = getEnabledTasks('watch');
+  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'modernizr', 'watch', cb);
+}
+
+gulp.task('default', defaultTask);
+module.exports = defaultTask;

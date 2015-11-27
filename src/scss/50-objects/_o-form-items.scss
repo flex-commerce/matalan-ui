@@ -26,6 +26,7 @@ textarea {
 .o-form-input--contain__quantity {
   input {
     max-width: 90px;
+    text-align: center;
     // @TODO - vertical below should be 7px - find out why its 6px - border-box maybe?
     padding: 6px 14px;
   }

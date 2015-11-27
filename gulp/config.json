@@ -1,0 +1,83 @@
+{
+  "app": {
+    "src": "./src",
+    "dest": "./dist"
+  },
+
+  "tasks": {
+
+    "browserSync": {
+      "server": {
+        "baseDir": "dist"
+      }
+    },
+
+    "js": {
+      "src": "js",
+      "dest": "js",
+      "extractSharedJs": false,
+      "entries": {
+        "app": ["./app.js"]
+      },
+      "extensions": ["js"]
+    },
+
+    "css": {
+      "src": "scss",
+      "dest": "css",
+      "sass": {
+        "indentedSyntax": false
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "html": {
+      "src": "htdocs",
+      "dest": "./",
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["html", "hbs"],
+      "excludeFolders": ["parcels", "partials"]
+    },
+
+    "hbs": {
+      "src": "htdocs",
+      "helpers": "hb-helpers",
+      "partials": "htdocs",
+      "data": "hb-data",
+      "extensions": ["hbs"]
+    },
+
+    "images": {
+      "src": "img",
+      "dest": "img",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "favicon": {
+      "src": "favicon",
+      "dest": "./",
+      "extensions": ["ico"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "iconFont": {
+      "src": "icons",
+      "dest": "fonts",
+      "sassDest": "generated",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "svgSprite": {
+      "src": "sprites",
+      "dest": "images",
+      "extensions": ["svg"]
+    }
+  }
+}

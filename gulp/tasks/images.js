@@ -1,15 +1,26 @@
 'use strict';
 
-var gulp         = require('gulp'),
-    config       = require('../config').img,
-    browserSync  = require('browser-sync');
+var config      = require('../config');
+if(!config.tasks.images) return;
 
-gulp.task('images', function() {
+var browserSync = require('browser-sync');
+var changed     = require('gulp-changed');
+var gulp        = require('gulp');
+var imagemin    = require('gulp-imagemin');
+var path        = require('path');
 
-  gulp
-    .src(config.src)
-    .pipe(gulp.dest(config.dest))
-    .pipe(browserSync.reload({stream:true}));
+var paths = {
+  src: path.join(config.app.src, config.tasks.images.src, '/**'),
+  dest: path.join(config.app.dest, config.tasks.images.dest)
+};
 
-});
+var imagesTask = function() {
+  return gulp.src(paths.src)
+    .pipe(changed(paths.dest)) // Ignore unchanged files
+    .pipe(imagemin()) // Optimize
+    .pipe(gulp.dest(paths.dest))
+    .pipe(browserSync.stream());
+};
 
+gulp.task('images', imagesTask);
+module.exports = imagesTask;

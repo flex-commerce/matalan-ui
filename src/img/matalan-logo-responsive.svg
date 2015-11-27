@@ -6,7 +6,7 @@
     #sub {
       display: none
     }
-    @media (min-width: 155px) {
+    @media (min-width: 145px) {
       #sub {
         display: block
       }
