@@ -1,130 +1,251 @@
 /*------------------------------------*\
     $ARROWS
 \*------------------------------------*/
+/**
+ * It is a common design treatment to give an element a triangular points-out
+ * arrow, we typically build these with CSS. These following classes allow us to
+ * generate these arbitrarily with a mixin, `@arrow()`.
+ */
 
-$color-primary: red;
-$color-secondary: #BADA55;
+$arrow-size:            40px;
+$arrow-border:          1px !default;
+$border:                $arrow-size;
+$arrow:                 $arrow-size - $arrow-border;
 
-@mixin arrow($edge, $location, $color, $size: 20px, $offset: 0) {
+/**
+ * Forms the basis for any/all CSS arrows.
+ */
+%arrow{
+    position:relative;
 
-  @if ($offset != 0) {
-    $offset: $offset;
-  }
-
-  @if ($size == 'small') {
-    $size: 10px;
-  } @elseif ($size == 'medium') {
-    $size: 15px;
-  } @elseif ($size == 'large') {
-    $size: 20px;
-  } @else {
-    $size: $size;
-  }
-
-  position: relative;
-
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width:  0;
-    height: 0;
-    border: $size solid transparent;
-
-    @if ($edge == 'top') {
-      bottom: 100%;
-      border-bottom-color: $color;
-
-      @if ($location == 'left') {
-        left: $offset;
-      }
-
-      @if ($location == 'middle') {
-        left: 50%;
-        margin-left: -$size;
-      }
-
-      @if ($location == 'right') {
-        right: $offset;
-      }
-
+    &:before,
+    &:after{
+        content:"";
+        position:absolute;
+        border-collapse:separate;
     }
-
-    @if ($edge == 'right') {
-      left: 100%;
-      border-left-color: $color;
-
-      @if ($location == 'top') {
-        top: $offset;
-      }
-
-      @if ($location == 'middle') {
-        top: 50%;
-        margin-top: -$size;
-      }
-
-      @if ($location == 'bottom') {
-        bottom: $offset;
-      }
-
+    &:before{
+        border:$border solid transparent;
     }
-
-    @if ($edge == 'bottom') {
-      top: 100%;
-      border-top-color: $color;
-
-      @if ($location == 'left') {
-        left: $offset;
-      }
-
-      @if ($location == 'middle') {
-        left: 50%;
-        margin-left: -$size;
-      }
-
-      @if ($location == 'right') {
-        right: $offset;
-      }
-
+    &:after{
+        border:$arrow solid transparent;
     }
-
-    @if ($edge == 'left') {
-      right: 100%;
-      border-right-color: $color;
-
-      @if ($location == 'top') {
-        top: $offset;
-      }
-
-      @if ($location == 'middle') {
-        top: 50%;
-        margin-top: -$size;
-      }
-
-      @if ($location == 'bottom') {
-        bottom: $offset;
-      }
-
-    }
-
-  }
-
-}
-
-html {
-  padding: 1.5em;
 }
 
 
-.foo {
-  padding: 1em;
-  background-color: $color-primary;
-  @include arrow(left, middle, $color-primary, small, 10px);
+/**
+ * Define individual edges so we can combine what we need, when we need.
+ */
+%arrow--top{
+    @extend %arrow;
+
+    &:before,
+    &:after{
+        bottom:100%;
+    }
 }
 
+%arrow--upper{
+    @extend %arrow;
 
-.bar {
-  padding: 1em;
-  background-color: $color-secondary;
-  @include arrow(top, right, $color-secondary, small, 10px);
+    &:before{
+        top:$arrow;
+    }
+    &:after{
+        top:$border;
+    }
+}
+
+%arrow--middle{
+    @extend %arrow;
+
+    &:before,
+    &:after{
+        top:50%;
+        margin-top:-$border;
+    }
+    &:after{
+        margin-top:-$arrow;
+    }
+}
+
+%arrow--lower{
+    @extend %arrow;
+
+    &:before{
+        bottom:$arrow;
+    }
+    &:after{
+        bottom:$border;
+    }
+}
+
+%arrow--bottom{
+    @extend %arrow;
+
+    &:before,
+    &:after{
+        top:100%;
+    }
+}
+
+%arrow--near{
+    @extend %arrow;
+
+    &:before,
+    &:after{
+        right:100%;
+    }
+}
+
+%arrow--left{
+    @extend %arrow;
+
+    &:before{
+        left:$arrow;
+    }
+    &:after{
+        left:$border;
+    }
+}
+
+%arrow--center{
+    @extend %arrow;
+
+    &:before,
+    &:after{
+        left:50%;
+        margin-left:-$border;
+    }
+    &:after{
+        margin-left:-$arrow;
+    }
+}
+
+%arrow--right{
+    @extend %arrow;
+
+    &:before{
+        right:$arrow;
+    }
+    &:after{
+        right:$border;
+    }
+}
+
+%arrow--far{
+    @extend %arrow;
+
+    &:before,
+    &:after{
+        left:100%;
+    }
+}
+
+@mixin arrow($arrow-edge, $arrow-location, $arrow-color: $primary-color, $border-color: $arrow-color){
+
+    @if $arrow-edge == top{
+
+        @extend %arrow--top;
+
+        &:before{
+            border-bottom-color:$border-color!important;
+        }
+
+        &:after{
+            border-bottom-color:$arrow-color!important;
+        }
+
+        @if $arrow-location == left{
+            @extend %arrow--left;
+        }
+
+        @if $arrow-location == center{
+            @extend %arrow--center;
+        }
+
+        @if $arrow-location == right{
+            @extend %arrow--right;
+        }
+
+    }
+
+    @if $arrow-edge == right{
+
+        @extend %arrow--far;
+
+        &:before{
+            border-left-color:$border-color!important;
+        }
+
+        &:after{
+            border-left-color:$arrow-color!important;
+        }
+
+        @if $arrow-location == top{
+            @extend %arrow--upper;
+        }
+
+        @if $arrow-location == center{
+            @extend %arrow--middle;
+        }
+
+        @if $arrow-location == bottom{
+            @extend %arrow--lower;
+        }
+
+    }
+
+    @if $arrow-edge == bottom{
+
+        @extend %arrow--bottom;
+
+        &:before{
+            border-top-color:$border-color!important;
+        }
+
+        &:after{
+            border-top-color:$arrow-color!important;
+        }
+
+        @if $arrow-location == left{
+            @extend %arrow--left;
+        }
+
+        @if $arrow-location == center{
+            @extend %arrow--center;
+        }
+
+        @if $arrow-location == right{
+            @extend %arrow--right;
+        }
+
+    }
+
+    @if $arrow-edge == left{
+
+        @extend %arrow--near;
+
+        &:before{
+            border-right-color:$border-color!important;
+        }
+
+        &:after{
+            border-right-color:$arrow-color!important;
+        }
+
+        @if $arrow-location == top{
+            @extend %arrow--upper;
+        }
+
+        @if $arrow-location == center{
+            @extend %arrow--middle;
+        }
+
+        @if $arrow-location == bottom{
+            @extend %arrow--lower;
+        }
+
+    }
+
 }
