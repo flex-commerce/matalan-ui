@@ -166,23 +166,28 @@
 
 // }
 //
-.left-box-arrow,
-.right-box-arrow {
+
+.bottom-box-arrow\@sm,
+.left-box-arrow\@md,
+.right-box-arrow\@md {
   background-color: $primary-color;
 }
-.left-box-arrow {
-  @include arrow(bottom, center, $primary-color);
 
-  @include mq($from: md) {
-    @include arrow(left, center, $primary-color);
+.bottom-box-arrow\@sm {
+  @include mq($until: md) {
+    @include arrow(bottom, middle, $primary-color);
   }
 }
 
-.right-box-arrow{
-  @include arrow(bottom, center, $primary-color);
-
+.left-box-arrow\@md {
   @include mq($from: md) {
-    @include arrow(right, center, $primary-color);
+    @include arrow(left, middle, $primary-color);
+  }
+}
+
+.right-box-arrow\@md {
+  @include mq($from: md) {
+    @include arrow(right, middle, $primary-color);
   }
 }
 
