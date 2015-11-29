@@ -3,36 +3,43 @@
 
 // TODO - check this is needed - Ian/
 
-// disabled for demo of ui kit on 23/11/15
+$(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
 
-// $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
+    var $this = $(this),
+        scrollTop = this.scrollTop,
+        scrollHeight = this.scrollHeight,
+        height = $this.height(),
+        delta = (ev.type == 'DOMMouseScroll' ?
+            ev.originalEvent.detail * -40 :
+            ev.originalEvent.wheelDelta),
+        up = delta > 0,
+        activeBreak = $(this).data('scrollResponsive');
 
-//     var $this = $(this),
-//         scrollTop = this.scrollTop,
-//         scrollHeight = this.scrollHeight,
-//         height = $this.height(),
-//         delta = (ev.type == 'DOMMouseScroll' ?
-//             ev.originalEvent.detail * -40 :
-//             ev.originalEvent.wheelDelta),
-//         up = delta > 0;
+    var prevent = function() {
+        ev.stopPropagation();
+        ev.preventDefault();
+        ev.returnValue = false;
+        return false;
+    };
 
-//     var prevent = function() {
-//         ev.stopPropagation();
-//         ev.preventDefault();
-//         ev.returnValue = false;
-//         return false;
-//     };
+    if (
+      (window.matchMedia("(max-width: 720px)").matches && activeBreak == 'sm') ||
+      (window.matchMedia("(min-width: 0)").matches && activeBreak == 'sm+') ||
+      (window.matchMedia("(max-width: 1024px)").matches && activeBreak == 'sm-md') ||
+      (window.matchMedia("(min-width: 720px) and (max-width: 1024px)").matches && activeBreak == 'md') ||
+      (window.matchMedia("(min-width: 720px)").matches && activeBreak == 'md+') ||
+      (window.matchMedia("(min-width: 1025px)").matches && activeBreak == 'lg')
+      ) {
+      if (!up && -delta > scrollHeight - height - scrollTop) {
+          // Scrolling down, but this will take us past the bottom.
+          $this.scrollTop(scrollHeight);
+          return prevent();
+      } else if (up && delta > scrollTop) {
+          // Scrolling up, but this will take us past the top.
+          $this.scrollTop(0);
+          return prevent();
+      };
+    }
+});
 
-//     // if (window.matchMedia("(min-width: 1024px)").matches) {
-//       if (!up && -delta > scrollHeight - height - scrollTop) {
-//           // Scrolling down, but this will take us past the bottom.
-//           $this.scrollTop(scrollHeight);
-//           return prevent();
-//       } else if (up && delta > scrollTop) {
-//           // Scrolling up, but this will take us past the top.
-//           $this.scrollTop(0);
-//           return prevent();
-//       };
-//     // }
-// });
 

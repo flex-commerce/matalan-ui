@@ -1,6 +1,8 @@
 <div class="o-minibag-contain">
   <form action="" class="">
-    <div class="o-minibag">
+
+    <div data-scroll-responsive="sm" class="o-minibag js-scroll-hold u-scrollbar">
+
 
       <div class="o-minibag--header hidden-lg-up">
         <div class="u-cf">
@@ -10,10 +12,10 @@
           </a>
         </div>
       </div>
-
       <div class="separator u-mar-0 hidden-lg-up"></div>
 
-      <div class="o-minibag--inner js-scroll-hold u-scrollbar">
+
+      <div data-scroll-responsive="md+" class="o-minibag--inner js-scroll-hold u-scrollbar">
         <a class="c-btn c-btn-secondary c-btn-block hidden-md-up u-mar-v-large">Checkout</a>
         <div class="u-cf u-mar-b-large hidden-lg-up">
           <p class="u-fl u-pad-v-medium u-mar-0">
@@ -41,7 +43,7 @@
                 <li class="list--item hidden-lg-up">Save: £XX.xx</li>
               </ul>
             </div>
-            <div class="o-minibag--list-item--control col-xs-4 col-md-5 col-lg-3">
+            <div class="o-minibag--list-item--control col-xs-3 col-xs-offset-3 col-md-5 col-md-offset-0 col-lg-3">
               <select class="o-minibag--control--select selectbox-dropdown__inline hidden-lg-down">
                 <option>1</option>
                 <option>2</option>
@@ -52,7 +54,7 @@
                   <span>&times;</span> remove</a>
               </div>
             </div>
-            <div class="o-minibag--list-item--control col-xs-4 col-md-4 col-md-offset-1 col-lg-3  col-lg-offset-0 hidden-lg-up">
+            <div class="o-minibag--list-item--control o-minibag--list-item--quant col-xs-6 col-md-5 col-lg-3 hidden-lg-up">
               <div class="o-form-input--contain__quantity">
                 <a class="c-btn c-btn-primary u-no-underline">-</a>
                 <input type="number" class="input--textual" value="1" readonly>
@@ -64,9 +66,11 @@
         </ul>
       </div>
 
+
       <div class="o-minibag--footer">
         <ul class="o-minibag--action--contain">
           <li class="separator"></li>
+
           <li class="o-minibag--list o-minibag--list-total">
             <dl class="o-deflist-2col">
               <dt>Shipping</dt>
@@ -78,6 +82,7 @@
             </dl>
           </li>
           <li class="separator"></li>
+
           <li class="o-minibag--list o-minibag--list-checkout">
             <div class="callout-panel u-mar-b-large">
               <p>You are
@@ -97,13 +102,15 @@
                 <span>or</span>
               </div>
               <a class="c-btn c-btn-block c-btn-primary">
-                Checkout with
-                <img style="vertical-align: middle; height: 24px; margin-left: 0.5em;" src="img/card-paypal.svg">
-              </a>
+              Checkout with
+              <img style="vertical-align: middle; height: 24px; margin-left: 0.5em;" src="img/card-paypal.svg">
+            </a>
             </div>
           </li>
         </ul>
       </div>
+
+
     </div>
   </form>
 </div>

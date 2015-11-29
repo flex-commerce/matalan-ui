@@ -336,7 +336,7 @@
       case 'dropdown':
       // begin mobile viewport render modification
 
-        options = $('<ul class="selectbox-dropdown-menu js-scroll-hold selectbox-options" />');
+        options = $('<ul class="selectbox-dropdown-menu js-scroll-hold u-scrollbar selectbox-options" />');
         options = _getOptions(select, options);
 
         options
