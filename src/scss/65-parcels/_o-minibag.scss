@@ -12,6 +12,7 @@ $minibag-desktop-width: 364px; // magic
     .o-minibag--inner {
       flex-grow: 1;
       overflow-y: scroll;
+      will-change: transform;
     }
   }
 }
@@ -186,11 +187,11 @@ $minibag-desktop-width: 364px; // magic
 
 
 // header visibility overrides
-.o-header--container .o-minibag-contain {
+.o-header__container .o-minibag-contain {
   display: none;
 }
 
-.o-header--container .open > .o-minibag-contain {
+.o-header__container .open > .o-minibag-contain {
   display: block;
 }
 

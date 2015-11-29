@@ -185,6 +185,10 @@ code {
   }
 }
 
+/**
+ * 1. Force element onto the GPU so that it doesn’t repaint on scroll. Gives
+ *    much better scroll performance.
+ */
 .back-to-top {
   background-color: $primary-color;
   bottom: 2em;
@@ -192,6 +196,7 @@ code {
   opacity: 0.6;
   padding: 1.5em;
   position: fixed;
+  will-change: transform; /* [1] */
   right: 1.5em;
   text-decoration: none;
   &:hover {
@@ -208,3 +213,12 @@ pre {
   display: none;
 }
 
+/**
+ * Bugherd
+ *
+ * 1. Force element onto the GPU so that it doesn’t repaint on scroll. Gives
+ *    much better scroll performance.
+ */
+[id="_BH_frame"] {
+  will-change: transform; /* [1] */
+}

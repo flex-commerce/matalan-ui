@@ -1,7 +1,7 @@
 /* Initial css for header */
 
 // Global message container
-.o-super-header--container {
+.o-super-header__container {
   padding: 0.5em 0;
   background-color: $dark-grey-lighten-50;
   color: $white;
@@ -13,7 +13,7 @@
 
 // main header container coopnsisting of the logo, search bar, checkout
 // and bag buttons and off canvass menu button
-.o-header--container {
+.o-header__container {
   // border-bottom: 1px solid $dark-grey-lighten-10;
 
   .o-icon-with-addon {
@@ -58,7 +58,7 @@
   }
 }
 
-.o-header--brand {
+.o-header__brand {
   max-width: 130px;
 
   @include mq($from: md) {
@@ -82,7 +82,7 @@
 
 }
 
-.o-header--search {
+.o-header__search {
   text-align: right;
 
   a {

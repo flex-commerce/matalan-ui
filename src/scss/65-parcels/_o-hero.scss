@@ -3,35 +3,35 @@
   overflow: hidden;
 }
 
-.hero--container {
+.o-hero__container {
   position: relative;
   @include make-container();
   max-width: $container-maxwidth;
   min-height: 465px;
 }
 
-.hero--bg {
+.o-hero__bg {
   background-size: cover;
   background-position: top center;
 }
 
-.hero--detail--right {
+.o-hero__detail-right {
   @include center(y, abs);
   right: 1em;
   text-align: right;
 }
 
-.hero--detail-title {
+.o-hero__detail-title {
     @include font-size(50px, 60px);
     // kerning for large hero title
     letter-spacing: -0.04em;
 }
 
-.hero--detail-sub {
+.o-hero__detail-sub {
   @include font-size(18px, 20px);
 }
 
-.hero--detail-btn-group {
+.o-hero__detail-btn-group {
   .c-btn {
     background-color: $white;
     border-style: 1px solid;
@@ -39,7 +39,7 @@
   }
 }
 
-.hero-ribbon{
+.o-hero__ribbon{
   width: 220px;
   background: $white;
   position: absolute;
@@ -52,7 +52,7 @@
   -webkit-transform: rotate(-45deg);
 }
 
-.hero-ribbon.top-right{
+.o-hero__ribbon__top-right{
   top: 25px;
   right: -50px;
   left: auto;
@@ -60,6 +60,6 @@
   -webkit-transform: rotate(45deg);
 }
 
-.hero-ribbon.red {
+.o-hero__ribbon__red {
   background: $primary-color;
 }
