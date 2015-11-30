@@ -8,14 +8,15 @@
       </div>
       <div class="row">
         <div class="col-xs-12 col-md-5 col-lg-5 o-footer--subscribe">
-          <form class="form-inline c-search-form">
+          <form id="email-signup" name="email-signup" class="form-inline c-search-form">
             <div class="o-form-row">
-              <div class="o-form--input-group o-form-input--contain">
-                <input type="email" class="input--textual input-addon--expand" placeholder="Enter email address">
-                <a href="" class="input-group--addon unstyled c-search__button">Sign&nbsp;up</a>
+              <div class="o-form--input-group o-form-input--contain span-wide-12">
+                <input type="email" class="input--textual span-wide-8" placeholder="Enter email address" required>
+                <button type="submit" data-close="email-signup" class="span-wide-4 sign-up--button c-search__button u-fl">Sign&nbsp;up</button>
               </div>
             </div>
           </form>
+          <div class="c-alert c-alert-dismissible signup-success u-mar-t-large">You have been signed up to our newsletter</div>
         </div>
         <div class="col-xs-12 col-md-offset-1 col-md-6 col-lg-5">
           <div class="o-footer--social u-cf">

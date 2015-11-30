@@ -13,10 +13,10 @@ $footer-bg-color: $light-grey-hover;
     // @include font-size(14px);
     // font-weight: 600;
   }
-  .input-addon--expand:focus {
+  .input--textual:focus {
     + a,
     + button {
-      background-color: $dark-grey;
+      background: $dark-grey;
     }
   }
   // .input-group--addon__inset-left {

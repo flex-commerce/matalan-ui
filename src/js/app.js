@@ -150,7 +150,7 @@ $('.global-messages').slick({
 // Range Slider init
 // ===========================
 (function() {
-    if(  $("#filters--range").is(":visible") == true ) {
+  if(  $("#filters--range").length ) {
     var noUiSlider = require("./modules/nouislider");
 
     var slider = document.getElementById('filters--range');
