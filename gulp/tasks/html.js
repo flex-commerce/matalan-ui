@@ -33,8 +33,7 @@ var htmlTask = function() {
         data: path.join(config.app.src, config.tasks.hbs.data, '/*.{js,json}'),
         helpers: path.join(config.app.src, config.tasks.hbs.helpers, '/*.js'),
         partials: path.join(config.app.src, config.tasks.hbs.partials, '/**/*.hbs'),
-        bustCache: true,
-        debug: true
+        bustCache: true
     }))
     .on('error', handleErrors)
     .pipe(gulpif(process.env.NODE_ENV == 'production', htmlmin(config.tasks.html.htmlmin)))

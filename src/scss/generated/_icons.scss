@@ -590,4 +590,154 @@ $icon-user-male: '\EA25';
   content: $icon-user-male;
 }
 
+// Save variable
+$icon-bin: '\EA26';
+
+// Save mixin
+@mixin icon--bin {
+  @include icon($icon-bin) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-bin:before {
+  content: $icon-bin;
+}
+
+// Save variable
+$icon-c-card: '\EA27';
+
+// Save mixin
+@mixin icon--c-card {
+  @include icon($icon-c-card) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-c-card:before {
+  content: $icon-c-card;
+}
+
+// Save variable
+$icon-calendar: '\EA28';
+
+// Save mixin
+@mixin icon--calendar {
+  @include icon($icon-calendar) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-calendar:before {
+  content: $icon-calendar;
+}
+
+// Save variable
+$icon-info: '\EA29';
+
+// Save mixin
+@mixin icon--info {
+  @include icon($icon-info) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-info:before {
+  content: $icon-info;
+}
+
+// Save variable
+$icon-pencil: '\EA2A';
+
+// Save mixin
+@mixin icon--pencil {
+  @include icon($icon-pencil) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-pencil:before {
+  content: $icon-pencil;
+}
+
+// Save variable
+$icon-question: '\EA2B';
+
+// Save mixin
+@mixin icon--question {
+  @include icon($icon-question) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-question:before {
+  content: $icon-question;
+}
+
+// Save variable
+$icon-ui-tight-o: '\EA2C';
+
+// Save mixin
+@mixin icon--ui-tight-o {
+  @include icon($icon-ui-tight-o) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-ui-tight-o:before {
+  content: $icon-ui-tight-o;
+}
+
+// Save variable
+$icon-ui-tight: '\EA2D';
+
+// Save mixin
+@mixin icon--ui-tight {
+  @include icon($icon-ui-tight) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-ui-tight:before {
+  content: $icon-ui-tight;
+}
+
+// Save variable
+$icon-ui-wide-o: '\EA2E';
+
+// Save mixin
+@mixin icon--ui-wide-o {
+  @include icon($icon-ui-wide-o) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-ui-wide-o:before {
+  content: $icon-ui-wide-o;
+}
+
+// Save variable
+$icon-ui-wide: '\EA2F';
+
+// Save mixin
+@mixin icon--ui-wide {
+  @include icon($icon-ui-wide) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-ui-wide:before {
+  content: $icon-ui-wide;
+}
+
 

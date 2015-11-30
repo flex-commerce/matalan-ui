@@ -76,6 +76,31 @@
   }
 }
 
+/* Flexbox display of tiles where supported, allows bottom alignment of buttons */
+
+html.flexbox {
+  .search-results--inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .search-results--item {
+    display: flex;
+    flex-direction: column;
+    .results--detail {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .c-btn-primary__alt {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+
+/* Handling for tile width icons */
+
 .js-results-tight {
   margin-left: 1em;
 }
@@ -87,5 +112,33 @@
   }
   &.active i:before {
     color: $primary-color;
+  }
+}
+
+.js-results-tight {
+  .icon-ui-tight {
+    display: none;
+  }
+  &.active {
+    .icon-ui-tight-o {
+      display: none;
+    }
+    .icon-ui-tight {
+      display: initial;
+    }
+  }
+}
+
+.js-results-wide {
+  .icon-ui-wide {
+    display: none;
+  }
+  &.active {
+    .icon-ui-wide-o {
+      display: none;
+    }
+    .icon-ui-wide {
+      display: initial;
+    }
   }
 }

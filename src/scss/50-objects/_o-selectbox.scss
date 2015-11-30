@@ -94,7 +94,7 @@ select, .selectbox-dropdown {
 .selectbox-dropdown-menu {
   position: absolute;
   z-index: 99999;
-  max-height: 200px;
+  // max-height: 200px; // todo - revisit this for height if necc.
   min-height: 1em;
   border: solid 1px $selectbox-border-color;
   /* should be the same border width as .selectbox-dropdown */
