@@ -171,18 +171,18 @@
   background-color: $primary-color;
 }
 .left-box-arrow {
-  @include arrow(bottom, center, $primary-color);
+  @include arrow(bottom, middle, $primary-color);
 
   @include mq($from: md) {
-    @include arrow(left, center, $primary-color);
+    @include arrow(left, middle, $primary-color);
   }
 }
 
 .right-box-arrow{
-  @include arrow(bottom, center, $primary-color);
+  @include arrow(bottom, middle, $primary-color);
 
   @include mq($from: md) {
-    @include arrow(right, center, $primary-color);
+    @include arrow(right, middle, $primary-color);
   }
 }
 
