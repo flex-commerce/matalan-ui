@@ -20,7 +20,6 @@
 // and bag buttons and off canvass menu button
 .o-header__container {
   // border-bottom: 1px solid $dark-grey-lighten-10;
-
   .o-icon-with-addon {
     i:before {
       color: $dark-grey-lighten-60;
@@ -41,21 +40,14 @@
       font-size: 1em;
     }
   }
-
   //remove default padding on the search bar
   .o-form-row {
     padding: 0;
     @include mq($until: lg) {
-      margin:10px 0;
+      margin: 10px 0;
     }
   }
   //custom button styles for the header icons
-
-  .c-btn {
-    border-color: transparent;
-    text-transform: uppercase;
-  }
-
   .u-mar-t-huge {
     @include mq($until: lg) {
       margin-top: 0.8em;
@@ -65,31 +57,26 @@
 
 .o-header__brand {
   max-width: 130px;
-
   @include mq($from: md) {
     max-width: 155px;
   }
-
   @include mq($from: lg) {
     max-width: 250px;
   }
-
   img {
     margin-top: 25px;
     @include mq($from: md, $until: lg) {
       margin-top: 1em;
-      margin-bottom:0.5em;
+      margin-bottom: 0.5em;
     }
     @include mq($from: lg) {
       margin-top: 20px;
     }
   }
-
 }
 
 .o-header__search {
   text-align: right;
-
   a {
     color: $cool-grey;
     text-decoration: underline;
@@ -97,11 +84,9 @@
       text-decoration: none;
     }
   }
-
   i:before {
     color: $dark-grey-lighten-60;
   }
-
   .input-group--addon__inset-left:focus + a {
     background: $dark-grey;
   }
@@ -118,7 +103,6 @@
   //     border-color: $white;
   //   }
   // }
-
   i {
     // provides enough width for the icon and some margin
     // margin-right: 1em;
@@ -134,9 +118,8 @@
   span {
     margin-top: -.7em;
     color: $dark-grey-lighten-60;
-    display:block;
+    display: block;
     font-size: 0.8em;
-
   }
   @include mq($until: md) {
     text-align: left;
@@ -147,7 +130,6 @@
   margin-top: 10px;
   text-align: right;
   font-size: 11px;
-
   a {
     color: $dark-grey-lighten-60;
     text-decoration: none;
@@ -160,8 +142,7 @@
     padding: 5px 15px;
   }
   li + li {
-   border-left: 2px solid $dark-grey-lighten-10;
-
+    border-left: 2px solid $dark-grey-lighten-10;
   }
 }
 
@@ -169,14 +150,12 @@
   @include mq($until: lg) {
     display: none;
   }
-
   &.active {
     display: inline;
   }
 }
 
 //header utility classes
-
 //margin-top-20
 .header-mt-20 {
   margin-top: 20px;
@@ -209,4 +188,36 @@
   .margin-bottom-lg {
     margin-bottom: 20px;
   }
+}
+
+// ===================== nub
+.o-header__search {
+  outline: none !important;
+  position: relative;
+  // overflow: hidden;
+}
+.header--mobile-search.active {
+  outline: none !important;
+  .tempnub {
+    display: inline-block;
+  }
+}
+
+.tempnub {
+  // display: none;
+  background: #fff;
+  border-width: 1px;
+  border-color: $keyline-color;
+  border-style: solid none none solid;
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+
+
+  top: 93%;
+  z-index: 3;
 }

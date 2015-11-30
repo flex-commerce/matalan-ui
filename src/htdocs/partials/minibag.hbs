@@ -26,7 +26,7 @@
           {{# times 8 }}
           <li class="o-minibag--list o-minibag--list-item u-cf">
             <div class="o-minibag--list-item--image col-xs-3 col-md-2 col-lg-3 u-pad-0">
-              <img src="http://placehold.it/136x190">
+              <img class="img" src="img/placehold-224x320.png">
             </div>
             <div class="o-minibag--list-item--detail col-xs-9 col-md-10 col-lg-6 ">
               <p class="detail--description u-font-wb">{{this}} Product name to go here on a few lines for space</p>
@@ -43,6 +43,7 @@
                 <li class="list--item hidden-lg-up">Save: £XX.xx</li>
               </ul>
             </div>
+
             <div class="o-minibag--list-item--control col-xs-3 col-xs-offset-3 col-md-5 col-md-offset-0 col-lg-3">
               <select class="o-minibag--control--select selectbox-dropdown__inline hidden-lg-down">
                 <option>1</option>
@@ -50,8 +51,8 @@
                 <option>3</option>
               </select>
               <div class="o-minibag--control--remove">
-                <a class="u-font-no-underline" href="#">
-                  <span>&times;</span> remove</a>
+                <a class="link u-font-no-underline" href="#">
+                  <span class="hidden-lg-down">&times;</span> remove</a>
               </div>
             </div>
             <div class="o-minibag--list-item--control o-minibag--list-item--quant col-xs-6 col-md-5 col-lg-3 hidden-lg-up">
@@ -61,6 +62,7 @@
                 <a class="c-btn c-btn-primary u-no-underline">+</a>
               </div>
             </div>
+
           </li>
           {{/ times }}
         </ul>

@@ -125,10 +125,6 @@ $minibag-desktop-width: 364px; // magic
   padding-top: 1em;
 }
 
-// .o-minibag--header {
-//   border-bottom: 1px solid $minibag-border-color;
-// }
-
 // separator within the markup
 .o-minibag .separator {
   padding-top: 1em;
@@ -176,15 +172,30 @@ $minibag-desktop-width: 364px; // magic
 .o-minibag--control--remove {
   @include font-size(10px, 1.2);
   text-transform: uppercase;
-  color: $dark-grey-lighten-60;
-  margin-top: 1em;
   span {
     font-size: 1.5em;
   }
+
+  @include mq($until: md) {
+    padding-left: 15px;
+  }
   @include mq($until: lg) {
-    border: 1px dotted red;
-    display: inline-block;
-    // todo - bring buttons rules in here
+    // need to include these button styles raw, we can't extend into a media query
+    .link {
+      @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey);
+      @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
+      border: 1px solid;
+      display: inline-block;
+      &.hover,
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey-hover);
+      }
+    }
+  }
+  @include mq($from: lg) {
+     margin-top: 1em;
   }
 }
 
@@ -199,24 +210,6 @@ $minibag-desktop-width: 364px; // magic
   display: block;
 }
 
-// some dev rules for highlights
-// .o-minibag--list-item--image,
-// .o-minibag--list-item--detail,
-// .o-minibag--list-item--control {
-//   @include mq($until: md) {
-//     outline: 1px dotted green;
-//   }
-//   @include mq($from: md, $until: lg) {
-//     outline: 1px dotted red;
-//   }
-//   @include mq($from: lg) {
-//     outline: 1px dotted blue;
-//   }
-// }
-
-// some dev rules end
-
-// inline color swatch - todo - move this somehwre more reusable
 
 .color-swatch__inline {
   width: 1em;
