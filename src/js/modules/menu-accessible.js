@@ -158,9 +158,7 @@ limitations under the License.
     this.mouseFocused = false;
     this.justFocused = false;
 
-    // if (window.matchMedia("(min-width: 1024px)").matches) {
     this.init();
-    // }
 
   }
 
@@ -226,6 +224,7 @@ limitations under the License.
      * @inner
      * @private
      */
+
     _togglePanel = function(event, hide) {
       var target = $(event.target),
         that = this,

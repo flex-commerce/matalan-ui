@@ -176,8 +176,10 @@ $minibag-desktop-width: 364px; // magic
     font-size: 1.5em;
   }
 
-  @include mq($until: lg) {
+  @include mq($until: md) {
     padding-left: 15px;
+  }
+  @include mq($until: lg) {
     // need to include these button styles raw, we can't extend into a media query
     .link {
       @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey);
