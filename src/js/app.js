@@ -16,7 +16,13 @@ require("lodash");
 // Lodash testing end
 // ===========================
 
-
+// ===========================
+// Common JS functions
+// ===========================
+require("./modules/general");
+// ===========================
+// Common JS end
+// ===========================
 
 
 // ===========================
@@ -56,7 +62,7 @@ function megamenuInit() {
   });
 }
 
-console.log('mm', window.isMobileOrTablet.matches);
+//console.log('mm', window.isMobileOrTablet.matches);
 
 if (!window.isMobileOrTablet.matches) {
   megamenuInit();
@@ -86,7 +92,11 @@ $('select').selectBox({
 // ===========================
 
 
-var slick = require("./modules/slick");
+
+// ===========================
+// Slick Slider initialisation
+// ===========================
+var slick = require("./vendors/slick");
 
 $('.o-section-department--slick').slick({
   infinite: true,
@@ -97,9 +107,7 @@ $('.o-section-department--slick').slick({
       breakpoint: 1024,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        dots: true
+        slidesToScroll: 2
       }
     },
     {
@@ -115,6 +123,27 @@ $('.o-section-department--slick').slick({
     }
   ]
 });
+
+$('.global-messages').slick({
+  dots: true,
+  infinite: true,
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+
+});
+// ===========================
+// Slick Slider End
+// ===========================
 
 
 // ===========================
@@ -205,7 +234,7 @@ require("./modules/scroll-lock");
   // filter collapse / expand
   var toggleFilterCollapse = function(target) {
     $(target).toggleClass('collapse');
-    console.log($(target));
+    //console.log($(target));
     $(target).find('.icon').toggleClass("icon-plus icon-minus");
   };
 

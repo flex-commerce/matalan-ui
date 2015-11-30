@@ -9,6 +9,11 @@
   p {
     margin-bottom: 0;
   }
+
+  .close {
+    padding: 1px 12px;
+    @include font-size(24px, 24px);
+  }
 }
 
 // main header container coopnsisting of the logo, search bar, checkout
