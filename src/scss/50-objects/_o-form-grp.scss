@@ -52,7 +52,8 @@ $input-padding-y: $default-pad-y;
     text-align: center;
     // z-index keeps the addon icon visible on input focus
     z-index: 2;
-    a {
+    a,
+    button {
       color: $white;
     }
     &:not(.input-group--addon__inset) {
@@ -84,7 +85,7 @@ $input-padding-y: $default-pad-y;
     text-align: right;
   }
   .o-form-input--contain {
-    @include span(8);
+
   }
 }
 
@@ -132,4 +133,17 @@ $input-padding-y: $default-pad-y;
 .input-addon--expand:nth-child(2):nth-last-child(n+2):not(.input-group--addon__inset-left):not(.input-group--addon__inset-right) {
   border-right-style: none;
   border-left-style: none;
+}
+
+.sign-up-group {
+  @include clearfix();
+
+}
+
+.sign-up--button {
+  height: 100%;
+  border: 1px solid $cool-grey;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  @include form-item-size;
 }
