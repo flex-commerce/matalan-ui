@@ -8,20 +8,24 @@ $button-padding-y: $default-pad-y;
   cursor: pointer;
   text-align: center;
   @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
-
   &:active,
   &.active,
   &:focus,
   &.focus {
     @include tab-focus();
   }
-
   &.disabled,
   &:disabled,
   fieldset[disabled] & {
     opacity: .65;
   }
+}
 
+.c-btn.c-btn--small {
+  @include button-size(halve($button-padding-y), halve($button-padding-x), 0.825em, 1.8);
+}
+.c-btn.c-btn--tiny {
+  @include button-size(quarter($button-padding-y), quarter($button-padding-x), 0.7em, 1.8);
 }
 
 
@@ -44,6 +48,30 @@ $button-padding-y: $default-pad-y;
     @include secondary-style(hover);
   }
 }
+
+%c-btn-tertiary,
+.c-btn-tertiary {
+  background: #aaa;
+  @include style-variant($color: $white, $background: $dark-grey, $border: $dark-grey);
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include style-variant($color: $white, $background: $dark-grey-hover, $border: $dark-grey-hover);
+  }
+}
+
+%c-btn-tertiary--alt,
+.c-btn-tertiary--alt {
+  @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey);
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey-hover);
+  }
+}
+
 
 .c-btn.c-btn-primary__alt {
   @include style-variant($color: $dark-grey, $background: $secondary-color, $border: $secondary-color);

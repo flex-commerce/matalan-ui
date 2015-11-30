@@ -191,6 +191,7 @@ require("./modules/scroll-lock");
 (function() {
   // header - show mobile search input field
   $('.header--mobile-search').on('click', function() {
+    $(this).toggleClass('active');
     $('.header--search-bar').toggleClass('active');
   });
 })();
