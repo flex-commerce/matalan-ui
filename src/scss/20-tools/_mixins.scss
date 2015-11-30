@@ -11,7 +11,7 @@
 // document this
 @mixin tab-focus() {
   outline: thin dotted;
-  outline: 2px solid -webkit-focus-ring-color;
+  outline: 2px auto -webkit-focus-ring-color;
   outline-offset: -2px;
   // usability - raise the element with focus, prevents outline from being obscured
   z-index: 1;

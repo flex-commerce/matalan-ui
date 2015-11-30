@@ -56,7 +56,7 @@ function megamenuInit() {
   });
 }
 
-console.log('mm', window.isMobileOrTablet.matches);
+// console.log('mm', window.isMobileOrTablet.matches);
 
 if (!window.isMobileOrTablet.matches) {
   megamenuInit();
@@ -171,8 +171,12 @@ require("./modules/scroll-lock");
   $('.js-results-tight').on('click', function(e) {
       e.preventDefault();
       if (!$(this).hasClass('active')) {
+
         $(this).addClass('active')
           .siblings().removeClass('active')
+          // .find('.icon')
+          // .removeClass("icon-ui-tight-o")
+          // .addClass('icon-ui-tight')
           .closest('.search-results--main')
           .removeClass('search-results__wide')
           .addClass('search-results__tight');
@@ -182,8 +186,12 @@ require("./modules/scroll-lock");
   $('.js-results-wide').on('click', function(e) {
     e.preventDefault();
     if (!$(this).hasClass('active')) {
+
       $(this).addClass('active')
         .siblings().removeClass('active')
+        // .find('.icon')
+        // .removeClass("icon-ui-wide-o")
+        // .addClass('icon-ui-wide')
         .closest('.search-results--main')
         .removeClass('search-results__tight')
         .addClass('search-results__wide');
@@ -205,7 +213,7 @@ require("./modules/scroll-lock");
   // filter collapse / expand
   var toggleFilterCollapse = function(target) {
     $(target).toggleClass('collapse');
-    console.log($(target));
+    // console.log($(target));
     $(target).find('.icon').toggleClass("icon-plus icon-minus");
   };
 
