@@ -66,12 +66,16 @@
 }
 
 @mixin auto-columns($number) {
-  -webkit-columns: $number 12em;
+  -webkit-columns: $number 10em;
 }
 
 @for $i from 2 through 6 {
   .auto-column-#{$i} {
     @include auto-columns(#{$i})
+  }
+
+  .auto-column-#{$i} li:first-child {
+    margin-top: 0;
   }
 }
 
