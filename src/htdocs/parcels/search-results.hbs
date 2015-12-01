@@ -96,8 +96,10 @@
       </div>
       {{/ times }}
     </div>
-    <div class="search-results--footer u-fr">
-      <div class="c-pagination-bar">
+
+    <div class="search-results--footer">
+
+      <div class="c-pagination-bar hidden-lg-down u-fr">
         <div class="c-pagination-bar__list">
           <a href="" class="c-btn c-btn-paginate">View All</a>
           <a href="" class="c-btn c-btn-paginate">1</a>
@@ -108,6 +110,33 @@
           <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
         </div>
       </div>
+
+      <div class="row pagination--dropdown hidden-lg-up">
+        <div class="col-xs-3">
+          <a href="" class="c-btn c-btn-block c-btn-primary__alt">
+            <i class="icon icon-arr-back"></i>
+            <span class="hidden-md-down">Previous</span>
+          </a>
+        </div>
+        <div class="selectbox--contain__mobile col-xs-6">
+          <select id="pager" class="selectbox selectbox-full u-fl" >
+            <option selected="selected" disabled="disabled">Page</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+          </select>
+        </div>
+        <div class="col-xs-3">
+          <a href="" class="c-btn c-btn-block c-btn-primary__alt">
+            <span class="hidden-md-down">Next</span>
+            <i class="icon icon-arr-forward"></i>
+          </a>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>

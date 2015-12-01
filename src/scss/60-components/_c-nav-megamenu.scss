@@ -118,6 +118,7 @@
 
   // default icon rules & display
   .nav-menu-icons {
+    margin-right: 0.4em;
     .icon:before {
       font-size: 1.5em;
       line-height: 0;
@@ -159,7 +160,7 @@
       @include absolute(top 0 bottom 0);
       width: 1px;
       background-color: $dark-grey-lighten-20;
-      right: 3.5em;
+      right: 46px;
     }
   }
 

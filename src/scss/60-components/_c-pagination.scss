@@ -34,3 +34,17 @@
 }
 
 
+//dropdown
+.pagination--dropdown {
+  .icon:before {
+    font-size: 1em;
+    vertical-align: middle;
+    color: $dark-grey;
+  }
+  .selectbox--contain__mobile {
+    padding: 0;
+    select {
+      width: 100%;
+    }
+  }
+}

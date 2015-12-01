@@ -4,7 +4,7 @@
 // TODO - check this is needed - Ian/
 
 $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
-
+    console.log(ev)
     var $this = $(this),
         scrollTop = this.scrollTop,
         scrollHeight = this.scrollHeight,
@@ -31,7 +31,7 @@ $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
       (window.matchMedia("(min-width: 1025px)").matches && activeBreak == 'lg')
       ) {
       // adjust delta for edge case scrolls - default is * -1
-      if (!up && (delta * -4) > scrollHeight - height - scrollTop) {
+      if (!up && (delta * -1) > scrollHeight - height - scrollTop) {
           // Scrolling down, but this will take us past the bottom.
           $this.scrollTop(scrollHeight);
           return prevent();

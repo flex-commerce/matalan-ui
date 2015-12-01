@@ -33,12 +33,12 @@
 
   // off canvas navigation rules
   function offCanvas() {
-    $('body').on('click', '#js-clickcatcher-canvas', function() {
+    $('body').on('mousedown', '#js-clickcatcher-canvas', function() {
       closeOffCanvas();
     })
 
     // toggle top level nav item
-    $parentNavMenu.on('click', '.navbar--top-item > .link', function(e) {
+    $parentNavMenu.on('mousedown', '.navbar--top-item > .link', function(e) {
       e.preventDefault();
       if (!$(this).hasClass('open')) {
         // if this isn't already open, close any open siblings before proceeding
@@ -49,7 +49,7 @@
 
 
     // toggle second level (sub nav) item
-    $parentNavMenu.on('click', '.sub-nav-title', function(e) {
+    $parentNavMenu.on('mousedown', '.sub-nav-title', function(e) {
       e.preventDefault();
       if (!$(this).hasClass('open')) {
         // if this isn't already open, close any open siblings before proceeding
@@ -60,7 +60,7 @@
     });
 
     // open menu item chevron click - href handling to go here
-    $parentNavMenu.on('click', '.icon-arr-forward', function(e) {
+    $parentNavMenu.on('mousedown', '.icon-arr-forward', function(e) {
       e.stopPropagation();
     });
 
@@ -69,7 +69,7 @@
 
   // ===========================
   // off canvas button event handler
-  $(".nav-mobile-button").on('click', function() {
+  $(".nav-mobile-button").on('mousedown', function() {
     if ($('html').hasClass('body--modal-open')) {
       closeOffCanvas();
     } else {
@@ -99,7 +99,14 @@
   $(document).ready(function() {
     handleWindowSize();
 
+    // extended resize checker
+    var width = $(window).width();
+    // detect and ignore vertical resize, for touch devices that add and hide silly menu bars on scroll
     $(window).on('resize', _.debounce(function() {
+      // do nothing if the width is the same
+      if ($(window).width()==width) return;
+      // update new width value for next time
+      width = $(window).width();
       if (offCanvasActive === true) {
         closeOffCanvas();
       }
@@ -109,3 +116,4 @@
   });
 
 })()
+

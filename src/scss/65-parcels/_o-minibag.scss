@@ -16,14 +16,21 @@ $minibag-desktop-width: 364px; // magic
     }
   }
 }
+@include mq($from: md, $until: lg) {
+  .o-minibag--inner {
+    max-height: 380px;
+  }
+}
 // flex end ======================================
 
 
 // layout begin ======================================
 @include mq($until: md) {
   .o-minibag {
-    @include fixed(top 0 right 0 bottom 0 left 0);
+    @include fixed(top 0 left 0);
     overflow-y: scroll;
+    width: 100%;
+    height: 100%;
   }
   .o-minibag--list-item--control {
     padding: 0;
@@ -127,8 +134,8 @@ $minibag-desktop-width: 364px; // magic
 
 // separator within the markup
 .o-minibag .separator {
-  padding-top: 1em;
-  margin-bottom: 1em;
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
   border-bottom: 1px solid $minibag-border-color;
 }
 
@@ -136,8 +143,8 @@ $minibag-desktop-width: 364px; // magic
 .o-minibag--list-item:not(:last-child):after {
   content: '';
   display: block;
-  padding-top: 1em;
-  margin-bottom: 1em;
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
   border-bottom: 1px solid $minibag-border-color;
 }
 
