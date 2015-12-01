@@ -28,3 +28,19 @@
   margin-left: rem-calc(4);
 }
 
+
+// handling to hide placeholder and icon on focus
+.c-search-form {
+  .input-group--addon {
+    z-index: 0;
+  }
+  .input-group--addon__inset-left {
+    &:focus {
+      padding-left: 1em !important;
+      background: #fff;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}

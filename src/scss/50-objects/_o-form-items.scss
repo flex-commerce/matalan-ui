@@ -3,14 +3,16 @@ optgroup,
 select,
 textarea {
   @include form-item-size();
+  -webkit-appearance: none;
+  border-radius: 0;
+  border-width: rem-calc(1);
+  border-style: solid;
+  border-color: $cool-grey;
 }
 
 .o-form-input--contain {
   .input--textual,
   textarea {
-    border-width: rem-calc(1);
-    border-style: solid;
-    border-color: $cool-grey;
     color: $base-text-color;
   }
   optgroup,
@@ -24,10 +26,8 @@ textarea {
 // modified rules currently only used for minibag quantities
 .o-form-input--contain__quantity {
   input {
-    max-width: 60px;
+    max-width: 55px;
     text-align: center;
-    // @TODO - vertical below should be 7px - find out why its 6px - border-box maybe?
-    padding: 6px 14px;
   }
 
 }

@@ -25,48 +25,45 @@
 
 
 
-// function delayWithClear(element, funcCall) {
-//   var timer;
-//   var delay = 1000;
-//   $('#element').hover(function() {
-//       timer = setTimeout(function() {
-//           funcCall;
-//       }, delay);
-//   }, function() {
-//       clearTimeout(timer);
-//   });
-// }
+  function delayWithClear(el, func) {
+    var timer;
+    var delay = 250;
+
+    $(el).hover(function() {
+      timer = setTimeout(function() {
+        func(el);
+      }, delay);
+    }, function() {
+      clearTimeout(timer);
+    });
+  }
 
 
+  delayWithClear(miniBagControl, openMiniBag);
 
-
-  miniBagControl.on('mouseover', function() {
-    if(!window.isMobileOrTablet.matches) {
+  miniBagControl.on('click', function() {
+    if (window.isMobileOrTablet.matches) {
       openMiniBag(miniBagControl);
     }
   });
-  miniBagControl.on('click', function() {
-    if(window.isMobileOrTablet.matches) {
-      openMiniBag(miniBagControl);
-    }
+
+  miniBagClose.on('click', function(e) {
+    closeMiniBag(miniBagControl);
   });
 
 
   $('body').on('mouseover', '#js-clickcatcher-minibag', function() {
-    if(!window.isMobileOrTablet.matches) {
-      closeMiniBag(miniBagControl);
-    }
-
-  });
-  $('body').on('click', '#js-clickcatcher-minibag', function() {
-    if(window.isMobileOrTablet.matches) {
+    if (!window.isMobileOrTablet.matches) {
       closeMiniBag(miniBagControl);
     }
   });
 
-  miniBagClose.on('click', function() {
-    closeMiniBag(miniBagControl);
+  $('body').on('touchstart', '#js-clickcatcher-minibag', function() {
+    if (window.isMobileOrTablet.matches) {
+      closeMiniBag(miniBagControl);
+    }
   });
+
 
 
 

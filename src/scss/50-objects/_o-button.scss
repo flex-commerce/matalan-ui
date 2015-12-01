@@ -79,7 +79,7 @@ $button-padding-y: $default-pad-y;
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include style-variant($color: $primary-color, $background: $white, $border: $secondary-color);
+    @include style-variant($color: $dark-grey-hover, $background: $white, $border: $secondary-color);
   }
 }
 
