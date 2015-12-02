@@ -81,10 +81,10 @@
           <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div> -->
         </div>
         <div class="results--detail">
-          <a class="c-btn c-btn-tertiary c-btn--small hidden-lg-down u-mar-v-medium u-mar-h-a">View more colours</a>
-          <div class="u-mar-v-medium u-font-wb">{{productTitle}}</div>
-          <div class="u-mar-v-medium u-font-wb u-color-grey70">{{productPrice}}</div>
-          <div class="c-btn c-btn-primary__alt u-mar-v-medium hidden-lg-down u-mar-t-a">View</div>
+
+          <div class="u-mar-v-medium">{{productTitle}}</div>
+          <div class="u-mar-v-medium u-font-wb  u-mar-t-a">{{productPrice}}</div>
+          <div class="c-btn c-btn-primary__alt u-mar-v-medium hidden-lg-down">View</div>
           <div class="u-mar-v-medium rating rating__small">
             <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
             <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
@@ -92,6 +92,7 @@
             <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
             <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
           </div>
+          <a class="c-btn c-btn-tertiary--alt c-btn--small hidden-lg-down u-mar-v-medium u-mar-h-a">More Colours Available</a>
         </div>
       </div>
       {{/each }}

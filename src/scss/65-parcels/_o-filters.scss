@@ -203,8 +203,13 @@ $filters-border-color: $keyline-color;
     float: right;
     display:none;
     text-decoration: none;
+    cursor: pointer;
     &:nth-child(n+10) {
       display:block;
+    }
+    i {
+      float: right;
+      margin-top: -3px;
     }
   }
 }
