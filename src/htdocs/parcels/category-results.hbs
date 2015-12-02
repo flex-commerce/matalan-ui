@@ -1,0 +1,116 @@
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="c-breadcrumb-bar u-pad-v-large">
+      <li class="c-breadcrumb-bar__item has-link"><a href="">Matalan</a></li>
+        <li class="c-breadcrumb-bar__item has-link"><a href="">{{productspartywear.0.secTitle}}</a></li>
+        <li class="c-breadcrumb-bar__item">
+            {{productspartywear.0.categories.0.catTitle}}
+        </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="search-results--side">
+    {{> parcels/search-filters }}
+  </div>
+  <div class="search-results--main search-results__tight">
+    <h4>{{productspartywear.0.categories.0.catTitle}}</h4>
+    <div class="search-results--header u-cf">
+      <div class="search--header--products col-xs-6 col-lg-3 hidden-lg-down">
+        <p class="u-color-grey60 u-pad-t-medium">253 - 228 of 1800 products</p>
+      </div>
+      <div class="search--header--pagination col-lg-5 hidden-lg-down u-pad-0">
+        <div class="c-pagination-bar">
+          <div class="c-pagination-bar__list u-fl">
+            <a href="" class="c-btn c-btn-paginate">View All</a>
+            <a href="" class="c-btn c-btn-paginate">1</a>
+            <a href="" class="c-btn c-btn-paginate">2</a>
+            <a href="" class="c-btn c-btn-paginate">3</a>
+            <!-- <a href="" class="c-btn c-btn-paginate">4</a> -->
+            <!-- <a href="" class="c-btn c-btn-paginate">5</a> -->
+            <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
+          </div>
+          <div class="results-layout">
+            <a href="" class="js-results-tight u-font-no-underline u-mar-l-medium active">
+              <i class="icon icon-ui-tight"></i>
+              <i class="icon icon-ui-tight-o"></i>
+            </a>
+            <a href="" class="js-results-wide u-font-no-underline u-mar-l-small">
+              <i class="icon icon-ui-wide"></i>
+              <i class="icon icon-ui-wide-o"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="search--header--sort col-xs-6 col-lg-4">
+        <div class="row">
+          <div class="col-lg-3 hidden-lg-down u-font-ta-r u-pad-0">
+            <label for="sortby" class="u-color-grey60 u-pad-t-medium u-dis-ib">
+              <small>Sort By</small>
+            </label>
+          </div>
+          <div class="col-xs-12 col-lg-9">
+            <div>
+              <select id="sortby" class="selectbox select-full">
+                <option selected="selected" disabled="disabled">Sort By</option>
+                <option value="">Price, High-Low</option>
+                <option value="">Price, Low-High</option>
+                <option value="">New Arrivals</option>
+                <option value="">Best Sellers</option>
+                <option value="">Customer Rating</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search--header--filter col-xs-6 hidden-lg-up js-filters">
+
+        <!-- <div> -->
+          <a class="selectbox selectbox-fake">
+            <span class="selectbox-label">Filter By</span>
+            <span class="selectbox-arrow"><span class="caret"></span></span>
+          </a>
+        <!-- </div> -->
+
+      </div>
+    </div>
+    <div class="search-results--inner row">
+      {{#each products}}
+      <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
+        <div class="results--image">
+          <img class="img" src="img/search-{{ this }}.jpg">
+          st<div data-content="overlay 1" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
+          <div data-content="overlay 2" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
+          <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div> -->
+        </div>
+        <div class="results--detail">
+          <a class="c-btn c-btn-tertiary c-btn--small hidden-lg-down u-mar-v-medium u-mar-h-a">View more colours</a>
+          <div class="u-mar-v-medium u-font-wb">{{lorem count=5}}</div>
+          <div class="u-mar-v-medium u-font-wb u-color-grey70">£0.00</div>
+          <div class="c-btn c-btn-primary__alt u-mar-v-medium hidden-lg-down u-mar-t-a">View</div>
+          <div class="u-mar-v-medium rating rating__small">
+            <i class="icon icon-star-fill"></i>
+            <i class="icon icon-star-fill"></i>
+            <i class="icon icon-star-fill"></i>
+            <i class="icon icon-star-fill"></i>
+            <i class="icon icon-star-fill"></i>
+          </div>
+        </div>
+      </div>
+      {{/ each }}
+    </div>
+    <div class="search-results--footer u-fr">
+      <div class="c-pagination-bar">
+        <div class="c-pagination-bar__list">
+          <a href="" class="c-btn c-btn-paginate">View All</a>
+          <a href="" class="c-btn c-btn-paginate">1</a>
+          <a href="" class="c-btn c-btn-paginate">2</a>
+          <a href="" class="c-btn c-btn-paginate">3</a>
+          <a href="" class="c-btn c-btn-paginate">4</a>
+          <a href="" class="c-btn c-btn-paginate">5</a>
+          <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
