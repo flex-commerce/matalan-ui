@@ -13,12 +13,6 @@ $footer-bg-color: $light-grey-hover;
     // @include font-size(14px);
     // font-weight: 600;
   }
-  .input--textual:focus {
-    + a,
-    + button {
-      background: $dark-grey;
-    }
-  }
   // .input-group--addon__inset-left {
   //   padding-left: 10px !important;
   // }

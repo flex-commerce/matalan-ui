@@ -26,7 +26,7 @@
       </div>
       <div class="col-xs-6 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3 col-lg-4 col-lg-offset-0">
         <div class="o-header__brand">
-          <img src="img/matalan-logo-responsive.svg" alt="">
+          <a href="./homepage.html"><img src="img/matalan-logo-responsive.svg" alt=""></a>
         </div>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-8 u-pad-0">
@@ -64,16 +64,19 @@
 
           <div class="col-sm-12 col-md-8 col-lg-6 col-lg-pull-6 hidden-lg-down u-mar-t-huge u-pad-0">
             <div class="o-header__search">
-              <form class="form-inline c-search-form">
+              <form id="searchProducts" class="form-inline c-search-form">
                 <div class="o-form-row">
                   <div class="o-form--input-group o-form-input--contain span-wide-12">
                     <div class="input-group--addon unstyled input-group--addon__inset">
                       <i class="icon icon-search"></i>
                     </div>
                     <input type="text"
+                    name="searchTerm"
                     class="input--textual input-addon--expand input-group--addon__inset-left"
-                    placeholder="Enter Keyword or Product Code" min="3">
-                    <a href="" class="input-group--addon unstyled c-search__button">Search</a>
+                    placeholder="Enter Keyword or Product Code" pattern=".{3,}" title="3 characters minimum" required>
+                    <div class="input-group--addon input-group--addon__button unstyled c-search__button">
+                      <button type="submit" class="">Search</button>
+                    </div>
                   </div>
                 </div>
               </form>

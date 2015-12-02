@@ -1,6 +1,6 @@
 [{
     "secTitle": "Home",
-    "seclink": "#"
+    "seclink": "homepage.html"
   },
 
   {
@@ -786,7 +786,7 @@
 
   {
     "secTitle": "Matalan Direct",
-    "seclink": "#"
+    "seclink": "http://direct.matalan.co.uk"
   }
 
 ]
