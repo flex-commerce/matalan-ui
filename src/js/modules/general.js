@@ -21,5 +21,11 @@
     $(this).hide();
     $('.signup-success').show();
   });
+  $('body').on('click', '.clear__filters', function() {
+    $('.o-filters--inner').find('input[type=checkbox]:checked').removeAttr('checked');
+    $('.o-filters--inner').find('input[type=radio]:checked').removeAttr('checked');
+  });
+
+
 
 })(jQuery);

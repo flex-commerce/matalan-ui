@@ -63,7 +63,7 @@ $button-padding-y: $default-pad-y;
 
 %c-btn-tertiary--alt,
 .c-btn-tertiary--alt {
-  @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey);
+  @include style-variant($color: $dark-grey, $background: $white, $border: $cool-grey);
   &.hover,
   &:hover,
   &:focus {
