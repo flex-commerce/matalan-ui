@@ -85,7 +85,8 @@ $input-padding-y: $default-pad-y;
     text-align: right;
   }
   .o-form-input--contain {
-
+    @include span(8);
+    text-align: left;
   }
 }
 
