@@ -34,9 +34,10 @@
             <div class="sub-nav--group--container">
 
               {{#with categories}} {{#each this}}
+
               <ul class="sub-nav-group">
                 <li class="sub-nav-title">
-                  <a class="link" href="">
+                  <a class="link" href="{{catLink}}">
                     {{catTitle}}
                     <span class="nav-menu-icons u-fr">
                       <span><i class="icon icon-minus"></i></span>
@@ -47,7 +48,7 @@
                   </li>
                   {{#with collection}} {{#each this}}
                   <li class="sub-nav-item">
-                    <a class="link" href="{{this}}">
+                    <a class="link" href="category-results.html">
                       {{{@key}}}
                       <span class="nav-menu-icons u-fr">
                         <span><i class="icon icon-arr-forward"></i></span>
@@ -55,6 +56,7 @@
                     </a>
                   </li>
                   {{/each}} {{/with}}
+
                 </li>
               </ul>
               {{/each}} {{/with}}
@@ -62,7 +64,7 @@
               {{#with collection}}
               <ul class="sub-nav-group">
                 {{#each this}}
-                <li class="sub-nav-item"><a href="{{this}}">{{{@key}}}</a></li>
+                <li class="sub-nav-item"><a href="{{{@value}}}">{{{@key}}}</a></li>
                 {{/each}}
               </ul>
               {{/with}}

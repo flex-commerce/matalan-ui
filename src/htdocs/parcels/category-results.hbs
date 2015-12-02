@@ -2,9 +2,12 @@
   <div class="col-xs-12">
     <ul class="c-breadcrumb-bar u-pad-v-large">
       <li class="c-breadcrumb-bar__item has-link"><a href="">Matalan</a></li>
-        <li class="c-breadcrumb-bar__item has-link"><a href="">{{productspartywear.0.secTitle}}</a></li>
+        <li class="c-breadcrumb-bar__item has-link"><a href="">{{productspartywear.secTitle}}</a></li>
         <li class="c-breadcrumb-bar__item">
-            {{productspartywear.0.categories.0.catTitle}}
+            {{productspartywear.category.catTitle}}
+        </li>
+        <li class="c-breadcrumb-bar__item">
+            {{productspartywear.category.collection.collectionName}}
         </li>
     </ul>
   </div>
@@ -14,7 +17,11 @@
     {{> parcels/search-filters }}
   </div>
   <div class="search-results--main search-results__tight">
-    <h4>{{productspartywear.0.categories.0.catTitle}}</h4>
+    <div class="o-category-container u-font-ta-c">
+      <h3 class="u-font-sec">{{productspartywear.category.catTitle}}</h3>
+      <p>{{productspartywear.category.catDescription}}</p>
+    </div>
+
     <div class="search-results--header u-cf">
       <div class="search--header--products col-xs-6 col-lg-3 hidden-lg-down">
         <p class="u-color-grey60 u-pad-t-medium">253 - 228 of 1800 products</p>
@@ -75,25 +82,26 @@
       </div>
     </div>
     <div class="search-results--inner row">
-      {{#each products}}
+      {{#each productspartywear.category.collection.products}}
       <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
         <div class="results--image">
-          <img class="img" src="img/search-{{ this }}.jpg">
-          st<div data-content="overlay 1" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
+          <img class="img" src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
+
+          <!--<div data-content="overlay 1" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
           <div data-content="overlay 2" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
           <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div> -->
         </div>
         <div class="results--detail">
           <a class="c-btn c-btn-tertiary c-btn--small hidden-lg-down u-mar-v-medium u-mar-h-a">View more colours</a>
-          <div class="u-mar-v-medium u-font-wb">{{lorem count=5}}</div>
-          <div class="u-mar-v-medium u-font-wb u-color-grey70">£0.00</div>
+          <div class="u-mar-v-medium u-font-wb">{{productTitle}}</div>
+          <div class="u-mar-v-medium u-font-wb u-color-grey70">{{productPrice}}</div>
           <div class="c-btn c-btn-primary__alt u-mar-v-medium hidden-lg-down u-mar-t-a">View</div>
           <div class="u-mar-v-medium rating rating__small">
-            <i class="icon icon-star-fill"></i>
-            <i class="icon icon-star-fill"></i>
-            <i class="icon icon-star-fill"></i>
-            <i class="icon icon-star-fill"></i>
-            <i class="icon icon-star-fill"></i>
+            <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
+            <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
+            <i class="icon icon-star-fill {{ isactive productRating 2 }}"></i>
+            <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
+            <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
           </div>
         </div>
       </div>
