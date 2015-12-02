@@ -1,8 +1,14 @@
 <div class="row">
   <div class="col-xs-12">
     <ul class="c-breadcrumb-bar u-pad-v-large">
-      <li class="c-breadcrumb-bar__item no-link">{{searchresults.secTitle}}</li>
-      <li class="c-breadcrumb-bar__item no-link">{{searchresults.results.searchTerm}}</li>
+      <li class="c-breadcrumb-bar__item has-link"><a href="">Matalan</a></li>
+        <li class="c-breadcrumb-bar__item has-link"><a href="">{{productspartywear.secTitle}}</a></li>
+        <li class="c-breadcrumb-bar__item">
+            {{productspartywear.category.catTitle}}
+        </li>
+        <li class="c-breadcrumb-bar__item">
+            {{productspartywear.category.collection.collectionName}}
+        </li>
     </ul>
   </div>
 </div>
@@ -11,10 +17,14 @@
     {{> parcels/search-filters }}
   </div>
   <div class="search-results--main search-results__tight">
-    <h4>{{searchresults.results.searchTerm}}</h4>
+    <div class="o-category-container u-font-ta-c">
+      <h3 class="u-font-sec">{{productspartywear.category.catTitle}}</h3>
+      <p>{{productspartywear.category.catDescription}}</p>
+    </div>
+
     <div class="search-results--header u-cf">
       <div class="search--header--products col-xs-6 col-lg-3 hidden-lg-down">
-        <p class="u-color-grey60 u-pad-t-medium">0 - 8 of 32 products</p>
+        <p class="u-color-grey60 u-pad-t-medium">253 - 228 of 1800 products</p>
       </div>
       <div class="search--header--pagination col-lg-5 hidden-lg-down u-pad-0">
         <div class="c-pagination-bar">
@@ -72,10 +82,11 @@
       </div>
     </div>
     <div class="search-results--inner row">
-      {{#each searchresults.results.products}}
+      {{#each productspartywear.category.collection.products}}
       <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
         <div class="results--image">
-          <img class="img"  src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
+          <img class="img" src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
+
           <!--<div data-content="overlay 1" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
           <div data-content="overlay 2" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
           <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div> -->
@@ -94,12 +105,10 @@
           </div>
         </div>
       </div>
-      {{/each }}
+      {{/ each }}
     </div>
-
-    <div class="search-results--footer">
-
-      <div class="c-pagination-bar hidden-lg-down u-fr">
+    <div class="search-results--footer u-fr">
+      <div class="c-pagination-bar">
         <div class="c-pagination-bar__list">
           <a href="" class="c-btn c-btn-paginate">View All</a>
           <a href="" class="c-btn c-btn-paginate">1</a>
@@ -110,33 +119,6 @@
           <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
         </div>
       </div>
-
-      <div class="row pagination--dropdown hidden-lg-up">
-        <div class="col-xs-3">
-          <a href="" class="c-btn c-btn-block c-btn-primary__alt">
-            <i class="icon icon-arr-back"></i>
-            <span class="hidden-md-down">Previous</span>
-          </a>
-        </div>
-        <div class="selectbox--contain__mobile col-xs-6">
-          <select id="pager" class="selectbox selectbox-full u-fl" >
-            <option selected="selected" disabled="disabled">Page</option>
-            <option value="">1</option>
-            <option value="">2</option>
-            <option value="">3</option>
-            <option value="">4</option>
-            <option value="">5</option>
-          </select>
-        </div>
-        <div class="col-xs-3">
-          <a href="" class="c-btn c-btn-block c-btn-primary__alt">
-            <span class="hidden-md-down">Next</span>
-            <i class="icon icon-arr-forward"></i>
-          </a>
-        </div>
-      </div>
-
-
     </div>
   </div>
 </div>
