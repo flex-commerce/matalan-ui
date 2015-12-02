@@ -21,6 +21,16 @@
     $(this).hide();
     $('.signup-success').show();
   });
+
+  $('form#searchProducts').submit(function(e){
+    e.preventDefault();
+    if ($('input[name=searchTerm]').val() == 'dresses') {
+      window.location.href = './search-results.html';
+    } else {
+      window.location.href = './no-results.html';
+    }
+  });
+
   $('body').on('click', '.clear__filters', function() {
     $('.o-filters--inner').find('input[type=checkbox]:checked').removeAttr('checked');
     $('.o-filters--inner').find('input[type=radio]:checked').removeAttr('checked');

@@ -21,6 +21,13 @@ textarea {
     display: block;
     width: 100%;
   }
+
+  .input--textual:focus {
+    + a,
+    + div {
+      background: $dark-grey;
+    }
+  }
 }
 
 // modified rules currently only used for minibag quantities
