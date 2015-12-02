@@ -1,6 +1,6 @@
 /*------------------------------------*\
     #PAGE
-\*------------------------------------*/
+    \*------------------------------------*/
 
 /**
  * High-, page-level styling.
@@ -19,20 +19,20 @@
  *    https://github.com/inuitcss/base.page/blob/master/_base.page.scss
  */
 
-html {
-    font-size: ($base-font-size / 16px) * 1em; /* [1] */
-    line-height: $base-line-height / $base-font-size; /* [1] */
+ html {
+  font-size: ($base-font-size / 16px) * 1em; /* [1] */
+  line-height: $base-line-height / $base-font-size; /* [1] */
     // background-color: $base-background-color;
     color: $base-text-color;
     min-height: 100%; /* [3] */
     -webkit-text-size-adjust: 100%; /* [4] */
-        -ms-text-size-adjust: 100%; /* [4] */
+    -ms-text-size-adjust: 100%; /* [4] */
     -moz-osx-font-smoothing: grayscale; /* [5] */
-     -webkit-font-smoothing: antialiased; /* [5] */
-     overflow-x: hidden;
-}
+    -webkit-font-smoothing: antialiased; /* [5] */
+    overflow-x: hidden;
+  }
 
-body {
+  body {
   // overflow-y: scroll; /* [2] */
 }
 
@@ -42,11 +42,20 @@ html, body {
   max-width: 100vw;
 }
 
-
-// DEV - body colours
-html {
-  background-color: #f2f2f2;
-}
-body {
-  background-color: $white;
+// ios hack - check this
+// html { height:100%; overflow:hidden; }
+// body { height:100%; overflow:hidden; }
+// ios hack end
+//
+.body--modal-open {
+  @include mq($until:lg) {
+    overflow-y: hidden;
+    padding-right: 5px;
   }
+  @include mq($from:lg) {
+    &.u-scrollbar {
+
+    }
+  }
+}
+

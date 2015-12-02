@@ -25,11 +25,11 @@
     filtersActive = true;
   }
 
-  $('body').on('click', '#js-clickcatcher-filters', function() {
+  $('body').on('click touchstart', '#js-clickcatcher-filters', function() {
     closeFilters(filtersControl);
   });
 
-  filtersControl.on('click', function() {
+  filtersControl.on('click touchstart', function() {
     if (filtersActive === true) {
       closeFilters(filtersControl);
     } else {
@@ -37,7 +37,7 @@
     }
   });
 
-  filtersClose.on('click', function() {
+  filtersClose.on('click touchstart', function() {
     closeFilters(filtersControl);
   });
 

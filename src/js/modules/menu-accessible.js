@@ -652,10 +652,16 @@ limitations under the License.
      * @private
      */
     _mouseOverHandler = function(event) {
+      var that = this;
       clearTimeout(this.mouseTimeoutID);
+
       $(event.target)
         .addClass(this.settings.hoverClass);
-      _togglePanel.call(this, event);
+
+      that.mouseTimeoutID = setTimeout(function() {
+        _togglePanel.call(that, event);
+      }, 250);
+
       if ($(event.target).is(':tabbable')) {
         $('html').on('keydown.accessible-megamenu', $.proxy(_keyDownHandler, event.target));
       }
@@ -671,6 +677,8 @@ limitations under the License.
      */
     _mouseOutHandler = function(event) {
       var that = this;
+      clearTimeout(this.mouseTimeoutID);
+
       $(event.target)
         .removeClass(that.settings.hoverClass);
 
