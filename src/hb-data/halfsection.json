@@ -1,0 +1,16 @@
+[{
+  "sectionId": "1",
+  "sectionTitle": "Mens Nightware",
+  "sectionImage": "img/half-1.jpg",
+  "sectionItems": [
+    "Pyjamas",
+    "Slippers"
+  ]
+}, {
+  "sectionId": "2",
+  "sectionTitle": "Snuggle Up",
+  "sectionImage": "img/half-2.jpg",
+  "sectionItems": [
+    "Shop Nightware"
+  ]
+}]

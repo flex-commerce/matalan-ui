@@ -28,13 +28,11 @@
 }
 .o-section-department--title {
   @include center(x,abs);
+  color: $primary-color;
   background-color: $white;
   top: -18px;
   padding: 5px 40px;
   @include font-size(20px, 22px);
-  @include mq($until: lg) {
-    color: $primary-color;
-  }
 }
 
 .o-section-department--link.o-section-department--link {
@@ -104,7 +102,7 @@
 
 .o-section-detail--outer__border {
   padding: 5px;
-  width: 50%;
+  width: 70%;
   border: 1px solid $white;
 }
 
