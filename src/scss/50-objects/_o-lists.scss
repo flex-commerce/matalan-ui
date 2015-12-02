@@ -28,6 +28,16 @@ $list-border: $cool-grey;
   }
 }
 
+.o-list-inline-full {
+  display: table;
+  width: 100%;
+  > li {
+    display: table-cell;
+    text-align: center;
+    width: auto;
+  }
+}
+
 %list-inline__delimited--content {
     content: '/';
     display: inline-block;
