@@ -6,6 +6,7 @@
   {
     "secTitle": "Christmas",
     "seclink": "#",
+    "sectionImage": "img/christmas.jpg",
 
     "categories": [{
         "catTitle": "Beanie vs Bobble",
@@ -106,7 +107,7 @@
   {
     "secTitle": "Womens",
     "seclink": "#",
-
+    "sectionImage": "img/womens.jpg",
     "categories": [{
         "catTitle": "New Arrivals",
         "catLink": "#",
@@ -241,6 +242,7 @@
   {
     "secTitle": "Mens",
     "seclink": "#",
+    "sectionImage": "img/mens.jpg",
     "categories": [{
         "catTitle": "New Arrivals",
         "catLink": "#",
@@ -339,7 +341,7 @@
   {
     "secTitle": "Girls",
     "seclink": "#",
-
+    "sectionImage": "img/girls.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -468,7 +470,7 @@
   {
     "secTitle": "Boys",
     "seclink": "#",
-
+    "sectionImage": "img/boys.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -588,7 +590,7 @@
   {
     "secTitle": "Homeware",
     "secLink": "#",
-
+    "sectionImage": "img/homeware.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -656,7 +658,7 @@
   {
     "secTitle": "Shoes",
     "secLink": "#",
-
+    "sectionImage": "img/Shoes.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -717,7 +719,7 @@
   {
     "secTitle": "Made For...",
     "seclink": "#",
-
+    "sectionImage": "img/madefor.jpg",
     "categories": [{
       "catTitle": "Made For...",
       "catLink": "#",
