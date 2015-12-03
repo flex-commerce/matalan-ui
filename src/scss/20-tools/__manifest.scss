@@ -3,9 +3,6 @@
 @import '_functions';
 @import '_mixins';
 @import '../../../node_modules/sass-mq/_mq';
-
-$nudge-single-spaces: false;
-//@import '../../../node_modules/nudgecss/tools.nudge';
 @import '_positioning';
 @import '_center';
 @import '_font-size';
@@ -14,3 +11,12 @@ $nudge-single-spaces: false;
 @import '_justify';
 @import '_maths';
 @import '_arrows';
+
+// $nudge-incorrect-nesting:     true;
+$nudge-no-ids:                false;
+$nudge-single-spaces:         false;
+// $nudge-modifiers:             true;
+// $nudge-underscores:           true;
+// $nudge-camel-case:            true;
+// $nudge-deprecated-selectors:  true;
+@import '../../../node_modules/nudgecss/tools.nudge';
