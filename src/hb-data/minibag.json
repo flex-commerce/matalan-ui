@@ -86,6 +86,16 @@
         "productPrice": "£12.00",
         "productRating": 5,
         "colors": "1"
+      }, {
+        "productTitle": "Lurex Tube Dress",
+        "productImages": [
+          "img/product-8.jpg",
+          "img/product-8-alt.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£18.00",
+        "productRating": 4,
+        "colors": "1"
       }]
     }
   }
