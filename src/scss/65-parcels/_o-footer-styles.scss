@@ -93,3 +93,15 @@ $footer-bg-color: $light-grey-hover;
     @include center(x);
   }
 }
+
+
+
+
+.o-footer--subscribe .o-form--input-group {
+    @include mq($from: md) {
+  min-width: 350px;
+}
+  @include mq($from: lg) {
+  min-width: 450px;
+}
+}
