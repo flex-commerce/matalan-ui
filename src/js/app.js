@@ -116,10 +116,6 @@ $('.o-section-department--slick').slick({
         slidesToShow: 1,
         slidesToScroll: 1
       }
-    },
-    {
-      breakpoint: 400,
-      settings: "unslick"
     }
   ]
 });

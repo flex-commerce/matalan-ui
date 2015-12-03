@@ -1,0 +1,102 @@
+{
+  "secTitle": "Womens",
+  "seclink": "#",
+
+  "category": {
+    "catTitle": "Party and Occasionwear",
+    "catDescription": "With the party season firmly on the horizon, you'll need to make sure your wardrobe is ready. Our womens' partywear range will bring all the glamour and party sparkle you could ever need, with a new collection of fabulous dresses, tops and clutches for you to mix and match. We've also got a selection of elegant party shoes so you can dance those nights away.",
+    "catLink": "#",
+    "catOtherLinks": {
+      "Black Dresses": "#",
+      "Party Dresses": "#",
+      "Party Bags": "#",
+      "Party Shoes": "#",
+      "Party Tops": "#"
+      },
+    "collection": {
+      "collectionName": "Womens Partywear",
+      "collectionLink": "#",
+      "products": [{
+        "productTitle": "V Neck Sequin Trim Tunic",
+        "productImages": [
+          "img/product-1.jpg",
+          "img/product-1.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£25.00",
+        "productRating": 3,
+        "colors": "2"
+      }, {
+        "productTitle": "Coated Skinny Jeans",
+        "productImages": [
+          "img/product-2.jpg",
+          "img/product-2-alt.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£16.00",
+        "productRating": 4,
+        "colors": "2"
+      }, {
+        "productTitle": "Metal Plated Block Heels",
+        "productImages": [
+          "img/product-3.jpg",
+          "img/product-3-alt.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£20.00",
+        "productRating": 4,
+        "colors": "2"
+      }, {
+        "productTitle": "Abbey by Abbey Clancy Box Clutch",
+        "productImages": [
+          "img/product-4.jpg",
+          "img/product-4-alt.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£16.00",
+        "productRating": 5,
+        "colors": "1"
+      }, {
+        "productTitle": "Julien MacDonald Jewel Front Sandal",
+        "productImages": [
+          "img/product-5.jpg",
+          "img/product-5-alt.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£32.00",
+        "productRating": 3,
+        "colors": "1"
+      }, {
+        "productTitle": "Zip Top Clutch Bagh",
+        "productImages": [
+          "img/product-6.jpg",
+          "img/product-6-alt.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£8.00",
+        "productRating": 5,
+        "colors": "1"
+      }, {
+        "productTitle": "V Neck Satin Cami",
+        "productImages": [
+          "img/product-7.jpg",
+          "img/product-7-alt.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£12.00",
+        "productRating": 5,
+        "colors": "1"
+      }, {
+        "productTitle": "Lurex Tube Dress",
+        "productImages": [
+          "img/product-8.jpg",
+          "img/product-8-alt.jpg"
+        ],
+        "productLInk": "#",
+        "productPrice": "£18.00",
+        "productRating": 4,
+        "colors": "1"
+      }]
+    }
+  }
+}

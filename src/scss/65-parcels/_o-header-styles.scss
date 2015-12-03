@@ -58,7 +58,7 @@
 // header spacing handling
 //
 .o-header__container {
-  @include mq($from: md, $until: lg) {
+  @include mq($from: xs, $until: lg) {
     margin-top: 1em;
   }
 }

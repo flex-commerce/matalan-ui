@@ -38,9 +38,10 @@
 
 
 .o-hero__detail-title {
-    @include font-size(50px, 60px);
+    @include font-size(70px, 80px);
     // kerning for large hero title
     letter-spacing: -0.04em;
+    color: $primary-color;
 }
 
 .o-hero__detail-sub {
@@ -52,6 +53,11 @@
     background-color: $white;
     border-style: 1px solid;
     border-color: $white;
+    &:hover {
+      background-color: transparent;
+      border-color: $white;
+      color: $black;
+    }
   }
 }
 

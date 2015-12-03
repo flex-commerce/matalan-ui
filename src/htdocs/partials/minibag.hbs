@@ -19,28 +19,28 @@
         <a class="c-btn c-btn-secondary c-btn-block hidden-md-up u-mar-v-large">Checkout</a>
         <div class="u-cf u-mar-b-large hidden-lg-up">
           <p class="u-fl u-pad-v-medium u-mar-0">
-            x Items in your bag
+            8 Items in your bag
           </p>
         </div>
         <ul class="o-minibag--list-contain">
-          {{# times 8 }}
+          {{#each minibag.category.collection.products}}
           <li class="o-minibag--list o-minibag--list-item u-cf">
             <div class="o-minibag--list-item--image col-xs-3 col-md-2 col-lg-3 u-pad-0">
-              <img class="img" src="img/placehold-224x320.png">
+              <img class="img" src="{{productImages.[0]}}">
             </div>
             <div class="o-minibag--list-item--detail col-xs-9 col-md-10 col-lg-6 ">
-              <p class="detail--description u-font-wb">{{this}} Product name to go here on a few lines for space</p>
+              <p class="detail--description u-font-wb">{{productTitle}}</p>
               <ul class="detail--vars u-pad-b-small list-space__small">
                 <li class="list--item">Color:
                   <span class="color-swatch__inline u-bgcolor-cgrey"></span>
                 </li>
-                <li class="list--item">Size: val</li>
+                <li class="list--item">Size: Small</li>
               </ul>
               <ul class="detail--price list-space__small">
                 <li class="list--item">
-                  <strong>Price: £XX.xx</strong>
+                  <strong>Price: {{productPrice}}</strong>
                 </li>
-                <li class="list--item hidden-lg-up">Save: £XX.xx</li>
+                <li class="list--item hidden-lg-up">Save: £0.00</li>
               </ul>
             </div>
 
@@ -64,7 +64,7 @@
             </div>
 
           </li>
-          {{/ times }}
+          {{/ each }}
         </ul>
       </div>
 
@@ -76,11 +76,11 @@
           <li class="o-minibag--list o-minibag--list-total">
             <dl class="o-deflist-2col">
               <dt>Shipping</dt>
-              <dd>£xx.xx</dd>
+              <dd>£2.95</dd>
               <dt>Total Saving</dt>
-              <dd>£xx.xx</dd>
+              <dd>£0.00</dd>
               <dt class="u-font-wb u-mar-t-medium">Sub Total</dt>
-              <dd class="u-font-wb u-mar-t-medium">£xx.xx</dd>
+              <dd class="u-font-wb u-mar-t-medium">£147.00</dd>
             </dl>
           </li>
           <li class="separator"></li>
@@ -88,7 +88,7 @@
           <li class="o-minibag--list o-minibag--list-checkout">
             <div class="callout-panel u-mar-b-large">
               <p>You are
-                <span class="u-font-wb">£xx.xx</span> away from qualifying for
+                <span class="u-font-wb">£3.00</span> away from qualifying for
                 <span class="u-font-wb">FREE</span> standard home delivery.
               </p>
               <p>Our click &amp; collect service is
