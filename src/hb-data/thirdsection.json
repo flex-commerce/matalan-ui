@@ -1,6 +1,7 @@
 [{
   "sectionId": "1",
-  "sectionTitle": "Time to get comfortable, 20% off selected christmas home items",
+  "sectionTitle": "Time to get comfortable",
+  "sectionStrapline": "20% off selected christmas home items",
   "sectionImage": "img/third-1.jpg",
   "sectionItems": [
     "Item 1",

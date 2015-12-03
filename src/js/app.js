@@ -128,17 +128,17 @@ $('.global-messages').slick({
   dots: true,
   infinite: true,
   arrows: false,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  // responsive: [
+  //   {
+  //     breakpoint: 769,
+  //     settings: {
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1
+  //     }
+  //   }
+  // ]
 
 });
 // ===========================

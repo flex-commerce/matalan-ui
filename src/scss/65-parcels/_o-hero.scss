@@ -12,14 +12,30 @@
 
 .o-hero__bg {
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include mq($until: md) {
+    background-color: #EEEEF0;
+    background-position: 25% 100px;
+  }
 }
 
 .o-hero__detail-right {
-  @include center(y, abs);
-  right: 1em;
-  text-align: right;
+  @include center(x, abs);
+  text-align: center;
+  @include mq($until: md) {
+    width: 100%;
+  }
+
+  @include mq($from: md) {
+    @include center(y, abs);
+    right: 1em;
+    text-align: right;
+  }
+
 }
+
+
 
 .o-hero__detail-title {
     @include font-size(50px, 60px);
@@ -50,6 +66,14 @@
   color: $white;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+}
+
+.o-hero__bar {
+  width: 100%;
+  text-align: center;
+  color: $white;
+  vertical-align: middle;
+  padding: 0.1em;
 }
 
 .o-hero__ribbon__top-right{

@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/flex-commerce/matalan-front-end"
+    "url": "http://flex-commerce.github.io/matalan-front-end/homepage.html"
   },
   "scripts": {
     "deploy": "gulp deploy",

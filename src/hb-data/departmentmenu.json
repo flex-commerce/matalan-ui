@@ -39,7 +39,7 @@
   ]
 }, {
   "menuTitle": "Girls",
-  "menuImage": "img/womens-children.png",
+  "menuImage": "img/girls_cat.png",
   "menuItems": [
     "Pyjamas",
     "Coats",
@@ -52,7 +52,7 @@
   ]
 }, {
   "menuTitle": "Homeware",
-  "menuImage": "img/department-autumn.png",
+  "menuImage": "img/home.png",
   "menuItems": [
     "Bed Sheets",
     "Duvets",
