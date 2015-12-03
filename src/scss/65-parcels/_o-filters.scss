@@ -76,22 +76,16 @@ $filters-border-color: $keyline-color;
     z-index: 4;
   }
 }
-.o-filters {
-  background: $white;
-}
+
 
 // misc rules end ======================================
 
 // separators, borders, and padding begin ======================================
 
 
-.filter--list--checkbox {
-  padding: 0 !important;
-  label {
-    cursor: pointer;
-    margin-bottom: 0.2em !important;
-  }
-}
+// .filter--list--checkbox {
+//   padding: 0 !important;
+// }
 
 
 

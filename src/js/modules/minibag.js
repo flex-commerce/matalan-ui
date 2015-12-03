@@ -3,7 +3,7 @@
   var miniBagControl = $('.js-minibag, .js-minibag--view');
   var miniBagClose = $('.o-minibag--close');
   var miniBagAll = $('.o-minibag');
-  var clickCatcher = '<div id="js-clickcatcher-minibag" class="js-clickcatcher"></div>';
+  var clickCatcher = '<div id="js-clickcatcher-minibag" class="js-clickcatcher js-clickcatcher-white"></div>';
   var miniBagActive = false;
 
 
@@ -31,13 +31,14 @@
 
     $(el).hover(function() {
       timer = setTimeout(function() {
+      if (!window.isMobileOrTablet.matches) {
         func(el);
+      }
       }, delay);
     }, function() {
       clearTimeout(timer);
     });
   }
-
 
   delayWithClear(miniBagControl, openMiniBag);
 

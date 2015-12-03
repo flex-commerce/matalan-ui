@@ -55,28 +55,45 @@
   }
 }
 
+// header spacing handling
+//
+.o-header__container {
+  @include mq($from: md, $until: lg) {
+    margin-top: 1em;
+  }
+}
 .o-header__brand {
-  max-width: 130px;
-  @include mq($from: md) {
+  position: relative;
+  margin: 0 auto;
+
+  @include mq($from: xs, $until: md) {
+    max-width: 130px;
+  }
+  @include mq($from: md, $until: lg) {
     max-width: 155px;
   }
   @include mq($from: lg) {
+    margin-left: 0;
     max-width: 250px;
   }
+
   img {
-    margin-top: 25px;
+    @include mq($from: xs, $until: md) {
+      margin: rem-calc(14 0 0 0);
+    }
     @include mq($from: md, $until: lg) {
-      margin-top: 1em;
+      margin-top: 0.5em;
       margin-bottom: 0.5em;
     }
     @include mq($from: lg) {
-      margin-top: 20px;
+      margin: rem-calc(20 15 0 15);
     }
   }
 }
 
+
 .o-header__search {
-  text-align: right;
+  @include font-size(13px);
   a {
     color: $dark-grey;
     text-decoration: underline;
@@ -192,12 +209,10 @@
 
 // ===================== nub
 .o-header__search {
-  outline: none !important;
   position: relative;
-  // overflow: hidden;
+  text-align: right;
 }
 .header--mobile-search.active {
-  outline: none !important;
   .tempnub {
     display: inline-block;
   }

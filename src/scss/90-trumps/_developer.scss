@@ -1,5 +1,16 @@
 // scss-lint:disable all
 
+// .container {
+//   background-color: #f8f8f8;
+//   .row {
+//     background-color: rgba(0,0,0,0.1);
+//     outline: 1px solid rgba(255,0,0,0.2);
+//   }
+// }
+// [class*='col-']{
+//   outline: 1px solid rgba(0,150,150,0.2);
+// }
+
 /**
  *  Various developer rules for testing and such
  */
@@ -223,3 +234,5 @@ pre {
 .signup-success {
   display:none;
 }
+
+

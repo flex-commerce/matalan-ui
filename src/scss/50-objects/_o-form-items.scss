@@ -75,14 +75,18 @@ textarea {
 .o-form-input--contain {
   &.o-option__inline,
   &.o-option__block {
-    padding: $default-pad-y $default-pad-x;
+    // padding: $default-pad-y $default-pad-x;
+    // outline: 1px dotted red;
+    @include clearfix;
   }
 }
 
 // spacing between multiple inline option labels
 .o-option__block > .o-form-label__option {
   display: block;
-  margin-bottom: rem-calc(12);
+  margin-bottom: rem-calc(4);
+  cursor: pointer;
+
 }
 
 

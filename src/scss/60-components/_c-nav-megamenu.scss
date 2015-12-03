@@ -100,9 +100,11 @@
     font-weight: bold;
   }
 }
-
-
-
+.sub-nav-item > .link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 @include mq($until: lg) {
   .navbar--top-item > .link,
@@ -229,6 +231,7 @@
        display: inline-block;
        margin-bottom: 1em;
        width: 100%;
+       -webkit-column-break-inside: avoid;
     }
     // end this little ruleset
   }
@@ -256,22 +259,26 @@
   }
   .sub-nav--group--container {
     padding-right: 185px;
-    min-height: 300px;
+    min-height: 500px;
   }
 }
 
 // temp
 
-html.body--modal-open {
-  .js-clickcatcher {
+// html.body--modal-open {
+  .js-clickcatcher-white {
     display: block;
     @include position(fixed, top 0 right 0 bottom 0 left 0);
     will-change: transform;
-    background-color: rgba($black, 0.5);
+    background-color: rgba($white, 0.5);
     z-index: 3;
   }
+// }
+.body--modal-open__nav {
+  .accessible-navmenu.c-navbar {
+    z-index: 10;
+  }
 }
-
 
 @include mq($from: lg) {
   .nav-menu-icons {

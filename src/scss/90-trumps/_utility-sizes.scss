@@ -36,6 +36,11 @@ Sizing Sizes Legend
 */
 
 @each $key, $val in $sizing-sizes {
+
+  /* ============================== *\
+    Paddings
+  \* ============================== */
+
   %u-pad-#{$key},
   .u-pad-#{$key} {
     padding: halve($val) $val;
@@ -72,6 +77,10 @@ Sizing Sizes Legend
   .u-pad-l-#{$key} {
     padding-left: $val;
   }
+
+  /* ============================== *\
+    Margins
+  \* ============================== */
 
   %u-mar-#{$key},
   .u-mar-#{$key} {
@@ -110,6 +119,37 @@ Sizing Sizes Legend
   }
 }
 
+/* ============================== *\
+    Resets
+\* ============================== */
+
+.u-pad-t-0,
+%u-pad-t-0 {
+  padding-top: 0 !important;
+}
+.u-pad-r-0,
+%u-pad-r-0 {
+  padding-right: 0 !important;
+}
+.u-pad-b-0,
+%u-pad-b-0 {
+  padding-bottom: 0 !important;
+}
+.u-pad-l-0,
+%u-pad-l-0 {
+  padding-left: 0 !important;
+}
+.u-pad-h-0,
+%u-pad-h-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.u-pad-v-0,
+%u-pad-v-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 %u-pad-0,
 .u-pad-0 {
   padding: 0 !important;
@@ -119,6 +159,11 @@ Sizing Sizes Legend
 .u-mar-0 {
   margin: 0 !important;
 }
+
+
+/* ============================== *\
+    Autos
+\* ============================== */
 
 %u-mar-t-a,
 .u-mar-t-a {

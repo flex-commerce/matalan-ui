@@ -130,6 +130,7 @@ limitations under the License.
         190: "."
       }
     };
+    var clickCatcher = '<div id="js-clickcatcher-meganav" class="js-clickcatcher js-clickcatcher-white"></div>';
   /**
    * @desc Creates a new accessible mega menu instance.
    * @param {jquery} element
@@ -247,6 +248,10 @@ limitations under the License.
             .removeClass(settings.openClass)
             .filter('.' + settings.panelClass)
             .attr('aria-hidden', 'true');
+
+          $('#js-clickcatcher-meganav').remove();
+          $('html').removeClass('body--modal-open__nav');
+
           if ((event.type === 'keydown' && event.keyCode === Keyboard.ESCAPE) || event.type === 'DOMAttrModified') {
             newfocus = topli.find(':tabbable:first');
             setTimeout(function() {
@@ -264,6 +269,10 @@ limitations under the License.
         }
       } else {
         clearTimeout(that.focusTimeoutID);
+        if( !$('html').hasClass('body--modal-open__nav') ) {
+          $('body').append(clickCatcher);
+          $('html').addClass('body--modal-open__nav');
+        }
         topli.siblings()
           .find('[aria-expanded]')
           .attr('aria-expanded', 'false')
