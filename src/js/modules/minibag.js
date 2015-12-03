@@ -3,7 +3,7 @@
   var miniBagControl = $('.js-minibag, .js-minibag--view');
   var miniBagClose = $('.o-minibag--close');
   var miniBagAll = $('.o-minibag');
-  var clickCatcher = '<div id="js-clickcatcher-minibag" class="js-clickcatcher js-clickcatcher-white"></div>';
+  var clickCatcher = '<div id="js-clickcatcher-minibag" class="js-clickcatcher"></div>';
   var miniBagActive = false;
 
 

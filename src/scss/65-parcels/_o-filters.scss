@@ -69,6 +69,11 @@ $filters-border-color: $keyline-color;
 
 
 // misc rules ======================================
+
+.o-filters {
+  background: #fff;
+}
+
 .o-filters-contain {
   position: relative;
   @include mq($until: lg) {
