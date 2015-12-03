@@ -8,14 +8,10 @@
           <form id="email-signup" name="email-signup" class="form-inline c-search-form">
             <div class="o-form-row">
               <div class="o-form--input-group o-form-input--contain">
-                <input type="email" class="input--textual input-addon--expand" placeholder="Enter email address" required>
-                <div>
-                  <button type="submit" data-close="email-signup" class="sign-up--button c-search__button" style="
-                      line-height: 1.9;
-                      padding: 4px 7px;
-                      display: block;
-                  ">Sign&nbsp;up</button>
-                </div>
+                <input type="email" class="input--textual input-addon--expand" placeholder="Enter Keyword or Product Code" pattern=".{3,}" title="3 characters minimum" required>
+                    <div class="input-group--addon input-group--addon__button unstyled c-search__button">
+                      <button type="submit" class="">Search</button>
+                    </div>
               </div>
             </div>
           </form>
