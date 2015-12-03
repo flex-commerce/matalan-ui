@@ -28,9 +28,10 @@
   }
 
   @include mq($from: md) {
-    @include center(y, abs);
+    @include center(y,abs);
     right: 1em;
     text-align: right;
+    left:30%;
   }
 
 }
