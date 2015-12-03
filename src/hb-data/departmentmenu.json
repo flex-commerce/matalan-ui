@@ -1,16 +1,4 @@
 [{
-  "menuTitle": "Mens",
-  "menuImage": "img/mens-department.png",
-  "menuItems": [
-    "Suits",
-    "Jeans",
-    "Party",
-    "Jumpers",
-    "Polo Shirts",
-    "Nightware",
-    "Tops"
-  ]
-}, {
   "menuTitle": "Womens",
   "menuImage": "img/womens-department.png",
   "menuItems": [
@@ -21,6 +9,20 @@
     "Skirts",
     "Jackets",
     "Trousers"
+  ]
+},
+{
+  "menuTitle": "Mens",
+  "menuImage": "img/mens-department.png",
+  "menuItems": [
+    "Suits",
+    "Jeans",
+    "Party",
+    "Jumpers",
+    "Polo Shirts",
+    "Nightware",
+    "Tops",
+    "Underwear"
   ]
 }, {
   "menuTitle": "Boys",

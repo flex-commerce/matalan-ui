@@ -4,6 +4,7 @@ $filters-border-color: $keyline-color;
 // flex start ======================================
 @include mq($from: md, $until: lg) {
   .o-filters {
+    background: $white;
     display: flex;
     flex-direction: column;
     .o-filters--inner {
