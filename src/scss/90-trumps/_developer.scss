@@ -1,5 +1,13 @@
 // scss-lint:disable all
 
+
+.developer-tools {
+  @include fixed (top 1em left 1em);
+  opacity: 0.4;
+  &:hover {
+    opacity: 1;
+  }
+}
 // .container {
 //   background-color: #f8f8f8;
 //   .row {

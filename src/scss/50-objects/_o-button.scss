@@ -97,7 +97,7 @@ $button-padding-y: $default-pad-y;
 
 .c-btn-grp-dropdown {
 
-  .c-btn-dropdown {
+  .c-btn + .c-btn-dropdown {
     margin-left: rem-calc(-4);
     position: relative;
 
