@@ -48,14 +48,14 @@
               <a class="c-btn hidden-lg-up header--mobile-search u-no-bord-vis">
                 <i class="icon icon-search"></i>
               </a>
-              <a class="c-btn hidden-lg-down js-minibag--view u-font-upper u-no-bord-vis">View your bag (8)</a>
+              <a class="c-btn hidden-lg-down js-minibag--view u-font-upper u-no-bord-vis">View your bag ({{minibag.category.collection.products.length}})</a>
             </div>
           </div>
 
           <div class="col-xs-6 col-md-3 col-lg-push-6 u-pad-l-0">
             <a class="c-btn hidden-lg-up js-minibag u-no-bord">
               <span class="o-icon-with-addon"><i class="icon icon-minibag"></i>
-                <span class="">8</span>
+                <span class="">{{minibag.category.collection.products.length}}</span>
               </span>
             </a>
             <button class="js-minibag c-btn c-btn-secondary__alt c-btn-block hidden-lg-down u-font-upper" type="button">Checkout</button>
