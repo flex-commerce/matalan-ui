@@ -55,7 +55,7 @@
               <a class="c-btn hidden-lg-up header--mobile-search u-no-bord">
                 <i class="icon icon-search"></i>
               </a>
-              <a class="c-btn hidden-lg-down js-minibag--view u-font-upper ">View your bag (0)</a>
+              <a class="c-btn hidden-lg-down js-minibag--view u-font-upper ">View your bag (8)</a>
             </div>
           </div>
 
@@ -71,16 +71,15 @@
 
           <div class="col-sm-12 col-md-8 col-lg-6 col-lg-pull-6 hidden-lg-down u-pad-0">
             <div class="o-header__search--bar">
-              <form class="form-inline c-search-form">
+              <form id="searchProducts" class="form-inline c-search-form">
                 <div class="o-form-row">
                   <div class="o-form--input-group o-form-input--contain">
                     <div class="input-group--addon unstyled input-group--addon__inset">
                       <i class="icon icon-search"></i>
                     </div>
-                    <input type="text" class="input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter Keyword or Product Code" min="3">
-
-                    <div class="input-group--addon unstyled c-search__button">
-                      <button type="submit">Search</button>
+                    <input type="text" name="searchTerm" class="input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter Keyword or Product Code" pattern=".{3,}" title="3 characters minimum" required>
+                    <div class="input-group--addon input-group--addon__button unstyled c-search__button">
+                      <button type="submit" class="">Search</button>
                     </div>
                   </div>
                 </div>
