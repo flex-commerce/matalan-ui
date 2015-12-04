@@ -50,13 +50,13 @@ module.exports = scssTask;
 
 
 
-var scsslintTask = function () {
-  var reporter = stylish();
-  return gulp.src( path.join(config.app.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}') )
-  .pipe( scssLint({ customReport: reporter.issues, config: '.scsslint.yml' }) )
-  .on('error', handleErrors)
-  .pipe( reporter.printSummary );
-}
+// var scsslintTask = function () {
+//   var reporter = stylish();
+//   return gulp.src( path.join(config.app.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}') )
+//   .pipe( scssLint({ customReport: reporter.issues, config: '.scsslint.yml' }) )
+//   .on('error', handleErrors)
+//   .pipe( reporter.printSummary );
+// }
 
-gulp.task('css:lint', scsslintTask);
-module.exports = scsslintTask;
+// gulp.task('css:lint', scsslintTask);
+// module.exports = scsslintTask;
