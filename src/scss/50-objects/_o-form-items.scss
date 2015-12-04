@@ -10,6 +10,11 @@ textarea {
   border-color: $cool-grey;
 }
 
+.input--textual,
+textarea {
+  width: 100%;
+}
+
 .o-form-input__contain {
   .input--textual,
   textarea {
