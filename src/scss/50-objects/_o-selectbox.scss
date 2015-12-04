@@ -4,6 +4,9 @@ $selectbox-active-color: $primary-color;
 $selectbox-hover-bg-color: $light-grey-hover;
 $selectbox-hover-txt-color: $primary-color;
 
+select {
+  opacity: 0;
+}
 
 /* Make webkit behave */
 select.selectbox {

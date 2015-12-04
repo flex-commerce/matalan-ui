@@ -63,12 +63,12 @@ $button-padding-y: $default-pad-y;
 
 %c-btn-tertiary--alt,
 .c-btn-tertiary--alt {
-  @include style-variant($color: $dark-grey, $background: $white, $border: $cool-grey);
+  @include style-variant($color: $cool-grey, $background: $white, $border: $cool-grey);
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey-hover);
+    @include style-variant($color: $cool-grey, $background: $white, $border: $cool-grey-hover);
   }
 }
 
@@ -93,21 +93,21 @@ $button-padding-y: $default-pad-y;
   }
 }
 
+.c-btn + .c-dropdown {
+  margin-left: rem-calc(-3);
+}
 
 
 .c-btn-grp-dropdown {
-
-  .c-btn + .c-btn-dropdown {
-    margin-left: rem-calc(-4);
-    position: relative;
-
-    &:after {
-      content: '';
-      @include absolute(top -1px bottom -1px left -1px);
-      border-style: none none none solid;
-      border-width: 1px;
-    }
-  }
+  // .c-btn + .c-btn-dropdown {
+  //   position: relative;
+  //   &:after {
+  //     content: '';
+  //     @include absolute(top -1px bottom -1px left -1px);
+  //     border-style: none none none solid;
+  //     border-width: 1px;
+  //   }
+  // }
 
   .c-btn-secondary:hover + .c-btn-dropdown {
     &:after {

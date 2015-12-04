@@ -44,8 +44,8 @@
               </ul>
             </div>
 
-            <div class="o-minibag--list-item--control col-xs-3 col-xs-offset-3 col-md-5 col-md-offset-0 col-lg-3">
-              <select class="o-minibag--control--select selectbox-dropdown__inline hidden-lg-down">
+            <div class="o-minibag--list-item--control col-lg-3 hidden-lg-down">
+              <select class="o-minibag--control--select selectbox-dropdown__inline">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -55,12 +55,19 @@
                   <span class="hidden-lg-down">&times;</span> remove</a>
               </div>
             </div>
-            <div class="o-minibag--list-item--control o-minibag--list-item--quant col-xs-6 col-md-5 col-lg-3 hidden-lg-up">
-              <div class="o-form-input--contain__quantity">
-                <a class="c-btn c-btn-primary__alt u-no-underline">-</a>
-                <input type="number" class="input--textual" value="1" readonly>
-                <a class="c-btn c-btn-primary__alt u-no-underline">+</a>
-              </div>
+
+            <div class="o-minibag--list-item--control o-minibag--list-item--quant col-xs-12 col-md-10 hidden-lg-up">
+              <!-- <div class="row"> -->
+                <div class="o-minibag--control--remove col-xs-4 u-pad-0">
+                  <a class="link u-dis-b u-font-no-underline" href="#">
+                    <span class="hidden-lg-down">&times;</span> remove</a>
+                </div>
+                <div class="o-form-input--contain__quantity col-xs-8 u-pad-0 u-font-ta-r">
+                  <a class="c-btn c-btn-primary__alt u-no-underline">-</a>
+                  <input type="number" class="input--textual" value="1" readonly>
+                  <a class="c-btn c-btn-primary__alt u-no-underline">+</a>
+                </div>
+              <!-- </div> -->
             </div>
 
           </li>

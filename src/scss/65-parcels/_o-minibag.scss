@@ -32,11 +32,9 @@ $minibag-desktop-width: 364px; // magic
     width: 100%;
     height: 100%;
   }
+
   .o-minibag--list-item--control {
     padding: 0;
-  }
-  .o-minibag--list-item--control.o-minibag--list-item--quant {
-    text-align: right;
   }
 }
 
@@ -51,9 +49,6 @@ $minibag-desktop-width: 364px; // magic
     // todo - check paddings
     padding: 0 0 0 1em;
     margin-top: 1em;
-  }
-  .o-minibag--list-item--control.o-minibag--list-item--quant {
-    text-align: right;
   }
   .o-minibag--control--select {
     position: absolute;
