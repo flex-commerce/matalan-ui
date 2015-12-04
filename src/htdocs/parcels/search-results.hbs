@@ -7,10 +7,10 @@
   </div>
 </div>
 <div class="row">
-  <div class="search-results--side">
+  <div class="search-results__side">
     {{> parcels/search-filters }}
   </div>
-  <div class="search-results--main search-results__tight">
+  <div class="search-results__main search-results__tight">
     <h4>{{searchresults.results.searchTerm}}</h4>
     <div class="search-results--header u-cf">
       <div class="search--header--products col-xs-6 col-lg-3 hidden-lg-down">
@@ -74,13 +74,13 @@
     <div class="search-results--inner row">
       {{#each searchresults.results.products}}
       <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
-        <div class="results--image">
+        <div class="results__image">
           <img class="img"  src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
           <!--<div data-content="overlay 1" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
           <div data-content="overlay 2" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
           <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div> -->
         </div>
-        <div class="results--detail">
+        <div class="results__detail">
 
           <div class="u-mar-v-medium">{{productTitle}}</div>
           <div class="u-mar-v-medium u-font-wb  u-mar-t-a">{{productPrice}}</div>
@@ -98,7 +98,7 @@
       {{/each }}
     </div>
 
-    <div class="search-results--footer">
+    <div class="search-results__footer">
 
       <div class="c-pagination-bar hidden-lg-down u-fr">
         <div class="c-pagination-bar__list">
@@ -119,7 +119,7 @@
             <span class="hidden-md-down">Previous</span>
           </a>
         </div>
-        <div class="selectbox--contain__mobile col-xs-6">
+        <div class="selectbox__contain-mobile col-xs-6">
           <select id="pager" class="selectbox selectbox-full u-fl" >
             <option selected="selected" disabled="disabled">Page</option>
             <option value="">1</option>

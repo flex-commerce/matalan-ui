@@ -3,11 +3,11 @@
   margin: 5px 0;
 }
 
-.o-section-department--slick .slick-slide {
+.o-section-department__slick .slick-slide {
   min-height: 150px;
 }
 
-.o-section-department--outer {
+.o-section-department__outer {
   // border: 1px solid red;
   min-height: 150px;
   padding: 0.5em;
@@ -17,7 +17,7 @@
   }
 }
 
-.o-section-department--inner {
+.o-section-department__inner {
   border: 1px solid $cool-grey;
   position: absolute;
   top: 20px;
@@ -26,7 +26,7 @@
   right: 20px;
   content: "";
 }
-.o-section-department--title {
+.o-section-department__title {
   @include center(x,abs);
   color: $primary-color;
   background-color: $white;
@@ -35,7 +35,7 @@
   @include font-size(20px, 22px);
 }
 
-.o-section-department--link.o-section-department--link {
+.o-section-department__link.o-section-department__link {
   border: 1px solid $cool-grey;
   @include center(x,abs);
   background-color: $white;
@@ -46,7 +46,7 @@
   text-decoration: none;
 }
 
-.o-section-department--list {
+.o-section-department__list {
   width: 66%;
   padding: 10px;
   float: left;
@@ -58,7 +58,7 @@
   }
 }
 
-.o-section-department--image {
+.o-section-department__image {
   width: 33%;
   height: 100%;
   float: right;
@@ -113,38 +113,38 @@
   clear:both;
 }
 
-.o-section--detail {
+.o-section__detail {
   background-color: $white;
   padding: 5px 5px;
   color: $primary-color;
 }
 
-.o-section--detail--center {
+.o-section__detail--center {
   @include center(xy,abs);
 }
 
-.o-section--detail--top {
+.o-section__detail--top {
   @include center(x,abs);
   top: 1em;
 }
 
-.o-section--detail--bottom {
+.o-section__detail--bottom {
   @include center(x,abs);
   bottom: 1em;
 }
 
-.o-section--detail--midright {
+.o-section__detail--midright {
   @include center(y,abs);
   right: 1em;
 }
 
 
-.o-section--detail--midleft {
+.o-section__detail--midleft {
   @include center(y,abs);
   left: 1em;
 }
 
-.o-section--detail-title {
+.o-section__detail-title {
   @include font-size(25px, 30px);
   color: $dark-grey;
 }
@@ -198,7 +198,7 @@
   }
 }
 
-.o-section-detail--link {
+.o-section__detail-link {
   text-decoration: underline;
   padding: 1em;
 }

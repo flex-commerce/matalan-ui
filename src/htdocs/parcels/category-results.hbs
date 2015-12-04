@@ -10,10 +10,10 @@
   </div>
 </div>
 <div class="row">
-  <div class="search-results--side">
+  <div class="search-results__side">
     {{> parcels/search-filters }}
   </div>
-  <div class="search-results--main search-results__tight">
+  <div class="search-results__main search-results__tight">
     <div class="o-category-container u-font-ta-c">
       <h2 class="u-font-upper u-mar-b-huge">{{productspartywear.category.catTitle}}</h2>
       <p>{{productspartywear.category.catDescription}}</p>
@@ -86,14 +86,14 @@
     <div class="search-results--inner row">
       {{#each productspartywear.category.collection.products}}
       <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
-        <div class="results--image">
+        <div class="results__image">
           <img class="img" src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
 
           <!--<div data-content="overlay 1" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
           <div data-content="overlay 2" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
           <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div> -->
         </div>
-        <div class="results--detail">
+        <div class="results__detail">
           <div class="u-mar-v-medium">{{productTitle}}</div>
           <div class="u-mar-v-medium u-font-wb">{{productPrice}}</div>
           <div class="c-btn c-btn-primary__alt u-mar-v-medium hidden-lg-down u-mar-t-a">View</div>
@@ -109,7 +109,7 @@
       </div>
       {{/ each }}
     </div>
-    <div class="search-results--footer u-fr">
+    <div class="search-results__footer u-fr">
       <div class="c-pagination-bar">
         <div class="c-pagination-bar__list">
           <a href="" class="c-btn c-btn-paginate">View All</a>

@@ -1,33 +1,33 @@
-<div class="o-filters-contain">
+<div class="o-filters__contain">
   <div class="o-filters">
-    <div class="o-filters--header">
+    <div class="o-filters__header">
       <div class="u-cf">
         <h2 class="u-fl hidden-lg-up">Filter Products</h2>
         <h4 class="u-fl hidden-lg-down">Filter Products by:</h4>
         <span class="meta clear__filters hidden-lg-down" >clear all (&times;)</span>
 
-        <a class="o-filters--close link u-font-ta-c u-fr hidden-lg-up u-mar-l-large">
+        <a class="o-filters__close link u-font-ta-c u-fr hidden-lg-up u-mar-l-large">
           <i class="icon icon-cross"></i>
           <div class="">apply</div>
         </a>
-        <a class="o-filters--close link u-font-ta-c u-fr hidden-lg-up ">
+        <a class="o-filters__close link u-font-ta-c u-fr hidden-lg-up ">
           <i class="icon icon-cross"></i>
           <div class="">clear all</div>
         </a>
       </div>
       <div class="separator u-pad-0"></div>
     </div>
-    <div class="o-filters--inner js-scroll-hold u-scrollbar" data-scroll-responsive="sm-md">
-      <ul class="o-filters--list-contain">
+    <div class="o-filters__inner js-scroll-hold u-scrollbar" data-scroll-responsive="sm-md">
+      <ul class="o-filters__list-contain">
         {{#each filters}}
-          <li class="o-filters--list o-filters--list-item u-cf">
-            <div class="o-filters--list-item--detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
+          <li class="o-filters__list o-filters__list-item u-cf">
+            <div class="o-filters__list-item-detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
               <p data-icon-toggle="icon-minus icon-plus" class="filter--title collapse u-font-wb u-color-grey60">{{filterTitle}}
                 <i class="icon icon-plus"></i>
                 <span class="meta expand">expand</span>
                 <span class="meta collapse">collapse</span>
               </p>
-              <div class="o-form-input--contain o-option__block filter--list--checkbox auto-column__medium">
+              <div class="o-form-input__contain o-option__block filter--list--checkbox auto-column__medium">
                 {{#with filtersDetail}} {{#each this}}
                 <label class="o-form-label o-form-label__option u-color-grey60">
                   <input type="checkbox">
@@ -43,8 +43,8 @@
             </div>
           </li>
         {{/each }}
-        <li class="o-filters--list o-filters--list-item u-cf">
-          <div class="o-filters--list-item--detail col-xs-12 col-sm-12 col-md-12 col-lg-12 u-pad-h-none">
+        <li class="o-filters__list o-filters__list-item u-cf">
+          <div class="o-filters__list-item-detail col-xs-12 col-sm-12 col-md-12 col-lg-12 u-pad-h-none">
             <p class="filter--title collapse u-font-wb u-color-grey60">Colours<i class="icon icon-plus"></i>
               <span class="meta expand">expand</span>
               <span class="meta collapse">collapse</span>
@@ -56,13 +56,13 @@
             </ul>
           </div>
         </li>
-        <li class="o-filters--list o-filters--list-item u-cf">
-          <div class="o-filters--list-item--detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
+        <li class="o-filters__list o-filters__list-item u-cf">
+          <div class="o-filters__list-item-detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
             <p class="filter--title collapse u-font-wb u-color-grey60">Rating<i class="icon icon-plus"></i>
               <span class="meta expand">expand</span>
               <span class="meta collapse">collapse</span>
             </p>
-            <div class="o-form-input--contain o-option__block filter--list--checkbox auto-column__medium ">
+            <div class="o-form-input__contain o-option__block filter--list--checkbox auto-column__medium ">
               <label class="o-form-label o-form-label__option">
                 <input type="checkbox">
                 <span></span>
@@ -138,8 +138,8 @@
             </div>
           </div>
         </li>
-        <li class="o-filters--list o-filters--list-item u-cf">
-          <div class="o-filters--list-item--detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
+        <li class="o-filters__list o-filters__list-item u-cf">
+          <div class="o-filters__list-item-detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
             <p class="filter--title collapse u-font-wb u-color-grey60">Price<i class="icon icon icon-plus"></i>
               <span class="meta expand">expand</span>
               <span class="meta collapse">collapse</span>
@@ -150,13 +150,13 @@
             </div>
           </div>
         </li>
-        <li class="o-filters--list o-filters--list-item u-cf">
-          <div class="o-filters--list-item--detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
+        <li class="o-filters__list o-filters__list-item u-cf">
+          <div class="o-filters__list-item-detail col-xs-12 col-md-12 col-lg-12 u-pad-h-none">
             <p class="filter--title collapse u-font-wb u-color-grey60">Price - Alternative<i class="icon icon icon-plus"></i>
               <span class="meta expand">expand</span>
               <span class="meta collapse">collapse</span>
             </p>
-            <div class="o-form-input--contain o-option__block filter--list--checkbox auto-column__medium">
+            <div class="o-form-input__contain o-option__block filter--list--checkbox auto-column__medium">
               <label class="o-form-label o-form-label__option u-color-grey60">
                 <input type="radio" name="priceRange">
                 <span></span>

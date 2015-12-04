@@ -13,11 +13,11 @@ select.selectbox {
     width: 100%;
   }
 }
-.selectbox--contain__desktop > select.selectbox {
+.selectbox__contain-desktop > select.selectbox {
   -webkit-appearance: none;
   display: none;
 }
-.selectbox--contain__mobile > a.selectbox {
+.selectbox__contain-mobile > a.selectbox {
   pointer-events: none;
 }
 

@@ -1,6 +1,6 @@
 $footer-bg-color: $light-grey-hover;
 
-.o-footer--container {
+.o-footer__container {
   margin-top: 4em;
   padding-bottom: 3em;
   border-top: 1px solid $cool-grey;
@@ -14,7 +14,7 @@ $footer-bg-color: $light-grey-hover;
   }
 }
 
-.o-footer--card-svg {
+.o-footer__card-svg {
   float: left;
   height: 50px;
   padding: 0.5em 0;
@@ -23,7 +23,7 @@ $footer-bg-color: $light-grey-hover;
   }
 }
 
-.o-footer--card-svg:not(.o-footer--card-svg__small) {
+.o-footer__card-svg:not(.o-footer__card-svg__small) {
   width: 25%;
   .svg {
     @include center(x);
@@ -31,7 +31,7 @@ $footer-bg-color: $light-grey-hover;
   }
 }
 
-.o-footer--card-svg__small {
+.o-footer__card-svg__small {
   width: 20%;
 }
 
@@ -97,7 +97,7 @@ $footer-bg-color: $light-grey-hover;
 
 
 
-.o-footer--subscribe .o-form--input-group {
+.o-footer__subscribe .o-form--input-group {
     @include mq($from: md) {
   min-width: 350px;
 }

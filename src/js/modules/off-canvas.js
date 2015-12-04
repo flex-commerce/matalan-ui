@@ -38,7 +38,7 @@
     })
 
     // toggle top level nav item
-    $parentNavMenu.on('mousedown', '.navbar--top-item > .link', function(e) {
+    $parentNavMenu.on('mousedown', '.navbar__top-item > .link', function(e) {
       e.preventDefault();
       if (!$(this).hasClass('open')) {
         // if this isn't already open, close any open siblings before proceeding

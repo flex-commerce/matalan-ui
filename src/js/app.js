@@ -53,7 +53,7 @@ function megamenuInit() {
     /* prefix for generated unique id attributes, which are required to indicate aria-owns, aria-controls and aria-labelledby */
     uuidPrefix: "accessible-menu",
     menuClass: "c-navbar",
-    topNavItemClass: "navbar--top-item",
+    topNavItemClass: "navbar__top-item",
     panelClass: "sub-nav",
     panelGroupClass: "sub-nav-group",
     hoverClass: "hover",
@@ -98,7 +98,7 @@ $('select').selectBox({
 // ===========================
 var slick = require("./vendors/slick");
 
-$('.o-section-department--slick').slick({
+$('.o-section-department__slick').slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,
@@ -203,7 +203,7 @@ require("./modules/scroll-lock");
           // .find('.icon')
           // .removeClass("icon-ui-tight-o")
           // .addClass('icon-ui-tight')
-          .closest('.search-results--main')
+          .closest('.search-results__main')
           .removeClass('search-results__wide')
           .addClass('search-results__tight');
       }
@@ -218,7 +218,7 @@ require("./modules/scroll-lock");
         // .find('.icon')
         // .removeClass("icon-ui-wide-o")
         // .addClass('icon-ui-wide')
-        .closest('.search-results--main')
+        .closest('.search-results__main')
         .removeClass('search-results__tight')
         .addClass('search-results__wide');
     }
