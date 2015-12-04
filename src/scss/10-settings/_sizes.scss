@@ -20,7 +20,7 @@ $base-space--huge: round($base-space * 2.6);
 
 
 $sizing-sizes: (
-  none: 0,
+  0: 0,
   tiny: $base-space--tiny,
   small: $base-space--small,
   medium: $base-space--medium,
