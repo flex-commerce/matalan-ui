@@ -728,7 +728,7 @@ limitations under the License.
         var settings = this.settings,
           nav = $(this.element),
           menu = nav.children().first(),
-          topnavitems = menu.children('.navbar--top-item');
+          topnavitems = menu.children('.navbar__top-item');
 
         // console.log('menu', menu);
         // console.log('topnavitems', topnavitems);

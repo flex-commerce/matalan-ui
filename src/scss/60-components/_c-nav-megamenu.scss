@@ -14,7 +14,7 @@
       left: 0;
     }
   }
-  &.active .navbar--top-item {
+  &.active .navbar__top-item {
     display: block;
     a {
       display: block;
@@ -81,14 +81,14 @@
 
 
 // typography for the mega menu and off canvas menu
-.navbar--header span,
-.navbar--top-item > .link,
+.navbar__header span,
+.navbar__top-item > .link,
 .sub-nav-title > .link {
   text-transform: uppercase;
 }
 
-.navbar--header span,
-.navbar--top-item > .link,
+.navbar__header span,
+.navbar__top-item > .link,
 .sub-nav-item > .link {
   text-decoration: none;
   color: $dark-grey;
@@ -107,7 +107,7 @@
 }
 
 @include mq($until: lg) {
-  .navbar--top-item > .link,
+  .navbar__top-item > .link,
   .sub-nav-title > .link,
   .sub-nav-item > .link {
     padding: 1.25em 1em;
@@ -119,7 +119,7 @@
   }
 
   // default icon rules & display
-  .nav-menu-icons {
+  .navbar__nav-menu-icons {
     margin-right: 0.4em;
     .icon:before {
       font-size: 1.5em;
@@ -141,7 +141,7 @@
   }
 
   // left inset icons display rules
-  .navbar--top-item, .sub-nav-title{
+  .navbar__top-item, .sub-nav-title{
     > .link.open {
       .icon-plus {
         display: none;
@@ -179,13 +179,13 @@
     background: $dark-grey-lighten-20;
   }
 
-  .navbar--top-item {
+  .navbar__top-item {
     border-top: 1px solid $dark-grey-lighten-20;
   }
   .sub-nav-title, .sub-nav-item  {
     border-top: 1px solid $dark-grey-lighten-30;
   }
-  .navbar--footer {
+  .navbar__footer {
     border-top: 1px solid $dark-grey-lighten-20;
   }
 }
@@ -204,7 +204,7 @@
     @include bleed(50vw);
     @include justify-parent;
   }
-  .navbar--top-item {
+  .navbar__top-item {
     @include justified-child;
   }
   .sub-nav.open {
@@ -220,7 +220,7 @@
 }
 
 // header flex rules
-.sub-nav--group--container {
+.sub-nav__group-container {
   @include mq($from: lg) {
     position: relative;
     // @TODO - this little ruleset will be used again...
@@ -257,7 +257,7 @@
     width: 170px;
     @include absolute(top 0 right 0);
   }
-  .sub-nav--group--container {
+  .sub-nav__group-container {
     padding-right: 185px;
     min-height: 500px;
   }
@@ -286,7 +286,7 @@
 }
 
 @include mq($from: lg) {
-  .nav-menu-icons {
+  .navbar__nav-menu-icons {
     display: none;
   }
   .sub-nav {

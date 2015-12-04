@@ -153,32 +153,32 @@ $list-border: $cool-grey;
 
 // ================================
 
-.list--text {
+.list__text {
   list-style-type: disc;
   margin-left: 1.5em;
 }
 .list-space__tiny {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-tiny;
   }
 }
 .list-space__small {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-small;
   }
 }
 .list-space__medium {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-medium;
   }
 }
 .list-space__large {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-large;
   }
 }
 .list-space__huge {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-huge;
   }
 }

@@ -44,10 +44,10 @@
     this.isMob = !options.mobile && navigator.userAgent.match(/iPad|iPhone|Android|IEMobile|BlackBerry/i)
 
     if (this.isMob) {
-      $(this.selectElement).parent().addClass('selectbox--contain__mobile');
+      $(this.selectElement).parent().addClass('selectbox__contain-mobile');
       // return false;
     } else {
-      $(this.selectElement).parent().addClass('selectbox--contain__desktop');
+      $(this.selectElement).parent().addClass('selectbox__contain-desktop');
     }
 
     // Element must be a select control

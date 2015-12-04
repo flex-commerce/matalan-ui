@@ -28,7 +28,7 @@ $input-padding-y: $default-pad-y;
     width: auto;
   }
   .o-form-label--contain,
-  .o-form-input--contain:not(.o-form--input-group) {
+  .o-form-input__contain:not(.o-form--input-group) {
     display: inline-block;
   }
 }
@@ -98,7 +98,7 @@ $input-padding-y: $default-pad-y;
     @include span(4);
     text-align: right;
   }
-  .o-form-input--contain {
+  .o-form-input__contain {
     @include span(8);
     text-align: left;
   }
@@ -111,7 +111,7 @@ $input-padding-y: $default-pad-y;
     @include form-item-size;
     text-align: right;
   }
-  .o-form-input--contain {
+  .o-form-input__contain {
     @include span(3);
   }
   .o-form-message--contain {

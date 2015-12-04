@@ -10,7 +10,7 @@ textarea {
   border-color: $cool-grey;
 }
 
-.o-form-input--contain {
+.o-form-input__contain {
   .input--textual,
   textarea {
     color: $base-text-color;
@@ -31,7 +31,7 @@ textarea {
 }
 
 // modified rules currently only used for minibag quantities
-.o-form-input--contain__quantity {
+.o-form-input__contain__quantity {
   input {
     max-width: 55px;
     text-align: center;
@@ -68,11 +68,11 @@ textarea {
 }
 
 // inline sub labels (options, radio etc)
-// .o-form-input--contain.o-option__inline {
+// .o-form-input__contain.o-option__inline {
 //   @include clearfix;
 // }
 // keep text labels in line
-.o-form-input--contain {
+.o-form-input__contain {
   &.o-option__inline,
   &.o-option__block {
     // padding: $default-pad-y $default-pad-x;

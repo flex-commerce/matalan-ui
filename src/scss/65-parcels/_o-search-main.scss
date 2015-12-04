@@ -1,8 +1,8 @@
-.search-results--side {
+.search-results__side {
   @include column( (xs: 2.5) );
 }
 
-.search-results--main {
+.search-results__main {
   @include column( (xs: 12, lg: 9.5) );
 }
 
@@ -63,7 +63,7 @@
 }
 
 .search-results--item {
-  .results--image {
+  .results__image {
     position: relative;
     .img {
       width: 100%;
@@ -120,7 +120,7 @@ html.flexbox {
   .search-results--item {
     display: flex;
     flex-direction: column;
-    .results--detail {
+    .results__detail {
       display: flex;
       flex-direction: column;
       flex: 1;

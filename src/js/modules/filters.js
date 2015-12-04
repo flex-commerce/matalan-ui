@@ -2,7 +2,7 @@
   'use strict';
 
   var filtersControl = $('.js-filters');
-  var filtersClose = $('.o-filters--close');
+  var filtersClose = $('.o-filters__close');
   var clickCatcher = '<div data-app="toggle" data-toggle=".filters" id="js-clickcatcher-filters" class="js-clickcatcher"></div>';
   var filtersActive = false;
 

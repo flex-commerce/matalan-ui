@@ -9,14 +9,14 @@
 }
 
 .c-navbar {
-  .navbar--top-item {
+  .navbar__top-item {
     @include font-size(11px);
   }
 }
 
 @include mq($until: lg) {
   .c-navbar {
-    .navbar--header {
+    .navbar__header {
       overflow: hidden;
       padding: 0.5rem 0.75rem;
       @include font-size(12px);
@@ -27,7 +27,7 @@
         }
       }
     }
-    .navbar--footer {
+    .navbar__footer {
       padding: 0.5rem 0.75rem;
       > .link {
         display: block;
@@ -42,14 +42,14 @@
 
 
 @include mq($from: lg) {
-  .navbar--header,
-  .navbar--footer {
+  .navbar__header,
+  .navbar__footer {
     display: none;
   }
   .c-navbar {
     @include border-tb-default(1px);
   }
-  .navbar--top-item {
+  .navbar__top-item {
     display: inline-block;
     color: $base-text-color;
     text-decoration: none;
