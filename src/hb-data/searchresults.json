@@ -12,7 +12,9 @@
       "productLink": "#",
       "productPrice": "£20.00",
       "productRating": 3,
-      "colors": "2"
+      "colors": "2",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "Lurex Tube Dress",
       "productImages": [
@@ -22,7 +24,9 @@
       "productLink": "#",
       "productPrice": "£18.00",
       "productRating": 4,
-      "colors": "2"
+      "colors": "2",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "High Neck Swing Dress",
       "productImages": [
@@ -32,7 +36,9 @@
       "productLink": "#",
       "productPrice": "£12.00",
       "productRating": 4,
-      "colors": "2"
+      "colors": "2",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "High Neck Swing Dress",
       "productImages": [
@@ -42,7 +48,9 @@
       "productLink": "#",
       "productPrice": "£10.00",
       "productRating": 4,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "FWM 2 In 1 Lace Dress",
       "productImages": [
@@ -52,7 +60,9 @@
       "productLink": "#",
       "productPrice": "£40.00",
       "productRating": 3,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "V Neck Dress",
       "productImages": [
@@ -62,7 +72,9 @@
       "productLink": "#",
       "productPrice": "£10.00",
       "productRating": 5,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "FWM Ruched Wrap Dress",
       "productImages": [
@@ -72,7 +84,9 @@
       "productLink": "#",
       "productPrice": "£30.00",
       "productRating": 5,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "Fluted A-Line Dress",
       "productImages": [
@@ -82,7 +96,9 @@
       "productLink": "#",
       "productPrice": "£18.00",
       "productRating": 4,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "Pocket Shift Dress",
       "productImages": [
@@ -92,7 +108,9 @@
       "productLink": "#",
       "productPrice": "£10.00",
       "productRating": 4,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "High Neck Swing Dress",
       "productImages": [
@@ -102,7 +120,9 @@
       "productLink": "#",
       "productPrice": "£10.00",
       "productRating": 4,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "Suit Dress",
       "productImages": [
@@ -112,7 +132,9 @@
       "productLink": "#",
       "productPrice": "£16.00",
       "productRating": 4,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }, {
       "productTitle": "Suit Dress",
       "productImages": [
@@ -122,7 +144,9 @@
       "productLink": "#",
       "productPrice": "£16.00",
       "productRating": 4,
-      "colors": "1"
+      "colors": "1",
+      "promotionText": "New",
+      "promotionPosition": "tl"
     }]
   }
 }
