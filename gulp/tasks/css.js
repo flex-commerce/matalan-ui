@@ -14,8 +14,8 @@ var logger        = require('../util/compileLogger');
 var pkg           = require('../../package.json');
 var minifyCSS     = require('gulp-minify-css');
 var header        = require('gulp-header');
-var scssLint      = require('gulp-scss-lint');
-var stylish       = require('gulp-scss-lint-stylish2');
+// var scssLint      = require('gulp-scss-lint');
+// var stylish       = require('gulp-scss-lint-stylish2');
 
 var paths = {
   src: path.join(config.app.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}'),
@@ -58,14 +58,3 @@ module.exports = scssTask;
 
 
 
-
-// var scsslintTask = function () {
-//   var reporter = stylish();
-//   return gulp.src( path.join(config.app.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}') )
-//   .pipe( scssLint({ customReport: reporter.issues, config: '.scsslint.yml' }) )
-//   .on('error', handleErrors)
-//   .pipe( reporter.printSummary );
-// }
-
-// gulp.task('css:lint', scsslintTask);
-// module.exports = scsslintTask;

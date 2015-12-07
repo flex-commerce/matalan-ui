@@ -1,13 +1,17 @@
 // clearfixes
+%u-cf,
 .u-cf {
   @include clearfix;
 }
+%u-cr,
 .u-cr {
   clear: right;
 }
+%u-cl,
 .u-cl {
   clear: left;
 }
+%u-cb,
 .u-cb {
   clear: both;
 }

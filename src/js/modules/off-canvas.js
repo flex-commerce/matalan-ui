@@ -69,7 +69,7 @@
 
   // ===========================
   // off canvas button event handler
-  $(".nav-mobile-button").on('mousedown', function() {
+  $(".js-nav-mobile-button").on('mousedown', function() {
     if ($('html').hasClass('body--modal-open')) {
       closeOffCanvas();
     } else {

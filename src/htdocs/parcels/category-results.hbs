@@ -27,7 +27,7 @@
 
     <div id="searchHeader" class="search-results--header u-cf">
       <div class="search--header--products col-xs-6 col-lg-3 hidden-lg-down">
-        <p class="u-color-grey60 u-pad-t-medium">0 - 16 of 64 products</p>
+        <p class="u-color-grey60 u-pad-t-small">0 - 16 of 64 products</p>
       </div>
       <div class="search--header--pagination col-lg-5 hidden-lg-down u-pad-0">
         <div class="c-pagination-bar">
@@ -55,7 +55,7 @@
       <div class="search--header--sort col-xs-6 col-lg-4">
         <div class="row">
           <div class="col-lg-3 hidden-lg-down u-font-ta-r u-pad-0">
-            <label for="sortby" class="u-color-grey60 u-pad-t-medium u-dis-ib">
+            <label for="sortby" class="u-color-grey60 u-pad-t-small u-dis-ib">
               <small>Sort By</small>
             </label>
           </div>
@@ -86,7 +86,7 @@
     </div>
     <div class="search-results--inner row">
       {{#each productspartywear.category.collection.products}}
-      <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
+      <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-large">
         <div class="results__image">
           <img class="img" src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
           <div data-content="{{promotionText}}" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-{{promotionPosition}}"></div>

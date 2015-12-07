@@ -43,6 +43,7 @@ $mq-classgen-models: (pad: padding, mar: margin);
                 #{$model}-#{$dir}: #{$val};
               }
             } //each dir
+
             .u-#{$shortmod}-h-#{$key}-#{$previous-bp} {
               #{$model}-left: #{$val};
               #{$model}-right: #{$val};
