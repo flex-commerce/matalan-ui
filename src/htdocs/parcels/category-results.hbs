@@ -24,6 +24,7 @@
       </ul>
     </div>
 
+
     <div class="search-results--header u-cf">
       <div class="search--header--products col-xs-6 col-lg-3 hidden-lg-down">
         <p class="u-color-grey60 u-pad-t-medium">0 - 16 of 64 products</p>
@@ -88,10 +89,7 @@
       <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
         <div class="results__image">
           <img class="img" src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
-
-          <!--<div data-content="overlay 1" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
-          <div data-content="overlay 2" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
-          <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div> -->
+          <div data-content="{{promotionText}}"class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-{{promotionPosition}}"></div>
         </div>
         <div class="results__detail">
           <div class="u-mar-v-medium">{{productTitle}}</div>

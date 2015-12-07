@@ -25,7 +25,9 @@
         "productLInk": "#",
         "productPrice": "£25.00",
         "productRating": 3,
-        "colors": "2"
+        "colors": "2",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Coated Skinny Jeans",
         "productImages": [
@@ -35,7 +37,9 @@
         "productLInk": "#",
         "productPrice": "£16.00",
         "productRating": 4,
-        "colors": "2"
+        "colors": "2",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Metal Plated Block Heels",
         "productImages": [
@@ -45,7 +49,9 @@
         "productLInk": "#",
         "productPrice": "£20.00",
         "productRating": 4,
-        "colors": "2"
+        "colors": "2",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Abbey by Abbey Clancy Box Clutch",
         "productImages": [
@@ -55,7 +61,9 @@
         "productLInk": "#",
         "productPrice": "£16.00",
         "productRating": 5,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Julien MacDonald Jewel Front Sandal",
         "productImages": [
@@ -65,7 +73,9 @@
         "productLInk": "#",
         "productPrice": "£32.00",
         "productRating": 3,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Zip Top Clutch Bagh",
         "productImages": [
@@ -75,7 +85,9 @@
         "productLInk": "#",
         "productPrice": "£8.00",
         "productRating": 5,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "V Neck Satin Cami",
         "productImages": [
@@ -85,7 +97,9 @@
         "productLInk": "#",
         "productPrice": "£12.00",
         "productRating": 5,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Lurex Tube Dress",
         "productImages": [
@@ -95,7 +109,9 @@
         "productLInk": "#",
         "productPrice": "£18.00",
         "productRating": 4,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tr"
       }, {
         "productTitle": "Roll NEck Sleeveless Blouse",
         "productImages": [
@@ -105,7 +121,9 @@
         "productLInk": "#",
         "productPrice": "£14.00",
         "productRating": 5,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "FWM Slim Leg Crepe Trouser",
         "productImages": [
@@ -115,7 +133,9 @@
         "productLInk": "#",
         "productPrice": "£20.00",
         "productRating": 5,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Beaded Vamp POinted Ballet Shoes",
         "productImages": [
@@ -125,7 +145,9 @@
         "productLInk": "#",
         "productPrice": "£15.00",
         "productRating": 5,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Built Up Vest",
         "productImages": [
@@ -135,7 +157,9 @@
         "productLInk": "#",
         "productPrice": "£8.00",
         "productRating": 3,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Abbey Clancy Leopard Print Clutch Box",
         "productImages": [
@@ -145,7 +169,9 @@
         "productLInk": "#",
         "productPrice": "£15.00",
         "productRating": "0",
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Strappy Heeled Sasndals",
         "productImages": [
@@ -155,7 +181,9 @@
         "productLInk": "#",
         "productPrice": "£15.00",
         "productRating": 5,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Soon Short Sleeve Embellished Top",
         "productImages": [
@@ -165,7 +193,9 @@
         "productLInk": "#",
         "productPrice": "£18.00",
         "productRating": 2,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }, {
         "productTitle": "Zip Front Pencil Skirt",
         "productImages": [
@@ -175,7 +205,9 @@
         "productLInk": "#",
         "productPrice": "£12.00",
         "productRating": 4,
-        "colors": "1"
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
       }]
     }
   }
