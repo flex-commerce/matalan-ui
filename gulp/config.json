@@ -35,7 +35,9 @@
       "src": "htdocs",
       "dest": "./",
       "htmlmin": {
-        "collapseWhitespace": true
+        "collapseWhitespace": false,
+        "preserveLineBreaks": true,
+        "removeComments": true
       },
       "extensions": ["html", "hbs"],
       "excludeFolders": ["parcels", "partials"]

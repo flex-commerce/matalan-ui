@@ -82,3 +82,15 @@ $mq-classgen-models: (pad: padding, mar: margin);
     }
 
 } //each model
+
+
+
+@mixin make-zeroall-classes() {
+  @each $shortmod, $model in $mq-classgen-models { //each model
+      .u-#{$shortmod}-0,
+      .u-#{$shortmod}-none, {
+        #{$model}: 0;
+      }
+  } //each model
+}
+
