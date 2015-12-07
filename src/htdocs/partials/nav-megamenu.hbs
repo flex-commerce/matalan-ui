@@ -33,9 +33,8 @@
           <div class="sub-nav">
             <div class="sub-nav__group-container">
 
-              {{#with categories}}
-                <ul class="sub-nav-group">
-                {{#each this}}
+              {{#with categories}} {{#each this}}
+              <ul class="sub-nav-group">
                 <li class="sub-nav-title">
                   <a class="link" href="{{catLink}}">
                     {{catTitle}}
@@ -56,9 +55,8 @@
                   </a>
                 </li>
                 {{/each}} {{/with}}
-            {{/each}}
             </ul>
-            {{/with}}
+            {{/each}} {{/with}}
 
             {{#with collection}}
             <ul class="sub-nav-group">
