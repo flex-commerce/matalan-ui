@@ -48,8 +48,17 @@
   $('#nudge-debug').on('click', function() {
     $(this).parent('li').toggleClass('active');
     $('html').toggleClass('nudge-debug');
-  })
+  });
 
+  // // Cache selectors outside callback for performance.
+  // if ($('#searchHeader').length) {
+  //   var $window = $(window),
+  //      $stickyEl = $('#searchHeader'),
+  //      elTop = $stickyEl.offset().top;
 
+  //   $window.scroll(function() {
+  //       $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+  //   });
+  // }
 
 })(jQuery);
