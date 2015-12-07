@@ -164,6 +164,7 @@
 }
 
 .header--search-bar {
+  background-color: $light-grey;
   @include mq($until: lg) {
     display: none;
   }
@@ -193,9 +194,7 @@
 }
 
 @include mq($until: lg) {
-  .header--border-bottom {
-    border-bottom: 1px solid $keyline-color;
-  }
+
   .header--border-top {
     border-top: 1px solid $keyline-color;
   }
