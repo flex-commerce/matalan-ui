@@ -60,7 +60,6 @@
 
 
 
-
 @mixin box-shadow($shadow) {
   box-shadow: $shadow;
 }
@@ -69,15 +68,18 @@
   columns: $number 10em;
 }
 
-@for $i from 2 through 6 {
-  .auto-column-#{$i} {
-    @include auto-columns(#{$i})
+@mixin auto-column-generate {
+  @for $i from 2 through 6 {
+    .auto-column-#{$i} {
+      @include auto-columns(#{$i})
+    }
+    .auto-column-#{$i} li:first-child {
+      margin-top: 0;
+    }
   }
+}
 
-  .auto-column-#{$i} li:first-child {
-    margin-top: 0;
-}
-}
+
 
 @mixin progress-variant($color) {
   &[value]::-webkit-progress-value {
