@@ -64,7 +64,7 @@
 
           <div class="col-sm-12 col-md-8 col-lg-6 col-lg-pull-6 hidden-lg-down u-pad-0">
             <div class="o-header__search-bar">
-              <form id="searchProducts" class="form-inline c-search-form">
+              <form name="searchProducts" class="form-inline c-search-form">
                 <div class="o-form-row">
                   <div class="o-form--input-group o-form-input__contain">
                     <div class="input-group--addon unstyled input-group--addon__inset">
@@ -87,14 +87,16 @@
     <div class="row">
       <div class="col-xs-12 header--search-bar hidden-lg-up u-mar-b-small">
           <div class="o-header--search">
-            <form class="form-inline c-search-form">
+            <form name="searchProducts" class="form-inline c-search-form">
               <div class="o-form-row">
                 <div class="o-form--input-group o-form-input__contain">
                   <div class="input-group--addon unstyled input-group--addon__inset">
                     <i class="icon icon-search"></i>
                   </div>
-                  <input type="text" class="input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter Keyword or Product Code" autofocus>
-                  <a href="" class="input-group--addon unstyled c-search__button">Search</a>
+                  <input type="text" name="searchTermMobile" class="input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter Keyword or Product Code" autofocus pattern=".{3,}" title="3 characters minimum" required>
+                  <div class="input-group--addon input-group--addon__button unstyled c-search__button">
+                    <button type="submit" class="">Search</button>
+                  </div>
                 </div>
               </div>
             </form>
