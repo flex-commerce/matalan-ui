@@ -244,3 +244,27 @@ pre {
 }
 
 
+.search-results--header.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: $white;
+  right: 0;
+  left: 0;
+
+}
+
+.search-results--header.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 5px 15px;
+  box-sizing: border-box;
+  z-index: 5;
+  background-color: $white;
+}
+.search-results--header.fixed.absolute {
+  position: absolute;
+}
+
