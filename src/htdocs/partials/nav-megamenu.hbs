@@ -19,9 +19,7 @@
           </a>
         </li>
 
-
         {{#each menuItems}}
-
         <li class="navbar__top-item">
           <a class="link" href="{{seclink}}">
             {{secTitle}}
@@ -35,9 +33,9 @@
           <div class="sub-nav">
             <div class="sub-nav__group-container">
 
-              {{#with categories}} {{#each this}}
-
-              <ul class="sub-nav-group">
+              {{#with categories}}
+                <ul class="sub-nav-group">
+                {{#each this}}
                 <li class="sub-nav-title">
                   <a class="link" href="{{catLink}}">
                     {{catTitle}}
@@ -47,57 +45,56 @@
                       <span><i class="icon icon-arr-forward"></i></span>
                     </span>
                   </a>
-                  </li>
-                  {{#with collection}} {{#each this}}
-                  <li class="sub-nav-item">
-                    <a class="link" href="category-results.html">
-                      {{{@key}}}
-                      <span class="navbar__nav-menu-icons u-fr">
-                        <span><i class="icon icon-arr-forward"></i></span>
-                      </span>
-                    </a>
-                  </li>
-                  {{/each}} {{/with}}
-
                 </li>
-              </ul>
-              {{/each}} {{/with}}
+                {{#with collection}} {{#each this}}
+                <li class="sub-nav-item">
+                  <a class="link" href="category-results.html">
+                    {{{@key}}}
+                    <span class="navbar__nav-menu-icons u-fr">
+                      <span><i class="icon icon-arr-forward"></i></span>
+                    </span>
+                  </a>
+                </li>
+                {{/each}} {{/with}}
+            {{/each}}
+            </ul>
+            {{/with}}
 
-              {{#with collection}}
-              <ul class="sub-nav-group">
-                {{#each this}}
-                <li class="sub-nav-item"><a href="{{{@value}}}">{{{@key}}}</a></li>
-                {{/each}}
-              </ul>
-              {{/with}}
+            {{#with collection}}
+            <ul class="sub-nav-group">
+              {{#each this}}
+              <li class="sub-nav-item"><a href="{{{@value}}}">{{{@key}}}</a></li>
+              {{/each}}
+            </ul>
+            {{/with}}
 
-              <ul class="sub-nav-group__image">
-                <li><img src="{{sectionImage}}"></li>
-              </ul>
+            <ul class="sub-nav-group__image">
+              <li><img src="{{sectionImage}}"></li>
+            </ul>
 
-            </div>
           </div>
-          {{/if}}
-        </li>
-        {{/each }}
+        </div>
+        {{/if}}
+      </li>
+      {{/each }}
 
 
 
-        <li class="navbar__footer">
-          <a class="link u-font-ta-c">
-            <span>Delivery</span>
-          </a>
-          <a class="link u-font-ta-c">
-            <span>Returns</span>
-          </a>
-          <a class="link u-font-ta-c">
-            <span>Contact</span>
-          </a>
-        </li>
+      <li class="navbar__footer">
+        <a class="link u-font-ta-c">
+          <span>Delivery</span>
+        </a>
+        <a class="link u-font-ta-c">
+          <span>Returns</span>
+        </a>
+        <a class="link u-font-ta-c">
+          <span>Contact</span>
+        </a>
+      </li>
 
-      </ul>
-    </nav>
-  </div>
+    </ul>
+  </nav>
+</div>
 </div>
 
 
