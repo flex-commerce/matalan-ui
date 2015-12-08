@@ -16,7 +16,7 @@
 
     <div class="row header-pb-20 header--border-bottom">
 
-      <div class="col-xs-4 hidden-lg-up header--height">
+      <div class="col-xs-4 hidden-lg-up header--height u-pad-0">
         <div class="o-header--menu-button">
           <a class="js-nav-mobile-button c-btn nav-mobile-button u-no-bord"><i class="icon icon-menu"></i></a>
         </div>
@@ -52,8 +52,8 @@
             </div>
           </div>
 
-          <div class="col-xs-6 col-md-3 col-lg-push-6 u-pad-l-0">
-            <a class="c-btn hidden-lg-up js-minibag u-no-bord">
+          <div class="col-xs-6 col-md-3 col-lg-push-6 u-pad-l-0 checkout-bag">
+            <a class="c-btn hidden-lg-up minibag-link js-minibag u-no-bord">
               <span class="o-icon-with-addon"><i class="icon icon-minibag"></i>
                 <span class="">{{minibag.category.collection.products.length}}</span>
               </span>
@@ -70,7 +70,7 @@
                     <div class="input-group--addon unstyled input-group--addon__inset">
                       <i class="icon icon-search"></i>
                     </div>
-                    <input type="text" name="searchTerm" class="input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter Keyword or Product Code" pattern=".{3,}" title="3 characters minimum" required>
+                    <input type="text" name="searchTerm" minlength="3" class="input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter Keyword or Product Code" pattern=".{3,}" title="3 characters minimum" required>
                     <div class="input-group--addon input-group--addon__button unstyled c-search__button">
                       <button type="submit" class="">Search</button>
                     </div>
@@ -93,7 +93,7 @@
                   <div class="input-group--addon unstyled input-group--addon__inset">
                     <i class="icon icon-search"></i>
                   </div>
-                  <input type="text" name="searchTermMobile" class="input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter Keyword or Product Code" autofocus pattern=".{3,}" title="3 characters minimum" required>
+                  <input type="text" name="searchTermMobile" minlength="3" class="input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter Keyword or Product Code" autofocus pattern=".{3,}" title="3 characters minimum" required>
                   <div class="input-group--addon input-group--addon__button unstyled c-search__button">
                     <button type="submit" class="">Search</button>
                   </div>

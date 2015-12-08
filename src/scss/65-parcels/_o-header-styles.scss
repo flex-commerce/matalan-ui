@@ -65,28 +65,24 @@
 .o-header__brand {
   position: relative;
   margin: 0 auto;
-
-  @include mq($from: xs, $until: md) {
-    max-width: 130px;
-  }
-  @include mq($from: md, $until: lg) {
-    max-width: 155px;
-  }
   @include mq($from: lg) {
     margin-left: 0;
-    max-width: 250px;
   }
 
   img {
+
     @include mq($from: xs, $until: md) {
+      max-width: 130px;
       margin: rem-calc(14 0 0 0);
     }
     @include mq($from: md, $until: lg) {
+      max-width: 155px;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
     }
     @include mq($from: lg) {
       margin: rem-calc(20 15 0 15);
+      max-width: 250px;
     }
   }
 }
@@ -210,6 +206,16 @@
 .o-header__search {
   position: relative;
   text-align: right;
+}
+
+.minibag-link {
+  float: right;
+}
+
+.checkout-bag {
+  @include mq($until: lg) {
+    padding-right: 0;
+  }
 }
 .header--mobile-search.active {
   .tempnub {

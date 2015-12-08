@@ -32,7 +32,7 @@
         return;
       }
     }
-    self = this;
+    var self = this;
     this.typeTimer = null;
     this.typeSearch = '';
     this.isMac = navigator.platform.match(/mac/i);
