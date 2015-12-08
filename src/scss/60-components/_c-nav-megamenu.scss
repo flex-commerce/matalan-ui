@@ -6,7 +6,6 @@
 @include mq($until: lg) {
   .c-navbar-container {
     @include fixed(top 0 bottom 0 left -85%);
-
     width: 85%;
     z-index: 5;
 
@@ -218,6 +217,7 @@
   .c-navbar-container .icon-minus {
     &:after {
       @include absolute(top 0 bottom 0 right 2em);
+
       content: '';
       width: 1px;
       background-color: $dark-grey-lighten-20;
@@ -292,7 +292,9 @@
 .navbar__header,
 .navbar__top-item,
 .navbar__footer {
-  @include font-size(11px);
+  font-size: 11px;
+
+  // @include font-size(11px);
 }
 
 // header flex rules
@@ -322,10 +324,10 @@
     max-width: 1250px;
   }
 
+
   @include mq($from: lg, $until: xl) {
     max-width: 100vw;
   }
-
 }
 
 @include mq($until: lg) {
@@ -340,6 +342,7 @@
   // TODO - check final dimensions for image, using min height px values for abs image
   .sub-nav-group__image {
     @include absolute(top 0 right 0);
+
     width: 170px;
   }
 
@@ -352,14 +355,14 @@
 
 .js-clickcatcher {
   @include position(fixed, top 0 right 0 bottom 0 left 0);
-  display: block;
 
+  display: block;
   will-change: transform;
-  background-color: rgba($black, .5);
+  background-color: rgba($black, 0.5);
   z-index: 3;
 
   &.js-clickcatcher-white {
-    background-color: rgba($white, .5);
+    background-color: rgba($white, 0.5);
   }
 }
 

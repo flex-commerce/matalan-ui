@@ -97,7 +97,7 @@ $footer-bg-color: $light-grey-hover;
 
 
 
-.o-footer__subscribe .o-form--input-group {
+.o-footer__subscribe .o-form--input-pack {
     @include mq($from: md) {
   min-width: 350px;
 }
