@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js u-scrollbar" lang="">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body>
+
+  <div class="container o-checkout__container">
+
+    <div class="row">
+      <div class="o-header__brand u-font-ta-c u-keyline-b u-pad-b-large u-mar-t-huge u-mar-b-medium">
+        <a href="./homepage.html">
+          <img src="img/matalan-logo-responsive.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-10 col-lg-offset-1">
+
+        <div class="row">
+          <div class="u-mar-v-huge">
+            {{> partials/progress-checkout }}
+          </div>
+        </div>
+
+
+        <div class="row">
+
+          <div class="o-checkout__detail col-lg-8 u-pad-l-0">
+
+            <form action="">
+              <fieldset class="u-pad-v-medium u-border2-t">
+                <a class="c-btn c-btn-primary__alt u-font-upper u-fr">-</a>
+                <h5 class="u-font-upper">1. Billing Address</h5>
+                <p>Your billing address must match your card statement address</p>
+                <div class="o-form-row">
+                  <div class="o-form-label--contain">
+                    <label class="o-form-label__primary">Choose Option (inline)</label>
+                  </div>
+                  <div class="o-form-input__contain o-option__block auto-column-2">
+                    <label class="o-form-label__option">
+                      <input type="radio" name="foo" value="Red">
+                      <span></span>
+                      Red
+                    </label>
+                    <label class="o-form-label__option">
+                      <input type="radio" name="foo" value="Blue">
+                      <span></span>
+                      Blue
+                    </label>
+                  </div>
+                </div>
+                <h5>Select Address</h5>
+                <div class="islet">
+                  <a class="c-btn c-btn-primary__alt u-font-upper u-fr">Edit</a>
+                  <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                  <ul>
+                    <li>Mr John Doe</li>
+                    <li>Dow</li>
+                    <li>0 John Doe Avenue</li>
+                    <li>United Kingdom</li>
+                    <li>AB1 CD2</li>
+                  </ul>
+                </div>
+
+                <div class="o-form-row">
+                  <div class="o-form-label--contain">
+                    <label class="o-form-label__primary">Check it (inline)</label>
+                  </div>
+                  <div class="o-form-input__contain o-option__block auto-column-2">
+                    <label class="o-form-label__option">
+                      <input type="checkbox">
+                      <span></span>
+                      via post
+                    </label>
+                    <label class="o-form-label__option">
+                      <input type="checkbox">
+                      <span></span>
+                      via email
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="c-btn c-btn-secondary__alt c-btn-block">Continue</button>
+              </fieldset>
+
+              <fieldset class="u-pad-v-medium u-border2-t">
+                <a class="c-btn c-btn-primary__alt u-font-upper u-fr">-</a>
+                <h5 class="u-font-upper">2. Delivery Address</h5>
+                <p>Your billing address must match your card statement address</p>
+                <div class="o-form-row">
+                  <div class="o-form-label--contain">
+                    <label class="o-form-label__primary">Choose Option (inline)</label>
+                  </div>
+                  <div class="o-form-input__contain o-option__block auto-column-2">
+                    <label class="o-form-label__option">
+                      <input type="radio" name="foo" value="Red">
+                      <span></span>
+                      Red
+                    </label>
+                    <label class="o-form-label__option">
+                      <input type="radio" name="foo" value="Blue">
+                      <span></span>
+                      Blue
+                    </label>
+                    <label class="o-form-label__option">
+                      <input type="radio" name="foo" value="Red">
+                      <span></span>
+                      Green
+                    </label>
+                    <label class="o-form-label__option">
+                      <input type="radio" name="foo" value="Blue">
+                      <span></span>
+                      Black
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="c-btn c-btn-secondary__alt c-btn-block">Continue</button>
+              </fieldset>
+
+              <fieldset class="u-pad-v-medium u-border2-t u-border2-b">
+                <a class="c-btn c-btn-primary__alt u-font-upper u-fr">-</a>
+                <h5 class="u-font-upper">3. Delivery Method</h5>
+                <p>Your billing address must match your card statement address</p>
+                <div class="o-form-row">
+                  <div class="o-form-label--contain">
+                    <label class="o-form-label__primary">Choose Option (inline)</label>
+                  </div>
+                  <div class="o-form-input__contain o-option__block auto-column-2">
+                    <label class="o-form-label__option">
+                      <input type="radio" name="foo" value="Red">
+                      <span></span>
+                      Green
+                    </label>
+                    <label class="o-form-label__option">
+                      <input type="radio" name="foo" value="Blue">
+                      <span></span>
+                      Black
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="c-btn c-btn-secondary__alt c-btn-block">Continue</button>
+              </fieldset>
+
+
+
+
+            </form>
+
+          </div>
+          <div class="col-lg-4 u-pad-r-0">
+            <div class="u-cf">
+              <h5 class="u-font-upper u-fl">Shopping Bag</h5>
+              <a class="c-btn c-btn-primary__alt u-font-upper u-fr">Edit</a>
+            </div>
+            {{> partials/minibag-contents }}
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  {{> parcels/footer }}
+
+  {{> partials/js-footer}}
+</body>
+
+</html>

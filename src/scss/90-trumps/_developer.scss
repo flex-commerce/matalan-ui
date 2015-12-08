@@ -74,6 +74,12 @@
   border-radius: 5px;
 }
 
+.islet {
+  padding: 1em;
+  display: block;
+  border: 1px solid $cool-grey;
+}
+
 // fake grid for ui kit
 .ui-container {
   max-width: 1280px;

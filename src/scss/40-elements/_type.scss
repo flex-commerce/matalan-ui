@@ -13,31 +13,37 @@ $heading-size-6:  12px;
 h1,
 .h1 {
     @include font-size($heading-size-1, 20/14);
+    font-weight: bold;
 }
 
 h2,
 .h2 {
     @include font-size($heading-size-2, 20/14);
+    font-weight: bold;
 }
 
 h3,
 .h3 {
     @include font-size($heading-size-3, 20/14);
+    font-weight: bold;
 }
 
 h4,
 .h4 {
     @include font-size($heading-size-4, 20/14);
+    font-weight: bold;
 }
 
 h5,
 .h5 {
     @include font-size($heading-size-5, 20/14);
+    font-weight: bold;
 }
 
 h6,
 .h6 {
     @include font-size($heading-size-6, 20/14);
+    font-weight: bold;
 }
 
 

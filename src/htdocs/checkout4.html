@@ -1,0 +1,202 @@
+<!doctype html>
+<html class="no-js u-scrollbar" lang="">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="o-header__brand u-font-ta-c u-keyline-b u-pad-b-large u-mar-t-huge u-mar-b-medium">
+        <a href="./homepage.html">
+          <img src="img/matalan-logo-responsive.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-10 col-lg-offset-1">
+
+        <div class="row">
+          <div class="u-mar-v-huge">
+            {{> partials/progress-checkout }}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 u-pad-l-0">
+
+            <form action="" class="form-default">
+
+              <div class="islet auto-column-3">
+                <div class="auto-column--nobreak">
+                  <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                  <ul>
+                    <li>Mr John Doe</li>
+                    <li>Dow</li>
+                    <li>0 John Doe Avenue</li>
+                    <li>United Kingdom</li>
+                    <li>AB1 CD2</li>
+                  </ul>
+                  <a class="u-pad-t-medium u-dis-ib">Edit Details</a>
+                </div>
+                <div class="auto-column--nobreak">
+                  <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                  <ul>
+                    <li>Mr John Doe</li>
+                    <li>Dow</li>
+                    <li>AB1 CD2</li>
+                  </ul>
+                  <a class="u-pad-t-medium u-dis-ib">Edit Details</a>
+                </div>
+                <div class="auto-column--nobreak">
+                  <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                  <ul>
+                    <li>Mr John Doe</li>
+                  </ul>
+                  <a class="u-pad-t-medium u-dis-ib">Edit Details</a>
+                </div>
+              </div>
+
+
+              <div class="u-mar-v-medium">
+                <label class="o-form-label o-form-label__option">
+                  <input type="checkbox">
+                  <span></span>
+                  I have read and understood the <a href="">Terms &amp; Conditions</a>
+                </label>
+                <p><sup>**</sup>You will need to accept our T&amp;C's before entering your payment information<sup>**</sup></p>
+              </div>
+
+
+              <div class="o-form-row">
+                <div class="o-form-label--contain">
+                  <label class="o-form-label__primary">Select Payment Method <sup>*</sup></label>
+                </div>
+                <div class="o-form-input__contain o-form-input--card-select">
+                  {{# times 8}}
+                  <label class="o-form-label__option u-dis-ib u-font-ta-c">
+                    <div class="cardselect--image">
+                      <img class="svg" src="img/card-visa.svg">
+                    </div>
+                    <input type="radio" name="foo" value="Red">
+                    <span></span>
+                  </label>
+                  {{/ times }}
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-xs-7">
+
+                  <div class="o-form-row">
+                    <div class="o-form-label--contain">
+                      <label class="o-form-label__primary">Input Label</label>
+                    </div>
+                    <div class="o-form-input__contain">
+                      <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-xs-7">
+                      <div class="row">
+                        <div class="o-form-row">
+                          <div class="col-xs-12 o-form-label--contain">
+                            <label class="o-form-label__primary">Expiry</label>
+                          </div>
+                          <div class="col-xs-6 u-pad-r-small">
+                            <div>
+                              <select id="sortby" class="selectbox select-full">
+                                <option selected="selected" disabled="disabled">MM</option>
+                                {{# times 12}}
+                                <option value="">{{this}}</option>
+                                {{/ times }}
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xs-6 u-pad-l-small">
+                            <div>
+                              <select id="sortby" class="selectbox select-full">
+                                <option selected="selected" disabled="disabled">YYYY</option>
+                                {{# times 9}}
+                                <option value="">201{{this}}</option>
+                                {{/ times }}
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-5">
+                      <div class="o-form-row">
+                        <div class="o-form-label--contain">
+                          <label class="o-form-label__primary">Security</label>
+                        </div>
+                        <div class="o-form-input__contain">
+                          <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="col-xs-5">
+                  <div class="o-form-row">
+                    <div class="o-form-label--contain">
+                      <label class="o-form-label__primary">ra</label>
+                    </div>
+                    <div class="o-form-input__contain">
+                      <div class="islet">
+                        {{lorem count=12}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="o-minibag--list-actions">
+                <div class="flexer">
+                  <a class="c-btn c-btn-secondary col-xs-6 flexer-element">Pay Now</a>
+                </div>
+                <div class="separator__inline-text">
+                  <span>or</span>
+                </div>
+                <a class="c-btn c-btn-block c-btn-primary">
+                  Checkout with
+                  <img style="vertical-align: middle; height: 24px; margin-left: 0.5em;" src="img/card-paypal.svg">
+                </a>
+              </div>
+
+
+            </form>
+
+          </div>
+
+
+          <div class="col-lg-4 u-pad-r-0">
+            <div class="u-cf">
+              <h5 class="u-font-upper u-fl">Shopping Bag</h5>
+              <a class="c-btn c-btn-primary__alt u-font-upper u-fr">Edit</a>
+            </div>
+            {{> partials/minibag-contents }}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {{> parcels/footer }}
+
+  {{> partials/js-footer}}
+</body>
+
+</html>

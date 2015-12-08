@@ -1,0 +1,152 @@
+$mq-classgen-directions: ( t: top, r: right, b: bottom, l: left);
+$mq-classgen-models: (pad: padding, mar: margin);
+
+
+@mixin make-spacer-classes() {
+  @each $shortmod, $model in $mq-classgen-models { //each model
+    @each $key, $val in $sizing-sizes { // each size
+
+      @each $shortdir, $dir in $mq-classgen-directions { //each dir
+        .u-#{$shortmod}-#{$shortdir}-#{$key} {
+          #{$model}-#{$dir}: #{$val};
+        }
+      } //each dir
+
+      // horizontal
+      .u-#{$shortmod}-h-#{$key} {
+        #{$model}-left: #{$val};
+        #{$model}-right: #{$val};
+      }
+      // vertical
+      .u-#{$shortmod}-v-#{$key} {
+        #{$model}-top: #{$val};
+        #{$model}-bottom: #{$val};
+      }
+
+      @each $shortdir, $dir in $mq-classgen-directions { //each dir
+        .u-#{$shortmod}-#{$key} {
+          #{$model}: #{$val};
+        }
+      } //each dir
+
+    } // each size
+
+  } //each model
+}
+
+
+
+@mixin make-responsive-spacer-classes() {
+
+  @each $mq-breakpoint-name in map-keys($mq-breakpoints) { //each bp
+    // ignore on first pass until we build a min max bp
+    @if variable-exists(previous-bp) {
+
+      @if not($mq-breakpoint-name == xl) { // if we're not on the last bp, min / max
+        @include mq($from: $previous-bp, $until: $mq-breakpoint-name) {
+
+          @each $shortmod, $model in $mq-classgen-models { //each model
+            @each $key, $val in $sizing-sizes { // each size
+
+              @each $shortdir, $dir in $mq-classgen-directions { //each dir
+                .u-#{$shortmod}-#{$shortdir}-#{$key}-#{$previous-bp} {
+                  #{$model}-#{$dir}: #{$val};
+                }
+              } //each dir
+              .u-#{$shortmod}-h-#{$key}-#{$previous-bp} {
+                #{$model}-left: #{$val};
+                #{$model}-right: #{$val};
+              }
+              .u-#{$shortmod}-v-#{$key}-#{$previous-bp} {
+                #{$model}-top: #{$val};
+                #{$model}-bottom: #{$val};
+              }
+            } // each size
+          } //each model
+        } // build bp
+
+      } @else {  // we're on the last bp, min only, no max
+        @include mq($from: $previous-bp) {
+
+          @each $shortmod, $model in $mq-classgen-models { //each model
+            @each $key, $val in $sizing-sizes { // each size
+
+              @each $shortdir, $dir in $mq-classgen-directions { //each dir
+                .u-#{$shortmod}-#{$shortdir}-#{$key}-#{$previous-bp} {
+                  #{$model}-#{$dir}: #{$val};
+                }
+              } //each dir
+              .u-#{$shortmod}-h-#{$key}-#{$previous-bp} {
+                #{$model}-left: #{$val};
+                #{$model}-right: #{$val};
+              }
+              .u-#{$shortmod}-v-#{$key}-#{$previous-bp} {
+                #{$model}-top: #{$val};
+                #{$model}-bottom: #{$val};
+              }
+            } // each size
+          } //each model
+        } // build bp
+      }
+    } @else {
+
+    }
+
+    $previous-bp: $mq-breakpoint-name;
+  } //each bp
+
+}
+
+
+@mixin make-automargin-classes() {
+
+    @each $shortdir, $dir in $mq-classgen-directions { //each dir
+      .u-mar-#{$shortdir}-a {
+        margin-#{$dir}: auto;
+      }
+    } //each dir
+
+    // horizontal
+    .u-mar-h-a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    // vertical
+    .u-mar-v-a {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+} //each model
+
+
+
+@mixin make-zeroall-classes() {
+  @each $shortmod, $model in $mq-classgen-models { //each model
+      .u-#{$shortmod}-0,
+      .u-#{$shortmod}-none, {
+        #{$model}: 0;
+      }
+  } //each model
+}
+
+
+@mixin make-border-classes() {
+  @each $shortdir, $dir in $mq-classgen-directions { //each dir
+      %u-keyline-#{$shortdir},
+      .u-keyline-#{$shortdir}, {
+        border-#{$dir}: 1px solid $keyline-color;
+      }
+      %u-border2-#{$shortdir},
+      .u-border2-#{$shortdir}, {
+        border-#{$dir}: 2px solid $cool-grey;
+      }
+  } //each model
+  %u-border2,
+  .u-border2, {
+    border: 2px solid $cool-grey;
+  }
+}
+
+
+

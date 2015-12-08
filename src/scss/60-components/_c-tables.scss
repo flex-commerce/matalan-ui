@@ -5,6 +5,9 @@
     @extend .u-color-pri;
     font-weight: bold;
   }
+  td, th {
+    vertical-align: top;
+  }
 }
 
 .c-table__default {
@@ -21,5 +24,13 @@
   }
   tbody tr {
     border-top: 1px solid $keyline-color;
+  }
+}
+
+
+.c-table--spaced {
+  td {
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 }

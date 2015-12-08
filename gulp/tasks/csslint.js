@@ -13,16 +13,16 @@ var stylish       = require('gulp-scss-lint-stylish2');
 var scsslintTask = function() {
 
   var reporter = stylish();
-  // var scssToCheck = path.join(config.app.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}');
 
-  var filesToCheck = ['_c-navbar', '_c-nav-megamenu'];
+  var folderToCheck = '50-objects';
+  var filesToCheck = ['_o-form-grp','_o-form-items'];
+
 
   var scssToCheck = path.join(
     config.app.src,
     config.tasks.css.src,
-    '/**/{'+ filesToCheck +'}.{' + config.tasks.css.extensions + '}'
-    );
-
+   '/' + folderToCheck + '/**.{' + config.tasks.css.extensions + '}'
+   );
 
 
   return gulp.src( scssToCheck )
@@ -31,5 +31,5 @@ var scsslintTask = function() {
   .pipe( reporter.printSummary );
 }
 
-gulp.task('css:lint', scsslintTask);
+gulp.task('csslint', scsslintTask);
 module.exports = scsslintTask;
