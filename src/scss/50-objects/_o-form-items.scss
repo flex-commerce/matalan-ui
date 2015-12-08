@@ -1,4 +1,4 @@
-.input--textual,
+.o-input--textual,
 optgroup,
 select,
 textarea {
@@ -10,13 +10,13 @@ textarea {
   border-color: $cool-grey;
 }
 
-.input--textual,
+.o-input--textual,
 textarea {
   width: 100%;
 }
 
-.o-form-input__contain {
-  .input--textual,
+.o-form__input-contain {
+  .o-input--textual,
   textarea {
     color: $base-text-color;
   }
@@ -27,7 +27,7 @@ textarea {
     width: 100%;
   }
 
-  .input--textual:focus {
+  .o-input--textual:focus {
     + a,
     + div {
       background: $dark-grey;
@@ -36,7 +36,7 @@ textarea {
 }
 
 // modified rules currently only used for minibag quantities
-.o-form-input__contain__quantity {
+.o-form__input-contain__quantity {
   input {
     max-width: 55px;
     text-align: center;
@@ -47,47 +47,50 @@ textarea {
 
 
 // spacing between inline options and their labels
-.o-form-label__option [type="radio"],
-.o-form-label__option [type="checkbox"] {
+.o-form__label-option [type="radio"],
+.o-form__label-option [type="checkbox"] {
   margin-right: 0.5em;
 }
 
 // main label styling
-.o-form-label__primary {
+.o-form__label-primary {
+  outline: 1px dotted red;
   display: block;
   font-weight: bold;
 }
 
 // sub / option label styling
-.o-form-label__option {
+.o-form__label-option {
+  outline: 1px dotted blue;
   // display: inline;
   font-size: 90%;
 }
 
 // making inline labels
-.o-option__inline > .o-form-label__option {
+.o-option--inline > .o-form__label-option {
   float: left;
-  + .o-form-label__option {
+  + .o-form__label-option {
     margin-left: 1em;
   }
 }
 
 // inline sub labels (options, radio etc)
-// .o-form-input__contain.o-option__inline {
+// .o-form__input-contain.o-option--inline {
 //   @include clearfix;
 // }
 // keep text labels in line
-.o-form-input__contain {
-  &.o-option__inline,
-  &.o-option__block {
+.o-form__input-contain {
+  &.o-option--inline,
+  &.o-option--block {
     // padding: $default-pad-y $default-pad-x;
-    // outline: 1px dotted red;
     @include clearfix;
   }
 }
 
+
+
 // spacing between multiple inline option labels
-.o-option__block > .o-form-label__option {
+.o-option--block > .o-form__label-option {
   display: block;
   margin-bottom: rem-calc(4);
   cursor: pointer;
@@ -98,7 +101,7 @@ textarea {
 
 // custom radio and checkbox styling here
 
-.o-form-label__option {
+.o-form__label-option {
   input[type="checkbox"], input[type="radio"] {
     display: none;
   }

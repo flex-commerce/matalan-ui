@@ -15,7 +15,7 @@ $input-padding-y: $default-pad-y;
   line-height: $line-height;
 }
 
-.o-form-row {
+.o-form__row {
   padding: $form-row-padding-y $form-row-padding-x;
   line-height: $line-height;
   color: $input-color;
@@ -23,19 +23,20 @@ $input-padding-y: $default-pad-y;
   @include clearfix();
 }
 
-.form-inline {
-  .o-form-row {
+
+.o-form--inline {
+  .o-form__row {
     width: auto;
   }
-  .o-form-label--contain,
-  .o-form-input__contain:not(.o-form--input-group) {
+  .o-form__label-contain,
+  .o-form__input-contain:not(.o-form--input-group) {
     display: inline-block;
   }
 }
 
-.form-default,
-.form-wide {
-  .o-form-row {
+.o-form--default,
+.o-form--wide {
+  .o-form__row {
     display: block;
     width: 100%;
   }
@@ -93,25 +94,26 @@ $input-padding-y: $default-pad-y;
 }
 
 // form wide dev rules
-.form-wide {
-  .o-form-label--contain {
+.o-form--wide {
+  .o-form__label-contain {
     @include span(4);
     text-align: right;
   }
-  .o-form-input__contain {
+  .o-form__input-contain {
     @include span(8);
     text-align: left;
   }
 }
 
 //testing new rules - invelstigate this as a pattern
-.o-form-inline-fixed__threecol {
-  .o-form-label--contain {
+//used in ui kitchen sink input alert 3col layout
+.o-form--inline-fixed__threecol {
+  .o-form__label-contain {
     @include span(3);
     @include form-item-size;
     text-align: right;
   }
-  .o-form-input__contain {
+  .o-form__input-contain {
     @include span(3);
   }
   .o-form-message--contain {
@@ -120,18 +122,37 @@ $input-padding-y: $default-pad-y;
   }
 }
 
-.form-default .o-form-row .o-form-label--contain {
+.form-default .o-form__row .o-form__label-contain {
   // vertical form label bottom margin
   margin-bottom: rem-calc(7);
 }
 
 // labels
-.form-wide .o-form-label--contain {
-  // keep first line of text inline with input for wide form
-  padding-top: 0.5em;
+// above field
+.o-form--default {
+  .o-form__label-contain {
+    padding-bottom: 0.5em;
+  }
 }
 
+// left of field
+.o-form--wide, .o-form--inline{
+  .o-form__label-contain {
+    // keep first line of text inline with input for wide form
+    border: 1px solid transparent;
+    padding: 0.5em;
+  }
+}
 
+// lists of options (radio / check)
+.o-form--wide, .o-form--inline {
+  .o-option--inline,
+  .o-option--block {
+    border: 1px solid transparent;
+    padding: 0.5em 0;
+  }
+}
+// end labels
 
 // custom border rules for inputs with addons
 // hides the left / right borders around prepended / appended input fields
@@ -167,7 +188,7 @@ $input-padding-y: $default-pad-y;
 // TODO - this to be moved / modularised
 // handles display of card selection on checkout
  .o-form-input--card-select {
-  > .o-form-label__option {
+  > .o-form__label-option {
     width: 12%;
     padding: 0 0.5em;
   }

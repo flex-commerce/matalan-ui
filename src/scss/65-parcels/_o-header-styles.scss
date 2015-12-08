@@ -41,7 +41,7 @@
     }
   }
   //remove default padding on the search bar
-  .o-form-row {
+  .o-form__row {
     padding: 0;
     @include mq($until: lg) {
       margin: 10px 0;
