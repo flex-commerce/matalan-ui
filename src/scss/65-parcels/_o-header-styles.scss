@@ -32,7 +32,7 @@
       min-width: 25px;
       line-height: 1.2em;
       height: 20px;
-      top: 2px;
+      top: 12px;
       left: 12px;
       text-align: center;
       border: 2px solid #fff;
@@ -71,7 +71,11 @@
 
   img {
 
-    @include mq($from: xs, $until: md) {
+    @include mq($until: sm) {
+      margin: rem-calc(14 0 0 0);
+    }
+
+    @include mq($from: sm, $until: md) {
       max-width: 130px;
       margin: rem-calc(14 0 0 0);
     }

@@ -355,11 +355,11 @@
   display: block;
 
   will-change: transform;
-  background-color: rgba($black, .5);
+  background-color: rgba($black, .2);
   z-index: 3;
 
   &.js-clickcatcher-white {
-    background-color: rgba($white, .5);
+    background-color: rgba($black, .2);
   }
 }
 
