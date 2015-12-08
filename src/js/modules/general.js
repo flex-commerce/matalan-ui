@@ -52,7 +52,7 @@
     $('html').toggleClass('nudge-debug');
   });
 
-  $('.add-item').on('click', function() {
+  $('.js-add-item').on('click', function() {
     var valueBox = $(this).parent().find('span'),
         hiddenInput = $(this).parent().find('input'),
         value = parseInt(valueBox.html(),10),
@@ -65,7 +65,7 @@
     }
   });
 
-  $('.remove-item').on('click', function() {
+  $('.js-remove-item').on('click', function() {
     var valueBox = $(this).parent().find('span'),
         hiddenInput = $(this).parent().find('input'),
         value     = parseInt(valueBox.html(),10),
