@@ -37,6 +37,10 @@ textarea {
 
 // modified rules currently only used for minibag quantities
 .o-form-input__contain__quantity {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   input {
     max-width: 55px;
     text-align: center;

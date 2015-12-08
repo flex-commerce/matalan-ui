@@ -345,8 +345,10 @@
 
   .sub-nav__group-container {
     padding-right: 185px;
-    min-height: 500px;
   }
+  // _:-webkit-full-screen:not(:root:root), .sub-nav__group-container {
+  //   min-height: 500px;
+  // }
 }
 
 

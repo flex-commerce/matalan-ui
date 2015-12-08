@@ -64,3 +64,9 @@
 .u-no-bord-vis {
   border-color: transparent;
 }
+
+.u-no-underline,
+.u-no-underline:hover {
+  // important needs removing
+  text-decoration: none !important;
+}
