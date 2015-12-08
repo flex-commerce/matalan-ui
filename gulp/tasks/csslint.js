@@ -15,12 +15,12 @@ var scsslintTask = function() {
   var reporter = stylish();
   // var scssToCheck = path.join(config.app.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}');
 
-  var filesToCheck = ['_c-navbar', '_c-nav-megamenu'];
+  var foldersToCheck = ['20-tools', '30-generic'];
 
   var scssToCheck = path.join(
     config.app.src,
     config.tasks.css.src,
-    '/**/{'+ filesToCheck +'}.{' + config.tasks.css.extensions + '}'
+    '/{' + foldersToCheck + '}/*.{' + config.tasks.css.extensions + '}'
     );
 
 
@@ -31,5 +31,5 @@ var scsslintTask = function() {
   .pipe( reporter.printSummary );
 }
 
-gulp.task('css:lint', scsslintTask);
+gulp.task('csslint', scsslintTask);
 module.exports = scsslintTask;

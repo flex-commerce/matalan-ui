@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js u-scrollbar" lang="">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="o-header__brand u-font-ta-c u-keyline-b u-pad-b-large u-mar-t-huge u-mar-b-medium">
+        <a href="./homepage.html">
+          <img src="img/matalan-logo-responsive.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+
+        <div class="row">
+          <div class="col-xs-12 u-mar-v-huge">
+            {{> partials/progress-checkout }}
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h4>Confirmation</h4>
+            <p>Thanks you for your order</p>
+            <p>Your order number is:
+              <strong class="u-font-upper">Order Number</strong>
+            </p>
+            <p>Email confirmation has been sent to:
+              <strong class="u-font-upper">Email Address</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="auto-column-2 u-pad-medium u-border2">
+              <div class="auto-column--nobreak">
+                <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                <ul>
+                  <li>Mr John Doe</li>
+                  <li>Dow</li>
+                  <li>0 John Doe Avenue</li>
+                  <li>United Kingdom</li>
+                  <li>AB1 CD2</li>
+                </ul>
+                <a class="u-pad-t-medium u-dis-ib">Edit Details</a>
+              </div>
+              <div class="auto-column--nobreak">
+                <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                <ul>
+                  <li>Mr John Doe</li>
+                  <li>Dow</li>
+                  <li>AB1 CD2</li>
+                </ul>
+                <a class="u-pad-t-medium u-dis-ib">Edit Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+          <table class="c-table c-table--spaced">
+            <thead>
+              <tr class="u-border2-b">
+                <th style="width: 180px; max-width: 180px">Your goodies</th>
+                <th>&nbsp;</th>
+                <th>Quantity</th>
+                <th>You Save</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              {{#each minibag.category.collection.products}}
+              <tr class="u-border2-b">
+                <td>
+                  <div style="max-width: 150px">
+                    <img class="img" src="{{productImages.[0]}}">
+                  </div>
+                </td>
+                <td>
+                  <p class="h6">{{productTitle}}</p>
+                  <p class="">Colour</p>
+                  <p>Size: Value</p>
+                  <p>Detail: S0000000</p>
+                </td>
+                <td>
+                  <p>1</p>
+                </td>
+                <td>
+                  <p>&pound;0.00</p>
+                </td>
+                <td>
+                  <p>{{productPrice}}</p>
+                </td>
+              </tr>
+              {{/each}}
+
+            </tbody>
+          </table>
+        </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  {{> parcels/footer }} {{> partials/js-footer}}
+</body>
+
+</html>

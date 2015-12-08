@@ -154,7 +154,7 @@ $input-padding-y: $default-pad-y;
   @include clearfix();
 
 }
-
+// TODO this to be moved
 .sign-up--button {
   height: 100%;
   border: 1px solid $cool-grey;
@@ -162,3 +162,16 @@ $input-padding-y: $default-pad-y;
   box-sizing: border-box;
   @include form-item-size;
 }
+
+
+// TODO - this to be moved / modularised
+// handles display of card selection on checkout
+ .o-form-input--card-select {
+  > .o-form-label__option {
+    width: 12%;
+    padding: 0 0.5em;
+  }
+  input[type=radio]+span {
+    margin: 0;
+  }
+ }
