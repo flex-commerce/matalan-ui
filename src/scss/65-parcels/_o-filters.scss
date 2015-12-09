@@ -134,9 +134,7 @@ $filters-border-color: $keyline-color;
 
 .filter--title .icon {
   float: right;
-  margin-top: -3px; // magic line heihgt fix
-  // font-size: 5px;
-  // padding: 8px;
+  margin-top: -2px; // magic line height fix, pls forgive me
   &:before {
     font-size: 1.5em;
   }
