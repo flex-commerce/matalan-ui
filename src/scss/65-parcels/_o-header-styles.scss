@@ -246,3 +246,19 @@
   top: 93%;
   z-index: 3;
 }
+
+@include mq($until: lg) {
+  .search-results--header.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    z-index: 5;
+    background-color: $white;
+  }
+  .search-results--header.fixed.absolute {
+    position: absolute;
+  }
+}
