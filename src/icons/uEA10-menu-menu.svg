@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+	 viewBox="-97 1 128 128" style="enable-background:new -97 1 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#383838;}
+</style>
+<title>Menu</title>
+<desc>Created with Sketch.</desc>
+<g id="Iconography-Board" sketch:type="MSPage">
+	<g id="Menu" transform="translate(-100.000000, -425.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(100.000000, 425.000000)" sketch:type="MSLayerGroup">
+			<path sketch:type="MSShapeGroup" class="st0" d="M31,116.7V96.4h-4.4v20.4c0,2.9-0.7,5-2.2,6.5c-1.5,1.5-3.6,2.2-6.4,2.2
+				c-3,0-5.2-0.7-6.8-2.2s-2.4-3.6-2.4-6.5V96.4H4.5v20.4c0,4.3,1.2,7.4,3.6,9.3c2.4,2,5.7,2.9,10,2.9c4.2,0,7.4-1,9.6-3.1
+				C29.9,123.9,31,120.8,31,116.7z M-28.7,96.4v31.9h4.2v-25.6h0.1l17.2,25.6h4.8V96.4h-4.2v25.9h-0.1L-24,96.4H-28.7z M-56.9,96.4
+				v31.9H-34v-3.6h-18.5v-11h17.1v-3.6h-17.1V99.9h18.4v-3.6H-56.9z M-97,96.4v31.9h4.2v-26.6h0.1l10.3,26.6h3.7l10.3-26.6h0.1v26.6
+				h4.2V96.4h-6l-10.4,26.8L-91,96.4H-97z M-97,69.3H31v-8.5H-97V69.3z M-97,39.4H31v-8.5H-97V39.4z M-97,9.5H31V1H-97V9.5z"/>
+		</g>
+	</g>
+</g>
+</svg>
