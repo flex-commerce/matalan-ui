@@ -47,15 +47,16 @@ textarea {
 // modified rules currently only used for minibag quantities
 .o-form__input-contain--quantity {
   .o-input {
-	user-select: none;
+    user-select: none;
     max-width: 50px; // magic
   }
 }
 
 
-// spacing between inline options and their labels
-.o-form__label-option [type="radio"],
-.o-form__label-option [type="checkbox"] {
+
+// spacing between (fake) options and their labels
+.o-form__label-option [type="radio"] + span,
+.o-form__label-option [type="checkbox"] + span {
   margin-right: .5em;
 }
 
@@ -89,11 +90,17 @@ textarea {
 }
 
 
-// spacing between multiple inline option labels
+.o-form__label-option {
+  cursor: pointer;
+}
+
+
+// vertical spacing between multiple block level options
 .o-option--block > .o-form__label-option {
   display: block;
-  margin-bottom: rem-calc(4);
-  cursor: pointer;
+  + .o-form__label-option {
+    margin-top: rem-calc(4);
+  }
 }
 
 

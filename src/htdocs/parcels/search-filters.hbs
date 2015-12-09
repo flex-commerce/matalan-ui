@@ -1,5 +1,7 @@
 <div class="o-filters__contain">
+
   <div class="o-filters">
+
     <div class="o-filters__header">
       <div class="u-cf">
         <h2 class="u-fl hidden-lg-up">Filter Products</h2>
@@ -7,21 +9,22 @@
         <span class="meta clear__filters hidden-lg-down" >clear all (&times;)</span>
 
         <a class="o-filters__close link u-font-ta-c u-fr hidden-lg-up u-mar-l-large">
-          <i class="icon icon-cross"></i>
+          <i class="icon icon-menu-close"></i>
           <div class="">apply</div>
         </a>
         <a class="o-filters__close link u-font-ta-c u-fr hidden-lg-up ">
-          <i class="icon icon-cross"></i>
+          <i class="icon icon-menu-close"></i>
           <div class="">clear all</div>
         </a>
       </div>
       <div class="separator u-pad-0"></div>
     </div>
+
     <div class="o-filters__inner js-scroll-hold u-scrollbar" data-scroll-responsive="sm-md">
       <ul class="o-filters__list-contain">
         {{#each filters}}
           <li class="o-filters__list o-filters__list-item u-cf">
-            <div class="o-filters__list-item-detail col-xs-12 col-md-12 col-lg-12 u-pad-h-0">
+            <div class="o-filters__list-item-detail col-xs-12 u-pad-h-0">
               <p data-icon-toggle="icon-minus icon-plus" class="filter--title collapse u-font-wb u-color-grey60">{{filterTitle}}
                 <i class="icon icon-plus"></i>
                 <span class="meta expand">expand</span>
