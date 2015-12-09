@@ -1,14 +1,3 @@
-// Default Variables
-$slick-arrow-color: $cool-grey !default;
-$slick-dot-color: $white !default;
-$slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "\EA02" !default;
-$slick-next-character: "\EA04" !default;
-$slick-dot-character: "O" !default;
-$slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
-$slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
 
 /* Slider */
 .o-section-department__slick {
@@ -69,9 +58,9 @@ $slick-opacity-not-active: 0.25 !default;
       }
       &:before {
           font-family: 'flex-icons';
-          content: $slick-prev-character;
+          content: $icon-ui-back;
           [dir="rtl"] & {
-              content: $slick-next-character;
+              content: $icon-ui-forward;
           }
       }
   }
@@ -84,9 +73,9 @@ $slick-opacity-not-active: 0.25 !default;
       }
       &:before {
           font-family: 'flex-icons';
-          content: $slick-next-character;
+          content: $icon-ui-forward;
           [dir="rtl"] & {
-              content: $slick-prev-character;
+              content: $icon-ui-back;
           }
       }
   }

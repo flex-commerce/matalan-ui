@@ -1,5 +1,5 @@
 .o-product-detail {
-
+  @include clearfix();
   fieldset {
     position: relative;
     .icon {
