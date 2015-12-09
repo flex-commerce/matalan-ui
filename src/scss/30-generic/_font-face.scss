@@ -1,21 +1,21 @@
-@font-face {
-  font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?xnnwp1');
-  src: url('../fonts/icomoon.eot?xnnwp1#iefix') format('embedded-opentype'),
-       url('../fonts/icomoon.ttf?xnnwp1') format('truetype'),
-       url('../fonts/icomoon.woff?xnnwp1') format('woff'),
-       url('../fonts/icomoon.svg?xnnwp1#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'icomoon';
+//   src: url('../fonts/icomoon.eot?xnnwp1');
+//   src: url('../fonts/icomoon.eot?xnnwp1#iefix') format('embedded-opentype'),
+//        url('../fonts/icomoon.ttf?xnnwp1') format('truetype'),
+//        url('../fonts/icomoon.woff?xnnwp1') format('woff'),
+//        url('../fonts/icomoon.svg?xnnwp1#icomoon') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 
-@font-face {
-  font-family: 'Didot';
-  src: url('../fonts/didot.woff?xnnwp1') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Didot';
+//   src: url('../fonts/didot.woff?xnnwp1') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 
 @font-face {
@@ -26,14 +26,5 @@
 }
 
 
-///alternative fonts
-@font-face {
-  font-family: 'texheros';
-  src: url('../fonts/texgyreheros-regular-webfont.eot?xnnwp1');
-  src: url('../fonts/texgyreheros-regular-webfont.eot?xnnwp1#iefix') format('embedded-opentype'),
-       url('../fonts/texgyreheros-regular-webfont.ttf?xnnwp1') format('truetype'),
-       url('../fonts/texgyreheros-regular-webfont.woff?xnnwp1') format('woff'),
-       url('../fonts/texgyreheros-regular-webfont.svg?xnnwp1#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+@include font-face("texheros", '../fonts/texgyreheros-regular-webfont');
+@include font-face("texheros", '../fonts/texgyreheros-bold-webfont', bold);
