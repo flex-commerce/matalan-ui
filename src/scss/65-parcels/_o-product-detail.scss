@@ -1,0 +1,17 @@
+.o-product-detail {
+
+  fieldset {
+    position: relative;
+    .icon {
+      @include center(y, abs);
+      right: 0;
+      &:before {
+        color: $cool-grey;
+      }
+    }
+  }
+
+
+
+
+}
