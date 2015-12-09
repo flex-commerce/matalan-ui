@@ -547,18 +547,18 @@ $icon-social-instagram: '\EA22';
 }
 
 // Save variable
-$icon-social-pintrest: '\EA23';
+$icon-social-pinterest: '\EA23';
 
 // Save mixin
-@mixin icon--social-pintrest {
-  @include icon($icon-social-pintrest) {
+@mixin icon--social-pinterest {
+  @include icon($icon-social-pinterest) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-social-pintrest:before {
-  content: $icon-social-pintrest;
+.icon.icon-social-pinterest:before {
+  content: $icon-social-pinterest;
 }
 
 // Save variable

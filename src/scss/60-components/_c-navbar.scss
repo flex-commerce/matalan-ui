@@ -17,15 +17,14 @@
   .c-navbar {
     .navbar__header {
       overflow: hidden;
-      padding: .5rem .75rem;
-
+      padding: 1.25em .75rem .5rem;
+      .icon {
+        @include font-size(16px);
+      }
       > .link {
         display: inline-block;
       }
 
-      > .link:last-of-type {
-        float: right;
-      }
     }
 
     .navbar__footer {
