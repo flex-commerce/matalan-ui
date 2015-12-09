@@ -30,18 +30,17 @@ $border-thickness: 5px;
 
 .flexer {
     display: flex;
+    justify-content: space-between;
 }
 
-.flexer-element {
-    flex: 1;
-}
+
 
 .c-progress-checkout {
     @extend .flexer;
     font-size: 80%;
     margin-bottom: 1em;
     > li {
-        @extend .flexer-element;
+
         list-style: none;
         text-align: center;
         width: auto;
@@ -67,19 +66,21 @@ $border-thickness: 5px;
         display: block;
         position: absolute;
         top: $donut-size / 2 - $border-thickness / 2;
-        width: 100%;
+        min-width: 500px;
         height: $donut-line-thickness;
         content: '';
         background-color: $inactive;
         z-index: -2;
+
     }
     > li:first-child .c-donut:before,
     > li:first-child .c-donut:after {
-        width: 100%;
+        //min-width: 500px;
     }
     > li:last-child .c-donut:before,
     > li:last-child .c-donut:after {
-        width: 0;
+
+        overflow-x: hidden;
     }
     // completed state
     //
