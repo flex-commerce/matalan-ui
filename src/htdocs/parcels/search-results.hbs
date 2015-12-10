@@ -14,9 +14,9 @@
     <h4>{{searchresults.results.searchTerm}}</h4>
     <div id="searchHeader" class="search-results--header u-cf">
       <div class="search--header--products col-6@xs col-2@lg hidden@lg-down u-pad-l-0-lg">
-        <p class="u-color-grey60 u-pad-t-small">0 - 12 of 36 products</p>
+        <p class="u-color-grey60 u-pad-t-small" style="background: orange;">0 - 12 of 36 products</p>
       </div>
-      <div class="search--header--pagination col-6@lg hidden@lg-down u-pad-0">
+      <div class="search--header--pagination col-6@lg hidden@lg-down u-pad-0" style="background: orange;">
         <div class="c-pagination-bar">
           <div class="c-pagination-bar__list u-fl">
             <a href="" class="c-btn c-btn-paginate">View All</a>
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="search--header--sort col-6@xs col-4@lg u-pad-r-0-lg">
+      <div class="search--header--sort col-6@xs col-4@lg u-pad-r-0-lg" style="background: orange;">
         <div class="row">
           <div class="col-3@lg hidden@lg-down u-font-ta-r">
             <label for="sortby" class="u-color-grey60 u-pad-t-small u-dis-ib">
@@ -81,7 +81,7 @@
         <div class="results__detail">
 
           <div class="u-mar-v-medium">{{productTitle}}</div>
-          <div class="u-mar-v-medium u-font-wb  u-mar-t-a">{{productPrice}}</div>
+          <div class="u-mar-v-medium u-font-wb  u-mar-t-a" style="outline: 5px dotted red;">{{productPrice}}</div>
           <div class="c-btn c-btn-primary__alt u-mar-v-medium hidden@lg-down">View</div>
           <div class="u-mar-v-medium rating rating__small">
             <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
