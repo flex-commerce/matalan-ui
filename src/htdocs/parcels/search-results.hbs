@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-12@xs">
     <ul class="c-breadcrumb-bar u-pad-v-large">
       <li class="c-breadcrumb-bar__item no-link">{{searchresults.secTitle}}</li>
       <li class="c-breadcrumb-bar__item no-link">{{searchresults.results.searchTerm}}</li>
@@ -13,10 +13,10 @@
   <div class="search-results__main search-results__tight">
     <h4>{{searchresults.results.searchTerm}}</h4>
     <div id="searchHeader" class="search-results--header u-cf">
-      <div class="search--header--products col-xs-6 col-lg-2 hidden-lg-down u-pad-l-0-lg">
-        <p class="u-color-grey60 u-pad-t-small">0 - 12 of 36 products</p>
+      <div class="search--header--products col-6@xs col-2@lg hidden@lg-down u-pad-l-0-lg">
+        <p class="u-color-grey60 u-pad-t-small" style="background: orange;">0 - 12 of 36 products</p>
       </div>
-      <div class="search--header--pagination col-lg-6 hidden-lg-down u-pad-0">
+      <div class="search--header--pagination col-6@lg hidden@lg-down u-pad-0" style="background: orange;">
         <div class="c-pagination-bar">
           <div class="c-pagination-bar__list u-fl">
             <a href="" class="c-btn c-btn-paginate">View All</a>
@@ -39,14 +39,14 @@
           </div>
         </div>
       </div>
-      <div class="search--header--sort col-xs-6 col-lg-4 u-pad-r-0-lg">
+      <div class="search--header--sort col-6@xs col-4@lg u-pad-r-0-lg" style="background: orange;">
         <div class="row">
-          <div class="col-lg-3 hidden-lg-down u-font-ta-r">
+          <div class="col-3@lg hidden@lg-down u-font-ta-r">
             <label for="sortby" class="u-color-grey60 u-pad-t-small u-dis-ib">
               <small>Sort By</small>
             </label>
           </div>
-          <div class="col-xs-12 col-lg-9">
+          <div class="col-12@xs col-9@lg">
             <div>
               <select id="sortby" class="selectbox select-full">
                 <option selected="selected" disabled="disabled">Sort By</option>
@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="search--header--filter col-xs-6 hidden-lg-up js-filters">
+      <div class="search--header--filter col-6@xs hidden@lg-up js-filters">
 
         <!-- <div> -->
           <a class="selectbox selectbox-fake">
@@ -81,8 +81,8 @@
         <div class="results__detail">
 
           <div class="u-mar-v-medium">{{productTitle}}</div>
-          <div class="u-mar-v-medium u-font-wb  u-mar-t-a">{{productPrice}}</div>
-          <a href="{{ productLink }}" class="c-btn c-btn-primary__alt u-mar-v-medium hidden-lg-down">View</a>
+          <div class="u-mar-v-medium u-font-wb  u-mar-t-a" style="outline: 5px dotted red;">{{productPrice}}</div>
+          <a href="{{ productLink }}" class="c-btn c-btn-primary__alt u-mar-v-medium hidden@lg-down">View</a>
           <div class="u-mar-v-medium rating rating__small">
             <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
             <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
@@ -90,7 +90,7 @@
             <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
             <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
           </div>
-          <a class="c-btn c-btn-tertiary--alt c-btn--small hidden-lg-down u-mar-v-medium u-mar-h-a">More Colours Available</a>
+          <a class="c-btn c-btn-tertiary--alt c-btn--small hidden@lg-down u-mar-v-medium u-mar-h-a">More Colours Available</a>
         </div>
       </div>
       {{/each }}
@@ -98,7 +98,7 @@
 
     <div class="search-results__footer">
 
-      <div class="c-pagination-bar hidden-lg-down u-fr">
+      <div class="c-pagination-bar hidden@lg-down u-fr">
         <div class="c-pagination-bar__list">
           <a href="" class="c-btn c-btn-paginate">View All</a>
           <a href="" class="c-btn c-btn-paginate">1</a>
@@ -110,14 +110,14 @@
         </div>
       </div>
 
-      <div class="row pagination--dropdown hidden-lg-up">
-        <div class="col-xs-3">
+      <div class="row pagination--dropdown hidden@lg-up">
+        <div class="col-3@xs">
           <a href="" class="c-btn c-btn-block c-btn-primary__alt">
             <i class="icon icon-arr-back"></i>
-            <span class="hidden-md-down">Previous</span>
+            <span class="hidden@md-down">Previous</span>
           </a>
         </div>
-        <div class="selectbox__contain-mobile col-xs-6">
+        <div class="selectbox__contain-mobile col-6@xs">
           <select id="pager" class="selectbox selectbox-full u-fl" >
             <option selected="selected" disabled="disabled">Page</option>
             <option value="">1</option>
@@ -127,9 +127,9 @@
             <option value="">5</option>
           </select>
         </div>
-        <div class="col-xs-3">
+        <div class="col-3@xs">
           <a href="" class="c-btn c-btn-block c-btn-primary__alt">
-            <span class="hidden-md-down">Next</span>
+            <span class="hidden@md-down">Next</span>
             <i class="icon icon-arr-forward"></i>
           </a>
         </div>

@@ -1,101 +1,101 @@
+// Class generator mixins. Some day soon Sass will support content arguments
+// when it does we will refactor this
+
 $mq-classgen-directions: ( t: top, r: right, b: bottom, l: left);
 $mq-classgen-models: (pad: padding, mar: margin);
 
 
-@mixin make-spacer-classes() {
-  @each $shortmod, $model in $mq-classgen-models { //each model
-    @each $key, $val in $sizing-sizes { // each size
+@mixin make-spacer-classes($scoped-bp) {
+  $scoped-bp: if($scoped-bp, \@#{$scoped-bp}, null);
+  //each model
+  @each $shortmod, $model in $mq-classgen-models {
+    // each size
+    @each $key, $val in $sizing-sizes {
 
-      @each $shortdir, $dir in $mq-classgen-directions { //each dir
-        .u-#{$shortmod}-#{$shortdir}-#{$key} {
+      //each direction - t/l/b/r
+      @each $shortdir, $dir in $mq-classgen-directions {
+        .u-#{$shortmod}-#{$shortdir}-#{$key}#{$scoped-bp} {
           #{$model}-#{$dir}: #{$val};
         }
-      } //each dir
+      }
+      //each direction
 
       // horizontal
-      .u-#{$shortmod}-h-#{$key} {
+      .u-#{$shortmod}-h-#{$key}#{$scoped-bp} {
         #{$model}-left: #{$val};
         #{$model}-right: #{$val};
       }
+      // end horizontal
+
       // vertical
-      .u-#{$shortmod}-v-#{$key} {
+      .u-#{$shortmod}-v-#{$key}#{$scoped-bp} {
         #{$model}-top: #{$val};
         #{$model}-bottom: #{$val};
       }
+      // end vertical
 
-      @each $shortdir, $dir in $mq-classgen-directions { //each dir
-        .u-#{$shortmod}-#{$key} {
-          #{$model}: #{$val};
-        }
-      } //each dir
-
-    } // each size
-
-  } //each model
-}
-
-
-
-@mixin make-responsive-spacer-classes() {
-
-  @each $mq-breakpoint-name in map-keys($mq-breakpoints) { //each bp
-    // ignore on first pass until we build a min max bp
-    @if variable-exists(previous-bp) {
-
-      @if not($mq-breakpoint-name == xl) { // if we're not on the last bp, min / max
-        @include mq($from: $previous-bp, $until: $mq-breakpoint-name) {
-
-          @each $shortmod, $model in $mq-classgen-models { //each model
-            @each $key, $val in $sizing-sizes { // each size
-
-              @each $shortdir, $dir in $mq-classgen-directions { //each dir
-                .u-#{$shortmod}-#{$shortdir}-#{$key}-#{$previous-bp} {
-                  #{$model}-#{$dir}: #{$val};
-                }
-              } //each dir
-              .u-#{$shortmod}-h-#{$key}-#{$previous-bp} {
-                #{$model}-left: #{$val};
-                #{$model}-right: #{$val};
-              }
-              .u-#{$shortmod}-v-#{$key}-#{$previous-bp} {
-                #{$model}-top: #{$val};
-                #{$model}-bottom: #{$val};
-              }
-            } // each size
-          } //each model
-        } // build bp
-
-      } @else {  // we're on the last bp, min only, no max
-        @include mq($from: $previous-bp) {
-
-          @each $shortmod, $model in $mq-classgen-models { //each model
-            @each $key, $val in $sizing-sizes { // each size
-
-              @each $shortdir, $dir in $mq-classgen-directions { //each dir
-                .u-#{$shortmod}-#{$shortdir}-#{$key}-#{$previous-bp} {
-                  #{$model}-#{$dir}: #{$val};
-                }
-              } //each dir
-              .u-#{$shortmod}-h-#{$key}-#{$previous-bp} {
-                #{$model}-left: #{$val};
-                #{$model}-right: #{$val};
-              }
-              .u-#{$shortmod}-v-#{$key}-#{$previous-bp} {
-                #{$model}-top: #{$val};
-                #{$model}-bottom: #{$val};
-              }
-            } // each size
-          } //each model
-        } // build bp
+      // directionless
+      .u-#{$shortmod}-#{$key}#{$scoped-bp} {
+        #{$model}: #{$val};
       }
-    } @else {
+      // end directionless
 
     }
-
-    $previous-bp: $mq-breakpoint-name;
-  } //each bp
-
+    // each size
+  }
+  //each model
 }
+
+
+
+
+@mixin make-responsive-generated-classes() {
+  $breakpoint-first: nth(first($mq-breakpoints), 1);
+  $breakpoint-last: nth(last($mq-breakpoints), 1);
+  @each $curr-bp in map-keys($mq-breakpoints) {
+    // ignore the first loop until we have a previous breakpoint as a min value
+    @if variable-exists(prev-bp) {
+
+      // ignore the first BP for min value mq - we dont need xs-up
+      @if $prev-bp != $breakpoint-first {
+        @include mq($from: $prev-bp) {
+          @include make-spacer-classes(#{$prev-bp}-up);
+          @include generate-responsive-grid-offsets(#{$prev-bp}-up);
+          @include generate-responsive-hide-classes(#{$prev-bp}-up);
+        }
+      }
+
+      // build the bp specific mq with min max bp values
+      @include mq($from: $prev-bp, $until: $curr-bp) {
+        @include make-spacer-classes($prev-bp);
+        @include generate-responsive-grid-offsets($prev-bp);
+        @include generate-responsive-hide-classes($prev-bp);
+      }
+
+      // ignore the first BP for max value mq - we dont need xs-down
+      @if $prev-bp != $breakpoint-first {
+        @include mq($until: $curr-bp) {
+          @include make-spacer-classes(#{$prev-bp}-down);
+          @include generate-responsive-grid-offsets(#{$prev-bp}-down);
+          @include generate-responsive-hide-classes(#{$prev-bp}-down);
+        }
+      }
+
+      // extra rules for xl bp, since it's last and we build the values at the next BP
+      @if $curr-bp == $breakpoint-last {
+        @include mq($from: $curr-bp) {
+          @include make-spacer-classes($curr-bp);
+          @include generate-responsive-grid-offsets($curr-bp);
+          @include generate-responsive-hide-classes($curr-bp);
+        }
+      }
+    }
+    $prev-bp: $curr-bp;
+  }
+}
+
+
+
 
 
 @mixin make-automargin-classes() {
@@ -118,17 +118,6 @@ $mq-classgen-models: (pad: padding, mar: margin);
     }
 
 } //each model
-
-
-
-@mixin make-zeroall-classes() {
-  @each $shortmod, $model in $mq-classgen-models { //each model
-      .u-#{$shortmod}-0,
-      .u-#{$shortmod}-none, {
-        #{$model}: 0;
-      }
-  } //each model
-}
 
 
 @mixin make-border-classes() {
