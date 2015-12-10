@@ -9,34 +9,30 @@
 // Core style functions and mixins
 @import '20-tools/__manifest';
 
-// Default fonts and cross browser normalisation
-@import '30-generic/__manifest';
+// // Default fonts and cross browser normalisation
+// @import '30-generic/__manifest';
 
-// Global elements only containg html tags e.g. h1,li,ol,ul
-@import '40-elements/__manifest';
+// // Global elements only containg html tags e.g. h1,li,ol,ul
+// @import '40-elements/__manifest';
 
-// Objects e/g grid or media object
-@import '50-objects/__manifest';
+// // Objects e/g grid or media object
+// @import '50-objects/__manifest';
 
-// More detailed components such as buttons, alerts etc/
-@import '60-components/__manifest';
+// // More detailed components such as buttons, alerts etc/
+// @import '60-components/__manifest';
 
-// More detailed page parts e.g. header, footer, etc
-@import '65-parcels/__manifest';
+// // More detailed page parts e.g. header, footer, etc
+// @import '65-parcels/__manifest';
 
-// Scopes e.g. blog styles
-@import '70-scopes/__manifest';
+// // Scopes e.g. blog styles
+// @import '70-scopes/__manifest';
 
-// Themes e.g. color changes based on seasons or promotions
-@import '80-themes/__manifest';
+// // Themes e.g. color changes based on seasons or promotions
+// @import '80-themes/__manifest';
 
-// IE fixes and temporatry hacks
-@import '90-trumps/__manifest';
-
-
-@import 'generated/_icons';
+// // IE fixes and temporatry hacks
+// @import '90-trumps/__manifest';
 
 
-.no-flexbox {
-  color: red;
-}
+// @import 'generated/_icons';
+

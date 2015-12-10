@@ -154,17 +154,6 @@ $susy: (
   @for $i from 1 through $susy-columns {
     .col-#{$class}-#{$i} {
       width: span($i of $susy-columns);
-      // @if ($output-developer-content==true) {
-      //   .row.dev-uikit & {
-      //     &:after {
-      //       @include center(xy, abs);
-      //       content: "#{$i} of #{$susy-columns} @ #{$class}";
-      //       color: #888;
-      //       font-size: 70%;
-      //       text-align: center;
-      //     }
-      //   }
-      // }
     }
     .col-#{$class}-push-#{$i} {
       left: span($i of $susy-columns);
