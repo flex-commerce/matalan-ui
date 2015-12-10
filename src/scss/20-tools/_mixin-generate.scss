@@ -60,6 +60,7 @@ $mq-classgen-models: (pad: padding, mar: margin);
       @if $prev-bp != $breakpoint-first {
         @include mq($from: $prev-bp) {
           @include make-spacer-classes(#{$prev-bp}-up);
+          @include generate-responsive-grid-offsets(#{$prev-bp}-up);
           @include generate-responsive-hide-classes(#{$prev-bp}-up);
         }
       }
@@ -75,6 +76,7 @@ $mq-classgen-models: (pad: padding, mar: margin);
       @if $prev-bp != $breakpoint-first {
         @include mq($until: $curr-bp) {
           @include make-spacer-classes(#{$prev-bp}-down);
+          @include generate-responsive-grid-offsets(#{$prev-bp}-down);
           @include generate-responsive-hide-classes(#{$prev-bp}-down);
         }
       }
