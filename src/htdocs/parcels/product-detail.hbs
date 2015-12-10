@@ -1,0 +1,134 @@
+<div class="o-product-detail">
+  <div class="col-xs-12 col-md-6 col-lg-5 u-mar-t-medium">
+    <div class="o-product__slider" id="cascade-slider">
+      <div>
+        <img src="./img/product-1.jpg" alt="">
+      </div>
+      <div>
+        <img src="./img/product-2.jpg" alt="">
+      </div>
+      <div>
+        <img src="./img/product-3.jpg" alt="">
+      </div>
+      <div>
+        <img src="./img/product-4.jpg" alt="">
+      </div>
+    </div>
+    <div class="u-mar-t-medium">
+      <a class="c-btn c-btn-primary__alt  col-xs-12 u-font-upper"><i class="icon icon-eye u-pad-r-small"></i>Get the Look</a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6 col-lg-7">
+      <div class="row">
+      <div class="col-xs-12">
+        <div class="row u-mar-t-small">
+          <div class="col-xs-8">
+            <h4>Product Name</h4>
+          </div>
+          <div class="col-xs-4 u-font-ta-r">
+            <h4>£0.00</h4>
+          </div>
+        </div>
+        <div class="row u-mar-t-small">
+          <div class="col-xs-8">
+            <span class="rating">
+             <i class="icon icon-star-fill active"></i>
+             <i class="icon icon-star-fill active"></i>
+             <i class="icon icon-star-fill active"></i>
+             <i class="icon icon-star-fill active"></i>
+             <i class="icon icon-star-fill"></i>
+           </span>
+          </div>
+          <div class="col-xs-4 u-font-ta-r">
+            <p>Was £0.00<br />Save £0.00</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <ul class="filter--colours u-pad-b-small">
+              {{# times 3 }}
+              <li title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
+              {{/ times }}
+            </ul>
+          </div>
+          <div class="col-xs-4 u-font-ta-r">
+            <p>Colour</p>
+          </div>
+        </div>
+      </div>
+      <div class="u-cf">
+        <div class="col-xs-12 col-lg-8 u-mar-t-medium">
+          <select class="col-xs-12 u-pad-0 selectbox-full">
+            <option>Size : Select Size</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </div>
+        <div class="col-lg-4 hidden-lg-down u-mar-t-medium">
+          <a class="c-btn c-btn-primary__alt col-xs-12 selectbox-full u-font-upper">Size Guide</a>
+        </div>
+      </div>
+      <div class="col-xs-6 col-lg-4 u-mar-t-medium">
+        <select class="col-xs-12 u-pad-0 selectbox-full">
+          <option>QTY : 1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <div class="col-xs-6 hidden-lg-up u-mar-t-medium">
+        <a class="c-btn c-btn-primary__alt col-xs-12 selectbox-full u-font-upper">Size Guide</a>
+      </div>
+      <div class="col-xs-12 col-lg-8 u-mar-t-medium">
+        <a class="c-btn c-btn-secondary col-xs-12 selectbox-full u-font-upper"><i class="icon icon-mini-bag u-pad-r-small"></i>Add to Bag</a>
+      </div>
+      <div class="col-xs-12 u-mar-t-medium">
+        <ul>
+          <li><i class="icon icon-small-tick"></i><strong>Free</strong> standard home delivery on orders over £50</li>
+          <li><i class="icon icon-small-tick"></i><strong>Free</strong> delivery to store - with click & collect</li>
+          <li><i class="icon icon-small-tick"></i><strong>Free</strong> returns to store</li>
+        </ul>
+      </div>
+      <div class="col-xs-12 hidden-lg-up">
+        <fieldset class="u-pad-v-medium u-border2-t u-mar-t-medium">
+          <i class="icon icon-plus u-fr"></i>
+          <h6 class="u-font-upper">Product Information</h6>
+        </fieldset>
+
+        <fieldset class="u-pad-v-medium u-border2-t">
+          <i class="icon icon-plus u-fr"></i>
+          <h6 class="u-font-upper">Ratings & Reviews</h6>
+
+        </fieldset>
+
+        <fieldset class="u-pad-v-medium u-border2-t u-border2-b">
+          <i class="icon icon-plus u-fr"></i>
+          <h6 class="u-font-upper">Delivery & Returns</h6>
+        </fieldset>
+
+      </div>
+      <div class="col-lg-12 hidden-lg-down u-mar-t-medium">
+        <div class="c-section c-section__tab c-section__tab__horizontal">
+          <ul class="c-section--header">
+            <li role="presentation" class="c-section--header--item active"><a href="#information" role="tab">Product Information</a></li>
+            <li role="presentation" class="c-section--header--item"><a href="#ratings" role="tab">Ratings & Reviews</a></li>
+            <li role="presentation" class="c-section--header--item"><a href="#delivery" role="tab">Delivery & Returns</a></li>
+          </ul>
+          <div class="c-section--content">
+            <div role="tabpanel" class="c-section--content__pane" id="information">{{lorem count=100}}</div>
+            <div role="tabpanel" class="c-section--content__pane" id="ratings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse mollitia quibusdam odio iusto alias dolore.</div>
+            <div role="tabpanel" class="c-section--content__pane" id="delivery">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nihil, ducimus quaerat quae, suscipit.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 u-mar-t-medium u-cf">
+        <ul class="share-buttons">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="./img/Facebook.png"></a></li>
+          <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Flocalhost%3A3000&text=:%20http%3A%2F%2Flocalhost%3A3000" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="./img/twitter.png"></a></li>
+          <li><a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A3000" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="./img/Google+.png"></a></li>
+          <li><a href="mailto:?subject=&body=:%20http%3A%2F%2Flocalhost%3A3000" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="./img/Email.png"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

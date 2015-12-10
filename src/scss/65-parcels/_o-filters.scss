@@ -153,10 +153,13 @@ $filters-border-color: $keyline-color;
     border-radius:15px;
     background:#000;
     cursor: pointer;
-    border: 4px solid $white;
-    // &:hover {
-    //   border-style: none;
-    // }
+    border: 2px solid $white;
+    cursor: pointer;
+  }
+
+  li.active,
+  li:hover {
+    border: 2px solid $black;
   }
 
 

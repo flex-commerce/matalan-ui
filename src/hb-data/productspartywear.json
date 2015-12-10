@@ -22,7 +22,7 @@
           "img/product-1.jpg",
           "img/product-1.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£25.00",
         "productRating": 3,
         "colors": "2",
@@ -34,7 +34,7 @@
           "img/product-2.jpg",
           "img/product-2-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£16.00",
         "productRating": 4,
         "colors": "2",
@@ -46,7 +46,7 @@
           "img/product-3.jpg",
           "img/product-3-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£20.00",
         "productRating": 4,
         "colors": "2",
@@ -58,7 +58,7 @@
           "img/product-4.jpg",
           "img/product-4-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£16.00",
         "productRating": 5,
         "colors": "1",
@@ -70,7 +70,7 @@
           "img/product-5.jpg",
           "img/product-5-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£32.00",
         "productRating": 3,
         "colors": "1",
@@ -82,7 +82,7 @@
           "img/product-6.jpg",
           "img/product-6-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£8.00",
         "productRating": 5,
         "colors": "1",
@@ -94,7 +94,7 @@
           "img/product-7.jpg",
           "img/product-7-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£12.00",
         "productRating": 5,
         "colors": "1",
@@ -106,7 +106,7 @@
           "img/product-8.jpg",
           "img/product-8-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£18.00",
         "productRating": 4,
         "colors": "1",
@@ -118,7 +118,7 @@
           "img/product-9.jpg",
           "img/product-9-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£14.00",
         "productRating": 5,
         "colors": "1",
@@ -130,7 +130,7 @@
           "img/product-10.jpg",
           "img/product-10-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£20.00",
         "productRating": 5,
         "colors": "1",
@@ -142,7 +142,7 @@
           "img/product-11.jpg",
           "img/product-11.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£15.00",
         "productRating": 5,
         "colors": "1",
@@ -154,7 +154,7 @@
           "img/product-12.jpg",
           "img/product-12-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£8.00",
         "productRating": 3,
         "colors": "1",
@@ -166,7 +166,7 @@
           "img/product-13.jpg",
           "img/product-13-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£15.00",
         "productRating": "0",
         "colors": "1",
@@ -178,7 +178,7 @@
           "img/product-14.jpg",
           "img/product-14-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£15.00",
         "productRating": 5,
         "colors": "1",
@@ -190,7 +190,7 @@
           "img/product-15.jpg",
           "img/product-15-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£18.00",
         "productRating": 2,
         "colors": "1",
@@ -202,7 +202,7 @@
           "img/product-16.jpg",
           "img/product-16-alt.jpg"
         ],
-        "productLInk": "#",
+        "productLink": "product-detail.html",
         "productPrice": "£12.00",
         "productRating": 4,
         "colors": "1",

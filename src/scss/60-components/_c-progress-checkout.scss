@@ -89,7 +89,7 @@ $border-thickness: 5px;
         &:after {
             /*Add another block-level blank space*/
             font-family: 'flex-icons';
-            content: '\EA0F';
+            content: $icon-large-tick;
             @include font-size(20px);
             color: $white;
             z-index: 9999;

@@ -23,17 +23,17 @@
         "catTitle": "Christmas at Home",
         "catLink": "#",
         "collection": {
-          "Shop All": "#",
-          "Shop TV Advert": "#",
-          "Christmas at Home": "#",
-          "Christmas Decorations": "#",
-          "Christmas Trees": "#",
-          "Christmas Cards &amp; Wrap": "#",
-          "Christmas Tableware": "#",
-          "Christmas Cooking &amp; Baking": "#",
-          "Christmas Home Accessories &amp; Cushions": "#",
-          "Christmas Bedroom": "#",
-          "Christmas Bathroom": "#"
+          "Shop All": "category-results.html",
+          "Shop TV Advert": "category-results.html",
+          "Christmas at Home": "category-results.html",
+          "Christmas Decorations": "category-results.html",
+          "Christmas Trees": "category-results.html",
+          "Christmas Cards &amp; Wrap": "category-results.html",
+          "Christmas Tableware": "category-results.html",
+          "Christmas Cooking &amp; Baking": "category-results.html",
+          "Christmas Home Accessories &amp; Cushions": "category-results.html",
+          "Christmas Bedroom": "category-results.html",
+          "Christmas Bathroom": "category-results.html"
         }
       },
 

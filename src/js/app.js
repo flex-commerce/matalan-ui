@@ -135,17 +135,35 @@ $('.global-messages').slick({
   infinite: true,
   arrows: false,
   slidesToShow: 1,
-  slidesToScroll: 1,
-  // responsive: [
-  //   {
-  //     breakpoint: 769,
-  //     settings: {
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1
-  //     }
-  //   }
-  // ]
+  slidesToScroll: 1
 
+});
+
+$('.o-product__slider').on('init', function(event, slick){
+  $('.slick-active').prev().addClass('slick-item-prev');
+  $('.slick-active').next().addClass('slick-item-next');
+});
+
+$('.o-product__slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '40px'
+});
+
+
+
+$('.o-product__slider').on('afterChange', function(event, slick, currentSlide){
+  $('.slick-item-prev').removeClass('slick-item-prev');
+  $('.slick-item-next').removeClass('slick-item-next');
+  $('.slick-active').prev().addClass('slick-item-prev');
+  $('.slick-active').next().addClass('slick-item-next');
+});
+
+$('.o-product__slider').on('beforeChange', function(event, slick, currentSlide){
+  $('.slick-item-prev').next().addClass('slick-item-prev');
+  $('.slick-item-next').next().addClass('slick-item-next');
 });
 // ===========================
 // Slick Slider End
