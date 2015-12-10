@@ -20,13 +20,13 @@ $base-space--huge: round($base-space * 2.6);
 
 
 $sizing-sizes: (
-  // 0: 0,
-  // // none: 0,
-  // tiny: $base-space--tiny,
-  // small: $base-space--small,
+  0: 0,
+  none: 0,
+  tiny: $base-space--tiny,
+  small: $base-space--small,
   medium: $base-space--medium,
-  // large: $base-space--large,
-  // huge: $base-space--huge
+  large: $base-space--large,
+  huge: $base-space--huge
 );
 
 

@@ -1,10 +1,10 @@
 // Class generator mixins. Some day soon Sass will support content arguments
 // when it does we will refactor this
 
-// $mq-classgen-directions: ( t: top, r: right, b: bottom, l: left);
-$mq-classgen-directions: ( t: top);
-// $mq-classgen-models: (pad: padding, mar: margin);
-$mq-classgen-models: (pad: padding);
+$mq-classgen-directions: ( t: top, r: right, b: bottom, l: left);
+// $mq-classgen-directions: ( t: top);
+$mq-classgen-models: (pad: padding, mar: margin);
+// $mq-classgen-models: (pad: padding);
 
 
 @mixin make-spacer-classes($scoped-bp) {
@@ -22,25 +22,25 @@ $mq-classgen-models: (pad: padding);
       }
       //each direction
 
-      // // horizontal
-      // .u-#{$shortmod}-h-#{$key}#{$scoped-bp} {
-      //   #{$model}-left: #{$val};
-      //   #{$model}-right: #{$val};
-      // }
-      // // end horizontal
+      // horizontal
+      .u-#{$shortmod}-h-#{$key}#{$scoped-bp} {
+        #{$model}-left: #{$val};
+        #{$model}-right: #{$val};
+      }
+      // end horizontal
 
-      // // vertical
-      // .u-#{$shortmod}-v-#{$key}#{$scoped-bp} {
-      //   #{$model}-top: #{$val};
-      //   #{$model}-bottom: #{$val};
-      // }
-      // // end vertical
+      // vertical
+      .u-#{$shortmod}-v-#{$key}#{$scoped-bp} {
+        #{$model}-top: #{$val};
+        #{$model}-bottom: #{$val};
+      }
+      // end vertical
 
-      // // directionless
-      // .u-#{$shortmod}-#{$key}#{$scoped-bp} {
-      //   #{$model}: #{$val};
-      // }
-      // // end directionless
+      // directionless
+      .u-#{$shortmod}-#{$key}#{$scoped-bp} {
+        #{$model}: #{$val};
+      }
+      // end directionless
 
     }
     // each size
