@@ -2,9 +2,7 @@
 // when it does we will refactor this
 
 $mq-classgen-directions: ( t: top, r: right, b: bottom, l: left);
-// $mq-classgen-directions: ( t: top);
 $mq-classgen-models: (pad: padding, mar: margin);
-// $mq-classgen-models: (pad: padding);
 
 
 @mixin make-spacer-classes($scoped-bp) {
@@ -47,12 +45,11 @@ $mq-classgen-models: (pad: padding, mar: margin);
   }
   //each model
 }
-@include make-spacer-classes(null);
 
 
 
 
-@mixin make-responsive-spacer-classes() {
+@mixin make-responsive-generated-classes() {
   $breakpoint-first: nth(first($mq-breakpoints), 1);
   $breakpoint-last: nth(last($mq-breakpoints), 1);
   @each $curr-bp in map-keys($mq-breakpoints) {
@@ -63,26 +60,31 @@ $mq-classgen-models: (pad: padding, mar: margin);
       @if $prev-bp != $breakpoint-first {
         @include mq($from: $prev-bp) {
           @include make-spacer-classes(#{$prev-bp}-up);
+          @include generate-responsive-hide-classes(#{$prev-bp}-up);
         }
       }
 
       // build the bp specific mq with min max bp values
       @include mq($from: $prev-bp, $until: $curr-bp) {
         @include make-spacer-classes($prev-bp);
+        @include generate-responsive-grid-offsets($prev-bp);
+        @include generate-responsive-hide-classes($prev-bp);
       }
 
       // ignore the first BP for max value mq - we dont need xs-down
       @if $prev-bp != $breakpoint-first {
         @include mq($until: $curr-bp) {
           @include make-spacer-classes(#{$prev-bp}-down);
+          @include generate-responsive-hide-classes(#{$prev-bp}-down);
         }
       }
 
-      // extra rules for xl bp, since we build the values at the next BP
-      // this adds on to the strucutre above because there's nothing larger than xl
+      // extra rules for xl bp, since it's last and we build the values at the next BP
       @if $curr-bp == $breakpoint-last {
         @include mq($from: $curr-bp) {
           @include make-spacer-classes($curr-bp);
+          @include generate-responsive-grid-offsets($curr-bp);
+          @include generate-responsive-hide-classes($curr-bp);
         }
       }
     }
@@ -90,7 +92,6 @@ $mq-classgen-models: (pad: padding, mar: margin);
   }
 }
 
-@include make-responsive-spacer-classes();
 
 
 
@@ -117,17 +118,6 @@ $mq-classgen-models: (pad: padding, mar: margin);
 } //each model
 
 
-
-// @mixin make-zeroall-classes() {
-//   @each $shortmod, $model in $mq-classgen-models { //each model
-//       .u-#{$shortmod}-0,
-//       .u-#{$shortmod}-none, {
-//         #{$model}: 0;
-//       }
-//   } //each model
-// }
-
-
 @mixin make-border-classes() {
   @each $shortdir, $dir in $mq-classgen-directions { //each dir
       %u-keyline-#{$shortdir},
@@ -147,7 +137,3 @@ $mq-classgen-models: (pad: padding, mar: margin);
 
 
 
-// @include make-spacer-classes();
-// @include make-responsive-spacer-classes();
-// @include make-automargin-classes();
-// @include make-zeroall-classes();
