@@ -157,16 +157,6 @@
   padding: 10px;
 }
 
-// temp icon dev rules
-[class^="icon-"],
-[class*=" icon-"] {
-  &:before {
-    font-size: 2em; // todo - replace temp dev rule
-    display: inline-block;
-    color: $cool-grey;
-  }
-}
-
 .block-icon {
   display: block;
   padding-top: 1em;

@@ -1,0 +1,27 @@
+.o-product-detail {
+  @include clearfix();
+  fieldset {
+    position: relative;
+    .icon {
+      @include center(y, abs);
+      right: 0;
+      &:before {
+        color: $cool-grey;
+      }
+
+    }
+  }
+
+  .icon:before {
+    @include font-size(18px);
+  }
+
+  .icon-small-tick:before {
+    color: $primary-color;
+  }
+
+
+
+
+
+}

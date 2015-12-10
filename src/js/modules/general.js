@@ -78,6 +78,7 @@
     }
   });
 
+
   // // Cache selectors outside callback for performance.
   // if ($('#searchHeader').length) {
   //   var $window = $(window),
