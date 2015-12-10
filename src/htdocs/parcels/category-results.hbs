@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-12@xs">
     <ul class="c-breadcrumb-bar u-pad-v-large">
       <li class="c-breadcrumb-bar__item has-link"><a href="">Matalan</a></li>
         <li class="c-breadcrumb-bar__item has-link"><a href="">{{productspartywear.secTitle}}</a></li>
@@ -26,10 +26,10 @@
 
 
     <div id="searchHeader" class="search-results--header u-cf">
-      <div class="search--header--products col-xs-6 col-lg-3 hidden@lg-down">
+      <div class="search--header--products col-6@xs col-3@lg hidden@lg-down">
         <p class="u-color-grey60 u-pad-t-small">0 - 16 of 64 products</p>
       </div>
-      <div class="search--header--pagination col-lg-5 hidden@lg-down u-pad-0">
+      <div class="search--header--pagination col-5@lg hidden@lg-down u-pad-0">
         <div class="c-pagination-bar">
           <div class="c-pagination-bar__list u-fl">
             <a href="" class="c-btn c-btn-paginate">View All</a>
@@ -52,14 +52,14 @@
           </div>
         </div>
       </div>
-      <div class="search--header--sort col-xs-6 col-lg-4">
+      <div class="search--header--sort col-6@xs col-4@lg">
         <div class="row">
-          <div class="col-lg-3 hidden@lg-down u-font-ta-r u-pad-0">
+          <div class="col-3@lg hidden@lg-down u-font-ta-r u-pad-0">
             <label for="sortby" class="u-color-grey60 u-pad-t-small u-dis-ib">
               <small>Sort By</small>
             </label>
           </div>
-          <div class="col-xs-12 col-lg-9">
+          <div class="col-12@xs col-9@lg">
             <div>
               <select id="sortby" class="selectbox select-full">
                 <option selected="selected" disabled="disabled">Sort By</option>
@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="search--header--filter col-xs-6 hidden@lg-up js-filters">
+      <div class="search--header--filter col-6@xs hidden@lg-up js-filters">
 
         <!-- <div> -->
           <a class="selectbox selectbox-fake">
@@ -86,7 +86,7 @@
     </div>
     <div class="search-results--inner row">
       {{#each productspartywear.category.collection.products}}
-      <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-large">
+      <div class="search-results--item col-6@xs col-4@md u-font-ta-c u-mar-b-large">
         <div class="results__image">
           <img class="img" src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
           <div data-content="{{promotionText}}" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-{{promotionPosition}}"></div>

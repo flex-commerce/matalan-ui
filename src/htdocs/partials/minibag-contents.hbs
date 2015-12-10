@@ -8,10 +8,10 @@
     <ul class="o-minibag--list-contain">
       {{#each minibag.category.collection.products}}
       <li class="o-minibag--list o-minibag--list-item u-cf">
-        <div class="o-minibag--list-item--image col-xs-3 col-md-2 col-lg-3 u-pad-0">
+        <div class="o-minibag--list-item--image col-3@xs col-2@md col-3@lg u-pad-0">
           <img class="img" src="{{productImages.[0]}}">
         </div>
-        <div class="o-minibag--list-item--detail col-xs-9 col-md-10 col-lg-6 ">
+        <div class="o-minibag--list-item--detail col-9@xs col-10@md col-6@lg ">
           <p class="detail--description u-font-wb">{{productTitle}}</p>
           <ul class="detail--vars u-pad-b-small list-space__small">
             <li class="list__item">Color:
@@ -27,7 +27,7 @@
           </ul>
         </div>
 
-        <div class="o-minibag--list-item--control col-lg-3 hidden@lg-down">
+        <div class="o-minibag--list-item--control col-3@lg hidden@lg-down">
           <select class="o-minibag--control--select selectbox-dropdown__inline">
             <option>1</option>
             <option>2</option>
@@ -39,13 +39,13 @@
           </div>
         </div>
 
-        <div class="o-minibag--list-item--control o-minibag--list-item--quant col-xs-12 col-md-10 hidden@lg-up">
+        <div class="o-minibag--list-item--control o-minibag--list-item--quant col-12@xs col-10@md hidden@lg-up">
           <!-- <div class="row"> -->
-            <div class="o-minibag--control--remove col-xs-4 u-pad-0">
+            <div class="o-minibag--control--remove col-4@xs u-pad-0">
               <a class="link u-dis-b u-font-no-underline" href="#">
                 <span class="hidden@lg-down">&times;</span> remove</a>
             </div>
-            <div class="o-form__input-contain o-form__input-contain--quantity col-xs-8 u-pad-0 u-font-ta-r">
+            <div class="o-form__input-contain o-form__input-contain--quantity col-8@xs u-pad-0 u-font-ta-r">
               <a class="c-btn c-btn-primary__alt u-font-no-underline js-remove-item">-</a>
               <span class="o-input--textual js-item-count">1</span>
               <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
