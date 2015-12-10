@@ -8,8 +8,18 @@
       &:before {
         color: $cool-grey;
       }
+
     }
   }
+
+  .icon:before {
+    @include font-size(18px);
+  }
+
+  .icon-small-tick:before {
+    color: $primary-color;
+  }
+
 
 
 
