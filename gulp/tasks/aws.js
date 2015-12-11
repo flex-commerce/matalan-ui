@@ -6,13 +6,9 @@ var gulp        = require('gulp'),
     awssecret   = require('../../aws-secret.json');
 
 var awsPublishTask = function() {
-  var dateObj = new Date();
-  var month = dateObj.getUTCMonth() + 1; //months from 1-12
-  var day = dateObj.getUTCDate();
-  var year = dateObj.getUTCFullYear();
-  var newdate = year + "-" + month + "-" + day;
+  var sprint = 5;
 
-  gulp.src(['dist/**/*']).pipe(gulp.dest('dist/' + newdate));
+  gulp.src(['dist/**/*']).pipe(gulp.dest('dist/' + sprint));
 
   // create a new publisher using S3 options
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property

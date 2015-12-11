@@ -1,8 +1,8 @@
 $pill-spacing: rem-calc(4);
-$tab-spacing: rem-calc(2);
+$tab-spacing: rem-calc(8);
 
 $tab-border-width: rem-calc(1);
-$tab-background-colour: $light-grey;
+$tab-background-colour: $dark-grey-lighten-40;
 $tab-border-color: #ddd;
 
 // ========================
@@ -20,8 +20,8 @@ $tab-border-color: #ddd;
     border-width: $tab-border-width;
     border-style: solid solid none;
     border-color: transparent;
+    background-color: $tab-background-colour;
     &:not(.active) a:hover {
-      background: $light-grey;
       margin-bottom: $pill-spacing;
       padding-bottom: 6px;
     }
@@ -45,7 +45,7 @@ $tab-border-color: #ddd;
       border-color: $keyline-color;
       border-style: solid none none solid;
       &:last-child {
-        border-bottom-style: solid
+        border-bottom-style: solid;
       }
     }
   }
@@ -126,7 +126,7 @@ $tab-border-color: #ddd;
 // global tab colours
 .c-section--header {
   a {
-    color: $primary-color;
+    color: $white;
   }
   .active a {
     color: $base-text-color;
