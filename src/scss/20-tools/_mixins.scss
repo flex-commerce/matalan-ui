@@ -20,7 +20,7 @@
 
 // document this
 @mixin input-focus() {
-  outline: 1px solid $dark-grey;
+  outline: 2px solid $dark-grey;
   // usability - raise the element with focus, prevents outline from being obscured
   z-index: 1;
   position: relative;

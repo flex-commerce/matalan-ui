@@ -247,66 +247,6 @@ $icon-love: '\EA0E';
 }
 
 // Save variable
-$icon-menu-close: '\EA0F';
-
-// Save mixin
-@mixin icon--menu-close {
-  @include icon($icon-menu-close) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-menu-close:before {
-  content: $icon-menu-close;
-}
-
-// Save variable
-$icon-menu-menu: '\EA10';
-
-// Save mixin
-@mixin icon--menu-menu {
-  @include icon($icon-menu-menu) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-menu-menu:before {
-  content: $icon-menu-menu;
-}
-
-// Save variable
-$icon-menu-myaccount: '\EA11';
-
-// Save mixin
-@mixin icon--menu-myaccount {
-  @include icon($icon-menu-myaccount) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-menu-myaccount:before {
-  content: $icon-menu-myaccount;
-}
-
-// Save variable
-$icon-menu-storefinder: '\EA12';
-
-// Save mixin
-@mixin icon--menu-storefinder {
-  @include icon($icon-menu-storefinder) {
-    @content;
-  }
-}
-
-// Expose as class
-.icon.icon-menu-storefinder:before {
-  content: $icon-menu-storefinder;
-}
-
-// Save variable
 $icon-mini-bag: '\EA13';
 
 // Save mixin
