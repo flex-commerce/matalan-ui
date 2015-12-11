@@ -14,19 +14,23 @@ var scsslintTask = function() {
 
   var reporter = stylish();
 
-  var folderToCheck = '50-objects';
-  var filesToCheck = ['_o-form-grp','_o-form-items'];
+  var foldersToCheck = '**';
+  var filesToCheck = '*';
 
 
   var scssToCheck = path.join(
     config.app.src,
     config.tasks.css.src,
-   '/' + folderToCheck + '/**.{' + config.tasks.css.extensions + '}'
+   '/' + foldersToCheck +'/'+  filesToCheck + '.{' + config.tasks.css.extensions + '}'
    );
 
 
   return gulp.src( scssToCheck )
-  .pipe( scssLint({ customReport: reporter.issues, config: '.scsslint.yml' }) )
+  .pipe( scssLint({
+    customReport: reporter.issues,
+    config: '.scsslint.yml',
+    endless: true
+ }) )
   .on('error', handleErrors)
   .pipe( reporter.printSummary );
 }
