@@ -19,7 +19,11 @@
 // main header container coopnsisting of the logo, search bar, checkout
 // and bag buttons and off canvass menu button
 .o-header__container {
-  // border-bottom: 1px solid $dark-grey-lighten-10;
+  > .container {
+    @include mq($until: lg) {
+      border-bottom: 1px solid $keyline-color;
+    }
+  }
   .o-icon-with-addon {
     i:before {
       color: $dark-grey-lighten-60;

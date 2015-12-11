@@ -24,66 +24,8 @@
       </ul>
     </div>
 
+    {{> partials/filter-follow-bar }}
 
-    <div id="searchHeader" class="search-results--header u-cf">
-      <div class="search--header--products col-6@xs col-3@lg hidden@lg-down">
-        <p class="u-color-grey60 u-pad-t-small">0 - 16 of 64 products</p>
-      </div>
-      <div class="search--header--pagination col-5@lg hidden@lg-down u-pad-0">
-        <div class="c-pagination-bar">
-          <div class="c-pagination-bar__list u-fl">
-            <a href="" class="c-btn c-btn-paginate">View All</a>
-            <a href="" class="c-btn c-btn-paginate">1</a>
-            <a href="" class="c-btn c-btn-paginate">2</a>
-            <a href="" class="c-btn c-btn-paginate">3</a>
-            <!-- <a href="" class="c-btn c-btn-paginate">4</a> -->
-            <!-- <a href="" class="c-btn c-btn-paginate">5</a> -->
-            <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
-          </div>
-          <div class="results-layout">
-            <a href="" class="js-results-tight u-font-no-underline u-mar-l-medium active">
-              <i class="icon icon-ui-tight"></i>
-              <i class="icon icon-ui-tight-o"></i>
-            </a>
-            <a href="" class="js-results-wide u-font-no-underline u-mar-l-small">
-              <i class="icon icon-ui-wide"></i>
-              <i class="icon icon-ui-wide-o"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="search--header--sort col-6@xs col-4@lg">
-        <div class="row">
-          <div class="col-3@lg hidden@lg-down u-font-ta-r u-pad-0">
-            <label for="sortby" class="u-color-grey60 u-pad-t-small u-dis-ib">
-              <small>Sort By</small>
-            </label>
-          </div>
-          <div class="col-12@xs col-9@lg">
-            <div>
-              <select id="sortby" class="selectbox select-full">
-                <option selected="selected" disabled="disabled">Sort By</option>
-                <option value="">Price, High-Low</option>
-                <option value="">Price, Low-High</option>
-                <option value="">New Arrivals</option>
-                <option value="">Best Sellers</option>
-                <option value="">Customer Rating</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search--header--filter col-6@xs hidden@lg-up js-filters">
-
-        <!-- <div> -->
-          <a class="selectbox selectbox-fake">
-            <span class="selectbox-label">Filter By</span>
-            <span class="selectbox-arrow"><span class="caret"></span></span>
-          </a>
-        <!-- </div> -->
-
-      </div>
-    </div>
     <div class="search-results--inner row">
       {{#each productspartywear.category.collection.products}}
       <div class="search-results--item col-6@xs col-4@md u-font-ta-c u-mar-b-large">

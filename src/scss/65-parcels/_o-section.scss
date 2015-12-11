@@ -1,5 +1,5 @@
 .o-section {
-  @include column( (xs: 12));
+  // @include column( (xs: 12));
   outline: 4px dotted red;
   margin: 5px 0;
 }

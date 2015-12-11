@@ -60,7 +60,7 @@
     });
 
     // open menu item chevron click - href handling to go here
-    $parentNavMenu.on('mousedown', '.icon-arr-forward', function(e) {
+    $parentNavMenu.on('mousedown', '.icon-ui-forward', function(e) {
       e.stopPropagation();
     });
 
@@ -69,13 +69,19 @@
 
   // ===========================
   // off canvas button event handler
-  $(".js-nav-mobile-button").on('mousedown', function() {
+  $("body").on('mousedown', '.js-nav-mobile-button',  function() {
     if ($('html').hasClass('body--modal-open')) {
       closeOffCanvas();
     } else {
       openOffCanvas();
     }
   })
+
+    $('body').on('click touchstart', '#js-clickcatcher-canvas', function() {
+      closeOffCanvas();
+    });
+
+
 
   // DEVELOPER RULE - stop links from acting on click
   $('nav a').on('click', function(e) {

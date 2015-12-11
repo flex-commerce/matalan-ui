@@ -98,9 +98,7 @@ textarea {
 // vertical spacing between multiple block level options
 .o-option--block > .o-form__label-option {
   display: block;
-  + .o-form__label-option {
-    margin-top: rem-calc(4);
-  }
+  margin-bottom: rem-calc(4);
 }
 
 

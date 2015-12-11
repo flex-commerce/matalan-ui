@@ -17,9 +17,10 @@
   .c-navbar {
     .navbar__header {
       overflow: hidden;
-      padding: 1.25em .75rem .5rem;
+      padding: .5em .75rem;
       .icon {
         @include font-size(16px);
+        color: $dark-grey;
       }
       > .link {
         display: inline-block;
