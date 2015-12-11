@@ -23,17 +23,17 @@
         "catTitle": "Christmas at Home",
         "catLink": "#",
         "collection": {
-          "Shop All": "category-results.html",
-          "Shop TV Advert": "category-results.html",
-          "Christmas at Home": "category-results.html",
-          "Christmas Decorations": "category-results.html",
-          "Christmas Trees": "category-results.html",
-          "Christmas Cards &amp; Wrap": "category-results.html",
-          "Christmas Tableware": "category-results.html",
-          "Christmas Cooking &amp; Baking": "category-results.html",
-          "Christmas Home Accessories &amp; Cushions": "category-results.html",
-          "Christmas Bedroom": "category-results.html",
-          "Christmas Bathroom": "category-results.html"
+          "Shop All": "plp.html",
+          "Shop TV Advert": "plp.html",
+          "Christmas at Home": "plp.html",
+          "Christmas Decorations": "plp.html",
+          "Christmas Trees": "plp.html",
+          "Christmas Cards &amp; Wrap": "plp.html",
+          "Christmas Tableware": "plp.html",
+          "Christmas Cooking &amp; Baking": "plp.html",
+          "Christmas Home Accessories &amp; Cushions": "plp.html",
+          "Christmas Bedroom": "plp.html",
+          "Christmas Bathroom": "plp.html"
         }
       },
 
@@ -79,7 +79,7 @@
 
       {
         "catTitle": "Partywear",
-        "catLink": "category-results.html",
+        "catLink": "plp.html",
         "collection": {
           "Shop All": "#",
           "Womens Partywear": "#",
@@ -134,7 +134,7 @@
           "Winter Warmers": "#",
           "Christmas Jumpers": "#",
           "Christmas Novelty": "#",
-          "Party &amp; Occasionwear": "category-results.html",
+          "Party &amp; Occasionwear": "plp.html",
           "Black Dresses": "#",
           "Into the Wilderness": "#",
           "Denim Shop": "#",
@@ -270,7 +270,7 @@
         "collection": {
           "Suits": "#",
           "Suit Fit Guide": "#",
-          "Party &amp; Occasionwear": "category-results.html",
+          "Party &amp; Occasionwear": "plp.html",
           "Formal Shoes": "#"
         }
       },
@@ -361,7 +361,7 @@
         "Christmas Brochure": "#",
         "Christmas Jumpers": "#",
         "Beanie vs Bobble": "#",
-        "Party &amp; Occasionwear": "category-results.html",
+        "Party &amp; Occasionwear": "plp.html",
         "Disney Frozen": "#",
         "Winter Warmers": "#",
         "Shop All Girlswear": "#",
@@ -491,7 +491,7 @@
         "Christmas Brochure": "#",
         "Christmas Jumpers": "#",
         "Beanie vs Bobble": "#",
-        "Party &amp; Occasionwear": "category-results.html",
+        "Party &amp; Occasionwear": "plp.html",
         "Winter Warmers": "#",
         "Shop All Boyswear": "#",
         "Made for Modern Families": "#"
@@ -760,7 +760,7 @@
         "Top 10 Christmas Gifts": "#",
         "Christmas Trends": "#",
         "Christmas Jumpers": "#",
-        "Partywear": "category-results.html"
+        "Partywear": "plp.html"
       }
     }]
   },
