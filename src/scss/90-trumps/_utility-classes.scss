@@ -3,33 +3,35 @@
 .u-cf {
   @include clearfix;
 }
+
 %u-cr,
 .u-cr {
   clear: right;
 }
+
 %u-cl,
 .u-cl {
   clear: left;
 }
+
 %u-cb,
 .u-cb {
   clear: both;
 }
-// clearfixes end
 
+// clearfixes end
 
 .u-dis-b {
   display: block;
 }
+
 .u-dis-ib {
   display: inline-block;
 }
+
 .u-dis-i {
   display: inline;
 }
-
-
-
 
 %u-fr,
 .u-fr {
@@ -48,23 +50,20 @@
 }
 
 .u-round {
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .u-r-0 {
   right: 0;
 }
 
-
-
 // border
 .u-no-bord {
   border-style: none;
 }
+
 .u-no-bord-vis {
   border-color: transparent;
 }
 
-@include make-border-classes();
-
-
+@include make-border-classes;

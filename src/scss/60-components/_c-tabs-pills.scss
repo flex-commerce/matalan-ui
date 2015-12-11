@@ -13,22 +13,26 @@ $tab-border-color: #ddd;
   .c-section--header {
     border-bottom: 1px solid $tab-border-color;
   }
+
   .c-section--header--item {
-    margin-bottom: -($tab-border-width);
+    margin-bottom: -$tab-border-width;
     float: left;
     margin-right: $tab-spacing;
     border-width: $tab-border-width;
     border-style: solid solid none;
     border-color: transparent;
     background-color: $tab-background-colour;
+
     &:not(.active) a:hover {
       margin-bottom: $pill-spacing;
       padding-bottom: 6px;
     }
+
     &.active {
       border-color: $tab-border-color;
     }
   }
+
   .c-section--content {
     border-width: $tab-border-width;
     border-style: none solid solid solid;
@@ -39,16 +43,19 @@ $tab-border-color: #ddd;
 // Tab Stacked (vertical)
 .c-section__tab__vertical {
   display: flex;
+
   .c-section--header {
     .c-section--header--item {
       border-width: $tab-border-width;
       border-color: $keyline-color;
       border-style: solid none none solid;
+
       &:last-child {
         border-bottom-style: solid;
       }
     }
   }
+
   .c-section--content {
     flex-grow: 1;
     border-width: $tab-border-width;
@@ -64,33 +71,40 @@ $tab-border-color: #ddd;
 .c-section__pills {
   .c-section--header--item {
     > a:hover {
-        background-color: $tab-background-colour;
+      background-color: $tab-background-colour;
     }
+
     &.active a {
       background-color: $primary-color;
       color: $white;
+
       &:hover {
         background-color: $primary-color-hover;
       }
     }
   }
 }
+
 // pills horizontal
 .c-section__pills__horizontal {
   .c-section--header {
     @extend .u-cf;
   }
+
   .c-section--header--item {
     margin-right: $pill-spacing;
     float: left;
   }
 }
+
 // pills vertical
 .c-section__pills__vertical {
   display: flex;
+
   .c-section--content {
     flex-grow: 1;
   }
+
   .c-section--header--item {
     margin-bottom: $pill-spacing;
   }
@@ -122,12 +136,12 @@ $tab-border-color: #ddd;
   text-decoration: none;
 }
 
-
 // global tab colours
 .c-section--header {
   a {
     color: $white;
   }
+
   .active a {
     color: $base-text-color;
   }
@@ -139,13 +153,16 @@ $tab-border-color: #ddd;
     background-color: $tab-background-colour;
   }
 }
+
 // vertical tab colours inverted
 .c-section--header__inverted .c-section--header--item {
   a {
     background-color: $tab-background-colour;
   }
+
   &.active {
-    margin-right: -($tab-border-width);
+    margin-right: -$tab-border-width;
+
     a {
       background-color: $white;
     }

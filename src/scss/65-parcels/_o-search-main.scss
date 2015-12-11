@@ -1,9 +1,9 @@
 .search-results__side {
-  @include column( (xs: 2.5));
+  @include column((xs: 2.5));
 }
 
 .search-results__main {
-  @include column( (xs: 12, lg: 9.5));
+  @include column((xs: 12, lg: 9.5));
 }
 
 // .search--header--filter {
@@ -16,6 +16,7 @@
 
 .search-results--header {
   @include border-tb-default(1px);
+
   padding: 0.5em 0;
   margin-bottom: 1em;
 }
@@ -23,6 +24,7 @@
 .search-results--item {
   .results__image {
     position: relative;
+
     .img {
       width: 100%;
     }
@@ -35,15 +37,19 @@
 
 @include mq($from: xs, $until: md) {
   .search-results--item {
-    @include column( (xs: 6, sm:6));
+    @include column((xs: 6, sm: 6));
+
     &:nth-child(2n+1) {
       clear: left;
     }
   }
 }
-@include mq($from: xs, $until: md, $and: '(orientation: landscape)') {
+
+
+@include mq($from: xs, $until: md, $and: "(orientation: landscape)") {
   .search-results--item {
-    @include column( (xs: 4, sm:4));
+    @include column((xs: 4, sm: 4));
+
     &:nth-child(2n+1) {
       clear: left;
     }
@@ -53,15 +59,19 @@
 
 @include mq($from: md, $until: lg) {
   .search-results--item {
-    @include column( (md: 4));
+    @include column((md: 4));
+
     &:nth-child(3n+1) {
       clear: left;
     }
   }
 }
-@include mq($from: md, $until: lg, $and: '(orientation: landscape)') {
+
+
+@include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
   .search-results--item {
-    @include column( (md: 3));
+    @include column((md: 3));
+
     &:nth-child(4n+1) {
       clear: left;
     }
@@ -69,27 +79,27 @@
 }
 
 
-
 @include mq($from: lg) {
   .search-results__tight {
     .search-results--item {
-      @include column( (lg: 3));
+      @include column((lg: 3));
+
       &:nth-child(4n+1) {
         clear: left;
       }
     }
   }
+
   .search-results__wide {
     .search-results--item {
-      @include column( (lg: 4));
+      @include column((lg: 4));
+
       &:nth-child(3n+1) {
         clear: left;
       }
     }
   }
 }
-
-
 
 
 /* Flexbox display of tiles where supported, allows bottom alignment of buttons */
@@ -99,21 +109,23 @@ html.flexbox {
     display: flex;
     flex-wrap: wrap;
   }
+
   .search-results--item {
     display: flex;
     flex-direction: column;
+
     .results__detail {
       display: flex;
       flex-direction: column;
       flex: 1;
     }
+
     .c-btn-primary__alt {
       margin-left: auto;
       margin-right: auto;
     }
   }
 }
-
 
 /* Handling for tile width icons */
 
@@ -132,6 +144,7 @@ html.flexbox {
   .icon:before {
     color: $cool-grey;
   }
+
   &.active {
     .icon:before {
       color: $dark-grey;
