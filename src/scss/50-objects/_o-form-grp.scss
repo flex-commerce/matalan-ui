@@ -87,6 +87,11 @@ $input-padding-y: $default-pad-y;
     &.input-group--addon__button {
       padding: 0;
     }
+
+    .icon:before {
+      color: $keyline-color;
+      line-height: 1.6;
+    }
   }
 
   .input-addon--expand {
@@ -120,25 +125,25 @@ $input-padding-y: $default-pad-y;
 
 //testing new rules - invelstigate this as a pattern
 //used in ui kitchen sink input alert 3col layout
-.o-form--inline-fixed__threecol {
-  .o-form__label-contain {
-    @include span(3);
+// .o-form--inline-fixed__threecol {
+//   .o-form__label-contain {
+//     @include span(3);
 
-    @include form-item-size;
+//     @include form-item-size;
 
-    text-align: right;
-  }
+//     text-align: right;
+//   }
 
-  .o-form__input-contain {
-    @include span(3);
-  }
+//   .o-form__input-contain {
+//     @include span(3);
+//   }
 
-  .o-form-message--contain {
-    @include span(6);
+//   .o-form-message--contain {
+//     @include span(6);
 
-    @include form-item-size;
-  }
-}
+//     @include form-item-size;
+//   }
+// }
 
 .form-default .o-form__row .o-form__label-contain {
   // vertical form label bottom margin

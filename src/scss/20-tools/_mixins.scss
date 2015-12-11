@@ -54,7 +54,7 @@
   @if $hover {
     @include style-variant($primary-color, $white, $primary-color);
   } @else {
-    @include style-variant($secondary-color, $primary-color, $primary-color);
+    @include style-variant($white, $primary-color, $primary-color);
   }
 }
 

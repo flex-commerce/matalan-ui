@@ -30,10 +30,11 @@ li {
     #ANCHOR
 \*------------------------------------*/
 a {
-  // text-decoration: none;
+  text-decoration: none;
   color: $base-text-color;
   &:hover, &:active, &:focus {
     color: $primary-color;
+    text-decoration: underline;
   }
   &:focus {
     @include tab-focus();

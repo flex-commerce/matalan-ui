@@ -1,8 +1,8 @@
 /* Text classes */
 
 .meta {
-  @extend %u-fade-el;
-  @include font-size(11px, 1.1);
+  // @include font-size(11px, 1.1);
+  font-size: 90%;
 }
 
 %u-font-pri,
@@ -74,6 +74,15 @@
 %u-font-si,
 .u-font-si {
   font-style: italic;
+}
+
+%u-font-underline,
+.u-font-underline {
+  text-decoration: underline !important;
+  &:before,
+  &:after {
+    text-decoration: underline !important;
+  }
 }
 
 %u-font-no-underline,

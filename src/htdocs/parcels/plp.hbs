@@ -28,23 +28,24 @@
 
     <div class="search-results--inner row">
       {{#each productspartywear.category.collection.products}}
-      <div class="search-results--item col-6@xs col-4@md u-font-ta-c u-mar-b-large">
+      <div class="search-results--item u-font-ta-c u-mar-b-huge">
         <div class="results__image">
-          <img class="img" src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
+          <img class="img"  src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
           <div data-content="{{promotionText}}" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-{{promotionPosition}}"></div>
         </div>
         <div class="results__detail">
-          <div class="u-mar-v-medium">{{productTitle}}</div>
-          <div class="u-mar-v-medium u-font-wb">{{productPrice}}</div>
-          <a href="{{ productLink }}" class="c-btn c-btn-primary__alt u-mar-v-medium hidden@lg-down u-mar-t-a">View</a>
-          <div class="u-mar-v-medium rating rating__small">
+
+          <div class="u-mar-v-small">{{productTitle}}</div>
+          <div class=" u-font-wb u-mar-t-a">{{productPrice}}</div>
+          <a href="{{ productLink }}" class="c-btn c-btn-primary__alt u-mar-v-small hidden@lg-down">View</a>
+          <div class="u-mar-b-small rating rating__small">
             <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
             <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
             <i class="icon icon-star-fill {{ isactive productRating 2 }}"></i>
             <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
             <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
           </div>
-          <a class="c-btn c-btn-tertiary--alt c-btn--small hidden@lg-down u-mar-v-medium u-mar-h-a">More Colours Available</a>
+          <a class="c-btn c-btn-tertiary--alt c-btn--small hidden@lg-down u-mar-v-small">More Colours Available</a>
         </div>
       </div>
       {{/ each }}

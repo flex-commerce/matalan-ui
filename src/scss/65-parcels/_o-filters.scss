@@ -132,13 +132,18 @@ $filters-border-color: $keyline-color;
   }
 }
 
+
+
 .filter--title .icon {
   float: right;
-  margin-top: -2px; // magic line height fix, pls forgive me
+  margin-top: -3px; // magic line height fix, pls forgive me
+  color: $cool-grey;
   &:before {
     font-size: 1.5em;
   }
 }
+
+
 
 .filter--title.collapse + div,
 .filter--title.collapse + ul {
@@ -225,9 +230,12 @@ $filters-border-color: $keyline-color;
   display:none;
 }
 
-.icon-minus ~ .meta,
-.icon-plus ~ .meta {
-  float: right;
+
+.o-filters__list-item-detail {
+  .meta {
+    color: $cool-grey;
+    float: right;
+  }
 }
 
 .clear__filters {

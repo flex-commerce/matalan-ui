@@ -41,9 +41,13 @@ $footer-bg-color: $light-grey-hover;
 
 .o-footer--social {
   .icon:before {
-    color: $dark-grey-lighten-50;
+    color: $cool-grey;
+  }
+  .icon:hover:before {
+    color: $cool-grey-hover;
   }
 }
+
 .o-footer--title {
   @include font-size(16px);
 }

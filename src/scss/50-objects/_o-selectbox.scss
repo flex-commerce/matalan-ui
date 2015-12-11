@@ -154,6 +154,10 @@ select, .selectbox-dropdown {
   // white-space: nowrap;
   overflow: hidden;
   background: 6px center no-repeat;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .selectbox-options li.selectbox-hover a {
