@@ -60,7 +60,7 @@
     });
 
     // open menu item chevron click - href handling to go here
-    $parentNavMenu.on('mousedown', '.icon-arr-forward', function(e) {
+    $parentNavMenu.on('mousedown', '.icon-ui-forward', function(e) {
       e.stopPropagation();
     });
 
