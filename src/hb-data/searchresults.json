@@ -9,7 +9,7 @@
         "img/search-1.jpg",
         "img/search-1-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£20.00",
       "productRating": 3,
       "colors": "2",
@@ -21,7 +21,7 @@
         "img/search-2.jpg",
         "img/search-2-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£18.00",
       "productRating": 4,
       "colors": "2",
@@ -33,7 +33,7 @@
         "img/search-3.jpg",
         "img/search-3-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£12.00",
       "productRating": 4,
       "colors": "2",
@@ -45,7 +45,7 @@
         "img/search-4.jpg",
         "img/search-4-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£10.00",
       "productRating": 4,
       "colors": "1",
@@ -57,7 +57,7 @@
         "img/search-5.jpg",
         "img/search-5-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£40.00",
       "productRating": 3,
       "colors": "1",
@@ -69,7 +69,7 @@
         "img/search-6.jpg",
         "img/search-6-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£10.00",
       "productRating": 5,
       "colors": "1",
@@ -81,7 +81,7 @@
         "img/search-7.jpg",
         "img/search-7-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£30.00",
       "productRating": 5,
       "colors": "1",
@@ -93,7 +93,7 @@
         "img/search-8.jpg",
         "img/search-8-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£18.00",
       "productRating": 4,
       "colors": "1",
@@ -105,7 +105,7 @@
         "img/search-9.jpg",
         "img/search-9.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£10.00",
       "productRating": 4,
       "colors": "1",
@@ -117,7 +117,7 @@
         "img/search-10.jpg",
         "img/search-10-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£10.00",
       "productRating": 4,
       "colors": "1",
@@ -129,7 +129,7 @@
         "img/search-11.jpg",
         "img/search-11-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£16.00",
       "productRating": 4,
       "colors": "1",
@@ -141,7 +141,7 @@
         "img/search-12.jpg",
         "img/search-12-alt.jpg"
       ],
-      "productLink": "product-detail.html",
+      "productLink": "pdp.html",
       "productPrice": "£16.00",
       "productRating": 4,
       "colors": "1",

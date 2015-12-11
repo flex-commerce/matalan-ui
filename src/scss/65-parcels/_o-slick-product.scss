@@ -16,41 +16,29 @@
     transform: scale(1);
   }
 
-  .slick-item-next {
-
-  }
-
-  .slick-item-next img {
-    // transform-origin: left;
-  }
-
-  .slick-item-prev img {
-    // transform-origin: right;
-  }
-
   img {
     opacity: 0.5;
     transform: scale(0.9);
     transition: all 600ms ease;
   }
-  // .slick-item-next,
-  // .slick-item-prev {
-  //   opacity: 0.5;
-  //   img {
-  //     transform: scale(.9);
-  //   }
-  // }
-  // .slick-item-next {
-  //   img {
-  //     transform-origin: left;
-  //   }
-  // }
+  .slick-item-next,
+  .slick-item-prev {
+    opacity: 0.5;
+    img {
+      transform: scale(.9);
+    }
+  }
+  .slick-item-next {
+    img {
+      transform-origin: left;
+    }
+  }
 
-  // .slick-item-prev {
-  //   img {
-  //     transform-origin: right;
-  //   }
-  // }
+  .slick-item-prev {
+    img {
+      transform-origin: right;
+    }
+  }
   /* Arrows */
 
   .slick-prev,
