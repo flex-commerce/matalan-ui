@@ -112,11 +112,19 @@
   }
 }
 
-.sub-nav-item > .link {
-  &:hover {
-    text-decoration: underline;
+.sub-nav-item {
+  @include mq($from: lg) {
+    padding: 0.125em 0;
+
+    > .link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
+
+
 
 @include mq($until: lg) {
   .navbar__top-item,

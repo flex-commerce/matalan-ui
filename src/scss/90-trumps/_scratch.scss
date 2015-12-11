@@ -23,7 +23,7 @@
   break-inside: avoid;
   display: inline-block;
   width: 100%;
-  > span {
+  > .check-holder {
     @include absolute(left 0);
   }
 }

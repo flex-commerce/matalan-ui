@@ -6,13 +6,13 @@
   @include column( (xs: 12, lg: 9.5));
 }
 
-.search--header--filter {
-  padding-right: 0;
-}
+// .search--header--filter {
+//   padding-right: 0;
+// }
 
-.search--header--sort {
-  padding-left: 0;
-}
+// .search--header--sort {
+//   padding-left: 0;
+// }
 
 .search-results--header {
   @include border-tb-default(1px);
@@ -128,30 +128,13 @@ html.flexbox {
   }
 }
 
-.js-results-tight {
-  .icon-ui-tight {
-    display: none;
+.ui-icon {
+  .icon:before {
+    color: $cool-grey;
   }
   &.active {
-    .icon-ui-tight-o {
-      display: none;
-    }
-    .icon-ui-tight {
-      display: initial;
-    }
-  }
-}
-
-.js-results-wide {
-  .icon-ui-wide {
-    display: none;
-  }
-  &.active {
-    .icon-ui-wide-o {
-      display: none;
-    }
-    .icon-ui-wide {
-      display: initial;
+    .icon:before {
+      color: $dark-grey;
     }
   }
 }
