@@ -8,10 +8,10 @@ var watch  = require('gulp-watch');
 var watchTask = function() {
   var watchableTasks = ['fonts', 'iconFont', 'images', 'svgSprite', 'html', 'css'];
 
-  var cssLintGlob = path.join(config.app.dest, config.tasks.css.dest, 'main.css')
-  watch(cssLintGlob, function() {
-   require('./csslint')();
-  });
+  // var cssLintGlob = path.join(config.app.dest, config.tasks.css.dest, 'main.css')
+  // watch(cssLintGlob, function() {
+  //  require('./csslint')();
+  // });
 
   watchableTasks.forEach(function(taskName) {
     var task = config.tasks[taskName];

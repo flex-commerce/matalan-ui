@@ -1,6 +1,7 @@
 {
   "name": "UI_Kit",
   "version": "0.0.1",
+  "currentSprint": "13",
   "description": "Matalan Direct Flex Commerce UI Kit",
   "license": "Matalan license details goes here",
   "homepage": "http://matalan-ui-kit.s3-website-eu-west-1.amazonaws.com/",
@@ -42,6 +43,7 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-awspublish": "^3.0.1",
+    "gulp-cached": "^1.1.0",
     "gulp-changed": "^1.2.1",
     "gulp-data": "^1.2.0",
     "gulp-duration": "0.0.0",
@@ -77,6 +79,7 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.3",
+    "gulp-zip": "^3.0.2",
     "htmlhint-stylish": "^1.0.3",
     "karma": "0.13.2",
     "karma-chrome-launcher": "^0.2.0",
