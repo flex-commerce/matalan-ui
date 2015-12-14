@@ -1,10 +1,10 @@
 'use strict';
 
-var gulp         = require('gulp'),
-    awspublish   = require('gulp-awspublish'),
-    parallelize  = require("concurrent-transform"),
-    awssecret    = require('../../aws-secret.json'),
-    config       = require('../config.json'),
+var gulp        = require('gulp'),
+    awspublish  = require('gulp-awspublish'),
+    parallelize = require("concurrent-transform"),
+    awssecret   = require('../../aws-secret.json'),
+    config      = require('../config'),
     gulpSequence = require('gulp-sequence');
 
 
@@ -16,26 +16,23 @@ var awsPublishTask = function() {
 
   // define custom headers
   var headers = {
-    'Cache-Control': 'max-age=1, no-transform, public'
+    'Cache-Control': 'max-age=315360000, no-transform, public'
   };
 
-  return gulp.src(config.app.dest)
+  return gulp.src(config.app.dest + '/**')
     // publisher will add Content-Length, Content-Type and headers specified above
     // If not specified it will set x-amz-acl to public-read by default
-    .pipe(parallelize(publisher.publish(headers), 10))
+    .pipe(parallelize(publisher.publish(), 10))
     // create a cache file to speed up consecutive uploads
     .pipe(publisher.cache())
      // print upload updates to console
-    .pipe(awspublish.reporter({
-        states: ['create', 'update', 'delete']
-      }));
+    .pipe(awspublish.reporter());
 
 }
 
-gulp.task('publish:aws', awsPublishTask);
 
-// gulp.task('publish:aws', function(){
-//   gulpSequence('production', 'publishPrepare', awsPublishTask);
-// })
+gulp.task('publish:aws', function(){
+  gulpSequence('production', 'publishPrepare', awsPublishTask);
+})
 
 module.exports = awsPublishTask;
