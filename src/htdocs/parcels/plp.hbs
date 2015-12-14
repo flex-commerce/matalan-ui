@@ -15,13 +15,21 @@
   </div>
   <div class="search-results__main search-results__tight">
     <div class="o-category-container u-font-ta-c">
-      <h2 class="u-font-upper u-mar-b-huge">{{productspartywear.category.catTitle}}</h2>
+      <div class="o-category-container__banner u-pad-v-huge u-mar-b-medium">
+        <h2 class="u-font-upper">{{productspartywear.category.catTitle}}</h2>
+      </div>
       <p>{{productspartywear.category.catDescription}}</p>
       <ul class="o-list-inline-full u-mar-v-huge">
         {{#each productspartywear.category.catOtherLinks}}
           <li><a href="{{{@value}}}">{{{@key}}}</a></li>
         {{/each}}
       </ul>
+      <style>
+        .o-category-container__banner {
+          background-image: url('./img/banner.jpg');
+          background-size: cover;
+        }
+      </style>
     </div>
 
     {{> partials/filter-follow-bar }}
