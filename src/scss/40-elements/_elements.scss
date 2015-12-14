@@ -43,6 +43,14 @@ a {
   }
 }
 
+.link--underline {
+  text-decoration: underline;
+  &:before,
+  &:after {
+    text-decoration: underline;
+  }
+}
+
 p a {
   border-bottom: 1px dotted $base-text-color;
   text-decoration: none;
