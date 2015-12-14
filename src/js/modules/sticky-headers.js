@@ -9,7 +9,7 @@ var stickyHeaders = (function() {
 
       $stickies = stickies.each(function() {
 
-        var $thisSticky = $(this).wrap('<div class="followWrap" />');
+        var $thisSticky = $(this).wrap('<div class="followWrap u-mar-b-medium" />');
 
         $thisSticky
             .data('originalPosition', $thisSticky.offset().top)
