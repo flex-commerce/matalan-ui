@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var zip = require('gulp-zip');
 var path = require('path');
-var config = require('../config');
+var config = require('../config.json');
 var pkg = require('../../package.json');
 
 
