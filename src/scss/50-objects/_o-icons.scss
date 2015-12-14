@@ -2,3 +2,14 @@
   font-size: 2em;
   display: inline-block;
 }
+
+.icon--vertical-right:before {
+  @include center(y, abs);
+  right: 0;
+}
+
+
+.icon--vertical:before {
+  vertical-align: middle;
+}
+
