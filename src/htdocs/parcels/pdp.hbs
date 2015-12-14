@@ -90,31 +90,39 @@
         </ul>
       </div>
       <div class="col-12@xs hidden@lg-up">
-        <fieldset class="u-pad-v-medium u-border2-t u-mar-t-medium">
-          <h6 class="u-font-upper">Product Information<i class="icon icon-plus icon--vertical-right"></i></h6>
+        <fieldset class="u-pad-v-medium u-border2-t u-mar-t-medium c-section--accordion">
+          <div class="o-product-detail__title u-font-upper">Product Information<i class="icon icon-plus icon--vertical-right"></i></div>
+          <div class="o-product-detail__content u-mar-t-large">
+            Product information content - {{lorem count=100}}
+          </div>
         </fieldset>
 
-        <fieldset class="u-pad-v-medium u-border2-t">
-          <h6 class="u-font-upper">Ratings & Reviews<i class="icon icon-plus icon--vertical-right"></i></h6>
-
+        <fieldset class="u-pad-v-medium u-border2-t c-section--accordion">
+          <div class="o-product-detail__title u-font-upper">Ratings & Reviews<i class="icon icon-plus icon--vertical-right"></i></div>
+          <div class="o-product-detail__content u-mar-t-large">
+            Ratings & Reviews content - {{lorem count=50}}
+          </div>
         </fieldset>
 
-        <fieldset class="u-pad-v-medium u-border2-t u-border2-b">
-          <h6 class="u-font-upper">Delivery & Returns<i class="icon icon-plus icon--vertical-right"></i></h6>
+        <fieldset class="u-pad-v-medium u-border2-t u-border2-b c-section--accordion">
+          <div class="o-product-detail__title u-font-upper">Delivery & Returns<i class="icon icon-plus icon--vertical-right"></i></div>
+          <div class="o-product-detail__content u-mar-t-large">
+            Delivery & Returns content -{{lorem count=60}}
+          </div>
         </fieldset>
 
       </div>
       <div class="col-12@lg hidden@md-down u-mar-t-medium">
         <div class="c-section c-section__tab c-section__tab__horizontal">
-          <ul class="c-section--header">
+          <ul id="productDetailTabs" class="c-section--header">
             <li role="presentation" class="c-section--header--item active"><a href="#information" role="tab">Product Information</a></li>
             <li role="presentation" class="c-section--header--item"><a href="#ratings" role="tab">Ratings & Reviews</a></li>
             <li role="presentation" class="c-section--header--item"><a href="#delivery" role="tab">Delivery & Returns</a></li>
           </ul>
           <div class="c-section--content">
-            <div role="tabpanel" class="c-section--content__pane" id="information">{{lorem count=100}}</div>
-            <div role="tabpanel" class="c-section--content__pane" id="ratings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse mollitia quibusdam odio iusto alias dolore.</div>
-            <div role="tabpanel" class="c-section--content__pane" id="delivery">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nihil, ducimus quaerat quae, suscipit.</div>
+            <div role="tabpanel" class="c-section--content__pane" id="information">Product information content - {{lorem count=100}}</div>
+            <div role="tabpanel" class="c-section--content__pane" id="ratings">Ratings & Reviews content - {{lorem count=50}}</div>
+            <div role="tabpanel" class="c-section--content__pane" id="delivery">Delivery & Returns content -{{lorem count=60}}</div>
           </div>
         </div>
       </div>

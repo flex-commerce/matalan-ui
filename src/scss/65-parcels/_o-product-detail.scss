@@ -1,6 +1,7 @@
 .o-product-detail {
   @include clearfix();
   fieldset {
+    @include clearfix();
     position: relative;
     // .icon {
     //   @include center(y, abs);
@@ -10,6 +11,18 @@
     //   }
 
     // }
+  }
+
+  .o-product-detail__title {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .o-product-detail__content {
+    display: none;
+    &.active {
+      display: block;
+    }
   }
 
   // .icon:before {
