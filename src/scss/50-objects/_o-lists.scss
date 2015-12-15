@@ -39,7 +39,7 @@ $list-border: $cool-grey;
 }
 
 %list-inline__delimited--content {
-    content: '/';
+    content: '>';
     display: inline-block;
     width: rem-calc(15);
     margin-left: rem-calc(5);

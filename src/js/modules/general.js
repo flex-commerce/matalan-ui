@@ -95,6 +95,11 @@
       $(this).siblings().find('.o-product-detail__title i').removeClass("icon-minus").addClass('icon-plus');
   });
 
+  $('.filter--colours li').click(function(e) {
+    $(this).toggleClass('active');
+    $(this).siblings().removeClass('active');
+  });
+
 
   // // Cache selectors outside callback for performance.
   // if ($('#searchHeader').length) {

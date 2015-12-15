@@ -1,32 +1,41 @@
 <div class="container o-product-detail">
-  <div class="col-12@xs col-6@md col-5@lg u-mar-t-medium">
+  <div class="col-12@xs">
+    <ul class="c-breadcrumb-bar u-pad-v-large">
+      <li class="c-breadcrumb-bar__item has-link"><a href="">Matalan</a></li>
+      <li class="c-breadcrumb-bar__item has-link"><a href="">{{productspartywear.secTitle}}</a></li>
+      <li class="c-breadcrumb-bar__item has-link">
+            <a href="">{{productspartywear.category.catTitle}}</a>
+      </li>
+      <li class="c-breadcrumb-bar__item">
+            Product name
+      </li>
+    </ul>
+  </div>
+  <div class="col-12@xs col-7@md col-5@lg u-mar-t-medium">
     <div class="o-product__slider" id="cascade-slider">
       <div>
         <img src="./img/product-1.jpg" alt="">
+        <!-- <i class="slick-zoom icon icon-plus"></i> -->
       </div>
       <div>
         <img src="./img/product-2.jpg" alt="">
+        <!-- <i class="slick-zoom icon icon-plus"></i> -->
       </div>
-      <div>
-        <img src="./img/product-3.jpg" alt="">
-      </div>
-      <div>
-        <img src="./img/product-4.jpg" alt="">
-      </div>
+
     </div>
     <div class="u-mar-t-medium">
       <a class="c-btn c-btn-primary__alt  col-12@xs u-font-upper"><i class="icon icon-eye u-pad-r-large icon--vertical"></i>Get the Look</a>
     </div>
   </div>
-  <div class="col-12@xs col-6@md col-7@lg">
+  <div class="col-12@xs col-5@md col-7@lg">
       <div class="row">
       <div class="col-12@xs">
         <div class="row u-mar-t-small">
           <div class="col-8@xs">
-            <h4>Product Name</h4>
+            <h2>Product Name</h2>
           </div>
           <div class="col-4@xs u-font-ta-r">
-            <h4>£0.00</h4>
+            <h2>£0.00</h2>
           </div>
         </div>
         <div class="row u-mar-t-small">
@@ -46,9 +55,10 @@
         <div class="row">
           <div class="col-8@xs">
             <ul class="filter--colours u-pad-b-small">
-              {{# times 3 }}
+
+              <li class="active" title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
               <li title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
-              {{/ times }}
+              <li title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
             </ul>
           </div>
           <div class="col-4@xs u-font-ta-r">
@@ -58,14 +68,13 @@
       </div>
       <div class="u-cf">
         <div class="col-12@xs col-8@lg u-mar-t-medium">
-          <select class="col-12@xs u-pad-0 selectbox-full">
-            <option>Size : Select Size</option>
+          <select class="col-12@xs u-pad-0 selectbox-full" placeholder="Size : Select Size">
             <option>Small</option>
             <option>Medium</option>
             <option>Large</option>
           </select>
         </div>
-        <div class="col-4@lg hidden@lg-down  u-mar-t-medium">
+        <div class="col-4@lg hidden@md-down  u-mar-t-medium">
           <a class="c-btn c-btn-primary__alt col-12@xs selectbox-full u-font-upper">Size Guide</a>
         </div>
       </div>
@@ -127,13 +136,15 @@
         </div>
       </div>
       <div class="col-12@lg u-mar-t-medium u-cf">
-        <ul class="share-buttons">
-          <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="./img/Facebook.png"></a></li>
-          <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Flocalhost%3A3000&text=:%20http%3A%2F%2Flocalhost%3A3000" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="./img/twitter.png"></a></li>
-          <li><a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A3000" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="./img/Google+.png"></a></li>
-          <li><a href="mailto:?subject=&body=:%20http%3A%2F%2Flocalhost%3A3000" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="./img/Email.png"></a></li>
-        </ul>
+        <span class='st_fblike_hcount' displayText='Facebook Like'></span>
+        <span class='st_twitter_hcount' displayText='Tweet'></span>
+        <span class='st_plusone_hcount' displayText='Google +1'></span>
+        <span class='st_email_hcount' displayText='Email'></span>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "f8c97dc7-28b4-4f55-a016-37b085372f73", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
