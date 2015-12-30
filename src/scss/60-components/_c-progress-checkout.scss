@@ -39,7 +39,13 @@ $border-thickness: 5px;
     @extend .flexer;
     font-size: 80%;
     margin-bottom: 1em;
-    > li {
+    a {
+      color: $inactive;
+      display: block;
+      cursor: pointer;
+    }
+
+    li {
 
         list-style: none;
         text-align: center;
@@ -48,7 +54,7 @@ $border-thickness: 5px;
         text-overflow: ellipsis;
         color: $inactive;
     }
-    > li .c-donut {
+    li span.c-donut {
         border-radius: 50%;
         width: $donut-size;
         height: $donut-size;
@@ -61,8 +67,8 @@ $border-thickness: 5px;
         line-height: 1.9em;
     }
     // line connectors
-    > li .c-donut:before,
-    > li .c-donut:after {
+    li span.c-donut:before,
+    li span.c-donut:after {
         display: block;
         position: absolute;
         top: $donut-size / 2 - $border-thickness / 2;
@@ -73,19 +79,21 @@ $border-thickness: 5px;
         z-index: -2;
 
     }
-    > li:first-child .c-donut:before,
-    > li:first-child .c-donut:after {
+    li:first-child span.c-donut:before,
+    li:first-child span.c-donut:after {
         //min-width: 500px;
     }
-    > li:last-child .c-donut:before,
-    > li:last-child .c-donut:after {
-
+    li:last-child span.c-donut:before,
+    li:last-child span.c-donut:after {
         overflow-x: hidden;
+        background-color: $white;
     }
     // completed state
     //
-    > li.completed {
-        color: $active;
+    li.completed {
+        a {
+          color: $active;
+        }
         &:after {
             /*Add another block-level blank space*/
             font-family: 'flex-icons';
@@ -101,10 +109,13 @@ $border-thickness: 5px;
             @include donut-style("completed");
         }
     }
-    > li.active {
+    li.active {
+      a {
         color: $active;
-        .c-donut {
-            @include donut-style("active");
-        }
+        text-decoration: none;
+      }
+      .c-donut {
+          @include donut-style("active");
+      }
     }
 }

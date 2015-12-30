@@ -18,22 +18,18 @@
     </div>
 
     <div class="row">
-      <div class="col-10@xs col-offset-1@lg-up">
+      <div class="col-12@xs">
 
-        <div class="row">
-          <div class="u-mar-v-huge">
-            {{> partials/progress-checkout }}
+          <div class="u-mar-v-small">
+            {{> partials/progress-checkout-4 }}
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-8@lg u-pad-l-0">
+          <div class="col-8@md u-pad-l-0">
 
             <form action="" class="form-default">
-
-              <div class="islet auto-column-3">
+              <div class="islet auto-column-3 hidden@md-down">
                 <div class="auto-column--nobreak">
-                  <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                  <h6 class="u-mar-b-medium u-font-upper">Billing Details</h6>
                   <ul>
                     <li>Mr John Doe</li>
                     <li>Dow</li>
@@ -41,34 +37,33 @@
                     <li>United Kingdom</li>
                     <li>AB1 CD2</li>
                   </ul>
-                  <a class="u-pad-t-medium u-dis-ib">Edit Details</a>
+                  <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small">Edit</a>
                 </div>
                 <div class="auto-column--nobreak">
-                  <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                  <h6 class="u-mar-b-medium u-font-upper">Delivery Address</h6>
                   <ul>
                     <li>Mr John Doe</li>
                     <li>Dow</li>
                     <li>AB1 CD2</li>
                   </ul>
-                  <a class="u-pad-t-medium u-dis-ib">Edit Details</a>
+                  <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small">Edit</a>
                 </div>
                 <div class="auto-column--nobreak">
-                  <h6 class="u-mar-b-medium u-font-upper">Home Address</h6>
+                  <h6 class="u-mar-b-medium u-font-upper">Delivery Options</h6>
                   <ul>
                     <li>Mr John Doe</li>
                   </ul>
-                  <a class="u-pad-t-medium u-dis-ib">Edit Details</a>
+                  <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small">Edit</a>
                 </div>
               </div>
-
-
               <div class="u-mar-v-medium">
+                <p>Total bag value: £167.00</p>
                 <label class="o-form__label-option">
                   <input type="checkbox">
                   <span class="check-holder"></span>
                   I have read and understood the <a href="">Terms &amp; Conditions</a>
                 </label>
-                <p><sup>**</sup>You will need to accept our T&amp;C's before entering your payment information<sup>**</sup></p>
+                <p class="u-mar-t-medium"><sup>**</sup>You will need to accept our T&amp;C's before entering your payment information<sup>**</sup></p>
               </div>
 
 
@@ -76,9 +71,10 @@
                 <div class="o-form__input-contain">
                   <label class="o-form__label-primary">Select Payment Method <sup>*</sup></label>
                 </div>
-                <div class="o-form-input__contain o-form-input--card-select">
+                <div class="o-form-input__contain o-form-input--card-select u-mar-t-small">
+                  <div class="row">
                   {{# times 8}}
-                  <label class="o-form__label-option u-dis-ib u-font-ta-c">
+                  <label class="o-form__label-option col-3@xs col-2@md col-1@lg u-dis-ib u-font-ta-c u-mar-t-small">
                     <div class="cardselect--image">
                       <img class="svg" src="img/card-visa.svg">
                     </div>
@@ -86,16 +82,17 @@
                     <span></span>
                   </label>
                   {{/ times }}
+                  </div>
                 </div>
               </div>
 
 
               <div class="row">
-                <div class="col-7@xs">
+                <div class="col-12@xs col-7@lg">
 
                   <div class="o-form__row">
                     <div class="o-form__input-contain">
-                      <label class="o-form__label-primary">Input Label</label>
+                      <label class="o-form__label-primary">Card Number:<sup>*</sup></label>
                     </div>
                     <div class="o-form-input__contain">
                       <input type="text" class="o-input o-input--textual" placeholder="placeholder">
@@ -104,11 +101,11 @@
 
 
                   <div class="row">
-                    <div class="col-7@xs">
+                    <div class="col-12@xs col-6@md">
                       <div class="row">
                         <div class="o-form__row">
                           <div class="col-12@xs o-form__input-contain">
-                            <label class="o-form__label-primary">Expiry</label>
+                            <label class="o-form__label-primary">Expiry:<sup>*</sup></label>
                           </div>
                           <div class="col-6@xs u-pad-r-small">
                             <div>
@@ -133,10 +130,10 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-5@xs">
+                    <div class="col-12@xs col-6@md">
                       <div class="o-form__row">
                         <div class="o-form__input-contain">
-                          <label class="o-form__label-primary">Security</label>
+                          <label class="o-form__label-primary">Security Code:<sup>*</sup></label>
                         </div>
                         <div class="o-form-input__contain">
                           <input type="text" class="o-input o-input--textual" placeholder="placeholder">
@@ -147,7 +144,7 @@
 
 
                 </div>
-                <div class="col-5@xs">
+                <div class="col-5@md hidden@md-down">
                   <div class="o-form__row">
                     <div class="o-form__input-contain">
                       <label class="o-form__label-primary">ra</label>
@@ -162,9 +159,9 @@
               </div>
 
 
-              <div class="o-minibag--list-actions">
+              <div class="o-minibag--list-actions u-mar-t-medium">
                 <div class="flexer">
-                  <a class="c-btn c-btn-secondary col-6@xs flexer-element">Pay Now</a>
+                  <a class="c-btn c-btn-secondary col-12@xs flexer-element u-font-upper">Pay Now</a>
                 </div>
                 <div class="separator__inline-text">
                   <span>or</span>
@@ -181,15 +178,12 @@
           </div>
 
 
-          <div class="col-4@lg u-pad-r-0">
+          <div class="col-4@md u-pad-r-0 hidden@sm-down">
             <div class="u-cf">
               <h5 class="u-font-upper u-fl">Shopping Bag</h5>
-              <a class="c-btn c-btn-primary__alt u-font-upper u-fr">Edit</a>
             </div>
             {{> partials/minibag-contents }}
           </div>
-
-        </div>
       </div>
     </div>
 

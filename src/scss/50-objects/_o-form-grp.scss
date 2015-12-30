@@ -210,10 +210,6 @@ $input-padding-y: $default-pad-y;
 // TODO - this to be moved / modularised
 // handles display of card selection on checkout
 .o-form-input--card-select {
-  > .o-form__label-option {
-    width: 12%;
-    padding: 0 .5em;
-  }
 
   [type=radio] + span {
     margin: 0;

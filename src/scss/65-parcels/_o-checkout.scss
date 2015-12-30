@@ -1,0 +1,49 @@
+.o-checkout__container {
+  @include clearfix();
+  fieldset {
+    @include clearfix();
+    position: relative;
+    // .icon {
+    //   @include center(y, abs);
+    //   right: 0;
+    //   &:before {
+    //     color: $cool-grey;
+    //   }
+
+    // }
+    .o-checkout__title {
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      color: $dark-grey-lighten-40;
+    }
+    .o-checkout__content {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    &.active {
+      .o-checkout__content {
+        display: block;
+      }
+
+      .o-checkout__title {
+        color: $dark-grey-lighten-100;
+      }
+    }
+  }
+
+  // .icon:before {
+  //   @include font-size(18px);
+  // }
+
+  .icon-small-tick:before {
+    color: $primary-color;
+  }
+
+
+
+
+
+}
