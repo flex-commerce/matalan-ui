@@ -83,16 +83,16 @@
       $(this).parent().addClass("active");
       $(this).parent().siblings().removeClass("active");
       var tab = $(this).attr("href");
-      $(".c-section--content div").not(tab).css("display", "none");
+      $(".c-section--content > div").not(tab).css("display", "none");
       $(tab).fadeIn();
   });
 
   $(".c-section--accordion").click(function(e) {
       e.preventDefault();
-      $(this).find('.o-product-detail__content').toggleClass("active");
-      $(this).find('.o-product-detail__title i').toggleClass("icon-plus icon-minus");
-      $(this).siblings().find('.o-product-detail__content').removeClass("active");
-      $(this).siblings().find('.o-product-detail__title i').removeClass("icon-minus").addClass('icon-plus');
+      $(this).find('.o-product-detail__content, .o-my-account__content').toggleClass("active");
+      $(this).find('.o-product-detail__title i, .o-my-account__title i').toggleClass("icon-plus icon-minus");
+      $(this).siblings().find('.o-product-detail__content, .o-my-account__content').removeClass("active");
+      $(this).siblings().find('.o-product-detail__title i, .o-my-account__title i').removeClass("icon-minus").addClass('icon-plus');
   });
 
   $('.filter--colours li').click(function(e) {
