@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html class="no-js" lang="">
+
+<head>
+    {{> partials/html-head }}
+</head>
+
+<body>
+    {{> parcels/header }}
+    <div class="container">
+        <div class="row">
+            <div class="c-tabs c-tabs--tab c-tabs--tab--horizontal col-6@xs">
+
+                <ul id="example-tabs" class="c-tabs__header" role="tablist">
+                    <li class="c-tabs__header__item">
+                        <a href="#information" data-toggle="tab" role="tab">Product Information</a>
+                    </li>
+                    <li class="c-tabs__header__item">
+                        <a href="#ratings" data-toggle="tab" role="tab">Ratings &amp; Reviews</a>
+                    </li>
+                    <li class="c-tabs__header__item">
+                        <a href="#delivery" data-toggle="tab" role="tab">Delivery &amp; Returns</a>
+                    </li>
+                </ul>
+
+                <div class="c-tabs__content">
+                    <div role="tabpanel" class="c-tabs__content__pane" id="information">
+                        <strong>Product information content</strong> - {{lorem count=100}}
+                    </div>
+                    <div role="tabpanel" class="c-tabs__content__pane" id="ratings">
+                        <strong>Ratings &amp; Reviews content</strong> - {{lorem count=50}}
+                    </div>
+                    <div role="tabpanel" class="c-tabs__content__pane" id="delivery">
+                        <strong>Delivery &amp; Returns content</strong> - {{lorem count=60}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+            <hr> {{> partials/nav-tabspills }}
+        </div>
+    </div>
+    {{> parcels/footer }} {{> partials/js-footer}}
+</body>
+
+
+</html>

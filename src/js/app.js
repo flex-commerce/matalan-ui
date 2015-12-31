@@ -1,17 +1,7 @@
 // ===========================
-// jQuery auto require testing
-// ===========================
-// console.log($);
-// ===========================
-// jQuery testing end
-// ===========================
-
-
-// ===========================
 // Lodash testing
 // ===========================
 require("lodash");
-// console.log(_);
 // ===========================
 // Lodash testing end
 // ===========================
@@ -32,6 +22,25 @@ require("./modules/dropdown");
 // ===========================
 // Dropdown end
 // ===========================
+
+
+// ===========================
+// Tabs
+// ===========================
+require("./modules/tabs");
+
+var tabsIdentifier = $('[role="tablist"]');
+
+$.each( tabsIdentifier , function() {
+  $(this).find('a:first').tab('show');
+});
+// $('[role="tablist"] a:first').tab('show');
+
+// ===========================
+// Tabs end
+// ===========================
+
+
 
 
 window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
@@ -93,13 +102,13 @@ $('select').selectBox({
 
 
 // ===========================
-// SelectBox init
+// Sticky Headers
 // ===========================
 
 require("./modules/sticky-headers");
 
 // =========================
-// SelectBox End
+// Sticky Headers End
 // ===========================
 
 
