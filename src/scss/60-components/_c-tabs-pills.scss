@@ -1,6 +1,5 @@
 $pill-spacing: rem-calc(4);
 $tab-spacing: rem-calc(8);
-
 $tab-border-width: rem-calc(1);
 $tab-background-colour: $dark-grey-lighten-40;
 $tab-border-color: #ddd;
@@ -8,18 +7,16 @@ $tab-border-color: #ddd;
 // ========================
 // Tab Rules
 // ========================
-
 .c-tabs__content > .c-tabs__content__pane {
   display: none;
 }
+
 .c-tabs__content > .c-tabs__content__pane.active {
   display: block;
 }
 
-
 // Tab Default (horizontal)
 .c-tabs--tab--horizontal {
-
   .c-tabs__header {
     border-bottom: 1px solid $tab-border-color;
   }
@@ -78,7 +75,7 @@ $tab-border-color: #ddd;
 // Pills Rules
 // ========================
 // pills global
-.c-tabs__pills {
+.c-tabs--pills {
   .c-tabs__header__item {
     > a:hover {
       background-color: $tab-background-colour;
@@ -97,7 +94,7 @@ $tab-border-color: #ddd;
 }
 
 // pills horizontal
-.c-tabs--pills--horizontal  {
+.c-tabs--pills--horizontal {
   .c-tabs__header {
     @extend .u-cf;
   }
@@ -120,6 +117,9 @@ $tab-border-color: #ddd;
     margin-bottom: $pill-spacing;
   }
 }
+
+
+
 
 // misc rules - to be sorted
 // ========================
@@ -163,50 +163,41 @@ $tab-border-color: #ddd;
 //   &.active {
 //     // margin-right: -$tab-border-width;
 //     border-right-color: red;
+
 //     a {
 //       background-color: $white;
 //     }
 //   }
 // }
-
-
-
 // ===============================
 
 // global tab colours
-.c-tabs--tab--horizontal .c-tabs__header {
+.c-tabs__header {
   a {
     color: $white;
   }
+
   .active a {
     color: $base-text-color;
   }
-}
 
-.c-tabs--tab--vertical {
-  a {
-    color: $base-text-color;
-  }
-  .active a {
-    color: $white;
+  .c-tabs__header__item:not(.active):hover {
+    background-color: $cool-grey-hover;
+    a {
+      color: $white;
+    }
   }
 }
 
-// .c-tabs__header__inverted {
-//   a {
-//     color: $white;
-//   }
-//   .active a {
-//     color: $base-text-color;
-//   }
-// }
+.c-tabs--tab--vertical,
+.c-tabs--pills {
+  .c-tabs__header {
+    a {
+      color: $dark-grey;
+    }
 
-
-
-
-
-
-
-
-
-
+    .active a {
+      color: $white;
+    }
+  }
+}
