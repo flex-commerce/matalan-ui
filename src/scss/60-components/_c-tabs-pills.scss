@@ -8,8 +8,18 @@ $tab-border-color: #ddd;
 // ========================
 // Tab Rules
 // ========================
+
+.c-section--content > .c-section--content__pane {
+  display: none;
+}
+.c-section--content > .c-section--content__pane.active {
+  display: block;
+}
+
+
 // Tab Default (horizontal)
 .c-section__tab__horizontal {
+
   .c-section--header {
     border-bottom: 1px solid $tab-border-color;
   }

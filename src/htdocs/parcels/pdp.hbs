@@ -14,7 +14,10 @@
 
     </div>
     <div class="u-mar-t-medium">
-      <a class="c-btn c-btn-primary__alt  col-12@xs u-font-upper"><i class="icon icon-eye u-pad-r-large icon--vertical"></i>Get the Look</a>
+      <a class="c-btn c-btn-primary__alt  col-12@xs u-font-upper">
+        <i class="icon icon-eye u-pad-r-large icon--vertical"></i>
+        Get the Look
+      </a>
     </div>
   </div>
   <div class="col-12@xs col-5@md col-7@lg">
@@ -45,7 +48,6 @@
         <div class="row">
           <div class="col-8@xs">
             <ul class="filter--colours u-pad-b-small">
-
               <li class="active" title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
               <li title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
               <li title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
@@ -79,49 +81,81 @@
         <a class="c-btn c-btn-primary__alt col-12@xs selectbox-full u-font-upper">Size Guide</a>
       </div>
       <div class="col-12@xs col-8@lg u-mar-t-medium">
-        <a class="c-btn c-btn-secondary col-12@xs selectbox-full u-font-upper"><i class="icon icon-mini-bag u-pad-r-large icon--vertical"></i>Add to Bag</a>
+        <a class="c-btn c-btn-secondary col-12@xs selectbox-full u-font-upper">
+          <i class="icon icon-mini-bag u-pad-r-large icon--vertical"></i>Add to Bag
+        </a>
       </div>
       <div class="col-12@xs u-mar-t-medium">
         <ul>
-          <li><i class="icon icon-small-tick icon--vertical"></i><strong>Free</strong> standard home delivery on orders over £50</li>
-          <li><i class="icon icon-small-tick icon--vertical"></i><strong>Free</strong> delivery to store - with click & collect</li>
-          <li><i class="icon icon-small-tick icon--vertical"></i><strong>Free</strong> returns to store</li>
+          <li>
+            <i class="icon icon-small-tick icon--vertical"></i>
+            <strong>Free</strong> standard home delivery on orders over £50
+          </li>
+          <li>
+            <i class="icon icon-small-tick icon--vertical"></i>
+            <strong>Free</strong> delivery to store - with click &amp; collect
+          </li>
+          <li>
+            <i class="icon icon-small-tick icon--vertical"></i>
+            <strong>Free</strong> returns to store
+          </li>
         </ul>
       </div>
       <div class="col-12@xs hidden@lg-up">
         <fieldset class="u-pad-v-medium u-border2-t u-mar-t-medium c-section--accordion">
-          <div class="o-product-detail__title u-font-upper">Product Information<i class="icon icon-plus icon--vertical-right"></i></div>
+          <div class="o-product-detail__title u-font-upper">
+            Product Information
+            <i class="icon icon-plus icon--vertical-right"></i>
+          </div>
           <div class="o-product-detail__content u-mar-t-large">
             Product information content - {{lorem count=100}}
           </div>
         </fieldset>
 
         <fieldset class="u-pad-v-medium u-border2-t c-section--accordion">
-          <div class="o-product-detail__title u-font-upper">Ratings & Reviews<i class="icon icon-plus icon--vertical-right"></i></div>
+          <div class="o-product-detail__title u-font-upper">
+            Ratings &amp; Reviews
+            <i class="icon icon-plus icon--vertical-right"></i>
+          </div>
           <div class="o-product-detail__content u-mar-t-large">
-            Ratings & Reviews content - {{lorem count=50}}
+            Ratings &amp; Reviews content - {{lorem count=50}}
           </div>
         </fieldset>
 
         <fieldset class="u-pad-v-medium u-border2-t u-border2-b c-section--accordion">
-          <div class="o-product-detail__title u-font-upper">Delivery & Returns<i class="icon icon-plus icon--vertical-right"></i></div>
+          <div class="o-product-detail__title u-font-upper">
+            Delivery &amp; Returns
+            <i class="icon icon-plus icon--vertical-right"></i>
+          </div>
           <div class="o-product-detail__content u-mar-t-large">
-            Delivery & Returns content -{{lorem count=60}}
+            Delivery &amp; Returns content -{{lorem count=60}}
           </div>
         </fieldset>
 
       </div>
       <div class="col-12@lg hidden@md-down u-mar-t-medium">
         <div class="c-section c-section__tab c-section__tab__horizontal">
-          <ul id="productDetailTabs" class="c-section--header">
-            <li role="presentation" class="c-section--header--item active"><a href="#information" role="tab">Product Information</a></li>
-            <li role="presentation" class="c-section--header--item"><a href="#ratings" role="tab">Ratings & Reviews</a></li>
-            <li role="presentation" class="c-section--header--item"><a href="#delivery" role="tab">Delivery & Returns</a></li>
+          <ul id="productDetailTabs" class="c-section--header" role="tablist">
+            <li class="c-section--header--item">
+              <a href="#information" data-toggle="tab" role="tab">Product Information</a>
+            </li>
+            <li class="c-section--header--item">
+              <a href="#ratings" data-toggle="tab" role="tab">Ratings &amp; Reviews</a>
+            </li>
+            <li class="c-section--header--item">
+              <a href="#delivery" data-toggle="tab" role="tab">Delivery &amp; Returns</a>
+            </li>
           </ul>
           <div class="c-section--content">
-            <div role="tabpanel" class="c-section--content__pane" id="information">Product information content - {{lorem count=100}}</div>
-            <div role="tabpanel" class="c-section--content__pane" id="ratings">Ratings & Reviews content - {{lorem count=50}}</div>
-            <div role="tabpanel" class="c-section--content__pane" id="delivery">Delivery & Returns content -{{lorem count=60}}</div>
+            <div role="tabpanel" class="c-section--content__pane" id="information">
+              Product information content - {{lorem count=100}}
+            </div>
+            <div role="tabpanel" class="c-section--content__pane" id="ratings">
+              Ratings &amp; Reviews content - {{lorem count=50}}
+            </div>
+            <div role="tabpanel" class="c-section--content__pane" id="delivery">
+              Delivery &amp; Returns content -{{lorem count=60}}
+            </div>
           </div>
         </div>
       </div>
