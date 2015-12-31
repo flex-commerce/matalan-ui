@@ -9,22 +9,22 @@ $tab-border-color: #ddd;
 // Tab Rules
 // ========================
 
-.c-section--content > .c-section--content__pane {
+.c-tabs__content > .c-tabs__content__pane {
   display: none;
 }
-.c-section--content > .c-section--content__pane.active {
+.c-tabs__content > .c-tabs__content__pane.active {
   display: block;
 }
 
 
 // Tab Default (horizontal)
-.c-section__tab__horizontal {
+.c-tabs--tab--horizontal {
 
-  .c-section--header {
+  .c-tabs__header {
     border-bottom: 1px solid $tab-border-color;
   }
 
-  .c-section--header--item {
+  .c-tabs__header__item {
     margin-bottom: -$tab-border-width;
     float: left;
     margin-right: $tab-spacing;
@@ -43,7 +43,7 @@ $tab-border-color: #ddd;
     }
   }
 
-  .c-section--content {
+  .c-tabs__content {
     border-width: $tab-border-width;
     border-style: none solid solid solid;
     border-color: $tab-border-color;
@@ -51,11 +51,11 @@ $tab-border-color: #ddd;
 }
 
 // Tab Stacked (vertical)
-.c-section__tab__vertical {
+.c-tabs--tab--vertical {
   display: flex;
 
-  .c-section--header {
-    .c-section--header--item {
+  .c-tabs__header {
+    .c-tabs__header__item {
       border-width: $tab-border-width;
       border-color: $keyline-color;
       border-style: solid none none solid;
@@ -66,7 +66,7 @@ $tab-border-color: #ddd;
     }
   }
 
-  .c-section--content {
+  .c-tabs__content {
     flex-grow: 1;
     border-width: $tab-border-width;
     border-style: solid;
@@ -78,10 +78,11 @@ $tab-border-color: #ddd;
 // Pills Rules
 // ========================
 // pills global
-.c-section__pills {
-  .c-section--header--item {
+.c-tabs__pills {
+  .c-tabs__header__item {
     > a:hover {
       background-color: $tab-background-colour;
+      color: $white;
     }
 
     &.active a {
@@ -96,85 +97,116 @@ $tab-border-color: #ddd;
 }
 
 // pills horizontal
-.c-section__pills__horizontal {
-  .c-section--header {
+.c-tabs--pills--horizontal  {
+  .c-tabs__header {
     @extend .u-cf;
   }
 
-  .c-section--header--item {
+  .c-tabs__header__item {
     margin-right: $pill-spacing;
     float: left;
   }
 }
 
 // pills vertical
-.c-section__pills__vertical {
+.c-tabs--pills--vertical {
   display: flex;
 
-  .c-section--content {
+  .c-tabs__content {
     flex-grow: 1;
   }
 
-  .c-section--header--item {
+  .c-tabs__header__item {
     margin-bottom: $pill-spacing;
   }
 }
 
 // misc rules - to be sorted
 // ========================
-.c-section--header--item > a {
+.c-tabs__header__item > a {
   line-height: 1.42857143;
   position: relative;
   display: block;
   padding: 10px 15px;
 }
 
-.c-section__tab__horizontal .c-section--header--item.active {
+.c-tabs--tab--horizontal .c-tabs__header__item.active {
   background-color: $white;
 }
 
-.c-section--content {
+.c-tabs__content {
   padding: 10px 15px;
   background-color: $white;
 }
 
-.c-section__tab__horizontal .c-section--header {
+.c-tabs--tab--horizontal .c-tabs__header {
   @extend .u-cf;
 }
 
-.c-section--header--item > a {
+.c-tabs__header__item > a {
   text-decoration: none;
 }
 
-// global tab colours
-.c-section--header {
-  a {
-    color: $white;
-  }
-
-  .active a {
-    color: $base-text-color;
-  }
-}
-
 // vertical tab colours
-.c-section__tab__vertical .c-section--header--item {
+.c-tabs--tab--vertical .c-tabs__header__item {
   &.active a {
     background-color: $tab-background-colour;
   }
 }
 
 // vertical tab colours inverted
-.c-section--header__inverted .c-section--header--item {
+// .c-tabs__header__inverted .c-tabs__header__item {
+//   a {
+//     background-color: $tab-background-colour;
+//   }
+
+//   &.active {
+//     // margin-right: -$tab-border-width;
+//     border-right-color: red;
+//     a {
+//       background-color: $white;
+//     }
+//   }
+// }
+
+
+
+// ===============================
+
+// global tab colours
+.c-tabs--tab--horizontal .c-tabs__header {
   a {
-    background-color: $tab-background-colour;
+    color: $white;
   }
-
-  &.active {
-    margin-right: -$tab-border-width;
-
-    a {
-      background-color: $white;
-    }
+  .active a {
+    color: $base-text-color;
   }
 }
+
+.c-tabs--tab--vertical {
+  a {
+    color: $base-text-color;
+  }
+  .active a {
+    color: $white;
+  }
+}
+
+// .c-tabs__header__inverted {
+//   a {
+//     color: $white;
+//   }
+//   .active a {
+//     color: $base-text-color;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
