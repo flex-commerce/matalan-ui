@@ -204,14 +204,24 @@ $tab-border-color: #ddd;
 
 // ================================================== //
 
+// TODO - quick temp rules for pdp accordion - more love needed here
+
 .c-tabs--responsive {
 
+    .active {
+      outline: 1px dotted red;
+    }
+
    @include mq($until: lg) {
-    outline: 1px solid red;
+    // outline: 1px solid red;
+    .c-tabs__content {
+      padding: 0;
+      border-style: none;
+    }
     .c-tabs__header {
       display: none;
     }
-    .c-tabs__content__pane--accord {
+    .c-tabs__header__item--accord {
       background: #eee;
       color: #666;
       padding: 10px 5px;
@@ -223,11 +233,11 @@ $tab-border-color: #ddd;
    }
 
    @include mq($from: lg) {
-    outline: 1px solid green;
+    // outline: 1px solid green;
     .c-tabs__header a {
       // color: #aaa;
     }
-    .c-tabs__content__pane--accord {
+    .c-tabs__header__item--accord {
       display: none;
     }
    }

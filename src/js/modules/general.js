@@ -26,8 +26,8 @@
 
   $('form[name=searchProducts]').submit(function(e){
     e.preventDefault();
-    console.log($('input[name=searchTermMobile]').val());
-    console.log($('input[name=searchTerm]').val());
+    // console.log($('input[name=searchTermMobile]').val());
+    // console.log($('input[name=searchTerm]').val());
     if ($('input[name=searchTerm]').val() == 'dresses' || $('input[name=searchTermMobile]').val() == 'dresses') {
       window.location.href = './search-results.html';
     } else {

@@ -1,6 +1,6 @@
 // forked from BS3 tabs https://github.com/twbs/bootstrap/blob/master/js/tab.js
 
-/* ========================================================================
+/*! ========================================================================
  * Bootstrap: tab.js v3.3.6
  * http://getbootstrap.com/javascript/#tabs
  * ========================================================================
@@ -29,17 +29,17 @@
 
     if (!selector) {
       selector = $this.attr('href');
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, ''); // strip for ie7
+      // selector = selector; && selector.replace(/.*(?=#[^\s]*$)/, ''); // strip for ie7
     }
 
-    if ($this.parent('[role="tabpanel-title"]')) {
-      console.log('1', this);
-      // $this.parent().trigger(hideEvent);
-      // $this.trigger(hideEvent);
-    }
+    // if ($this.parent('[role="tabpanel-title"]')) {
+    //   // console.log('1', this);
+    //   // $this.parent().trigger(hideEvent);
+    //   // $this.trigger(hideEvent);
+    // }
 
 
-    if ($this.parent('li').hasClass('active')) return;
+    if ($this.parent().hasClass('active')) return;
 
     var $previous = $ul.find('.active:last a');
 
@@ -61,6 +61,7 @@
 
     var $target = $(selector);
 
+    // hide / show panels
     this.activate($this.closest('li'), $ul);
     this.activate($target, $target.parent(), function () {
       $previous.trigger({
@@ -75,12 +76,16 @@
   };
 
   Tab.prototype.activate = function (element, container, callback) {
+
     var $active    = container.find('.active');
     // var transition = callback
     //   && $.support.transition
     //   && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length);
 
     function next() {
+      if ($active.length) {
+        console.log('old el', $active[0]);
+      }
       $active
         .removeClass('active')
         .find('> .dropdown-menu > .active')
@@ -89,6 +94,9 @@
         .find('[data-toggle="tab"]')
           .attr('aria-expanded', false);
 
+      if (element.length) {
+        console.log('new el', element[0]);
+      }
       element
         .addClass('active')
         .find('[data-toggle="tab"]')
@@ -119,7 +127,7 @@
     //     .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
     next();
 
-    $active.removeClass('in');
+    // $active.removeClass('in');
   };
 
 
