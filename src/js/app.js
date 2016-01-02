@@ -1,10 +1,27 @@
 // ===========================
-// Lodash testing
+// Lodash
 // ===========================
 require("lodash");
 // ===========================
-// Lodash testing end
+// Lodash end
 // ===========================
+
+
+window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
+
+$(document).ready(function() {
+  $(window).on('resize', _.debounce(function() {
+    window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
+  }, 250));
+});
+
+// console.log('isMobileOrTablet', window.isMobileOrTablet.matches) // true | false
+
+// $(window).on('resize', _.debounce(function() {
+//   console.log('isMobileOrTablet', window.isMobileOrTablet.matches) // true | false
+// }));
+
+
 
 // ===========================
 // Common JS functions
@@ -27,8 +44,8 @@ require("./modules/dropdown");
 // ===========================
 // Tabs
 // ===========================
-require("./modules/tabs");
 
+require("./modules/tabs");
 
 $.each( $('[role="tablist"]') , function() {
   $(this).find('a:first').tab('show');
@@ -45,11 +62,11 @@ $.each( $('[role="tablist"]') , function() {
 require("./modules/collapse");
 
 // open specific item example
-$('#collapseTwo').collapse('show')
+$('#collapseTwo').collapse('show');
 
 // open all on load example
 $("#accordion2 [role='tabpanel']").each(function(){
-  $(this).collapse('show')
+  $(this).collapse('show');
 });
 
 // $('accordion2').each( tabsIdentifier , function() {
@@ -63,13 +80,7 @@ $("#accordion2 [role='tabpanel']").each(function(){
 
 
 
-window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
 
-$(document).ready(function() {
-  $(window).on('resize', _.debounce(function() {
-    window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
-  }, 250));
-});
 
 // ===========================
 // Megamenu init
