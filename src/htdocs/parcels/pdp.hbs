@@ -101,7 +101,8 @@
           </li>
         </ul>
       </div>
-      <div class="col-12@xs hidden@lg-up">
+
+<!--       <div class="col-12@xs hidden@lg-up">
         <fieldset class="u-pad-v-medium u-border2-t u-mar-t-medium c-tabs--accordion">
           <div class="o-product-detail__title u-font-upper">
             Product Information
@@ -132,9 +133,10 @@
           </div>
         </fieldset>
 
-      </div>
-      <div class="col-12@lg hidden@md-down u-mar-t-medium">
-        <div class="c-tabs c-tabs--tab c-tabs--tab--horizontal">
+      </div> -->
+
+      <div class="col-12@lg u-mar-t-medium">
+        <div class="c-tabs c-tabs--tab c-tabs--tab--horizontal c-tabs--responsive">
           <ul id="productDetailTabs" class="c-tabs__header" role="tablist">
             <li class="c-tabs__header__item">
               <a href="#information" data-toggle="tab" role="tab">Product Information</a>
@@ -147,11 +149,20 @@
             </li>
           </ul>
           <div class="c-tabs__content">
+            <div role="tabpanel-title" class="c-tabs__content__pane--accord">
+              <a href="#information" data-toggle="tab" role="tab">Product Information</a>
+            </div>
             <div role="tabpanel" class="c-tabs__content__pane" id="information">
               Product information content - {{lorem count=100}}
             </div>
+            <div role="tabpanel-title" class="c-tabs__content__pane--accord">
+              <a href="#ratings" data-toggle="tab" role="tab">Ratings &amp; Reviews</a>
+            </div>
             <div role="tabpanel" class="c-tabs__content__pane" id="ratings">
               Ratings &amp; Reviews content - {{lorem count=50}}
+            </div>
+            <div role="tabpanel-title" class="c-tabs__content__pane--accord">
+              <a href="#delivery" data-toggle="tab" role="tab">Delivery &amp; Returns</a>
             </div>
             <div role="tabpanel" class="c-tabs__content__pane" id="delivery">
               Delivery &amp; Returns content -{{lorem count=60}}

@@ -106,10 +106,10 @@
   //     $(this).siblings().find('.o-product-detail__title i, .o-my-account__title i').removeClass("icon-minus").addClass('icon-plus');
   // });
 
-  // $('.filter--colours li').click(function(e) {
-  //   $(this).toggleClass('active');
-  //   $(this).siblings().removeClass('active');
-  // });
+  $('.filter--colours li').click(function(e) {
+    $(this).toggleClass('active');
+    $(this).siblings().removeClass('active');
+  });
 
 
   // ==========================
