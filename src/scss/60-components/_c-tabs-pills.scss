@@ -201,3 +201,38 @@ $tab-border-color: #ddd;
     }
   }
 }
+
+// ================================================== //
+
+.c-tabs--responsive {
+
+   @include mq($until: lg) {
+    outline: 1px solid red;
+    .c-tabs__header {
+      display: none;
+    }
+    .c-tabs__content__pane--accord {
+      background: #eee;
+      color: #666;
+      padding: 10px 5px;
+      margin-bottom: 5px;
+      a {
+        display: block;
+      }
+    }
+   }
+
+   @include mq($from: lg) {
+    outline: 1px solid green;
+    .c-tabs__header a {
+      // color: #aaa;
+    }
+    .c-tabs__content__pane--accord {
+      display: none;
+    }
+   }
+
+}
+
+
+

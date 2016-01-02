@@ -21,8 +21,6 @@
     // jscs:enable requireDollarBeforejQueryAssignment
   };
 
-  Tab.VERSION = '3.3.6';
-
   Tab.TRANSITION_DURATION = 150;
 
   Tab.prototype.show = function () {
@@ -38,6 +36,11 @@
     if ($this.parent('li').hasClass('active')) return;
 
     var $previous = $ul.find('.active:last a');
+
+    if ($previous.length > 0) {
+      console.log($previous[0])
+    }
+
     var hideEvent = $.Event('hide.bs.tab', {
       relatedTarget: $this[0]
     });
@@ -67,9 +70,9 @@
 
   Tab.prototype.activate = function (element, container, callback) {
     var $active    = container.find('> .active');
-    var transition = callback
-      && $.support.transition
-      && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length);
+    // var transition = callback
+    //   && $.support.transition
+    //   && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length);
 
     function next() {
       $active
@@ -85,12 +88,12 @@
         .find('[data-toggle="tab"]')
           .attr('aria-expanded', true);
 
-      if (transition) {
-        element[0].offsetWidth; // reflow for transition
-        element.addClass('in');
-      } else {
-        element.removeClass('fade');
-      }
+      // if (transition) {
+      //   element[0].offsetWidth; // reflow for transition
+      //   element.addClass('in');
+      // } else {
+      //   element.removeClass('fade');
+      // }
 
       if (element.parent('.dropdown-menu').length) {
         element
@@ -104,10 +107,10 @@
       callback && callback();
     }
 
-    $active.length && transition ?
-      $active
-        .one('bsTransitionEnd', next)
-        .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
+    // $active.length && transition ?
+    //   $active
+    //     .one('bsTransitionEnd', next)
+    //     .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
       next();
 
     $active.removeClass('in');
