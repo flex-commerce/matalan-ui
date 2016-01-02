@@ -29,17 +29,37 @@ require("./modules/dropdown");
 // ===========================
 require("./modules/tabs");
 
-var tabsIdentifier = $('[role="tablist"]');
 
-$.each( tabsIdentifier , function() {
+$.each( $('[role="tablist"]') , function() {
   $(this).find('a:first').tab('show');
 });
-// $('[role="tablist"] a:first').tab('show');
 
 // ===========================
 // Tabs end
 // ===========================
 
+
+// ===========================
+// accordion
+// ===========================
+require("./modules/collapse");
+
+// open specific item example
+$('#collapseTwo').collapse('show')
+
+// open all on load example
+$("#accordion2 [role='tabpanel']").each(function(){
+  $(this).collapse('show')
+});
+
+// $('accordion2').each( tabsIdentifier , function() {
+//   $(this).find('a:first').tab('show');
+// });
+
+
+// ===========================
+// accordion end
+// ===========================
 
 
 
