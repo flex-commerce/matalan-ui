@@ -2,105 +2,197 @@
 <html class="no-js u-scrollbar" lang="">
 
 <head>
-    {{> partials/html-head }}
+  {{> partials/html-head }}
 </head>
 
 <body>
   {{> parcels/header }}
-    <div class="container">
+  <div class="container">
 
+    <div class="row">
+      <div class="col-12@xs">
         <div class="row">
-            <div class="col-12@xs o-my-account__container">
-                <div class="row">
-                    <div class="col-12@xs col-8@md u-mar-v-large">
-                        <h4 class="u-color-pri">My Account</h4>
-                        <div class="c-tabs c-tabs--tab c-tabs--tab--horizontal u-mar-t-large">
-                            <ul id="myAccountTabs" class="c-tabs__header" role="tablist">
-                                <li class="c-tabs__header__item"><a href="#accountDetails" data-toggle="tab" role="tab">Account Details</a></li>
-                                <li class="c-tabs__header__item"><a href="#history" data-toggle="tab" role="tab">Order History</a></li>
-                                <li class="c-tabs__header__item"><a href="#addresses" data-toggle="tab" role="tab">Address Book</a></li>
-                            </ul>
-                            <div class="c-tabs__content">
-                                <div role="tabpanel" class="c-tabs__content__pane" id="accountDetails">
-                                    <fieldset class="u-pad-v-medium u-border2-t c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">Email<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            Email content - {{lorem count=100}}
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="u-pad-v-medium u-border2-t c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">Password<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            Password content - {{lorem count=50}}
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="u-pad-v-medium u-border2-t c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">Contact<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            Contact content -{{lorem count=60}}
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="u-pad-v-medium u-border2-t u-border2-b c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">Reward Card<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            Reward Card -{{lorem count=60}}
-                                        </div>
-                                    </fieldset>
-                                </div>
-                                <div role="tabpanel" class="c-tabs__content__pane" id="history">
-                                    <fieldset class="u-pad-v-medium u-border2-t c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">28 JULY 2015 - Pending - £50.00<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            28 JULY 2015 - Pending - £50.00
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="u-pad-v-medium u-border2-t c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">28 JULY 2015 - Pending - £50.00<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            28 JULY 2015 - Pending - £50.00
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="u-pad-v-medium u-border2-t c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">28 JULY 2015 - Pending - £50.00<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            28 JULY 2015 - Pending - £50.00
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="u-pad-v-medium u-border2-t u-border2-b c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">28 JULY 2015 - Pending - £50.00<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            28 JULY 2015 - Pending - £50.00
-                                        </div>
-                                    </fieldset>
-                                </div>
-                                <div role="tabpanel" class="c-tabs__content__pane" id="addresses">
-                                    <fieldset class="u-pad-v-medium u-border2-t c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">Home address<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            28 JULY 2015 - Pending - £50.00
-                                        </div>
-                                    </fieldset>
-                                    <fieldset class="u-pad-v-medium u-border2-t c-tabs--accordion">
-                                        <div class="o-my-account__title u-font-upper">Work Address<i class="icon icon-plus icon--vertical-right"></i></div>
-                                        <div class="o-my-account__content u-mar-t-large">
-                                            28 JULY 2015 - Pending - £50.00
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
+          <div class="col-12@xs col-8@md u-mar-v-large">
+            <h4 class="u-color-pri">My Account</h4>
+            <div class="c-tabs c-tabs--tab c-tabs--tab--horizontal u-mar-t-large">
+
+              <ul id="myAccountTabs" class="c-tabs__header" role="tablist">
+                <li class="c-tabs__header__item">
+                  <a href="#accountDetails" data-toggle="tab" role="tab">Account Details</a>
+                </li>
+                <li class="c-tabs__header__item">
+                  <a href="#history" data-toggle="tab" role="tab">Order History</a>
+                </li>
+                <li class="c-tabs__header__item">
+                  <a href="#addresses" data-toggle="tab" role="tab">Address Book</a>
+                </li>
+              </ul>
+
+              <div class="c-tabs__content">
+                <div role="tabpanel" class="c-tabs__content__pane" id="accountDetails">
+                  <div class="o-accord__container" role="tablist">
+
+                    <div class="u-pad-v-medium panel">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#myAccEmail">
+                          Email
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="myAccEmail">
+                        <strong>Email content</strong> - {{lorem count=100}}
+                      </div>
                     </div>
-                    <div class="col-4@md hidden@sm-down u-mar-v-large">
-                        <div class="u-cf ">
-                            <h5 class="u-font-upper u-fl ">Shopping Bag</h5>
-                        </div>
-                        {{> partials/minibag-contents }}
+
+                    <div class="u-pad-v-medium panel">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#myAccPass">
+                          Password
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="myAccPass">
+                        <strong>Password content</strong> - {{lorem count=50}}
+                      </div>
                     </div>
+
+                    <div class="u-pad-v-medium panel">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#myAccContact">
+                          Contact
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="myAccContact">
+                        <strong>Contact content</strong> - {{lorem count=60}}
+                      </div>
+                    </div>
+
+                    <div class="u-pad-v-medium panel u-border2-b">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#myAccReward">
+                          Reward Card
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="myAccReward">
+                        <strong>Reward Card</strong> - {{lorem count=60}}
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
+
+                <div role="tabpanel" class="c-tabs__content__pane" id="history">
+                  <div class="o-accord__container" role="tablist">
+
+                    <div class="u-pad-v-medium panel">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#orderHist1">
+                          28 JULY 2015 - Pending - £50.00
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="orderHist1">
+                        28 JULY 2015 - Pending - £50.00
+                      </div>
+                    </div>
+
+                    <div class="u-pad-v-medium panel">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#orderHist2">
+                          28 JULY 2015 - Pending - £50.00
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="orderHist2">
+                        28 JULY 2015 - Pending - £50.00
+                      </div>
+                    </div>
+
+                    <div class="u-pad-v-medium panel">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#orderHist3">
+                          28 JULY 2015 - Pending - £50.00
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="orderHist3">
+                        28 JULY 2015 - Pending - £50.00
+                      </div>
+                    </div>
+
+                    <div class="u-pad-v-medium panel u-border2-b">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#orderHist4">
+                          28 JULY 2015 - Pending - £50.00
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="orderHist4">
+                        28 JULY 2015 - Pending - £50.00
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div role="tabpanel" class="c-tabs__content__pane" id="addresses">
+                  <div class="o-accord__container" role="tablist">
+
+                    <div class="u-pad-v-medium panel">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#addressList1">
+                          Address Foo
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="addressList1">
+                        foo
+                      </div>
+                    </div>
+
+                    <div class="u-pad-v-medium panel u-border2-b">
+                      <div class="o-accord__title u-font-upper">
+                        <a class="collapsed" data-toggle="collapse" href="#addressList2">
+                          Address Bar
+                          <i class="icon icon-plus icon--vertical-right"></i>
+                          <i class="icon icon-minus icon--vertical-right"></i>
+                        </a>
+                      </div>
+                      <div class="o-accord__content collapse u-mar-t-large" id="addressList2">
+                        bar
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+              </div>
             </div>
+          </div>
+
+          <div class="col-4@md hidden@sm-down u-mar-v-large">
+            <div class="u-cf ">
+              <h5 class="u-font-upper u-fl ">Shopping Bag</h5>
+            </div>
+            {{> partials/minibag-contents }}
+          </div>
         </div>
+      </div>
     </div>
-    {{> parcels/footer }} {{> partials/js-footer}}
+  </div>
+  {{> parcels/footer }} {{> partials/js-footer}}
 </body>
 
 </html>

@@ -26,8 +26,8 @@
 
   $('form[name=searchProducts]').submit(function(e){
     e.preventDefault();
-    console.log($('input[name=searchTermMobile]').val());
-    console.log($('input[name=searchTerm]').val());
+    // console.log($('input[name=searchTermMobile]').val());
+    // console.log($('input[name=searchTerm]').val());
     if ($('input[name=searchTerm]').val() == 'dresses' || $('input[name=searchTermMobile]').val() == 'dresses') {
       window.location.href = './search-results.html';
     } else {
@@ -106,13 +106,32 @@
   //     $(this).siblings().find('.o-product-detail__title i, .o-my-account__title i').removeClass("icon-minus").addClass('icon-plus');
   // });
 
-  // $('.filter--colours li').click(function(e) {
-  //   $(this).toggleClass('active');
-  //   $(this).siblings().removeClass('active');
-  // });
+  $('.filter--colours li').click(function(e) {
+    $(this).toggleClass('active');
+    $(this).siblings().removeClass('active');
+  });
 
 
   // ==========================
+
+  (function() {
+  // investigate adding star markup here?
+
+  var ratingsHolders = $.find("[data-rating");
+  var rated = 0;
+
+  if (ratingsHolders.length) {
+    $.each(ratingsHolders, function(i) {
+      if ($(this).children('.icon').length === 5 ) {
+        rated = $(this).data('rating');
+        $(this).children('.icon').slice(0,rated).addClass('active');
+      }
+    });
+  }
+
+  })();
+
+
 
 
 

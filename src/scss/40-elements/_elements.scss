@@ -33,8 +33,8 @@ a {
   text-decoration: none;
   color: $base-text-color;
   &:hover,
-  &:active,
-  &:focus {
+  &:active
+   {
     color: $primary-color;
     text-decoration: underline;
   }
