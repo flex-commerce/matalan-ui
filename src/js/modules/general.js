@@ -98,13 +98,13 @@
   //     $(tab).fadeIn();
   // });
 
-  // $(".c-tabs--accordion").click(function(e) {
-  //     e.preventDefault();
-  //     $(this).find('.o-product-detail__content, .o-my-account__content').toggleClass("active");
-  //     $(this).find('.o-product-detail__title i, .o-my-account__title i').toggleClass("icon-plus icon-minus");
-  //     $(this).siblings().find('.o-product-detail__content, .o-my-account__content').removeClass("active");
-  //     $(this).siblings().find('.o-product-detail__title i, .o-my-account__title i').removeClass("icon-minus").addClass('icon-plus');
-  // });
+  $(".c-tabs--accordion").click(function(e) {
+      e.preventDefault();
+      $(this).find('.o-product-detail__content, .o-my-account__content').toggleClass("active");
+      $(this).find('.o-product-detail__title i, .o-my-account__title i').toggleClass("icon-plus icon-minus");
+      $(this).siblings().find('.o-product-detail__content, .o-my-account__content').removeClass("active");
+      $(this).siblings().find('.o-product-detail__title i, .o-my-account__title i').removeClass("icon-minus").addClass('icon-plus');
+  });
 
   // $('.filter--colours li').click(function(e) {
   //   $(this).toggleClass('active');
