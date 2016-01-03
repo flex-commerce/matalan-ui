@@ -4,22 +4,6 @@
 
 <head>
   {{> partials/html-head }}
-
-  <style>
-    .collapse {
-      display: none;
-    }
-
-    .collapse.in {
-      display: block;
-    }
-
-    .collapsing {
-      position: relative;
-      height: 0;
-      overflow: hidden;
-    }
-  </style>
 </head>
 
 <body>
@@ -28,8 +12,8 @@
     <div class="row">
       <br><br>
 
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
+      <div class="o-accord__container" id="accordion" role="tablist">
+      <!-- data parent below (css selector) provides full accordion (1 panel at a time) behaviour -->
 
         <div class="panel">
           <div id="headingOne">
@@ -42,7 +26,6 @@
           </div>
         </div>
 
-
         <div class="panel">
           <div id="headingTwo">
             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-controls="collapseTwo">
@@ -53,7 +36,6 @@
             {{ lorem count=50 }}
           </div>
         </div>
-
 
         <div class="panel">
           <div id="headingThree">
@@ -67,41 +49,41 @@
         </div>
       </div>
 
-<hr><hr>
+      <hr><hr>
 
-      <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
 
+
+      <div class="o-accord__container" id="accordion2" role="tablist">
+      <!-- no data parent below allows multiple open panels -->
         <div class="panel">
           <div id="headingOne2">
-            <a data-toggle="collapse" href="#collapseOne2" aria-controls="collapseOne2">
+            <a class="collapsed" data-toggle="collapse" href="#collapseOne2">
               <strong>Collapsible Group Item #1</strong>
             </a>
           </div>
-          <div id="collapseOne2" class="collapse" role="tabpanel" aria-labelledby="headingOne2">
+          <div id="collapseOne2" class="collapse" role="tabpanel">
             {{ lorem count=50 }}
           </div>
         </div>
-
 
         <div class="panel">
           <div id="headingTwo2">
-            <a class="collapsed" data-toggle="collapse" href="#collapseTwo2" aria-controls="collapseTwo2">
+            <a class="collapsed" data-toggle="collapse" href="#collapseTwo2">
               <strong>Collapsible Group Item #2</strong>
             </a>
           </div>
-          <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2">
+          <div id="collapseTwo2" class="collapse" role="tabpanel">
             {{ lorem count=50 }}
           </div>
         </div>
 
-
         <div class="panel">
           <div id="headingThree2">
-            <a class="collapsed" data-toggle="collapse" href="#collapseThree2" aria-controls="collapseThree2">
+            <a class="collapsed" data-toggle="collapse" href="#collapseThree2">
               <strong>Collapsible Group Item #3</strong>
             </a>
           </div>
-          <div id="collapseThree2" class="collapse" role="tabpanel" aria-labelledby="headingThree2">
+          <div id="collapseThree2" class="collapse" role="tabpanel">
             {{ lorem count=50 }}
           </div>
         </div>

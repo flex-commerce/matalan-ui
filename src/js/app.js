@@ -41,13 +41,17 @@ require("./modules/dropdown");
 // ===========================
 
 
+
+
 // ===========================
 // Tabs
 // ===========================
 
 require("./modules/tabs");
 
-$.each( $('[role="tablist"]') , function() {
+// open first tab here, so we don't need to include 2x active classes on each usage
+
+$.each( $('.c-tabs [role="tablist"]') , function() {
   $(this).find('a:first').tab('show');
 });
 
@@ -56,22 +60,43 @@ $.each( $('[role="tablist"]') , function() {
 // ===========================
 
 
+
+
 // ===========================
 // accordion
 // ===========================
 require("./modules/collapse");
 
 // open specific item example
-$('#collapseTwo').collapse('show');
+// todo - currently issues with pre opening tabs this way - to investigate
+// $('#collapseThree').collapse('show');
 
-// open all on load example
-$("#accordion2 [role='tabpanel']").each(function(){
-  $(this).collapse('show');
+// open all on load example (for non accordion accordion, eg filters)
+$(document).ready(function() {
+  if (!window.isMobileOrTablet.matches) {
+
+    // on load, open if desktop
+    $("#accordion2 [role='tabpanel']").each(function(){
+      $(this).collapse('show');
+    });
+
+  }
+  $(window).on('resize', _.debounce(function() {
+    if (!window.isMobileOrTablet.matches) {
+      // on resize, open if desktop
+      $("#accordion2 [role='tabpanel']").each(function(){
+        $(this).collapse('show');
+      });
+
+    } else {
+      // on resize, close if not desktop
+      $("#accordion2 [role='tabpanel']").each(function(){
+        $(this).collapse('hide');
+      });
+
+    }
+  }, 250));
 });
-
-// $('accordion2').each( tabsIdentifier , function() {
-//   $(this).find('a:first').tab('show');
-// });
 
 
 // ===========================
@@ -102,7 +127,6 @@ function megamenuInit() {
   });
 }
 
-// console.log('mm', window.isMobileOrTablet.matches);
 
 if (!window.isMobileOrTablet.matches) {
   megamenuInit();
@@ -268,9 +292,6 @@ require("./modules/scroll-lock");
 
         $(this).addClass('active')
           .siblings().removeClass('active')
-          // .find('.icon')
-          // .removeClass("icon-ui-tight-o")
-          // .addClass('icon-ui-tight')
           .closest('.search-results__main')
           .removeClass('search-results__wide')
           .addClass('search-results__tight');
@@ -283,9 +304,6 @@ require("./modules/scroll-lock");
 
       $(this).addClass('active')
         .siblings().removeClass('active')
-        // .find('.icon')
-        // .removeClass("icon-ui-wide-o")
-        // .addClass('icon-ui-wide')
         .closest('.search-results__main')
         .removeClass('search-results__tight')
         .addClass('search-results__wide');
