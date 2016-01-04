@@ -6,24 +6,18 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="o-header__brand u-font-ta-c u-keyline-b u-pad-b-large u-mar-t-huge u-mar-b-medium">
-                <a href="./homepage.html">
-                    <img src="img/matalan-logo-responsive.svg" alt="">
-                </a>
-            </div>
-        </div>
+    <div class="container o-checkout__container">
+        {{> partials/header-checkout }}
         <div class="row">
             <div class="col-12@xs col-10@lg col-offset-1@lg-up">
                 <div class="row">
-                    <div class="col-12@xs u-mar-v-small">
+                    <div class="col-12@xs u-mar-v-large">
                         {{> partials/progress-checkout-5 }}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12@xs">
-                         <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small u-fr hidden@md-down">Print Page</a>
+                        <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small u-fr hidden@md-down">Print Page</a>
                         <h4 class="u-color-pri">Confirmation</h4>
                         <p class="u-mar-t-large">Thanks you for your order</p>
                         <p>Your order number is:

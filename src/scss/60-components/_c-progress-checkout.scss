@@ -41,21 +41,22 @@ $border-thickness: 5px;
     margin-bottom: 1em;
     @include mq($until: md) {
       overflow: visible;
-      width: 175%;
+      width: 173%;
     }
+
     &.c-progress-checkout__3 {
       @include mq($until: md) {
-        margin-left: -39%;
+        margin-left: -37%;
       }
     }
     &.c-progress-checkout__4 {
       @include mq($until: md) {
-        margin-left: -80%;
+        margin-left: -75%;
       }
     }
     &.c-progress-checkout__5 {
       @include mq($until: md) {
-        margin-left: -80%;
+        margin-left: -75%;
       }
     }
     a {
@@ -72,6 +73,7 @@ $border-thickness: 5px;
         position: relative;
         text-overflow: ellipsis;
         color: $inactive;
+        z-index: 1;
     }
     li span.c-donut {
         border-radius: 50%;
