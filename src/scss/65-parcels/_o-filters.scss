@@ -151,21 +151,28 @@ $filters-border-color: $keyline-color;
 }
 
 .filter--colours  {
-  li {
+  li{
     display: inline-block;
-    width:30px;
-    height:30px;
-    border-radius:15px;
-    background:#000;
+    width:32px;
+    height:32px;
     cursor: pointer;
-    border: 2px solid $white;
-    cursor: pointer;
+    border: 1px solid $white;
+    border-radius:16px;
   }
 
-  li.active,
-  li:hover {
-    border: 2px solid $black;
+  li.active {
+    border: 1px solid $dark-grey;
   }
+
+  li div {
+    width: 24px;
+    height: 24px;
+    border-radius:12px;
+    @include center(xy);
+    background:#000;
+  }
+
+
 
 
 }

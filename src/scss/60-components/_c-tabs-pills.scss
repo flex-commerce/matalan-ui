@@ -209,7 +209,7 @@ $tab-border-color: #ddd;
 .c-tabs--responsive {
 
     .active {
-      outline: 1px dotted red;
+      //outline: 1px dotted red;
     }
 
    @include mq($until: lg) {
