@@ -9,125 +9,155 @@
     {{> parcels/header }}
     <div class="container">
         <div class="row">
-            <div class="col-12@xs">
-                <div class="u-cf u-mar-t-large">
-                    <h4 class="u-font-upper u-fl">My Bag</h4>
-                </div>
-                <a class="c-btn c-btn-secondary c-btn-block hidden@md-up u-mar-v-small u-font-upper">Continue to Checkout</a>
-                <div class="u-cf u-mar-b-large">
-                    <p class="u-fl u-pad-v-small u-mar-0">
-                        {{minibag.category.collection.products.length}} Items in your bag
-                    </p>
-                </div>
-                <ul class="o-minibag--list-contain">
-                    {{#each minibag.category.collection.products}}
-                    <li class="o-minibag--list o-minibag--list-item u-cf">
-                        <div class="o-minibag--list-item--image col-3@xs col-2@md col-1@lg u-pad-0">
-                            <img class="img" src="{{productImages.[0]}}">
+            <div class="col-12@xs col-8@md col-9@lg">
+                <div class="row">
+                    <div class="col-12@xs">
+                        <!-- <div class="u-cf u-mar-t-large">
+                            <h4 class="u-font-upper u-fl">My Bag</h4>
+                        </div> -->
+                        <a class="c-btn c-btn-secondary c-btn-block hidden@md-up u-mar-v-small u-font-upper">Continue to Checkout</a>
+                        <div class="u-cf u-mar-b-large">
+                            <p class="u-fl u-pad-v-small u-mar-0">
+                                {{minibag.category.collection.products.length}} Items in your bag
+                            </p>
                         </div>
-                        <div class="o-minibag--list-item--detail col-9@xs col-10@md col-8@lg ">
-                            <p class="detail--description u-font-wb">{{productTitle}}</p>
-                            <ul class="detail--vars u-pad-b-small list-space__small">
-                                <li class="list__item">Color:
-                                    <span class="color-swatch__inline u-bgcolor-cgrey"></span>
+                        <ul class="o-minibag--list-contain">
+                            {{#each minibag.category.collection.products}}
+                            <li class="o-minibag--list o-minibag--list-item u-cf">
+                                <div class="o-minibag--list-item--image col-3@xs col-2@md col-1@lg u-pad-0">
+                                    <img class="img" src="{{productImages.[0]}}">
+                                </div>
+                                <div class="o-minibag--list-item--detail col-9@xs col-10@md col-8@lg ">
+                                    <p class="detail--description u-font-wb">{{productTitle}}</p>
+                                    <ul class="detail--vars u-pad-b-small list-space__small">
+                                        <li class="list__item">Color:
+                                            <span class="color-swatch__inline u-bgcolor-cgrey"></span>
+                                        </li>
+                                        <li class="list__item">Size: Small</li>
+                                    </ul>
+                                    <ul class="detail--price list-space__small">
+                                        <li class="list__item">
+                                            <strong>Price: {{productPrice}}</strong>
+                                        </li>
+                                        <li class="list__item hidden@lg-up">Save: £0.00</li>
+                                    </ul>
+                                </div>
+                                <div class="o-minibag--list-item--control col-3@lg hidden@md-down">
+                                    <select class="o-minibag--control--select selectbox-dropdown__inline">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <div class="o-minibag--control--remove">
+                                        <a class="link u-font-no-underline" href="#">
+                                            <span class="hidden@md-down">&times;</span> remove</a>
+                                    </div>
+                                </div>
+                                <div class="o-minibag--list-item--control o-minibag--list-item--quant col-9@xs col-10@md hidden@lg-up u-fr">
+                                    <div class="o-minibag--control--remove col-4@xs u-pad-0">
+                                        <a class="c-btn c-btn-primary__alt u-font-no-underline" href="#">
+                                            <span class="hidden@lg-down">&times;</span> remove</a>
+                                    </div>
+                                    <div class="o-form__input-contain o-form__input-contain--quantity col-8@xs u-pad-0 u-font-ta-r">
+                                        <a class="c-btn c-btn-primary__alt u-font-no-underline js-remove-item">-</a>
+                                        <span class="o-input--textual js-item-count">1</span>
+                                        <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
+                                        <a class="c-btn c-btn-primary__alt u-font-no-underline js-add-item">+</a>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/ each }}
+                        </ul>
+                    </div>
+                    <div class="col-12@xs">
+                        <div class="o-minibag--footer u-mar-t-large">
+                            <ul class="o-minibag--action--contain">
+                                <li class="separator"></li>
+                                <li class="o-minibag--list-actions">
+                                    <form action="" class="o-form o-form--wide">
+                                        <div class="o-form__row">
+                                            <div class="o-form__label-contain" style="width: 50%">
+                                                <label name="" class="o-form__label-primary u-font-ta-l">Got a promo code?</label>
+                                            </div>
+                                            <div class="o-form__input-contain" style="width: 50%">
+                                                <input typ="text" placeholder="Got a promo code?">
+                                            </div>
+                                        </div>
+                                    </form>
                                 </li>
-                                <li class="list__item">Size: Small</li>
-                            </ul>
-                            <ul class="detail--price list-space__small">
-                                <li class="list__item">
-                                    <strong>Price: {{productPrice}}</strong>
+                                <li class="separator"></li>
+                                <li class="o-minibag--list-actions">
+                                    <form action="" class="o-form o-form--wide">
+                                        <div class="o-form__row">
+                                            <div class="o-form__label-contain u-ta-l" style="width: 50%">
+                                                <label name="select-b" class="o-form__label-primary u-font-ta-l">Shipping Options:
+                                                    <br /> <a href="">Delivery Information</a></label>
+                                            </div>
+                                            <div class="o-form__input-contain" style="width: 50%">
+                                                <select id="select-b">
+                                                    <option value="foo">Click &amp; Collect</option>
+                                                    <option disabled value="bar">bar</option>
+                                                    <option value="baz">baz</option>
+                                                    <option>Option 1.1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </li>
-                                <li class="list__item hidden@lg-up">Save: £0.00</li>
+                                <li class="separator"></li>
+                                <li class="o-minibag--list o-minibag--list-total">
+                                    <dl class="o-deflist-2col">
+                                        <dt>Shipping</dt>
+                                        <dd>£2.95</dd>
+                                        <dt class="u-font-wb u-mar-t-medium">Sub Total</dt>
+                                        <dd class="u-font-wb u-mar-t-medium">£147.00</dd>
+                                    </dl>
+                                </li>
+                                <li class="separator"></li>
+                                <div class="o-minibag--list-actions">
+                                    <div class="">
+                                        <!-- <a class="c-btn c-btn-secondary col-6@xs flexer-element u-mar-r-small">View Bag</a> -->
+                                        <a class="c-btn c-btn-secondary c-btn-block">Checkout</a>
+                                    </div>
+                                    <div class="separator__inline-text">
+                                        <span>or</span>
+                                    </div>
+                                    <a class="c-btn c-btn-block c-btn-primary">Checkout with
+                                      <img style="vertical-align: middle; height: 24px; margin-left: 0.5em;" src="img/card-paypal.svg">
+                                    </a>
+                                </div>
+                                </li>
                             </ul>
                         </div>
-                        <div class="o-minibag--list-item--control col-3@lg hidden@md-down">
-                            <select class="o-minibag--control--select selectbox-dropdown__inline">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                            <div class="o-minibag--control--remove">
-                                <a class="link u-font-no-underline" href="#">
-                                    <span class="hidden@md-down">&times;</span> remove</a>
-                            </div>
-                        </div>
-                        <div class="o-minibag--list-item--control o-minibag--list-item--quant col-9@xs col-10@md hidden@lg-up u-fr">
-                            <div class="o-minibag--control--remove col-4@xs u-pad-0">
-                                <a class="c-btn c-btn-primary__alt u-font-no-underline" href="#">
-                                    <span class="hidden@lg-down">&times;</span> remove</a>
-                            </div>
-                            <div class="o-form__input-contain o-form__input-contain--quantity col-8@xs u-pad-0 u-font-ta-r">
-                                <a class="c-btn c-btn-primary__alt u-font-no-underline js-remove-item">-</a>
-                                <span class="o-input--textual js-item-count">1</span>
-                                <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
-                                <a class="c-btn c-btn-primary__alt u-font-no-underline js-add-item">+</a>
-                            </div>
-                        </div>
-                    </li>
-                    {{/ each }}
-                </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-12@xs">
-                <div class="o-minibag--footer u-mar-t-large">
-                    <ul class="o-minibag--action--contain">
-                        <li class="separator"></li>
-                        <li class="o-minibag--list-actions">
-                            <form action="" class="o-form o-form--wide">
-                                <div class="o-form__row">
-                                    <div class="o-form__label-contain" style="width: 50%">
-                                        <label name="" class="o-form__label-primary u-font-ta-l">Got a promo code?</label>
-                                    </div>
-                                    <div class="o-form__input-contain" style="width: 50%">
-                                        <input typ="text" placeholder="Got a promo code?">
-                                    </div>
-                                </div>
-                            </form>
-                        </li>
-                        <li class="separator"></li>
-                        <li class="o-minibag--list-actions">
-                            <form action="" class="o-form o-form--wide">
-                                <div class="o-form__row">
-                                    <div class="o-form__label-contain u-ta-l" style="width: 50%">
-                                        <label name="select-b" class="o-form__label-primary u-font-ta-l">Shipping Options:
-                                            <br /> <a href="">Delivery Information</a></label>
-                                    </div>
-                                    <div class="o-form__input-contain" style="width: 50%">
-                                        <select id="select-b">
-                                            <option value="foo">Click &amp; Collect</option>
-                                            <option disabled value="bar">bar</option>
-                                            <option value="baz">baz</option>
-                                            <option>Option 1.1</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </form>
-                        </li>
-                        <li class="separator"></li>
-                        <li class="o-minibag--list o-minibag--list-total">
-                            <dl class="o-deflist-2col">
-                                <dt>Shipping</dt>
-                                <dd>£2.95</dd>
-                                <dt class="u-font-wb u-mar-t-medium">Sub Total</dt>
-                                <dd class="u-font-wb u-mar-t-medium">£147.00</dd>
-                            </dl>
-                        </li>
-                        <li class="separator"></li>
-                        <div class="o-minibag--list-actions">
-                            <div class="">
-                                <!-- <a class="c-btn c-btn-secondary col-6@xs flexer-element u-mar-r-small">View Bag</a> -->
-                                <a class="c-btn c-btn-secondary c-btn-block">Checkout</a>
-                            </div>
-                            <div class="separator__inline-text">
-                                <span>or</span>
-                            </div>
-                            <a class="c-btn c-btn-block c-btn-primary">
-              Checkout with
-              <img style="vertical-align: middle; height: 24px; margin-left: 0.5em;" src="img/card-paypal.svg">
-            </a>
-                        </div>
-                        </li>
-                    </ul>
+            <div class="col-6@xs col-offset-3@sm col-4@md col-3@lg u-mar-t-huge">
+              <div class="row">
+                <div class="col-8@xs col-offset-2@sm-up">
+                  <img class="svg" src="img/secure-cta.svg" />
                 </div>
+                <div class="col-6@xs col-offset-3@sm-up u-mar-t-medium">
+                  <img class="svg" src="img/card-verisign.svg" />
+                </div>
+                <div class="col-6@xs col-offset-3@sm-up u-mar-t-medium">
+                  <img class="svg" src="img/card-paypal.svg" />
+                </div>
+              </div>
+              <div class="row u-mar-t-small">
+                <div class="col-3@xs">
+                  <img class="svg" src="img/card-visa.svg" />
+                </div>
+                <div class="col-3@xs">
+                  <img class="svg" src="img/card-vpay.svg" />
+                </div>
+                <div class="col-3@xs">
+                  <img class="svg" src="img/card-mastercard.svg" />
+                </div>
+                <div class="col-3@xs">
+                  <img class="svg" src="img/card-maestro.svg" />
+                </div>
+              </div>
             </div>
         </div>
     </div>
