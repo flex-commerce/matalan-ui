@@ -39,6 +39,25 @@ $border-thickness: 5px;
     @extend .flexer;
     font-size: 80%;
     margin-bottom: 1em;
+    @include mq($until: md) {
+      overflow: visible;
+      width: 175%;
+    }
+    &.c-progress-checkout__3 {
+      @include mq($until: md) {
+        margin-left: -39%;
+      }
+    }
+    &.c-progress-checkout__4 {
+      @include mq($until: md) {
+        margin-left: -80%;
+      }
+    }
+    &.c-progress-checkout__5 {
+      @include mq($until: md) {
+        margin-left: -80%;
+      }
+    }
     a {
       color: $inactive;
       display: block;
