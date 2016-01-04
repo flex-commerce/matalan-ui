@@ -99,7 +99,7 @@
   (function() {
   // investigate adding star markup here?
 
-  var ratingsHolders = $.find("[data-rating");
+  var ratingsHolders = $.find("[data-rating]");
   var rated = 0;
 
   if (ratingsHolders.length) {
