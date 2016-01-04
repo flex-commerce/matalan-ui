@@ -1,59 +1,45 @@
 .o-login-container {
-  position: relative;
-  height: calc(100% - 59px);
-  @include mq($until: lg) {
+    position: relative;
     height: calc(100% - 59px);
-  }
-
-  @include mq($from: lg) {
-    height: calc(100% - 110px);
-  }
-  &.winter-hero {
-    @include mq($from: md) {
-      background: url('../img/winter-hero.jpg') no-repeat top center;
-      background-size: cover;
+    @include mq($until: lg) {
+        height: calc(100% - 59px);
     }
-  }
-
-  &.spring-hero {
-    @include mq($from: md) {
-      background: url('../img/spring-hero.jpg') no-repeat center bottom;
-      background-size: cover;
+    @include mq($from: lg) {
+        height: calc(100% - 110px);
     }
-  }
-
-  &.summer-hero {
-    @include mq($from: md) {
-      background: url('../img/summer-hero.jpg') no-repeat left top;
-      background-size: cover;
+    &.winter-hero {
+        @include mq($from: md) {
+            background: url('../img/winter-hero.jpg') no-repeat top center;
+            background-size: cover;
+        }
     }
-  }
-
-  &.autumn-hero {
-    @include mq($from: md) {
-      background: url('../img/autumn-hero.jpg') no-repeat right center;
-      background-size: cover;
+    &.spring-hero {
+        @include mq($from: md) {
+            background: url('../img/spring-hero.jpg') no-repeat center bottom;
+            background-size: cover;
+        }
     }
-  }
-  .row {
-    height: 100%;
-  }
-
-  .o-login-container__wrapper {
-    height: 100%;
-
-  }
-
-  .o-login-container__box {
-    @include center(x);
-    padding: 20px;
-    top: 20%;
-    @include mq($until: md) {
-      top: 5%;
+    &.summer-hero {
+        @include mq($from: md) {
+            background: url('../img/summer-hero.jpg') no-repeat left top;
+            background-size: cover;
+        }
     }
-    @include mq($from: md) {
-      opacity: 0.9;
-      background-color: $white;
+    &.autumn-hero {
+        background: url('../img/autumn-hero.jpg') no-repeat right center;
+        background-size: cover;
     }
-  }
+    .row {
+        height: 100%;
+    }
+    .o-login-container__wrapper {
+        height: 100%;
+    }
+    .o-login-container__box {
+        @include center(x);
+        padding: 20px;
+        top: 20%;
+        opacity: 0.9;
+        background-color: $white;
+    }
 }
