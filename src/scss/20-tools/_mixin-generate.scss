@@ -128,7 +128,7 @@ $mq-classgen-models: (pad: padding, mar: margin);
       }
       %u-border2-#{$shortdir},
       .u-border2-#{$shortdir}, {
-        border-#{$dir}: 2px solid $cool-grey;
+        border-#{$dir}: 1px solid $cool-grey;
       }
   } //each model
   %u-border2,

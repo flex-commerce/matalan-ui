@@ -81,7 +81,7 @@
   }
 
   .slick-prev {
-    left: 30px;
+    left: 45px;
 
     [dir="rtl"] & {
       left: auto;
@@ -97,7 +97,7 @@
   }
 
   .slick-next {
-    right: 30px;
+    right: 45px;
 
     [dir="rtl"] & {
       right: auto;
@@ -110,6 +110,12 @@
         content: $icon-ui-back;
       }
     }
+  }
+
+  .slick-zoom {
+    position: relative;
+    bottom: 35px;
+    left: 15px;
   }
 
   /* Dots */

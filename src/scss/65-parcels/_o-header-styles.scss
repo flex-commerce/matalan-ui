@@ -68,7 +68,9 @@
   }
 }
 .o-header__brand {
-  text-align: center;
+  @include mq($until: md) {
+    text-align: center;
+  }
   position: relative;
   margin: 0 auto;
   @include mq($from: lg) {

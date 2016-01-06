@@ -194,14 +194,6 @@ $('.o-section-department__slick').slick({
   ]
 });
 
-$('.global-messages').slick({
-  dots: true,
-  infinite: true,
-  arrows: false,
-  slidesToShow: 1,
-  slidesToScroll: 1
-
-});
 
 // $('.o-product__slider').on('init', function(event, slick){
 //   $('.slick-active').prev().addClass('slick-item-prev');
