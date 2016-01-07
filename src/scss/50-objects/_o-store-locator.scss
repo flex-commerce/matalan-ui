@@ -1,103 +1,113 @@
-.storelocator-panel {
-  border: 1px solid #ccc;
-  overflow: auto;
-}
+  .map-wrapper {
+      position: relative;
+      display: block;
+      height: 800px;
+  }
 
-.storelocator-panel .store-list {
-  margin: 0;
-  padding: 0;
-}
+  .map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+  }
 
-.storelocator-panel .store-list li,
-.storelocator-panel .directions-panel {
-  padding: 5px;
-}
-.storelocator-panel .directions-panel {
-  font-size: 0.8em;
-}
+  .listings {
+      height: 100%;
+      overflow: hidden;
+      padding-bottom: 60px;
 
-.storelocator-panel .store-list li.store:hover {
-  cursor: pointer;
-  background: #eee;
-}
+      p {
+        @include font-size(11px);
+      }
+  }
 
-.storelocator-panel .store-list li.highlighted,
-.storelocator-panel .store-list li.highlighted:hover {
-  background: #ccf;
-}
+  .listings .item {
+      display: block;
+      border-bottom: 1px solid #eee;
+      text-decoration: none;
+  }
 
-.storelocator-panel .directions {
-  display: none;
-}
+  .listings .item:last-child {
+      border-bottom: none;
+  }
 
-.storelocator-panel .location-search {
-  padding: 5px;
-}
+  .listings .item .title {
+      display: block;
+      color: $primary-color;
+      font-weight: 700;
+  }
 
-.storelocator-panel .location-search input {
-  width: 95%;
-}
+  .listings .item .title small {
+      font-weight: 400;
+  }
 
-.storelocator-panel .location-search h4 {
-  font-size: 0.8em;
-  margin: 0;
-  padding: 0;
-}
+  .listings .item.active .title,
+  .listings .item .title:hover {
+      color: $primary-color-hover;
+  }
 
-.storelocator-panel .store-list .no-stores {
-  color: grey;
-}
+  .listings .item.active {
+      background-color: #f8f8f8;
+  }
 
-.storelocator-panel .store .features {
-  display: none;
-}
+  ::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+      border-left: 0;
+      background: rgba(0, 0, 0, 0.1);
+  }
 
-.storelocator-panel .feature-filter {
-  overflow: hidden;
-}
+  ::-webkit-scrollbar-track {
+      background: none;
+  }
 
-.storelocator-panel .feature-filter label {
-  display: block;
-  font-size: 0.8em;
-  margin: 0 0.4em;
-  float: left;
-}
+  ::-webkit-scrollbar-thumb {
+      background: #00853e;
+      border-radius: 0;
+  }
 
-.store .title {
-  font-weight: bold;
-}
+  .clearfix {
+      display: block;
+  }
 
-.store .address,
-.store .phone,
-.store .web,
-.store .misc {
-  font-size: 80%;
-  margin-top: 0.2em;
-  margin-bottom: 0.5em;
-  display: block;
-}
+  .clearfix:after {
+      content: '.';
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+  /* Marker tweaks */
 
-.store .features {
-  overflow: hidden;
-  color: grey;
-  margin: 0;
-  padding: 0;
-  font-size: 70%;
-  max-width: 250px;
-}
+  .leaflet-popup-close-button {
+      display: none;
+  }
 
-.store .features li {
-  display: inline;
-  float: left;
-  padding-right: 0.8em;
-}
+  .leaflet-popup-content {
+      padding: 0 !important;
+      width: 200px;
+  }
 
-.store .web a {
-  color: green
-}
+  .leaflet-popup-content-wrapper {
+      padding: 0 !important;
+  }
 
-.store .action {
-  font-size: 0.8em;
-  color: green;
-  margin-right: 0.5em;
-}
+
+  .leaflet-popup-content div{
+      padding: 5px;
+  }
+
+  .leaflet-popup-content h3 {
+      background: $primary-color;
+      color: #fff;
+      margin: 0;
+      display: block;
+      padding: 10px;
+      border-radius: 3px 3px 0 0;
+      font-weight: 700;
+      margin-top: -15px;
+  }
+
+  .leaflet-container .leaflet-marker-icon {
+      cursor: pointer;
+  }

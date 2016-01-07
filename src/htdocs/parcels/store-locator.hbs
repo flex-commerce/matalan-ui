@@ -1,26 +1,210 @@
-<style>
-  #map { position:absolute; top:0; bottom:0; width:100%; display:block; }
-</style>
 
-<div class="row">
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' />
+<div class="row u-mar-b-large">
   <div class="col-12@xs">
       <h4>Store Finder</h4>
 
   </div>
-  <div class="col-3@lg">
-    dasdad
+  <div class="col-3@xs locations">
+    <h4>Our locations</h4>
+    <div id='listings' class='listings'></div>
   </div>
-  <div class="col-9@lg">
-    <div id="map">
+  <div class="col-12@xs col-9@lg">
+    <div class="map-wrapper">
+      <div id='map' class='map'></div>
     </div>
   </div>
 </div>
 
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.js'></script>
 <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoiYW5keWpvbmVzIiwiYSI6ImNpajRkdjU1bDAwMWF2cW0zNXJ0cWJqNzMifQ.tZSGgAMou1DiYN3TUK3yEQ';
+    var geojson = [
+        {
+          "type": "FeatureCollection",
+          "features": [
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-2.0878973999999744,
+                        57.1519212
+                    ]
+                },
+                "properties": {
+                    "phoneFormatted": "Tel: 0333 0044444",
+                    "phone": "03330044444",
+                    "city": "Aberdeen",
+                    "country": "United Kingdom",
+                    "address": "Matalan - Constitution Street",
+                    "postcode": "AB24 5ET",
+                    "week": "Monday - Friday: 09:00 - 20:00",
+                    "saturday" : "Saturday: 09:00 - 19:00",
+                    "sunday" : "Sunday: 10:30 - 16:30"
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-4.080607500000042,
+                        52.4114045
+                    ]
+                },
+                "properties": {
+                    "phoneFormatted": "Tel: 0333 0044444",
+                    "phone": "03330044444",
+                    "city": "Aberystwyth",
+                    "country": "United Kingdom",
+                    "address": "Matalan - Units 1 2 3 Park Avenue",
+                    "postcode": "SY23 1PG",
+                    "week": "Monday - Friday: 09:00 - 20:00",
+                    "saturday" : "Saturday: 09:00 - 19:00",
+                    "sunday" : "Sunday: 10:30 - 16:30"
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-2.381942200000026,
+                        53.75676869999999
+                    ]
+                },
+                "properties": {
+                    "phoneFormatted": "Tel: 0333 0044444",
+                    "phone": "03330044444",
+                    "city": "Accrington",
+                    "country": "United Kingdom",
+                    "address": "Matalan - Fountain Retail Park Hyndburn Road",
+                    "postcode": "BB5 4AA",
+                    "week": "Monday - Friday: 09:00 - 20:00",
+                    "saturday" : "Saturday: 09:00 - 19:00",
+                    "sunday" : "Sunday: 10:30 - 16:30"
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-2.298637699999972,
+                        53.402434
+                    ]
+                },
+                "properties": {
+                    "phoneFormatted": "Tel: 0333 0044444",
+                    "phone": "03330044444",
+                    "city": "Altrincham",
+                    "country": "United Kingdom",
+                    "address": "Matalan - Brookway Retail park 452 Altrincham Rd",
+                    "postcode": "M23 9BL",
+                    "week": "Monday - Friday: 09:00 - 20:00",
+                    "saturday" : "Saturday: 09:00 - 19:00",
+                    "sunday" : "Sunday: 10:30 - 16:30"
+                }
+            }
+          ]
+        }
+    ];
+    var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([54.89, -4.11], 6);
 
-  L.mapbox.accessToken = 'pk.eyJ1IjoiYW5keWpvbmVzIiwiYSI6ImNpajJ5cWV0dzAwMnJ2YmtuMjRtMDQ5MTAifQ.I5VhvTgZGyXIQqaMI0KwPg';
-  var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([40, -74.50], 9);
+    map.scrollWheelZoom.disable();
 
-    </script>
+    var listings = document.getElementById('listings');
+    var locations = L.mapbox.featureLayer().addTo(map);
+
+    locations.setGeoJSON(geojson);
+
+    function setActive(el) {
+      var siblings = listings.getElementsByTagName('div');
+      for (var i = 0; i < siblings.length; i++) {
+        siblings[i].className = siblings[i].className
+        .replace(/active/, '').replace(/\s\s*$/, '');
+      }
+
+      el.className += ' active';
+    }
+
+    locations.eachLayer(function(locale) {
+
+      // Shorten locale.feature.properties to just `prop` so we're not
+      // writing this long form over and over again.
+      var prop = locale.feature.properties;
+
+      // Each marker on the map.
+      var popup = '<h3>Matalan</h3><div>' + prop.city;
+      var detailsRow = listings.appendChild(document.createElement('div'));
+      detailsRow.className = "row item";
+
+      var listing = detailsRow.appendChild(document.createElement('div'));
+      listing.className = 'col-6@xs u-pad-r-0';
+
+      var link = listing.appendChild(document.createElement('a'));
+      link.href = '#';
+      link.className = 'title';
+
+      link.innerHTML = prop.city;
+      if (prop.address) {
+        link.innerHTML += '<br /><small class="quiet">' + prop.address + '</small>';
+        link.innerHTML += '<br /><small class="quiet">' + prop.postcode + '</small>';
+        popup += '<br /><small class="quiet">' + prop.address + '</small>';
+      }
+
+      var tel = listing.appendChild(document.createElement('p'));
+      tel.className = 'telephone';
+
+      if (prop.phone) {
+        tel.innerHTML =  '<a href="tel:' + prop.phone + '">' + prop.phoneFormatted + '</a>';
+      }
+
+
+
+      var details = detailsRow.appendChild(document.createElement('div'));
+      details.className = "col-6@xs";
+      var opening = details.appendChild(document.createElement('p'));
+      opening.innerHTML = "";
+      if (prop.week) {
+        opening.innerHTML +=  prop.week;
+      }
+
+      if (prop.saturday) {
+        opening.innerHTML +=  '<br />' + prop.saturday;
+      }
+
+      if (prop.sunday) {
+        opening.innerHTML +=  '<br />' + prop.sunday;
+      }
+
+      link.onclick = function() {
+        setActive(detailsRow);
+
+        // When a menu item is clicked, animate the map to center
+        // its associated locale and open its popup.
+        map.setView(locale.getLatLng(), 16);
+        locale.openPopup();
+        return false;
+      };
+
+      // Marker interaction
+      locale.on('click', function(e) {
+        // 1. center the map on the selected marker.
+        map.panTo(locale.getLatLng());
+
+        // 2. Set active the markers associated listing.
+        setActive(detailsRow);
+      });
+
+      popup += '</div>';
+      locale.bindPopup(popup);
+
+      locale.setIcon(L.icon({
+        iconUrl: './img/marker.png',
+        iconSize: [56, 56],
+        iconAnchor: [28, 28],
+        popupAnchor: [0, -34]
+      }));
+
+  });
+</script>
 
