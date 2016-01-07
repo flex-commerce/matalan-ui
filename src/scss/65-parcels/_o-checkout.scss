@@ -23,7 +23,8 @@
         display: block;
       }
     }
-    &.active {
+    &.active,
+    &.completed {
       .o-checkout__content {
         display: block;
       }

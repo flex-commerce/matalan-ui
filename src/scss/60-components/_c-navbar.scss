@@ -68,6 +68,7 @@
       &.open,
       &:hover {
         border-bottom: 2px solid $primary-color;
+        color: $primary-color;
       }
     }
   }

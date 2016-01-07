@@ -9,7 +9,7 @@
     {{> parcels/header }}
     <div class="container">
         <div class="row">
-            <div class="col-12@xs col-9@md col-9@lg">
+            <div class="col-12@xs">
                 <div class="row">
                     <div class="col-12@xs">
                         <div class="u-cf u-mar-t-large">
@@ -21,53 +21,52 @@
                                 {{minibag.category.collection.products.length}} Items in your bag
                             </p>
                         </div>
-                        <ul class="o-minibag--list-contain">
-                            {{#each minibag.category.collection.products}}
-                            <li class="o-minibag--list o-minibag--list-item u-cf">
-                                <div class="o-minibag--list-item--image col-3@xs col-2@md col-2@lg u-pad-0">
-                                    <img class="img" src="{{productImages.[0]}}">
-                                </div>
-                                <div class="o-minibag--list-item--detail col-9@xs col-9@md col-8@lg ">
-                                    <p class="detail--description u-font-wb">{{productTitle}}</p>
-                                    <ul class="detail--vars u-pad-b-small list-space__small">
-                                        <li class="list__item">Color:
-                                            <span class="color-swatch__inline u-bgcolor-cgrey"></span>
-                                        </li>
-                                        <li class="list__item">Size: Small</li>
-                                    </ul>
-                                    <ul class="detail--price list-space__small">
-                                        <li class="list__item">
-                                            <strong>Price: {{productPrice}}</strong>
-                                        </li>
-                                        <li class="list__item hidden@lg-up">Save: £0.00</li>
-                                    </ul>
-                                </div>
-                                <div class="o-minibag--list-item--control col-3@lg hidden@md-down">
-                                    <select class="o-minibag--control--select selectbox-dropdown__inline">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <div class="o-minibag--control--remove">
-                                        <a class="link u-font-no-underline" href="#">
+                        <table class="c-table c-table--spaced">
+                            <thead>
+                                <tr class="u-border2-b">
+                                    <th style="width: 180px; max-width: 180px">Your items</th>
+                                    <th>&nbsp;</th>
+                                    <th>Quantity</th>
+                                    <th>You Save</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each minibag.category.collection.products}}
+                                <tr class="u-border2-b">
+                                    <td>
+                                        <div style="max-width: 150px">
+                                            <img class="img" src="{{productImages.[0]}}">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="h6">{{productTitle}}</p>
+                                        <p class="">Colour</p>
+                                        <p>Size: Value</p>
+                                        <p>Detail: S0000000</p>
+                                    </td>
+                                    <td class="">
+                                        <select class=" selectbox-dropdown__inline">
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                        </select>
+                                        <div class="o-minibag--control--remove u-pad-l-0 u-mar-t-small">
+                                          <a class="link u-font-no-underline" href="#">
                                             <span class="hidden@md-down">&times;</span> remove</a>
-                                    </div>
-                                </div>
-                                <div class="o-minibag--list-item--control o-minibag--list-item--quant col-9@xs col-10@md hidden@lg-up u-fr">
-                                    <div class="o-minibag--control--remove col-4@xs u-pad-0">
-                                        <a class="c-btn c-btn-primary__alt u-font-no-underline" href="#">
-                                            <span class="hidden@lg-down">&times;</span> remove</a>
-                                    </div>
-                                    <div class="o-form__input-contain o-form__input-contain--quantity col-8@xs u-pad-0 u-font-ta-r">
-                                        <a class="c-btn c-btn-primary__alt u-font-no-underline js-remove-item">-</a>
-                                        <span class="o-input--textual js-item-count">1</span>
-                                        <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
-                                        <a class="c-btn c-btn-primary__alt u-font-no-underline js-add-item">+</a>
-                                    </div>
-                                </div>
-                            </li>
-                            {{/ each }}
-                        </ul>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <p>&pound;0.00</p>
+                                    </td>
+                                    <td>
+                                        <p>{{productPrice}}</p>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
                     </div>
                     <div class="col-12@xs">
                         <div class="o-minibag--footer u-mar-t-large">
@@ -132,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6@xs col-offset-3@sm col-3@md col-3@lg u-mar-t-huge">
+            <div class="col-6@xs col-offset-3@sm col-12@md u-mar-t-huge">
               <div class="row">
                 <div class="col-8@xs col-offset-2@sm-up">
                   <img class="svg" src="img/secure-cta.svg" />

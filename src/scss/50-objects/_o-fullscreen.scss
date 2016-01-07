@@ -1,6 +1,7 @@
-.o-login-container {
+.o-fullscreen-container {
     position: relative;
     height: calc(100% - 59px);
+    display:block;
     @include mq($until: lg) {
         height: calc(100% - 59px);
     }
@@ -29,17 +30,34 @@
         background: url('../img/autumn-hero.jpg') no-repeat right center;
         background-size: cover;
     }
+
+    &.general-hero {
+        background: url('../img/healthy-lifestyle.jpg') no-repeat left center;
+        background-size: cover;
+        height: auto;
+    }
     .row {
         height: 100%;
     }
-    .o-login-container__wrapper {
+    .o-fullscreen-container__wrapper {
         height: 100%;
     }
-    .o-login-container__box {
+    .o-fullscreen-container__box {
         @include center(x);
         padding: 20px;
         top: 20%;
         opacity: 0.9;
         background-color: $white;
     }
+
+    .o-fullscreen-container__box-large {
+        @include center(x);
+        padding: 20px;
+        top: 5%;
+        opacity: 0.9;
+        background-color: $white;
+        margin: 20px 0;
+    }
+
+
 }
