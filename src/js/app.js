@@ -4201,7 +4201,7 @@ $('body').on('click', '.find-store', function() {
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [0, 0]
+            "coordinates": [-1.3455011999999442,53.4441616]
         },
         "properties": {
             "StoreId": "236",
