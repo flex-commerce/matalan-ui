@@ -1,0 +1,6022 @@
+[{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.086126, 57.152372]
+    },
+    "properties": {
+        "StoreId": "53",
+        "Name": "Aberdeen",
+        "Address": "Matalan - Constitution Street\n\n",
+        "City": "Aberdeen",
+        "CountryCode": "GB",
+        "Zip": "AB24 5ET",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18.00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.081494, 52.412431]
+    },
+    "properties": {
+        "StoreId": "195",
+        "Name": "Aberystwyth",
+        "Address": "Matalan - Units 1 2 3\nPark Avenue\n",
+        "City": "Aberystwyth",
+        "CountryCode": "GB",
+        "Zip": "SY23 1PG",
+        "Email": "",
+        "Hours": "Monday -  Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.375753, 53.755319]
+    },
+    "properties": {
+        "StoreId": "59",
+        "Name": "Accrington",
+        "Address": "Matalan - Fountain Retail Park\nHyndburn Road\n",
+        "City": "Accrington",
+        "CountryCode": "GB",
+        "Zip": "BB5 4AA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.298638, 53.402434]
+    },
+    "properties": {
+        "StoreId": "63",
+        "Name": "Altrincham",
+        "Address": "Matalan - Brookway Retail park\n452 Altrincham Rd\n",
+        "City": "Altrincham",
+        "CountryCode": "GB",
+        "Zip": "M23 9BL",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19.00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.849053, 51.146247]
+    },
+    "properties": {
+        "StoreId": "93",
+        "Name": "Ashford",
+        "Address": "Matalan - Brookfield Rd\nBeaver Lane\n",
+        "City": "Ashford",
+        "CountryCode": "GB",
+        "Zip": "TN23 4YW",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.628407, 55.457212]
+    },
+    "properties": {
+        "StoreId": "177",
+        "Name": "Ayr",
+        "Address": "Matalan - Unit 1\nBeresford Terrace\n",
+        "City": "Ayr",
+        "CountryCode": "GB",
+        "Zip": "KA7 2HH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:00 - 19:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.331753, 52.060789]
+    },
+    "properties": {
+        "StoreId": "165",
+        "Name": "Banbury",
+        "Address": "Matalan - Cherwell Street\n\n",
+        "City": "Banbury",
+        "CountryCode": "GB",
+        "Zip": "OX16 2BB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 18:00\nThursday - Friday: 09:00 - 19:00 \nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.142266, 53.216723]
+    },
+    "properties": {
+        "StoreId": "147",
+        "Name": "Bangor",
+        "Address": "Matalan - St Davids Retail Park\nCaernarfon Road\n",
+        "City": "Bangor",
+        "CountryCode": "GB",
+        "Zip": "LL57 4TJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.2363109, 54.1210207]
+    },
+    "properties": {
+        "StoreId": "20",
+        "Name": "Barrow",
+        "Address": "Matalan - Walney Road\nBarrow\n",
+        "City": "Barrow-in-Furness",
+        "CountryCode": "GB",
+        "Zip": "LA14 5UN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.503541, 51.591314]
+    },
+    "properties": {
+        "StoreId": "119",
+        "Name": "Basildon",
+        "Address": "Matalan - Cricketers Retail Park\nCricketers Way\n",
+        "City": "Basildon",
+        "CountryCode": "GB",
+        "Zip": "SS13 1SA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.061402, 51.284091]
+    },
+    "properties": {
+        "StoreId": "194",
+        "Name": "Basingstoke",
+        "Address": "Matalan - Chineham Shopping Centre\nChineham\n",
+        "City": "Basingstoke",
+        "CountryCode": "GB",
+        "Zip": "RG24 8BQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30- 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.062209, 51.517806]
+    },
+    "properties": {
+        "StoreId": "69",
+        "Name": "Beckton",
+        "Address": "Matalan - Unit 8 Becton Retail Park\nAlpine Way\n",
+        "City": "Beckton",
+        "CountryCode": "GB",
+        "Zip": "E6 6LA",
+        "Email": "",
+        "Hours": "Monday - Friday: 10:00 - 20:00\nSaturday: 09:00 - 20.00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.486761, 52.107991]
+    },
+    "properties": {
+        "StoreId": "33",
+        "Name": "Bedford",
+        "Address": "Matalan - Unit C Interchange Ret Pk\nAmpthill Road\nKempson",
+        "City": "Bedford",
+        "CountryCode": "GB",
+        "Zip": "MK42 7AZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.254608, 52.084599]
+    },
+    "properties": {
+        "StoreId": "95",
+        "Name": "Biggleswade",
+        "Address": "Matalan - A1 Retail Park\nLondon Road\n",
+        "City": "Biggleswade",
+        "CountryCode": "GB",
+        "Zip": "SG18 8NE",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail, Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.08769, 52.56046]
+    },
+    "properties": {
+        "StoreId": "120",
+        "Name": "Bilston",
+        "Address": "Matalan - Spring Vale Retail Park\n\n",
+        "City": "Bilston",
+        "CountryCode": "GB",
+        "Zip": "WV14 0QL",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.016385, 53.386413]
+    },
+    "properties": {
+        "StoreId": "102",
+        "Name": "Birkenhead",
+        "Address": "Matalan - Units 3 The Rock Ret Pk\nGreen Lane\n",
+        "City": "Birkenhead",
+        "CountryCode": "GB",
+        "Zip": "CH41 9DF",
+        "Email": "",
+        "Hours": "Monday -  Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.89169, 52.491834]
+    },
+    "properties": {
+        "StoreId": "114",
+        "Name": "Birmingham",
+        "Address": "Matalan - Dartmouth Circus\nMiddle Way\n",
+        "City": "Birmingham",
+        "CountryCode": "GB",
+        "Zip": "B6 4LD",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.207274, 55.921858]
+    },
+    "properties": {
+        "StoreId": "205",
+        "Name": "Bishopbriggs",
+        "Address": "Matalan - Unit 4\nStrathkelvin Retail Park\n",
+        "City": "Glasgow",
+        "CountryCode": "GB",
+        "Zip": "G64 2TS",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 09:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.479791, 53.743835]
+    },
+    "properties": {
+        "StoreId": "127",
+        "Name": "Blackburn",
+        "Address": "Matalan - Lower Audley Street\n\n",
+        "City": "Blackburn",
+        "CountryCode": "GB",
+        "Zip": "BB1 1DG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.990523, 53.794545]
+    },
+    "properties": {
+        "StoreId": "27",
+        "Name": "Blackpool",
+        "Address": "Matalan - Clifton Retail Park\nSandhams Way\n",
+        "City": "Blackpool",
+        "CountryCode": "GB",
+        "Zip": "FY4 4UJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.402478, 55.881206]
+    },
+    "properties": {
+        "StoreId": "207",
+        "Name": "Blythswood (Clearance)",
+        "Address": "Matalan - Blythswood Retail Park\nRenfrew\n",
+        "City": "Blythswood",
+        "CountryCode": "GB",
+        "Zip": "PA4 9EN",
+        "Email": "",
+        "Hours": "Monday - Saturday: 09:00 - 18:00 \nSunday: 11:00 - 17:00 ",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Clearance",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.668445, 50.803098]
+    },
+    "properties": {
+        "StoreId": "175",
+        "Name": "Bognor Regis",
+        "Address": "Matalan - Unit 1Bognor Regis Ret Pk\nShripney Rd\n",
+        "City": "Bognor Regis",
+        "CountryCode": "GB",
+        "Zip": "PO22 9TR",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 18:00\nSunday: 10.00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.415651, 53.585419]
+    },
+    "properties": {
+        "StoreId": "32",
+        "Name": "Bolton",
+        "Address": "Matalan - Tonge Moor Road\n\n",
+        "City": "Bolton",
+        "CountryCode": "GB",
+        "Zip": "BL2 2DJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.01946, 52.977648]
+    },
+    "properties": {
+        "StoreId": "58",
+        "Name": "Boston",
+        "Address": "Matalan - John Adams Way\n\n",
+        "City": "Boston",
+        "CountryCode": "GB",
+        "Zip": "PE21 6TY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-5.966683, 54.579214]
+    },
+    "properties": {
+        "StoreId": "164",
+        "Name": "Boucher Road",
+        "Address": "Matalan - 49-51 Boucher Retail Park\nBoucher Crescent\n",
+        "City": "Belfast",
+        "CountryCode": "GB",
+        "Zip": "BT12 6HU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 19:00\nSunday: 12:30 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Northern Ireland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.711984, 53.83059]
+    },
+    "properties": {
+        "StoreId": "166",
+        "Name": "Bradford Greengates",
+        "Address": "Matalan - 760 Harrogate Road\nGreengates\n",
+        "City": "Bradford",
+        "CountryCode": "GB",
+        "Zip": "BD10 0QS",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.759678, 53.771049]
+    },
+    "properties": {
+        "StoreId": "167",
+        "Name": "Bradford Mayo",
+        "Address": "Matalan - Mayo Avenue\n\n",
+        "City": "Bradford",
+        "CountryCode": "GB",
+        "Zip": "BD5 8HP",
+        "Email": "",
+        "Hours": "Monday -  Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.992941, 51.138518]
+    },
+    "properties": {
+        "StoreId": "200",
+        "Name": "Bridgwater",
+        "Address": "Matalan - Bristol Road\nBridgwater\n",
+        "City": "Somerset",
+        "CountryCode": "GB",
+        "Zip": "TA6 4BH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.129068, 50.866357]
+    },
+    "properties": {
+        "StoreId": "65",
+        "Name": "Brighton",
+        "Address": "Matalan - Unit Carden Avenue\nHollingbury\n",
+        "City": "Brighton",
+        "CountryCode": "GB",
+        "Zip": "BN1 8NA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.544644, 51.429871]
+    },
+    "properties": {
+        "StoreId": "132",
+        "Name": "Bristol Brislington",
+        "Address": "Matalan - Unit 1 Brislington Ret Pk\nBath Road\n",
+        "City": "Brislington",
+        "CountryCode": "GB",
+        "Zip": "BS4 5NG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.559218, 51.50628]
+    },
+    "properties": {
+        "StoreId": "49",
+        "Name": "Bristol Filton",
+        "Address": "Matalan - Unit 1 Abbey Ret Pk\nStation Road\n",
+        "City": "Bristol Filton",
+        "CountryCode": "GB",
+        "Zip": "BS34 7JL",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.977453, 53.333986]
+    },
+    "properties": {
+        "StoreId": "12",
+        "Name": "Bromborough",
+        "Address": "Matalan - Bromborough Village Road\nNew Chester Road\n",
+        "City": "Bromborough",
+        "CountryCode": "GB",
+        "Zip": "CH62 7ES",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.631659, 52.805777]
+    },
+    "properties": {
+        "StoreId": "163",
+        "Name": "Burton Relocate",
+        "Address": "Matalan - Middleway Park\nGulild Street\n",
+        "City": "Burton",
+        "CountryCode": "GB",
+        "Zip": "DE14 1NA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.289462, 53.592784]
+    },
+    "properties": {
+        "StoreId": "94",
+        "Name": "Bury",
+        "Address": "Matalan - Foundry Street\nGeorge Street\n",
+        "City": "Bury",
+        "CountryCode": "GB",
+        "Zip": "BL9 7AZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.747715, 52.241167]
+    },
+    "properties": {
+        "StoreId": "70",
+        "Name": "Bury St.Edmunds",
+        "Address": "Matalan - Easlea Road\n\n",
+        "City": "Bury St.Edmunds",
+        "CountryCode": "GB",
+        "Zip": "IP32 7BY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.749188, 51.318222]
+    },
+    "properties": {
+        "StoreId": "217",
+        "Name": "Camberley",
+        "Address": "Matalan - Park Farm Ind Est\nFrimley Road\n",
+        "City": "Camberley",
+        "CountryCode": "GB",
+        "Zip": "GU16 7PN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [1.105642, 51.292686]
+    },
+    "properties": {
+        "StoreId": "125",
+        "Name": "Canterbury",
+        "Address": "Matalan - Stour Retail Park\nStour Road\n",
+        "City": "Canterbury",
+        "CountryCode": "GB",
+        "Zip": "CT1 1AD",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.139477, 51.499384]
+    },
+    "properties": {
+        "StoreId": "25",
+        "Name": "Cardiff",
+        "Address": "Matalan - The Avenue Retail Park\nUnit 2  383-384 Newport Road\n",
+        "City": "Cardiff",
+        "CountryCode": "GB",
+        "Zip": "CF23 9AE",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.177103, 51.482367]
+    },
+    "properties": {
+        "StoreId": "225",
+        "Name": "Cardiff City Centre",
+        "Address": "Matalan - 43-45 Queen Street\nSouth Glamorgan",
+        "City": "Cardiff",
+        "CountryCode": "GB",
+        "Zip": "CF10 2AS",
+        "Email": "",
+        "Hours": "Monday -  Friday: 08:00 - 20:00 \nSaturday: 08:00 - 20:00\nSunday: 11:00 - 17:00",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail, Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.934726, 54.889235]
+    },
+    "properties": {
+        "StoreId": "96",
+        "Name": "Carlisle",
+        "Address": "Matalan - Station Business Ret Pk\nWater Street\n",
+        "City": "Carlisle",
+        "CountryCode": "GB",
+        "Zip": "CA2 5AF",
+        "Email": "",
+        "Hours": "Monday - Friday: 08:00 - 20:00\nSaturday: 08:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.308806, 51.848999]
+    },
+    "properties": {
+        "StoreId": "174",
+        "Name": "Carmarthen",
+        "Address": "Matalan - Unit 1 Pensarn Ret Pk\nStephens Way\n",
+        "City": "Carmarthen",
+        "CountryCode": "GB",
+        "Zip": "SA31 2BG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.238087, 53.498796]
+    },
+    "properties": {
+        "StoreId": "197",
+        "Name": "Cheetham Hill",
+        "Address": "Matalan - Cheetham Hill Retail Park\nCheetham Hill Road\nCheetham Hill",
+        "City": "Manchester",
+        "CountryCode": "GB",
+        "Zip": "M8 8BB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.47933, 51.738168]
+    },
+    "properties": {
+        "StoreId": "15",
+        "Name": "Chelmsford",
+        "Address": "Matalan - Unit 4 Riverside Ret Pk\nVictoria Road\n",
+        "City": "Chelmsford",
+        "CountryCode": "GB",
+        "Zip": "CM1 1AN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.077023, 51.905239]
+    },
+    "properties": {
+        "StoreId": "117",
+        "Name": "Cheltenham",
+        "Address": "Matalan - 27 Swindon Road\n\n",
+        "City": "Cheltenham",
+        "CountryCode": "GB",
+        "Zip": "GL50 4DF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.907006, 53.196689]
+    },
+    "properties": {
+        "StoreId": "100",
+        "Name": "Chester",
+        "Address": "Matalan - Stadium Way\nChester\n",
+        "City": "Chester",
+        "CountryCode": "GB",
+        "Zip": "CH1 4PZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 18:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.438462, 53.235689]
+    },
+    "properties": {
+        "StoreId": "204",
+        "Name": "Chesterfield",
+        "Address": "Matalan - Chatsworth Road\n\n",
+        "City": "Chesterfield",
+        "CountryCode": "GB",
+        "Zip": "S40 2AQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.394516, 55.903553]
+    },
+    "properties": {
+        "StoreId": "55",
+        "Name": "Clydebank",
+        "Address": "Matalan - 77 Livingstone St\n\n",
+        "City": "Clydebank",
+        "CountryCode": "GB",
+        "Zip": "G81 2XA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 09:00 - 19.00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.022326, 55.857817]
+    },
+    "properties": {
+        "StoreId": "108",
+        "Name": "Coatbridge",
+        "Address": "Matalan - Unit 2 Faraday Ret Pk\nWhifflet St/Coatbridge St\n",
+        "City": "Coatbridge",
+        "CountryCode": "GB",
+        "Zip": "ML5 3SQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 09:00 - 19.00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.891759, 51.892658]
+    },
+    "properties": {
+        "StoreId": "66",
+        "Name": "Colchester",
+        "Address": "Matalan - Unit D-E Sheephen Rl Pk\nSheepen Road\n",
+        "City": "Colchester",
+        "CountryCode": "GB",
+        "Zip": "CO3 3GT",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.256290436, 51.59008275]
+    },
+    "properties": {
+        "StoreId": "198",
+        "Name": "Colindale",
+        "Address": "Matalan - Collindale Retail Park\nEdgware Road\n",
+        "City": "Colindale",
+        "CountryCode": "GB",
+        "Zip": "NW9 6TD",
+        "Email": "",
+        "Hours": "Monday - Friday: 10:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.168774, 53.860128]
+    },
+    "properties": {
+        "StoreId": "92",
+        "Name": "Colne",
+        "Address": "Matalan - North Valley Retail Park\nNorth Valley Road\n",
+        "City": "Colne",
+        "CountryCode": "GB",
+        "Zip": "BB8 9HH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.835897, 54.848885]
+    },
+    "properties": {
+        "StoreId": "170",
+        "Name": "Consett",
+        "Address": "Matalan - Hermiston Retail Park\n\n",
+        "City": "Consett",
+        "CountryCode": "GB",
+        "Zip": "DH8 5SB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 08:30 - 20:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.682204, 52.495417]
+    },
+    "properties": {
+        "StoreId": "22",
+        "Name": "Corby",
+        "Address": "Matalan - Unit 1 Pheonix Ret Pk\nPhoenix Park Way\n",
+        "City": "Corby",
+        "CountryCode": "GB",
+        "Zip": "NN17 5DT",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.388469, 53.507116]
+    },
+    "properties": {
+        "StoreId": "162",
+        "Name": "Cortonwood",
+        "Address": "Matalan - Unit 5 Cortonwood Ret Pk\nBrampton\n",
+        "City": "Barnsley",
+        "CountryCode": "GB",
+        "Zip": "S73 0UF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.492102146, 52.43080537]
+    },
+    "properties": {
+        "StoreId": "47",
+        "Name": "Coventry North",
+        "Address": "Matalan - Gallagher Ret Pk\nStoney Stanton Road\n",
+        "City": "Coventry",
+        "CountryCode": "GB",
+        "Zip": "CV6 5QQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19.00\nSunday: 10:30 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.481319, 52.392268]
+    },
+    "properties": {
+        "StoreId": "97",
+        "Name": "Coventry South",
+        "Address": "Matalan - Wheler Road\nSeven Stars Trading Estate\n",
+        "City": "Coventry",
+        "CountryCode": "GB",
+        "Zip": "CV3 4LA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.393139, 54.451843]
+    },
+    "properties": {
+        "StoreId": "160",
+        "Name": "Craigavon",
+        "Address": "Matalan - Rushmere Retail Park\nCentral Way\n",
+        "City": "Craigavon",
+        "CountryCode": "GB",
+        "Zip": "BT64 1AA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 19:00\nSunday: 12:30 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Northern Ireland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.18964, 51.12196]
+    },
+    "properties": {
+        "StoreId": "213",
+        "Name": "Crawley",
+        "Address": "Matalan - Unit 1a\nLondon Rd Retail Park\n",
+        "City": "Crawley",
+        "CountryCode": "GB",
+        "Zip": "RH10 8JD",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.219932, 51.560802]
+    },
+    "properties": {
+        "StoreId": "35",
+        "Name": "Cricklewood",
+        "Address": "Matalan - Edgware Road\nCricklewood Broadway\n",
+        "City": "Cricklewood",
+        "CountryCode": "GB",
+        "Zip": "NW2 6PH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.121023, 51.383201]
+    },
+    "properties": {
+        "StoreId": "189",
+        "Name": "Croydon",
+        "Address": "Matalan - 66 Purley Way\nWest Croydon\n",
+        "City": "Croydon",
+        "CountryCode": "GB",
+        "Zip": "CR0 3JP",
+        "Email": "",
+        "Hours": "Monday - Friday: 10:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.023876, 51.652297]
+    },
+    "properties": {
+        "StoreId": "176",
+        "Name": "Cwmbran",
+        "Address": "Matalan - Unit 1\nLlewelyn Walk\n",
+        "City": "Cwmbran",
+        "CountryCode": "GB",
+        "Zip": "NP44 1YN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.075516, 51.547746]
+    },
+    "properties": {
+        "StoreId": "186",
+        "Name": "Dalston",
+        "Address": "Matalan - Kingsland Shopping Centre\n\n",
+        "City": "Dalston",
+        "CountryCode": "GB",
+        "Zip": "E8 2LX",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.543935, 54.519956]
+    },
+    "properties": {
+        "StoreId": "143",
+        "Name": "Darlington",
+        "Address": "Matalan - Neasham Retail Centre\nNeasham Road\n",
+        "City": "Darlington",
+        "CountryCode": "GB",
+        "Zip": "Dl1 4PF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 08:30 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.353642, 55.811211]
+    },
+    "properties": {
+        "StoreId": "54",
+        "Name": "Darnley",
+        "Address": "Matalan - 589 Nitshill Road\nDarnley\n",
+        "City": "Glasgow",
+        "CountryCode": "GB",
+        "Zip": "G53 7RZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.215464, 51.44742]
+    },
+    "properties": {
+        "StoreId": "172",
+        "Name": "Dartford",
+        "Address": "Matalan - Unit 6   10 Prospect Plc\n\n",
+        "City": "Dartford",
+        "CountryCode": "GB",
+        "Zip": "DA1 1DY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.472463, 52.91722]
+    },
+    "properties": {
+        "StoreId": "87",
+        "Name": "Derby",
+        "Address": "Matalan - Bradshaw Retail Park\nBradshaw Way\n",
+        "City": "Derby",
+        "CountryCode": "GB",
+        "Zip": "DE1 2QB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.626175, 53.690305]
+    },
+    "properties": {
+        "StoreId": "113",
+        "Name": "Dewsbury",
+        "Address": "Matalan - The Rishworth Centre\nRailway Street\n",
+        "City": "Dewsbury",
+        "CountryCode": "GB",
+        "Zip": "WF12 8EQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.103896, 53.541985]
+    },
+    "properties": {
+        "StoreId": "121",
+        "Name": "Doncaster",
+        "Address": "Matalan - Wheatley Retail Park\nWheatley Hall Road\n",
+        "City": "Doncaster",
+        "CountryCode": "GB",
+        "Zip": "DN2 4PE",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.584752, 55.074164]
+    },
+    "properties": {
+        "StoreId": "142",
+        "Name": "Dumfries",
+        "Address": "Matalan - Unit 1\nThe Peel Centre\n",
+        "City": "Dumfries",
+        "CountryCode": "GB",
+        "Zip": "DG1 3PF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 08:30 - 18:00\nSunday: 10:00 - 18.00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.960681, 56.464013]
+    },
+    "properties": {
+        "StoreId": "155",
+        "Name": "Dundee",
+        "Address": "Matalan - Unit 1 Gallagher Ret Pk\n32 East Dock St\n",
+        "City": "Dundee",
+        "CountryCode": "GB",
+        "Zip": "DD1 3JS",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.456822, 56.072954]
+    },
+    "properties": {
+        "StoreId": "206",
+        "Name": "Dunfermline",
+        "Address": "Matalan - Unit 2/3\nCarnegie Drive\n",
+        "City": "Dunfermline",
+        "CountryCode": "GB",
+        "Zip": "KY12 7AU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.541177, 54.776328]
+    },
+    "properties": {
+        "StoreId": "180",
+        "Name": "Durham",
+        "Address": "Matalan - Dragonville Lane\nBelmont\n",
+        "City": "Durham",
+        "CountryCode": "GB",
+        "Zip": "DH1 2WP",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.32361, 50.794996]
+    },
+    "properties": {
+        "StoreId": "45",
+        "Name": "Eastbourne",
+        "Address": "Matalan - Unit 4The Crumbles Ret Pk\nPevensey Bay Road\n",
+        "City": "Eastbourne",
+        "CountryCode": "GB",
+        "Zip": "BN23 6JH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.367975, 50.972823]
+    },
+    "properties": {
+        "StoreId": "74",
+        "Name": "Eastleigh",
+        "Address": "Matalan - Unit 4 Channon Ret Pk\nWoodside Avenue\n",
+        "City": "Eastleigh",
+        "CountryCode": "GB",
+        "Zip": "SO50 9NA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.135061, 55.967273]
+    },
+    "properties": {
+        "StoreId": "14",
+        "Name": "Edinburgh Leith",
+        "Address": "Matalan - Seafield Way\nSeafield Road\n",
+        "City": "Edinburgh",
+        "CountryCode": "GB",
+        "Zip": "EH15 1TB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.236225, 55.931617]
+    },
+    "properties": {
+        "StoreId": "46",
+        "Name": "Edinburgh Slateford",
+        "Address": "Matalan - 155 Slateford Road\n\n",
+        "City": "Edinburgh",
+        "CountryCode": "GB",
+        "Zip": "EH14 1NZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.168751, 55.886662]
+    },
+    "properties": {
+        "StoreId": "224",
+        "Name": "Edinburgh Straiton",
+        "Address": "Matalan -Straiton Retail Park",
+        "City": "Edinburgh",
+        "CountryCode": "GB",
+        "Zip": "EH20 9QY",
+        "Email": "",
+        "Hours": "Monday -  Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday 10:00 - 18:00",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail, Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.05683, 51.625063]
+    },
+    "properties": {
+        "StoreId": "235",
+        "Name": "Edmonton",
+        "Address": "Edmonton Metro\n34-44 North Mall\nLower Edmonton",
+        "City": "Edmonton",
+        "CountryCode": "GB",
+        "Zip": "N9 0EJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17.00",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.315604, 57.63994]
+    },
+    "properties": {
+        "StoreId": "199",
+        "Name": "Elgin",
+        "Address": "Matalan - Edgar Road Retail Park\nEdgar Road\n",
+        "City": "Elgin",
+        "CountryCode": "GB",
+        "Zip": "IV30 6YQ",
+        "Email": "",
+        "Hours": "Monday - Wednesday: 09:00 - 19:00\nThursday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.028818, 51.654783]
+    },
+    "properties": {
+        "StoreId": "131",
+        "Name": "Enfield",
+        "Address": "Matalan - The Brand Centre\nMollison Avenue\n",
+        "City": "Enfield",
+        "CountryCode": "GB",
+        "Zip": "EN3 7NJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.181832, 51.480534]
+    },
+    "properties": {
+        "StoreId": "184",
+        "Name": "Erith",
+        "Address": "Matalan - 3 Pier Road\n\n",
+        "City": "Erith",
+        "CountryCode": "GB",
+        "Zip": "DA8 1RG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.535955, 50.709603]
+    },
+    "properties": {
+        "StoreId": "221",
+        "Name": "Exeter",
+        "Address": "Matalan - Unit 7\nExeter Retail Park\nMarsh Barton Road",
+        "City": "Exeter",
+        "CountryCode": "GB",
+        "Zip": "EX2 8LH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16.30",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.53174, 50.7151]
+    },
+    "properties": {
+        "StoreId": "226",
+        "Name": "Exeter Clearance",
+        "Address": "Haven Banks\nWater Lane\n",
+        "City": "Exeter",
+        "CountryCode": "GB",
+        "Zip": "EX2 8BY",
+        "Email": "",
+        "Hours": "Monday - Saturday: 09:00 - 18:00\nSunday: 10:30 - 16:30",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Clearance",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.790819, 56.015431]
+    },
+    "properties": {
+        "StoreId": "71",
+        "Name": "Falkirk",
+        "Address": "Matalan - Carron Road\n\nFalkirk\n",
+        "City": "Falkirk",
+        "CountryCode": "GB",
+        "Zip": "FK2 7RR",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:30\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.409874, 51.446193]
+    },
+    "properties": {
+        "StoreId": "190",
+        "Name": "Feltham",
+        "Address": "Matalan - Unit 1\nThe Centre\n",
+        "City": "Feltham",
+        "CountryCode": "GB",
+        "Zip": "TW13 4AU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.82012, 55.622399]
+    },
+    "properties": {
+        "StoreId": "159",
+        "Name": "Galashiels",
+        "Address": "Matalan - Comely Bank Mill Ret Pk\n\n",
+        "City": "Galashiels",
+        "CountryCode": "GB",
+        "Zip": "TD1 1PY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 08:30 - 19:00\nSunday: 10:00 - 19:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.600026, 54.958387]
+    },
+    "properties": {
+        "StoreId": "124",
+        "Name": "Gateshead Central",
+        "Address": "Matalan - 137 High Street\n\n",
+        "City": "Gateshead",
+        "CountryCode": "GB",
+        "Zip": "NE8 1EJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 18:00\nSaturday: 08:30 - 18:30\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.2572, 55.85736]
+    },
+    "properties": {
+        "StoreId": "193",
+        "Name": "Glasgow City",
+        "Address": "Matalan - Jamaica St\nGlasgow City\n",
+        "City": "Glasgow",
+        "CountryCode": "GB",
+        "Zip": "G1 4NN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 18:00 (Thursday - 20:00)\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.257051, 55.856988]
+    },
+    "properties": {
+        "StoreId": "234",
+        "Name": "Glasgow London Road",
+        "Address": "Matalan - 2121 London Road\nGlasgow",
+        "City": "Glasgow",
+        "CountryCode": "GB",
+        "Zip": "G32 8XQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 09:00 - 19:00",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.186776, 56.188026]
+    },
+    "properties": {
+        "StoreId": "123",
+        "Name": "Glenrothes",
+        "Address": "Matalan - Saltire Retail Park\nPentland Park\n",
+        "City": "Glenrothes",
+        "CountryCode": "GB",
+        "Zip": "KY6 2AJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.274998, 51.826918]
+    },
+    "properties": {
+        "StoreId": "106",
+        "Name": "Gloucester",
+        "Address": "Matalan - Unit 2 The Olympus Centre\nQuedgeley\n",
+        "City": "Gloucester",
+        "CountryCode": "GB",
+        "Zip": "GL2 4NF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.648715, 52.910547]
+    },
+    "properties": {
+        "StoreId": "191",
+        "Name": "Grantham",
+        "Address": "Matalan - Dysart Retail Park\nDysart Rd\n",
+        "City": "Grantham",
+        "CountryCode": "GB",
+        "Zip": "NG31 7NP",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19.00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [1.721183, 52.605886]
+    },
+    "properties": {
+        "StoreId": "40",
+        "Name": "Great Yarmouth",
+        "Address": "Matalan - Southtown Road\n\n",
+        "City": "Great Yarmouth",
+        "CountryCode": "GB",
+        "Zip": "NR31 0JB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.084552, 53.571172]
+    },
+    "properties": {
+        "StoreId": "148",
+        "Name": "Grimsby",
+        "Address": "Matalan - Alexandra Retail Park\nCorporation Road\n",
+        "City": "Grimsby",
+        "CountryCode": "GB",
+        "Zip": "DN31 1SG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00 \nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.852792, 53.72316]
+    },
+    "properties": {
+        "StoreId": "141",
+        "Name": "Halifax",
+        "Address": "Matalan - Berry Lane\n\n",
+        "City": "Halifax",
+        "CountryCode": "GB",
+        "Zip": "HX1 1RD",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.092348, 51.766256]
+    },
+    "properties": {
+        "StoreId": "154",
+        "Name": "Harlow",
+        "Address": "Matalan - 15-18 The Water Gardens\nHaydens Road\n",
+        "City": "Harlow",
+        "CountryCode": "GB",
+        "Zip": "CM20 1AR",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.210399, 54.690564]
+    },
+    "properties": {
+        "StoreId": "51",
+        "Name": "Hartlepool",
+        "Address": "Matalan - Unit 1 Anchor Retail Park\nMarina Way\n",
+        "City": "Hartlepool",
+        "CountryCode": "GB",
+        "Zip": "TS24 0XR",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 08:30 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.413253, 51.505718]
+    },
+    "properties": {
+        "StoreId": "112",
+        "Name": "Hayes",
+        "Address": "Matalan - Pump Lane\n\n",
+        "City": "Hayes",
+        "CountryCode": "GB",
+        "Zip": "UB3 3NB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.06923, 51.79748]
+    },
+    "properties": {
+        "StoreId": "111",
+        "Name": "Hertford",
+        "Address": "Matalan - Unit 2 Madford Ret Pk\nWare Road\n",
+        "City": "Hertford",
+        "CountryCode": "GB",
+        "Zip": "SG13 7RQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.755962, 51.632965]
+    },
+    "properties": {
+        "StoreId": "210",
+        "Name": "High Wycombe",
+        "Address": "Matalan - Unit 2\nBellField Road\n",
+        "City": "Buckinghamshire",
+        "CountryCode": "GB",
+        "Zip": "HP13 5PN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.783618, 53.653264]
+    },
+    "properties": {
+        "StoreId": "79",
+        "Name": "Huddersfield",
+        "Address": "Matalan - Ringway Industrial Estate\n\n",
+        "City": "Huddersfield",
+        "CountryCode": "GB",
+        "Zip": "HD1 5DG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.314468, 53.751705]
+    },
+    "properties": {
+        "StoreId": "157",
+        "Name": "Hull city",
+        "Address": "Matalan - The Mount Retail Park\nMount Pleasant\nSutton-on-Hull",
+        "City": "Hull City",
+        "CountryCode": "GB",
+        "Zip": "HU9 2BN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 08:00 - 20:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.346494, 53.795115]
+    },
+    "properties": {
+        "StoreId": "67",
+        "Name": "Hull Kingswood",
+        "Address": "Matalan - Kingswood Retail Park\nBude Road\n",
+        "City": "Hull",
+        "CountryCode": "GB",
+        "Zip": "HU7 4AQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.870657, 53.357912]
+    },
+    "properties": {
+        "StoreId": "28",
+        "Name": "Hunts Cross",
+        "Address": "Matalan - Unit G  The Triumph Cntr\nHunts Cross\n",
+        "City": "Liverpool",
+        "CountryCode": "GB",
+        "Zip": "L24 9GB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19.00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.190809, 57.468508]
+    },
+    "properties": {
+        "StoreId": "72",
+        "Name": "Inverness",
+        "Address": "Matalan - Unit 1 Inshes Retail Park\n\n",
+        "City": "Inverness",
+        "CountryCode": "GB",
+        "Zip": "IV2 3TW",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [1.134952, 52.055088]
+    },
+    "properties": {
+        "StoreId": "216",
+        "Name": "Ipswich",
+        "Address": "Matalan - Unit 4 Orwell Retail Park\nRanelagh Road\n",
+        "City": "Ipswich",
+        "CountryCode": "GB",
+        "Zip": "IP2 0AQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.289915, 50.696607]
+    },
+    "properties": {
+        "StoreId": "158",
+        "Name": "Isle of Wight",
+        "Address": "Matalan - Furrlongs\nNewport\n",
+        "City": "Isle of Wight",
+        "CountryCode": "GB",
+        "Zip": "PO30 2AB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Isle of Wight"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.734036, 54.341736]
+    },
+    "properties": {
+        "StoreId": "229",
+        "Name": "Kendal",
+        "Address": "Unit 7 \nQueen Katherine's Avenue",
+        "City": "Kendal",
+        "CountryCode": "GB",
+        "Zip": "LA9 6DU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16.30",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.253945, 52.388415]
+    },
+    "properties": {
+        "StoreId": "104",
+        "Name": "Kidderminster",
+        "Address": "Matalan - Former Homebase\nParker Butts Ringway\n",
+        "City": "Kidderminster",
+        "CountryCode": "GB",
+        "Zip": "DY11 6TQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.567669, 55.03528]
+    },
+    "properties": {
+        "StoreId": "107",
+        "Name": "Killingworth",
+        "Address": "Matalan - The Killingworth Centre\nCitadel West\n",
+        "City": "Newcastle Upon Tyne",
+        "CountryCode": "GB",
+        "Zip": "NE12 6YT",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 08:30 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.507143, 55.585652]
+    },
+    "properties": {
+        "StoreId": "116",
+        "Name": "Kilmarnock",
+        "Address": "Matalan - Loreny Industrial Estate\nUmberly Road\n",
+        "City": "Kilmarnock",
+        "CountryCode": "GB",
+        "Zip": "KA1 5LB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.404718, 52.753958]
+    },
+    "properties": {
+        "StoreId": "135",
+        "Name": "Kings Lynn",
+        "Address": "Matalan - Blackfriars Road\n\n",
+        "City": "Kings Lynn",
+        "CountryCode": "GB",
+        "Zip": "PE30 1RX",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.443609, 53.999102]
+    },
+    "properties": {
+        "StoreId": "130",
+        "Name": "Knaresborough",
+        "Address": "Matalan - St James Retail Park\nGrimbald Crag Way\n",
+        "City": "Knaresborough",
+        "CountryCode": "GB",
+        "Zip": "HG5 8PZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.842778, 54.054905]
+    },
+    "properties": {
+        "StoreId": "85",
+        "Name": "Lancaster",
+        "Address": "Matalan - SunnyCliffe Retail Park\nMellishaw Lane\nMorecambe",
+        "City": "Lancaster",
+        "CountryCode": "GB",
+        "Zip": "LA3 3FE",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.4698, 53.796631]
+    },
+    "properties": {
+        "StoreId": "122",
+        "Name": "Leeds Halton",
+        "Address": "Matalan - Halton District Centre\n263 Selby Road\n",
+        "City": "Leeds",
+        "CountryCode": "GB",
+        "Zip": "LS15 7JR",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.598186, 53.78406]
+    },
+    "properties": {
+        "StoreId": "68",
+        "Name": "Leeds Wortley",
+        "Address": "Matalan - Lower Wortley Road\noff Leeds Ring Road\n",
+        "City": "Leeds",
+        "CountryCode": "GB",
+        "Zip": "LS12 4SL",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.135158, 52.638513]
+    },
+    "properties": {
+        "StoreId": "60",
+        "Name": "Leicester",
+        "Address": "Matalan - 100 Churchgate\nVaughan Way\n",
+        "City": "Leicester",
+        "CountryCode": "GB",
+        "Zip": "LE1 4AL",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.165672, 52.664338]
+    },
+    "properties": {
+        "StoreId": "161",
+        "Name": "Leicester Beaumont Leys",
+        "Address": "Matalan - 94 Beaumont Way\nBeaumont Leys\n",
+        "City": "Leicester",
+        "CountryCode": "GB",
+        "Zip": "LE4 1DS",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.014622, 51.465274]
+    },
+    "properties": {
+        "StoreId": "73",
+        "Name": "Lewisham",
+        "Address": "Matalan - Thurston Road\nLoanpit Vale\n",
+        "City": "Lewisham",
+        "CountryCode": "GB",
+        "Zip": "SE13 7SN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.011481, 51.568843]
+    },
+    "properties": {
+        "StoreId": "126",
+        "Name": "Leytonstone",
+        "Address": "Matalan - 829-837 High Road\n\n",
+        "City": "Leytonstone",
+        "CountryCode": "GB",
+        "Zip": "E11 1HH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.580913, 53.204029]
+    },
+    "properties": {
+        "StoreId": "29",
+        "Name": "Lincoln",
+        "Address": "Matalan - Lindis Ret Pk\nTritton Road\n",
+        "City": "Lincoln",
+        "CountryCode": "GB",
+        "Zip": "LN6 7QY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.466608, 55.844484]
+    },
+    "properties": {
+        "StoreId": "89",
+        "Name": "Linwood",
+        "Address": "Matalan - Phoenix Retail Park\nLinwood Road\n",
+        "City": "Linwood",
+        "CountryCode": "GB",
+        "Zip": "PA1 2AB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18.00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.944984, 53.403309]
+    },
+    "properties": {
+        "StoreId": "144",
+        "Name": "Liverpool",
+        "Address": "Matalan - Wavertree Retail Park\nWavertree Road\n",
+        "City": "Liverpool",
+        "CountryCode": "GB",
+        "Zip": "L7 5LZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.983159, 53.406163]
+    },
+    "properties": {
+        "StoreId": "219",
+        "Name": "Liverpool City Centre",
+        "Address": "Matalan - Unit 5 Williamson Square",
+        "City": "Liverpool",
+        "CountryCode": "GB",
+        "Zip": "L1 1EJ",
+        "Email": "",
+        "Hours": "Monday - Wednesday 09:00 - 18:00\nThursday 09:00 - 19:00\nFriday - Saturday 09:00 - 18:00\nSunday 11:00 - 17:00",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.519053, 55.88209]
+    },
+    "properties": {
+        "StoreId": "150",
+        "Name": "Livingston",
+        "Address": "Matalan - 1 Almondvale Sth Ret Pk\nAlmondvale Av\n",
+        "City": "Livingston",
+        "CountryCode": "GB",
+        "Zip": "EH54 6QX",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.375235, 51.532433]
+    },
+    "properties": {
+        "StoreId": "30",
+        "Name": "Llantrisant",
+        "Address": "Matalan - Unit 8\nGlamorgan Vale Ret Pk\n",
+        "City": "Pontyclun",
+        "CountryCode": "GB",
+        "Zip": "CF72 8RP",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-7.299406, 54.988762]
+    },
+    "properties": {
+        "StoreId": "192",
+        "Name": "Londonderry",
+        "Address": "Matalan - Lisnagelvin Retail Park\n3 Crescent Rd\n",
+        "City": "Londonderry",
+        "CountryCode": "GB",
+        "Zip": "BT47 2NQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 19:00\nSunday: 12:30 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Northern Ireland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.138003, 52.987884]
+    },
+    "properties": {
+        "StoreId": "181",
+        "Name": "Longton",
+        "Address": "Matalan - Heathcote Rd\nLongton\n",
+        "City": "Stoke-on-Trent",
+        "CountryCode": "GB",
+        "Zip": "ST3 2JR",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.416147, 51.875164]
+    },
+    "properties": {
+        "StoreId": "156",
+        "Name": "Luton",
+        "Address": "Matalan - Castle Street\n\n",
+        "City": "Luton",
+        "CountryCode": "GB",
+        "Zip": "LU1 3AG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.129325, 53.237645]
+    },
+    "properties": {
+        "StoreId": "202",
+        "Name": "Macclesfield",
+        "Address": "Matalan - Unit 8 Lyme Green Ret Pk\nLyme Green\n",
+        "City": "Macclesfield",
+        "CountryCode": "GB",
+        "Zip": "SK11 0TB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.517606, 51.271599]
+    },
+    "properties": {
+        "StoreId": "36",
+        "Name": "Maidstone",
+        "Address": "Matalan - Unit A Broadway Shop Cntr\nThe Broadway\n",
+        "City": "Maidstone",
+        "CountryCode": "GB",
+        "Zip": "ME16 8PS",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.304006, 52.130605]
+    },
+    "properties": {
+        "StoreId": "103",
+        "Name": "Malvern",
+        "Address": "Matalan - Unit 10 Malvern Ret Pk\nRoman Way\n",
+        "City": "Malvern",
+        "CountryCode": "GB",
+        "Zip": "WR14 1JQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.257196, 53.123172]
+    },
+    "properties": {
+        "StoreId": "90",
+        "Name": "Mansfield",
+        "Address": "Matalan - The Broad Centre\nStation Road\nSutton in Ashfield",
+        "City": "Nottingham",
+        "CountryCode": "GB",
+        "Zip": "NG17 5FH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.110009, 52.47892]
+    },
+    "properties": {
+        "StoreId": "178",
+        "Name": "Merry Hill",
+        "Address": "Matalan - Unit 6 Merry Hill Ret Pk\nBrierly Hill\n",
+        "City": "Dudley",
+        "CountryCode": "GB",
+        "Zip": "DY5 1SY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.393101, 51.749735]
+    },
+    "properties": {
+        "StoreId": "182",
+        "Name": "Merthyr Tydfil",
+        "Address": "Matalan - Merther Tydfil Ret Pk\nSwansea Road\n",
+        "City": "Merthyr Tydfil",
+        "CountryCode": "GB",
+        "Zip": "CF48 1HY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.180223, 54.570224]
+    },
+    "properties": {
+        "StoreId": "88",
+        "Name": "Middlesbrough",
+        "Address": "Matalan - Cleaveland Retail Park\nSkippers Lane\n",
+        "City": "Middlesbrough",
+        "CountryCode": "GB",
+        "Zip": "TS6 6UX",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.722599, 52.001123]
+    },
+    "properties": {
+        "StoreId": "78",
+        "Name": "Milton Bletchley",
+        "Address": "Matalan - 103 Watling Street\nBletchley\n",
+        "City": "Milton Keynes",
+        "CountryCode": "GB",
+        "Zip": "MK1 1HS",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.27304, 51.403995]
+    },
+    "properties": {
+        "StoreId": "188",
+        "Name": "New Malden",
+        "Address": "Matalan - 205-217 Kingston Road\n\n",
+        "City": "New Malden",
+        "CountryCode": "GB",
+        "Zip": "KT3 3SY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.318416, 51.385511]
+    },
+    "properties": {
+        "StoreId": "203",
+        "Name": "Newbury",
+        "Address": "Matalan - Unit 6\nNewbury Retail park\n",
+        "City": "Newbury",
+        "CountryCode": "GB",
+        "Zip": "RG14 7HU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.66659, 55.011997]
+    },
+    "properties": {
+        "StoreId": "43",
+        "Name": "Newcastle",
+        "Address": "Matalan - Unit 1 Belvedere Ret Pk\nBrunton Parkway\n",
+        "City": "Newcastle Upon Tyne",
+        "CountryCode": "GB",
+        "Zip": "NE3 2PA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 08:30 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.947391, 51.575345]
+    },
+    "properties": {
+        "StoreId": "211",
+        "Name": "Newport (Clearance)",
+        "Address": "Matalan - 7 Stiles Avenue\n\n",
+        "City": "Newport",
+        "CountryCode": "GB",
+        "Zip": "NP19 4TX",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 18:00\nSaturday: 09:00 - 18:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Clearance",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.594965, 50.542175]
+    },
+    "properties": {
+        "StoreId": "118",
+        "Name": "Newton Abbot",
+        "Address": "Matalan - Newton Abbot\nNewton Abbott Reatil Park\n",
+        "City": "Newton Abbot",
+        "CountryCode": "GB",
+        "Zip": "TQ12 3SB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-5.916715, 54.653992]
+    },
+    "properties": {
+        "StoreId": "179",
+        "Name": "Newtownabbey",
+        "Address": "Matalan - Unit 1Newtownabbey Ret Pk\nLongwood Road\n",
+        "City": "Newtownabbey",
+        "CountryCode": "GB",
+        "Zip": "BT37 9UF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 19:00\nSunday: 12:30 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Northern Ireland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-5.691155, 54.58766]
+    },
+    "properties": {
+        "StoreId": "214",
+        "Name": "Newtownards",
+        "Address": "Matalan - Castlebawn Shop Cntr\nPortaferry Rd\n",
+        "City": "Newtownards",
+        "CountryCode": "GB",
+        "Zip": "BT23 8NN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 19:00\nSunday: 12:30 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Northern Ireland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.929039, 52.239105]
+    },
+    "properties": {
+        "StoreId": "5",
+        "Name": "Northampton",
+        "Address": "Matalan - Unit 1Weedon Road Ind Est\nTyne Road\n",
+        "City": "Northampton",
+        "CountryCode": "GB",
+        "Zip": "NN5 5BE",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.507365, 53.263738]
+    },
+    "properties": {
+        "StoreId": "128",
+        "Name": "Northwich",
+        "Address": "Matalan - Leicester Street\n\n",
+        "City": "Northwich",
+        "CountryCode": "GB",
+        "Zip": "CW9 5LG",
+        "Email": "",
+        "Hours": "Monday - Friday: 08:00 - 20:00\nSaturday: 08:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [1.307077, 52.624113]
+    },
+    "properties": {
+        "StoreId": "201",
+        "Name": "Norwich",
+        "Address": "Matalan - Unit 6a Riverside Ret Pk\n\n",
+        "City": "Norwich",
+        "CountryCode": "GB",
+        "Zip": "NR1 1WU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.191182, 53.006503]
+    },
+    "properties": {
+        "StoreId": "50",
+        "Name": "Nottingham Bulwell",
+        "Address": "Matalan - Unit 6 Springfield Rt Pk\nHucknall Lane\n",
+        "City": "Nottingham",
+        "CountryCode": "GB",
+        "Zip": "NG6 8AJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.243777, 52.903155]
+    },
+    "properties": {
+        "StoreId": "39",
+        "Name": "Nottingham Chil",
+        "Address": "Matalan - East West Link Road\nEast West Link Road\n",
+        "City": "Nottingham",
+        "CountryCode": "GB",
+        "Zip": "NG9 6DS",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.020326, 52.500711]
+    },
+    "properties": {
+        "StoreId": "37",
+        "Name": "Oldbury",
+        "Address": "Matalan - Portway Road\nPortway Road\n",
+        "City": "Oldbury",
+        "CountryCode": "GB",
+        "Zip": "B69 2BZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.108236, 53.537149]
+    },
+    "properties": {
+        "StoreId": "220",
+        "Name": "Oldham",
+        "Address": "Matalan - Unit 2\nAlexandria Retail Park\n",
+        "City": "Oldham",
+        "CountryCode": "GB",
+        "Zip": "OL4 1SA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 17:00",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.175378, 53.473821]
+    },
+    "properties": {
+        "StoreId": "146",
+        "Name": "Openshaw",
+        "Address": "Matalan - Ashton Old Road\nHigher Openshaw\n",
+        "City": "Manchester",
+        "CountryCode": "GB",
+        "Zip": "M11 2NN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.21788, 51.732674]
+    },
+    "properties": {
+        "StoreId": "10",
+        "Name": "Oxford",
+        "Address": "Matalan - Unit 5 John Allen Centre\nCowley\n",
+        "City": "Oxford",
+        "CountryCode": "GB",
+        "Zip": "OX4 3JP",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.137072, 51.515631]
+    },
+    "properties": {
+        "StoreId": "233",
+        "Name": "Oxford Street",
+        "Address": "Matalan - 149-151 Oxford St\nLondon",
+        "City": "London",
+        "CountryCode": "GB",
+        "Zip": "W1D 2JF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:30 - 21:00 \nSaturday: 09:00 - 21:00\nSunday: 12:30 - 18:30",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.430782, 56.393336]
+    },
+    "properties": {
+        "StoreId": "83",
+        "Name": "Perth",
+        "Address": "Matalan - Victoria Street\n",
+        "City": "Perth",
+        "CountryCode": "GB",
+        "Zip": "PH2 8JT",
+        "Email": "",
+        "Hours": "Monday - Wednesday  09:00 - 18:00\nThursday - Friday 09.00 - 19.00\nSaturday: 09:00 – 18:00\nSunday: 10:30 – 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.258603, 52.592513]
+    },
+    "properties": {
+        "StoreId": "196",
+        "Name": "Peterborough",
+        "Address": "Matalan - Unit 2 Maskew Avenue\n\n",
+        "City": "Peterborough",
+        "CountryCode": "GB",
+        "Zip": "PE1 2HS",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-4.15157, 50.410666]
+    },
+    "properties": {
+        "StoreId": "109",
+        "Name": "Plymouth",
+        "Address": "Matalan - Transit Way\n\n",
+        "City": "Plymouth",
+        "CountryCode": "GB",
+        "Zip": "PL5 3TW",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 08:30 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.92761, 50.756576]
+    },
+    "properties": {
+        "StoreId": "24",
+        "Name": "Poole",
+        "Address": "Matalan - Units 2-3 Turbary Ret Pk\nRingwood Road\n",
+        "City": "Poole",
+        "CountryCode": "GB",
+        "Zip": "BH11 8LL",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.136849, 57.063614]
+    },
+    "properties": {
+        "StoreId": "173",
+        "Name": "Portlethen",
+        "Address": "Matalan - Unit 2\n2 Muirend Court\n",
+        "City": "Portlethen",
+        "CountryCode": "GB",
+        "Zip": "AB12 4XP",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 18:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.089123, 50.79879]
+    },
+    "properties": {
+        "StoreId": "48",
+        "Name": "Portsmouth",
+        "Address": "Matalan - Station Street\n\n",
+        "City": "Portsmouth",
+        "CountryCode": "GB",
+        "Zip": "PO1 1BE",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.671655, 53.724579]
+    },
+    "properties": {
+        "StoreId": "2",
+        "Name": "Preston",
+        "Address": "Matalan - Holme Road\n\n",
+        "City": "Preston",
+        "CountryCode": "GB",
+        "Zip": "PR5 6BP",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.976497, 51.444398]
+    },
+    "properties": {
+        "StoreId": "21",
+        "Name": "Reading",
+        "Address": "Matalan - Rose Kiln Lane\n\n",
+        "City": "Reading",
+        "CountryCode": "GB",
+        "Zip": "RG2 0SN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.935536, 52.299845]
+    },
+    "properties": {
+        "StoreId": "152",
+        "Name": "Redditch",
+        "Address": "Matalan - Jinnah Road\nTunnel Drive\n",
+        "City": "Redditch",
+        "CountryCode": "GB",
+        "Zip": "B98 7ER",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.48564, 53.318738]
+    },
+    "properties": {
+        "StoreId": "137",
+        "Name": "Rhyl",
+        "Address": "Matalan - Greenfield Place\n\n",
+        "City": "Rhyl",
+        "CountryCode": "GB",
+        "Zip": "LL18 2BP",
+        "Email": "",
+        "Hours": "Monday -  Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.151551, 53.613014]
+    },
+    "properties": {
+        "StoreId": "110",
+        "Name": "Rochdale",
+        "Address": "Matalan - Central Retail Park\nOldham Road\n",
+        "City": "Rochdale",
+        "CountryCode": "GB",
+        "Zip": "OL11 1DZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.176738, 51.581831]
+    },
+    "properties": {
+        "StoreId": "218",
+        "Name": "Romford",
+        "Address": "Matalan - 117 North Street\nRomford\n",
+        "City": "Greater London",
+        "CountryCode": "GB",
+        "Zip": "RM1 1ES",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
+    },
+    "properties": {
+        "StoreId": "236",
+        "Name": "Rotherham ",
+        "Address": "Unit 14\nStadium Way\nRotherham\nParkgate\nSouth Yorkshire",
+        "City": "Rotherham",
+        "CountryCode": "GB",
+        "Zip": "S60 1TG",
+        "Email": "",
+        "Hours": "#N/A",
+        "Phone": "0333 004 4444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "False",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.259182, 52.385227]
+    },
+    "properties": {
+        "StoreId": "228",
+        "Name": "Rugby",
+        "Address": "Unit L2\t\nJunction One Retail Park\nLeicester Road\n\t\t\t\n\t\t\t",
+        "City": "Rugby",
+        "CountryCode": "GB",
+        "Zip": "CV21 1RW",
+        "Email": "",
+        "Hours": "Monday -  Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Retail",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.780121, 51.062669]
+    },
+    "properties": {
+        "StoreId": "115",
+        "Name": "Salisbury",
+        "Address": "Matalan - Southampton Road\n\n",
+        "City": "Salisbury",
+        "CountryCode": "GB",
+        "Zip": "SP1 2LE",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.399875, 54.283525]
+    },
+    "properties": {
+        "StoreId": "183",
+        "Name": "Scarborough",
+        "Address": "Matalan - 18-46 St Thomas St\nNorth St\n",
+        "City": "Scarborough",
+        "CountryCode": "GB",
+        "Zip": "YO11 1DY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 18:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.677838, 53.60823]
+    },
+    "properties": {
+        "StoreId": "26",
+        "Name": "Scunthorpe",
+        "Address": "Matalan - Unit 3\nSkippingdale Retail Park\n",
+        "City": "Scunthorpe",
+        "CountryCode": "GB",
+        "Zip": "DN15 8NN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.963348, 53.485411]
+    },
+    "properties": {
+        "StoreId": "13",
+        "Name": "Sefton",
+        "Address": "Matalan - Switch Island Leisure  Pk\nDunnings Bridge Rd\n",
+        "City": "Sefton",
+        "CountryCode": "GB",
+        "Zip": "L30 6TQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "17",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.47753, 53.356072]
+    },
+    "properties": {
+        "StoreId": "61",
+        "Name": "Sheffield",
+        "Address": "Matalan - Unit 1 Heeley Ind Pk\nChesterfield Road\n",
+        "City": "Sheffield",
+        "CountryCode": "GB",
+        "Zip": "S8 0RG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.443382, 53.384188]
+    },
+    "properties": {
+        "StoreId": "139",
+        "Name": "Sheffield Parkway",
+        "Address": "Matalan - Unit 2 Cricket Inn Road\nParkway\n",
+        "City": "Sheffield",
+        "CountryCode": "GB",
+        "Zip": "S2 5AU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.730722, 52.737582]
+    },
+    "properties": {
+        "StoreId": "84",
+        "Name": "Shrewsbury",
+        "Address": "Matalan - Harlescott Retail Park\nBrixton Way\n",
+        "City": "Shrewsbury",
+        "CountryCode": "GB",
+        "Zip": "SY1 3AZ",
+        "Email": "",
+        "Hours": "Monday -  Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.623201, 51.515284]
+    },
+    "properties": {
+        "StoreId": "57",
+        "Name": "Slough",
+        "Address": "Matalan - 217 Bath Road\n\n",
+        "City": "Slough",
+        "CountryCode": "GB",
+        "Zip": "SL1 4AA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 21:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.961669, 52.48779]
+    },
+    "properties": {
+        "StoreId": "187",
+        "Name": "Smethwick",
+        "Address": "Matalan - Windmill Retail Centre\nLime Grove\nWindmill Lane",
+        "City": "Smethwick",
+        "CountryCode": "GB",
+        "Zip": "B66 3ER",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.3594089, 51.5063835]
+    },
+    "properties": {
+        "StoreId": "82",
+        "Name": "Southall",
+        "Address": "Matalan - Great Western Retail Park\nArmstrong Way off Windmill Lane\n",
+        "City": "Southall",
+        "CountryCode": "GB",
+        "Zip": "UB2 4SD",
+        "Email": "",
+        "Hours": "Monday - Friday: 10:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.717471, 51.545289]
+    },
+    "properties": {
+        "StoreId": "41",
+        "Name": "Southend",
+        "Address": "Matalan - The Greyhound Retail Park\nSutton Road\n",
+        "City": "Southend",
+        "CountryCode": "GB",
+        "Zip": "SS2 5PY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.011739, 53.653291]
+    },
+    "properties": {
+        "StoreId": "145",
+        "Name": "Southport",
+        "Address": "Matalan - Ocean Plaza\nMarine Drive\n",
+        "City": "Southport",
+        "CountryCode": "GB",
+        "Zip": "PR8 1RY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: Browsing Time: 10:30 \nStore Opens: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.341327, 51.74282]
+    },
+    "properties": {
+        "StoreId": "133",
+        "Name": "St Albans",
+        "Address": "Matalan - Unit 1 St Albans Ret Pk\nGriffiths Way\n",
+        "City": "St Albans",
+        "CountryCode": "GB",
+        "Zip": "AL1 2RJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.728738, 53.450421]
+    },
+    "properties": {
+        "StoreId": "75",
+        "Name": "St Helens",
+        "Address": "Matalan - 2 Watts Clist Way\nTodd Road\n",
+        "City": "St Helens",
+        "CountryCode": "GB",
+        "Zip": "WA9 1JL",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.101187, 52.796025]
+    },
+    "properties": {
+        "StoreId": "7",
+        "Name": "Stafford",
+        "Address": "Matalan - 5-6  Queensville Ret Pk\nSilkmore Lane\n",
+        "City": "Stafford",
+        "CountryCode": "GB",
+        "Zip": "ST17 4SU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.508816, 51.432473]
+    },
+    "properties": {
+        "StoreId": "151",
+        "Name": "Staines",
+        "Address": "Matalan - Unit 21 \nThe Elmsleigh Centre\n",
+        "City": "Staines",
+        "CountryCode": "GB",
+        "Zip": "TW18 4QB",
+        "Email": "",
+        "Hours": "Monday - Friday: 08:30 - 18:30\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.808922, 52.486949]
+    },
+    "properties": {
+        "StoreId": "56",
+        "Name": "Stechford",
+        "Address": "Matalan - Unit 2 Flaxley Parkway\nStation Road\nStechford",
+        "City": "Birmingham",
+        "CountryCode": "GB",
+        "Zip": "B33 9AN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.203041, 51.901434]
+    },
+    "properties": {
+        "StoreId": "34",
+        "Name": "Stevenage",
+        "Address": "Matalan - Units  B  C   Danestrete\n\n",
+        "City": "Stevenage",
+        "CountryCode": "GB",
+        "Zip": "SG1 1XB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.154292, 53.412065]
+    },
+    "properties": {
+        "StoreId": "140",
+        "Name": "Stockport",
+        "Address": "Matalan - Millgate\n\n",
+        "City": "Stockport",
+        "CountryCode": "GB",
+        "Zip": "SK1 2LX",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.312678, 54.558284]
+    },
+    "properties": {
+        "StoreId": "98",
+        "Name": "Stockton",
+        "Address": "Matalan - Bridge Road Retai\nl Park Parkfield Road\n",
+        "City": "Stockton-on-Tees",
+        "CountryCode": "GB",
+        "Zip": "TS18 3AY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 08:30 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.208382, 53.02952]
+    },
+    "properties": {
+        "StoreId": "6",
+        "Name": "Stoke",
+        "Address": "Matalan - Wolstanton Retail Park\nWolstanton\n",
+        "City": "Stoke-on-Trent",
+        "CountryCode": "GB",
+        "Zip": "ST5 0AY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.711724, 52.200588]
+    },
+    "properties": {
+        "StoreId": "9",
+        "Name": "Stratford",
+        "Address": "Matalan - Unit E Maybird Centre\nBirmingham Road\n",
+        "City": "Stratford-Upon-Avon",
+        "CountryCode": "GB",
+        "Zip": "CV37 0HZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.493773, 51.393899]
+    },
+    "properties": {
+        "StoreId": "101",
+        "Name": "Strood",
+        "Address": "Matalan - Strood Retail PK\nCommercial Road\n",
+        "City": "Strood",
+        "CountryCode": "GB",
+        "Zip": "ME2 2AD",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 09:30 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.430273, 54.918182]
+    },
+    "properties": {
+        "StoreId": "136",
+        "Name": "Sunderland",
+        "Address": "Matalan - Pallions Retail Park\nWoodbine Terrace\n",
+        "City": "Sunderland",
+        "CountryCode": "GB",
+        "Zip": "SR4 6TY",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.430701, 54.918362]
+    },
+    "properties": {
+        "StoreId": "209",
+        "Name": "Sunderland Clearance Store",
+        "Address": "Matalan - Unit 1 Hylton Riverside Retail Park\n\n",
+        "City": "Sunderland",
+        "CountryCode": "GB",
+        "Zip": "SR5 3XG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 18:00\nSaturday: 09:00 - 18:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Clearance",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.193559, 51.368143]
+    },
+    "properties": {
+        "StoreId": "62",
+        "Name": "Sutton",
+        "Address": "Matalan - 268/278 High Street\n\n",
+        "City": "Sutton",
+        "CountryCode": "GB",
+        "Zip": "SM1 1PG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.920203, 51.665497]
+    },
+    "properties": {
+        "StoreId": "17",
+        "Name": "Swansea",
+        "Address": "Matalan - Foundry Road\nMorriston\n",
+        "City": "Swansea",
+        "CountryCode": "GB",
+        "Zip": "SA6 8DU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.961749, 51.635635]
+    },
+    "properties": {
+        "StoreId": "99",
+        "Name": "Swansea Cwmdu",
+        "Address": "Matalan - Carmarthen Road\nCwmdu Industrial Estate\n",
+        "City": "Swansea",
+        "CountryCode": "GB",
+        "Zip": "SA5 8LJ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.754209, 51.572666]
+    },
+    "properties": {
+        "StoreId": "168",
+        "Name": "Swindon",
+        "Address": "Matalan - Greenbridge Retail Park\nStratton Road\n",
+        "City": "Swindon",
+        "CountryCode": "GB",
+        "Zip": "SN3 3SG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.338926, 53.514339]
+    },
+    "properties": {
+        "StoreId": "23",
+        "Name": "Swinton",
+        "Address": "Matalan - Westover Street\noff Station Road\n",
+        "City": "Manchester",
+        "CountryCode": "GB",
+        "Zip": "M27 6GF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.702758, 52.626732]
+    },
+    "properties": {
+        "StoreId": "16",
+        "Name": "Tamworth",
+        "Address": "Matalan - Unit 7 Ventura Shop Cntr\nVentura Road\n",
+        "City": "Tamworth",
+        "CountryCode": "GB",
+        "Zip": "B78 3HB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19.00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.122037, 51.025553]
+    },
+    "properties": {
+        "StoreId": "185",
+        "Name": "Taunton",
+        "Address": "Matalan - Bindon Road\n\n",
+        "City": "Taunton",
+        "CountryCode": "GB",
+        "Zip": "TA2 6AA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.491271, 52.691506]
+    },
+    "properties": {
+        "StoreId": "42",
+        "Name": "Telford",
+        "Address": "Matalan - Unit J\nThe Wrekin Retail Park\n",
+        "City": "Telford",
+        "CountryCode": "GB",
+        "Zip": "TF1 2DE",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [1.397606, 51.360652]
+    },
+    "properties": {
+        "StoreId": "77",
+        "Name": "Thanet",
+        "Address": "Matalan - East Kent Retail Park\nWestwood Road\nBroadstairs",
+        "City": "Thanet",
+        "CountryCode": "GB",
+        "Zip": "CT10 2RQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.209108, 51.302995]
+    },
+    "properties": {
+        "StoreId": "212",
+        "Name": "Trowbridge",
+        "Address": "Matalan - Unit 1a Trowbridge Ret Pk\nBradley Road\n",
+        "City": "Trowbridge",
+        "CountryCode": "GB",
+        "Zip": "BA14 0RQ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-5.124494, 50.26403]
+    },
+    "properties": {
+        "StoreId": "138",
+        "Name": "Truro",
+        "Address": "Matalan - Leverton Place Ret Pk\nChacewater\n",
+        "City": "Truro",
+        "CountryCode": "GB",
+        "Zip": "TR4 8GA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.207634, 53.056935]
+    },
+    "properties": {
+        "StoreId": "169",
+        "Name": "Tunstall",
+        "Address": "Matalan - Woodland Street\nScotia Road\n",
+        "City": "Stoke-on-Trent",
+        "CountryCode": "GB",
+        "Zip": "ST6 6AN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.497443, 53.677859]
+    },
+    "properties": {
+        "StoreId": "44",
+        "Name": "Wakefield",
+        "Address": "Matalan - Ings Road Retail Park\nIngs Road\n",
+        "City": "Wakefield",
+        "CountryCode": "GB",
+        "Zip": "WF1 1RN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.002127, 52.595932]
+    },
+    "properties": {
+        "StoreId": "105",
+        "Name": "Walsall North",
+        "Address": "Matalan - Walsall Retail Park\nReedswoods Way\n",
+        "City": "Walsall ",
+        "CountryCode": "GB",
+        "Zip": "WS2 8XA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.99193716, 52.56637327]
+    },
+    "properties": {
+        "StoreId": "38",
+        "Name": "Walsall South",
+        "Address": "Matalan - Unit 9  Broadwalk  Ret Pk\nBescot Crescent\n",
+        "City": "Walsall",
+        "CountryCode": "GB",
+        "Zip": "WS1 4SB",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "West Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.59433, 53.399276]
+    },
+    "properties": {
+        "StoreId": "31",
+        "Name": "Warrington",
+        "Address": "Matalan - Winwick Road\nKerfoot Street\n",
+        "City": "Warrington",
+        "CountryCode": "GB",
+        "Zip": "WA2 8NU",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.530113, 54.903402]
+    },
+    "properties": {
+        "StoreId": "171",
+        "Name": "Washington",
+        "Address": "Matalan - The Galleries Retail Park\n\n",
+        "City": "Washington",
+        "CountryCode": "GB",
+        "Zip": "NE38 7RW",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 08:30 - 20:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.033392, 50.880933]
+    },
+    "properties": {
+        "StoreId": "129",
+        "Name": "Waterlooville",
+        "Address": "Matalan - Unit 6 Wellinton Ret Pk\nHambledon Road\n",
+        "City": "Waterlooville",
+        "CountryCode": "GB",
+        "Zip": "PO7 7FG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 16:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.689647, 52.302267]
+    },
+    "properties": {
+        "StoreId": "91",
+        "Name": "Wellingborough",
+        "Address": "Matalan - 31-34 Victoria Road\n\n",
+        "City": "Wellingborough",
+        "CountryCode": "GB",
+        "Zip": "NN8 1HH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [0.271979, 51.484475]
+    },
+    "properties": {
+        "StoreId": "8",
+        "Name": "West Thurrock",
+        "Address": "Matalan - Unit 4B The Tunnel Estate\nWeston Avenue\n",
+        "City": "West Thurrock",
+        "CountryCode": "GB",
+        "Zip": "RM20 3HH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South East"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.914125, 51.352546]
+    },
+    "properties": {
+        "StoreId": "80",
+        "Name": "Weston Supermare",
+        "Address": "Matalan - Summer Lane\nWorle\n",
+        "City": "Weston Super-Mare",
+        "CountryCode": "GB",
+        "Zip": "BS24 7AY",
+        "Email": "",
+        "Hours": "Monday - Friday: 08:00 - 20:00\nSaturday: 08:00 - 20:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.4581, 50.617182]
+    },
+    "properties": {
+        "StoreId": "64",
+        "Name": "Weymouth",
+        "Address": "Matalan - Unit 2 Jubilee Ret Pk\nRadipole Drive\n",
+        "City": "Weymouth",
+        "CountryCode": "GB",
+        "Zip": "DT4 7BG",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.651654, 53.543764]
+    },
+    "properties": {
+        "StoreId": "52",
+        "Name": "Wigan",
+        "Address": "Matalan - 35 Loire Drive\nRobin Retail Park\n",
+        "City": "Wigan",
+        "CountryCode": "GB",
+        "Zip": "WN5 0UH",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.947433, 55.775909]
+    },
+    "properties": {
+        "StoreId": "4",
+        "Name": "Wishaw",
+        "Address": "Matalan - Unit 5 Caledonian Centre\n337 Glasgow Rd\n",
+        "City": "Wishaw",
+        "CountryCode": "GB",
+        "Zip": "ML2 7SN",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 19:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 18.00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Scotland"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-0.104977, 51.593117]
+    },
+    "properties": {
+        "StoreId": "208",
+        "Name": "Wood Green (Clearance)",
+        "Address": "Matalan - Lymington Avenue\n\n",
+        "City": "Wood Green",
+        "CountryCode": "GB",
+        "Zip": "N22 6JA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 18.00\nSaturday: 09:00 - 18:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Clearance",
+        "CategoryNames": "",
+        "Region": "London"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-3.561772, 54.636418]
+    },
+    "properties": {
+        "StoreId": "18",
+        "Name": "Workington",
+        "Address": "Matalan - Plot 12 Derwent House\nSolway Road\n",
+        "City": "Workington",
+        "CountryCode": "GB",
+        "Zip": "CA14 3YA",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 18:00\nSunday: 10:00 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "North West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.121441, 53.307589]
+    },
+    "properties": {
+        "StoreId": "134",
+        "Name": "Worksop",
+        "Address": "Matalan - 16 Eastgate/Bridge Street\n\n",
+        "City": "Worksop",
+        "CountryCode": "GB",
+        "Zip": "S80 1RF",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "East Midlands"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.990333, 53.043714]
+    },
+    "properties": {
+        "StoreId": "86",
+        "Name": "Wrexham",
+        "Address": "Matalan - Unit 1Mount Street Ret Pk\nMount Street\n",
+        "City": "Wrexham",
+        "CountryCode": "GB",
+        "Zip": "LL13 8DW",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Wales"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-2.605925, 50.940471]
+    },
+    "properties": {
+        "StoreId": "81",
+        "Name": "Yeovil",
+        "Address": "Matalan - The Peel Centre\nBabylon Hill\n",
+        "City": "Yeovil",
+        "CountryCode": "GB",
+        "Zip": "BA21 5BT",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 10:30 - 16:30\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "0",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "South West"
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-1.097897, 53.993983]
+    },
+    "properties": {
+        "StoreId": "11",
+        "Name": "York",
+        "Address": "Matalan - Units 10  11\nClifton Moore Centre\n",
+        "City": "York",
+        "CountryCode": "GB",
+        "Zip": "YO30 4XZ",
+        "Email": "",
+        "Hours": "Monday - Friday: 09:00 - 20:00 \nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+        "Phone": "0333 0044444",
+        "Fax": "",
+        "Url": "",
+
+        "ZoomLevel": "15",
+        "Active": "True",
+        "Comments": "",
+        "Description": "",
+        "StoreTypes": "Boutique",
+        "CategoryNames": "",
+        "Region": "Yorkshire and the Humber"
+    }
+}]

@@ -18,6 +18,11 @@
     $('.signup-success').show();
   });
 
+  $('body').on('click', '.find-store', function() {
+    $('.o-map-conatiner').toggle();
+  });
+
+
   $('form#email-signup').submit(function(e){
     e.preventDefault();
     $(this).hide();
