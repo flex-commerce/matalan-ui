@@ -5682,20 +5682,24 @@ $('body').on('click', '.find-store', function() {
 
             // Each marker on the map.
             var popup = '<h3>Matalan</h3><div>' + prop.city;
-            var detailsRow = listings.appendChild(document.createElement('div'));
+            var wrapper = listings.appendChild(document.createElement('div'));
+            wrapper.className = 'listings-wrapper';
+
+            var link = wrapper.appendChild(document.createElement('a'));
+            link.href = '#';
+
+            var detailsRow = link.appendChild(document.createElement('div'));
             detailsRow.className = "row item";
 
             var listing = detailsRow.appendChild(document.createElement('div'));
             listing.className = 'col-12@xs col-6@lg u-pad-r-0';
 
-            var link = listing.appendChild(document.createElement('a'));
-            link.href = '#';
-            link.className = 'title';
 
-            link.innerHTML = prop.city;
+
+            listing.innerHTML = prop.city;
             if (prop.address) {
-                link.innerHTML += '<br /><small class="quiet">' + prop.address + '</small>';
-                link.innerHTML += '<br /><small class="quiet">' + prop.postcode + '</small>';
+                listing.innerHTML += '<br /><small class="quiet">' + prop.address + '</small>';
+                listing.innerHTML += '<br /><small class="quiet">' + prop.postcode + '</small>';
                 popup += '<br /><small class="quiet">' + prop.address + '</small>';
             }
 
@@ -5716,8 +5720,8 @@ $('body').on('click', '.find-store', function() {
                 opening.innerHTML += prop.hours;
             }
 
-            link.onclick = function() {
-                setActive(detailsRow);
+            listing.onclick = function() {
+                setActive(wrapper);
 
                 // When a menu item is clicked, animate the map to center
                 // its associated locale and open its popup.
@@ -5732,7 +5736,7 @@ $('body').on('click', '.find-store', function() {
                 map.panTo(locale.getLatLng());
 
                 // 2. Set active the markers associated listing.
-                setActive(detailsRow);
+                setActive(wrapper);
             });
 
             popup += '</div>';

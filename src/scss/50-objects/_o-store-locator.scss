@@ -2,8 +2,15 @@
       position: relative;
       display: block;
       height: 600px;
-      padding-right: 25%;
-      margin-right: -25%;
+      @include mq($until: md) {
+        padding-right: 25%;
+        margin-right: -25%;
+      }
+
+      @include mq($from: lg) {
+        padding-right: 50%;
+        margin-right: -50%;
+      }
   }
 
   .locations {
@@ -20,6 +27,17 @@
       width: 100%;
   }
 
+  .listings-wrapper {
+    padding-left:30px;
+    display: block;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+  }
+
+  .listings-wrapper a:hover {
+    color: none;
+  }
+
   .listings {
 
       p {
@@ -27,19 +45,21 @@
       }
   }
 
-  .listings .item {
-      display: block;
-      border-bottom: 1px solid #eee;
-      text-decoration: none;
+  .listings-wrapper:before {
+    font-family: flex-icons;
+    content: $icon-menu-storefinder;
+    position: absolute;
+    left: 25px;
+    color: $primary-color;
   }
 
-  .listings .item:last-child {
+  .listings .listings-wrapper:last-child {
       border-bottom: none;
   }
 
   .listings .item .title {
       display: block;
-      color: $primary-color;
+
       font-weight: 700;
   }
 
@@ -47,12 +67,8 @@
       font-weight: 400;
   }
 
-  .listings .item.active .title,
-  .listings .item .title:hover {
-      color: $primary-color-hover;
-  }
 
-  .listings .item.active {
+  .listings .listings-wrapper.active {
       background-color: #f8f8f8;
   }
 
