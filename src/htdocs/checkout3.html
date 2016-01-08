@@ -6,51 +6,50 @@
 </head>
 
 <body>
-    <div class="container o-checkout__container">
+    <div class="hidden@md-down">
         {{> partials/header-checkout }}
+    </div>
+    <div class="hidden@lg-up">
+        {{> parcels/header }}
+    </div>
+    <div class="container o-checkout__container">
         <div class="row">
             <div class="col-12@xs">
                 <div class="u-mar-v-large">
                     {{> partials/progress-checkout-3 }}
                 </div>
                 <div class="row">
-                  <div class="o-checkout__detail col-12@xs col-8@md">
-                      <form action="">
-                          <fieldset class="u-pad-v-medium u-border2-t completed">
-                              <div class="o-checkout__title u-font-upper">1. Billing Address<i class="icon icon-plus icon--vertical-right"></i></div>
-                          </fieldset>
-                          <fieldset class="u-pad-v-medium u-border2-t completed">
-                              <div class="o-checkout__title u-font-upper">2. Delivery Address<i class="icon icon-plus icon--vertical-right"></i></div>
-                          </fieldset>
-                          <fieldset class="u-pad-v-medium u-border2-t active">
-                              <div class="o-checkout__title u-font-upper">3. Delivery Method<i class="icon icon-minus icon--vertical-right"></i></div>
-                              <div class="o-checkout__content u-mar-t-small">
-                                  Please choose your preferred delivery address
-                                  <div class="o-form__row">
-                                      <div class="o-form-input__contain o-option__block auto-column-2">
-                                          <label class="o-form__label-option">
-                                              <input type="radio" name="foo" value="Red" checked>
-                                              <span></span>
-                                              Standard (£3.95)
-                                          </label>
-                                          <label class="o-form__label-option">
-                                              <input type="radio" name="foo" value="Red" checked>
-                                              <span></span>
-                                              Next Day (£4.95)
-                                          </label>
-                                      </div>
-                                  </div>
-                                  <button type="submit" class="c-btn c-btn-secondary__alt c-btn-block">Continue</button>
-                              </div>
-                          </fieldset>
-                      </form>
-                  </div>
-                  <div class="col-4@md hidden@sm-down">
-                      <div class="u-cf">
-                          <h5 class="u-font-upper u-fl">Shopping Bag</h5>
-                      </div>
-                      {{> partials/minibag-contents }}
-                  </div>
+                    <div class="o-checkout__detail col-12@xs">
+                        <form action="">
+                            <fieldset class="u-pad-v-medium u-border2-t completed">
+                                <div class="o-checkout__title u-font-upper">1. Billing Address<i class="icon icon-plus icon--vertical-right"></i></div>
+                            </fieldset>
+                            <fieldset class="u-pad-v-medium u-border2-t completed">
+                                <div class="o-checkout__title u-font-upper">2. Delivery Address<i class="icon icon-plus icon--vertical-right"></i></div>
+                            </fieldset>
+                            <fieldset class="u-pad-v-medium u-border2-t active">
+                                <div class="o-checkout__title u-font-upper">3. Delivery Method<i class="icon icon-minus icon--vertical-right"></i></div>
+                                <div class="o-checkout__content u-mar-t-small">
+                                    Please choose your preferred delivery address
+                                    <div class="o-form__row">
+                                        <div class="o-form-input__contain o-option__block auto-column-2">
+                                            <label class="o-form__label-option">
+                                                <input type="radio" name="foo" value="Red" checked>
+                                                <span></span>
+                                                Standard (£3.95)
+                                            </label>
+                                            <label class="o-form__label-option">
+                                                <input type="radio" name="foo" value="Red" checked>
+                                                <span></span>
+                                                Next Day (£4.95)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="c-btn c-btn-secondary__alt c-btn-block">Continue</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

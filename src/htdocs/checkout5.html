@@ -30,6 +30,37 @@
                     </div>
                 </div>
                 <div class="row">
+                  <div class="col-6@xs u-mar-t-medium">
+                    <h4>Create Account</h4>
+                    <form action="" class="o-form--wide span-wide-12">
+
+                      <div class="o-form__row">
+                        <div class="o-form__label-contain">
+                          <label class="o-form__label-primary">Confirm email</label>
+                        </div>
+                        <div class="o-form__input-contain">
+                          <input type="text" class="o-input o-input--textual" placeholder="Email address" />
+                        </div>
+                      </div>
+                      <div class="o-form__row">
+                        <div class="o-form__label-contain">
+                          <label class="o-form__label-primary">Password</label>
+                        </div>
+                        <div class="o-form__input-contain">
+                          <input type="text" class="o-input o-input--textual" placeholder="Password" />
+                        </div>
+                      </div>
+                      <div class="o-form__row">
+                        <div class="o-form__label-contain">
+                          <label class="o-form__label-primary">Confirm password</label>
+                        </div>
+                        <div class="o-form__input-contain">
+                          <input type="text" class="o-input o-input--textual" placeholder="Confirm Password" />
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
                     <div class="col-12@xs u-mar-v-large">
                         <div class="auto-column-2 u-pad-medium u-border2">
                             <div class="auto-column--nobreak">
@@ -98,6 +129,11 @@
         </div>
     </div>
     {{> parcels/footer }} {{> partials/js-footer}}
+    <script>
+        window.onbeforeunload = function(){
+          return "Are you sure you don't want to create an account?";
+        };
+    </script>
 </body>
 
 </html>

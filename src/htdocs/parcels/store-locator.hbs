@@ -1,26 +1,15 @@
-<style>
-  #map { position:absolute; top:0; bottom:0; width:100%; display:block; }
-</style>
 
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' />
 <div class="row">
-  <div class="col-12@xs">
-      <h4>Store Finder</h4>
-
+  <div class="col-12@xs col-5@md locations">
+    <h4 class="u-mar-t-medium">Postcode or Data result</h4>
+    <h5 class="u-border2-b u-border2-t u-mar-v-medium u-pad-v-small">Closest 20 Stores</h5>
+    <div id='listings' class='listings'></div>
   </div>
-  <div class="col-3@lg">
-    dasdad
-  </div>
-  <div class="col-9@lg">
-    <div id="map">
+  <div class="col-12@xs col-7@md">
+    <div class="map-wrapper">
+      <div id='map' class='map'></div>
     </div>
   </div>
 </div>
-
-<script>
-
-  L.mapbox.accessToken = 'pk.eyJ1IjoiYW5keWpvbmVzIiwiYSI6ImNpajJ5cWV0dzAwMnJ2YmtuMjRtMDQ5MTAifQ.I5VhvTgZGyXIQqaMI0KwPg';
-  var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([40, -74.50], 9);
-
-    </script>
 

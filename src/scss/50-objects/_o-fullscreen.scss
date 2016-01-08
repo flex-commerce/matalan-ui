@@ -36,6 +36,11 @@
         background-size: cover;
         height: auto;
     }
+    &.store-hero {
+        background: url('../img/matalan-store.jpg') no-repeat left center;
+        background-size: cover;
+        height: auto;
+    }
     .row {
         height: 100%;
     }
@@ -45,6 +50,7 @@
     .o-fullscreen-container__box {
         @include center(x);
         padding: 20px;
+        margin: 20px 0;
         top: 20%;
         opacity: 0.9;
         background-color: $white;

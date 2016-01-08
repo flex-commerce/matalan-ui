@@ -129,6 +129,12 @@ $minibag-desktop-width: 353px;
   background: $white;
 }
 
+.o-minibag--list-actions {
+  img {
+    cursor: pointer;
+  }
+}
+
 // misc rules end ======================================
 
 // separators, borders, and padding begin ======================================

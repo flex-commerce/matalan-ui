@@ -18,6 +18,7 @@
     $('.signup-success').show();
   });
 
+
   $('form#email-signup').submit(function(e){
     e.preventDefault();
     $(this).hide();

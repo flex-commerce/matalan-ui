@@ -63,6 +63,12 @@
       "extensions": ["ico"]
     },
 
+    "data": {
+      "src": "data",
+      "dest": "data",
+      "extensions": ["json"]
+    },
+
     "fonts": {
       "src": "fonts",
       "dest": "fonts",
