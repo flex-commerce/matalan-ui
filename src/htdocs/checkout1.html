@@ -6,8 +6,14 @@
 </head>
 
 <body>
+
+    <div class="hidden@md-down">
+      {{> partials/header-checkout }}
+    </div>
+    <div class="hidden@lg-up">
+      {{> parcels/header }}
+    </div>
     <div class="container o-checkout__container">
-        {{> partials/header-checkout }}
         <div class="row">
             <div class="col-12@xs">
                 <div class="u-mar-v-large">
