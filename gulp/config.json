@@ -57,6 +57,12 @@
       "extensions": ["jpg", "png", "svg", "gif"]
     },
 
+    "imageAssets": {
+      "src": "img-assets",
+      "dest": "img-assets",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
     "favicon": {
       "src": "favicon",
       "dest": "./",

@@ -1,7 +1,7 @@
 [{
   "sectionId": "1",
   "sectionTitle": "Quarter One",
-  "sectionImage": "img/quarter-1.jpg",
+  "sectionImage": "img-assets/quarter-1.jpg",
   "sectionItems": [
     "Item 1",
     "Item 2"
@@ -9,7 +9,7 @@
 }, {
   "sectionId": "2",
   "sectionTitle": "Quarter Two",
-  "sectionImage": "img/quarter-2.jpg",
+  "sectionImage": "img-assets/quarter-2.jpg",
   "sectionItems": [
     "Item 1",
     "Item 2"
@@ -18,7 +18,7 @@
 {
   "sectionId": "3",
   "sectionTitle": "Quarter 3",
-  "sectionImage": "img/quarter-3.jpg",
+  "sectionImage": "img-assets/quarter-3.jpg",
   "sectionItems": [
     "Item 1",
     "Item 2"
@@ -27,7 +27,7 @@
 {
   "sectionId": "4",
   "sectionTitle": "Quarter 4",
-  "sectionImage": "img/quarter-4.jpg",
+  "sectionImage": "img-assets/quarter-4.jpg",
   "sectionItems": [
     "Item 1",
     "Item 2"
@@ -36,7 +36,7 @@
 {
   "sectionId": "5",
   "sectionTitle": "Quarter Five",
-  "sectionImage": "img/quarter-5.jpg",
+  "sectionImage": "img-assets/quarter-5.jpg",
   "sectionItems": [
     "Item 1",
     "Item 2"
@@ -44,7 +44,7 @@
 }, {
   "sectionId": "6",
   "sectionTitle": "Quarter Six",
-  "sectionImage": "img/quarter-6.jpg",
+  "sectionImage": "img-assets/quarter-6.jpg",
   "sectionItems": [
     "Item 1",
     "Item 2"
@@ -53,7 +53,7 @@
 {
   "sectionId": "7",
   "sectionTitle": "Quarter Seven",
-  "sectionImage": "img/quarter-7.jpg",
+  "sectionImage": "img-assets/quarter-7.jpg",
   "sectionItems": [
     "Item 1",
     "Item 2"
@@ -62,7 +62,7 @@
 {
   "sectionId": "8",
   "sectionTitle": "Quarter Eight",
-  "sectionImage": "img/quarter-8.jpg",
+  "sectionImage": "img-assets/quarter-8.jpg",
   "sectionItems": [
     "Item 1",
     "Item 2"

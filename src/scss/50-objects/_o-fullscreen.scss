@@ -10,34 +10,34 @@
     }
     &.winter-hero {
         @include mq($from: md) {
-            background: url('../img/winter-hero.jpg') no-repeat top center;
+            background: url('../img-assets/winter-hero.jpg') no-repeat top center;
             background-size: cover;
         }
     }
     &.spring-hero {
         @include mq($from: md) {
-            background: url('../img/spring-hero.jpg') no-repeat center bottom;
+            background: url('../img-assets/spring-hero.jpg') no-repeat center bottom;
             background-size: cover;
         }
     }
     &.summer-hero {
         @include mq($from: md) {
-            background: url('../img/summer-hero.jpg') no-repeat left top;
+            background: url('../img-assets/summer-hero.jpg') no-repeat left top;
             background-size: cover;
         }
     }
     &.autumn-hero {
-        background: url('../img/autumn-hero.jpg') no-repeat right center;
+        background: url('../img-assets/autumn-hero.jpg') no-repeat right center;
         background-size: cover;
     }
 
     &.general-hero {
-        background: url('../img/healthy-lifestyle.jpg') no-repeat left center;
+        background: url('../img-assets/healthy-lifestyle.jpg') no-repeat left center;
         background-size: cover;
         height: auto;
     }
     &.store-hero {
-        background: url('../img/matalan-store.jpg') no-repeat left center;
+        background: url('../img-assets/matalan-store.jpg') no-repeat left center;
         background-size: cover;
         height: auto;
     }

@@ -2,7 +2,7 @@
   {
     "secTitle": "Christmas",
     "seclink": "#",
-    "sectionImage": "img/christmas.jpg",
+    "sectionImage": "img-assets/christmas.jpg",
 
     "categories": [{
         "catTitle": "Beanie vs Bobble",
@@ -103,7 +103,7 @@
   {
     "secTitle": "Womens",
     "seclink": "#",
-    "sectionImage": "img/womens.jpg",
+    "sectionImage": "img-assets/womens.jpg",
     "categories": [{
         "catTitle": "New Arrivals",
         "catLink": "#",
@@ -238,7 +238,7 @@
   {
     "secTitle": "Mens",
     "seclink": "#",
-    "sectionImage": "img/mens.jpg",
+    "sectionImage": "img-assets/mens.jpg",
     "categories": [{
         "catTitle": "New Arrivals",
         "catLink": "#",
@@ -337,7 +337,7 @@
   {
     "secTitle": "Girls",
     "seclink": "#",
-    "sectionImage": "img/girls.jpg",
+    "sectionImage": "img-assets/girls.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -466,7 +466,7 @@
   {
     "secTitle": "Boys",
     "seclink": "#",
-    "sectionImage": "img/boys.jpg",
+    "sectionImage": "img-assets/boys.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -586,7 +586,7 @@
   {
     "secTitle": "Homeware",
     "secLink": "#",
-    "sectionImage": "img/homeware.jpg",
+    "sectionImage": "img-assets/homeware.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -654,7 +654,7 @@
   {
     "secTitle": "Shoes",
     "secLink": "#",
-    "sectionImage": "img/Shoes.jpg",
+    "sectionImage": "img-assets/Shoes.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -715,7 +715,7 @@
   {
     "secTitle": "Made For...",
     "seclink": "#",
-    "sectionImage": "img/madefor.jpg",
+    "sectionImage": "img-assets/madefor.jpg",
     "categories": [{
       "catTitle": "Made For...",
       "catLink": "#",

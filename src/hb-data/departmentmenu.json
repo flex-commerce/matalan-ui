@@ -1,6 +1,6 @@
 [{
   "menuTitle": "Womens",
-  "menuImage": "img/womens-department.png",
+  "menuImage": "img-assets/womens-department.png",
   "menuItems": [
     "Blouses",
     "Jackets",
@@ -13,7 +13,7 @@
 },
 {
   "menuTitle": "Mens",
-  "menuImage": "img/mens-department.png",
+  "menuImage": "img-assets/mens-department.png",
   "menuItems": [
     "Suits",
     "Jeans",
@@ -25,7 +25,7 @@
   ]
 }, {
   "menuTitle": "Boys",
-  "menuImage": "img/womens-children.png",
+  "menuImage": "img-assets/womens-children.png",
   "menuItems": [
     "Pyjamas",
     "Coats",
@@ -37,7 +37,7 @@
   ]
 }, {
   "menuTitle": "Girls",
-  "menuImage": "img/girls_cat.png",
+  "menuImage": "img-assets/girls_cat.png",
   "menuItems": [
     "Pyjamas",
     "Coats",
@@ -49,7 +49,7 @@
   ]
 }, {
   "menuTitle": "Homeware",
-  "menuImage": "img/home.png",
+  "menuImage": "img-assets/home.png",
   "menuItems": [
     "Bed Sheets",
     "Duvets",

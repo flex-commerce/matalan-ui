@@ -1,7 +1,7 @@
 [{
   "sectionId": "1",
   "sectionTitle": "Mens Suits",
-  "sectionImage": "img/half-1.jpg",
+  "sectionImage": "img-assets/half-1.jpg",
   "imagePosition": "center center",
   "sectionItems": [
     "Pyjamas",
@@ -10,7 +10,7 @@
 }, {
   "sectionId": "2",
   "sectionTitle": "Snuggle Up",
-  "sectionImage": "img/half-2.jpg",
+  "sectionImage": "img-assets/half-2.jpg",
   "imagePosition": "top center",
   "sectionItems": [
     "Shop Nightware"
