@@ -9,7 +9,8 @@ module.exports = function(env) {
   var jsSrc = path.resolve(config.app.src, config.tasks.js.src)
   var jsDest = path.resolve(config.app.dest, config.tasks.js.dest)
   var publicPath = path.join(config.tasks.js.dest, '/')
-  var filenamePattern = env === 'production' ? '[name]-[hash].js' : '[name].js'
+  // var filenamePattern = env === 'production' ? '[name]-[hash].js' : '[name].js' // rev for app.js on build
+  var filenamePattern = '[name].js'
   var extensions = config.tasks.js.extensions.map(function(extension) {
     return '.' + extension
   })
