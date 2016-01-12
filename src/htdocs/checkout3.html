@@ -19,7 +19,7 @@
                     {{> partials/progress-checkout-3 }}
                 </div>
                 <div class="row">
-                    <div class="o-checkout__detail col-12@xs">
+                    <div class="o-checkout__detail col-12@xs col-8@lg">
                         <form action="">
                             <fieldset class="u-pad-v-medium u-border2-t completed">
                                 <div class="o-checkout__title u-font-upper">1. Billing Address<i class="icon icon-plus icon--vertical-right"></i></div>
@@ -32,7 +32,7 @@
                                 <div class="o-checkout__content u-mar-t-small">
                                     Please choose your preferred delivery address
                                     <div class="o-form__row">
-                                        <div class="o-form-input__contain o-option__block auto-column-2">
+                                        <div class="o-form__input-contain o-option--inline">
                                             <label class="o-form__label-option">
                                                 <input type="radio" name="foo" value="Red" checked>
                                                 <span></span>
@@ -49,6 +49,12 @@
                                 </div>
                             </fieldset>
                         </form>
+                    </div>
+                    <div class="col-4@lg hidden@md-down">
+                        <div class="u-cf">
+                            <h5 class="u-font-upper u-fl">Shopping Bag</h5>
+                        </div>
+                        {{> partials/minibag-contents }}
                     </div>
                 </div>
             </div>
