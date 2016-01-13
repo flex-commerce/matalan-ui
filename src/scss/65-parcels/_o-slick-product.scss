@@ -24,6 +24,34 @@
     transition: all 600ms ease;
   }
 
+  .slick-zoom {
+    display: none;
+  }
+
+  .slick-center .slick-zoom {
+    display: block;
+    height: 28px;
+    width: 28px;
+    line-height: 1;
+    cursor: pointer;
+    background-color: $white;
+    color: transparent;
+    top: 50%;
+    padding: 0;
+    border: none;
+    z-index: 4;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    margin-top: -10px;
+
+    &:focus {
+      outline: none;
+    }
+    i {
+      color: $dark-grey;
+    }
+  }
+
   .slick-item-next,
   .slick-item-prev {
     opacity: 0.5;
@@ -31,6 +59,7 @@
     img {
       transform: scale(0.9);
     }
+
   }
 
   .slick-item-next {
@@ -48,14 +77,12 @@
   /* Arrows */
 
   .slick-prev,
-  .slick-next,
-  .slick-zoom {
+  .slick-next {
     position: absolute;
     display: block;
     height: 30px;
     width: 30px;
     line-height: 1;
-    font-size: 0px;
     cursor: pointer;
     background-color: $white;
     color: transparent;
@@ -76,7 +103,7 @@
   .slick-next:before {
     font-size: 30px;
     line-height: 1;
-    color: $slick-arrow-color;
+    color: $dark-grey;;
     font-family: 'flex-icons';
   }
 
