@@ -40,7 +40,7 @@ require("./modules/dropdown");
 // Dropdown end
 // ===========================
 
-require("./modules/mapbox-init");
+//require("./modules/mapbox-init");
 
 
 // ===========================
@@ -203,7 +203,7 @@ var PhotoSwipe = require("./vendors/photoswipe");
 var PhotoSwipeUI_Default = require("./vendors/photoswipe-ui");
 
 $('.o-product__slider').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
