@@ -10,25 +10,7 @@
 
     <div class="search-results--inner row">
       {{#each searchresults.results.products}}
-      <div class="search-results--item u-font-ta-c u-mar-b-medium">
-        <div class="results__image">
-          <a href="{{ productLink }}"><img class="img"  src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'"></a>
-          <div data-content="{{promotionText}}" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-{{promotionPosition}}"></div>
-        </div>
-        <div class="results__detail">
-
-          <div class="u-mar-v-small">{{productTitle}}</div>
-          <div class=" u-font-wb u-mar-t-a">{{productPrice}}</div>
-          <div class="u-mar-b-small rating rating__small u-mar-v-small">
-            <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
-            <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
-            <i class="icon icon-star-fill {{ isactive productRating 2 }}"></i>
-            <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
-            <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
-          </div>
-          <a class="c-btn c-btn-tertiary--alt c-btn--small hidden@md-down u-mar-v-small">More Colours Available</a>
-        </div>
-      </div>
+        {{> partials/search-item}}
       {{/each }}
     </div>
 

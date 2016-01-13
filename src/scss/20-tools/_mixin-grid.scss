@@ -56,6 +56,10 @@ $susy: (
   max-width: $container-maxwidth;
 }
 
+body > .container {
+  padding-bottom: 60px;
+}
+
 // common styling applied to any column (class="col-*" in bootstrap)
 // /!\ you should not use this directly and see the column mixin
 %columnDefaultStyles {
