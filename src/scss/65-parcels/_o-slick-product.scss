@@ -24,11 +24,11 @@
     transition: all 600ms ease;
   }
 
-  .slick-zoom {
+  .slick-slide .slick-zoom {
     display: none;
   }
 
-  .slick-center .slick-zoom {
+  .slick-slide.slick-center .slick-zoom {
     display: block;
     height: 28px;
     width: 28px;
@@ -51,6 +51,16 @@
       color: $dark-grey;
     }
   }
+  figure {
+    margin: 0;
+    a{
+      cursor:pointer;
+      cursor:-webkit-zoom-in;
+      cursor:-moz-zoom-in;
+      cursor:zoom-in;
+    }
+  }
+
 
   .slick-item-next,
   .slick-item-prev {

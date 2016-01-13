@@ -16,8 +16,15 @@
     var parentId = $(this).data('close');
     $('#' + parentId).hide();
     $('.signup-success').show();
-  });
+  })
 
+
+
+  $(".zoom").bind("click", function(e) {
+    var ez = $('.zoom').data('elevateZoom');
+      $.fancybox(ez.getGalleryList());
+    return false; }
+    );
 
   $('form#email-signup').submit(function(e){
     e.preventDefault();
