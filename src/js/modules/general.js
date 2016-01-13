@@ -1,7 +1,6 @@
 (function ($) {
   'use strict';
 
-
   function validateEmail(email) {
     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     return re.test(email);
@@ -12,19 +11,29 @@
     $('#' + parentId).hide();
   });
 
-  $('body').on('click', '.email-signup', function() {
-    var parentId = $(this).data('close');
-    $('#' + parentId).hide();
-    $('.signup-success').show();
-  })
+  $('body').on('click', '#checkoutCreateAccount', function() {
+    $('.create-account-container').toggle();
 
-
+    window.onbeforeunload = function() {
+        return "Are you sure you don't want to create an account?";
+    };
+  });
 
   $(".zoom").bind("click", function(e) {
     var ez = $('.zoom').data('elevateZoom');
       $.fancybox(ez.getGalleryList());
-    return false; }
-    );
+    return false;
+  });
+
+  $("#termsAndConditionsAccepted").on("click", function(e) {
+    console.log('test');
+    if ($(this).is(':checked')) {
+      $('.iFrameWrapper').show();
+    }
+    else {
+      $('.iFrameWrapper').hide();
+    }
+  });
 
   $('form#email-signup').submit(function(e){
     e.preventDefault();
@@ -42,6 +51,21 @@
       window.location.href = './no-results.html';
     }
   });
+
+  $('form#createAccountForm').submit(function(e){
+    e.preventDefault();
+    // console.log($('input[name=searchTermMobile]').val());
+    // console.log($('input[name=searchTerm]').val());
+    $('.create-account-container').hide();
+    $('.account-created-container').show();
+    window.onbeforeunload = function () {
+      // blank function do nothing
+    }
+  });
+
+
+
+
 
   $('body').on('click', '.clear__filters', function() {
     $('.o-filters__inner').find('input[type=checkbox]:checked').removeAttr('checked');

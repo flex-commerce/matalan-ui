@@ -6,9 +6,8 @@
 </head>
 
 <body>
-{{> parcels/header }}
+    {{> parcels/header }}
     <div class="container o-checkout__container">
-
         <div class="row">
             <div class="col-12@xs col-12@lg">
                 <div class="row">
@@ -17,11 +16,119 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-12@xs account-created-container" style="display:none">
+                        <a id="loginButton" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr hidden@md-down">Login</a>
+                        <h4 class="u-color-pri">Your account has been created</h4>
+                        <p class="u-mar-t-medium">You are now able to login and view your order.</p>
+                    </div>
+                    <div class="col-12@xs create-account-container">
+                        <a id="checkoutCreateAccount" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr hidden@md-down">Create account</a>
+                        <h4 class="u-color-pri">Thank you for your order</h4>
+                        <p class="u-mar-t-medium">Become part of the Matalan family and be the first to hear about the latest offers, news, collections, and much more.</p>
+                    </div>
+                    <div class="col-12@xs create-account-container u-mar-b-medium" style="display:none">
+                        <h4 class="u-color-pri">Create your account</h4>
+                        <p class="u-mar-t-medium">We are delighted to have you as part of the family. Al we ask is that you fill in the missing details
+                            <span class="u-color-pri">highlighted</span> in the form below:</p>
+                        <div class="row">
+                            <form id="createAccountForm" action="#" name="createAccountForm" class="o-form o-form--default">
+                                <div class="col-6@lg">
+                                    <div class="row">
+                                        <div class="col-6@lg">
+                                            <div class="o-form__row">
+                                                <div class="o-form__label-contain">
+                                                    <label class="">First Name:*</label>
+                                                </div>
+                                                <div class="o-form__input-contain">
+                                                    <input type="text" class="o-input o-input--textual" value="John" placeholder="First name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6@lg">
+                                            <div class="o-form__row">
+                                                <div class="o-form__label-contain">
+                                                    <label class="">Last Name:*</label>
+                                                </div>
+                                                <div class="o-form__input-contain">
+                                                    <input type="text" class="o-input o-input--textual" value="Doe" placeholder="Last name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6@lg">
+                                            <div class="o-form__row">
+                                                <div class="o-form__label-contain">
+                                                    <label class="">Email Address:*</label>
+                                                </div>
+                                                <div class="o-form__input-contain">
+                                                    <input type="text" class="o-input o-input--textual" value="john.doe@gmail.com" placeholder="Email address" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6@lg">
+                                            <div class="o-form__row">
+                                                <div class="o-form__label-contain">
+                                                    <label class="">Confirm Email Address:*</label>
+                                                </div>
+                                                <div class="o-form__input-contain">
+                                                    <input type="text" class="o-input o-input--textual" value="" placeholder="Confirm email address" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6@lg">
+                                            <div class="o-form__row">
+                                                <div class="o-form__label-contain">
+                                                    <label class="">Password:*</label>
+                                                </div>
+                                                <div class="o-form__input-contain">
+                                                    <input type="text" class="o-input o-input--textual" placeholder="Password" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6@lg">
+                                            <div class="o-form__row">
+                                                <div class="o-form__label-contain">
+                                                    <label class="">Confirm Password:*</label>
+                                                </div>
+                                                <div class="o-form__input-contain">
+                                                    <input type="text" class="o-input o-input--textual" placeholder="Confirm password" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o-form__row">
+                                        <div class="o-form__label-contain">
+                                            <label class="o-form__label-primary">I would like to receive exclusive offers &amp; style advice from Matalan:</label>
+                                        </div>
+                                        <div class="o-form__input-contain o-option--inline">
+                                            <label class="o-form__label-option">
+                                                <input type="checkbox" checked>
+                                                <span class="check-holder"></span>
+                                                via post
+                                            </label>
+                                            <label class="o-form__label-option">
+                                                <input type="checkbox" checked>
+                                                <span class="check-holder"></span>
+                                                via email
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" form="createAccountForm" class="c-btn c-btn-secondary__alt c-btn-block">Create Account</button>
+                                </div>
+                            </form>
+                            <div class="col-6@lg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="row">
                     <div class="col-12@xs">
                         <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small u-fr hidden@md-down">Print Page</a>
-                        <h4 class="u-color-pri">Confirmation</h4>
-                        <p class="u-mar-t-large">Thanks you for your order</p>
-                        <p>Your order number is:
+                        <h4 class="u-color-pri">Order Confirmation</h4>
+                        <p class="u-mar-t-medium">Your order number is:
                             <strong class="u-font-upper">Order Number</strong>
                         </p>
                         <p>Email confirmation has been sent to:
@@ -29,7 +136,7 @@
                         </p>
                     </div>
                 </div>
-<!--                 <div class="row">
+                <!--                 <div class="row">
                   <div class="col-6@xs u-mar-t-medium">
                     <h4>Create Account</h4>
                     <form action="" class="o-form--wide span-wide-12">
@@ -129,11 +236,6 @@
         </div>
     </div>
     {{> parcels/footer }} {{> partials/js-footer}}
-    <script>
-        window.onbeforeunload = function(){
-          return "Are you sure you don't want to create an account?";
-        };
-    </script>
 </body>
 
 </html>

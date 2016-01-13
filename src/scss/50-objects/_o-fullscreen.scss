@@ -34,12 +34,10 @@
     &.general-hero {
         background: url('../img-assets/healthy-lifestyle.jpg') no-repeat left center;
         background-size: cover;
-        height: auto;
     }
     &.store-hero {
         background: url('../img-assets/matalan-store.jpg') no-repeat left center;
         background-size: cover;
-        height: auto;
     }
     .row {
         height: 100%;
@@ -52,16 +50,14 @@
         padding: 20px;
         margin: 20px 0;
         top: 20%;
-        opacity: 0.9;
-        background-color: $white;
+        background-color: rgba(255,255,255, 0.9);;
     }
 
     .o-fullscreen-container__box-large {
         @include center(x);
         padding: 20px;
         top: 5%;
-        opacity: 0.9;
-        background-color: $white;
+        background-color: rgba(255,255,255, 0.9);;
         margin: 20px 0;
     }
 
