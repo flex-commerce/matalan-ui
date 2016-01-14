@@ -4,7 +4,7 @@
 require('../vendors/mapbox');
 
 $('body').on('click', '.find-store', function() {
-    $('.o-map-conatiner').show();
+    $('.o-map-container').show();
     L.mapbox.accessToken = 'pk.eyJ1IjoiYW5keWpvbmVzIiwiYSI6ImNpajRkdjU1bDAwMWF2cW0zNXJ0cWJqNzMifQ.tZSGgAMou1DiYN3TUK3yEQ';
 
     var geojson = require('json!../../data/locations.json');

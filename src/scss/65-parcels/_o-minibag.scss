@@ -120,8 +120,13 @@ $minibag-desktop-width: 353px;
 
 // misc rules ======================================
 .o-minibag-contain {
-  position: relative;
-  z-index: 10;
+  // removed for modals - to test
+  // position: relative;
+  // z-index: 10;
+  // pointer-events: none;
+  .o-minibag {
+    // pointer-events: auto;
+  }
 }
 
 .o-minibag {

@@ -1,8 +1,12 @@
+// html.modal-open {
+//   padding-right: 15px;
+// }
+
 $zindex-modal: 1050;
 $zindex-modal-background: 1049;
 $modal-content-bg: #fff;
 $modal-content-border-color: rgba(0,0,0,.2);
-$modal-backdrop-bg: #8ff;
+$modal-backdrop-bg: #000;
 $modal-backdrop-opacity: 0.5;
 $modal-title-padding: 14px;
 $modal-header-border-color: #f00;
@@ -24,36 +28,63 @@ $screen-md-min: 760px;
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and shit
 
+
+.modal {
+  &.modal--offcanvas {
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+ &.modal--default {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+
+
+
+
+
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
 }
-
-// Container that the modal scrolls within
 .modal {
   display: none;
   overflow: hidden;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   z-index: $zindex-modal;
   -webkit-overflow-scrolling: touch;
-
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
-
-  // When fading in the modal, animate it to slide down
-  &.fade .modal-dialog {
-    // .translate(0, -25%);
-    // .transition-transform(~"0.3s ease-out");
-  }
-  &.in .modal-dialog {
-    // .translate(0, 0)
-  }
 }
+// Container that the modal scrolls within
+
+
+.modal--custom {
+  background: rgba(green, 0.2);
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  z-index: $zindex-modal;
+  -webkit-overflow-scrolling: touch;
+  // @include mq($until: lg) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  // }
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+}
+
+
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
@@ -63,21 +94,21 @@ $screen-md-min: 760px;
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 0 15px;
+  margin: 10px;
 }
 
 // Actual modal
 .modal-content {
   position: relative;
   background-color: $modal-content-bg;
-  // border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid $modal-content-border-color;
-  // border-radius: $border-radius-large;
-  // .box-shadow(0 3px 9px rgba(0,0,0,.5));
+  // box-shadow: 0 3px 9px rgba(0,0,0,.5);
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
 }
+
+
 
 // Modal background
 .modal-backdrop {
@@ -89,12 +120,8 @@ $screen-md-min: 760px;
   z-index: $zindex-modal-background;
   background-color: $modal-backdrop-bg;
   // Fade for backdrop
-  &.fade {
-    opacity: 0;
-  }
-  &.in {
-    opacity: $modal-backdrop-opacity;
-  }
+  &.fade { opacity: 0; }
+  &.in { opacity: $modal-backdrop-opacity; }
 }
 
 // Modal header
@@ -102,7 +129,7 @@ $screen-md-min: 760px;
 .modal-header {
   padding: $modal-title-padding;
   border-bottom: 1px solid $modal-header-border-color;
-  @include clearfix();
+  @include clearfix;
 }
 // Close icon
 .modal-header .close {
@@ -127,7 +154,7 @@ $screen-md-min: 760px;
   padding: $modal-inner-padding;
   text-align: right; // right align buttons
   border-top: 1px solid $modal-footer-border-color;
-  @include clearfix(); // clear it in case folks use .pull-* classes on buttons
+  @include clearfix;
 
   // Properly space out buttons
   .btn + .btn {
@@ -153,27 +180,50 @@ $screen-md-min: 760px;
   overflow: scroll;
 }
 
-.minibag--modal-open .o-minibag-contain {
-  display: block;
-  overflow: auto;
-}
+// Scale up the modal
+// @include mq($from: xs) {
+  // Automatically set modal's width for larger viewports
+  .modal-dialog {
+    width: $modal-md;
+    margin: 30px auto;
+    max-width: 100%;
 
+    .modal--offcanvas & {
+      margin: 0 auto 0 0;
+      // max-width: 400px;
+      height: 100%;
+    }
+  }
+  .modal-content {
 
-// // Scale up the modal
-// @media (min-width: $screen-sm-min) {
-//   // Automatically set modal's width for larger viewports
-//   .modal-dialog {
-//     width: $modal-md;
-//     margin: 30px auto;
-//   }
-//   .modal-content {
-//     // .box-shadow(0 5px 15px rgba(0,0,0,.5));
-//   }
+  }
 
-//   // Modal sizes
-//   .modal-sm { width: $modal-sm; }
+  // Modal sizes
+  // .modal-sm { width: $modal-sm; }
 // }
+
 
 // @media (min-width: $screen-md-min) {
 //   .modal-lg { width: $modal-lg; }
 // }
+
+
+  // // When fading in the modal, animate it to slide down
+  // modal {
+  //  &.fade .modal-dialog {
+  //    // translate: 0, -25%;
+  //    // transition-transform(~"0.3s ease-out");
+  //  }
+  //  &.in .modal-dialog {
+  //    // translate: 0, 0 ;
+  //  }
+  // }
+
+.modal-dialog {
+  @include mq($from: md) {
+    width: 580px;
+    height: 780px;
+    overflow: hidden;
+    max-height: calc(100% - 60px);
+  }
+}

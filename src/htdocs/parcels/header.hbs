@@ -61,14 +61,17 @@
             </div>
           </div>
 
+
+
           <div class="col-6@xs col-6@md col-3@lg u-pad-l-0 checkout-bag col-push-6@lg-up">
-            <a class="c-btn hidden@lg-up minibag-link js-minibag u-no-bord">
+            <a class="c-btn hidden@lg-up minibag-link u-no-bord" data-toggle="modal" data-target="#minibag-contain">
               <span class="o-icon-with-addon"><i class="icon icon-mini-bag"></i>
                 <span class="">{{minibag.category.collection.products.length}}</span>
               </span>
             </a>
-            <button type="button"
-              class="js-minibag c-btn c-btn-secondary__alt c-btn-block hidden@md-down u-font-upper">Checkout</button>
+            <button type="button" data-toggle="modal" data-target="#minibag-contain"
+              class="js-minibag c-btn c-btn-secondary__alt c-btn-block hidden@md-down u-font-upper"
+              >Checkout</button>
             {{> partials/minibag }}
           </div>
 
