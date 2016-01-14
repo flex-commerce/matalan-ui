@@ -1,7 +1,22 @@
 $minibag-border-color: $keyline-color;
 $minibag-desktop-width: 353px;
 
-// magic - line up with view your bag button on desktop
+.js-minibag,
+.js-minibag--view {
+  z-index: 1050;
+  position: relative;
+}
+
+@include mq($from: lg) {
+  body.modal-open {
+    .o-minibag-contain {
+      pointer-events: none;
+      > * {
+        pointer-events: auto;
+      }
+    }
+  }
+}
 
 // flexbox here to allow the inner panel to expand to max allowed size
 // flex start ======================================

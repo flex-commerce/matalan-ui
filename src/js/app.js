@@ -7,39 +7,6 @@ require("lodash");
 // ===========================
 
 
-
-// ===========================
-// Tether
-// http://github.hubspot.com/tether/
-// ===========================
-var Tether = require("tether");
-var mbTether;
-
-var tetherTarget = $('.checkout-bag');
-var tetherElement = $('.o-minibag-contain');
-
-$('#minibag-contain').on('shown.bs.modal', function (e) {
-  // for minibag click shower
-  mbTether = new Tether({
-    element: tetherElement,
-    target: tetherTarget,
-    attachment: 'top right',
-    targetAttachment: 'bottom right'
-  });
-});
-
-$('#minibag-contain').on('hidden.bs.modal', function (e) {
-  mbTether.destroy();
-});
-
-
-
-// ===========================
-// Tether end
-// ===========================
-
-
-
 window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
 
 $(document).ready(function() {
@@ -53,6 +20,47 @@ $(document).ready(function() {
 // $(window).on('resize', _.debounce(function() {
 //   console.log('isMobileOrTablet', window.isMobileOrTablet.matches) // true | false
 // }));
+
+
+
+
+// ===========================
+// Tether
+// http://github.hubspot.com/tether/
+// ===========================
+var Tether = require("tether");
+var tether;
+
+var tetherTarget = $('.checkout-bag');
+var tetherElement = $('.o-minibag-contain');
+
+$('#minibag-contain').on('shown.bs.modal', function (e) {
+
+  if (!window.isMobileOrTablet.matches) {
+    // for minibag click shower
+    tether = new Tether({
+      element: tetherElement,
+      target: tetherTarget,
+      attachment: 'top right',
+      targetAttachment: 'bottom right'
+    });
+  } else {
+    // $('#minibag-contain').attr('style', '');
+  }
+});
+
+$('#minibag-contain').on('hidden.bs.modal', function (e) {
+  tether.disable();
+  $('#minibag-contain').attr('style', '');
+});
+
+
+
+// ===========================
+// Tether end
+// ===========================
+
+
 
 
 

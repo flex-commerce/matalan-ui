@@ -12,8 +12,9 @@ $modal-footer-border-color: #0f0;
 $modal-lg: 900px;
 $modal-md: 600px;
 $modal-sm: 300px;
+
 $screen-sm-min: 320px;
-$screen-md-min: 760px;
+$screen-md-min: 720px;
 
 //
 // Modals
@@ -159,21 +160,18 @@ $screen-md-min: 760px;
 }
 
 
-// // Scale up the modal
-// @media (min-width: $screen-sm-min) {
-//   // Automatically set modal's width for larger viewports
-//   .modal-dialog {
-//     width: $modal-md;
-//     margin: 30px auto;
-//   }
-//   .modal-content {
-//     // .box-shadow(0 5px 15px rgba(0,0,0,.5));
-//   }
-
-//   // Modal sizes
-//   .modal-sm { width: $modal-sm; }
-// }
-
-// @media (min-width: $screen-md-min) {
-//   .modal-lg { width: $modal-lg; }
-// }
+// Scale up the modal
+.modal:not(.modal--custom) {
+  @media (min-width: $screen-sm-min) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+      width: $modal-md;
+      margin: 30px auto;
+    }
+    // Modal sizes
+    .modal-sm { width: $modal-sm; }
+  }
+  @media (min-width: $screen-md-min) {
+    .modal-lg { width: $modal-lg; }
+  }
+}
