@@ -18,13 +18,21 @@
                        lat: item.geometry.coordinates[1],
                        lng: item.geometry.coordinates[0],
                        title: item.properties.name,
+                       id: item.properties.storeid,
                        icon: {
                            size: new google.maps.Size(56, 56),
                            url: icon
                        },
                        infoWindow: {
                            content: '<p>' + item.properties.name + '</p>'
-                       }
+                       },
+                       click: function(e) {
+                        var element = $('[data-marker-index=' + e.id + ']');
+                        setActive(element);
+                        $('#store-' + e.id).get(0).scrollIntoView();
+
+                      }
+
                    });
                }
            }
@@ -33,7 +41,6 @@
    }
 
    function setActive(el) {
-       console.log(el);
        var siblings = listings.getElementsByTagName('div');
        for (var i = 0; i < siblings.length; i++) {
            siblings[i].className = siblings[i].className
@@ -57,8 +64,9 @@
            var popup = '<h3>' + prop.city + '</h3><div>';
            var link = listings.appendChild(document.createElement('a'));
            link.href = '#';
+           link.id = 'store-' + prop.storeid;
            link.className = 'pan-to-marker';
-           link.setAttribute("data-marker-index", i);
+           link.setAttribute("data-marker-index", prop.storeid);
            var wrapper = link.appendChild(document.createElement('div'));
            wrapper.className = 'o-store-locator__listings-wrapper';
 
@@ -107,8 +115,9 @@
        var position, lat, lng, $index;
 
        $index = $(this).data('marker-index');
+       var result = $.grep(map.markers, function(e){ return e.id == $index; });
 
-       position = map.markers[$index].getPosition();
+       position = result[0].position;
 
        lat = position.lat();
        lng = position.lng();
@@ -157,12 +166,6 @@
            scrollwheel: false
        });
 
-       map.on('marker_added', function(marker) {
-           var index = map.markers.indexOf(marker);
-           $('#results').append('<li><a href="#" class="pan-to-marker" data-marker-index="' + index + '">' + marker.title + '</a></li>');
-
-
-       });
        loadResults(data);
        printResults(data);
 
