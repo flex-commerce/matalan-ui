@@ -7,14 +7,6 @@
         position: relative;
         display: block;
         height: 600px;
-        @include mq($until: md) {
-            padding-right: 25%;
-            margin-right: -25%;
-        }
-        @include mq($from: lg) {
-            padding-right: 50%;
-            margin-right: -50%;
-        }
     }
     .o-store-locator__locations {
         height: 600px;

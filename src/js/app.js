@@ -42,6 +42,8 @@ require("./modules/dropdown");
 
 require("./modules/mapbox-init");
 
+require("./modules/google-maps-init");
+
 
 // ===========================
 // Tabs
