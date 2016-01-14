@@ -6,8 +6,8 @@
 @include mq($until: lg) {
   .c-navbar-container {
     @include fixed(top 0 bottom 0 left -85%);
-    width: 85%;
-    z-index: 5;
+     width: 85%;
+     z-index: 1050;
 
     &.active {
       left: 0;

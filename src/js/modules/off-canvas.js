@@ -5,37 +5,56 @@
 (function() {
 
   var $parentNavMenu = $('[data-app="accessible-navmenu"]');
-
-
-
-
+  var $navContain = $('#nav-contain');
 
   // ===========================
   // Off Canvas
   // ===========================
-  var clickCatcher = '<div id="js-clickcatcher-canvas" class="js-clickcatcher"></div>'
+  // var clickCatcher = '<div id="js-clickcatcher-canvas" class="js-clickcatcher"></div>'
   var offCanvasActive;
 
-  function closeOffCanvas() {
-    $('html').removeClass("body--modal-open");
-    $parentNavMenu.removeClass("active");
-    $('#js-clickcatcher-canvas').remove();
-    offCanvasActive = false;
+
+
+
+$navContain.on('show.bs.modal', function (e) {
+  $parentNavMenu.addClass("active");
+});
+
+$navContain.on('hide.bs.modal', function (e) {
+  $parentNavMenu.removeClass("active");
+});
+
+$('body').on('click', '.modal-backdrop', function() {
+    $navContain.modal('hide');
+});
+
+// $('#minibag-contain').on('hidden.bs.modal', function (e) {
+//   tether.disable();
+//   $('#minibag-contain').attr('style', '');
+// });
+
+
+
+  function closingOffCanvas() {
+    // $('html').removeClass("body--modal-open");
+    // $parentNavMenu.removeClass("active");
+    // $('#js-clickcatcher-canvas').remove();
+    // offCanvasActive = false;
   }
 
-  function openOffCanvas() {
-    $('html').addClass("body--modal-open");
-    $parentNavMenu.addClass("active");
-    $('body').append(clickCatcher);
-    offCanvasActive = true;
+  function openingOffCanvas() {
+  //   $('html').addClass("body--modal-open");
+  //   $parentNavMenu.addClass("active");
+  //   $('body').append(clickCatcher);
+  //   offCanvasActive = true;
   }
 
 
   // off canvas navigation rules
   function offCanvas() {
-    $('body').on('mousedown', '#js-clickcatcher-canvas', function() {
-      closeOffCanvas();
-    })
+    // $('body').on('mousedown', '#js-clickcatcher-canvas', function() {
+    //   closeOffCanvas();
+    // })
 
     // toggle top level nav item
     $parentNavMenu.on('mousedown', '.navbar__top-item > .link', function(e) {
@@ -69,17 +88,17 @@
 
   // ===========================
   // off canvas button event handler
-  $("body").on('mousedown', '.js-nav-mobile-button',  function() {
-    if ($('html').hasClass('body--modal-open')) {
-      closeOffCanvas();
-    } else {
-      openOffCanvas();
-    }
-  })
+  // $("body").on('mousedown', '.js-nav-mobile-button',  function() {
+  //   if ($('html').hasClass('body--modal-open')) {
+  //     closeOffCanvas();
+  //   } else {
+  //     openOffCanvas();
+  //   }
+  // })
 
-    $('body').on('click touchstart', '#js-clickcatcher-canvas', function() {
-      closeOffCanvas();
-    });
+    // $('body').on('click touchstart', '#js-clickcatcher-canvas', function() {
+    //   closeOffCanvas();
+    // });
 
 
 
@@ -87,6 +106,7 @@
   $('nav a').on('click', function(e) {
     e.preventDefault();
   })
+
 
   function handleWindowSize() {
     if (window.matchMedia("(max-width: 1024px)").matches) {
@@ -114,7 +134,7 @@
       // update new width value for next time
       width = $(window).width();
       if (offCanvasActive === true) {
-        closeOffCanvas();
+        // closeOffCanvas();
       }
       handleWindowSize();
     }, 250));

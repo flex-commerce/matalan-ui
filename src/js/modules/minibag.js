@@ -13,6 +13,11 @@
     }
   });
 
+  // close on click
+  $('body').on('click', '.modal-backdrop', function() {
+      closeMiniBag();
+  });
+
 
 
 

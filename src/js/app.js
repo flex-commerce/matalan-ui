@@ -47,6 +47,7 @@ $('#minibag-contain').on('shown.bs.modal', function (e) {
   } else {
     // $('#minibag-contain').attr('style', '');
   }
+  tether.position();
 });
 
 $('#minibag-contain').on('hidden.bs.modal', function (e) {

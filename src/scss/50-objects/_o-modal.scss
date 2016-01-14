@@ -32,7 +32,7 @@ $screen-md-min: 720px;
 }
 
 // Container that the modal scrolls within
-.modal {
+.modal.modal--default {
   display: none;
   overflow: hidden;
   position: fixed;
@@ -47,8 +47,16 @@ $screen-md-min: 720px;
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
 }
+.modal.modal--custom {
+  display: none;
+  z-index: $zindex-modal;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
 
-.modal-open .modal {
+
+
+.modal-open .modal--default {
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -144,10 +152,17 @@ $screen-md-min: 720px;
   overflow: scroll;
 }
 
+
+
 .minibag--modal-open .o-minibag-contain {
-  display: block;
-  overflow: auto;
+  // display: block;
+  // overflow: auto;
 }
+
+
+
+
+
 
 
 
@@ -178,3 +193,5 @@ $screen-md-min: 720px;
     }
   }
 }
+
+

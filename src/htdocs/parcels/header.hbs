@@ -24,7 +24,8 @@
 
       <div class="col-3@xs hidden@lg-up header--height u-pad-0">
         <div class="o-header--menu-button">
-          <a class="js-nav-mobile-button c-btn nav-mobile-button u-no-bord">
+          <a data-toggle="modal" data-target="#nav-contain"
+            class="js-nav-mobile-button c-btn nav-mobile-button u-no-bord">
             <i class="icon icon-menu-menu"></i>
           </a>
         </div>
@@ -56,7 +57,7 @@
               <a class="c-btn hidden@lg-up header--mobile-search u-no-bord-vis">
                 <i class="icon icon-search"></i>
               </a>
-              <a class="c-btn hidden@md-down js-minibag--view u-font-upper u-no-bord-vis">
+              <a class="c-btn hidden@md-down js-minibag--view u-font-upper u-no-bord-vis u-bgcolor-white">
                 View your bag ({{minibag.category.collection.products.length}})</a>
             </div>
           </div>
