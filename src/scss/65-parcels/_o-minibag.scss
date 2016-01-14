@@ -1,8 +1,9 @@
 $minibag-border-color: $keyline-color;
 $minibag-desktop-width: 353px;
 
-.js-minibag,
-.js-minibag--view {
+// double classes for specificty hack - overriding button focus z index
+.js-minibag.js-minibag,
+.js-minibag--view.js-minibag--view {
   z-index: 1050;
   position: relative;
 }
@@ -159,7 +160,7 @@ $minibag-desktop-width: 353px;
 
 // separators, borders, and padding begin ======================================
 .o-minibag {
-  padding-top: 1.5em;
+/*   padding-top: 1.5em; */
   padding-bottom: 1em;
 
   .o-minibag--header,

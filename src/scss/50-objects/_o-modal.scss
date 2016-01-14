@@ -2,13 +2,14 @@ $zindex-modal: 1050;
 $zindex-modal-background: 1049;
 $modal-content-bg: #fff;
 $modal-content-border-color: rgba(0,0,0,.2);
-$modal-backdrop-bg: #8ff;
-$modal-backdrop-opacity: 0.5;
+$modal-backdrop-bg: #000;
+$modal-backdrop-opacity: 0.2;
 $modal-title-padding: 14px;
-$modal-header-border-color: #f00;
+$modal-header-border-color: $light-grey;
 $modal-title-line-height: 2;
 $modal-inner-padding: 15px;
-$modal-footer-border-color: #0f0;
+$modal-footer-border-color: $light-grey;
+
 $modal-lg: 900px;
 $modal-md: 600px;
 $modal-sm: 300px;
@@ -45,16 +46,8 @@ $screen-md-min: 720px;
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
-
-  // When fading in the modal, animate it to slide down
-  &.fade .modal-dialog {
-    // .translate(0, -25%);
-    // .transition-transform(~"0.3s ease-out");
-  }
-  &.in .modal-dialog {
-    // .translate(0, 0)
-  }
 }
+
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
@@ -71,10 +64,7 @@ $screen-md-min: 720px;
 .modal-content {
   position: relative;
   background-color: $modal-content-bg;
-  // border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid $modal-content-border-color;
-  // border-radius: $border-radius-large;
-  // .box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
@@ -160,18 +150,31 @@ $screen-md-min: 720px;
 }
 
 
+
+
 // Scale up the modal
 .modal:not(.modal--custom) {
-  @media (min-width: $screen-sm-min) {
+   @include mq($from: md) {
     // Automatically set modal's width for larger viewports
     .modal-dialog {
       width: $modal-md;
-      margin: 30px auto;
+      margin: 110px auto;
     }
     // Modal sizes
     .modal-sm { width: $modal-sm; }
   }
-  @media (min-width: $screen-md-min) {
-    .modal-lg { width: $modal-lg; }
+
+   @include mq($from: lg) {
+    .modal-dialog {
+      width: $modal-md;
+      margin: 40px auto;
+    }
+  }
+
+   @include mq($until: md) {
+    .modal-dialog {
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 }

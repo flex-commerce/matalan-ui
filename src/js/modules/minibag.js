@@ -1,15 +1,30 @@
 (function() {
 
   var miniBagControl = $('.js-minibag, .js-minibag--view');
+  var miniBagContain = $('#minibag-contain');
+
+  // open on hover for 250ms
+  delayWithClear(miniBagControl, openMiniBag);
+
+  // close on mouseover BG
+  $('body').on('mouseover', '.modal-backdrop', function() {
+    if (!window.isMobileOrTablet.matches) {
+      closeMiniBag();
+    }
+  });
+
+
 
 
   function closeMiniBag() {
-    $('#minibag-contain').modal('hide');
+    miniBagContain.modal('hide');
   }
 
+
   function openMiniBag() {
-    $('#minibag-contain').modal('show');
+    miniBagContain.modal('show');
   }
+
 
   function delayWithClear(el, func) {
     var timer;
@@ -17,22 +32,17 @@
 
     $(el).hover(function() {
       timer = setTimeout(function() {
-      // if (!window.isMobileOrTablet.matches) {
+      if (!window.isMobileOrTablet.matches) {
         func();
-      // }
+      }
       }, delay);
     }, function() {
       clearTimeout(timer);
     });
   }
 
-  delayWithClear(miniBagControl, openMiniBag);
 
-  $('body').on('mouseover', '.modal-backdrop', function() {
-    if (!window.isMobileOrTablet.matches) {
-      closeMiniBag()
-    }
-  });
+
 
 //   // $(document).ready(function() {
 //   //   $(window).on('resize', _.debounce(function() {
