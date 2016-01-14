@@ -40,7 +40,7 @@ require("./modules/dropdown");
 // Dropdown end
 // ===========================
 
-//require("./modules/mapbox-init");
+require("./modules/mapbox-init");
 
 
 // ===========================
