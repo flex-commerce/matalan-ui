@@ -33,7 +33,7 @@
    }
 
    function setActive(el) {
-    console.log(el);
+       console.log(el);
        var siblings = listings.getElementsByTagName('div');
        for (var i = 0; i < siblings.length; i++) {
            siblings[i].className = siblings[i].className
@@ -74,7 +74,7 @@
 
            listing.innerHTML = '<div class="o-store-locator__listings-city">' + prop.city + '</div>';
            if (prop.address) {
-               listing.innerHTML += '<div class="o-store-locator__listings-distance">Distance from ' + prop.city + ' - 0.4 miles</div>';
+               listing.innerHTML += '<div class="o-store-locator__listings-distance">' + locale.distance.toFixed(2) + ' miles away</div>';
                listing.innerHTML += '<div class="o-store-locator__listings-address u-mar-t-medium">' + prop.address + '</div>';
                listing.innerHTML += '<div class="o-store-locator__listings-postcode">' + prop.postcode + '</div>';
                popup += '<div class="quiet">' + prop.address + '</div>';
@@ -114,32 +114,127 @@
        lng = position.lng();
 
        map.setCenter(lat, lng);
-       map.setZoom(12);
+
    });
 
    $(document).ready(function() {
        // prettyPrint();
+
+
+       var xhr = require("json!../../data/locations.json");
+
+
+       // xhr.done(loadResults);
+   });
+   var latlng;
+
+   function calculateDistance(lat1, lon1, lat2, lon2, unit) {
+       var radlat1 = Math.PI * lat1 / 180
+       var radlat2 = Math.PI * lat2 / 180
+       var radlon1 = Math.PI * lon1 / 180
+       var radlon2 = Math.PI * lon2 / 180
+       var theta = lon1 - lon2
+       var radtheta = Math.PI * theta / 180
+       var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+       dist = Math.acos(dist)
+       dist = dist * 180 / Math.PI
+       dist = dist * 60 * 1.1515
+       if (unit == "K") {
+           dist = dist * 1.609344
+       }
+       if (unit == "N") {
+           dist = dist * 0.8684
+       }
+       return dist
+   }
+
+   function generateMap(data, longitude, latitude) {
        map = new GMaps({
            div: '#map',
-           lat: 54.236107,
-           lng: -4.548056,
-           zoom: 6,
+           lat: latitude,
+           lng: longitude,
+           zoom: 12,
+           scrollwheel: false
        });
 
        map.on('marker_added', function(marker) {
            var index = map.markers.indexOf(marker);
            $('#results').append('<li><a href="#" class="pan-to-marker" data-marker-index="' + index + '">' + marker.title + '</a></li>');
 
-           if (index == map.markers.length - 1) {
-               map.fitZoom();
+
+       });
+       loadResults(data);
+       printResults(data);
+
+   }
+
+   function GetLocation(address) {
+       var geocoder = new google.maps.Geocoder();
+       geocoder.geocode({
+           'address': address
+       }, function(results, status) {
+           if (status == google.maps.GeocoderStatus.OK) {
+               $('.o-map-conatiner').show();
+               var latitude = results[0].geometry.location.lat();
+               var longitude = results[0].geometry.location.lng();
+               var data = require("json!../../data/locations.json");
+
+               for (var i = 0; i < data.length; i++) {
+                   data[i]["distance"] = calculateDistance(latitude, longitude, data[i].geometry.coordinates[1], data[i].geometry.coordinates[0], "K");
+               }
+
+               data.sort(function(a, b) {
+                   return a.distance - b.distance;
+               });
+
+               generateMap(data, longitude, latitude);
+           } else {
+               alert("Request failed.")
            }
        });
+   };
 
-       var xhr = require("json!../../data/locations.json");
+   function getClientLocation() {
 
-       loadResults(xhr);
-       printResults(xhr);
-       // xhr.done(loadResults);
+       if (navigator.geolocation) {
+           navigator.geolocation.getCurrentPosition(function(position) {
+              $('.o-map-conatiner').show();
+               var latitude = position.coords.latitude;
+               var longitude = position.coords.longitude;
+               var data = require("json!../../data/locations.json");
+
+               for (var i = 0; i < data.length; i++) {
+                   data[i]["distance"] = calculateDistance(latitude, longitude, data[i].geometry.coordinates[1], data[i].geometry.coordinates[0], "K");
+               }
+
+               data.sort(function(a, b) {
+                   return a.distance - b.distance;
+               });
+
+               generateMap(data, longitude, latitude);
+
+           });
+       } else {
+           // Browser doesn't support Geolocation
+           alert("not supported")
+       }
+
+
+
+   }
+
+
+
+
+   $('body').on('click', '.find-store', function(e) {
+       e.preventDefault();
+       var address = $('#addressEntry').val();
+       GetLocation(address);
+   });
+
+   $('body').on('click', '.use-location', function(e) {
+       e.preventDefault();
+       getClientLocation();
    });
    // ===========================
    // Mapbox End
