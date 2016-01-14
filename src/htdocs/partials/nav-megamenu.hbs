@@ -1,103 +1,96 @@
 <div class="row">
 
-  <div class="modal modal--custom modal--nav" id="nav-contain">
+  <div class="modal modal--nav" id="nav-contain">
 
-    <div class="">
-      <div class="">
-        <nav class="c-navbar-container js-scroll-hold u-scrollbar" data-app="accessible-navmenu" data-scroll-responsive="sm-md">
+    <nav class="c-navbar-container js-scroll-hold u-scrollbar" data-app="accessible-navmenu" data-scroll-responsive="sm-md">
 
-          <ul class="accessible-navmenu c-navbar">
+      <ul class="accessible-navmenu c-navbar">
 
-            <li class="navbar__header">
-              <a class="link u-font-ta-c">
-                <i class="nav-mobile-button icon icon-menu-storefinder"></i>
-              </a>
-              <a class="link u-font-ta-c u-mar-l-medium">
-                <i class="nav-mobile-button icon icon-menu-myaccount"></i>
-              </a>
-  <!--             <a class="">
-                <i class="js-nav-mobile-button nav-mobile-button icon icon-menu-close"></i>
-              </a>
-   -->            <a type="button" class="close link u-font-ta-c u-fr" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </a>
-            </li>
+        <li class="navbar__header">
+          <a class="link u-font-ta-c">
+            <i class="nav-mobile-button icon icon-menu-storefinder"></i>
+          </a>
+          <a class="link u-font-ta-c u-mar-l-medium">
+            <i class="nav-mobile-button icon icon-menu-myaccount"></i>
+          </a>
+          <a type="button" class="close link u-font-ta-c u-fr" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+        </li>
 
-            {{#each menuItems}}
-            <li class="navbar__top-item">
-              <a class="link" href="{{seclink}}">
-                {{secTitle}}
-                <span class="navbar__nav-menu-icons">
-                  <span><i class="icon icon-minus"></i></span>
-                  <span><i class="icon icon-plus"></i></span>
-                  <span><i class="icon icon-ui-forward"></i></span>
-                </span>
-              </a>
-              {{#if categories}}
-              <div class="sub-nav">
-                <div class="sub-nav__group-container">
+        {{#each menuItems}}
+        <li class="navbar__top-item">
+          <a class="link" href="{{seclink}}">
+            {{secTitle}}
+            <span class="navbar__nav-menu-icons">
+              <span><i class="icon icon-minus"></i></span>
+              <span><i class="icon icon-plus"></i></span>
+              <span><i class="icon icon-ui-forward"></i></span>
+            </span>
+          </a>
+          {{#if categories}}
+          <div class="sub-nav">
+            <div class="sub-nav__group-container">
 
-                  {{#with categories}} {{#each this}}
-                  <ul class="sub-nav-group">
-                    <li class="sub-nav-title">
-                      <a class="link" href="{{catLink}}">
-                        {{catTitle}}
-                        <span class="navbar__nav-menu-icons">
-                          <span><i class="icon icon-minus"></i></span>
-                          <span><i class="icon icon-plus"></i></span>
-                          <span><i class="icon icon-ui-forward"></i></span>
-                        </span>
-                      </a>
-                    </li>
-                    {{#with collection}} {{#each this}}
-                    <li class="sub-nav-item">
-                      <a class="link" href="plp.html">
-                        {{{@key}}}
-                        <span class="navbar__nav-menu-icons">
-                          <span><i class="icon icon-ui-forward"></i></span>
-                        </span>
-                      </a>
-                    </li>
-                    {{/each}} {{/with}}
-                  </ul>
-                  {{/each}} {{/with}}
+              {{#with categories}} {{#each this}}
+              <ul class="sub-nav-group">
+                <li class="sub-nav-title">
+                  <a class="link" href="{{catLink}}">
+                    {{catTitle}}
+                    <span class="navbar__nav-menu-icons">
+                      <span><i class="icon icon-minus"></i></span>
+                      <span><i class="icon icon-plus"></i></span>
+                      <span><i class="icon icon-ui-forward"></i></span>
+                    </span>
+                  </a>
+                </li>
+                {{#with collection}} {{#each this}}
+                <li class="sub-nav-item">
+                  <a class="link" href="plp.html">
+                    {{{@key}}}
+                    <span class="navbar__nav-menu-icons">
+                      <span><i class="icon icon-ui-forward"></i></span>
+                    </span>
+                  </a>
+                </li>
+                {{/each}} {{/with}}
+              </ul>
+              {{/each}} {{/with}}
 
-                  {{#with collection}}
-                  <ul class="sub-nav-group">
-                    {{#each this}}
-                    <li class="sub-nav-item"><a href="{{{@value}}}">{{{@key}}}</a></li>
-                    {{/each}}
-                  </ul>
-                  {{/with}}
+              {{#with collection}}
+              <ul class="sub-nav-group">
+                {{#each this}}
+                <li class="sub-nav-item"><a href="{{{@value}}}">{{{@key}}}</a></li>
+                {{/each}}
+              </ul>
+              {{/with}}
 
-                  <ul class="sub-nav-group__image">
-                    <li><img src="{{sectionImage}}"></li>
-                  </ul>
+              <ul class="sub-nav-group__image">
+                <li><img src="{{sectionImage}}"></li>
+              </ul>
 
-                </div>
-              </div>
-              {{/if}}
-            </li>
-            {{/each }}
+            </div>
+          </div>
+          {{/if}}
+        </li>
+        {{/each }}
 
 
 
-            <li class="navbar__footer">
-              <a class="link u-font-ta-c">
-                <span>Delivery</span>
-              </a>
-              <a class="link u-font-ta-c">
-                <span>Returns</span>
-              </a>
-              <a class="link u-font-ta-c">
-                <span>Contact</span>
-              </a>
-            </li>
+        <li class="navbar__footer">
+          <a class="link u-font-ta-c">
+            <span>Delivery</span>
+          </a>
+          <a class="link u-font-ta-c">
+            <span>Returns</span>
+          </a>
+          <a class="link u-font-ta-c">
+            <span>Contact</span>
+          </a>
+        </li>
 
-          </ul>
-        </nav>
-      </div>
-    </div>
+      </ul>
+    </nav>
 
   </div>
 

@@ -1,229 +1,229 @@
-// html.modal-open {
-//   padding-right: 15px;
-// }
+// // html.modal-open {
+// //   padding-right: 15px;
+// // }
 
-$zindex-modal: 1050;
-$zindex-modal-background: 1049;
-$modal-content-bg: #fff;
-$modal-content-border-color: rgba(0,0,0,.2);
-$modal-backdrop-bg: #000;
-$modal-backdrop-opacity: 0.5;
-$modal-title-padding: 14px;
-$modal-header-border-color: #f00;
-$modal-title-line-height: 2;
-$modal-inner-padding: 15px;
-$modal-footer-border-color: #0f0;
-$modal-lg: 900px;
-$modal-md: 600px;
-$modal-sm: 300px;
-$screen-sm-min: 320px;
-$screen-md-min: 760px;
+// $zindex-modal: 1050;
+// $zindex-modal-background: 1049;
+// $modal-content-bg: #fff;
+// $modal-content-border-color: rgba(0,0,0,.2);
+// $modal-backdrop-bg: #000;
+// $modal-backdrop-opacity: 0.5;
+// $modal-title-padding: 14px;
+// $modal-header-border-color: #f00;
+// $modal-title-line-height: 2;
+// $modal-inner-padding: 15px;
+// $modal-footer-border-color: #0f0;
+// $modal-lg: 900px;
+// $modal-md: 600px;
+// $modal-sm: 300px;
+// $screen-sm-min: 320px;
+// $screen-md-min: 760px;
 
-//
-// Modals
-// --------------------------------------------------
+// //
+// // Modals
+// // --------------------------------------------------
 
-// .modal-open      - body class for killing the scroll
-// .modal           - container to scroll within
-// .modal-dialog    - positioning shell for the actual modal
-// .modal-content   - actual modal w/ bg and corners and shit
-
-
-.modal {
-  &.modal--offcanvas {
-    top: 0;
-    left: 0;
-    bottom: 0;
-  }
- &.modal--default {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-}
+// // .modal-open      - body class for killing the scroll
+// // .modal           - container to scroll within
+// // .modal-dialog    - positioning shell for the actual modal
+// // .modal-content   - actual modal w/ bg and corners and shit
 
 
-
-
-
-
-
-// Kill the scroll on the body
-.modal-open {
-  overflow: hidden;
-}
-.modal {
-  display: none;
-  overflow: hidden;
-  position: fixed;
-  z-index: $zindex-modal;
-  -webkit-overflow-scrolling: touch;
-  // Prevent Chrome on Windows from adding a focus outline. For details, see
-  // https://github.com/twbs/bootstrap/pull/10951.
-  outline: 0;
-}
-// Container that the modal scrolls within
-
-
-.modal--custom {
-  background: rgba(green, 0.2);
-  display: none;
-  overflow: hidden;
-  position: fixed;
-  z-index: $zindex-modal;
-  -webkit-overflow-scrolling: touch;
-  // @include mq($until: lg) {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  // }
-  // Prevent Chrome on Windows from adding a focus outline. For details, see
-  // https://github.com/twbs/bootstrap/pull/10951.
-  outline: 0;
-}
-
-
-.modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-// Shell div to position the modal with bottom padding
-.modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 10px;
-}
-
-// Actual modal
-.modal-content {
-  position: relative;
-  background-color: $modal-content-bg;
-  border: 1px solid $modal-content-border-color;
-  // box-shadow: 0 3px 9px rgba(0,0,0,.5);
-  background-clip: padding-box;
-  // Remove focus outline from opened modal
-  outline: 0;
-}
-
-
-
-// Modal background
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: $zindex-modal-background;
-  background-color: $modal-backdrop-bg;
-  // Fade for backdrop
-  &.fade { opacity: 0; }
-  &.in { opacity: $modal-backdrop-opacity; }
-}
-
-// Modal header
-// Top section of the modal w/ title and dismiss
-.modal-header {
-  padding: $modal-title-padding;
-  border-bottom: 1px solid $modal-header-border-color;
-  @include clearfix;
-}
-// Close icon
-.modal-header .close {
-  margin-top: -2px;
-}
-
-// Title text within header
-.modal-title {
-  margin: 0;
-  line-height: $modal-title-line-height;
-}
-
-// Modal body
-// Where all modal content resides (sibling of .modal-header and .modal-footer)
-.modal-body {
-  position: relative;
-  padding: $modal-inner-padding;
-}
-
-// Footer (for actions)
-.modal-footer {
-  padding: $modal-inner-padding;
-  text-align: right; // right align buttons
-  border-top: 1px solid $modal-footer-border-color;
-  @include clearfix;
-
-  // Properly space out buttons
-  .btn + .btn {
-    margin-left: 5px;
-    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
-  }
-  // but override that for button groups
-  .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-  // and override it for block buttons as well
-  .btn-block + .btn-block {
-    margin-left: 0;
-  }
-}
-
-// Measure scrollbar width for padding body during modal show/hide
-.modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
-}
-
-// Scale up the modal
-// @include mq($from: xs) {
-  // Automatically set modal's width for larger viewports
-  .modal-dialog {
-    width: $modal-md;
-    margin: 30px auto;
-    max-width: 100%;
-
-    .modal--offcanvas & {
-      margin: 0 auto 0 0;
-      // max-width: 400px;
-      height: 100%;
-    }
-  }
-  .modal-content {
-
-  }
-
-  // Modal sizes
-  // .modal-sm { width: $modal-sm; }
+// .modal {
+//   &.modal--offcanvas {
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//   }
+//  &.modal--default {
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//   }
 // }
 
 
-// @media (min-width: $screen-md-min) {
-//   .modal-lg { width: $modal-lg; }
+
+
+
+
+
+// // Kill the scroll on the body
+// .modal-open {
+//   overflow: hidden;
+// }
+// .modal {
+//   display: none;
+//   overflow: hidden;
+//   position: fixed;
+//   z-index: $zindex-modal;
+//   -webkit-overflow-scrolling: touch;
+//   // Prevent Chrome on Windows from adding a focus outline. For details, see
+//   // https://github.com/twbs/bootstrap/pull/10951.
+//   outline: 0;
+// }
+// // Container that the modal scrolls within
+
+
+// .modal--custom {
+//   background: rgba(green, 0.2);
+//   display: none;
+//   overflow: hidden;
+//   position: fixed;
+//   z-index: $zindex-modal;
+//   -webkit-overflow-scrolling: touch;
+//   // @include mq($until: lg) {
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//   // }
+//   // Prevent Chrome on Windows from adding a focus outline. For details, see
+//   // https://github.com/twbs/bootstrap/pull/10951.
+//   outline: 0;
 // }
 
 
-  // // When fading in the modal, animate it to slide down
-  // modal {
-  //  &.fade .modal-dialog {
-  //    // translate: 0, -25%;
-  //    // transition-transform(~"0.3s ease-out");
-  //  }
-  //  &.in .modal-dialog {
-  //    // translate: 0, 0 ;
-  //  }
-  // }
+// .modal-open .modal {
+//   overflow-x: hidden;
+//   overflow-y: auto;
+// }
 
-.modal-dialog {
-  @include mq($from: md) {
-    width: 580px;
-    height: 780px;
-    overflow: hidden;
-    max-height: calc(100% - 60px);
-  }
-}
+// // Shell div to position the modal with bottom padding
+// .modal-dialog {
+//   position: relative;
+//   width: auto;
+//   margin: 10px;
+// }
+
+// // Actual modal
+// .modal-content {
+//   position: relative;
+//   background-color: $modal-content-bg;
+//   border: 1px solid $modal-content-border-color;
+//   // box-shadow: 0 3px 9px rgba(0,0,0,.5);
+//   background-clip: padding-box;
+//   // Remove focus outline from opened modal
+//   outline: 0;
+// }
+
+
+
+// // Modal background
+// .modal-backdrop {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: $zindex-modal-background;
+//   background-color: $modal-backdrop-bg;
+//   // Fade for backdrop
+//   &.fade { opacity: 0; }
+//   &.in { opacity: $modal-backdrop-opacity; }
+// }
+
+// // Modal header
+// // Top section of the modal w/ title and dismiss
+// .modal-header {
+//   padding: $modal-title-padding;
+//   border-bottom: 1px solid $modal-header-border-color;
+//   @include clearfix;
+// }
+// // Close icon
+// .modal-header .close {
+//   margin-top: -2px;
+// }
+
+// // Title text within header
+// .modal-title {
+//   margin: 0;
+//   line-height: $modal-title-line-height;
+// }
+
+// // Modal body
+// // Where all modal content resides (sibling of .modal-header and .modal-footer)
+// .modal-body {
+//   position: relative;
+//   padding: $modal-inner-padding;
+// }
+
+// // Footer (for actions)
+// .modal-footer {
+//   padding: $modal-inner-padding;
+//   text-align: right; // right align buttons
+//   border-top: 1px solid $modal-footer-border-color;
+//   @include clearfix;
+
+//   // Properly space out buttons
+//   .btn + .btn {
+//     margin-left: 5px;
+//     margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+//   }
+//   // but override that for button groups
+//   .btn-group .btn + .btn {
+//     margin-left: -1px;
+//   }
+//   // and override it for block buttons as well
+//   .btn-block + .btn-block {
+//     margin-left: 0;
+//   }
+// }
+
+// // Measure scrollbar width for padding body during modal show/hide
+// .modal-scrollbar-measure {
+//   position: absolute;
+//   top: -9999px;
+//   width: 50px;
+//   height: 50px;
+//   overflow: scroll;
+// }
+
+// // Scale up the modal
+// // @include mq($from: xs) {
+//   // Automatically set modal's width for larger viewports
+//   .modal-dialog {
+//     width: $modal-md;
+//     margin: 30px auto;
+//     max-width: 100%;
+
+//     .modal--offcanvas & {
+//       margin: 0 auto 0 0;
+//       // max-width: 400px;
+//       height: 100%;
+//     }
+//   }
+//   .modal-content {
+
+//   }
+
+//   // Modal sizes
+//   // .modal-sm { width: $modal-sm; }
+// // }
+
+
+// // @media (min-width: $screen-md-min) {
+// //   .modal-lg { width: $modal-lg; }
+// // }
+
+
+//   // // When fading in the modal, animate it to slide down
+//   // modal {
+//   //  &.fade .modal-dialog {
+//   //    // translate: 0, -25%;
+//   //    // transition-transform(~"0.3s ease-out");
+//   //  }
+//   //  &.in .modal-dialog {
+//   //    // translate: 0, 0 ;
+//   //  }
+//   // }
+
+// .modal-dialog {
+//   @include mq($from: md) {
+//     width: 580px;
+//     height: 780px;
+//     overflow: hidden;
+//     max-height: calc(100% - 60px);
+//   }
+// }

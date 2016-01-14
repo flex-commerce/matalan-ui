@@ -162,7 +162,11 @@ $screen-md-min: 720px;
 
 
 
-
+.modal--nav {
+  @include mq($from: lg) {
+    display: block !important;
+  }
+}
 
 
 
