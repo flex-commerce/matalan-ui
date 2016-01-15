@@ -14,8 +14,10 @@
   });
 
   // close on click
-  $('body').on('click', '.modal-backdrop', function() {
+  $('body').on('touchend', '.modal-backdrop', function() {
+    if (window.isMobileOrTablet.matches) {
       closeMiniBag();
+    }
   });
 
 
