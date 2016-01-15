@@ -1,7 +1,23 @@
 $minibag-border-color: $keyline-color;
 $minibag-desktop-width: 353px;
 
-// magic - line up with view your bag button on desktop
+// double classes for specificty hack - overriding button focus z index
+.js-minibag.js-minibag,
+.js-minibag--view.js-minibag--view {
+  z-index: 1050;
+  position: relative;
+}
+
+@include mq($from: lg) {
+  body.modal-open {
+    .o-minibag-contain {
+      pointer-events: none;
+      > * {
+        pointer-events: auto;
+      }
+    }
+  }
+}
 
 // flexbox here to allow the inner panel to expand to max allowed size
 // flex start ======================================
@@ -120,8 +136,13 @@ $minibag-desktop-width: 353px;
 
 // misc rules ======================================
 .o-minibag-contain {
-  position: relative;
-  z-index: 10;
+  // removed for modals - to test
+  // position: relative;
+  // z-index: 10;
+  // pointer-events: none;
+  .o-minibag {
+    // pointer-events: auto;
+  }
 }
 
 .o-minibag {
@@ -139,7 +160,7 @@ $minibag-desktop-width: 353px;
 
 // separators, borders, and padding begin ======================================
 .o-minibag {
-  padding-top: 1.5em;
+/*   padding-top: 1.5em; */
   padding-bottom: 1em;
 
   .o-minibag--header,

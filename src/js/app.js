@@ -23,6 +23,48 @@ $(document).ready(function() {
 
 
 
+
+// ===========================
+// Tether
+// http://github.hubspot.com/tether/
+// ===========================
+var Tether = require("tether");
+var tether;
+
+var tetherTarget = $('.checkout-bag');
+var tetherElement = $('.o-minibag-contain');
+
+$('#minibag-contain').on('shown.bs.modal', function (e) {
+
+  if (!window.isMobileOrTablet.matches) {
+    // for minibag click shower
+    tether = new Tether({
+      element: tetherElement,
+      target: tetherTarget,
+      attachment: 'top right',
+      targetAttachment: 'bottom right'
+    });
+  } else {
+    // $('#minibag-contain').attr('style', '');
+  }
+  tether.position();
+});
+
+$('#minibag-contain').on('hidden.bs.modal', function (e) {
+  tether.disable();
+  $('#minibag-contain').attr('style', '');
+});
+
+
+
+// ===========================
+// Tether end
+// ===========================
+
+
+
+
+
 // ===========================
 // Common JS functions
 // ===========================
@@ -139,10 +181,22 @@ if (!window.isMobileOrTablet.matches) {
 // Megamenu end
 // ===========================
 
-
 if (window.isMobileOrTablet.matches) {
     require("./modules/off-canvas");
 }
+
+
+// modal temp
+require("./vendors/bootstrap/modal");
+
+
+
+
+
+
+
+
+
 
 // ===========================
 // SelectBox init
