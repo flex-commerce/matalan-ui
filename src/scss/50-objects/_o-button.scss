@@ -41,6 +41,7 @@ $button-padding-y: $default-pad-y;
 
 .c-btn.c-btn-secondary {
   @include secondary-style(null);
+  text-transform: uppercase;
   &.hover,
   &:hover,
   &:focus {
