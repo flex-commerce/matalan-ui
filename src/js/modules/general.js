@@ -41,6 +41,15 @@
     $('.signup-success').show();
   });
 
+  $('input[name=deliveryaddress]').on('change',function(){
+    $('.address-picker').toggle();
+  });
+
+  $('.editAddress').on('click',function(){
+    $('.address-picker').toggle();
+    $("#newaddress").prop('checked', true);
+  });
+
   $('form[name=searchProducts]').submit(function(e){
     e.preventDefault();
     // console.log($('input[name=searchTermMobile]').val());
