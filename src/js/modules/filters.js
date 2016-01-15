@@ -1,14 +1,24 @@
 (function() {
   'use strict';
 
-  var filtersControl = $('.js-filters');
-  var filtersClose = $('.o-filters__close');
-  var clickCatcher = '<div data-app="toggle" data-toggle=".filters" id="js-clickcatcher-filters" class="js-clickcatcher"></div>';
-  var filtersActive = false;
+  // var filtersControl = $('.js-filters');
+  // var filtersClose = $('.o-filters__close');
+  // var clickCatcher = '<div data-app="toggle" data-toggle=".filters" id="js-clickcatcher-filters" class="js-clickcatcher"></div>';
+  // var filtersActive = false;
 
-  function limitFilters() {
 
-  }
+
+ var $filtersContain = $('#filters__contain');
+
+
+
+  $('body').on('click', '.modal-backdrop', function() {
+      $filtersContain.modal('hide');
+  });
+
+  // function limitFilters() {
+
+  // }
 
   // function closeFilters(scope) {
   //   $('html').removeClass("body--modal-open");

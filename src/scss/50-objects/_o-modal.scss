@@ -40,7 +40,7 @@ $screen-md-min: 720px;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $zindex-modal;
+  // z-index: $zindex-modal;
   -webkit-overflow-scrolling: touch;
 
   // Prevent Chrome on Windows from adding a focus outline. For details, see
@@ -49,11 +49,19 @@ $screen-md-min: 720px;
 }
 .modal.modal--custom {
   display: none;
-  z-index: $zindex-modal;
+  // z-index: $zindex-modal;
   -webkit-overflow-scrolling: touch;
   position: relative;
 }
 
+.modal.in {
+  &.modal--default {
+    z-index: $zindex-modal;
+  }
+  &.modal--custom {
+    z-index: $zindex-modal;
+  }
+}
 
 
 .modal-open .modal--default {

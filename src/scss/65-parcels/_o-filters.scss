@@ -77,11 +77,17 @@ $filters-border-color: $keyline-color;
 
 .o-filters__contain {
   position: relative;
-  @include mq($until: lg) {
-    // TODO - this is a hack, rewrite JS to fix
-    z-index: 4;
-  }
+
 }
+
+.o-filters__contain.modal--filters {
+  @include mq($from: lg) {
+    // todo - revisit - important to override JS addition of display none via modal
+    display: block !important;
+  }
+
+}
+
 
 
 // misc rules end ======================================
