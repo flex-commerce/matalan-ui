@@ -19,8 +19,6 @@
   });
 
 
-
-
   function closeMiniBag() {
     miniBagContain.modal('hide');
   }

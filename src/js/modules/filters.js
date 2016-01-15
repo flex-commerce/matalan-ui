@@ -10,45 +10,45 @@
 
   }
 
-  function closeFilters(scope) {
-    $('html').removeClass("body--modal-open");
-    $(scope).closest('.container').removeClass("open");
-    $('#js-clickcatcher-filters').remove();
+  // function closeFilters(scope) {
+  //   $('html').removeClass("body--modal-open");
+  //   $(scope).closest('.container').removeClass("open");
+  //   $('#js-clickcatcher-filters').remove();
 
-    filtersActive = false;
-  }
+  //   filtersActive = false;
+  // }
 
-  function openFilters(scope) {
-    $('html').addClass("body--modal-open");
-    $(scope).closest('.container').addClass("open");
-    $('body').append(clickCatcher);
-    filtersActive = true;
-  }
+  // function openFilters(scope) {
+  //   $('html').addClass("body--modal-open");
+  //   $(scope).closest('.container').addClass("open");
+  //   $('body').append(clickCatcher);
+  //   filtersActive = true;
+  // }
 
-  $('body').on('click touchstart', '#js-clickcatcher-filters', function() {
-    closeFilters(filtersControl);
-  });
+  // $('body').on('click touchstart', '#js-clickcatcher-filters', function() {
+  //   closeFilters(filtersControl);
+  // });
 
-  filtersControl.on('click touchstart', function() {
-    if (filtersActive === true) {
-      closeFilters(filtersControl);
-    } else {
-      openFilters(filtersControl);
-    }
-  });
+  // filtersControl.on('click touchstart', function() {
+  //   if (filtersActive === true) {
+  //     closeFilters(filtersControl);
+  //   } else {
+  //     openFilters(filtersControl);
+  //   }
+  // });
 
-  filtersClose.on('click touchstart', function() {
-    closeFilters(filtersControl);
-  });
+  // filtersClose.on('click touchstart', function() {
+  //   closeFilters(filtersControl);
+  // });
 
-  $(document).ready(function() {
-    $(window).on('resize', _.debounce(function() {
-      if (filtersActive === true) {
-        closeFilters(filtersControl);
-      }
-    }, 250));
-    limitFilters();
-  });
+  // $(document).ready(function() {
+  //   $(window).on('resize', _.debounce(function() {
+  //     if (filtersActive === true) {
+  //       closeFilters(filtersControl);
+  //     }
+  //   }, 250));
+  //   limitFilters();
+  // });
 
 
 })();

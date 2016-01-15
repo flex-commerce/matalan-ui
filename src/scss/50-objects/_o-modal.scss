@@ -103,9 +103,13 @@ $screen-md-min: 720px;
   border-bottom: 1px solid $modal-header-border-color;
   @include clearfix();
 }
-// Close icon
-.modal-header .close {
-  margin-top: -2px;
+
+// close placement
+.modal-header {
+  position: relative;
+  .close {
+    @include center($xy: y, $pos: abs);
+  }
 }
 
 // Title text within header

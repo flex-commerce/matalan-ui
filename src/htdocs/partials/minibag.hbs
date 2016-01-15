@@ -6,19 +6,18 @@
 
       <div class="modal-header o-minibag--header hidden@lg-up">
         <div class="u-cf">
-          <h2 class="u-fl">Shopping Bag</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h3 class="u-fl">Shopping Bag</h3>
+          <a class="close" data-dismiss="modal" aria-label="Close">
+            <i class="icon icon-menu-close"></i>
+          </a>
         </div>
       </div>
-
-      <!-- <div class="separator u-mar-0 hidden@lg-up"></div> -->
 
       {{> partials/minibag-contents }}
 
       <div class="o-minibag--footer">
         <ul class="o-minibag--action--contain">
+
           <li class="separator"></li>
 
           <li class="o-minibag--list o-minibag--list-total">
@@ -31,9 +30,11 @@
               <dd class="u-font-wb u-mar-t-medium">£147.00</dd>
             </dl>
           </li>
+
           <li class="separator"></li>
 
           <li class="o-minibag--list o-minibag--list-checkout">
+
             <div class="callout-panel u-mar-b-large">
               <p>You are
                 <span class="u-font-wb">£3.00</span> away from qualifying for
@@ -43,19 +44,19 @@
                 <span class="u-font-wb">FREE</span> whatever your order value.
               </p>
             </div>
+
             <div class="o-minibag--list-actions">
               <div class="">
-                <!-- <a class="c-btn c-btn-secondary col-6@xs flexer-element u-mar-r-small">View Bag</a> -->
                 <a class="c-btn c-btn-secondary c-btn-block">Checkout</a>
               </div>
               <div class="separator__inline-text">
                 <span>or</span>
               </div>
               <a class="c-btn-block u-font-ta-c">
-
               <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
             </a>
             </div>
+
           </li>
         </ul>
       </div>
