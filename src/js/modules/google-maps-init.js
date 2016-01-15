@@ -24,14 +24,14 @@
                            url: icon
                        },
                        infoWindow: {
-                           content: '<p>' + item.properties.name + '</p>'
+                           content: '<div id="hook" class="c-info-window__container">' + '<div class="c-info-window__title">' + item.properties.city + '</div>' + '</div>'
                        },
                        click: function(e) {
-                        var element = $('[data-marker-index=' + e.id + ']');
-                        setActive(element);
-                        $('#store-' + e.id).get(0).scrollIntoView();
+                           var element = $('[data-marker-index=' + e.id + ']');
+                           setActive(element);
+                           $('#store-' + e.id).get(0).scrollIntoView();
 
-                      }
+                       }
 
                    });
                }
@@ -115,9 +115,17 @@
        var position, lat, lng, $index;
 
        $index = $(this).data('marker-index');
-       var result = $.grep(map.markers, function(e){ return e.id == $index; });
+       var result = $.grep(map.markers, function(e) {
+           return e.id == $index;
+       });
 
-       position = result[0].position;
+       var marker = result[0];
+
+       position = marker.position;
+
+       marker.infoWindow.open();
+
+       google.maps.event.trigger(result[0], 'click');
 
        lat = position.lat();
        lng = position.lng();
@@ -128,9 +136,6 @@
 
    $(document).ready(function() {
        // prettyPrint();
-
-
-       var xhr = require("json!../../data/locations.json");
 
 
        // xhr.done(loadResults);
@@ -201,7 +206,7 @@
 
        if (navigator.geolocation) {
            navigator.geolocation.getCurrentPosition(function(position) {
-              $('.o-map-conatiner').show();
+               $('.o-map-conatiner').show();
                var latitude = position.coords.latitude;
                var longitude = position.coords.longitude;
                var data = require("json!../../data/locations.json");

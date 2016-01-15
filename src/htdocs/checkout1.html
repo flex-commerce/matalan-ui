@@ -6,12 +6,11 @@
 </head>
 
 <body>
-
     <div class="hidden@md-down">
-      {{> partials/header-checkout }}
+        {{> partials/header-checkout }}
     </div>
     <div class="hidden@lg-up">
-      {{> parcels/header }}
+        {{> parcels/header }}
     </div>
     <div class="container o-checkout__container">
         <div class="row">
@@ -27,24 +26,24 @@
                                 <div class="o-checkout__content u-mar-t-small">
                                     Your billing address must match your card statement address
                                     <div class="o-form__row">
-                                      <div class="o-form__input-contain o-option--inline">
-                                        <label class="o-form__label-option">
-                                          <input type="radio" name="deliveryaddress" value="addressbook" checked>
-                                          <span></span>
-                                          Use my address book
-                                        </label>
-                                        <label class="o-form__label-option">
-                                          <input type="radio" name="deliveryaddress" value="newaddress">
-                                          <span></span>
-                                          Enter a new address
-                                        </label>
-                                      </div>
+                                        <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium">
+                                            <label class="o-form__label o-form__label-option">
+                                                <input id="addressbook" type="radio" name="deliveryaddress" value="addressbook" checked>
+                                                <span class="check-holder"></span>Use my address book
+                                            </label>
+                                            <label class="o-form__label o-form__label-option">
+                                                <input id="newaddress" type="radio" name="deliveryaddress" value="newaddress">
+                                                <span class="check-holder"></span>Enter a new address
+                                            </label>
+                                        </div>
                                     </div>
-                                    <h5>
-                                        <strong>Select Address</strong>
-                                    </h5>
                                     <div class="islet u-cf u-mar-t-medium">
-                                        <div class="row">
+                                        <div class="row address-picker">
+                                            <div class="col-12@xs">
+                                                <h5 class>
+                                                    <strong>Select address</strong>
+                                                </h5>
+                                            </div>
                                             <div class="col-6@xs col-4@md u-mar-t-large">
                                                 <h6 class="u-mar-b-medium u-font-upper">
                                                     <strong>1) Home Address</strong>
@@ -63,7 +62,7 @@
                                                     <li>United Kingdom</li>
                                                     <li>AB1 CD2</li>
                                                 </ul>
-                                                <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small">Edit</a>
+                                                <a href="javascript:void(0)" class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small editAddress">Edit</a>
                                             </div>
                                             <div class="col-6@xs col-4@md u-mar-t-large">
                                                 <h6 class="u-mar-b-medium u-font-upper">
@@ -83,7 +82,7 @@
                                                     <li>United Kingdom</li>
                                                     <li>AB1 CD2</li>
                                                 </ul>
-                                                <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small">Edit</a>
+                                                <a href="javascript:void(0)" class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small editAddress">Edit</a>
                                             </div>
                                             <div class="col-6@xs col-4@md u-mar-t-large">
                                                 <h6 class="u-mar-b-medium u-font-upper">
@@ -103,7 +102,7 @@
                                                     <li>United Kingdom</li>
                                                     <li>AB1 CD2</li>
                                                 </ul>
-                                                <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small">Edit</a>
+                                                <a href="javascript:void(0)" class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small editAddress">Edit</a>
                                             </div>
                                             <div class="col-6@xs col-4@md u-mar-t-large">
                                                 <h6 class="u-mar-b-medium u-font-upper">
@@ -123,8 +122,102 @@
                                                     <li>United Kingdom</li>
                                                     <li>AB1 CD2</li>
                                                 </ul>
-                                                <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small">Edit</a>
+                                                <a href="javascript:void(0)" class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small editAddress">Edit</a>
                                             </div>
+                                        </div>
+                                        <div class="row address-picker" style="display:none">
+                                            <div class="col-12@xs">
+                                                <h5 class>
+                                                    <strong>Enter new address</strong>
+                                                </h5>
+                                            </div>
+                                            <form action="" class="o-form o-form--default">
+                                                <div class="col-12@xs col-6@md">
+                                                    <div class="o-form__row">
+                                                        <div class="o-form__label-contain">
+                                                            <label class="">First Name:</label>
+                                                        </div>
+                                                        <div class="o-form__input-contain">
+                                                            <input type="text" class="o-input o-input--textual" placeholder="First name" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12@xs col-6@md">
+                                                    <div class="o-form__row">
+                                                        <div class="o-form__label-contain">
+                                                            <label class="">Last Name:</label>
+                                                        </div>
+                                                        <div class="o-form__input-contain">
+                                                            <input type="text" class="o-input o-input--textual" placeholder="Last name" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12@xs col-6@md">
+                                                    <div class="o-form__row">
+                                                        <div class="o-form__label-contain">
+                                                            <label class="">Mobile:</label>
+                                                        </div>
+                                                        <div class="o-form__input-contain">
+                                                            <input type="text" class="o-input o-input--textual" placeholder="Mobile" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12@xs col-6@md">
+                                                    <div class="o-form__row">
+                                                        <div class="o-form__label-contain">
+                                                            <label class="">Country:</label>
+                                                        </div>
+                                                        <div class="o-form__input-contain">
+                                                            <input type="text" class="o-input o-input--textual" placeholder="Country" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12@xs">
+                                                    <div class="row">
+                                                        <div class="col-12@xs col-6@md">
+                                                            <div class="o-form__row">
+                                                                <div class="o-form__label-contain">
+                                                                    <label class="">Postcode:</label>
+                                                                </div>
+                                                                <div class="o-form--input-pack o-form__input-contain">
+                                                                    <input type="text" class="o-input o-input--textual" placeholder="Postcode" />
+                                                                </div>
+                                                                <button type="submit" class="c-btn c-btn-primary__alt">Find</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12@xs col-6@md">
+                                                    <div class="o-form__row">
+                                                        <div class="o-form__label-contain">
+                                                            <label class="">Address LIne 1:</label>
+                                                        </div>
+                                                        <div class="o-form__input-contain">
+                                                            <input type="text" class="o-input o-input--textual" placeholder="Adress Line 1" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12@xs col-6@md">
+                                                    <div class="o-form__row">
+                                                        <div class="o-form__label-contain">
+                                                            <label class="">Address LIne 2:</label>
+                                                        </div>
+                                                        <div class="o-form__input-contain">
+                                                            <input type="text" class="o-input o-input--textual" placeholder="Address Line 2" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12@xs col-6@md">
+                                                    <div class="o-form__row">
+                                                        <div class="o-form__label-contain">
+                                                            <label class="">Town / City:</label>
+                                                        </div>
+                                                        <div class="o-form__input-contain">
+                                                            <input type="text" class="o-input o-input--textual" placeholder="Town / City" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="o-form__row">
