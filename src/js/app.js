@@ -396,7 +396,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                     y: rect.top + pageYScroll,
                     w: rect.width
                 };
-            }
+            },
+            bgOpacity : 0.5,
+            showAnimationDuration: 0
 
         };
 
@@ -433,13 +435,6 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         gallery.init();
         var psIndex = gallery.getCurrentIndex();
         var psIndexSlick = psIndex - 1;
-        console.log(psIndexSlick);
-        gallery.listen('afterChange', function() {
-            var psIndex = gallery.getCurrentIndex();
-            var psIndexSlick = psIndex - 1;
-            console.log(psIndexSlick);
-            $(".o-product__slider").slick("slickGoTo", psIndexSlick);
-        });
     };
 
 
