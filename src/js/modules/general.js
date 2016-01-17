@@ -26,7 +26,6 @@
   });
 
   $("#termsAndConditionsAccepted").on("click", function(e) {
-    console.log('test');
     if ($(this).is(':checked')) {
       $('.iFrameWrapper').show();
     }
@@ -47,7 +46,7 @@
 
   $('.editAddress').on('click',function(){
     $('.address-picker').toggle();
-    $("#newaddress").prop('checked', true);
+    $("#newaddress").prop('checked', true );
   });
 
   $('form[name=searchProducts]').submit(function(e){

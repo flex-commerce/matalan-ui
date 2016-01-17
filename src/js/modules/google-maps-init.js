@@ -7,6 +7,7 @@
 
    function loadResults(data) {
        var items, markers_data = [];
+
        if (data.length > 0) {
            items = data;
 
@@ -24,12 +25,19 @@
                            url: icon
                        },
                        infoWindow: {
-                           content: '<div id="hook" class="c-info-window__container">' + '<div class="c-info-window__title">' + item.properties.city + '</div>' + '</div>'
+                           content: '<div class="c-info-window__title">' + item.properties.city + '</div>'
+                                  + '<div class="c-info-window__title">' + item.distance.toFixed(1) + ' miles away</div>'
+                                  + '<div class="c-info-window__title">' + item.properties.address + '</div>'
+                                  + '<div class="c-info-window__title">' + item.properties.postcode + '</div>'
+                                  + '<div class="c-info-window__title">' + item.properties.hours.replace(/\n/g, '<br />') + '</div>'
+                                  + '<div class="c-info-window__title"><a href="tel:' + item.properties.phone + '">' + item.properties.phoneFormatted + '</a></div>'
                        },
                        click: function(e) {
                            var element = $('[data-marker-index=' + e.id + ']');
                            setActive(element);
-                           $('#store-' + e.id).get(0).scrollIntoView();
+                          // $('#store-' + e.id).get(0).scrollIntoView(-60);
+                          $('.o-store-locator__locations').scrollTo('#store-' + e.id)
+
 
                        }
 
@@ -38,6 +46,7 @@
            }
        }
        map.addMarkers(markers_data);
+
    }
 
    function setActive(el) {
@@ -48,6 +57,10 @@
        }
 
        el.find('.o-store-locator__listings-wrapper').addClass('active');
+
+
+
+
    }
 
    function printResults(data) {
@@ -65,10 +78,15 @@
            var link = listings.appendChild(document.createElement('a'));
            link.href = '#';
            link.id = 'store-' + prop.storeid;
+           if (i === 0) {
+               var activeStatus = 'active';
+           } else {
+               var activeStatus = '';
+           }
            link.className = 'pan-to-marker';
            link.setAttribute("data-marker-index", prop.storeid);
            var wrapper = link.appendChild(document.createElement('div'));
-           wrapper.className = 'o-store-locator__listings-wrapper';
+           wrapper.className = 'o-store-locator__listings-wrapper ' + activeStatus;
 
 
 
@@ -82,7 +100,7 @@
 
            listing.innerHTML = '<div class="o-store-locator__listings-city">' + prop.city + '</div>';
            if (prop.address) {
-               listing.innerHTML += '<div class="o-store-locator__listings-distance">' + locale.distance.toFixed(2) + ' miles away</div>';
+               listing.innerHTML += '<div class="o-store-locator__listings-distance">' + locale.distance.toFixed(1) + ' miles away</div>';
                listing.innerHTML += '<div class="o-store-locator__listings-address u-mar-t-medium">' + prop.address + '</div>';
                listing.innerHTML += '<div class="o-store-locator__listings-postcode">' + prop.postcode + '</div>';
                popup += '<div class="quiet">' + prop.address + '</div>';
@@ -103,15 +121,17 @@
            opening.className = 'o-store-locator__opening';
            opening.innerHTML = "";
            if (prop.hours) {
-               opening.innerHTML += prop.hours;
+               opening.innerHTML += prop.hours.replace(/\n/g, '<br />');
            }
 
        };
+
    }
 
    $(document).on('click', '.pan-to-marker', function(e) {
        e.preventDefault();
        setActive($(this));
+
        var position, lat, lng, $index;
 
        $index = $(this).data('marker-index');
@@ -125,7 +145,7 @@
 
        marker.infoWindow.open();
 
-       google.maps.event.trigger(result[0], 'click');
+       google.maps.event.trigger(marker, 'click');
 
        lat = position.lat();
        lng = position.lng();
@@ -134,12 +154,6 @@
 
    });
 
-   $(document).ready(function() {
-       // prettyPrint();
-
-
-       // xhr.done(loadResults);
-   });
    var latlng;
 
    function calculateDistance(lat1, lon1, lat2, lon2, unit) {
@@ -173,6 +187,13 @@
 
        loadResults(data);
        printResults(data);
+
+       $('html, body').animate({
+           scrollTop: $('#storeFinderContainer').offset().top
+       }, 'slow');
+       var firstMarker = map.markers[0];
+       firstMarker.infoWindow.open();
+       google.maps.event.trigger(firstMarker, 'click');
 
    }
 
@@ -238,6 +259,7 @@
        e.preventDefault();
        var address = $('#addressEntry').val();
        GetLocation(address);
+
    });
 
    $('body').on('click', '.use-location', function(e) {

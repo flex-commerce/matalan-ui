@@ -83,7 +83,7 @@ require("./modules/dropdown");
 // ===========================
 
 // require("./modules/mapbox-init");
-
+require("./vendors/jquery.scrollto");
 require("./modules/google-maps-init");
 
 
