@@ -14,7 +14,7 @@
   });
 
   // close on click
-  $('body').on('touchend', '.modal-backdrop', function() {
+  $('body').on('pointerdown', '.modal-backdrop', function() {
     if (window.isMobileOrTablet.matches) {
       closeMiniBag();
     }

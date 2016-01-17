@@ -38,7 +38,7 @@ a {
     color: $primary-color;
     text-decoration: underline;
   }
-  &:focus {
+  &.link:focus {
     @include tab-focus();
   }
 }
