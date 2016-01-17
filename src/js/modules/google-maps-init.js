@@ -5,8 +5,10 @@
    var map;
    var listings = document.getElementById('listings');
 
-   function loadResults(data) {
+   function loadResults(data, longitude, latitude) {
        var items, markers_data = [];
+       var icon = '../../img/marker.svg';
+       var newicon = '../../img/marker-current.svg';
 
        if (data.length > 0) {
            items = data;
@@ -14,7 +16,7 @@
            for (var i = 0; i < items.length; i++) {
                var item = items[i];
                if (item.geometry.coordinates != undefined) {
-                   var icon = '../../img/marker.svg';
+
                    markers_data.push({
                        lat: item.geometry.coordinates[1],
                        lng: item.geometry.coordinates[0],
@@ -25,18 +27,13 @@
                            url: icon
                        },
                        infoWindow: {
-                           content: '<div class="c-info-window__title">' + item.properties.city + '</div>'
-                                  + '<div class="c-info-window__title">' + item.distance.toFixed(1) + ' miles away</div>'
-                                  + '<div class="c-info-window__title">' + item.properties.address + '</div>'
-                                  + '<div class="c-info-window__title">' + item.properties.postcode + '</div>'
-                                  + '<div class="c-info-window__title">' + item.properties.hours.replace(/\n/g, '<br />') + '</div>'
-                                  + '<div class="c-info-window__title"><a href="tel:' + item.properties.phone + '">' + item.properties.phoneFormatted + '</a></div>'
+                           content: '<div class="c-info-window__title">' + item.properties.city + '</div>' + '<div class="c-info-window__title">' + item.distance.toFixed(1) + ' miles away</div>' + '<div class="c-info-window__title">' + item.properties.address + '</div>' + '<div class="c-info-window__title">' + item.properties.postcode + '</div>' + '<div class="c-info-window__title">' + item.properties.hours.replace(/\n/g, '<br />') + '</div>' + '<div class="c-info-window__title"><a href="tel:' + item.properties.phone + '">' + item.properties.phoneFormatted + '</a></div>'
                        },
                        click: function(e) {
                            var element = $('[data-marker-index=' + e.id + ']');
                            setActive(element);
-                          // $('#store-' + e.id).get(0).scrollIntoView(-60);
-                          $('.o-store-locator__locations').scrollTo('#store-' + e.id)
+                           // $('#store-' + e.id).get(0).scrollIntoView(-60);
+                           $('.o-store-locator__locations').scrollTo('#store-' + e.id)
 
 
                        }
@@ -45,6 +42,18 @@
                }
            }
        }
+       markers_data.push({
+           lat: latitude,
+           lng: longitude,
+           title: 'Your location',
+           icon: {
+               size: new google.maps.Size(56, 56),
+               url: newicon
+           },
+           infoWindow: {
+               content: '<div class="c-info-window__title">Your location</div>'
+           },
+       });
        map.addMarkers(markers_data);
 
    }
@@ -185,7 +194,7 @@
            scrollwheel: false
        });
 
-       loadResults(data);
+       loadResults(data, longitude, latitude);
        printResults(data);
 
        $('html, body').animate({

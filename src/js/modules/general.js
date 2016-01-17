@@ -40,6 +40,14 @@
     $('.signup-success').show();
   });
 
+  $('#addressEntry').keypress(function(e) {
+    if (e.which == 13) {
+      e.preventDefault();
+      $(this).parent().find('a').click();
+    }
+  });
+
+
   $('input[name=deliveryaddress]').on('change',function(){
     $('.address-picker').toggle();
   });
