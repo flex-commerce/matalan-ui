@@ -24,8 +24,12 @@
     transition: all 600ms ease;
   }
 
-  .slick-slide .slick-zoom {
+  .slick-slide .slick-zoom,
+  .slick-slide .c-roundel {
     display: none;
+  }
+  .slick-slide.slick-center  .c-roundel {
+    display: block;
   }
 
   .slick-slide.slick-center .slick-zoom {

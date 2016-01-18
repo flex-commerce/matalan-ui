@@ -8,8 +8,13 @@
   right: 0;
 }
 
-
 .icon--vertical:before {
   vertical-align: middle;
+}
+
+.icon--vertical-middle:before {
+  vertical-align: middle;
+  line-height: 0;
+  @include center(y, abs);
 }
 
