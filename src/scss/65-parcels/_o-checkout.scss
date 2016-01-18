@@ -43,8 +43,33 @@
     color: $primary-color;
   }
 
+}
 
+.o-checkout--itemtable {
 
-
-
+}
+.checkout--item-total {
+  @include mq($until: md) {
+    text-align: right;
+  }
+}
+.checkout--item-image {
+  @include mq($from: lg) {
+    width: 220px;
+    img {
+      max-width: 80%;
+    }
+  }
+  @include mq($until: lg) {
+    width: 180px;
+    img {
+      max-width: 90%;
+    }
+  }
+  @include mq($until: md) {
+    width: 120px;
+    img {
+      max-width: 100%;
+    }
+  }
 }
