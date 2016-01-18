@@ -3,21 +3,28 @@
    // ===========================
    var GMaps = require('../vendors/gmaps');
    var map;
+   var mobilemap;
    var listings = document.getElementById('listings');
-  var data = require("json!../../data/locations.json");
+   var data = require("json!../../data/locations.json");
 
-   function loadResults(data, longitude, latitude) {
+   function loadResults(fulldata, longitude, latitude) {
        var items, markers_data = [];
        var icon = '../../img/marker.svg';
        var newicon = '../../img/marker-current.svg';
+       console.log(fulldata)
+       console.log(fulldata.length);
 
-       if (data.length > 0) {
-           items = data;
+       if (fulldata.length > 0) {
+           items = fulldata;
+
+           //console.log(items.length)
 
            for (var i = 0; i < items.length; i++) {
-               var item = items[i];
-               if (item.geometry.coordinates != undefined) {
 
+               var item = items[i];
+               // console.log(item)
+               if (item.geometry.coordinates != undefined) {
+                    // console.log('adding marker');
                    markers_data.push({
                        lat: item.geometry.coordinates[1],
                        lng: item.geometry.coordinates[0],
@@ -34,7 +41,9 @@
                            var element = $('[data-marker-index=' + e.id + ']');
                            setActive(element);
                            // $('#store-' + e.id).get(0).scrollIntoView(-60);
-                           $('.o-store-locator__locations').scrollTo('#store-' + e.id)
+                           if (longitude && latitude) {
+                               $('.o-store-locator__locations').scrollTo('#store-' + e.id);
+                           }
 
 
                        }
@@ -43,19 +52,27 @@
                }
            }
        }
-       markers_data.push({
-           lat: latitude,
-           lng: longitude,
-           title: 'Your location',
-           icon: {
-               size: new google.maps.Size(56, 56),
-               url: newicon
-           },
-           infoWindow: {
-               content: '<div class="c-info-window__title">Your location</div>'
-           },
-       });
-       map.addMarkers(markers_data);
+       if (longitude && latitude) {
+           markers_data.push({
+               lat: latitude,
+               lng: longitude,
+               title: 'Your location',
+               icon: {
+                   size: new google.maps.Size(56, 56),
+                   url: newicon
+               },
+               infoWindow: {
+                   content: '<div class="c-info-window__title">Your location</div>'
+               },
+           });
+           map.addMarkers(markers_data);
+       } else {
+        mobilemap.addMarkers(markers_data);
+       }
+
+
+
+
 
    }
 
@@ -128,17 +145,36 @@
            var details = detailsRow.appendChild(document.createElement('div'));
            details.className = "col-12@xs col-6@lg";
            var opening = details.appendChild(document.createElement('div'));
-           opening.className = 'o-store-locator__opening';
+           opening.className = 'o-store-locator__opening u-mar-t-large';
            opening.innerHTML = "";
            if (prop.hours) {
                opening.innerHTML += prop.hours.replace(/\n/g, '<br />');
            }
 
+           var callButton = listings.appendChild(document.createElement('div'));
+           callButton.className = 'o-store-call hidden@md-up u-cf';
+           callButton.innerHTML = '<a href="tel:' + prop.phone +'"class="c-btn c-btn-primary__alt col-12@xs u-font-upper u-mar-t-large"><i class="icon icon-telephone u-color-pri u-pad-r-huge icon--vertical-middle"></i>Call store</a>';
+
+           var openMapButton = listings.appendChild(document.createElement('div'));
+           openMapButton.className = 'o-store-map-open hidden@md-up u-cf';
+           openMapButton.innerHTML = '<a class="c-btn c-btn-primary__alt col-12@xs u-font-upper store-finder__map--mobile-open u-mar-v-large" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>View Map</a>';
+
+           var mapmobile = listings.appendChild(document.createElement('div'));
+           mapmobile.id = 'map-' + prop.storeid;
+           mapmobile.className = 'o-store-map-mobile u-mar-t-large';
+
+           var closeMapButton = listings.appendChild(document.createElement('div'));
+           closeMapButton.className = 'o-store-map-close hidden@md-up u-cf';
+           closeMapButton.innerHTML = '<a class="c-btn c-btn-primary__alt col-12@xs u-font-upper store-finder__map--mobile-close u-mar-t-large  u-mar-b-huge " data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>Close Map</a>';
+
        };
 
    }
 
-   $(document).on('click', '.pan-to-marker', function(e) {
+
+
+
+   $('body').on('click', '.pan-to-marker', function(e) {
        e.preventDefault();
        setActive($(this));
 
@@ -204,6 +240,53 @@
        var firstMarker = map.markers[0];
        firstMarker.infoWindow.open();
        google.maps.event.trigger(firstMarker, 'click');
+
+   }
+
+   $('body').on('click', '.store-finder__map--mobile-open', function(e) {
+      $('.o-store-map-close.mapActive a').trigger('click');
+      $(this).parent().prev().prev('a').trigger('click');
+       var storeId = $(this).data('storeid');
+       $(this).parent().hide();
+       $(this).parent().next().next('.o-store-map-close').show().addClass('mapActive');
+       generateMobileMap(storeId);
+       $(this).parent().next('.o-store-map-mobile').show();
+       var currCenter = mobilemap.map.getCenter();
+       google.maps.event.trigger(mobilemap.map, 'resize');
+       mobilemap.map.setCenter(currCenter);
+
+   });
+
+   $('body').on('click', '.store-finder__map--mobile-close', function(e) {
+
+    $(this).parent().prev('.o-store-map-mobile').html('').hide();
+    $(this).parent().hide();
+    $(this).parent().prev().prev('.o-store-map-open').show();
+
+   });
+
+   function generateMobileMap(storeId) {
+
+      var mobileData = [];
+
+       var result = _.find(data, function(o) {
+           return o.properties.storeid === storeId;
+       });
+
+       mobilemap = new GMaps({
+           div: '#map-' + storeId,
+           lat: result.geometry.coordinates[1],
+           lng: result.geometry.coordinates[0],
+           zoom: 16,
+           scrollwheel: false
+       });
+       mobileData.push(result);
+
+       loadResults(mobileData);
+
+       // var firstMarker = map.markers[0];
+       // firstMarker.infoWindow.open();
+       // google.maps.event.trigger(firstMarker, 'click');
 
    }
 

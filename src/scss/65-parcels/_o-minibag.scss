@@ -310,3 +310,15 @@ $minibag-desktop-width: 353px;
     background-color: $keyline-color;
   }
 }
+
+.separator__inline-text--unstyled {
+  position: relative;
+  height: 2em;
+
+  span {
+    position: absolute;
+    padding: 0 0.5em;
+    @include center($pos: abs);
+    @include font-size(12px);
+  }
+}
