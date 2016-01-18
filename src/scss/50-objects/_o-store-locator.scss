@@ -1,6 +1,7 @@
 .o-map-conatiner {
-  padding-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
+
 .o-store-locator {
     a:hover {
         text-decoration: none;
@@ -9,12 +10,16 @@
     .map-wrapper {
         position: relative;
         display: block;
-        height: 688px;
+        @include mq($from: md) {
+            height: 688px;
+        }
     }
     .o-store-locator__locations {
-        height: 600px;
+        @include mq($from: md) {
+            height: 600px;
+            overflow-y: auto;
+        }
         overflow-x: hidden;
-        overflow-y: auto;
     }
     .map {
         position: absolute;
@@ -24,12 +29,24 @@
         right: 0;
         width: 100%;
     }
+    .o-store-map-mobile {
+      display:none;
+      width: 100% !important;
+      height: 300px !important;
+    }
     .o-store-locator__listings-wrapper {
         padding-left: 30px;
         display: block;
         border-bottom: 1px solid #eee;
         text-decoration: none;
         position: relative;
+    }
+
+    .store-finder__map--mobile-open {
+
+    }
+    .o-store-map-close {
+      display:none;
     }
     .o-store-locator__listings-wrapper:hover {
         background-color: #f8f8f8;
@@ -71,12 +88,10 @@
         font-weight: 400;
     }
     .o-store-locator__listings-wrapper.active {
-        background-color: $light-grey;
-
-
+        background-color: #f8f8f8;;
         .o-store-locator__listings-content:before {
-          color: $primary-color;
-      }
+            color: $primary-color;
+        }
     }
     /* Marker tweaks */
     .leaflet-popup-close-button {
@@ -105,7 +120,6 @@
     .leaflet-container .leaflet-marker-icon {
         cursor: pointer;
     }
-
     .c-info-window__container {
         .c-info-window__title {
             font-family: 'Open Sans Condensed', sans-serif;

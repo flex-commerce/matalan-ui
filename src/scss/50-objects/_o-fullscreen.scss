@@ -49,7 +49,9 @@
         @include center(x);
         padding: 20px;
         margin: 20px 0;
-        top: 20%;
+        @include mq($from: md) {
+          top: 20%;
+        }
         background-color: rgba(255,255,255, 0.9);;
     }
 
