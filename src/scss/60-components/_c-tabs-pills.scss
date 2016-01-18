@@ -1,7 +1,8 @@
 $pill-spacing: rem-calc(4);
 $tab-spacing: rem-calc(8);
 $tab-border-width: rem-calc(1);
-$tab-background-colour: $dark-grey-lighten-40;
+$tab-background-colour: $cool-grey;
+$tab-background-colour-hover: $cool-grey-hover;
 $tab-border-color: #ddd;
 
 // ========================
@@ -76,19 +77,28 @@ $tab-border-color: #ddd;
 // ========================
 // pills global
 .c-tabs--pills {
-  .c-tabs__header__item {
-    > a:hover {
-      background-color: $tab-background-colour;
-      color: $white;
+  .c-tabs__header {
+    text-transform: uppercase;
+
+    a {
+      color: $dark-grey;
     }
 
-    &.active a {
-      background-color: $primary-color;
+    .active a {
       color: $white;
+    }
+  }
 
-      &:hover {
-        background-color: $primary-color-hover;
-      }
+  .c-tabs__header__item {
+    background-color: $light-grey;
+
+    &:hover {
+      background-color: $tab-background-colour-hover;
+    }
+
+    &.active {
+      background-color: $tab-background-colour;
+      color: $white;
     }
   }
 }
@@ -118,11 +128,66 @@ $tab-border-color: #ddd;
   }
 }
 
+// ================================================== //
+// Jusitifed tabs / pills
+html.no-flexbox {
+  .c-tabs--justified {
+    .c-tabs__header {
+      width: 100%;
+    }
 
+    .c-tabs__header__item {
+      display: table-cell;
+      width: 1%;
+      float: none;
+      text-align: center;
+    }
+  }
+}
 
+html.flexbox {
+  .c-tabs--justified {
+    .c-tabs__header {
+      display: flex;
+    }
+
+    .c-tabs__header__item {
+      flex: 1 0;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+// ================================================== //
 
 // misc rules - to be sorted
 // ========================
+
+.c-tabs--tab--horizontal {
+  .c-tabs__content {
+    padding: 10px 15px;
+    background-color: $white;
+  }
+}
+
+.c-tabs--pills--horizontal {
+  .c-tabs__content {
+    padding: 10px 0;
+    background-color: $white;
+  }
+}
+
+.c-tabs--pills--vertical, .c-tabs--tab--vertical {
+  .c-tabs__content {
+    padding: 0 15px;
+    background-color: $white;
+  }
+}
+
 .c-tabs__header__item > a {
   line-height: 1.42857143;
   position: relative;
@@ -131,11 +196,6 @@ $tab-border-color: #ddd;
 }
 
 .c-tabs--tab--horizontal .c-tabs__header__item.active {
-  background-color: $white;
-}
-
-.c-tabs__content {
-  padding: 10px 15px;
   background-color: $white;
 }
 
@@ -154,21 +214,6 @@ $tab-border-color: #ddd;
   }
 }
 
-// vertical tab colours inverted
-// .c-tabs__header__inverted .c-tabs__header__item {
-//   a {
-//     background-color: $tab-background-colour;
-//   }
-
-//   &.active {
-//     // margin-right: -$tab-border-width;
-//     border-right-color: red;
-
-//     a {
-//       background-color: $white;
-//     }
-//   }
-// }
 // ===============================
 
 // global tab colours
@@ -183,20 +228,8 @@ $tab-border-color: #ddd;
 
   .c-tabs__header__item:not(.active):hover {
     background-color: $cool-grey-hover;
-    a {
-      color: $white;
-    }
-  }
-}
 
-.c-tabs--tab--vertical,
-.c-tabs--pills {
-  .c-tabs__header {
     a {
-      color: $dark-grey;
-    }
-
-    .active a {
       color: $white;
     }
   }
@@ -207,42 +240,46 @@ $tab-border-color: #ddd;
 // TODO - quick temp rules for pdp accordion - more love needed here
 
 .c-tabs--responsive {
+  .active {
 
-    .active {
-      //outline: 1px dotted red;
-    }
+  }
 
-   @include mq($until: lg) {
-    // outline: 1px solid red;
+  @include mq($until: lg) {
+
     .c-tabs__content {
       padding: 0;
       border-style: none;
     }
+
     .c-tabs__header {
       display: none;
     }
+
     .c-tabs__header__item--accord {
-      background: #eee;
-      color: #666;
+      position: relative;
+      outline: 1px solid red;
+      // background: #eee;
+      // color: #666;
       padding: 10px 5px;
       margin-bottom: 5px;
+
       a {
         display: block;
       }
     }
-   }
+  }
 
-   @include mq($from: lg) {
+
+  @include mq($from: lg) {
     // outline: 1px solid green;
+
     .c-tabs__header a {
       // color: #aaa;
+
     }
+
     .c-tabs__header__item--accord {
       display: none;
     }
-   }
-
+  }
 }
-
-
-

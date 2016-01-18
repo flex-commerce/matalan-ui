@@ -51,7 +51,7 @@ $button-padding-y: $default-pad-y;
 }
 
 %c-btn-tertiary,
-.c-btn-tertiary {
+.c-btn.c-btn-tertiary {
   background: #aaa;
   @include style-variant($color: $white, $background: $dark-grey, $border: $dark-grey);
   &.hover,
@@ -63,7 +63,7 @@ $button-padding-y: $default-pad-y;
 }
 
 %c-btn-tertiary--alt,
-.c-btn-tertiary--alt {
+.c-btn.c-btn-tertiary--alt {
   @include style-variant($color: $dark-grey, $background: $white, $border: $cool-grey);
   &.hover,
   &:hover,

@@ -4,7 +4,7 @@
 
 // styles for off canvas version - < 1024px
 @include mq($until: lg) {
-  .c-navbar-container {
+  .c-navbar__container {
     @include fixed(top 0 bottom 0 left -85%);
      width: 85%;
      z-index: 1050;
@@ -222,7 +222,7 @@
     display: initial;
   }
 
-  .c-navbar-container .icon-minus {
+  .c-navbar__container .icon-minus {
     &:after {
       @include absolute(top 0 bottom 0 right 2em);
 
@@ -235,7 +235,7 @@
 
 
 @include mq($until: lg) {
-  .c-navbar-container {
+  .c-navbar__container {
     background: $white;
   }
 
@@ -272,7 +272,7 @@
 
 @include mq($from: lg) {
   .c-navbar {
-    @include bleed(50vw);
+    @include bleed(20vw);
 
     @include justify-parent;
   }
@@ -282,7 +282,7 @@
   }
 
   .sub-nav.open {
-    @include bleed(50vw);
+    @include bleed(20vw);
 
     padding-top: 1em;
     padding-bottom: 1em;
@@ -300,7 +300,7 @@
 .navbar__top-item,
 .navbar__footer {
   font-size: 11px;
-  // @include font-size(11px);
+  color: $dark-grey;
 }
 
 // header flex rules
@@ -391,14 +391,14 @@
     background-color: $white;
   }
 
-  .c-navbar-container {
+  .c-navbar__container {
     position: relative;
   }
 }
 
 
 @include mq($until: lg) {
-  .c-navbar-container {
+  .c-navbar__container {
     overflow-y: auto;
   }
 }

@@ -38,8 +38,16 @@ a {
     color: $primary-color;
     text-decoration: underline;
   }
-  &:focus {
+  &.link:focus {
     @include tab-focus();
+  }
+}
+
+a.link--nostyle {
+  &:hover,
+  &.active {
+    color: inherit;
+    text-decoration: none;
   }
 }
 
