@@ -2,123 +2,123 @@
 <html class="no-js" lang="">
 
 <head>
-    {{> partials/html-head }}
+  {{> partials/html-head }}
 </head>
 
 <body>
-    {{> parcels/header }}
-    <div class="container o-checkout__container">
+  {{> parcels/header }}
+  <div class="container o-checkout__container">
+    <div class="row">
+      <div class="col-12@xs col-12@lg">
         <div class="row">
-            <div class="col-12@xs col-12@lg">
-                <div class="row">
-                    <div class="col-12@xs u-mar-v-large">
-                        {{> partials/progress-checkout-5 }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12@xs account-created-container" style="display:none">
-                        <a id="loginButton" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr hidden@md-down">Login</a>
-                        <h4 class="u-color-pri">Your account has been created</h4>
-                        <p class="u-mar-t-medium">You are now able to login and view your order.</p>
-                    </div>
-                    <div class="col-12@xs create-account-container">
-                        <a id="checkoutCreateAccount" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr">Create account</a>
-                        <h4 class="u-color-pri">Thank you for your order</h4>
-                        <p class="u-mar-t-medium">Become part of the Matalan family and be the first to hear about the latest offers, news, collections, and much more.</p>
-                    </div>
-                    <div class="col-12@xs create-account-container u-mar-b-medium" style="display:none">
-                        <h4 class="u-color-pri">Create your account</h4>
-                        <p class="u-mar-t-medium">We are delighted to have you as part of the family. Al we ask is that you fill in the missing details
-                            <span class="u-color-pri">highlighted</span> in the form below:</p>
-                        <div class="row">
-                            <form id="createAccountForm" action="#" name="createAccountForm" class="o-form o-form--default">
-                                <div class="col-12@xs col-6@lg">
-                                    <div class="row">
-                                        <div class="col-12@xs col-6@lg">
-                                            <div class="o-form__row">
-                                                <div class="o-form__label-contain">
-                                                    <label class="">First Name:*</label>
-                                                </div>
-                                                <div class="o-form__input-contain">
-                                                    <input type="text" class="o-input o-input--textual" value="John" placeholder="First name" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12@xs col-6@lg">
-                                            <div class="o-form__row">
-                                                <div class="o-form__label-contain">
-                                                    <label class="">Last Name:*</label>
-                                                </div>
-                                                <div class="o-form__input-contain">
-                                                    <input type="text" class="o-input o-input--textual" value="Doe" placeholder="Last name" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12@xs col-6@lg">
-                                            <div class="o-form__row">
-                                                <div class="o-form__label-contain">
-                                                    <label class="">Email Address:*</label>
-                                                </div>
-                                                <div class="o-form__input-contain">
-                                                    <input type="text" class="o-input o-input--textual" value="john.doe@gmail.com" placeholder="Email address" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12@xs col-6@lg">
-                                            <div class="o-form__row">
-                                                <div class="o-form__label-contain">
-                                                    <label class="">Confirm Email Address:*</label>
-                                                </div>
-                                                <div class="o-form__input-contain">
-                                                    <input type="text" class="o-input o-input--textual" value="" placeholder="Confirm email address" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12@xs col-6@lg">
-                                            <div class="o-form__row">
-                                                <div class="o-form__label-contain">
-                                                    <label class="">Password:*</label>
-                                                </div>
-                                                <div class="o-form__input-contain">
-                                                    <input type="text" class="o-input o-input--textual" placeholder="Password" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12@xs col-6@lg">
-                                            <div class="o-form__row">
-                                                <div class="o-form__label-contain">
-                                                    <label class="">Confirm Password:*</label>
-                                                </div>
-                                                <div class="o-form__input-contain">
-                                                    <input type="text" class="o-input o-input--textual" placeholder="Confirm password" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" form="createAccountForm" class="c-btn c-btn-secondary__alt c-btn-block">Create Account</button>
-                                </div>
-                            </form>
-                            <div class="col-12@xs col-6@lg"></div>
+          <div class="col-12@xs u-mar-v-large">
+            {{> partials/progress-checkout-5 }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12@xs account-created-container" style="display:none">
+            <a id="loginButton" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr hidden@md-down">Login</a>
+            <h4 class="u-color-pri">Your account has been created</h4>
+            <p class="u-mar-t-medium">You are now able to login and view your order.</p>
+          </div>
+          <div class="col-12@xs create-account-container">
+            <a id="checkoutCreateAccount" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr">Create account</a>
+            <h4 class="u-color-pri">Thank you for your order</h4>
+            <p class="u-mar-t-medium">Become part of the Matalan family and be the first to hear about the latest offers, news, collections, and much more.</p>
+          </div>
+          <div class="col-12@xs create-account-container u-mar-b-medium" style="display:none">
+            <h4 class="u-color-pri">Create your account</h4>
+            <p class="u-mar-t-medium">We are delighted to have you as part of the family. Al we ask is that you fill in the missing details
+              <span class="u-color-pri">highlighted</span> in the form below:</p>
+              <div class="row">
+                <form id="createAccountForm" action="#" name="createAccountForm" class="o-form o-form--default">
+                  <div class="col-12@xs col-6@lg">
+                    <div class="row">
+                      <div class="col-12@xs col-6@lg">
+                        <div class="o-form__row">
+                          <div class="o-form__label-contain">
+                            <label class="">First Name:*</label>
+                          </div>
+                          <div class="o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual" value="John" placeholder="First name" />
+                          </div>
                         </div>
+                      </div>
+                      <div class="col-12@xs col-6@lg">
+                        <div class="o-form__row">
+                          <div class="o-form__label-contain">
+                            <label class="">Last Name:*</label>
+                          </div>
+                          <div class="o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual" value="Doe" placeholder="Last name" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12@xs col-6@lg">
+                        <div class="o-form__row">
+                          <div class="o-form__label-contain">
+                            <label class="">Email Address:*</label>
+                          </div>
+                          <div class="o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual" value="john.doe@gmail.com" placeholder="Email address" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12@xs col-6@lg">
+                        <div class="o-form__row">
+                          <div class="o-form__label-contain">
+                            <label class="">Confirm Email Address:*</label>
+                          </div>
+                          <div class="o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual" value="" placeholder="Confirm email address" />
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
-                <div class="separator"></div>
-                <div class="row">
-                    <div class="col-12@xs">
-                        <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small u-fr hidden@md-down">Print Page</a>
-                        <h4 class="u-color-pri">Order Confirmation</h4>
-                        <p class="u-mar-t-medium">Your order number is:
-                            <strong class="u-font-upper">Order Number</strong>
-                        </p>
-                        <p>Email confirmation has been sent to:
-                            <strong class="u-font-upper">Email Address</strong>
-                        </p>
+                    <div class="row">
+                      <div class="col-12@xs col-6@lg">
+                        <div class="o-form__row">
+                          <div class="o-form__label-contain">
+                            <label class="">Password:*</label>
+                          </div>
+                          <div class="o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual" placeholder="Password" />
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                    <div class="row">
+                      <div class="col-12@xs col-6@lg">
+                        <div class="o-form__row">
+                          <div class="o-form__label-contain">
+                            <label class="">Confirm Password:*</label>
+                          </div>
+                          <div class="o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual" placeholder="Confirm password" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" form="createAccountForm" class="c-btn c-btn-secondary__alt c-btn-block">Create Account</button>
+                  </div>
+                </form>
+                <div class="col-12@xs col-6@lg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="separator"></div>
+          <div class="row">
+            <div class="col-12@xs">
+              <a class="c-btn c-btn-primary__alt u-font-upper u-mar-t-small u-fr hidden@md-down">Print Page</a>
+              <h4 class="u-color-pri">Order Confirmation</h4>
+              <p class="u-mar-t-medium">Your order number is:
+                <strong class="u-font-upper">Order Number</strong>
+              </p>
+              <p>Email confirmation has been sent to:
+                <strong class="u-font-upper">Email Address</strong>
+              </p>
+            </div>
+          </div>
                 <!--                 <div class="row">
                   <div class="col-6@xs u-mar-t-medium">
                     <h4>Create Account</h4>
@@ -151,74 +151,99 @@
                   </div>
                 </div> -->
                 <div class="row">
-                    <div class="col-12@xs u-mar-v-large">
-                        <div class="auto-column-2 u-pad-medium u-border2">
-                            <div class="auto-column--nobreak">
-                                <h5 class="u-mar-b-medium u-font-upper u-color-pri">Delivery Address</h5>
-                                <ul>
-                                    <li>Mr John Doe</li>
-                                    <li>Dow</li>
-                                    <li>0 John Doe Avenue</li>
-                                    <li>United Kingdom</li>
-                                    <li>AB1 CD2</li>
-                                </ul>
-                            </div>
-                            <div class="auto-column--nobreak">
-                                <h5 class="u-mar-b-medium u-font-upper u-color-pri">Billing Address</h5>
-                                <ul>
-                                    <li>Mr John Doe</li>
-                                    <li>Dow</li>
-                                    <li>0 John Doe Avenue</li>
-                                    <li>United Kingdom</li>
-                                    <li>AB1 CD2</li>
-                                </ul>
-                            </div>
-                        </div>
+                  <div class="col-12@xs u-mar-v-large">
+                    <div class="auto-column-2 u-pad-medium u-border2">
+                      <div class="auto-column--nobreak u-mar-b-medium">
+                        <h5 class="u-mar-b-medium u-font-upper u-color-pri">Delivery Address</h5>
+                        <ul>
+                          <li>Mr John Doe</li>
+                          <li>Dow</li>
+                          <li>0 John Doe Avenue</li>
+                          <li>United Kingdom</li>
+                          <li>AB1 CD2</li>
+                        </ul>
+                      </div>
+                      <div class="auto-column--nobreak u-mar-b-medium">
+                        <h5 class="u-mar-b-medium u-font-upper u-color-pri">Billing Address</h5>
+                        <ul>
+                          <li>Mr John Doe</li>
+                          <li>Dow</li>
+                          <li>0 John Doe Avenue</li>
+                          <li>United Kingdom</li>
+                          <li>AB1 CD2</li>
+                        </ul>
+                      </div>
                     </div>
-                    <div class="col-12@xs">
-                        <table class="c-table c-table--spaced">
-                            <thead>
-                                <tr class="u-border2-b">
-                                    <th style="width: 180px; max-width: 180px">Your items</th>
-                                    <th>&nbsp;</th>
-                                    <th>Quantity</th>
-                                    <th>You Save</th>
-                                    <th>Subtotal</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {{#each minibag.category.collection.products}}
-                                <tr class="u-border2-b">
-                                    <td>
-                                        <div style="max-width: 150px">
-                                            <img class="img" src="{{productImages.[0]}}">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="h6">{{productTitle}}</p>
-                                        <p class="">Colour</p>
-                                        <p>Size: Value</p>
-                                        <p>Detail: S0000000</p>
-                                    </td>
-                                    <td>
-                                        <p>1</p>
-                                    </td>
-                                    <td>
-                                        <p>&pound;0.00</p>
-                                    </td>
-                                    <td>
-                                        <p>{{productPrice}}</p>
-                                    </td>
-                                </tr>
-                                {{/each}}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{> parcels/footer }} {{> partials/js-footer}}
-</body>
+                  </div>
 
-</html>
+                  <div class="col-12@xs">
+                    <table class="c-table c-table--spaced o-checkout--itemtable">
+                      <thead>
+                        <tr class="u-border2-b">
+                          <th class="u-pad-v-small">Your items</th>
+                          <th>&nbsp;</th>
+                          <th class="u-pad-v-small hidden@sm-down">Quantity</th>
+                          <th class="u-pad-v-small hidden@sm-down">You Save</th>
+                          <th class="u-pad-v-small checkout--item-total">Subtotal</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {{#each minibag.category.collection.products}}
+                        <tr class="u-border2-b">
+                          <td class="checkout--item-image u-pad-r-medium">
+                            <div class="">
+                              <img class="img" src="{{productImages.[0]}}">
+                            </div>
+                          </td>
+                          <td>
+                            <p class="detail--description u-font-wb">V Neck Sequin Trim Tunic</p>
+                            <ul class="detail--vars u-pad-b-small list-space__small">
+                              <li class="list__item hidden@md-up"><strong>Quantity: </strong>1</li>
+                              <li class="list__item"><strong>Color: </strong>
+                                <span class="color-swatch__inline u-bgcolor-cgrey"></span>
+                              </li>
+                              <li class="list__item"><strong>Size: </strong>Small</li>
+                              <li class="list__item hidden@sm-down"><strong>Details: </strong>S0000000</li>
+                            </ul>
+                          </td>
+                          <td class="hidden@sm-down">
+                            <p>1</p>
+                          </td>
+                          <td class="hidden@sm-down">
+                            <p>&pound;0.00</p>
+                          </td>
+                          <td class="checkout--item-total">
+                            <p>{{productPrice}}</p>
+                          </td>
+                        </tr>
+                        {{/each}}
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="2" class="hidden@sm-down">&nbsp;</td>
+                          <td colspan="3">
+                            <dl class="o-deflist-right">
+                              <dt>Subtotal</dt>
+                              <dd>&pound;0.00</dd>
+                              <dt>Shipping</dt>
+                              <dd>&pound;0.00</dd>
+                              <dt><strong>Total, including VAT</strong></dt>
+                              <dd><strong>&pound;0.00</strong></dd>
+                            </dl>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          {{> parcels/footer }}
+          {{> partials/js-footer}}
+        </body>
+
+        </html>

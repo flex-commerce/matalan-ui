@@ -32,6 +32,11 @@ $border-thickness: 5px;
     display: flex;
     justify-content: space-between;
 }
+.flexer--vertical {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 
