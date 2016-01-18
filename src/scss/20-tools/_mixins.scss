@@ -65,7 +65,7 @@
 }
 
 @mixin auto-columns($number) {
-  columns: $number 10em;
+  columns: $number 15em;
 }
 
 @mixin auto-column-generate {
