@@ -65,7 +65,10 @@ em {
   font-style: italic;
 }
 
-
+.title--page-title {
+  @extend .h3;
+  // font-weight: 600;
+}
 
 
 

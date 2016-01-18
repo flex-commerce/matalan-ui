@@ -177,20 +177,20 @@
                   </div>
 
                   <div class="col-12@xs">
-                    <table class="c-table c-table--spaced o-checkout--itemtable">
+                    <table class="c-table c-table--spaced o-orderlist--itemtable">
                       <thead>
                         <tr class="u-border2-b">
                           <th class="u-pad-v-small">Your items</th>
                           <th>&nbsp;</th>
                           <th class="u-pad-v-small hidden@sm-down">Quantity</th>
                           <th class="u-pad-v-small hidden@sm-down">You Save</th>
-                          <th class="u-pad-v-small checkout--item-total">Subtotal</th>
+                          <th class="u-pad-v-small orderlist--item-total">Subtotal</th>
                         </tr>
                       </thead>
                       <tbody>
                         {{#each minibag.category.collection.products}}
                         <tr class="u-border2-b">
-                          <td class="checkout--item-image u-pad-r-medium">
+                          <td class="orderlist--item-image u-pad-r-medium">
                             <div class="">
                               <img class="img" src="{{productImages.[0]}}">
                             </div>
@@ -212,7 +212,7 @@
                           <td class="hidden@sm-down">
                             <p>&pound;0.00</p>
                           </td>
-                          <td class="checkout--item-total">
+                          <td class="orderlist--item-total">
                             <p>{{productPrice}}</p>
                           </td>
                         </tr>

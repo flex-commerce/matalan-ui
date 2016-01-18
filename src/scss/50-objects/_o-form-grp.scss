@@ -173,6 +173,29 @@ $input-padding-y: $default-pad-y;
     padding: .5em;
   }
 }
+
+.o-form--wide {
+  .o-option--inline,
+  .o-option--block {
+    padding: .5em 0;
+  }
+
+  .o-form__label-contain {
+    padding: .5em;
+  }
+}
+
+.o-form--inline {
+  .o-option--inline,
+  .o-option--block {
+    padding: .5em 0;
+  }
+
+  .o-form__label-contain {
+    padding: .5em 0;
+  }
+}
+
 // end labels
 
 // custom border rules for inputs with addons
@@ -201,6 +224,7 @@ $input-padding-y: $default-pad-y;
 // TODO this to be moved
 .sign-up--button {
   @include form-item-size;
+
   height: 100%;
   border: 1px solid $cool-grey;
   text-transform: uppercase;
@@ -210,7 +234,6 @@ $input-padding-y: $default-pad-y;
 // TODO - this to be moved / modularised
 // handles display of card selection on checkout
 .o-form-input--card-select {
-
   [type=radio] + span {
     margin: 0;
   }

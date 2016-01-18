@@ -1,28 +1,64 @@
+.o-cards-secure {
+  &.o-cards-secure--mybag {
+    flex: 1 0;
+
+    @include mq($from: md) {
+      text-align: right;
+    }
+
+
+    .svg {
+      width: 100%;
+
+      @include mq($until: lg) {
+        padding: 0 0.25em;
+        height: 2em;
+        max-width: 60px;
+      }
+
+
+      @include mq($from: lg) {
+        padding: 0 0.5em;
+        height: 3em;
+        max-width: 80px;
+      }
+    }
+  }
+}
+
 .o-checkout__container {
-  @include clearfix();
+  @include clearfix;
+
   fieldset {
-    @include clearfix();
+    @include clearfix;
+
     position: relative;
+
     // .icon {
     //   @include center(y, abs);
     //   right: 0;
+
     //   &:before {
     //     color: $cool-grey;
     //   }
 
     // }
+
     .o-checkout__title {
       font-weight: 600;
       cursor: pointer;
       position: relative;
       color: $dark-grey-lighten-40;
     }
+
     .o-checkout__content {
       display: none;
+
       &.active {
         display: block;
       }
     }
+
     &.active,
     &.completed {
       .o-checkout__content {
@@ -42,32 +78,38 @@
   .icon-small-tick:before {
     color: $primary-color;
   }
-
 }
 
-.o-checkout--itemtable {
+.o-orderlist--itemtable {}
 
-}
-.checkout--item-total {
+.orderlist--item-total {
   @include mq($until: md) {
     text-align: right;
   }
 }
-.checkout--item-image {
+
+.orderlist--item-image {
   @include mq($from: lg) {
     width: 220px;
+
     img {
       max-width: 80%;
     }
   }
+
+
   @include mq($until: lg) {
     width: 180px;
+
     img {
       max-width: 90%;
     }
   }
+
+
   @include mq($until: md) {
     width: 120px;
+
     img {
       max-width: 100%;
     }
