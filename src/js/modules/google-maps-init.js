@@ -4,6 +4,7 @@
    var GMaps = require('../vendors/gmaps');
    var map;
    var listings = document.getElementById('listings');
+  var data = require("json!../../data/locations.json");
 
    function loadResults(data, longitude, latitude) {
        var items, markers_data = [];
@@ -215,7 +216,7 @@
                $('.o-map-conatiner').show();
                var latitude = results[0].geometry.location.lat();
                var longitude = results[0].geometry.location.lng();
-               var data = require("json!../../data/locations.json");
+
 
                for (var i = 0; i < data.length; i++) {
                    data[i]["distance"] = calculateDistance(latitude, longitude, data[i].geometry.coordinates[1], data[i].geometry.coordinates[0], "K");
@@ -239,7 +240,6 @@
                $('.o-map-conatiner').show();
                var latitude = position.coords.latitude;
                var longitude = position.coords.longitude;
-               var data = require("json!../../data/locations.json");
 
                for (var i = 0; i < data.length; i++) {
                    data[i]["distance"] = calculateDistance(latitude, longitude, data[i].geometry.coordinates[1], data[i].geometry.coordinates[0], "K");

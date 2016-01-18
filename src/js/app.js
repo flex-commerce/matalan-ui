@@ -398,6 +398,8 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 };
             },
             bgOpacity : 0.5,
+            disableAnimation, true,
+            hideAnimationDuration:0,
             showAnimationDuration: 0
 
         };
