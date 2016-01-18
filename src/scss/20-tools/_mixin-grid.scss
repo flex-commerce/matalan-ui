@@ -56,6 +56,11 @@ $susy: (
   max-width: $container-maxwidth;
 }
 
+.container--fluid {
+  @include make-container();
+}
+
+
 body > .container {
   padding-bottom: 60px;
 }

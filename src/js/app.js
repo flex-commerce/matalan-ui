@@ -7,6 +7,9 @@ require("lodash");
 // ===========================
 
 
+// ===========================
+// setup detection for mobile or tablet
+// ===========================
 window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
 
 $(document).ready(function() {
@@ -16,12 +19,38 @@ $(document).ready(function() {
 });
 
 // console.log('isMobileOrTablet', window.isMobileOrTablet.matches) // true | false
-
 // $(window).on('resize', _.debounce(function() {
 //   console.log('isMobileOrTablet', window.isMobileOrTablet.matches) // true | false
 // }));
 
+// ===========================
+// end setup detection for mobile or tablet
+// ===========================
 
+require("pepjs");
+// pepjs added to bring some sensibility to ios touch events. to investigate buggy ipad behaviour yet.
+
+// cross touch / mouse events are now available via
+// pointermove:   pointer moves, similar to touchmove or mousemove.
+// pointerdown:   pointer is activated, or a device button held.
+// pointerup:     pointer is deactivated, or a device button released.
+// pointerover:   pointer has moved onto an element.
+// pointerout:    pointer is no longer on an element it once was.
+// pointerenter:  pointer enters the bounding box of an element.
+// pointerleave:  pointer leaves the bounding box of an element.
+// pointercancel: pointer will no longer generate events.
+
+
+// ===========================
+// pointer events polyfill
+// ===========================
+
+
+
+
+// ===========================
+// end pointer events polyfill
+// ===========================
 
 
 // ===========================

@@ -54,7 +54,7 @@ select, .selectbox-dropdown {
 .selectbox-active {
   &:not(.selectbox-disabled) {
     // hover here is only triggered during open state, otherwise only options show focus
-    @include tab-focus;
+/*     @include tab-focus; */
   }
 }
 .selectbox-dropdown.selectbox-menushowing-bottom {}
