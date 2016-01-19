@@ -303,26 +303,26 @@ $('.o-product__slider').slickLightbox();
 
 
 
-$(document).ready(function() {
-  $(yourLightBoxRef).slickLightbox().on({
-    'show.slickLightbox': function(){
+// $(document).ready(function() {
+//   $(yourLightBoxRef).slickLightbox().on({
+//     'show.slickLightbox': function(){
 
 
-    },
-    'shown.slickLightbox': function(){
-        $('.slick-next').appendTo('.slick-active .slick-lightbox-slick-item-inner');
+//     },
+//     'shown.slickLightbox': function(){
+//         $('.slick-next').appendTo('.slick-active .slick-lightbox-slick-item-inner');
 
-    },
-    'hide.slickLightbox': function(){
+//     },
+//     'hide.slickLightbox': function(){
 
 
-    },
-    'hidden.slickLightbox': function(){
+//     },
+//     'hidden.slickLightbox': function(){
 
-    }
-  });
+//     }
+//   });
 
-});
+// });
 
 
 

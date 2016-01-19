@@ -18,17 +18,19 @@
 
 $navContain.on('show.bs.modal', function (e) {
   $parentNavMenu.addClass("active");
+  $('body').addClass("modal-open--nav");
 });
 
 $navContain.on('hide.bs.modal', function (e) {
   $parentNavMenu.removeClass("active");
+  $('body').removeClass("modal-open--nav");
 });
 
-// $('body').on('pointerdown pointerup', '.modal-backdrop', function() {
-//   if (window.isMobileOrTablet.matches) {
-//     $navContain.modal('hide');
-//   }
-// });
+$('body').on('pointerdown', '.modal-backdrop', function() {
+  if (window.isMobileOrTablet.matches) {
+    $navContain.modal('hide');
+  }
+});
 
 // $('#minibag-contain').on('hidden.bs.modal', function (e) {
 //   tether.disable();
