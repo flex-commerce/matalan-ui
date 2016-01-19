@@ -18,10 +18,12 @@
 
 $navContain.on('show.bs.modal', function (e) {
   $parentNavMenu.addClass("active");
+  $('body').addClass("modal-open--nav");
 });
 
 $navContain.on('hide.bs.modal', function (e) {
   $parentNavMenu.removeClass("active");
+  $('body').removeClass("modal-open--nav");
 });
 
 $('body').on('pointerdown', '.modal-backdrop', function() {

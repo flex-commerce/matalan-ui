@@ -4,6 +4,7 @@
 .developer-tools {
   @include fixed (top 1em left 1em);
   opacity: 0.4;
+  z-index: 9999;
   &:hover {
     opacity: 1;
   }

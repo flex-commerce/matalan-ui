@@ -74,7 +74,7 @@
                     <li class="list__item">Qty: val</li>
                     <li class="list__item">Size: Small</li>
                   </ul>
-                  <ul class="detail--price list-space__small hidden@sm-down">
+                  <ul class="detail--price list-space__small">
                     <li class="list__item">
                       <strong>{{productPrice}}</strong>
                     </li>
@@ -119,16 +119,23 @@
                 {{/ each }}
               </ul>
             </div>
+
+            <div class="separator"></div>
+
             <div class="col-12@xs">
               <div class="o-minibag--footer u-mar-t-large">
                 <ul class="o-minibag--action--contain">
                   <li class="o-minibag--list-actions">
-                    <form action="" class="o-form o-form--inline">
+
+
+                  <form action="" class="o-form o-form--default">
                       <div class="o-form__row u-pad-b-none">
                         <div class="o-form__label-contain">
                           <label class="o-form__label-primary u-font-upper">Promo Code</label>
                         </div>
                       </div>
+
+
                       <div class="o-form__row">
                         <div class="row">
                           <div class="col-6@xs col-3@md">
@@ -145,6 +152,8 @@
                         </div>
                       </div>
                     </form>
+
+
                   </li>
                   <li class="separator u-mar-v-large"></li>
                   <li class="row">

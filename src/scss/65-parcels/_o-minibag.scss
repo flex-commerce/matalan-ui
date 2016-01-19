@@ -266,8 +266,8 @@ $minibag-desktop-width: 353px;
 
 .o-minibag--list-total, .o-minibag--list-checkout {
   @include mq($from: lg) {
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+    // padding-left: 0.75em;
+    // padding-right: 0.75em;
   }
 }
 

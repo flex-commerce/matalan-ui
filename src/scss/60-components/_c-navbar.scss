@@ -19,6 +19,12 @@ body {
   // overflow-x: hidden;
 }
 
+.modal-open--nav {
+  .o-nav__container {
+    z-index: 1060;
+  }
+}
+
 .o-nav__container {
   max-width: 100vw;
   overflow-y: visible;
