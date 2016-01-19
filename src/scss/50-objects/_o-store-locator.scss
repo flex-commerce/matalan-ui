@@ -88,6 +88,9 @@
         font-weight: 400;
     }
     .o-store-locator__listings-wrapper.active {
+          // border-top: 2px solid $primary-color;
+          // border-bottom: 2px solid $primary-color;
+
         background-color: #f8f8f8;;
         .o-store-locator__listings-content:before {
             color: $primary-color;

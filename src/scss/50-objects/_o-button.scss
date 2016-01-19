@@ -7,7 +7,6 @@ $button-padding-y: $default-pad-y;
   border-width: 1px;
   cursor: pointer;
   text-align: center;
-  font-weight: bold;
   @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
   &:active,
   &.active,
