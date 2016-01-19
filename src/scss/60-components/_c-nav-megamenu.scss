@@ -264,6 +264,7 @@
 
 // element bleed mixin - @todo - investigate why this breaks when moved to mixin file
 @mixin bleed($bleedval: 50vw) {
+  // width: 100vw;
   margin-left: -$bleedval;
   margin-right: -$bleedval;
   padding-left: $bleedval;
@@ -272,7 +273,7 @@
 
 @include mq($from: lg) {
   .c-navbar {
-    @include bleed(20vw);
+    // @include bleed(30vw);
 
     @include justify-parent;
   }
@@ -282,12 +283,12 @@
   }
 
   .sub-nav.open {
-    @include bleed(20vw);
+    @include bleed(30vw);
 
     padding-top: 1em;
     padding-bottom: 1em;
-    margin: 0 auto;
-    max-width: 100%;
+    // margin: 0 auto;
+    // max-width: 100%;
     border-bottom: 1px solid $secondary-color;
 
     // reset justify above
@@ -375,14 +376,23 @@
   }
 }
 
-.body--modal-open__nav {
-  .accessible-navmenu.c-navbar {
-    z-index: 10;
-    background: $white;
-  }
-}
+
 
 @include mq($from: lg) {
+  .o-nav__container {
+    background: #fff;
+  }
+  .body--modal-open__nav {
+    overflow-x: hidden;
+    .c-navbar__container {
+      z-index: 10;
+      background: $white;
+    }
+    .accessible-navmenu.c-navbar {
+    }
+  }
+
+
   .navbar__nav-menu-icons {
     display: none;
   }
