@@ -12,12 +12,14 @@ $minibag-desktop-width: 353px;
   body.modal-open {
     .o-minibag-contain {
       pointer-events: none;
+
       > * {
         pointer-events: auto;
       }
     }
   }
 }
+
 
 // flexbox here to allow the inner panel to expand to max allowed size
 // flex start ======================================
@@ -96,14 +98,71 @@ $minibag-desktop-width: 353px;
 
   .o-minibag--inner {
     max-height: 260px;
-
     // magic height
-
   }
 
-  .o-minibag--list-item--control {
-    text-align: right;
-    padding: 0;
+
+  .o-orderlist--itemtable.o-orderlist--mybag-full {
+
+    .o-minibag--list-item--control {
+      text-align: right;
+      padding: 0;
+    }
+
+    .o-orderlist--itemtable {
+      display: table;
+    }
+
+    .o-minibag--list-item {
+      display: table-row;
+
+      .o-minibag--list-item--image,
+      .o-minibag--list-item--detail,
+      .o-minibag--list-item--control,
+      .o-minibag--list-item--price-col {
+        display: table-cell;
+        vertical-align: top;
+        float: none;
+        border-bottom: 1px solid $cool-grey;
+        padding: 1em 0 1em 0;
+      }
+
+
+      .o-minibag--list-item--image {
+        width: 20%;
+      }
+      .o-minibag--list-item--detail {
+        width: 25%;
+      }
+      .o-minibag--list-item--control {
+        width: 20%;
+        text-align: left;
+      }
+      .o-minibag--list-item--price--save {
+        width: auto;
+      }
+      .o-minibag--list-item--price--total {
+        width: 10%;
+      }
+
+      .o-minibag--list-item--image {
+        img {
+          max-width: 90%;
+          margin-right: 2em;
+        }
+      }
+    }
+
+    .o-minibag--list__header {
+      display: table-row;
+
+      .o-minibag--list__header__item {
+        float: none;
+        display: table-cell;
+        padding-bottom: 1em;
+        border-bottom: 1px solid $cool-grey;
+      }
+    }
   }
 }
 
@@ -140,8 +199,10 @@ $minibag-desktop-width: 353px;
   // position: relative;
   // z-index: 10;
   // pointer-events: none;
+
   .o-minibag {
     // pointer-events: auto;
+
   }
 }
 
@@ -160,7 +221,7 @@ $minibag-desktop-width: 353px;
 
 // separators, borders, and padding begin ======================================
 .o-minibag {
-/*   padding-top: 1.5em; */
+  /*   padding-top: 1.5em; */
   padding-bottom: 1em;
 
   .o-minibag--header,
@@ -318,7 +379,9 @@ $minibag-desktop-width: 353px;
   span {
     position: absolute;
     padding: 0 0.5em;
+
     @include center($pos: abs);
+
     @include font-size(12px);
   }
 }
