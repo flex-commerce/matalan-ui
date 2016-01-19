@@ -63,25 +63,25 @@ var tether;
 var tetherTarget = $('.checkout-bag');
 var tetherElement = $('.o-minibag-contain');
 
-$('#minibag-contain').on('shown.bs.modal', function (e) {
+$('#minibag-contain').on('shown.bs.modal', function(e) {
 
-  if (!window.isMobileOrTablet.matches) {
-    // for minibag click shower
-    tether = new Tether({
-      element: tetherElement,
-      target: tetherTarget,
-      attachment: 'top right',
-      targetAttachment: 'bottom right'
-    });
-  } else {
-    // $('#minibag-contain').attr('style', '');
-  }
-  tether.position();
+    if (!window.isMobileOrTablet.matches) {
+        // for minibag click shower
+        tether = new Tether({
+            element: tetherElement,
+            target: tetherTarget,
+            attachment: 'top right',
+            targetAttachment: 'bottom right'
+        });
+    } else {
+        // $('#minibag-contain').attr('style', '');
+    }
+    tether.position();
 });
 
-$('#minibag-contain').on('hidden.bs.modal', function (e) {
-  tether.disable();
-  $('#minibag-contain').attr('style', '');
+$('#minibag-contain').on('hidden.bs.modal', function(e) {
+    tether.disable();
+    $('#minibag-contain').attr('style', '');
 });
 
 
@@ -284,8 +284,12 @@ $('.o-section-department__slick').slick({
 //   $('.slick-active').prev().addClass('slick-item-prev');
 //   $('.slick-active').next().addClass('slick-item-next');
 // });
-var PhotoSwipe = require("./vendors/photoswipe");
-var PhotoSwipeUI_Default = require("./vendors/photoswipe-ui");
+// var PhotoSwipe = require("./vendors/photoswipe");
+// var PhotoSwipeUI_Default = require("./vendors/photoswipe-ui");
+//
+var slickLightbox = require("./vendors/slick-lightbox");
+
+
 
 $('.o-product__slider').slick({
     infinite: true,
@@ -295,196 +299,31 @@ $('.o-product__slider').slick({
     centerPadding: '40px'
 });
 
-
-var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-    // parse slide data (url, title, size ...) from DOM elements
-    // (children of gallerySelector)
-    var parseThumbnailElements = function(el) {
-        var thumbElements = el.childNodes,
-            numNodes = thumbElements.length,
-            items = [],
-            figureEl,
-            linkEl,
-            size,
-            item;
-
-        for (var i = 0; i < numNodes; i++) {
-
-            figureEl = thumbElements[i]; // <figure> element
-
-            // include only element nodes
-            if (figureEl.nodeType !== 1) {
-                continue;
-            }
-
-            linkEl = figureEl.children[0]; // <a> element
-
-            size = linkEl.getAttribute('data-size').split('x');
-
-            // create slide object
-            item = {
-                src: linkEl.getAttribute('href'),
-                w: parseInt(size[0], 10),
-                h: parseInt(size[1], 10)
-            };
+$('.o-product__slider').slickLightbox();
 
 
 
-            if (figureEl.children.length > 1) {
-                // <figcaption> content
-                item.title = figureEl.children[1].innerHTML;
-            }
-
-            if (linkEl.children.length > 0) {
-                // <img> thumbnail element, retrieving thumbnail url
-                item.msrc = linkEl.children[0].getAttribute('src');
-            }
-
-            item.el = figureEl; // save link to element for getThumbBoundsFn
-            items.push(item);
-        }
-
-        return items;
-    };
-
-    // find nearest parent element
-    var closest = function closest(el, fn) {
-        return el && (fn(el) ? el : closest(el.parentNode, fn));
-    };
-
-    // triggers when user clicks on thumbnail
-    var onThumbnailsClick = function(e) {
-        e = e || window.event;
-        e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-        var eTarget = e.target || e.srcElement;
-
-        // find root element of slide
-        var clickedListItem = closest(eTarget, function(el) {
-            return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
-        });
-
-        if (!clickedListItem) {
-            return;
-        }
-
-        // find index of clicked item by looping through all child nodes
-        // alternatively, you may define index via data- attribute
-        var clickedGallery = clickedListItem.parentNode,
-            childNodes = clickedListItem.parentNode.childNodes,
-            numChildNodes = childNodes.length,
-            nodeIndex = 0,
-            index;
-
-        for (var i = 0; i < numChildNodes; i++) {
-            if (childNodes[i].nodeType !== 1) {
-                continue;
-            }
-
-            if (childNodes[i] === clickedListItem) {
-                index = nodeIndex;
-                break;
-            }
-            nodeIndex++;
-        }
+$(document).ready(function() {
+  $(yourLightBoxRef).slickLightbox().on({
+    'show.slickLightbox': function(){
 
 
+    },
+    'shown.slickLightbox': function(){
+        $('.slick-next').appendTo('.slick-active .slick-lightbox-slick-item-inner');
 
-        if (index >= 0) {
-            // open PhotoSwipe if valid index found
-            openPhotoSwipe(index, clickedGallery);
-        }
-        return false;
-    };
-
-    // parse picture index and gallery index from URL (#&pid=1&gid=2)
-
-    var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
-        var pswpElement = document.querySelectorAll('.pswp')[0],
-            gallery,
-            options,
-            items;
-
-        items = parseThumbnailElements(galleryElement);
-
-        // define options (if needed)
-        options = {
-            //             loop:false,
-            // define gallery index (for URL)
-            galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-            getThumbBoundsFn: function(index) {
-                // See Options -> getThumbBoundsFn section of documentation for more info
-                var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                    rect = thumbnail.getBoundingClientRect();
-
-                return {
-                    x: rect.left,
-                    y: rect.top + pageYScroll,
-                    w: rect.width
-                };
-            },
-            bgOpacity : 0.5,
-            disableAnimation, true,
-            hideAnimationDuration:0,
-            showAnimationDuration: 0
-
-        };
-
-        // PhotoSwipe opened from URL
-        if (fromURL) {
-            if (options.galleryPIDs) {
-                // parse real index when custom PIDs are used
-                // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-                for (var j = 0; j < items.length; j++) {
-                    if (items[j].pid == index) {
-                        options.index = j;
-                        break;
-                    }
-                }
-            } else {
-                // in URL indexes start from 1
-                options.index = parseInt(index, 10) - 1;
-            }
-        } else {
-            options.index = parseInt(index, 10);
-        }
-
-        // exit if index not found
-        if (isNaN(options.index)) {
-            return;
-        }
-
-        if (disableAnimation) {
-            options.showAnimationDuration = 0;
-        }
-
-        // Pass data to PhotoSwipe and initialize it
-        gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-        gallery.init();
-        var psIndex = gallery.getCurrentIndex();
-        var psIndexSlick = psIndex - 1;
-    };
+    },
+    'hide.slickLightbox': function(){
 
 
-    // loop through all gallery elements and bind events
-    var galleryElements = document.querySelectorAll(gallerySelector);
+    },
+    'hidden.slickLightbox': function(){
 
-    for (var i = 0, l = galleryElements.length; i < l; i++) {
-        galleryElements[i].setAttribute('data-pswp-uid', i + 1);
-        galleryElements[i].onclick = onThumbnailsClick;
     }
+  });
 
+});
 
-
-
-
-};
-
-// execute above function
-initPhotoSwipeFromDOM('.product-images');
 
 
 // ===========================
