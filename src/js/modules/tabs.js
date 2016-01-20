@@ -84,7 +84,7 @@
 
     function next() {
       if ($active.length) {
-        console.log('old el', $active[0]);
+        // console.log('old el', $active[0]);
       }
       $active
         .removeClass('active')
@@ -95,7 +95,7 @@
           .attr('aria-expanded', false);
 
       if (element.length) {
-        console.log('new el', element[0]);
+        // console.log('new el', element[0]);
       }
       element
         .addClass('active')

@@ -176,9 +176,30 @@ $screen-md-min: 720px;
 }
 
 
-
+.modal.modal--minibag {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
 
 .modal--nav {
+  @include mq($until: lg) {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+  }
   @include mq($from: lg) {
     display: block !important;
   }
