@@ -66,7 +66,7 @@ var Tether = require("tether");
 var tether;
 
 var tetherTarget = $('.checkout-bag');
-var tetherElement = $('.o-minibag-contain .modal-dialog');
+var tetherElement = $('.o-minibag-contain');
 
 $('#minibag-contain').on('shown.bs.modal', function(e) {
 
