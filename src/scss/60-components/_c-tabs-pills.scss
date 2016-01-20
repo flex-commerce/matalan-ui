@@ -240,27 +240,16 @@ html.flexbox {
 // TODO - quick temp rules for pdp accordion - more love needed here
 
 .c-tabs--responsive {
-  .active {
-
-  }
-
   @include mq($until: lg) {
-
     .c-tabs__content {
       padding: 0;
       border-style: none;
     }
 
-    .c-tabs__header {
-      display: none;
-    }
-
     .c-tabs__header__item--accord {
+      font-weight: bold;
       position: relative;
-      outline: 1px solid red;
-      // background: #eee;
-      // color: #666;
-      padding: 10px 5px;
+      padding: 0.5em 0;
       margin-bottom: 5px;
 
       a {
@@ -268,15 +257,31 @@ html.flexbox {
       }
     }
   }
+}
 
-
-  @include mq($from: lg) {
-    // outline: 1px solid green;
-
-    .c-tabs__header a {
-      // color: #aaa;
-
+.c-tabs--responsive {
+  @include mq($until: lg) {
+    .c-tabs__header {
+      display: none;
     }
+
+    .c-tabs__header__item--accord {
+      @extend %u-border2-t;
+    }
+
+    .c-tabs__content.c-tabs__content {
+      border-bottom: 1px solid $cool-grey;
+    }
+
+    .c-tabs__content__pane {
+      padding: 1em 0;
+    }
+  }
+}
+
+@include mq($from: lg) {
+  .c-tabs--responsive {
+    .c-tabs__header {}
 
     .c-tabs__header__item--accord {
       display: none;

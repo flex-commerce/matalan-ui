@@ -26,11 +26,11 @@ $navContain.on('hide.bs.modal', function (e) {
   $('body').removeClass("modal-open--nav");
 });
 
-$('body').on('pointerdown', '.modal-backdrop', function() {
-  if (window.isMobileOrTablet.matches) {
-    $navContain.modal('hide');
-  }
-});
+// $('body').on('pointerdown', '.modal-backdrop', function() {
+//   if (window.isMobileOrTablet.matches) {
+//     $navContain.modal('hide');
+//   }
+// });
 
 // $('#minibag-contain').on('hidden.bs.modal', function (e) {
 //   tether.disable();
