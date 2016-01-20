@@ -37,170 +37,308 @@
                     <a class="" data-toggle="collapse" data-parent="#accountDetailsAccord"
                     href="#myAccEmail" aria-expanded="true">
                     Email
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-
-                  <div class="o-accord__content u-mar-t-large collapse in" id="myAccEmail">
-                    <strong>Email content</strong> - {{lorem count=100}}
-                  </div>
+                    <i class="icon icon-plus icon--vertical-right"></i>
+                    <i class="icon icon-minus icon--vertical-right"></i>
+                  </a>
                 </div>
 
-                <div class="u-pad-v-medium panel">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
-                    href="#myAccPass">
-                    Password
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse" id="myAccPass">
-                    <strong>Password content</strong> - {{lorem count=50}}
-                  </div>
-                </div>
+                <div class="o-accord__content u-mar-t-large collapse in" id="myAccEmail">
+                  <p class="u-font-wb">Current Email Address: <span class="u-font-wn">john_doe@matalan.co.uk</span></p>
 
-                <div class="u-pad-v-medium panel">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
-                    href="#myAccContact">
-                    Contact
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse" id="myAccContact">
-                    <strong>Contact content</strong> - {{lorem count=60}}
-                  </div>
-                </div>
+                  <form action="" class="o-form o-form--default">
+                    <div class="row">
+                      <div class="col-12@xs col-6@md">
+                        <div class="o-form__row">
+                          <div class="o-form__label-contain">
+                            <label class="o-form__label-primary">Input Label</label>
+                          </div>
+                          <div class="o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12@xs col-6@md">
+                        <div class="o-form__row">
+                          <div class="o-form__label-contain">
+                            <label class="o-form__label-primary">Input Label</label>
+                          </div>
+                          <div class="o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="c-btn c-btn-secondary c-btn-block u-mar-t-large">Update</button>
+                  </form>
 
-                <div class="u-pad-v-medium panel u-border2-b">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
-                    href="#myAccReward">
-                    Reward Card
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse" id="myAccReward">
-                    <strong>Reward Card</strong> - {{lorem count=60}}
-                  </div>
                 </div>
+              </div>
+
+              <div class="u-pad-v-medium panel">
+                <div class="o-accord__title u-font-upper">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
+                  href="#myAccPass">
+                  Password
+                  <i class="icon icon-plus icon--vertical-right"></i>
+                  <i class="icon icon-minus icon--vertical-right"></i>
+                </a>
+              </div>
+
+              <div class="o-accord__content u-mar-t-large collapse" id="myAccPass">
+                <p class="u-font-wb">Account Password: <span class="u-font-wn">****</span></p>
+                <form action="" class="o-form o-form--default">
+
+                  <div class="row">
+                    <div class="col-12@xs col-6@md">
+                      <div class="o-form__row">
+                        <div class="o-form__label-contain">
+                          <label class="o-form__label-primary">Current Password</label>
+                        </div>
+                        <div class="o-form__input-contain">
+                          <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12@xs col-6@md">
+                      <div class="o-form__row">
+                        <div class="o-form__label-contain">
+                          <label class="o-form__label-primary">New Password</label>
+                        </div>
+                        <div class="o-form__input-contain">
+                          <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12@xs col-6@md">
+                      <div class="o-form__row">
+                        <div class="o-form__label-contain">
+                          <label class="o-form__label-primary">Confirm New Password</label>
+                        </div>
+                        <div class="o-form__input-contain">
+                          <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12@xs col-6@md">
+                      <div class="o-form__row u-pad-0">
+                        <ul class="o-form__help-text u-pad-0">
+                          <li class=""><strong>Please Use:</strong></li>
+                          <li class="">8 to 32 characters</li>
+                          <li class="">Upper &amp; lowercase letters</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12@xs col-6@md">
+                      <div class="o-form__row u-pad-0">
+                        <ul class="o-form__help-text u-pad-0">
+                          <li class="hidden@sm-down">&nbsp;</li>
+                          <li class="">Numbers</li>
+                          <li class="">Symbols</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="c-btn c-btn-secondary c-btn-block u-mar-t-large">Update</button>
+                </form>
 
               </div>
             </div>
 
-            <div role="tabpanel" class="c-tabs__content__pane" id="history">
-              <div class="o-accord__container" role="tablist" id="accHistoryAccord">
-
-                <div class="u-pad-v-medium panel">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="" data-toggle="collapse" href="#orderHist1" data-parent="#accHistoryAccord" aria-expanded="true">
-                      28 JULY 2015 - Pending - £50.00
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse in" id="orderHist1">
-                    28 JULY 2015 - Pending - £50.00
-                  </div>
-                </div>
-
-                <div class="u-pad-v-medium panel">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist2">
-                      28 JULY 2015 - Pending - £50.00
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse" id="orderHist2">
-                    28 JULY 2015 - Pending - £50.00
-                  </div>
-                </div>
-
-                <div class="u-pad-v-medium panel">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist3">
-                      28 JULY 2015 - Pending - £50.00
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse" id="orderHist3">
-                    28 JULY 2015 - Pending - £50.00
-                  </div>
-                </div>
-
-                <div class="u-pad-v-medium panel u-border2-b">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist4">
-                      28 JULY 2015 - Pending - £50.00
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse" id="orderHist4">
-                    28 JULY 2015 - Pending - £50.00
-                  </div>
-                </div>
-
-              </div>
+            <div class="u-pad-v-medium panel">
+              <div class="o-accord__title u-font-upper">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
+                href="#myAccContact">
+                Contact
+                <i class="icon icon-plus icon--vertical-right"></i>
+                <i class="icon icon-minus icon--vertical-right"></i>
+              </a>
             </div>
-
-            <div role="tabpanel" class="c-tabs__content__pane" id="addresses">
-              <div class="o-accord__container" role="tablist" id="accAddressAccord">
-
-                <div class="u-pad-v-medium panel">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="" href="#addressList1" data-toggle="collapse" data-parent="#accAddressAccord"
-                    aria-expanded="true">
-                    Address Foo
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse in" id="addressList1">
-                    foo
+            <div class="o-accord__content u-mar-t-large collapse" id="myAccContact">
+              <p class="u-font-wb">Current Mobile / Contact: <span class="u-font-wn">#0123456789</span></p>
+              <form action="" class="o-form o-form--default">
+                <div class="row">
+                  <div class="col-12@xs col-6@md">
+                    <div class="o-form__row">
+                      <div class="o-form__label-contain">
+                        <label class="o-form__label-primary">New Mobile / Contact:</label>
+                      </div>
+                      <div class="o-form__input-contain">
+                        <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-12@xs col-6@md">
+                    <div class="o-form__row u-pad-0">
+                      <p class="o-form__help-text u-pad-0">
+                       Please enter in the following format: #0123456789
+                     </p>
+                   </div>
+                 </div>
+               </div>
+               <button class="c-btn c-btn-secondary c-btn-block u-mar-t-large">Update</button>
+             </form>
+           </div>
+         </div>
 
-                <div class="u-pad-v-medium panel u-border2-b">
-                  <div class="o-accord__title u-font-upper">
-                    <a class="collapsed" href="#addressList2" data-toggle="collapse" data-parent="#accAddressAccord">
-                      Address Bar
-                      <i class="icon icon-plus icon--vertical-right"></i>
-                      <i class="icon icon-minus icon--vertical-right"></i>
-                    </a>
-                  </div>
-                  <div class="o-accord__content u-mar-t-large collapse" id="addressList2">
-                    bar
-                  </div>
-                </div>
-
+         <div class="u-pad-v-medium panel u-border2-b">
+          <div class="o-accord__title u-font-upper">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
+            href="#myAccReward">
+            Reward Card
+            <i class="icon icon-plus icon--vertical-right"></i>
+            <i class="icon icon-minus icon--vertical-right"></i>
+          </a>
+        </div>
+        <div class="o-accord__content u-mar-t-large collapse" id="myAccReward">
+         <p class="u-font-wb">Current Reward Card: <span class="u-font-wn">#0123456789</span></p>
+         <form action="" class="o-form o-form--default">
+           <div class="row">
+             <div class="col-12@xs col-6@md">
+               <div class="o-form__row">
+                 <div class="o-form__label-contain">
+                   <label class="o-form__label-primary">New Reward Card</label>
+                 </div>
+                 <div class="o-form__input-contain">
+                   <input type="text" class="o-input o-input--textual" placeholder="placeholder">
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-12@xs col-6@md">
+               <div class="o-form__row u-pad-0">
+                 <p class="o-form__help-text u-pad-0">
+                  Please enter in the following format: #0123456789
+                </p>
               </div>
             </div>
           </div>
-
-        </div>
-      </div>
-
-      <div class="col-4@md hidden@sm-down u-mar-v-large">
-        <div class="u-cf ">
-          <h5 class="u-font-upper u-fl ">Shopping Bag</h5>
-        </div>
-        <div data-scroll-responsive="md+" class="o-minibag--inner modal-body js-scroll-hold u-scrollbar">
-          {{> partials/minibag-contents }}
+          <button class="c-btn c-btn-secondary c-btn-block u-mar-t-large">Update</button>
+        </form>
         </div>
       </div>
 
     </div>
   </div>
 
-  {{> parcels/footer }}
-  {{> partials/js-footer}}
+  <div role="tabpanel" class="c-tabs__content__pane" id="history">
+    <div class="o-accord__container" role="tablist" id="accHistoryAccord">
+
+      <div class="u-pad-v-medium panel">
+        <div class="o-accord__title u-font-upper">
+          <a class="" data-toggle="collapse" href="#orderHist1" data-parent="#accHistoryAccord" aria-expanded="true">
+            28 JULY 2015 - Pending - £50.00
+            <i class="icon icon-plus icon--vertical-right"></i>
+            <i class="icon icon-minus icon--vertical-right"></i>
+          </a>
+        </div>
+        <div class="o-accord__content u-mar-t-large collapse in" id="orderHist1">
+          28 JULY 2015 - Pending - £50.00
+        </div>
+      </div>
+
+      <div class="u-pad-v-medium panel">
+        <div class="o-accord__title u-font-upper">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist2">
+            28 JULY 2015 - Pending - £50.00
+            <i class="icon icon-plus icon--vertical-right"></i>
+            <i class="icon icon-minus icon--vertical-right"></i>
+          </a>
+        </div>
+        <div class="o-accord__content u-mar-t-large collapse" id="orderHist2">
+          28 JULY 2015 - Pending - £50.00
+        </div>
+      </div>
+
+      <div class="u-pad-v-medium panel">
+        <div class="o-accord__title u-font-upper">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist3">
+            28 JULY 2015 - Pending - £50.00
+            <i class="icon icon-plus icon--vertical-right"></i>
+            <i class="icon icon-minus icon--vertical-right"></i>
+          </a>
+        </div>
+        <div class="o-accord__content u-mar-t-large collapse" id="orderHist3">
+          28 JULY 2015 - Pending - £50.00
+        </div>
+      </div>
+
+      <div class="u-pad-v-medium panel u-border2-b">
+        <div class="o-accord__title u-font-upper">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist4">
+            28 JULY 2015 - Pending - £50.00
+            <i class="icon icon-plus icon--vertical-right"></i>
+            <i class="icon icon-minus icon--vertical-right"></i>
+          </a>
+        </div>
+        <div class="o-accord__content u-mar-t-large collapse" id="orderHist4">
+          28 JULY 2015 - Pending - £50.00
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div role="tabpanel" class="c-tabs__content__pane" id="addresses">
+    <div class="o-accord__container" role="tablist" id="accAddressAccord">
+
+      <div class="u-pad-v-medium panel">
+        <div class="o-accord__title u-font-upper">
+          <a class="" href="#addressList1" data-toggle="collapse" data-parent="#accAddressAccord"
+          aria-expanded="true">
+          Address Foo
+          <i class="icon icon-plus icon--vertical-right"></i>
+          <i class="icon icon-minus icon--vertical-right"></i>
+        </a>
+      </div>
+      <div class="o-accord__content u-mar-t-large collapse in" id="addressList1">
+        foo
+      </div>
+    </div>
+
+    <div class="u-pad-v-medium panel u-border2-b">
+      <div class="o-accord__title u-font-upper">
+        <a class="collapsed" href="#addressList2" data-toggle="collapse" data-parent="#accAddressAccord">
+          Address Bar
+          <i class="icon icon-plus icon--vertical-right"></i>
+          <i class="icon icon-minus icon--vertical-right"></i>
+        </a>
+      </div>
+      <div class="o-accord__content u-mar-t-large collapse" id="addressList2">
+        bar
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="col-4@md hidden@sm-down u-mar-v-large">
+  <div class="u-cf ">
+    <h5 class="u-font-upper u-fl ">Shopping Bag</h5>
+  </div>
+  <div data-scroll-responsive="md+" class="o-minibag--inner modal-body js-scroll-hold u-scrollbar">
+    {{> partials/minibag-contents }}
+  </div>
+</div>
+
+</div>
+</div>
+
+{{> parcels/footer }}
+{{> partials/js-footer}}
 
 </body>
 
