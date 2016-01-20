@@ -1,12 +1,17 @@
 .o-fullscreen-container {
     position: relative;
+    height: calc(100% - 59px);
     min-height: calc(100% - 59px);
     display:block;
     @include mq($until: lg) {
-        min-height: calc(100% - 59px);
+        height: calc(100% - 59px);
+        min-height: calc(100% + 40px);
+
     }
     @include mq($from: lg) {
+      height: calc(100% - 110px);
         min-height: calc(100% - 110px);
+
     }
     &.winter-hero {
         @include mq($from: md) {
