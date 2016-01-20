@@ -1,25 +1,30 @@
 /* Slider */
 
 .o-product-suite__slick {
-
-    .c-btn {
-      font-size: 0.8em;
+    @include mq($until: lg) {
+        .c-btn {
+            font-size: 0.8em;
+        }
     }
     .o-product-suite__slick .slick-slide {
-        min-height: 190px;
+        min-height: 225px;
+        @include mq($from: lg) {
+            min-height: 190px;
+        }
     }
     .o-product-suite__outer {
         border-bottom: 1px solid $cool-grey;
-        min-height: 190px;
         padding: 0.5em;
         position: relative;
-
+        min-height: 225px;
+        @include mq($from: lg) {
+            min-height: 190px;
+        }
         &:focus {
             outline: none;
         }
     }
     .o-product-suite__inner {
-
         position: absolute;
         top: 0;
         bottom: 10px;
@@ -27,7 +32,6 @@
         right: 10px;
         content: "";
     }
-
     .o-product-suite__image {
         width: 33%;
         height: 100%;
