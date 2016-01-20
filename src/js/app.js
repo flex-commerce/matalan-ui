@@ -277,6 +277,12 @@ $('.o-section-department__slick').slick({
     }]
 });
 
+$('.o-product-suite__slick').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+});
+
 
 
 
