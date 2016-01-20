@@ -1,5 +1,4 @@
 .o-accord__container {
-
   // hide / display classes
   .collapse {
     display: none;
@@ -23,25 +22,32 @@
     }
   }
 
-  // hide / display classes end
+}
 
 
-  .panel {
-    @extend .u-border2-t;
-  }
+.c-tabs--responsive {
+  .accord--active {
+    .icon-plus {
+      display: none;
+    }
 
-  .o-accord__title {
-    a {
-      display: block;
-      font-weight: 600;
-      cursor: pointer;
-      position: relative;
+    .icon-minus {
+      display: inline;
     }
   }
-
-  // &.active {
-  //   .o-accord__title {
-  //     color: $dark-grey;
-  //   }
-  // }
 }
+
+.panel {
+  @extend %u-border2-t;
+}
+
+.o-accord__title {
+  a {
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+  }
+}
+
+

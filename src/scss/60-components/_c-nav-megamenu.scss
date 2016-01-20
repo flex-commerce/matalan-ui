@@ -6,8 +6,9 @@
 @include mq($until: lg) {
   .c-navbar__container {
     @include fixed(top 0 bottom 0 left -85%);
-     width: 85%;
-     z-index: 1050;
+
+    width: 85%;
+    z-index: 1050;
 
     &.active {
       left: 0;
@@ -123,8 +124,6 @@
     }
   }
 }
-
-
 
 @include mq($until: lg) {
   .navbar__top-item,
@@ -287,6 +286,7 @@
 
     padding-top: 1em;
     padding-bottom: 1em;
+
     // margin: 0 auto;
     // max-width: 100%;
     border-bottom: 1px solid $secondary-color;
@@ -356,6 +356,7 @@
   .sub-nav__group-container {
     padding-right: 185px;
   }
+
   // _:-webkit-full-screen:not(:root:root), .sub-nav__group-container {
   //   min-height: 500px;
   // }
@@ -376,22 +377,21 @@
   }
 }
 
-
-
 @include mq($from: lg) {
   .o-nav__container {
     background: #fff;
   }
+
   .body--modal-open__nav {
     overflow-x: hidden;
+
     .c-navbar__container {
       z-index: 10;
       background: $white;
     }
-    .accessible-navmenu.c-navbar {
-    }
-  }
 
+    .accessible-navmenu.c-navbar {}
+  }
 
   .navbar__nav-menu-icons {
     display: none;
@@ -410,5 +410,9 @@
 @include mq($until: lg) {
   .c-navbar__container {
     overflow-y: auto;
+  }
+
+  .c-navbar__container.container {
+    padding: 0;
   }
 }
