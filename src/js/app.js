@@ -66,7 +66,7 @@ var Tether = require("tether");
 var tether;
 
 var tetherTarget = $('.checkout-bag');
-var tetherElement = $('.o-minibag-contain');
+var tetherElement = $('.o-minibag-contain .modal-dialog');
 
 $('#minibag-contain').on('shown.bs.modal', function(e) {
 
@@ -134,6 +134,8 @@ require("./modules/tabs");
 // open first tab here, so we don't need to include 2x active classes on each usage
 
 $.each($('.c-tabs [role="tablist"]'), function() {
+  console.log($('.c-tabs [role="tablist"]'));
+  console.log($(this).find('a:first'));
   $(this).find('a:first').tab('show');
 });
 
@@ -201,27 +203,27 @@ $(document).ready(function() {
   if (!window.isMobileOrTablet.matches) {
 
         // on load, open if desktop
-        $("#accordion2 [role='tabpanel']").each(function() {
-          $(this).collapse('show');
-        });
+        // $("#accordion2 [role='tabpanel']").each(function() {
+        //   $(this).collapse('show');
+        // });
 
-      }
-      $(window).on('resize', _.debounce(function() {
-        if (!window.isMobileOrTablet.matches) {
-            // on resize, open if desktop
-            $("#accordion2 [role='tabpanel']").each(function() {
-              $(this).collapse('show');
-            });
+}
+$(window).on('resize', _.debounce(function() {
+  if (!window.isMobileOrTablet.matches) {
+          //   // on resize, open if desktop
+          //   $("#accordion2 [role='tabpanel']").each(function() {
+          //     $(this).collapse('show');
+          //   });
 
-          } else {
-            // on resize, close if not desktop
-            $("#accordion2 [role='tabpanel']").each(function() {
-              $(this).collapse('hide');
-            });
+          // } else {
+          //   // on resize, close if not desktop
+          //   $("#accordion2 [role='tabpanel']").each(function() {
+          //     $(this).collapse('hide');
+          //   });
 
-          }
-        }, 250));
-    });
+}
+}, 250));
+});
 
 
 // ===========================
@@ -330,9 +332,9 @@ $('.o-section-department__slick').slick({
 });
 
 $('.o-product-suite__slick').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1
 });
 
 

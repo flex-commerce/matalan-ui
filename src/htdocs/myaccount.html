@@ -10,194 +10,198 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-12@xs">
-        <div class="row">
-          <div class="col-12@xs col-8@md u-mar-v-large">
-            <h4 class="u-mar-b-medium">My Account</h4>
-            <div class="c-tabs c-tabs--pills c-tabs--pills--horizontal c-tabs--justified">
+      <div class="col-12@xs col-8@md u-mar-v-large">
+        <h4 class="u-mar-b-medium">My Account</h4>
 
-              <ul id="myAccountTabs" class="c-tabs__header" role="tablist">
-                <li class="c-tabs__header__item">
-                  <a href="#accountDetails" data-toggle="tab" role="tab">Account <br class="hidden@md-up"> Details</a>
-                </li>
-                <li class="c-tabs__header__item">
-                  <a href="#history" data-toggle="tab" role="tab">Order <br class="hidden@md-up"> History</a>
-                </li>
-                <li class="c-tabs__header__item">
-                  <a href="#addresses" data-toggle="tab" role="tab">Address <br class="hidden@md-up"> Book</a>
-                </li>
-              </ul>
+        <div class="c-tabs c-tabs--pills c-tabs--pills--horizontal c-tabs--justified">
 
-              <div class="c-tabs__content">
-                <div role="tabpanel" class="c-tabs__content__pane" id="accountDetails">
-                  <div class="o-accord__container" role="tablist">
+          <ul id="myAccountTabs" class="c-tabs__header" role="tablist">
+            <li class="c-tabs__header__item">
+              <a href="#accountDetails" data-toggle="tab" role="tab">Account <br class="hidden@md-up"> Details</a>
+            </li>
+            <li class="c-tabs__header__item">
+              <a href="#history" data-toggle="tab" role="tab">Order <br class="hidden@md-up"> History</a>
+            </li>
+            <li class="c-tabs__header__item">
+              <a href="#addresses" data-toggle="tab" role="tab">Address <br class="hidden@md-up"> Book</a>
+            </li>
+          </ul>
 
-                    <div class="u-pad-v-medium panel">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="collapsed" data-toggle="collapse" href="#myAccEmail" aria-expanded="true">
-                          Email
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content u-mar-t-large" id="myAccEmail">
-                        <strong>Email content</strong> - {{lorem count=100}}
-                      </div>
-                    </div>
+          <div class="c-tabs__content">
+            <div role="tabpanel" class="c-tabs__content__pane" id="accountDetails">
 
-                    <div class="u-pad-v-medium panel">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="collapsed" data-toggle="collapse" href="#myAccPass">
-                          Password
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content collapse u-mar-t-large" id="myAccPass">
-                        <strong>Password content</strong> - {{lorem count=50}}
-                      </div>
-                    </div>
+              <div class="o-accord__container" role="tablist" id="accountDetailsAccord">
 
-                    <div class="u-pad-v-medium panel">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="collapsed" data-toggle="collapse" href="#myAccContact">
-                          Contact
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content collapse u-mar-t-large" id="myAccContact">
-                        <strong>Contact content</strong> - {{lorem count=60}}
-                      </div>
-                    </div>
+                <div class="u-pad-v-medium panel">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="" data-toggle="collapse" data-parent="#accountDetailsAccord"
+                    href="#myAccEmail" aria-expanded="true">
+                    Email
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
 
-                    <div class="u-pad-v-medium panel u-border2-b">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="collapsed" data-toggle="collapse" href="#myAccReward">
-                          Reward Card
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content collapse u-mar-t-large" id="myAccReward">
-                        <strong>Reward Card</strong> - {{lorem count=60}}
-                      </div>
-                    </div>
-
+                  <div class="o-accord__content u-mar-t-large collapse in" id="myAccEmail">
+                    <strong>Email content</strong> - {{lorem count=100}}
                   </div>
                 </div>
 
-                <div role="tabpanel" class="c-tabs__content__pane" id="history">
-                  <div class="o-accord__container" role="tablist">
-
-                    <div class="u-pad-v-medium panel">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="" data-toggle="collapse" href="#orderHist1" aria-expanded="true">
-                          28 JULY 2015 - Pending - £50.00
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content u-mar-t-large" id="orderHist1">
-                        28 JULY 2015 - Pending - £50.00
-                      </div>
-                    </div>
-
-                    <div class="u-pad-v-medium panel">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="collapsed" data-toggle="collapse" href="#orderHist2">
-                          28 JULY 2015 - Pending - £50.00
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content collapse u-mar-t-large" id="orderHist2">
-                        28 JULY 2015 - Pending - £50.00
-                      </div>
-                    </div>
-
-                    <div class="u-pad-v-medium panel">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="collapsed" data-toggle="collapse" href="#orderHist3">
-                          28 JULY 2015 - Pending - £50.00
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content collapse u-mar-t-large" id="orderHist3">
-                        28 JULY 2015 - Pending - £50.00
-                      </div>
-                    </div>
-
-                    <div class="u-pad-v-medium panel u-border2-b">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="collapsed" data-toggle="collapse" href="#orderHist4">
-                          28 JULY 2015 - Pending - £50.00
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content collapse u-mar-t-large" id="orderHist4">
-                        28 JULY 2015 - Pending - £50.00
-                      </div>
-                    </div>
-
+                <div class="u-pad-v-medium panel">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
+                    href="#myAccPass">
+                    Password
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse" id="myAccPass">
+                    <strong>Password content</strong> - {{lorem count=50}}
                   </div>
                 </div>
 
-                <div role="tabpanel" class="c-tabs__content__pane" id="addresses">
-                  <div class="o-accord__container" role="tablist">
-
-                    <div class="u-pad-v-medium panel">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="" data-toggle="collapse" href="#addressList1" aria-expanded="true">
-                          Address Foo
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content u-mar-t-large" id="addressList1">
-                        foo
-                      </div>
-                    </div>
-
-                    <div class="u-pad-v-medium panel u-border2-b">
-                      <div class="o-accord__title u-font-upper">
-                        <a class="collapsed" data-toggle="collapse" href="#addressList2">
-                          Address Bar
-                          <i class="icon icon-plus icon--vertical-right"></i>
-                          <i class="icon icon-minus icon--vertical-right"></i>
-                        </a>
-                      </div>
-                      <div class="o-accord__content collapse u-mar-t-large" id="addressList2">
-                        bar
-                      </div>
-                    </div>
-
+                <div class="u-pad-v-medium panel">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
+                    href="#myAccContact">
+                    Contact
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse" id="myAccContact">
+                    <strong>Contact content</strong> - {{lorem count=60}}
                   </div>
                 </div>
 
+                <div class="u-pad-v-medium panel u-border2-b">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accountDetailsAccord"
+                    href="#myAccReward">
+                    Reward Card
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse" id="myAccReward">
+                    <strong>Reward Card</strong> - {{lorem count=60}}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div role="tabpanel" class="c-tabs__content__pane" id="history">
+              <div class="o-accord__container" role="tablist" id="accHistoryAccord">
+
+                <div class="u-pad-v-medium panel">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="" data-toggle="collapse" href="#orderHist1" data-parent="#accHistoryAccord" aria-expanded="true">
+                      28 JULY 2015 - Pending - £50.00
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse in" id="orderHist1">
+                    28 JULY 2015 - Pending - £50.00
+                  </div>
+                </div>
+
+                <div class="u-pad-v-medium panel">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist2">
+                      28 JULY 2015 - Pending - £50.00
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse" id="orderHist2">
+                    28 JULY 2015 - Pending - £50.00
+                  </div>
+                </div>
+
+                <div class="u-pad-v-medium panel">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist3">
+                      28 JULY 2015 - Pending - £50.00
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse" id="orderHist3">
+                    28 JULY 2015 - Pending - £50.00
+                  </div>
+                </div>
+
+                <div class="u-pad-v-medium panel u-border2-b">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accHistoryAccord" href="#orderHist4">
+                      28 JULY 2015 - Pending - £50.00
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse" id="orderHist4">
+                    28 JULY 2015 - Pending - £50.00
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div role="tabpanel" class="c-tabs__content__pane" id="addresses">
+              <div class="o-accord__container" role="tablist" id="accAddressAccord">
+
+                <div class="u-pad-v-medium panel">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="" href="#addressList1" data-toggle="collapse" data-parent="#accAddressAccord"
+                    aria-expanded="true">
+                    Address Foo
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse in" id="addressList1">
+                    foo
+                  </div>
+                </div>
+
+                <div class="u-pad-v-medium panel u-border2-b">
+                  <div class="o-accord__title u-font-upper">
+                    <a class="collapsed" href="#addressList2" data-toggle="collapse" data-parent="#accAddressAccord">
+                      Address Bar
+                      <i class="icon icon-plus icon--vertical-right"></i>
+                      <i class="icon icon-minus icon--vertical-right"></i>
+                    </a>
+                  </div>
+                  <div class="o-accord__content u-mar-t-large collapse" id="addressList2">
+                    bar
+                  </div>
+                </div>
 
               </div>
             </div>
           </div>
 
-          <div class="col-4@md hidden@sm-down u-mar-v-large">
-            <div class="u-cf ">
-              <h5 class="u-font-upper u-fl ">Shopping Bag</h5>
-            </div>
-
-            <div data-scroll-responsive="md+" class="o-minibag--inner modal-body js-scroll-hold u-scrollbar">
-            {{> partials/minibag-contents }}
-
-              </div>
-
-          </div>
         </div>
       </div>
+
+      <div class="col-4@md hidden@sm-down u-mar-v-large">
+        <div class="u-cf ">
+          <h5 class="u-font-upper u-fl ">Shopping Bag</h5>
+        </div>
+        <div data-scroll-responsive="md+" class="o-minibag--inner modal-body js-scroll-hold u-scrollbar">
+          {{> partials/minibag-contents }}
+        </div>
+      </div>
+
     </div>
   </div>
-  {{> parcels/footer }} {{> partials/js-footer}}
+
+  {{> parcels/footer }}
+  {{> partials/js-footer}}
+
 </body>
 
 </html>
