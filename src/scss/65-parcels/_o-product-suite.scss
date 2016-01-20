@@ -1,5 +1,4 @@
 /* Slider */
-
 .o-product-suite__slick {
     @include mq($until: lg) {
         .c-btn {
@@ -9,16 +8,15 @@
     .o-product-suite__slick .slick-slide {
         min-height: 225px;
         @include mq($from: lg) {
-            min-height: 190px;
+            min-height: 178px;
         }
     }
     .o-product-suite__outer {
-        border-bottom: 1px solid $cool-grey;
         padding: 0.5em;
         position: relative;
         min-height: 225px;
         @include mq($from: lg) {
-            min-height: 190px;
+            min-height: 178px;
         }
         &:focus {
             outline: none;
@@ -61,7 +59,7 @@
         cursor: pointer;
         background: transparent;
         color: transparent;
-        top: 50%;
+        top: 75px;
         margin-top: -10px;
         padding: 0;
         border: none;
@@ -83,16 +81,16 @@
     .slick-next:before {
         font-size: 30px;
         line-height: 1;
-        color: $slick-arrow-color;
+        color: $dark-grey;
         opacity: $slick-opacity-default;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
     .slick-prev {
-        left: -20px;
+        left: -25px;
         [dir="rtl"] & {
             left: auto;
-            right: -20px;
+            right: -25px;
         }
         &:before {
             font-family: 'flex-icons';
@@ -103,9 +101,9 @@
         }
     }
     .slick-next {
-        right: -20px;
+        right: -25px;
         [dir="rtl"] & {
-            left: -20px;
+            left: -25px;
             right: auto;
         }
         &:before {
@@ -175,4 +173,12 @@
             }
         }
     }
+}
+
+.o-product-suite__slider {
+    border-bottom: 1px solid $cool-grey;
+}
+
+.o-product-suite__slider:last-of-type {
+    border-bottom: none;
 }
