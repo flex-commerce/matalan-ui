@@ -1,3 +1,17 @@
+.o-myacc__address {
+  position: relative;
+}
+
+
+.o-myacc__address-actions {
+  .o-myacc__cancel {
+     @include absolute(top 1em right 0);
+  }
+}
+
+.o-myacc--address-panel.in + a[data-toggle="collapse"] {
+  display: none;
+}
 // .o-my-account__container {
 //   @include clearfix();
 //   fieldset {
