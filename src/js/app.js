@@ -273,8 +273,6 @@ var BootstrapDialog = require("./vendors/bs-dialog");
 
 $("[data-myacc='address-delete']").on('click', function(e){
 
-  console.log(e.type, e.target);
-
   var addressRef = $(this).parent().next('h5').text();
 
   BootstrapDialog.show({
