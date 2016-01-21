@@ -235,12 +235,7 @@ $minibag-desktop-width: 353px;
   padding-top: 1em;
 }
 
-// separator within the markup
-.separator {
-  padding-top: 0.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid $minibag-border-color;
-}
+
 
 // auto separator for the list
 .o-minibag--list-item:not(:last-child):after {
@@ -346,44 +341,6 @@ $minibag-desktop-width: 353px;
 }
 
 
-// todo - move this separator?
-.separator__inline-text {
-  position: relative;
-  height: 2em;
-
-  span {
-    position: absolute;
-    padding: 0 0.5em;
-    background: $white;
-
-    @include center($pos: abs);
-
-    @include font-size(12px);
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    height: 1px;
-    background-color: $keyline-color;
-  }
-}
-
-.separator__inline-text--unstyled {
-  position: relative;
-  height: 2em;
-
-  span {
-    position: absolute;
-    padding: 0 0.5em;
-
-    @include center($pos: abs);
-
-    @include font-size(12px);
-  }
-}
 
 
   .o-minibag--list-item--control {

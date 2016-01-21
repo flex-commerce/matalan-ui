@@ -1,11 +1,14 @@
 .c-table {
   width: 100%;
   text-align: left;
+
   th {
     @extend .u-color-pri;
+
     font-weight: bold;
     text-transform: uppercase;
   }
+
   td, th {
     vertical-align: top;
   }
@@ -13,6 +16,7 @@
 
 .c-table__default {
   font-size: rem-calc(14);
+
   td,
   th {
     padding: 0.65em;
@@ -23,14 +27,78 @@
   tbody tr:nth-of-type(odd) {
     @extend .u-bgcolor-lgrey-hover;
   }
+
   tbody tr {
     border-top: 1px solid $keyline-color;
   }
 }
 
+.c-table--collapses {
+  .th {
+    font-weight: bold;
+  }
 
-.c-table--spaced {
-  td {
+  @include mq($until: md) {
+    .td {
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+    }
+
+    .collapse--inline {
+      > .td {
+        display: inline-block;
+
+        &:last-of-type {
+          &:before {
+            content: ' - ';
+          }
+        }
+      }
+    }
+  }
+
+
+  @include mq($from: md) {
+    display: table;
+
+    .tr {
+      display: table-row;
+      width: 100%;
+    }
+
+    .th, .td {
+      display: table-cell;
+    }
+
+    .td {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+  }
+
+
+  .th--inline {
+    font-weight: bold;
+
+    &:after {
+      content: ': ';
+    }
+  }
+}
+
+// .c-table--spaced {
+//   td, .td {
+//     padding-top: 1em;
+//     padding-bottom: 1em;
+//   }
+// }
+
+.c-table--spaced--large {
+  th, .th {
+    padding-bottom: 2em;
+  }
+
+  td, .td {
     padding-top: 2em;
     padding-bottom: 2em;
   }
