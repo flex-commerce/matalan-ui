@@ -29,7 +29,7 @@ $(document).ready(function() {
 // end setup detection for mobile or tablet
 // ===========================
 
-require("pepjs");
+// require("pepjs");
 // pepjs added to bring some sensibility to ios touch events. to investigate buggy ipad behaviour yet.
 
 // cross touch / mouse events are now available via
@@ -133,8 +133,6 @@ require("./modules/tabs");
 // open first tab here, so we don't need to include 2x active classes on each usage
 
 $.each($('.c-tabs [role="tablist"]'), function() {
-  console.log($('.c-tabs [role="tablist"]'));
-  console.log($(this).find('a:first'));
   $(this).find('a:first').tab('show');
 });
 
@@ -269,14 +267,38 @@ if (window.isMobileOrTablet.matches) {
 
 
 // modal temp
-require("./vendors/bootstrap/modal");
 
 
+var BootstrapDialog = require("./vendors/bs-dialog");
 
+$("[data-myacc='address-delete']").on('click', function(e){
 
+  console.log(e.type, e.target);
 
+  var addressRef = $(this).parent().next('h5').text();
 
+  BootstrapDialog.show({
+      title: 'Confirm Delete',
+      message: 'Are you sure you want to delete ' + addressRef + '?',
+      closable: true,
+      buttons: [{
+          label: 'Cancel',
+          cssClass: 'c-btn c-btn-primary__alt',
+          action: function(dialogRef){
+              dialogRef.close();
+          }
+      }, {
+        id: 'delete-'+addressRef,
+        icon: 'glyphicon glyphicon-check',
+        label: 'Delete ' + addressRef,
+        cssClass: 'c-btn c-btn-secondary__alt',
+        action: function(dialogRef){
+            dialogRef.close();
+        }
+      }]
+  });
 
+})
 
 
 

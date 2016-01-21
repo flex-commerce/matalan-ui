@@ -14,11 +14,11 @@
   });
 
   // close on click
-  $('body').on('pointerdown', '.modal-backdrop', function() {
-    if (window.isMobileOrTablet.matches) {
-      closeMiniBag();
-    }
-  });
+  // $('body').on('click', '.modal-backdrop', function() {
+  //   if (window.isMobileOrTablet.matches) {
+  //     closeMiniBag();
+  //   }
+  // });
 
 
   function closeMiniBag() {
