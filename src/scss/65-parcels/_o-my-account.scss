@@ -1,4 +1,4 @@
-.o-myacc__address {
+.o-myacc__address .panel {
   position: relative;
 }
 
@@ -9,9 +9,11 @@
   }
 }
 
-.o-myacc--address-panel.in + a[data-toggle="collapse"] {
+.o-myacc--address-panel.in + [data-toggle="collapse"] {
   display: none;
 }
+
+
 // .o-my-account__container {
 //   @include clearfix();
 //   fieldset {
