@@ -95,7 +95,7 @@
 
 
 
-  $('body').on('click', '.clear__filters', function() {
+  $('body').on('click', '.js-clear__filters', function() {
     $('.o-filters__inner').find('input[type=checkbox]:checked').removeAttr('checked');
     $('.o-filters__inner').find('input[type=radio]:checked').removeAttr('checked');
   });
