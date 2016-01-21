@@ -35,7 +35,7 @@
                            url: icon
                        },
                        infoWindow: {
-                           content: '<div class="c-info-window__title">' + item.properties.city + '</div>' + '<div class="c-info-window__title">' + item.distance.toFixed(1) + ' miles away</div>' + '<div class="c-info-window__title">' + item.properties.address + '</div>' + '<div class="c-info-window__title">' + item.properties.postcode + '</div>' + '<div class="c-info-window__title">' + item.properties.hours.replace(/\n/g, '<br />') + '</div>' + '<div class="c-info-window__title"><a href="tel:' + item.properties.phone + '">' + item.properties.phoneFormatted + '</a></div>'
+                           content: '<h4 class="c-info-window__title">' + item.properties.city + '</h4>' + '<div class="c-info-window__title u-color-pri">' + item.distance.toFixed(1) + ' miles away</div>'
                        },
                        click: function(e) {
                            var element = $('[data-marker-index=' + e.id + ']');
@@ -62,7 +62,7 @@
                    url: newicon
                },
                infoWindow: {
-                   content: '<div class="c-info-window__title">Your location</div>'
+                   content: '<h4 class="c-info-window__title">Your location</h4>'
                },
            });
            map.addMarkers(markers_data);

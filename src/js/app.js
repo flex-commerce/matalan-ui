@@ -120,7 +120,6 @@ require("./modules/dropdown");
 // Dropdown end
 // ===========================
 
-// require("./modules/mapbox-init");
 require("./vendors/jquery.scrollto");
 require("./modules/google-maps-init");
 
