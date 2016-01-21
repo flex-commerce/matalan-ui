@@ -198,3 +198,23 @@ $list-border: $cool-grey;
     @extend .u-mar-v-huge;
   }
 }
+
+.o-list__tick {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-family: flex-icons;
+  li {
+    position: relative;
+    padding-left: 25px;
+  }
+
+  li:before {
+    content: $icon-large-tick;
+    position: absolute;
+    left: 0px;
+    color: $primary-color;
+  }
+}
+
+

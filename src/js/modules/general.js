@@ -57,6 +57,18 @@
     $("#newaddress").prop('checked', true );
   });
 
+  $('.o-login__email-submit').on('click',function(e){
+    e.preventDefault();
+    $('.o-login__email').hide();
+    $('.o-login__password').show();
+  });
+
+  $('.o-login__password-forgotten').on('click',function(e){
+    e.preventDefault();
+    $('.o-login__password').hide();
+    $('.o-login__forgotten-password').show();
+  });
+
   $('form[name=searchProducts]').submit(function(e){
     e.preventDefault();
     // console.log($('input[name=searchTermMobile]').val());
@@ -83,7 +95,7 @@
 
 
 
-  $('body').on('click', '.clear__filters', function() {
+  $('body').on('click', '.js-clear__filters', function() {
     $('.o-filters__inner').find('input[type=checkbox]:checked').removeAttr('checked');
     $('.o-filters__inner').find('input[type=radio]:checked').removeAttr('checked');
   });
