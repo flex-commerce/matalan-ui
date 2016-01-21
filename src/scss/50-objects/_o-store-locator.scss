@@ -2,13 +2,21 @@
     padding-bottom: 0 !important;
 }
 
+.o-map__outer-container {
+    position: relative
+}
+
 .o-store-locator {
     a:hover {
         text-decoration: none;
         color: $black;
     }
     .map-wrapper {
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
         display: block;
         @include mq($from: md) {
             height: 688px;
@@ -30,9 +38,9 @@
         width: 100%;
     }
     .o-store-map-mobile {
-      display:none;
-      width: 100% !important;
-      height: 300px !important;
+        display: none;
+        width: 100% !important;
+        height: 300px !important;
     }
     .o-store-locator__listings-wrapper {
         padding-left: 30px;
@@ -41,12 +49,9 @@
         text-decoration: none;
         position: relative;
     }
-
-    .store-finder__map--mobile-open {
-
-    }
+    .store-finder__map--mobile-open {}
     .o-store-map-close {
-      display:none;
+        display: none;
     }
     .o-store-locator__listings-wrapper:hover {
         background-color: #f8f8f8;
@@ -88,10 +93,10 @@
         font-weight: 400;
     }
     .o-store-locator__listings-wrapper.active {
-          // border-top: 2px solid $primary-color;
-          // border-bottom: 2px solid $primary-color;
-
-        background-color: #f8f8f8;;
+        // border-top: 2px solid $primary-color;
+        // border-bottom: 2px solid $primary-color;
+        background-color: #f8f8f8;
+        ;
         .o-store-locator__listings-content:before {
             color: $primary-color;
         }

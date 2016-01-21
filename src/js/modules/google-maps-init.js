@@ -24,7 +24,7 @@
                var item = items[i];
                // console.log(item)
                if (item.geometry.coordinates != undefined) {
-                    // console.log('adding marker');
+                   // console.log('adding marker');
                    markers_data.push({
                        lat: item.geometry.coordinates[1],
                        lng: item.geometry.coordinates[0],
@@ -67,7 +67,7 @@
            });
            map.addMarkers(markers_data);
        } else {
-        mobilemap.addMarkers(markers_data);
+           mobilemap.addMarkers(markers_data);
        }
 
 
@@ -153,7 +153,7 @@
 
            var callButton = listings.appendChild(document.createElement('div'));
            callButton.className = 'o-store-call hidden@md-up u-cf';
-           callButton.innerHTML = '<a href="tel:' + prop.phone +'"class="c-btn c-btn-primary__alt col-12@xs u-font-upper u-mar-t-large"><i class="icon icon-telephone u-color-pri u-pad-r-huge icon--vertical-middle"></i>Call store</a>';
+           callButton.innerHTML = '<a href="tel:' + prop.phone + '"class="c-btn c-btn-primary__alt col-12@xs u-font-upper u-mar-t-large"><i class="icon icon-telephone u-color-pri u-pad-r-huge icon--vertical-middle"></i>Call store</a>';
 
            var openMapButton = listings.appendChild(document.createElement('div'));
            openMapButton.className = 'o-store-map-open hidden@md-up u-cf';
@@ -241,11 +241,24 @@
        firstMarker.infoWindow.open();
        google.maps.event.trigger(firstMarker, 'click');
 
+       var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
+       if (width > 0) {
+           $('.map-wrapper').css('right', -width);
+       }
+
    }
 
+   $(window).resize(function() {
+       console.log($(window).width());
+       var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
+       if (width > 0) {
+           $('.map-wrapper').css('right', -width);
+       }
+   });
+
    $('body').on('click', '.store-finder__map--mobile-open', function(e) {
-      $('.o-store-map-close.mapActive a').trigger('click');
-      $(this).parent().prev().prev('a').trigger('click');
+       $('.o-store-map-close.mapActive a').trigger('click');
+       $(this).parent().prev().prev('a').trigger('click');
        var storeId = $(this).data('storeid');
        $(this).parent().hide();
        $(this).parent().next().next('.o-store-map-close').show().addClass('mapActive');
@@ -259,15 +272,15 @@
 
    $('body').on('click', '.store-finder__map--mobile-close', function(e) {
 
-    $(this).parent().prev('.o-store-map-mobile').html('').hide();
-    $(this).parent().hide();
-    $(this).parent().prev().prev('.o-store-map-open').show();
+       $(this).parent().prev('.o-store-map-mobile').html('').hide();
+       $(this).parent().hide();
+       $(this).parent().prev().prev('.o-store-map-open').show();
 
    });
 
    function generateMobileMap(storeId) {
 
-      var mobileData = [];
+       var mobileData = [];
 
        var result = _.find(data, function(o) {
            return o.properties.storeid === storeId;
