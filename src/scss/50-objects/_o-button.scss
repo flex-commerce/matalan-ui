@@ -7,13 +7,16 @@ $button-padding-y: $default-pad-y;
   border-width: 1px;
   cursor: pointer;
   text-align: center;
+
   @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
+
   &:active,
   &.active,
   &:focus,
   &.focus {
-    @include tab-focus();
+    @include tab-focus;
   }
+
   &.disabled,
   &:disabled,
   fieldset[disabled] & {
@@ -24,40 +27,72 @@ $button-padding-y: $default-pad-y;
 .c-btn.c-btn--small {
   @include button-size(halve($button-padding-y), halve($button-padding-x), 0.825em, 1.8);
 }
+
 .c-btn.c-btn--tiny {
   @include button-size(quarter($button-padding-y), quarter($button-padding-x), 0.7em, 1.8);
 }
 
-
 .c-btn.c-btn-primary {
-  @include primary-style();
+  @include style-variant($color: $dark-grey, $background: $secondary-color, $border: $secondary-color);
+
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include primary-style(hover);
+
+    @include style-variant($color: $dark-grey-hover, $background: $white, $border: $secondary-color);
+  }
+}
+
+.c-btn.c-btn-primary__alt {
+  @include style-variant($dark-grey, $light-grey-hover, $secondary-color);
+
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+
+    @include style-variant($primary-color, $light-grey, $secondary-color);
   }
 }
 
 .c-btn.c-btn-secondary {
-  @include secondary-style(null);
+  @include style-variant($color: $white, $background: $primary-color, $border: $primary-color);
+
   text-transform: uppercase;
+
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
-    @include secondary-style(hover);
+
+    @include style-variant($color: $white, $background: $primary-color-hover, $border: $primary-color-hover);
+  }
+}
+
+.c-btn.c-btn-secondary__alt {
+  @include style-variant($white, $primary-color, $primary-color);
+
+  &.hover,
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+
+    @include style-variant($primary-color, $white, $primary-color);
   }
 }
 
 %c-btn-tertiary,
 .c-btn.c-btn-tertiary {
   background: #aaa;
+
   @include style-variant($color: $white, $background: $dark-grey, $border: $dark-grey);
+
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
+
     @include style-variant($color: $white, $background: $dark-grey-hover, $border: $dark-grey-hover);
   }
 }
@@ -65,32 +100,13 @@ $button-padding-y: $default-pad-y;
 %c-btn-tertiary--alt,
 .c-btn.c-btn-tertiary--alt {
   @include style-variant($color: $dark-grey, $background: $white, $border: $cool-grey);
+
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
+
     @include style-variant($color: $dark-grey-hover, $background: $white, $border: $cool-grey-hover);
-  }
-}
-
-
-.c-btn.c-btn-primary__alt {
-  @include style-variant($color: $dark-grey, $background: $secondary-color, $border: $secondary-color);
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    @include style-variant($color: $dark-grey-hover, $background: $white, $border: $secondary-color);
-  }
-}
-
-.c-btn.c-btn-secondary__alt {
-  @include style-variant($color: $white, $background: $primary-color, $border: $primary-color);
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    @include style-variant($color: $white, $background: $primary-color-hover, $border: $primary-color-hover);
   }
 }
 
@@ -98,25 +114,14 @@ $button-padding-y: $default-pad-y;
   margin-left: rem-calc(-3);
 }
 
-
 .c-btn-grp-dropdown {
-  // .c-btn + .c-btn-dropdown {
-  //   position: relative;
-  //   &:after {
-  //     content: '';
-  //     @include absolute(top -1px bottom -1px left -1px);
-  //     border-style: none none none solid;
-  //     border-width: 1px;
-  //   }
-  // }
-
-  .c-btn-secondary:hover + .c-btn-dropdown {
+  .c-btn-secondary__alt:hover + .c-btn-dropdown {
     &:after {
       border-color: transparent;
     }
   }
 
-  .c-btn-primary:last-of-type {
+  .c-btn-primary__alt:last-of-type {
     &:after {
       border-color: $cool-grey;
     }
@@ -148,7 +153,6 @@ $button-padding-y: $default-pad-y;
   margin-top: 5px;
 }
 
-
 // Future-proof disabling of clicks on `<a>` elements
 .c-btn.disabled,
 fieldset[disabled] .c-btn {
@@ -158,20 +162,20 @@ fieldset[disabled] .c-btn {
 //
 // Alternate buttons
 //
-.c-btn-primary {
+.c-btn-primary__alt {
   // @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
-.c-btn-secondary {
+.c-btn-secondary__alt {
   // @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 
 // Remove all backgrounds
-.c-btn-primary-outline {
+.c-btn-primary__alt-outline {
   // @include button-outline-variant($btn-primary-bg);
 }
 
-.c-btn-secondary-outline {
+.c-btn-secondary__alt-outline {
   // @include button-outline-variant($btn-secondary-border);
 }
 
@@ -190,4 +194,3 @@ fieldset[disabled] .c-btn {
   // line-height: ensure proper height of button next to small input
   // @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }
-

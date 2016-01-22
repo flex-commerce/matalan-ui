@@ -153,11 +153,11 @@
 
            var callButton = listings.appendChild(document.createElement('div'));
            callButton.className = 'o-store-call hidden@md-up u-cf';
-           callButton.innerHTML = '<a href="tel:' + prop.phone + '"class="c-btn c-btn-primary__alt col-12@xs u-font-upper u-mar-t-large"><i class="icon icon-telephone u-color-pri u-pad-r-huge icon--vertical-middle"></i>Call store</a>';
+           callButton.innerHTML = '<a href="tel:' + prop.phone + '"class="c-btn c-btn-primary col-12@xs u-font-upper u-mar-t-large"><i class="icon icon-telephone u-color-pri u-pad-r-huge icon--vertical-middle"></i>Call store</a>';
 
            var openMapButton = listings.appendChild(document.createElement('div'));
            openMapButton.className = 'o-store-map-open hidden@md-up u-cf';
-           openMapButton.innerHTML = '<a class="c-btn c-btn-primary__alt col-12@xs u-font-upper store-finder__map--mobile-open u-mar-v-large" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>View Map</a>';
+           openMapButton.innerHTML = '<a class="c-btn c-btn-primary col-12@xs u-font-upper store-finder__map--mobile-open u-mar-v-large" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>View Map</a>';
 
            var mapmobile = listings.appendChild(document.createElement('div'));
            mapmobile.id = 'map-' + prop.storeid;
@@ -165,7 +165,7 @@
 
            var closeMapButton = listings.appendChild(document.createElement('div'));
            closeMapButton.className = 'o-store-map-close hidden@md-up u-cf';
-           closeMapButton.innerHTML = '<a class="c-btn c-btn-primary__alt col-12@xs u-font-upper store-finder__map--mobile-close u-mar-t-large  u-mar-b-huge " data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>Close Map</a>';
+           closeMapButton.innerHTML = '<a class="c-btn c-btn-primary col-12@xs u-font-upper store-finder__map--mobile-close u-mar-t-large  u-mar-b-huge " data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>Close Map</a>';
 
        };
 

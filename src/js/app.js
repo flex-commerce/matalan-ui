@@ -273,7 +273,7 @@ var BootstrapDialog = require("./vendors/bs-dialog");
 
 $("[data-myacc='address-delete']").on('click', function(e){
 
-  var addressRef = $(this).parent().next('h5').text();
+  var addresseRf = $(this).parent().next('h5').text();
 
   BootstrapDialog.show({
       title: 'Confirm Delete',
@@ -281,15 +281,14 @@ $("[data-myacc='address-delete']").on('click', function(e){
       closable: true,
       buttons: [{
           label: 'Cancel',
-          cssClass: 'c-btn c-btn-primary__alt',
+          cssClass: 'c-btn c-btn-primary',
           action: function(dialogRef){
               dialogRef.close();
           }
       }, {
-        id: 'delete-'+addressRef,
-        icon: 'glyphicon glyphicon-check',
+        id: 'delete-' + addressRef,
         label: 'Delete ' + addressRef,
-        cssClass: 'c-btn c-btn-secondary__alt',
+        cssClass: 'c-btn c-btn-secondary',
         action: function(dialogRef){
             dialogRef.close();
         }
