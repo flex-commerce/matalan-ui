@@ -451,6 +451,12 @@ require("./modules/scroll-lock");
 // ===========================
 // Misc rules to tidy
 // ===========================
+
+require('./modules/address-lookup');
+
+
+
+
 (function() {
     // header - show mobile search input field
     $('.header--mobile-search').on('click', function() {
