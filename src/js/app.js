@@ -1,5 +1,3 @@
-
-
 // ===========================
 // Lodash
 // ===========================
@@ -7,6 +5,7 @@ require("lodash");
 // ===========================
 // Lodash end
 // ===========================
+
 
 
 // ===========================
@@ -20,13 +19,18 @@ $(document).ready(function() {
   }, 250));
 });
 
-// console.log('isMobileOrTablet', window.isMobileOrTablet.matches) // true | false
 // $(window).on('resize', _.debounce(function() {
 //   console.log('isMobileOrTablet', window.isMobileOrTablet.matches) // true | false
 // }));
 
 // ===========================
 // end setup detection for mobile or tablet
+// ===========================
+
+
+
+// ===========================
+// pointer events polyfill
 // ===========================
 
 // require("pepjs");
@@ -47,21 +51,16 @@ $(document).ready(function() {
 // })
 
 // ===========================
-// pointer events polyfill
-// ===========================
-
-
-
-
-// ===========================
 // end pointer events polyfill
 // ===========================
+
 
 
 // ===========================
 // Tether
 // http://github.hubspot.com/tether/
 // ===========================
+
 var Tether = require("tether");
 var tether;
 
@@ -71,19 +70,16 @@ var tetherElement = $('.o-minibag-contain');
 $('#minibag-contain').on('shown.bs.modal', function(e) {
 
   if (!window.isMobileOrTablet.matches) {
-        // for minibag click shower
-        tether = new Tether({
-          element: tetherElement,
-          target: tetherTarget,
-          attachment: 'top right',
-          targetAttachment: 'bottom right'
-        });
-        tether.position();
-      } else {
-        // $('#minibag-contain').attr('style', '');
-      }
-
-    });
+// for minibag click shower
+tether = new Tether({
+  element: tetherElement,
+  target: tetherTarget,
+  attachment: 'top right',
+  targetAttachment: 'bottom right'
+});
+tether.position();
+}
+});
 
 $('#minibag-contain').on('hidden.bs.modal', function(e) {
   if (tether !== undefined) {
@@ -91,6 +87,7 @@ $('#minibag-contain').on('hidden.bs.modal', function(e) {
   }
 
   $('#minibag-contain').attr('style', '');
+
 });
 
 
@@ -120,6 +117,8 @@ require("./modules/dropdown");
 // Dropdown end
 // ===========================
 
+
+
 require("./vendors/jquery.scrollto");
 require("./modules/google-maps-init");
 
@@ -128,54 +127,8 @@ require("./modules/google-maps-init");
 // Tabs
 // ===========================
 
-require("./modules/tabs");
+require("./modules/tabs-init");
 
-// open first tab here, so we don't need to include 2x active classes on each usage
-
-$.each($('.c-tabs [role="tablist"]'), function() {
-  $(this).find('a:first').tab('show');
-});
-
-
-
-if ($('.c-tabs--responsive').length) {
-// responsive accordion manager
-var activeTab = null;
-var elementContainer;
-var tabHeaders;
-var accHeaders;
-var tabIndex;
-
-
-$('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-
-  elementContainer = $(this).closest('.c-tabs--responsive');
-  tabHeaders = $(elementContainer).find('.c-tabs__header__item a');
-  accHeaders = $(elementContainer).find('.c-tabs__header__item--accord a');
-  activeTab = e.target;
-
-
-  if ($.inArray(activeTab, tabHeaders) >= 0) {
-    tabIndex = $.inArray(activeTab, tabHeaders);
-    $(accHeaders).each(function(){
-      $(this).parent().removeClass('accord--active');
-    });
-    $(accHeaders[tabIndex]).parent('li').addClass('accord--active');
-  }
-
-
-  if($(this).parent().hasClass('c-tabs__header__item--accord')) {
-    $(accHeaders).each(function(){
-      $(this).parent().removeClass('accord--active');
-    });
-    $(this).parent().addClass('accord--active');
-    tabIndex = $.inArray(activeTab, accHeaders);
-    $(tabHeaders[tabIndex]).tab('show');
-  }
-
-
-})
-}
 
 
 
@@ -199,24 +152,24 @@ require("./modules/collapse");
 $(document).ready(function() {
   if (!window.isMobileOrTablet.matches) {
 
-        // on load, open if desktop
-        // $("#accordion2 [role='tabpanel']").each(function() {
-        //   $(this).collapse('show');
-        // });
+// on load, open if desktop
+// $("#accordion2 [role='tabpanel']").each(function() {
+//   $(this).collapse('show');
+// });
 
 }
 $(window).on('resize', _.debounce(function() {
   if (!window.isMobileOrTablet.matches) {
-          //   // on resize, open if desktop
-          //   $("#accordion2 [role='tabpanel']").each(function() {
-          //     $(this).collapse('show');
-          //   });
+//   // on resize, open if desktop
+//   $("#accordion2 [role='tabpanel']").each(function() {
+//     $(this).collapse('show');
+//   });
 
-          // } else {
-          //   // on resize, close if not desktop
-          //   $("#accordion2 [role='tabpanel']").each(function() {
-          //     $(this).collapse('hide');
-          //   });
+// } else {
+//   // on resize, close if not desktop
+//   $("#accordion2 [role='tabpanel']").each(function() {
+//     $(this).collapse('hide');
+//   });
 
 }
 }, 250));
@@ -276,23 +229,23 @@ $("[data-myacc='address-delete']").on('click', function(e){
   var addressRef = $(this).parent().next('h5').text();
 
   BootstrapDialog.show({
-      title: 'Confirm Delete',
-      message: 'Are you sure you want to delete ' + addressRef + '?',
-      closable: true,
-      buttons: [{
-          label: 'Cancel',
-          cssClass: 'c-btn c-btn-primary',
-          action: function(dialogRef){
-              dialogRef.close();
-          }
-      }, {
-        id: 'delete-' + addressRef,
-        label: 'Delete ' + addressRef,
-        cssClass: 'c-btn c-btn-secondary',
-        action: function(dialogRef){
-            dialogRef.close();
-        }
-      }]
+    title: 'Confirm Delete',
+    message: 'Are you sure you want to delete ' + addressRef + '?',
+    closable: true,
+    buttons: [{
+      label: 'Cancel',
+      cssClass: 'c-btn c-btn-primary',
+      action: function(dialogRef){
+        dialogRef.close();
+      }
+    }, {
+      id: 'delete-' + addressRef,
+      label: 'Delete ' + addressRef,
+      cssClass: 'c-btn c-btn-secondary',
+      action: function(dialogRef){
+        dialogRef.close();
+      }
+    }]
   });
 
 })
@@ -458,66 +411,66 @@ require('./modules/address-lookup');
 
 
 (function() {
-    // header - show mobile search input field
-    $('.header--mobile-search').on('click', function() {
-      $(this).toggleClass('active');
-      $('.header--search-bar').toggleClass('active').find('input').focus();
-    });
-  })();
+// header - show mobile search input field
+$('.header--mobile-search').on('click', function() {
+  $(this).toggleClass('active');
+  $('.header--search-bar').toggleClass('active').find('input').focus();
+});
+})();
 
-  (function() {
-    // search results layout switch
-    $('.js-results-tight').on('click', function(e) {
-      e.preventDefault();
-      if (!$(this).hasClass('active')) {
+(function() {
+// search results layout switch
+$('.js-results-tight').on('click', function(e) {
+  e.preventDefault();
+  if (!$(this).hasClass('active')) {
 
-        $(this).addClass('active')
-        .siblings().removeClass('active')
-        .closest('.search-results__main')
-        .removeClass('search-results__wide')
-        .addClass('search-results__tight');
-      }
-    });
-    // search results layout switch cont.
-    $('.js-results-wide').on('click', function(e) {
-      e.preventDefault();
-      if (!$(this).hasClass('active')) {
+    $(this).addClass('active')
+    .siblings().removeClass('active')
+    .closest('.search-results__main')
+    .removeClass('search-results__wide')
+    .addClass('search-results__tight');
+  }
+});
+// search results layout switch cont.
+$('.js-results-wide').on('click', function(e) {
+  e.preventDefault();
+  if (!$(this).hasClass('active')) {
 
-        $(this).addClass('active')
-        .siblings().removeClass('active')
-        .closest('.search-results__main')
-        .removeClass('search-results__tight')
-        .addClass('search-results__wide');
-      }
-    });
-  })();
+    $(this).addClass('active')
+    .siblings().removeClass('active')
+    .closest('.search-results__main')
+    .removeClass('search-results__tight')
+    .addClass('search-results__wide');
+  }
+});
+})();
 
-  (function() {
-    // global alert event
-    $(".global-test").click(function() {
-      $(".c-alert-global").toggleClass("active");
-    });
-  })();
+(function() {
+// global alert event
+$(".global-test").click(function() {
+  $(".c-alert-global").toggleClass("active");
+});
+})();
 
 
 
-  (function() {
+(function() {
 
-    // filter collapse / expand
-    var toggleFilterCollapse = function(target) {
-      $(target).toggleClass('collapse');
-        // console.log($(target));
-        $(target).find('.icon').toggleClass("icon-plus icon-minus");
-      };
+// filter collapse / expand
+var toggleFilterCollapse = function(target) {
+  $(target).toggleClass('collapse');
+// console.log($(target));
+$(target).find('.icon').toggleClass("icon-plus icon-minus");
+};
 
-      $('body').on('click', '.filter--title', function() {
-        toggleFilterCollapse($(this));
-      });
-    // console.log(isMobileOrTablet);
-    if (!window.isMobileOrTablet.matches) {
-      toggleFilterCollapse('.filter--title');
-    }
-  })();
+$('body').on('click', '.filter--title', function() {
+  toggleFilterCollapse($(this));
+});
+// console.log(isMobileOrTablet);
+if (!window.isMobileOrTablet.matches) {
+  toggleFilterCollapse('.filter--title');
+}
+})();
 
 
 // syntax highlighter
