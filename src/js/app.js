@@ -504,10 +504,10 @@ if (!window.isMobileOrTablet.matches) {
 
 
 // bugherd
-(function(d, t) {
-  var bh = d.createElement(t),
-  s = d.getElementsByTagName(t)[0];
-  bh.type = 'text/javascript';
-  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=uswxmej5ryhotdtsi4yw9g';
-  s.parentNode.insertBefore(bh, s);
-})(document, 'script');
+// (function(d, t) {
+//   var bh = d.createElement(t),
+//   s = d.getElementsByTagName(t)[0];
+//   bh.type = 'text/javascript';
+//   bh.src = '//www.bugherd.com/sidebarv2.js?apikey=uswxmej5ryhotdtsi4yw9g';
+//   s.parentNode.insertBefore(bh, s);
+// })(document, 'script');

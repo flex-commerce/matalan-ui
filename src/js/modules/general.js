@@ -12,6 +12,13 @@
         $('#' + parentId).hide();
     });
 
+    $('body').on('change', '.image-position', function(){
+      var sectionId = $(this).closest('select').attr('data-app');
+      var optionValue = $(this).val();
+      console.log(optionValue);
+        $('#' + sectionId).css('background-position', optionValue);
+    });
+
     $('body').on('click', '#checkoutCreateAccount', function() {
         $('.create-account-container').toggle();
 
