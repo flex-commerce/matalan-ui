@@ -12,7 +12,7 @@
   <div class="hidden@lg-up">
     {{> parcels/header }}
   </div>
-  <div class="container o-checkout__container">
+  <div class="container o-checkout__container" role="main">
     <div class="row">
       <div class="col-12@xs">
         <div class="u-mar-v-large">
@@ -79,7 +79,9 @@
             </form>
           </div>
           <div class="col-4@lg hidden@md-down">
-            {{> partials/minibag-checkout-footer }}
+            <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
+              {{> partials/minibag-checkout-footer }}
+            </div>
           </div>
         </div>
       </div>
