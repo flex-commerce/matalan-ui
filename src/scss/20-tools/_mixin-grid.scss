@@ -61,7 +61,7 @@ $susy: (
 }
 
 
-body > .container {
+body .container[role=main] {
   padding-bottom: 60px;
 }
 

@@ -7,10 +7,10 @@
 
 <body>
   {{> parcels/header }}
-  <div class="container">
+  <div class="container" role="main">
 
     <div class="row">
-      <div class="col-12@xs col-8@md">
+      <div class="col-12@xs col-8@lg">
         <div class="u-mar-v-huge">
           <h1 class="title--page-title">My Account</h1>
         </div>
@@ -412,12 +412,9 @@
         </div>
       </div>
 
-      <div class="col-4@md hidden@sm-down u-mar-v-huge">
-        <div class="u-cf ">
-          <h5 class="u-font-upper u-fl ">Shopping Bag</h5>
-        </div>
-        <div data-scroll-responsive="md+" class="o-minibag--inner js-scroll-hold u-scrollbar">
-          {{> partials/minibag-contents }}
+      <div class="col-4@lg hidden@md-down u-mar-v-huge">
+        <div class="minibag__wrapper--sidebar minibag__wrapper--myaccount">
+          {{> partials/minibag-checkout-footer }}
         </div>
       </div>
 
