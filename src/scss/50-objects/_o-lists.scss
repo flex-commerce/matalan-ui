@@ -116,9 +116,22 @@ $list-border: $cool-grey;
   }
 }
 
-
-
 .o-deflist-plain {
+  dt {
+    font-weight: bold;
+    // font-size: rem-calc(16px);
+    // line-height: 1.2;
+  }
+
+  dd {
+    // margin: 0 0 10px 0;
+    // font-size: rem-calc(14px);
+    // line-height: 1.4;
+    // color: #666;
+  }
+}
+
+.o-deflist-styled {
   dt {
     font-size: rem-calc(16px);
     line-height: 1.2;

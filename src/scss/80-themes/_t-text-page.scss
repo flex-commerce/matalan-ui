@@ -1,0 +1,97 @@
+.page--text__header {
+  background-color: $primary-color;
+  color: $white;
+  min-height: 170px;
+
+  @include mq($from: md) {
+    min-height: 240px;
+  }
+
+  @include mq($from: lg) {
+    min-height: 295px;
+  }
+}
+
+.page--text {
+
+  .page--text__content {
+    p,
+    li,
+    a,
+    span {
+      @include font-size(16px, 1.5);
+    }
+
+    ol {
+      list-style-type: decimal;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        &:before {
+          content: "•";
+          position: absolute;
+          left: -5px;
+        }
+      }
+    }
+
+    dl {
+      dt {
+        font-weight: bold;
+      }
+
+      dd {}
+    }
+
+    h2 {
+      @extend .u-font-sec;
+
+      @include font-size(24px, 1.5);
+
+      color: $primary-color;
+      font-weight: 200;
+    }
+
+    h3 {
+      @include font-size(28px, 1.5);
+    }
+  }
+}
+
+.o-fullscreen-container.faq__hero {
+  position: relative;
+  height: 450px;
+  min-height: 450px;
+
+  @include mq($until: lg) {
+    display: none;
+  }
+}
+
+.page--text--faq {
+  .faq__wrapper {
+    background-color: $white;
+    position: relative;
+
+    @include mq($from: lg) {
+      margin-top: -350px;
+    }
+  }
+
+  .panel.panel--subpanel {
+    border-style: none;
+
+    p {
+      margin: 0 2em 2em;
+    }
+  }
+
+  .o-accord-container {
+    .o-accord__title {}
+  }
+
+  .o-accord__title {}
+}
