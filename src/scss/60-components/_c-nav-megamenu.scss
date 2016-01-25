@@ -91,6 +91,9 @@
 /* list of items within sub-navigation panel */
 
 // typography for the mega menu and off canvas menu
+.navbar__header span {
+  @include font-size(10px);
+}
 .navbar__header span,
 .navbar__top-item > .link,
 .sub-nav-title > .link {
