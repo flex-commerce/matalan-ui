@@ -11,20 +11,14 @@
        var items, markers_data = [];
        var icon = '../../img/marker.svg';
        var newicon = '../../img/marker-current.svg';
-       console.log(fulldata)
-       console.log(fulldata.length);
 
        if (fulldata.length > 0) {
            items = fulldata;
 
-           //console.log(items.length)
-
            for (var i = 0; i < items.length; i++) {
 
                var item = items[i];
-               // console.log(item)
                if (item.geometry.coordinates != undefined) {
-                   // console.log('adding marker');
                    markers_data.push({
                        lat: item.geometry.coordinates[1],
                        lng: item.geometry.coordinates[0],
@@ -248,13 +242,14 @@
 
    }
 
-   $(window).resize(function() {
-       console.log($(window).width());
-       var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
-       if (width > 0) {
-           $('.map-wrapper').css('right', -width);
-       }
-   });
+   if ($('.map-wrapper').length > 0) {
+       $(window).resize(function() {
+           var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
+           if (width > 0) {
+               $('.map-wrapper').css('right', -width);
+           }
+       });
+   }
 
    $('body').on('click', '.store-finder__map--mobile-open', function(e) {
        $('.o-store-map-close.mapActive a').trigger('click');
