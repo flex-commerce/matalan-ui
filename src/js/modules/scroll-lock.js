@@ -1,12 +1,10 @@
-// prevent scroll in container from propagating out to the doc body when we scrol too far
-// to be checked for x browser and toggled for mob
+// // prevent scroll in container from propagating out to the doc body when we scrol too far
+// // to be checked for x browser and toggled for mob
 
-// TODO - check this is needed - Ian/
-
-// disabled for demo of ui kit on 23/11/15
+// // TODO - check this is needed - Ian/
 
 // $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
-
+//     console.log(ev)
 //     var $this = $(this),
 //         scrollTop = this.scrollTop,
 //         scrollHeight = this.scrollHeight,
@@ -14,7 +12,8 @@
 //         delta = (ev.type == 'DOMMouseScroll' ?
 //             ev.originalEvent.detail * -40 :
 //             ev.originalEvent.wheelDelta),
-//         up = delta > 0;
+//         up = delta > 0,
+//         activeBreak = $(this).data('scrollResponsive');
 
 //     var prevent = function() {
 //         ev.stopPropagation();
@@ -23,8 +22,16 @@
 //         return false;
 //     };
 
-//     // if (window.matchMedia("(min-width: 1024px)").matches) {
-//       if (!up && -delta > scrollHeight - height - scrollTop) {
+//     if (
+//       (window.matchMedia("(min-width: 0)").matches && activeBreak == 'sm+') ||
+//       (window.matchMedia("(max-width: 720px)").matches && activeBreak == 'sm') ||
+//       (window.matchMedia("(max-width: 1024px)").matches && activeBreak == 'sm-md') ||
+//       (window.matchMedia("(min-width: 720px) and (max-width: 1024px)").matches && activeBreak == 'md') ||
+//       (window.matchMedia("(min-width: 720px)").matches && activeBreak == 'md+') ||
+//       (window.matchMedia("(min-width: 1025px)").matches && activeBreak == 'lg')
+//       ) {
+//       // adjust delta for edge case scrolls - default is * -1
+//       if (!up && (delta * -1) > scrollHeight - height - scrollTop) {
 //           // Scrolling down, but this will take us past the bottom.
 //           $this.scrollTop(scrollHeight);
 //           return prevent();
@@ -33,6 +40,7 @@
 //           $this.scrollTop(0);
 //           return prevent();
 //       };
-//     // }
+//     }
 // });
+
 

@@ -1,11 +1,8 @@
-[{
-    "secTitle": "Home",
-    "seclink": "#"
-  },
-
+[
   {
     "secTitle": "Christmas",
     "seclink": "#",
+    "sectionImage": "img-assets/christmas.jpg",
 
     "categories": [{
         "catTitle": "Beanie vs Bobble",
@@ -22,17 +19,17 @@
         "catTitle": "Christmas at Home",
         "catLink": "#",
         "collection": {
-          "Shop All": "#",
-          "Shop TV Advert": "#",
-          "Christmas at Home": "#",
-          "Christmas Decorations": "#",
-          "Christmas Trees": "#",
-          "Christmas Cards &amp; Wrap": "#",
-          "Christmas Tableware": "#",
-          "Christmas Cooking &amp; Baking": "#",
-          "Christmas Home Accessories &amp; Cushions": "#",
-          "Christmas Bedroom": "#",
-          "Christmas Bathroom": "#"
+          "Shop All": "plp.html",
+          "Shop TV Advert": "plp.html",
+          "Christmas at Home": "plp.html",
+          "Christmas Decorations": "plp.html",
+          "Christmas Trees": "plp.html",
+          "Christmas Cards &amp; Wrap": "plp.html",
+          "Christmas Tableware": "plp.html",
+          "Christmas Cooking &amp; Baking": "plp.html",
+          "Christmas Home Accessories &amp; Cushions": "plp.html",
+          "Christmas Bedroom": "plp.html",
+          "Christmas Bathroom": "plp.html"
         }
       },
 
@@ -78,7 +75,7 @@
 
       {
         "catTitle": "Partywear",
-        "catLink": "#",
+        "catLink": "plp.html",
         "collection": {
           "Shop All": "#",
           "Womens Partywear": "#",
@@ -106,7 +103,7 @@
   {
     "secTitle": "Womens",
     "seclink": "#",
-
+    "sectionImage": "img-assets/womens.jpg",
     "categories": [{
         "catTitle": "New Arrivals",
         "catLink": "#",
@@ -133,7 +130,7 @@
           "Winter Warmers": "#",
           "Christmas Jumpers": "#",
           "Christmas Novelty": "#",
-          "Party &amp; Occasionwear": "#",
+          "Party &amp; Occasionwear": "plp.html",
           "Black Dresses": "#",
           "Into the Wilderness": "#",
           "Denim Shop": "#",
@@ -241,6 +238,7 @@
   {
     "secTitle": "Mens",
     "seclink": "#",
+    "sectionImage": "img-assets/mens.jpg",
     "categories": [{
         "catTitle": "New Arrivals",
         "catLink": "#",
@@ -268,7 +266,7 @@
         "collection": {
           "Suits": "#",
           "Suit Fit Guide": "#",
-          "Party &amp; Occasionwear": "#",
+          "Party &amp; Occasionwear": "plp.html",
           "Formal Shoes": "#"
         }
       },
@@ -339,7 +337,7 @@
   {
     "secTitle": "Girls",
     "seclink": "#",
-
+    "sectionImage": "img-assets/girls.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -359,7 +357,7 @@
         "Christmas Brochure": "#",
         "Christmas Jumpers": "#",
         "Beanie vs Bobble": "#",
-        "Party &amp; Occasionwear": "#",
+        "Party &amp; Occasionwear": "plp.html",
         "Disney Frozen": "#",
         "Winter Warmers": "#",
         "Shop All Girlswear": "#",
@@ -468,7 +466,7 @@
   {
     "secTitle": "Boys",
     "seclink": "#",
-
+    "sectionImage": "img-assets/boys.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -489,7 +487,7 @@
         "Christmas Brochure": "#",
         "Christmas Jumpers": "#",
         "Beanie vs Bobble": "#",
-        "Party &amp; Occasionwear": "#",
+        "Party &amp; Occasionwear": "plp.html",
         "Winter Warmers": "#",
         "Shop All Boyswear": "#",
         "Made for Modern Families": "#"
@@ -588,7 +586,7 @@
   {
     "secTitle": "Homeware",
     "secLink": "#",
-
+    "sectionImage": "img-assets/homeware.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -656,7 +654,7 @@
   {
     "secTitle": "Shoes",
     "secLink": "#",
-
+    "sectionImage": "img-assets/Shoes.jpg",
     "categories": [{
       "catTitle": "New Arrivals",
       "catLink": "#",
@@ -717,7 +715,7 @@
   {
     "secTitle": "Made For...",
     "seclink": "#",
-
+    "sectionImage": "img-assets/madefor.jpg",
     "categories": [{
       "catTitle": "Made For...",
       "catLink": "#",
@@ -758,7 +756,7 @@
         "Top 10 Christmas Gifts": "#",
         "Christmas Trends": "#",
         "Christmas Jumpers": "#",
-        "Partywear": "#"
+        "Partywear": "plp.html"
       }
     }]
   },
@@ -786,7 +784,7 @@
 
   {
     "secTitle": "Matalan Direct",
-    "seclink": "#"
+    "seclink": "http://direct.matalan.co.uk"
   }
 
 ]

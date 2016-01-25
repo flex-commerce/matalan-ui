@@ -6,8 +6,11 @@ var gulpSequence = require('gulp-sequence');
 var getEnabledTasks = require('../util/getEnabledTasks');
 
 var productionTask = function(cb) {
+
+  process.env.NODE_ENV = 'production';
+
   var tasks = getEnabledTasks('production');
-  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'modernizr', 'rev', cb);
+  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'modernizr', cb); // 'rev',
 };
 
 gulp.task('production', productionTask);

@@ -1,0 +1,5 @@
+@include auto-column-generate();
+
+.auto-column--nobreak {
+  break-inside: avoid;
+}

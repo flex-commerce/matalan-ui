@@ -1,6 +1,7 @@
 {
   "name": "UI_Kit",
   "version": "0.0.1",
+  "currentSprint": "7",
   "description": "Matalan Direct Flex Commerce UI Kit",
   "license": "Matalan license details goes here",
   "homepage": "http://matalan-ui-kit.s3-website-eu-west-1.amazonaws.com/",
@@ -16,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/flex-commerce/matalan-front-end"
+    "url": "http://flex-commerce.github.io/matalan-front-end/homepage.html"
   },
   "scripts": {
     "deploy": "gulp deploy",
@@ -28,7 +29,9 @@
   },
   "dependencies": {
     "jquery": "^2.1.4",
-    "lodash": "^3.10.0"
+    "lodash": "^3.10.0",
+    "pepjs": "^0.4.1",
+    "tether": "^1.1.1"
   },
   "devDependencies": {
     "babel-core": "^5.8.3",
@@ -42,6 +45,7 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-awspublish": "^3.0.1",
+    "gulp-cached": "^1.1.0",
     "gulp-changed": "^1.2.1",
     "gulp-data": "^1.2.0",
     "gulp-duration": "0.0.0",
@@ -50,6 +54,7 @@
     "gulp-gh-pages": "^0.5.2",
     "gulp-hb": "^2.6.5",
     "gulp-header": "^1.7.1",
+    "gulp-htmlhint": "^0.3.0",
     "gulp-htmlmin": "~1.1.3",
     "gulp-iconfont": "^4.0.2",
     "gulp-if": "~1.2.5",
@@ -60,6 +65,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-render": "^0.2.1",
     "gulp-postcss": "^6.0.1",
+    "gulp-remove-code": "^1.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-rev": "^5.1.0",
     "gulp-rev-napkin": "^0.1.0",
@@ -75,6 +81,9 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.3",
+    "gulp-zip": "^3.0.2",
+    "htmlhint-stylish": "^1.0.3",
+    "json-loader": "^0.5.4",
     "karma": "0.13.2",
     "karma-chrome-launcher": "^0.2.0",
     "karma-cli": "0.1.0",

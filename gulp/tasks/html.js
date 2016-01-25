@@ -16,7 +16,9 @@ var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     changed     = require('gulp-changed'),
     gulpif       = require('gulp-if'),
-    htmlmin      = require('gulp-htmlmin');
+    htmlmin      = require('gulp-htmlmin'),
+    htmlhint     = require("gulp-htmlhint"),
+    removeCode   = require('gulp-remove-code');
 
 var exclude = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**');
 
@@ -33,15 +35,19 @@ var htmlTask = function() {
         data: path.join(config.app.src, config.tasks.hbs.data, '/*.{js,json}'),
         helpers: path.join(config.app.src, config.tasks.hbs.helpers, '/*.js'),
         partials: path.join(config.app.src, config.tasks.hbs.partials, '/**/*.hbs'),
-        bustCache: true,
-        debug: true
+        bustCache: true
     }))
     .on('error', handleErrors)
-    .pipe(gulpif(process.env.NODE_ENV == 'production', htmlmin(config.tasks.html.htmlmin)))
+    .pipe(gulpif(process.env.NODE_ENV == 'production', removeCode({ production: true })))
+    // .pipe(gulpif(process.env.NODE_ENV == 'production', htmlmin(config.tasks.html.htmlmin)))
     // .pipe(prettify({config: '.jsbeautifyrc'}))
+    .pipe(htmlhint())
+    .pipe(htmlhint.reporter('htmlhint-stylish'))
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream());
 };
 
 gulp.task('html', htmlTask);
 module.exports = htmlTask;
+
+

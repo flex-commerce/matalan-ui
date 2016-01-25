@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body>
+  <div class="hidden@md-down">
+    {{> partials/header-checkout }}
+  </div>
+  <div class="hidden@lg-up">
+    {{> parcels/header }}
+  </div>
+  <div class="container o-checkout__container" role="main">
+    <div class="row">
+      <div class="col-12@xs">
+        <div class="u-mar-v-large">
+          {{> partials/progress-checkout-2 }}
+        </div>
+        <div class="row">
+          <div class="o-checkout__detail col-12@xs col-8@lg">
+            <form action="">
+
+              <fieldset class="u-pad-v-medium u-border2-t completed">
+                <div class="o-checkout__title u-font-upper">
+                  1. Billing Address
+                  <i class="icon icon-plus icon--vertical-right"></i>
+                </div>
+              </fieldset>
+
+              <fieldset class="u-pad-v-medium u-border2-t active">
+                <div class="o-checkout__title u-font-upper">
+                  2. Delivery Address
+                  <i class="icon icon-minus icon--vertical-right"></i>
+                </div>
+                <div class="o-checkout__content u-mar-t-small">
+                  <div class="o-form__row">
+
+                    <div class="o-form__input-contain auto-column-2">
+                      <div class="o-form__label-contain u-pad-v-tiny">
+                        <label class="o-form__label-option">
+                          <input type="radio" name="billingaddress" value="" checked>
+                          <span></span>
+                          Use my billing address
+                        </label>
+                      </div>
+                      <div class="o-form__label-contain u-pad-v-tiny">
+                        <label class="o-form__label-option">
+                          <input type="radio" name="billingaddress" value="">
+                          <span></span>
+                          Use my address book
+                        </label>
+                      </div>
+                      <div class="o-form__label-contain u-pad-v-tiny">
+                        <label class="o-form__label-option">
+                          <input type="radio" name="billingaddress" value="">
+                          <span></span>
+                          Enter a new address
+                        </label>
+                      </div>
+                      <div class="o-form__label-contain u-pad-v-tiny">
+                        <label class="o-form__label-option">
+                          <input type="radio" name="billingaddress" value="">
+                          <span></span>
+                          Click &amp; Collect (FREE)
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="c-btn c-btn-secondary c-btn-block">Next step</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="u-pad-v-medium u-border2-t">
+                <div class="o-checkout__title u-font-upper">3. Delivery Method<i class="icon icon-plus icon--vertical-right"></i></div>
+              </fieldset>
+
+            </form>
+          </div>
+          <div class="col-4@lg hidden@md-down">
+            <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
+              {{> partials/minibag-checkout-footer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{> parcels/footer }} {{> partials/js-footer}}
+</body>
+
+</html>

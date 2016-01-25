@@ -32,7 +32,7 @@
         return;
       }
     }
-    self = this;
+    var self = this;
     this.typeTimer = null;
     this.typeSearch = '';
     this.isMac = navigator.platform.match(/mac/i);
@@ -44,10 +44,10 @@
     this.isMob = !options.mobile && navigator.userAgent.match(/iPad|iPhone|Android|IEMobile|BlackBerry/i)
 
     if (this.isMob) {
-      $(this.selectElement).parent().addClass('selectbox--contain__mobile');
+      $(this.selectElement).parent().addClass('selectbox__contain-mobile');
       // return false;
     } else {
-      $(this.selectElement).parent().addClass('selectbox--contain__desktop');
+      $(this.selectElement).parent().addClass('selectbox__contain-desktop');
     }
 
     // Element must be a select control
@@ -72,6 +72,12 @@
   SelectBox.prototype.init = function(options) {
     var select = $(this.selectElement);
     // return if already initialised
+
+    if (!($('#selectbox-option-contain').length)) {
+      var $divContain = $("<div>", {id: "selectbox-option-contain"});
+      $( "BODY" ).append($divContain);
+    }
+
     if (select.data('selectbox-control')) {
       return false;
     }
@@ -144,52 +150,7 @@
 
     // Generate control
     if (inline) {
-      // Inline controls
-      // Disabled during development as no requirement for inline (multi select) form control
-      //
-      // options = this.getOptions('inline');
-
-      // control
-      //   .append(options)
-      //   .data('selectbox-options', options).addClass('selectbox-inline selectbox-menuShowing')
-      //   .bind('keydown.selectbox', function(event) {
-      //     self.handleKeyDown(event);
-      //   })
-      //   .bind('keypress.selectbox', function(event) {
-      //     self.handleKeyPress(event);
-      //   })
-      //   .bind('mousedown.selectbox', function(event) {
-      //     if (1 !== event.which) {
-      //       return;
-      //     }
-      //     if ($(event.target).is('A.selectbox-inline')) {
-      //       event.preventDefault();
-      //     }
-      //     if (!control.hasClass('selectbox-focus')) {
-      //       control.focus();
-      //     }
-      //   })
-      //   .insertAfter(select);
-
-      // // Auto-height based on size attribute
-      // if (!select[0].style.height) {
-      //   var size = select.attr('size') ? parseInt(select.attr('size')) : 5;
-      //   // Draw a dummy control off-screen, measure, and remove it
-      //   var tmp = control
-      //     .clone()
-      //     .removeAttr('id')
-      //     .css({
-      //       position: 'absolute',
-      //       top: '-9999em'
-      //     })
-      //     .show()
-      //     .appendTo('body');
-      //   tmp.find('.selectbox-options').html('<li><a>\u00A0</a></li>');
-      //   var optionHeight = parseInt(tmp.find('.selectbox-options A:first').html('&nbsp;').outerHeight());
-      //   tmp.remove();
-      //   control.height(optionHeight * size);
-      // }
-      // this.disableSelection(control);
+      // ...
     } else {
       // Dropdown controls
       var label = $('<span class="selectbox-label" />'),
@@ -198,7 +159,7 @@
       // Update label
       label.attr('class', this.getLabelClass()).text(this.getLabelText());
       options = this.getOptions('dropdown');
-      options.appendTo('BODY');
+      options.appendTo($('#selectbox-option-contain'));
 
       control
         .data('selectbox-options', options)
@@ -336,13 +297,13 @@
       case 'dropdown':
       // begin mobile viewport render modification
 
-        options = $('<ul class="selectbox-dropdown-menu js-scroll-hold selectbox-options" />');
+        options = $('<ul class="selectbox-dropdown-menu js-scroll-hold u-scrollbar selectbox-options" />');
         options = _getOptions(select, options);
 
         options
           .data('selectbox-select', select)
           .css('display', 'none')
-          .appendTo('BODY')
+          .appendTo($('#selectbox-option-contain'))
           .find('A')
           .bind('mousedown.selectbox', function(event) {
             if (event.which === 1) {
@@ -477,7 +438,7 @@
       case 'dropdown':
         // Update label
         this.setLabel();
-        $("BODY").append(options);
+        // $("BODY").append(options);
         break;
     }
 

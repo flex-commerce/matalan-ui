@@ -1,6 +1,6 @@
 
 hr {
-  margin: 2rem 0
+  margin: 2rem 0;
 }
 
 
@@ -30,26 +30,50 @@ li {
     #ANCHOR
 \*------------------------------------*/
 a {
-  // text-decoration: none;
+  text-decoration: none;
   color: $base-text-color;
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active
+   {
     color: $primary-color;
+    text-decoration: underline;
   }
-  &:focus {
+  &.link:focus {
     @include tab-focus();
+  }
+}
+
+a.link--nostyle {
+  &:hover,
+  &.active {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.link--underline {
+  text-decoration: underline;
+  &:before,
+  &:after {
+    text-decoration: underline;
   }
 }
 
 p a {
   border-bottom: 1px dotted $base-text-color;
   text-decoration: none;
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: $primary-color;
   }
 }
 
 
-input[type="text"], input[type="submit"], input[type="password"], input[type="email"] {
+input[type="text"],
+input[type="submit"],
+input[type="password"],
+input[type="email"] {
   -webkit-appearance: none;
   border-radius: 0;
 }

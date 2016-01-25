@@ -1,18 +1,20 @@
-<div class="o-section">
-  {{# times 4 }}
-  <div class="o-section--item o-section--item--half o-section--bg o-section--half-{{ this }} col-xs-12 col-md-6 u-font-ta-c">
-    <div class="o-section-detail--outer__border o-section--detail--center">
-      <div class="o-section--detail">
-        <div class="o-section--detail-title u-mar-v-medium u-font-wb">Category</div>
-        <a class="o-section-detail--link">{{ lorem }}</a>
-        <a class="o-section-detail--link">{{ lorem }}</a>
+<div class="o-section col-12@xs">
+  {{#each halfsection }}
+  <div class="o-section--item o-section--item--half o-section--bg o-section--half-{{sectionId}} col-12@xs col-6@md u-font-ta-c">
+    <div class="o-section-detail--outer__border o-section__detail--bottom">
+      <div class="o-section__detail">
+        <div class="o-section__detail-title">{{sectionTitle}}</div>
+        {{#each sectionItems}}
+        <a class="o-section__detail-link">{{ this }}</a>
+        {{/each}}
       </div>
     </div>
   </div>
   <style>
-    .o-section--half-{{ this }} {
-        background-image: url("img/half-{{ this }}.jpg");
+    .o-section--half-{{sectionId}} {
+        background-image: url("{{sectionImage}}");
+        background-position: {{imagePosition}};
     }
   </style>
-  {{/ times }}
+  {{/each}}
 </div>

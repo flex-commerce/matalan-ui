@@ -7,12 +7,10 @@
     color: $white;
     background: $cool-grey-hover;
     @extend .u-font-no-underline;
+    button {
+      text-transform: uppercase;
+    }
   }
-  .icon-search:before {
-    color: $keyline-color;
-    line-height: 1.3;
-  }
-
   &.has-focus {
     .c-search__button {
       background: $primary-color;
@@ -24,7 +22,22 @@
 }
 
 .input-group--addon i:before {
-  font-size: 2em;
-  margin-left: rem-calc(4);
+  font-size: 1.5em;
 }
 
+
+// handling to hide placeholder and icon on focus
+.c-search-form {
+  .input-group--addon {
+    z-index: 0;
+  }
+  .input-group--addon__inset-left {
+    &:focus {
+      padding-left: 1em !important;
+      background: #fff;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}

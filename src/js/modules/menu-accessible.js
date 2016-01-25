@@ -2,7 +2,7 @@
   Mega menu JS
  */
 
-/*
+/*!
 Copyright © 2013 Adobe Systems Incorporated.
 
 Licensed under the Apache License, Version 2.0 (the “License”);
@@ -130,6 +130,7 @@ limitations under the License.
         190: "."
       }
     };
+    var clickCatcher = '<div id="js-clickcatcher-meganav" class="js-clickcatcher js-clickcatcher-white"></div>';
   /**
    * @desc Creates a new accessible mega menu instance.
    * @param {jquery} element
@@ -158,9 +159,7 @@ limitations under the License.
     this.mouseFocused = false;
     this.justFocused = false;
 
-    // if (window.matchMedia("(min-width: 1024px)").matches) {
     this.init();
-    // }
 
   }
 
@@ -226,6 +225,7 @@ limitations under the License.
      * @inner
      * @private
      */
+
     _togglePanel = function(event, hide) {
       var target = $(event.target),
         that = this,
@@ -248,6 +248,10 @@ limitations under the License.
             .removeClass(settings.openClass)
             .filter('.' + settings.panelClass)
             .attr('aria-hidden', 'true');
+
+          $('#js-clickcatcher-meganav').remove();
+          $('html').removeClass('body--modal-open__nav');
+
           if ((event.type === 'keydown' && event.keyCode === Keyboard.ESCAPE) || event.type === 'DOMAttrModified') {
             newfocus = topli.find(':tabbable:first');
             setTimeout(function() {
@@ -265,6 +269,10 @@ limitations under the License.
         }
       } else {
         clearTimeout(that.focusTimeoutID);
+        if( !$('html').hasClass('body--modal-open__nav') ) {
+          $('body').append(clickCatcher);
+          $('html').addClass('body--modal-open__nav');
+        }
         topli.siblings()
           .find('[aria-expanded]')
           .attr('aria-expanded', 'false')
@@ -653,10 +661,16 @@ limitations under the License.
      * @private
      */
     _mouseOverHandler = function(event) {
+      var that = this;
       clearTimeout(this.mouseTimeoutID);
+
       $(event.target)
         .addClass(this.settings.hoverClass);
-      _togglePanel.call(this, event);
+
+      that.mouseTimeoutID = setTimeout(function() {
+        _togglePanel.call(that, event);
+      }, 250);
+
       if ($(event.target).is(':tabbable')) {
         $('html').on('keydown.accessible-megamenu', $.proxy(_keyDownHandler, event.target));
       }
@@ -672,6 +686,8 @@ limitations under the License.
      */
     _mouseOutHandler = function(event) {
       var that = this;
+      clearTimeout(this.mouseTimeoutID);
+
       $(event.target)
         .removeClass(that.settings.hoverClass);
 
@@ -712,7 +728,7 @@ limitations under the License.
         var settings = this.settings,
           nav = $(this.element),
           menu = nav.children().first(),
-          topnavitems = menu.children('.navbar--top-item');
+          topnavitems = menu.children('.navbar__top-item');
 
         // console.log('menu', menu);
         // console.log('topnavitems', topnavitems);

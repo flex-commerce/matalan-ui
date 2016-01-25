@@ -1,96 +1,136 @@
-// @todo - either make this reusable, or duplicate it...
+// move this mixin to style-chunks
 @mixin black-link {
   color: $base-text-color;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
     color: $primary-color-hover;
   }
 }
 
-.c-navbar {
-  .navbar--top-item {
-    @include font-size(11px);
+// end move this mixin to style-chunks
+
+html {
+  // overflow-y: auto;
+}
+
+body {
+  // overflow-x: hidden;
+}
+
+.modal-open--nav {
+  .o-nav__container {
+    z-index: 1060;
   }
 }
 
+.o-nav__container {
+  max-width: 100vw;
+  overflow-y: visible;
+  // z-index to prevent modal bg affecting border color
+  position: relative;
+  z-index: 1000;
+
+  .modal--nav {
+    &:before {
+      content: '';
+      border-top: 1px solid $light-grey;
+      display: block;
+    }
+    &:after {
+      content: '';
+      border-bottom: 1px solid $light-grey;
+      display: block;
+    }
+  }
+}
+
+// off canvas display, padding rules
 @include mq($until: lg) {
   .c-navbar {
-    .navbar--header {
+    .navbar__header {
       overflow: hidden;
-      padding: 0.5rem 0.75rem;
-      @include font-size(12px);
+      padding: .5em .75rem;
+
+      .icon {
+        @include font-size(16px);
+
+        color: $dark-grey;
+      }
+
       > .link {
         display: inline-block;
-        &:last-of-type{
-          float: right;
-        }
       }
     }
-    .navbar--footer {
-      padding: 0.5rem 0.75rem;
+
+    .navbar__footer {
+      padding: .5rem .75rem;
+
       > .link {
         display: block;
         text-align: left;
-        padding: 0.75em 0;
-        font-size: 0.925em;
+        padding: .75em 0;
       }
     }
   }
 }
 
 
+// end off canvas display, padding rules
 
+// meganav display, padding, text rules
 @include mq($from: lg) {
-  .navbar--header,
-  .navbar--footer {
+  .navbar__header,
+  .navbar__footer {
     display: none;
   }
-  .c-navbar {
-    @include border-tb-default(1px);
+
+  .modal--nav{
+    // @include border-tb-default(1px);
+    // border: 1px solid green;
   }
-  .navbar--top-item {
+
+  .navbar__top-item {
     display: inline-block;
     color: $base-text-color;
     text-decoration: none;
+
     > .link {
       display: inline-block;
-      padding: 1.25em 0.5em;
+      padding: 1.25em .5em;
       border-bottom: 2px solid transparent;
+
       &.open,
       &:hover {
         border-bottom: 2px solid $primary-color;
+        color: $primary-color;
       }
     }
   }
+
+  .sub-nav-title {
+    color: $primary-color;
+    margin: .75em 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid $cool-grey;
+  }
+
+  .sub-nav-header {
+    @extend %u-font-sec;
+
+    color: $primary-color;
+  }
 }
 
 
-
+// end meganav display, padding, text rules
 
 .nav-mobile-button {
-  @extend .u-cf;
+  @extend %u-cf;
+
   @include mq($from: lg) {
     display: none;
-  }
-}
-
-// todo - sort these for oocs, vars, naming etc
-.sub-nav {
-  // padding: 15px; // disabled while syling off canvas
-  text-transform: initial;
-  .sub-nav-title {
-    @include mq($from: lg) {
-      // todo - revisit
-      color: $primary-color;
-      margin: 0.75em 0;
-      padding-bottom: 0.5em;
-      border-bottom: 1px solid $cool-grey;
-    }
-  }
-  .sub-nav-header {
-    @extend .u-font-sec;
-    color: $primary-color;
   }
 }
 
@@ -98,14 +138,16 @@
 @include mq($until: lg) {
   .sub-nav-group {
     width: auto;
-    .sub-nav-item {
-    }
+
     .sub-nav-title > .link {
       padding-left: 1.5em;
     }
+
     .sub-nav-item > .link {
       padding-left: 2.5em;
     }
   }
 }
 
+
+// end indentation of menu items

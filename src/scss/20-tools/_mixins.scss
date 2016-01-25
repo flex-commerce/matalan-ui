@@ -11,7 +11,7 @@
 // document this
 @mixin tab-focus() {
   outline: thin dotted;
-  outline: 2px solid -webkit-focus-ring-color;
+  outline: 2px auto -webkit-focus-ring-color;
   outline-offset: -2px;
   // usability - raise the element with focus, prevents outline from being obscured
   z-index: 1;
@@ -20,10 +20,14 @@
 
 // document this
 @mixin input-focus() {
-  outline: 1px solid $dark-grey;
+  outline: 2px solid $dark-grey;
   // usability - raise the element with focus, prevents outline from being obscured
   z-index: 1;
   position: relative;
+}
+
+@mixin no-focus() {
+  outline: none !important;
 }
 
 // and this
@@ -54,10 +58,9 @@
   @if $hover {
     @include style-variant($primary-color, $white, $primary-color);
   } @else {
-    @include style-variant($secondary-color, $primary-color, $primary-color);
+    @include style-variant($white, $primary-color, $primary-color);
   }
 }
-
 
 
 
@@ -66,14 +69,21 @@
 }
 
 @mixin auto-columns($number) {
-  -webkit-columns: $number 12em;
+  columns: $number 15em;
 }
 
-@for $i from 2 through 6 {
-  .auto-column-#{$i} {
-    @include auto-columns(#{$i})
+@mixin auto-column-generate {
+  @for $i from 2 through 6 {
+    .auto-column-#{$i} {
+      @include auto-columns(#{$i})
+    }
+    .auto-column-#{$i} li:first-child {
+      margin-top: 0;
+    }
   }
 }
+
+
 
 @mixin progress-variant($color) {
   &[value]::-webkit-progress-value {
@@ -130,3 +140,5 @@
 @mixin gradient-striped($color: rgba($white, .15), $angle: 45deg) {
   background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 }
+
+

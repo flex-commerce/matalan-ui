@@ -1,42 +1,55 @@
 /* Text classes */
 
 .meta {
-  @extend %u-fade-el;
-  @include font-size(11px, 1.1);
+  // @include font-size(11px, 1.1);
+  font-size: 90%;
 }
 
-// .meta-icon {
-//   font-size: 5px;
-//   padding: 8px;
-// }
-
+%u-font-pri,
 .u-font-pri {
   font-family: 'texheros', Helvetica, Arial, sans-serif;
 }
 
+%u-font-sec,
 .u-font-sec {
   font-family: 'Archer', Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
   font-weight: 500;
 }
 
+%u-font-alt,
 .u-font-alt {
   font-family: 'Times New Roman', Georgia, Times, 'Didot', serif;
 }
 
+%u-font-pri-alt-1,
 .u-font-pri-alt-1 {
   font-family: 'texheros', sans-serif;
 }
 
+%u-font-sec-alt-1,
 .u-font-sec-alt-1 {
   font-family: 'gentium', Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
   font-weight: normal;
 }
 
+%u-font-alt-alt-1,
 .u-font-alt-alt-1 {
   font-family: 'Times New Roman', serif;
 }
+
+%u-font-upper,
+.u-font-upper {
+  text-transform: uppercase;
+}
+
+%u-font-strikethrough,
+.u-font-strikethrough {
+  text-decoration: line-through
+}
+
+
 
 // for light gray text (80% opacity)
 %u-fade-el,
@@ -50,6 +63,12 @@
   font-weight: 600;
 }
 
+// for normal text - weight normal
+%u-font-wn,
+.u-font-wn {
+  font-weight: normal;
+}
+
 // for light text - weight light
 %u-font-wl,
 .u-font-wl {
@@ -60,6 +79,15 @@
 %u-font-si,
 .u-font-si {
   font-style: italic;
+}
+
+%u-font-underline,
+.u-font-underline {
+  text-decoration: underline !important;
+  &:before,
+  &:after {
+    text-decoration: underline !important;
+  }
 }
 
 %u-font-no-underline,

@@ -9,60 +9,91 @@ $input-padding-y: $default-pad-y;
 // todo -
 // add some size handling
 // move this to mixn level
-@mixin form-item-size( $padding-y:$input-padding-y, $padding-x: $input-padding-x, $font-size: 1em, $line-height: $line-height) {
+@mixin form-item-size($padding-y: $input-padding-y, $padding-x: $input-padding-x, $font-size: 1em, $line-height: $line-height) {
   padding: $padding-y $padding-x;
   font-size: $font-size;
   line-height: $line-height;
 }
 
-.o-form-row {
+.o-form__row {
+  @include clearfix;
+
   padding: $form-row-padding-y $form-row-padding-x;
   line-height: $line-height;
   color: $input-color;
   position: relative;
-  @include clearfix();
 }
 
-.form-inline {
-  .o-form-row {
+.o-form--inline {
+  .o-form__row {
     width: auto;
   }
-  .o-form-label--contain,
-  .o-form-input--contain:not(.o-form--input-group) {
+
+  .o-form__label-contain,
+  .o-form__input-contain:not(.o-form--input-pack) {
     display: inline-block;
   }
 }
 
-.form-default,
-.form-wide {
-  .o-form-row {
+.o-form--default,
+.o-form--wide {
+  .o-form__row {
     display: block;
     width: 100%;
   }
 }
 
-.o-form--input-group {
+.o-form--input-pack {
   display: inline-table;
   position: relative;
+
   > * {
     display: table-cell !important;
   }
+
   .input-group--addon {
     width: 1%;
     text-align: center;
+
     // z-index keeps the addon icon visible on input focus
     z-index: 2;
+
     a {
       color: $white;
+      padding: 0 em-calc(10px);
+      height: 100%;
     }
+
     &:not(.input-group--addon__inset) {
       padding: 0 em-calc(10px);
     }
+
+    &:not(.input-group--addon__button) {
+      padding: 0 em-calc(10px);
+    }
+
     &:not(.unstyled) {
       background: $primary-color;
       color: $white;
     }
+
+    button {
+      border-style: none;
+      background-color: transparent;
+      padding: 0 em-calc(10px);
+      height: 100%;
+    }
+
+    &.input-group--addon__button {
+      padding: 0;
+    }
+
+    .icon:before {
+      color: $keyline-color;
+      line-height: 1.6;
+    }
   }
+
   .input-addon--expand {
     width: 100%;
   }
@@ -78,58 +109,132 @@ $input-padding-y: $default-pad-y;
 }
 
 // form wide dev rules
-.form-wide {
-  .o-form-label--contain {
+.o-form--wide {
+  .o-form__label-contain {
     @include span(4);
+
     text-align: right;
   }
-  .o-form-input--contain {
+
+  .o-form__input-contain {
     @include span(8);
+
+    text-align: left;
   }
 }
 
 //testing new rules - invelstigate this as a pattern
-.o-form-inline-fixed__threecol {
-  .o-form-label--contain {
-    @include span(3);
-    @include form-item-size;
-    text-align: right;
-  }
-  .o-form-input--contain {
-    @include span(3);
-  }
-  .o-form-message--contain {
-    @include span(6);
-    @include form-item-size;
-  }
-}
+//used in ui kitchen sink input alert 3col layout
+// .o-form--inline-fixed__threecol {
+//   .o-form__label-contain {
+//     @include span(3);
 
-.form-default .o-form-row .o-form-label--contain {
+//     @include form-item-size;
+
+//     text-align: right;
+//   }
+
+//   .o-form__input-contain {
+//     @include span(3);
+//   }
+
+//   .o-form-message--contain {
+//     @include span(6);
+
+//     @include form-item-size;
+//   }
+// }
+
+.form-default .o-form__row .o-form__label-contain {
   // vertical form label bottom margin
   margin-bottom: rem-calc(7);
 }
 
 // labels
-.form-wide .o-form-label--contain {
-  // keep first line of text inline with input for wide form
-  padding-top: 0.5em;
+// above field
+.o-form--default {
+  .o-form__label-contain {
+    padding-bottom: .5em;
+  }
 }
 
+// left of field
+.o-form--wide,
+.o-form--inline {
+  .o-option--inline,
+  .o-option--block {
+    border: 1px solid transparent;
+    padding: .5em 0;
+  }
 
+  .o-form__label-contain {
+    // keep first line of text inline with input for wide form
+    border: 1px solid transparent;
+    padding: .5em;
+  }
+}
+
+.o-form--wide {
+  .o-option--inline,
+  .o-option--block {
+    padding: .5em 0;
+  }
+
+  .o-form__label-contain {
+    padding: .5em;
+  }
+}
+
+.o-form--inline {
+  .o-option--inline,
+  .o-option--block {
+    padding: .5em 0;
+  }
+
+  .o-form__label-contain {
+    padding: .5em 0;
+  }
+}
+
+// end labels
 
 // custom border rules for inputs with addons
 // hides the left / right borders around prepended / appended input fields
 // @todo - find a cleaner way to approach this with minimal extra markup
 // input with leading addon
-.input-group--addon:not(.unstyled) + .input-addon--expand:not(.input-group--addon__inset-left)  {
+.input-group--addon:not(.unstyled) + .input-addon--expand:not(.input-group--addon__inset-left) {
   border-left-style: none;
 }
+
 // input with trailing addon
-.input-addon--expand:nth-child(1):nth-last-child(n+1)   {
+.input-addon--expand:nth-child(1):nth-last-child(n+1) {
   border-right-style: none;
 }
+
 // input with both trailing & leading addon
 .input-addon--expand:nth-child(2):nth-last-child(n+2):not(.input-group--addon__inset-left):not(.input-group--addon__inset-right) {
   border-right-style: none;
   border-left-style: none;
+}
+
+.sign-up-group {
+  @include clearfix;
+}
+
+// TODO this to be moved
+.sign-up--button {
+  @include form-item-size;
+
+  height: 100%;
+  border: 1px solid $cool-grey;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+// TODO - this to be moved / modularised
+// handles display of card selection on checkout
+.o-form-input--card-select {
+  [type=radio] + span {
+    margin: 0;
+  }
 }

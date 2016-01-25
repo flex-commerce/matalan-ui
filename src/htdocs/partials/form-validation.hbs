@@ -1,121 +1,66 @@
 <div class="ui-row">
-  <div class="col-sm-12">
+  <div class="col-12@sm">
     <h3>Validation States</h3>
-    <p>Matalan has various validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding .o-form-row</p>
+    <p>Matalan has various validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding .o-form__row</p>
   </div>
-  <div class="col-sm-12">
+  <div class="col-12@sm">
     <h3>Validation States</h3>
     <hr>
 
-    <form class="o-form-inline-fixed__threecol">
+    <form class="o-form--inline-fixed__threecol">
 
-      <div class="o-form-row form-validate__warning">
-        <div class="o-form-label--contain">
-          <label class="o-form-label__primary">Input with warning</label>
+      <div class="o-form__row form-validate__warning">
+        <div class="o-form__label-contain">
+          <label class="o-form__label-primary">Input with warning</label>
         </div>
-        <div class="o-form-input--contain">
-          <input type="text" class="input--textual" placeholder="placeholder" />
+        <div class="o-form__input-contain">
+          <input type="text" class="o-input o-input--textual" placeholder="placeholder" />
         </div>
         <div class="o-form-message--contain">
-          <label class="o-form-label__message">Something may have gone wrong</label>
+          <label class="o-form__label--message">Something may have gone wrong</label>
         </div>
       </div>
 
 
-      <div class="o-form-row form-validate__error">
-        <div class="o-form-label--contain">
-          <label class="o-form-label__primary">Input with error</label>
+      <div class="o-form__row form-validate__error">
+        <div class="o-form__label-contain">
+          <label class="o-form__label-primary">Input with error</label>
         </div>
-        <div class="o-form-input--contain">
-          <input type="text" class="input--textual" placeholder="placeholder" />
+        <div class="o-form__input-contain">
+          <input type="text" class="o-input o-input--textual" placeholder="placeholder" />
         </div>
         <div class="o-form-message--contain">
-          <label class="o-form-label__message">Please correct the error</label>
+          <label class="o-form__label--message">Please correct the error</label>
         </div>
       </div>
 
 
-      <div class="o-form-row form-validate__info">
-        <div class="o-form-label--contain">
-          <label class="o-form-label__primary">Input with info</label>
+      <div class="o-form__row form-validate__info">
+        <div class="o-form__label-contain">
+          <label class="o-form__label-primary">Input with info</label>
         </div>
-        <div class="o-form-input--contain">
-          <input type="text" class="input--textual" placeholder="placeholder" />
+        <div class="o-form__input-contain">
+          <input type="text" class="o-input o-input--textual" placeholder="placeholder" />
         </div>
         <div class="o-form-message--contain">
-          <label class="o-form-label__message">Username is taken</label>
+          <label class="o-form__label--message">Username is taken</label>
         </div>
       </div>
 
 
-      <div class="o-form-row form-validate__success">
-        <div class="o-form-label--contain">
-          <label class="o-form-label__primary">Input with success</label>
+      <div class="o-form__row form-validate__success">
+        <div class="o-form__label-contain">
+          <label class="o-form__label-primary">Input with success</label>
         </div>
-        <div class="o-form-input--contain">
-          <input type="text" class="input--textual" placeholder="placeholder" />
+        <div class="o-form__input-contain">
+          <input type="text" class="o-input o-input--textual" placeholder="placeholder" />
         </div>
         <div class="o-form-message--contain">
-          <label class="o-form-label__message">Whohoo!</label>
+          <label class="o-form__label--message">Whohoo!</label>
         </div>
       </div>
 
     </form>
-    <pre>
-      <code class="HTML">// Validation states for forms<br />
-        &lt;form class=&quot;o-form-inline-fixed__threecol&quot;&gt;<br /><br />
-        // Warnings<br />
-        &nbsp; &lt;div class=&quot;o-form-row form-validate__warning&quot;&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Input&nbsp;with&nbsp;warning&lt;/label&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot;&nbsp;placeholder=&quot;placeholder&quot;&nbsp;/&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-message--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__message&quot;&gt;Something&nbsp;may&nbsp;have&nbsp;gone&nbsp;wrong&lt;/label&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &lt;/div&gt;<br /><br />
-        // Errors<br />
-        &nbsp; &lt;div class=&quot;o-form-row form-validate__error&quot;&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Input&nbsp;with&nbsp;error&lt;/label&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot;&nbsp;placeholder=&quot;placeholder&quot;&nbsp;/&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-message--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__message&quot;&gt;Please&nbsp;correct&nbsp;the&nbsp;error&lt;/label&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &lt;/div&gt;<br /><br />
-        // Information<br />
-        &nbsp; &lt;div class=&quot;o-form-row form-validate__info&quot;&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Input&nbsp;with&nbsp;info&lt;/label&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot;&nbsp;placeholder=&quot;placeholder&quot;&nbsp;/&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-message--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__message&quot;&gt;Username&nbsp;is&nbsp;taken&lt;/label&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &lt;/div&gt;<br /><br />
-        // Succes<br />
-        &nbsp; &lt;div class=&quot;o-form-row form-validate__success&quot;&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-label--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__primary&quot;&gt;Input&nbsp;with&nbsp;success&lt;/label&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-input--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;input--textual&quot;&nbsp;placeholder=&quot;placeholder&quot;&nbsp;/&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &nbsp; &lt;div class=&quot;o-form-message--contain&quot;&gt;<br />
-        &nbsp; &nbsp; &nbsp; &lt;label class=&quot;o-form-label__message&quot;&gt;Whohoo!&lt;/label&gt;<br />
-        &nbsp; &nbsp; &lt;/div&gt;<br />
-        &nbsp; &lt;/div&gt;<br /><br />
-
-        &lt;/form&gt;
-      </code>
-    </pre>
 
 
   </div>

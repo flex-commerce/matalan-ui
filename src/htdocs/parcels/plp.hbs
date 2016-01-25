@@ -1,0 +1,32 @@
+{{> partials/breadcrumb }}
+<div class="row">
+  <div class="search-results__side">
+    {{> parcels/search-filters }}
+  </div>
+  <div class="search-results__main search-results__tight">
+    <div class="o-category-container o-category-container__banner  u-pad-v-large u-font-ta-c ">
+      <h2 class="u-font-upper">{{productspartywear.category.catTitle}}</h2>
+      <p>{{productspartywear.category.catDescription}}</p>
+      <ul class="o-list-inline-full">
+        {{#each productspartywear.category.catOtherLinks}}
+          <li><a class="link--underline" href="{{{@value}}}">{{{@key}}}</a></li>
+        {{/each}}
+      </ul>
+      <style>
+        .o-category-container__banner {
+          background-image: url('./img-assets/banner.jpg');
+          background-size: cover;
+        }
+      </style>
+    </div>
+
+    {{> partials/search-header }}
+
+    <div class="search-results--inner row">
+      {{#each productspartywear.category.collection.products}}
+        {{> partials/search-item}}
+      {{/ each }}
+    </div>
+    {{> partials/search-footer }}
+  </div>
+</div>

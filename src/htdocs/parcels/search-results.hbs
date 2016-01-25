@@ -1,112 +1,19 @@
+{{> partials/breadcrumb }}
 <div class="row">
-  <div class="col-xs-12">
-    <ul class="c-breadcrumb-bar u-pad-v-large">
-      <li class="c-breadcrumb-bar__item no-link"><a href="">Search</a></li>
-      <li class="c-breadcrumb-bar__item no-link">Search Term</li>
-    </ul>
-  </div>
-</div>
-<div class="row">
-  <div class="search-results--side">
+  <div class="search-results__side">
     {{> parcels/search-filters }}
   </div>
-  <div class="search-results--main search-results__tight">
-    <h4>Search Term</h4>
-    <div class="search-results--header u-cf">
-      <div class="search--header--products col-xs-6 col-lg-3 hidden-lg-down">
-        <p class="u-color-grey60 u-pad-t-medium">253 - 228 of 1800 products</p>
-      </div>
-      <div class="search--header--pagination col-lg-5 hidden-lg-down u-pad-0">
-        <div class="c-pagination-bar">
-          <div class="c-pagination-bar__list u-fl">
-            <a href="" class="c-btn c-btn-paginate">View All</a>
-            <a href="" class="c-btn c-btn-paginate">1</a>
-            <a href="" class="c-btn c-btn-paginate">2</a>
-            <a href="" class="c-btn c-btn-paginate">3</a>
-            <!-- <a href="" class="c-btn c-btn-paginate">4</a> -->
-            <!-- <a href="" class="c-btn c-btn-paginate">5</a> -->
-            <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
-          </div>
-          <div class="results-layout">
-            <a href="" class="js-results-tight u-font-no-underline active">
-              <i class="icon icon-view_tight"></i>
-            </a>
-            <a href="" class="js-results-wide u-font-no-underline">
-              <i class="icon icon-view_wide"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="search--header--sort col-xs-6 col-lg-4">
-        <div class="row">
-          <div class="col-lg-3 hidden-lg-down u-font-ta-r u-pad-0">
-            <label for="sortby" class="u-color-grey60 u-pad-t-medium u-dis-ib">
-              <small>Sort By</small>
-            </label>
-          </div>
-          <div class="col-xs-12 col-lg-9">
-            <div>
-              <select id="sortby" class="selectbox select-full">
-                <option selected="selected" disabled="disabled">Sort By</option>
-                <option value="">Price, High-Low</option>
-                <option value="">Price, Low-High</option>
-                <option value="">New Arrivals</option>
-                <option value="">Best Sellers</option>
-                <option value="">Customer Rating</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search--header--filter col-xs-6 hidden-lg-up js-filters">
+  <div class="search-results__main search-results__tight">
+    <h4>{{searchresults.results.searchTerm}}</h4>
 
-        <!-- <div> -->
-          <a class="selectbox selectbox-fake">
-            <span class="selectbox-label">Filter By</span>
-            <span class="selectbox-arrow"><span class="caret"></span></span>
-          </a>
-        <!-- </div> -->
+    {{> partials/search-header }}
 
-      </div>
-    </div>
     <div class="search-results--inner row">
-      {{# times 16 }}
-      <div class="search-results--item col-xs-6 col-md-4 u-font-ta-c u-mar-b-huge">
-        <div class="results--image">
-          <!-- <img class="img" src="http://placehold.it/180x254"> -->
-          <img class="img" src="http://placehold.it/224x320">
-          <div data-content="overlay 1" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
-          <div data-content="overlay 2" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
-          <div data-content="overlay 3" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-br"></div>
-        </div>
-        <div class="results--detail">
-          <a class="hidden-lg-down meta u-mar-v-medium">x View more colours</a>
-          <div class="u-mar-v-medium u-font-wb">{{lorem count=5}}</div>
-          <div class="u-mar-v-medium u-font-wb u-color-grey70">£0.00</div>
-          <div class="c-btn c-btn-primary__alt u-mar-v-medium hidden-lg-down">View</div>
-          <div class="u-mar-v-medium rating rating__small">
-            <i class="icon icon-star"></i>
-            <i class="icon icon-star"></i>
-            <i class="icon icon-star"></i>
-            <i class="icon icon-star"></i>
-            <i class="icon icon-star"></i>
-          </div>
-        </div>
-      </div>
-      {{/ times }}
+      {{#each searchresults.results.products}}
+        {{> partials/search-item}}
+      {{/each }}
     </div>
-    <div class="search-results--footer u-fr">
-      <div class="c-pagination-bar">
-        <div class="c-pagination-bar__list">
-          <a href="" class="c-btn c-btn-paginate">View All</a>
-          <a href="" class="c-btn c-btn-paginate">1</a>
-          <a href="" class="c-btn c-btn-paginate">2</a>
-          <a href="" class="c-btn c-btn-paginate">3</a>
-          <a href="" class="c-btn c-btn-paginate">4</a>
-          <a href="" class="c-btn c-btn-paginate">5</a>
-          <a href="" class="c-btn c-btn-paginate__alt">&raquo;</a>
-        </div>
-      </div>
-    </div>
+
+    {{> partials/search-footer }}
   </div>
 </div>

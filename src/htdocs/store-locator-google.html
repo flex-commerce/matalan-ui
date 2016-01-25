@@ -1,0 +1,22 @@
+<!doctype html>
+<html class="no-js u-scrollbar" lang="">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body>
+  {{> parcels/header }}
+  <div class="o-fullscreen-container store-hero" role="main">
+    {{> parcels/store-finder}}
+  </div>
+  <div id="storeFinderContainer" class="container o-map-conatiner" style="display:none">
+    {{> parcels/store-finder-google}}
+  </div>
+  {{> parcels/footer }}
+
+  {{> partials/js-footer}}
+</body>
+
+
+</html>

@@ -1,4 +1,4 @@
-/*
+/*!
  * Forked from BS3 Dropdown - https://github.com/twbs/bootstrap/blob/master/js/dropdown.js
  */
 

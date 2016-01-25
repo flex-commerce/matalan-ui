@@ -1,16 +1,29 @@
 // Core style functions and mixins
 
+@import '../../../node_modules/sass-mq/_mq';
+@import "../../../node_modules/susy/sass/susy";
+@import '_sass-helpers';
+@import '_unit-calcs';
+@import '_maths';
 @import '_functions';
 @import '_mixins';
-@import '../../../node_modules/sass-mq/_mq';
-
-$nudge-single-spaces: false;
-@import '../../../node_modules/nudgecss/tools.nudge';
+@import '_mixin-grid';
+@import '_mixin-generate';
+@import '_mixin-fontface';
 @import '_positioning';
 @import '_center';
 @import '_font-size';
-@import '_unit-calcs';
 @import '_style-chunks';
 @import '_justify';
-@import '_maths';
 @import '_arrows';
+
+
+// $nudge-incorrect-nesting:     true;
+$nudge-no-ids:                false;
+$nudge-single-spaces:         false;
+// $nudge-modifiers:             true;
+// $nudge-underscores:           true;
+// $nudge-camel-case:            true;
+// $nudge-deprecated-selectors:  true;
+@import '../../../node_modules/nudgecss/tools.nudge';
+

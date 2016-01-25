@@ -8,7 +8,7 @@
 
 // Core style functions and mixins
 @import '20-tools/__manifest';
-
+@import 'generated/_icons';
 // Default fonts and cross browser normalisation
 @import '30-generic/__manifest';
 
@@ -33,10 +33,3 @@
 // IE fixes and temporatry hacks
 @import '90-trumps/__manifest';
 
-
-@import 'generated/_icons';
-
-
-.no-flexbox {
-  color: red;
-}

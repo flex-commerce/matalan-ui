@@ -1,0 +1,141 @@
+// Class generator mixins. Some day soon Sass will support content arguments
+// when it does we will refactor this
+
+$mq-classgen-directions: ( t: top, r: right, b: bottom, l: left);
+$mq-classgen-models: (pad: padding, mar: margin);
+
+
+@mixin make-spacer-classes($scoped-bp) {
+  $scoped-bp: if($scoped-bp, \@#{$scoped-bp}, null);
+  //each model
+  @each $shortmod, $model in $mq-classgen-models {
+    // each size
+    @each $key, $val in $sizing-sizes {
+
+      //each direction - t/l/b/r
+      @each $shortdir, $dir in $mq-classgen-directions {
+        .u-#{$shortmod}-#{$shortdir}-#{$key}#{$scoped-bp} {
+          #{$model}-#{$dir}: #{$val};
+        }
+      }
+      //each direction
+
+      // horizontal
+      .u-#{$shortmod}-h-#{$key}#{$scoped-bp} {
+        #{$model}-left: #{$val};
+        #{$model}-right: #{$val};
+      }
+      // end horizontal
+
+      // vertical
+      .u-#{$shortmod}-v-#{$key}#{$scoped-bp} {
+        #{$model}-top: #{$val};
+        #{$model}-bottom: #{$val};
+      }
+      // end vertical
+
+      // directionless
+      .u-#{$shortmod}-#{$key}#{$scoped-bp} {
+        #{$model}: #{$val};
+      }
+      // end directionless
+
+    }
+    // each size
+  }
+  //each model
+}
+
+
+
+
+@mixin make-responsive-generated-classes() {
+  $breakpoint-first: nth(first($mq-breakpoints), 1);
+  $breakpoint-last: nth(last($mq-breakpoints), 1);
+  @each $curr-bp in map-keys($mq-breakpoints) {
+    // ignore the first loop until we have a previous breakpoint as a min value
+    @if variable-exists(prev-bp) {
+
+      // ignore the first BP for min value mq - we dont need xs-up
+      @if $prev-bp != $breakpoint-first {
+        @include mq($from: $prev-bp) {
+          @include make-spacer-classes(#{$prev-bp}-up);
+          @include generate-responsive-grid-offsets(#{$prev-bp}-up);
+          @include generate-responsive-hide-classes(#{$prev-bp}-up);
+        }
+      }
+
+      // build the bp specific mq with min max bp values
+      @include mq($from: $prev-bp, $until: $curr-bp) {
+        @include make-spacer-classes($prev-bp);
+        @include generate-responsive-grid-offsets($prev-bp);
+        @include generate-responsive-hide-classes($prev-bp);
+      }
+
+      // ignore the first BP for max value mq - we dont need xs-down
+      @if $prev-bp != $breakpoint-first {
+        @include mq($until: $curr-bp) {
+          @include make-spacer-classes(#{$prev-bp}-down);
+          @include generate-responsive-grid-offsets(#{$prev-bp}-down);
+          @include generate-responsive-hide-classes(#{$prev-bp}-down);
+        }
+      }
+
+      // extra rules for xl bp, since it's last and we build the values at the next BP
+      @if $curr-bp == $breakpoint-last {
+        @include mq($from: $curr-bp) {
+          @include make-spacer-classes($curr-bp);
+          @include generate-responsive-grid-offsets($curr-bp);
+          @include generate-responsive-hide-classes($curr-bp);
+        }
+      }
+    }
+    $prev-bp: $curr-bp;
+  }
+}
+
+
+
+
+
+@mixin make-automargin-classes() {
+
+    @each $shortdir, $dir in $mq-classgen-directions { //each dir
+      .u-mar-#{$shortdir}-a {
+        margin-#{$dir}: auto;
+      }
+    } //each dir
+
+    // horizontal
+    .u-mar-h-a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    // vertical
+    .u-mar-v-a {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+} //each model
+
+
+@mixin make-border-classes() {
+  @each $shortdir, $dir in $mq-classgen-directions { //each dir
+      %u-keyline-#{$shortdir},
+      .u-keyline-#{$shortdir}, {
+        border-#{$dir}: 1px solid $keyline-color;
+      }
+      %u-border2-#{$shortdir},
+      .u-border2-#{$shortdir}, {
+        border-#{$dir}: 1px solid $cool-grey;
+      }
+  } //each model
+  %u-border2,
+  .u-border2, {
+    border: 1px solid $cool-grey;
+  }
+}
+
+
+

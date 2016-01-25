@@ -1,99 +1,23 @@
-<div class="o-section">
-    <div class="o-section-department--slick">
-        <div class="o-section-department--outer">
-          <div class="o-section-department--inner">
-            <span class="o-section-department--title u-font-sec">Mens</span>
-            <div class="o-section-department--list">
+<div class="o-section col-12@xs">
+    <div class="o-section-department__slick">
+      {{#each departmentmenu}}
+        <div class="o-section-department__outer">
+          <div class="o-section-department__inner">
+            <span class="o-section-department__title u-font-sec">{{menuTitle}}</span>
+            <div class="o-section-department__list">
                 <ul class="">
-                  {{# times 6}}
-                    <li>{{ lorem }}</li>
-                  {{/ times }}
+                  {{#each menuItems}}
+                    <li><a href="">{{{this}}}</a></li>
+                  {{/each}}
                 </ul>
             </div>
-            <div class="o-section-department--image">
-              <img src="img/mens-department.png">
+            <div class="o-section-department__image">
+              <img src="{{menuImage}}">
             </div>
-            <a href="#" class="o-section-department--link c-btn">View&nbsp;More</a>
+            <a href="#" class="o-section-department__link c-btn">View&nbsp;More</a>
           </div>
+
         </div>
-        <div class="o-section-department--outer">
-          <div class="o-section-department--inner">
-            <span class="o-section-department--title u-font-sec">Womens</span>
-            <div class="o-section-department--list">
-                <ul class="">
-                  {{# times 8}}
-                    <li>{{ lorem }}</li>{{/ times }}
-                </ul>
-            </div>
-            <div class="o-section-department--image">
-              <img src="img/womens-department.png">
-            </div>
-            <a href="#" class="o-section-department--link c-btn">View&nbsp;More</a>
-          </div>
-        </div>
-        <div class="o-section-department--outer">
-          <div class="o-section-department--inner">
-            <span class="o-section-department--title u-font-sec">Children</span>
-            <div class="o-section-department--list">
-                <ul class="">
-                  {{# times 8}}
-                    <li>{{ lorem }}</li>
-                  {{/ times }}
-                </ul>
-            </div>
-            <div class="o-section-department--image">
-              <img src="img/womens-children.png">
-            </div>
-            <a href="#" class="o-section-department--link c-btn">View&nbsp;More</a>
-          </div>
-        </div>
-        <div class="o-section-department--outer">
-          <div class="o-section-department--inner">
-            <span class="o-section-department--title u-font-sec">Summer</span>
-            <div class="o-section-department--list">
-                <ul class="">
-                  {{# times 6}}
-                    <li>{{ lorem }}</li>
-                  {{/ times }}
-                </ul>
-            </div>
-            <div class="o-section-department--image">
-              <img src="img/department-summer.png">
-            </div>
-            <a href="#" class="o-section-department--link c-btn">View&nbsp;More</a>
-          </div>
-        </div>
-        <div class="o-section-department--outer">
-          <div class="o-section-department--inner">
-            <span class="o-section-department--title u-font-sec">Autumn</span>
-            <div class="o-section-department--list">
-                <ul class="">
-                  {{# times 5}}
-                    <li>{{ lorem }}</li>
-                  {{/ times }}
-                </ul>
-            </div>
-            <div class="o-section-department--image">
-              <img src="img/department-autumn.png">
-            </div>
-            <a href="#" class="o-section-department--link c-btn">View&nbsp;More</a>
-          </div>
-        </div>
-        <div class="o-section-department--outer">
-          <div class="o-section-department--inner">
-            <span class="o-section-department--title u-font-sec">Winter</span>
-            <div class="o-section-department--list">
-                <ul class="">
-                  {{# times 7}}
-                    <li>{{ lorem }}</li>
-                  {{/ times }}
-                </ul>
-            </div>
-            <div class="o-section-department--image">
-              <img src="img/department-winter.png">
-            </div>
-            <a href="#" class="o-section-department--link c-btn">View&nbsp;More</a>
-          </div>
-        </div>
+      {{/each}}
     </div>
 </div>

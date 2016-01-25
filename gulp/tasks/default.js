@@ -5,7 +5,9 @@ var gulpSequence    = require('gulp-sequence');
 var getEnabledTasks = require('../util/getEnabledTasks');
 
 var defaultTask = function(cb) {
+  process.env.NODE_ENV = 'dev';
   var tasks = getEnabledTasks('watch');
+
   gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'modernizr', 'watch', cb);
 }
 

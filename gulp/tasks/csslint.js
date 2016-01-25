@@ -1,14 +1,41 @@
-// 'use strict';
+'use strict';
+/**
+ * Lint SCSS files
+ * `gem install scss-lint` needed
+ */
 
-// var gulp = require('gulp'),
-//   config = require('../config'),
-//   // csslintStylish = require('csslint-stylish'),
-//   csslint = require('gulp-csslint');
+var config = require('../config');
+if (!config.tasks.css) return;
 
+var gulp = require('gulp');
+var path = require('path');
+var handleErrors = require('../util/handleErrors');
+var scssLint = require('gulp-scss-lint');
+var stylish = require('gulp-scss-lint-stylish2');
+var handleErrors = require('../util/handleErrors');
+var cache = require('gulp-cached');
 
-// gulp.task('css-lint', function() {
-//   gulp.src(config.sass.dest + '/*.css')
-//     .pipe(csslint())
-//     .pipe(csslint.reporter('junit-xml'))
-//     .pipe(csslint.failReporter())
-// });
+var reporter = stylish({
+    errorsOnly: true
+});
+
+var scssToCheck = path.join(
+    config.app.src,
+    config.tasks.css.src,
+    '/**/main' + '.{' + config.tasks.css.extensions + '}'
+);
+
+var scsslintTask = function() {
+    return gulp.src(scssToCheck)
+        // .pipe(cache('scsslint'))
+        .pipe(scssLint({
+            customReport: reporter.issues,
+            config: '.scsslint.yml',
+            maxBuffer: 307200
+        }))
+    .pipe( reporter.printSummary )
+    .on('error', handleErrors);
+}
+
+gulp.task('csslint', scsslintTask);
+module.exports = scsslintTask;

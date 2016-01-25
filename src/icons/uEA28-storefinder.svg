@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="128px" height="128px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#383838;}
+</style>
+<title>Store Finder</title>
+<desc>Created with Sketch.</desc>
+<g id="Iconography-Board" sketch:type="MSPage">
+	<g id="Store-Finder" transform="translate(-105.000000, -485.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(105.000000, 485.000000)" sketch:type="MSLayerGroup">
+			<path sketch:type="MSShapeGroup" class="st0" d="M21.3,44.9C21.3,77,63.9,128,63.9,128s42.9-51.1,42.8-83.1
+				C106.5,20.1,87.6,0,64,0S21.3,20.1,21.3,44.9z M64,8.5c18.7,0,34,16.3,34.1,36.4c0.1,19.9-20.7,51.4-34.2,69.1
+				C50.5,96.3,29.8,64.8,29.8,44.9C29.9,24.8,45.2,8.5,64,8.5 M64,34.1c4.7,0,8.5,3.8,8.5,8.5s-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5
+				S59.3,34.1,64,34.1L64,34.1z M64,25.6c-9.5,0-17.1,7.6-17.1,17.1c0,9.4,7.6,17.1,17.1,17.1s17.1-7.6,17.1-17.1S73.5,25.6,64,25.6
+				L64,25.6z"/>
+		</g>
+	</g>
+</g>
+</svg>

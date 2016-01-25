@@ -1,0 +1,230 @@
+{
+  "secTitle": "Womens",
+  "seclink": "#",
+
+  "category": {
+    "catTitle": "Party and Occasionwear",
+    "catDescription": "With the party season firmly on the horizon, you'll need to make sure your wardrobe is ready. Our womens' partywear range will bring all the glamour and party sparkle you could ever need, with a new collection of fabulous dresses, tops and clutches for you to mix and match. We've also got a selection of elegant party shoes so you can dance those nights away.",
+    "catLink": "#",
+    "catOtherLinks": {
+      "Black Dresses": "#",
+      "Party Dresses": "#",
+      "Party Bags": "#",
+      "Party Shoes": "#",
+      "Party Tops": "#"
+      },
+    "collection": {
+      "collectionName": "Womens Partywear",
+      "collectionLink": "#",
+      "products": [{
+        "productTitle": "V Neck Sequin Trim Tunic",
+        "productImages": [
+          "img-assets/product-1.jpg",
+          "img-assets/product-1.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£25.00",
+        "nowPrice": "£16.00",
+        "productRating": 3,
+        "colors": "2",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Coated Skinny Jeans",
+        "productImages": [
+          "img-assets/product-2.jpg",
+          "img-assets/product-2-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£16.00",
+        "nowPrice": "",
+        "productRating": 4,
+        "colors": "2",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Metal Plated Block Heels",
+        "productImages": [
+          "img-assets/product-3.jpg",
+          "img-assets/product-3-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£20.00",
+        "nowPrice": "£18.00",
+        "productRating": 4,
+        "colors": "2",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Abbey by Abbey Clancy Box Clutch",
+        "productImages": [
+          "img-assets/product-4.jpg",
+          "img-assets/product-4-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£16.00",
+        "nowPrice": "",
+        "productRating": 5,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Julien MacDonald Jewel Front Sandal",
+        "productImages": [
+          "img-assets/product-5.jpg",
+          "img-assets/product-5-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£32.00",
+        "nowPrice": "",
+        "productRating": 3,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Zip Top Clutch Bagh",
+        "productImages": [
+          "img-assets/product-6.jpg",
+          "img-assets/product-6-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£8.00",
+        "nowPrice": "",
+        "productRating": 5,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "V Neck Satin Cami",
+        "productImages": [
+          "img-assets/product-7.jpg",
+          "img-assets/product-7-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£12.00",
+        "nowPrice": "",
+        "productRating": 5,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Lurex Tube Dress",
+        "productImages": [
+          "img-assets/product-8.jpg",
+          "img-assets/product-8-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£18.00",
+        "nowPrice": "",
+        "productRating": 4,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tr"
+      }, {
+        "productTitle": "Roll NEck Sleeveless Blouse",
+        "productImages": [
+          "img-assets/product-9.jpg",
+          "img-assets/product-9-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£14.00",
+        "nowPrice": "",
+        "productRating": 5,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "FWM Slim Leg Crepe Trouser",
+        "productImages": [
+          "img-assets/product-10.jpg",
+          "img-assets/product-10-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£20.00",
+        "nowPrice": "",
+        "productRating": 5,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Beaded Vamp POinted Ballet Shoes",
+        "productImages": [
+          "img-assets/product-11.jpg",
+          "img-assets/product-11.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£15.00",
+        "nowPrice": "",
+        "productRating": 5,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Built Up Vest",
+        "productImages": [
+          "img-assets/product-12.jpg",
+          "img-assets/product-12-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£8.00",
+        "nowPrice": "",
+        "productRating": 3,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Abbey Clancy Leopard Print Clutch Box",
+        "productImages": [
+          "img-assets/product-13.jpg",
+          "img-assets/product-13-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£15.00",
+        "nowPrice": "",
+        "productRating": "0",
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Strappy Heeled Sasndals",
+        "productImages": [
+          "img-assets/product-14.jpg",
+          "img-assets/product-14-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£15.00",
+        "nowPrice": "",
+        "productRating": 5,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Soon Short Sleeve Embellished Top",
+        "productImages": [
+          "img-assets/product-15.jpg",
+          "img-assets/product-15-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£18.00",
+        "nowPrice": "",
+        "productRating": 2,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }, {
+        "productTitle": "Zip Front Pencil Skirt",
+        "productImages": [
+          "img-assets/product-16.jpg",
+          "img-assets/product-16-alt.jpg"
+        ],
+        "productLink": "pdp.html",
+        "productPrice": "£12.00",
+        "nowPrice": "",
+        "productRating": 4,
+        "colors": "1",
+        "promotionText": "New",
+        "promotionPosition": "tl"
+      }]
+    }
+  }
+}

@@ -1,114 +1,120 @@
-<div class="o-footer--container">
+<div class="o-footer__container">
   <div class="container">
-    <div class="col-lg-12">
+
+      <h4 class="o-footer--title u-mar-t-huge u-color-pri u-font-sec">Sign up for the latest offers and promotions</h4>
+
       <div class="row">
-        <div class="col-xs-12 u-font-sec">
-          <h4 class="u-color-pri o-footer--title">Sign up for the latest offers and promotions</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-5 col-lg-5 o-footer--subscribe">
-          <form class="form-inline c-search-form">
-            <div class="o-form-row">
-              <div class="o-form--input-group o-form-input--contain">
-                <input type="email" class="input--textual input-addon--expand" placeholder="Enter email address">
-                <a href="" class="input-group--addon unstyled c-search__button">Sign&nbsp;up</a>
+        <div class="o-footer__subscribe col-12@xs col-5@md">
+          <form id="email-signup" name="email-signup" class="o-form--inline c-search-form">
+            <div class="o-form__row">
+              <div class="o-form--input-pack o-form__input-contain">
+                <div class="input-group--addon unstyled input-group--addon__inset">
+                  <i class="icon icon-email"></i>
+                </div>
+                <input type="email" class="o-input o-input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter email address" pattern=".{3,}" title="3 characters minimum" required>
+                <div class="input-group--addon input-group--addon__button unstyled c-search__button">
+                  <button type="submit" class="">Sign&nbsp;Up</button>
+                </div>
               </div>
             </div>
           </form>
+          <div class="c-alert c-alert-dismissible signup-success u-mar-t-large">You have been signed up to our newsletter</div>
         </div>
-        <div class="col-xs-12 col-md-offset-1 col-md-6 col-lg-5">
+        <div class="col-12@xs col-offset-1@md-up col-6@md col-5@lg">
           <div class="o-footer--social u-cf">
-            <div class="span-wide-2"><i class="icon icon-social-facebook"></i></div>
-            <div class="span-wide-2"><i class="icon icon-social-google"></i></div>
-            <div class="span-wide-2"><i class="icon icon-social-twitter"></i></div>
-            <div class="span-wide-2"><i class="icon icon-social-youtube"></i></div>
-            <div class="span-wide-2"><i class="icon icon-social-pinterest"></i></div>
-            <div class="span-wide-2"><i class="icon icon-social-instagram"></i></div>
+            <div class="span-wide-2"><a href="#"><i class="icon icon-social-facebook"></i></a></div>
+            <div class="span-wide-2"><a href="#"><i class="icon icon-social-google"></i></a></div>
+            <div class="span-wide-2"><a href="#"><i class="icon icon-social-twitter"></i></a></div>
+            <div class="span-wide-2"><a href="#"><i class="icon icon-social-youtube"></i></a></div>
+            <div class="span-wide-2"><a href="#"><i class="icon icon-social-pinterest"></i></a></div>
+            <div class="span-wide-2"><a href="#"><i class="icon icon-social-instagram"></i></a></div>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-2 col-md-push-6 col-lg-push-5 col-lg-offset-1 u-font-ta-c">
-        <ul class="o-list-block o-footer--list">
-          <li class="o-list__item o-list-heading u-color-pri u-font-sec">
-            <h4>Customer Service</h4>
-          </li>
-          <li class="o-list__item"><a href="">Here to help</a></li>
-          <li class="o-list__item"><a href="">Delivery</a></li>
-          <li class="o-list__item"><a href="">Returns</a></li>
-          <li class="o-list__item"><a href="">Product Recall</a></li>
-        </ul>
+
+      <div class="row">
+        <div class="col-12@xs col-2@md col-push-6@md col-push-5@lg-up col-offset-1@lg-up">
+          <ul class="o-list-block o-footer--list">
+            <li class="o-list__item o-list-heading u-color-pri u-font-sec">
+              <h4>Customer Service</h4>
+            </li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Here to help</a></li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Delivery</a></li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Returns</a></li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Product Recall</a></li>
+          </ul>
+        </div>
+        <div class="col-12@xs col-2@md col-push-6@md col-push-5@lg-up">
+          <ul class="o-list-block o-footer--list">
+            <li class="o-list__item o-list-heading u-color-pri u-font-sec">
+              <h4>About Matalan</h4>
+            </li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">History</a></li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Matalan Jobs</a></li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Matalan Blog</a></li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Store Search</a></li>
+          </ul>
+        </div>
+        <div class="col-12@xs col-2@md col-push-6@md col-2@lg col-push-5@lg-up">
+          <ul class="o-list-block o-footer--list">
+            <li class="o-list__item o-list-heading u-color-pri u-font-sec">
+              <h4>Our Website</h4>
+            </li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Cookies</a></li>
+            <li class="o-list__item"><a href="" class="u-color-dgrey">Site Map</a></li>
+          </ul>
+        </div>
+        <div class="col-12@xs col-6@md col-pull-6@md col-5@lg col-pull-7@lg-up">
+          <div class="c-frame-wrapper">
+            <div class="c-frame-tl"></div>
+            <div class="c-frame-tr"></div>
+            <div class="c-frame-br"></div>
+            <div class="c-frame-bl"></div>
+            <div class="c-frame-content">
+              &copy; Copyright 2015 - Matalan
+              <br />
+              <br /> Perimeter Road,
+              <br /> Knowsely Industrial Park,
+              <br /> Knowsley, Liverpool L33 7SZ, UK
+              <br />
+            </div>
+          </div>
+          <img class="c-frame-caption" src="img/matalan-strapline-responsive.svg" alt="">
+        </div>
       </div>
-      <div class="col-xs-12 col-md-2 col-md-push-6 col-lg-push-5 u-font-ta-c">
-        <ul class="o-list-block o-footer--list">
-          <li class="o-list__item o-list-heading u-color-pri u-font-sec">
-            <h4>About Matalan</h4>
-          </li>
-          <li class="o-list__item"><a href="">History</a></li>
-          <li class="o-list__item"><a href="">Matalan Jobs</a></li>
-          <li class="o-list__item"><a href="">Matalan Blog</a></li>
-          <li class="o-list__item"><a href="">Store Search</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-md-2 col-md-push-6 col-lg-2 col-lg-push-5 u-font-ta-c">
-        <ul class="o-list-block o-footer--list">
-          <li class="o-list__item o-list-heading u-color-pri u-font-sec">
-            <h4>Our Website</h4>
-          </li>
-          <li class="o-list__item"><a href="">Cookies</a></li>
-          <li class="o-list__item"><a href="">Site Map</a></li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-md-6 col-md-pull-6 col-lg-5 col-lg-pull-7 u-font-c">
-        <div class="c-frame-wrapper">
-          <div class="c-frame-tl"></div>
-          <div class="c-frame-tr"></div>
-          <div class="c-frame-br"></div>
-          <div class="c-frame-bl"></div>
-          <div class="c-frame-content">
-            &copy; Copyright 2015 - Matalan
-            <br />
-            <br /> Perimeter Road,
-            <br /> Knowsely Industrial Park,
-            <br /> Knowsley, Liverpool L33 7SZ, UK
-            <br />
+
+      <div class="row">
+        <div class="col-12@xs col-6@md col-5@lg">
+          <div class="o-footer__card-svg o-footer__card-svg__small">
+            <img class="svg" src="img/card-visa.svg" />
+          </div>
+          <div class="o-footer__card-svg o-footer__card-svg__small">
+            <img class="svg" src="img/card-vpay.svg" />
+          </div>
+          <div class="o-footer__card-svg o-footer__card-svg__small">
+            <img class="svg" src="img/card-mastercard.svg" />
+          </div>
+          <div class="o-footer__card-svg o-footer__card-svg__small">
+            <img class="svg" src="img/card-maestro.svg" />
+          </div>
+          <div class="o-footer__card-svg o-footer__card-svg__small">
+            <img class="svg" src="img/card-paypal.svg" />
           </div>
         </div>
-        <img class="c-frame-caption" src="img/matalan-strapline-responsive.svg" alt="">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-6 col-lg-5">
-        <div class="o-footer--card-svg-wrapper-small">
-          <img src="img/card-visa.svg" />
-        </div>
-        <div class="o-footer--card-svg-wrapper-small">
-          <img src="img/card-vpay.svg" />
-        </div>
-        <div class="o-footer--card-svg-wrapper-small">
-          <img src="img/card-mastercard.svg" />
-        </div>
-        <div class="o-footer--card-svg-wrapper-small">
-          <img src="img/card-maestro.svg" />
-        </div>
-        <div class="o-footer--card-svg-wrapper-small">
-          <img src="img/card-paypal.svg" />
+        <div class="col-12@xs col-5@md col-offset-1@lg-up u-pad-l-0">
+          <div class="o-footer__card-svg col-offset-2@sm">
+            <img class="svg" src="img/card-mastercard-securecode.svg" />
+          </div>
+          <div class="o-footer__card-svg">
+            <img class="svg" src="img/card-verified-visa.svg" />
+          </div>
+          <div class="o-footer__card-svg">
+            <img class="svg" src="img/card-verisign.svg" />
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-5 col-lg-5 col-lg-offset-1">
-        <div class="o-footer--card-svg-wrapper-small hidden-md-up">
-        </div>
-        <div class="o-footer--card-svg-wrapper-small">
-          <img src="img/card-mastercard-securecode.svg" />
-        </div>
-        <div class="o-footer--card-svg-wrapper-small">
-          <img src="img/card-verified-visa.svg" />
-        </div>
-        <div class="o-footer--card-svg-wrapper-small">
-          <img src="img/card-verisign.svg" />
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
-</div>
+
+{{> partials/minibag }}

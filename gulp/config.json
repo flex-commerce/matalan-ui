@@ -35,7 +35,9 @@
       "src": "htdocs",
       "dest": "./",
       "htmlmin": {
-        "collapseWhitespace": true
+        "collapseWhitespace": false,
+        "preserveLineBreaks": true,
+        "removeComments": true
       },
       "extensions": ["html", "hbs"],
       "excludeFolders": ["parcels", "partials"]
@@ -55,10 +57,22 @@
       "extensions": ["jpg", "png", "svg", "gif"]
     },
 
+    "imageAssets": {
+      "src": "img-assets",
+      "dest": "img-assets",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
     "favicon": {
       "src": "favicon",
       "dest": "./",
       "extensions": ["ico"]
+    },
+
+    "data": {
+      "src": "data",
+      "dest": "data",
+      "extensions": ["json"]
     },
 
     "fonts": {

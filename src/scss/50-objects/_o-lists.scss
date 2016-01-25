@@ -28,8 +28,18 @@ $list-border: $cool-grey;
   }
 }
 
+.o-list-inline-full {
+  display: table;
+  width: 100%;
+  > li {
+    display: table-cell;
+    text-align: center;
+    width: auto;
+  }
+}
+
 %list-inline__delimited--content {
-    content: '/';
+    content: '>';
     display: inline-block;
     width: rem-calc(15);
     margin-left: rem-calc(5);
@@ -95,8 +105,8 @@ $list-border: $cool-grey;
 
 // temp styles below, to be continued
 .o-list-heading {
-  margin-top: 0;
-  margin-bottom: 5px;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
 }
 .o-list__item {
   position: relative;
@@ -108,7 +118,7 @@ $list-border: $cool-grey;
 
 
 
-.o-dl-plain {
+.o-deflist-plain {
   dt {
     font-size: rem-calc(16px);
     line-height: 1.2;
@@ -122,19 +132,35 @@ $list-border: $cool-grey;
   }
 }
 
-
+.o-deflist-left {
+  dt {
+    float: left;
+    clear: left;
+    width: 120px;
+    &:after {
+      content: ":";
+    }
+  }
+  dd {
+    margin: 0 0 0 130px;
+    padding: 0 0 0.5em 0;
+  }
+}
 
 // def list 2 column fixed
-.o-deflist-2col {
+.o-deflist-right {
   dt {
     float: left;
     clear: left;
     width: 50%;
+    &:after {
+      content: ":";
+    }
   }
   dd {
     text-align: right;
     margin-left: 50%;
-    padding-left: 0.5em;
+    padding: 0 0 0.25em 0.5em;
   }
 }
 
@@ -143,32 +169,52 @@ $list-border: $cool-grey;
 
 // ================================
 
-.list--text {
+.list__text {
   list-style-type: disc;
   margin-left: 1.5em;
 }
 .list-space__tiny {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-tiny;
   }
 }
 .list-space__small {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-small;
   }
 }
 .list-space__medium {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-medium;
   }
 }
 .list-space__large {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-large;
   }
 }
 .list-space__huge {
-  .list--item {
+  .list__item {
     @extend .u-mar-v-huge;
   }
 }
+
+.o-list__tick {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-family: flex-icons;
+  li {
+    position: relative;
+    padding-left: 25px;
+  }
+
+  li:before {
+    content: $icon-large-tick;
+    position: absolute;
+    left: 0px;
+    color: $primary-color;
+  }
+}
+
+

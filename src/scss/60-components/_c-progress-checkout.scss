@@ -30,26 +30,57 @@ $border-thickness: 5px;
 
 .flexer {
     display: flex;
+    justify-content: space-between;
+}
+.flexer--vertical {
+    display: flex;
+    flex-direction: column;
 }
 
-.flexer-element {
-    flex: 1;
-}
+
+
 
 .c-progress-checkout {
     @extend .flexer;
     font-size: 80%;
     margin-bottom: 1em;
-    > li {
-        @extend .flexer-element;
+    @include mq($until: md) {
+      overflow: visible;
+      width: 173%;
+    }
+
+    &.c-progress-checkout__3 {
+      @include mq($until: md) {
+        margin-left: -37%;
+      }
+    }
+    &.c-progress-checkout__4 {
+      @include mq($until: md) {
+        margin-left: -75%;
+      }
+    }
+    &.c-progress-checkout__5 {
+      @include mq($until: md) {
+        margin-left: -75%;
+      }
+    }
+    a {
+      color: $inactive;
+      display: block;
+      cursor: pointer;
+    }
+
+    li {
+
         list-style: none;
         text-align: center;
         width: auto;
         position: relative;
         text-overflow: ellipsis;
         color: $inactive;
+        z-index: 1;
     }
-    > li .c-donut {
+    li span.c-donut {
         border-radius: 50%;
         width: $donut-size;
         height: $donut-size;
@@ -58,58 +89,59 @@ $border-thickness: 5px;
         margin: 0 auto 0.2em auto;
         border: $border-thickness solid $inactive;
         color: $inactive;
-        font-size: 2em;
+        @include font-size(20px);
         line-height: 1.9em;
     }
     // line connectors
-    > li .c-donut:before,
-    > li .c-donut:after {
+    li span.c-donut:before,
+    li span.c-donut:after {
         display: block;
         position: absolute;
         top: $donut-size / 2 - $border-thickness / 2;
-        width: 100%;
+        min-width: 500px;
         height: $donut-line-thickness;
         content: '';
         background-color: $inactive;
         z-index: -2;
+
     }
-    > li:first-child .c-donut:before,
-    > li:first-child .c-donut:after {
-        width: 100%;
+    li:first-child span.c-donut:before,
+    li:first-child span.c-donut:after {
+        //min-width: 500px;
     }
-    > li:last-child .c-donut:before,
-    > li:last-child .c-donut:after {
-        width: 0;
+    li:last-child span.c-donut:before,
+    li:last-child span.c-donut:after {
+        overflow-x: hidden;
+        background-color: $white;
     }
     // completed state
     //
-    > li.completed {
-        color: $active;
+    li.completed {
+        a {
+          color: $active;
+        }
         &:after {
             /*Add another block-level blank space*/
-            content: '';
-            display: block;
-            /*Make it a small rectangle so the border will create an L-shape*/
-            width: 1.2em;
-            height: 1.5em;
-            /*Add a white border on the bottom and left, creating that 'L' */
-            border: solid $white;
-            border-width: 0 5px 5px 0;
-            /*Rotate the L 45 degrees to turn it into a checkmark*/
-            transform: rotate(45deg);
+            font-family: 'flex-icons';
+            content: $icon-large-tick;
+            @include font-size(20px);
+            color: $white;
+            z-index: 9999;
             /*Centre the position*/
-            position: absolute;
-            top: 12%;
-            left: 47%;
+            @include center(x, abs);
+            top: 0.8em;
         }
         .c-donut {
             @include donut-style("completed");
         }
     }
-    > li.active {
+    li.active {
+      a {
         color: $active;
-        .c-donut {
-            @include donut-style("active");
-        }
+        text-decoration: none;
+      }
+      .c-donut {
+          @include donut-style("active");
+      }
     }
 }

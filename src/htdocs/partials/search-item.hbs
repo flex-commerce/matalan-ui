@@ -1,0 +1,38 @@
+<div class="search-results--item u-font-ta-c u-mar-b-medium">
+
+  <a href="{{ productLink }}" class="link--nostyle">
+
+    <div class="results__image">
+      <img class="img"  src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
+
+      <div data-content="{{promotionText}}" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-{{promotionPosition}}"></div>
+      <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
+      <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
+    </div>
+
+    <div class="u-mar-b-medium u-cf">
+     <!-- @TODO! - make banner class when finalised -->
+      <div class="u-bgcolor-pri u-color-white u-pad-tiny u-font-upper">
+        <strong>50% off</strong>
+      </div>
+    </div>
+
+    <div class="results__detail">
+      <div class="u-mar-v-small">{{productTitle}}</div>
+      <div class=" u-font-wb u-mar-t-a {{#if nowPrice}}u-font-strikethrough u-color-cgrey{{/if}}">{{#if nowPrice}}<span>Was </span>{{/if}}{{productPrice}}</div>
+      {{#if nowPrice}}
+      <div class=" u-font-wb u-mar-t-a"><span>Now </span>{{nowPrice}}</div>
+      {{/if}}
+      <div class="u-mar-b-small rating rating__small u-mar-v-small">
+        <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
+        <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
+        <i class="icon icon-star-fill {{ isactive productRating 2 }}"></i>
+        <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
+        <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
+      </div>
+    </div>
+  </a>
+
+  <a class="c-btn c-btn-tertiary--alt c-btn--small u-mar-t-a ">More Colours Available</a>
+
+</div>

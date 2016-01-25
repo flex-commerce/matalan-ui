@@ -1,0 +1,61 @@
+[{
+  "menuTitle": "Womens",
+  "menuImage": "img-assets/womens-department.png",
+  "menuItems": [
+    "Blouses",
+    "Jackets",
+    "Leggings",
+    "Dresses",
+    "Skirts",
+    "Jackets",
+    "Trousers"
+  ]
+},
+{
+  "menuTitle": "Mens",
+  "menuImage": "img-assets/mens-department.png",
+  "menuItems": [
+    "Suits",
+    "Jeans",
+    "Party",
+    "Jumpers",
+    "Polo Shirts",
+    "Nightware",
+    "Tops"
+  ]
+}, {
+  "menuTitle": "Boys",
+  "menuImage": "img-assets/womens-children.png",
+  "menuItems": [
+    "Pyjamas",
+    "Coats",
+    "Tops",
+    "Bottoms",
+    "Underwear",
+    "T-Shirts",
+    "Outerwear"
+  ]
+}, {
+  "menuTitle": "Girls",
+  "menuImage": "img-assets/girls_cat.png",
+  "menuItems": [
+    "Pyjamas",
+    "Coats",
+    "Tops",
+    "Bottoms",
+    "Underwear",
+    "T-Shirts",
+    "Outerwear"
+  ]
+}, {
+  "menuTitle": "Homeware",
+  "menuImage": "",
+  "menuItems": [
+    "Bed Sheets",
+    "Duvets",
+    "Pillows",
+    "Lamps",
+    "Lighting",
+    "Shades"
+  ]
+}]

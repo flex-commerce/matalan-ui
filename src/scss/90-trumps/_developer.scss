@@ -1,5 +1,25 @@
 // scss-lint:disable all
 
+
+.developer-tools {
+  @include fixed (top 1em left 1em);
+  opacity: 0.4;
+  z-index: 9999;
+  &:hover {
+    opacity: 1;
+  }
+}
+// .container {
+//   background-color: #f8f8f8;
+//   .row {
+//     background-color: rgba(0,0,0,0.1);
+//     outline: 1px solid rgba(255,0,0,0.2);
+//   }
+// }
+// [class*='col-']{
+//   outline: 1px solid rgba(0,150,150,0.2);
+// }
+
 /**
  *  Various developer rules for testing and such
  */
@@ -53,6 +73,12 @@
   color: #fff;
   display: block;
   border-radius: 5px;
+}
+
+.islet {
+  padding: 1em;
+  border: 1px solid $cool-grey;
+  // display: block;
 }
 
 // fake grid for ui kit
@@ -132,19 +158,6 @@
   padding: 10px;
 }
 
-// temp icon dev rules
-[class^="icon-"],
-[class*=" icon-"] {
-  &:before {
-    font-size: 2em; // todo - replace temp dev rule
-    display: inline-block;
-    color: $cool-grey;
-  }
-  &:hover:before {
-    color: $primary-color;
-  }
-}
-
 .block-icon {
   display: block;
   padding-top: 1em;
@@ -221,4 +234,57 @@ pre {
  */
 [id="_BH_frame"] {
   will-change: transform; /* [1] */
+}
+
+.signup-success {
+  display:none;
+}
+
+
+.search-results--header.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: $white;
+  right: 0;
+  left: 0;
+
+}
+
+.stButton .stMainServices,
+.stButton .stButton_gradient {
+height: 22px !important;
+}
+
+.matalan-marker {
+  background: url('../img/marker.png');
+  width: 55px;
+  height: 55px;
+}
+
+.arrow-container {
+  max-width:474px;
+  width:474px;
+  height: 100%;
+  /* whatever width you want */
+  display: inline-block;
+  position: relative;
+  @include center(x);
+}
+.arrow-container:after {
+  padding-left: 56.2%;
+  /* 16:9 ratio */
+  display: block;
+  content: '';
+}
+.main {
+  position: absolute;
+  top: 44px;
+  bottom: 44px;
+  right: 20px;
+  left: 20px;
+  /* fill parent */
+  background-color: deepskyblue;
+  /* let's see it! */
+  color: white;
 }

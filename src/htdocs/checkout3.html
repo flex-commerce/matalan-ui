@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body>
+  <div class="hidden@md-down">
+    {{> partials/header-checkout }}
+  </div>
+  <div class="hidden@lg-up">
+    {{> parcels/header }}
+  </div>
+  <div class="container o-checkout__container" role="main">
+    <div class="row">
+      <div class="col-12@xs">
+        <div class="u-mar-v-large">
+          {{> partials/progress-checkout-3 }}
+        </div>
+        <div class="row">
+          <div class="o-checkout__detail col-12@xs col-8@lg">
+            <form action="">
+              <fieldset class="u-pad-v-medium u-border2-t completed">
+                <div class="o-checkout__title u-font-upper">1. Billing Address<i class="icon icon-plus icon--vertical-right"></i></div>
+              </fieldset>
+              <fieldset class="u-pad-v-medium u-border2-t completed">
+                <div class="o-checkout__title u-font-upper">2. Delivery Address<i class="icon icon-plus icon--vertical-right"></i></div>
+              </fieldset>
+              <fieldset class="u-pad-v-medium u-border2-t active">
+                <div class="o-checkout__title u-font-upper">3. Delivery Method<i class="icon icon-minus icon--vertical-right"></i></div>
+                <div class="o-checkout__content u-mar-t-small">
+
+                  <p class="u-mar-v-medium">Please choose your preferred delivery address</p>
+
+                  <div class="o-form__row col-12@xs col-8@md">
+                    <div class="o-form__input-contain o-option--inline auto-column-2">
+
+                    <div class="o-form__label-contain u-pad-v-tiny">
+                      <label class="o-form__label-option">
+                        <input type="radio" name="foo" value="Red" checked>
+                        <span></span>
+                        Standard (&pound;3.95)
+                      </label>
+                    </div>
+
+                    <div class="o-form__label-contain u-pad-v-tiny">
+                      <label class="o-form__label-option">
+                        <input type="radio" name="foo" value="Red" checked>
+                        <span></span>
+                        Next Day (&pound;4.95)
+                      </label>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <button type="submit" class="c-btn c-btn-secondary c-btn-block">Continue</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="col-4@lg hidden@md-down">
+            <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
+              {{> partials/minibag-checkout-footer }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{> parcels/footer }} {{> partials/js-footer}}
+</body>
+
+</html>
