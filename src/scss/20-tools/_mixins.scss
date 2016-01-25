@@ -26,6 +26,10 @@
   position: relative;
 }
 
+@mixin no-focus() {
+  outline: none !important;
+}
+
 // and this
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height) {
   padding: $padding-y $padding-x;

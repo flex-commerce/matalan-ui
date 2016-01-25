@@ -229,28 +229,41 @@
     padding-right: 0;
   }
 }
-.header--mobile-search.active {
-  .tempnub {
-    display: inline-block;
+
+.header--mobile-search {
+   @include no-focus();
+  .icon-nub {
+    display: none;
+    background-color: $light-grey;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 3;
+    @include mq($until: md) {
+      top: 90%;
+    }
+    @include mq($from: md) {
+      top: 107%;
+    }
+  }
+  &.active {
+    .icon-nub {
+      display: inline-block;
+    }
   }
 }
 
+.header--search-bar.active {
+  position: relative;
+  z-index: 1;
+}
+
+
 .tempnub {
-  // display: none;
-  background: #fff;
-  border-width: 1px;
-  border-color: $keyline-color;
-  border-style: solid none none solid;
-  width: 20px;
-  height: 20px;
 
-  position: absolute;
-  right: auto;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-
-  top: 93%;
-  z-index: 3;
 }
 
 @include mq($until: lg) {
