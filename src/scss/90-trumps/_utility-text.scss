@@ -44,6 +44,11 @@
   text-transform: uppercase;
 }
 
+%u-font-strikethrough,
+.u-font-strikethrough {
+  text-decoration: line-through
+}
+
 
 
 // for light gray text (80% opacity)
