@@ -19,7 +19,10 @@
 
     <div class="results__detail">
       <div class="u-mar-v-small">{{productTitle}}</div>
-      <div class=" u-font-wb u-mar-t-a">{{productPrice}}</div>
+      <div class=" u-font-wb u-mar-t-a {{#if nowPrice}}u-font-strikethrough u-color-cgrey{{/if}}">{{#if nowPrice}}<span>Was </span>{{/if}}{{productPrice}}</div>
+      {{#if nowPrice}}
+      <div class=" u-font-wb u-mar-t-a u-color-pri"><span>Now </span>{{nowPrice}}</div>
+      {{/if}}
       <div class="u-mar-b-small rating rating__small u-mar-v-small">
         <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
         <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
