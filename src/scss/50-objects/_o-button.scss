@@ -124,19 +124,15 @@ $button-padding-y: $default-pad-y;
 }
 
 .c-btn.c-btn--large {
-  @include button-size($button-padding-y * 1.25, $button-padding-x * 1.25, 1.125em, 1.4);
+  @include button-size($button-padding-y * 1.5, $button-padding-x * 1.5, 1.125em, 1.8);
 }
 
 .c-btn.c-btn--small {
-  @include button-size(halve($button-padding-y), halve($button-padding-x), 0.825em, 1.4);
-
-  // @include font-size(14px, 1.4)
+  @include button-size(halve($button-padding-y), halve($button-padding-x), 0.825em, 1.8);
 }
 
 .c-btn.c-btn--tiny {
-  @include button-size(quarter($button-padding-y), quarter($button-padding-x), 0.7em, 1.4);
-
-  // @include font-size(11px, 1.4)
+  @include button-size(quarter($button-padding-y), quarter($button-padding-x), 0.5em, 1.8);
 }
 
 //=============================
@@ -155,12 +151,13 @@ $button-padding-y: $default-pad-y;
   > .icon {
     background-color: rgba(0,0,0,0.075);
     left: 0;
-    width: 2.5em;
+    width: 3em;
     @include absolute(left 0 top 0 bottom 0);
 
     &:before {
       @include center(y, abs);
-      left: 0.125em;
+      left: .1em; // 0.125em;
+      right: .1em; // 0.125em;
       vertical-align: middle;
     }
   }
@@ -170,11 +167,10 @@ $button-padding-y: $default-pad-y;
 //  Button Icons
 //=============================
 
-.c-btn + .c-dropdown {
-  margin-left: rem-calc(-3);
-}
 
-.c-btn-grp-dropdown {
+// btn-grp-dropdown rules are for split buttons, providing dropdowns with only a caret and no inline labelling
+// @todo - rename this to split and move it..
+.c-btn-split-dropdown {
   .c-btn-secondary__alt:hover + .c-btn-dropdown {
     &:after {
       border-color: transparent;
@@ -192,7 +188,7 @@ $button-padding-y: $default-pad-y;
   margin-left: 12px;
 }
 
-.c-btn-grp-dropdown .c-btn-dropdown .caret {
+.c-btn-split-dropdown .c-btn-dropdown .caret {
   margin-left: 0px;
 }
 
