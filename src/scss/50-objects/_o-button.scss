@@ -1,14 +1,15 @@
 $button-padding-x: $default-pad-x;
 $button-padding-y: $default-pad-y;
 
+//=============================
+//  Button Base Styles
+//=============================
 .c-btn {
   display: inline-block;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
   text-align: center;
-
-  @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
 
   &:active,
   &.active,
@@ -24,13 +25,13 @@ $button-padding-y: $default-pad-y;
   }
 }
 
-.c-btn.c-btn--small {
-  @include button-size(halve($button-padding-y), halve($button-padding-x), 0.825em, 1.8);
-}
+//=============================
+//  Button Base Styles End
+//=============================
 
-.c-btn.c-btn--tiny {
-  @include button-size(quarter($button-padding-y), quarter($button-padding-x), 0.7em, 1.8);
-}
+//=============================
+//  Button Display Styles
+//=============================
 
 .c-btn.c-btn-primary {
   @include style-variant($color: $dark-grey, $background: $secondary-color, $border: $secondary-color);
@@ -110,6 +111,65 @@ $button-padding-y: $default-pad-y;
   }
 }
 
+//=============================
+//  Button Display Styles End
+//=============================
+
+//=============================
+//  Button Sizes
+//=============================
+
+.c-btn {
+  @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
+}
+
+.c-btn.c-btn--large {
+  @include button-size($button-padding-y * 1.25, $button-padding-x * 1.25, 1.125em, 1.4);
+}
+
+.c-btn.c-btn--small {
+  @include button-size(halve($button-padding-y), halve($button-padding-x), 0.825em, 1.4);
+
+  // @include font-size(14px, 1.4)
+}
+
+.c-btn.c-btn--tiny {
+  @include button-size(quarter($button-padding-y), quarter($button-padding-x), 0.7em, 1.4);
+
+  // @include font-size(11px, 1.4)
+}
+
+//=============================
+//  Button Sizes End
+//=============================
+
+//=============================
+//  Button Icons
+//=============================
+
+.c-btn--icon {
+  position: relative;
+  display: block;
+  padding-left: 3em;
+
+  > .icon {
+    background-color: rgba(0,0,0,0.075);
+    left: 0;
+    width: 2.5em;
+    @include absolute(left 0 top 0 bottom 0);
+
+    &:before {
+      @include center(y, abs);
+      left: 0.125em;
+      vertical-align: middle;
+    }
+  }
+}
+
+//=============================
+//  Button Icons
+//=============================
+
 .c-btn + .c-dropdown {
   margin-left: rem-calc(-3);
 }
@@ -148,7 +208,7 @@ $button-padding-y: $default-pad-y;
   width: 100%;
 }
 
-// Vertically space out multiple block buttons
+// Vertically space out multiple block buttons ?
 .c-btn-block + .c-btn-block {
   margin-top: 5px;
 }

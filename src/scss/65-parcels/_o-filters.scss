@@ -81,9 +81,20 @@ $filters-border-color: $keyline-color;
 }
 
 .o-filters__contain.modal--filters {
+  @include mq($until: lg) {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+  }
   @include mq($from: lg) {
     // todo - revisit - important to override JS addition of display none via modal
-    display: block !important;
+    display: block;
   }
 
 }
@@ -188,20 +199,7 @@ $filters-border-color: $keyline-color;
   display: block;
 }
 
-// some dev rules for highlights
-// .o-filters__list-item-detail {
-//   @include mq($until: md) {
-//     outline: 1px dotted green;
-//   }
-//   @include mq($from: md, $until: lg) {
-//     outline: 1px dotted red;
-//   }
-//   @include mq($from: lg) {
-//     outline: 1px dotted blue;
-//   }
-// }
 
-// some dev rules end
 
 
 
