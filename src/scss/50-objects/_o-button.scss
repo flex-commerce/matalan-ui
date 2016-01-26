@@ -143,21 +143,21 @@ $button-padding-y: $default-pad-y;
 //  Button Icons
 //=============================
 
-.c-btn--icon {
+.c-btn--icon.c-btn--icon {
   position: relative;
   display: block;
-  padding-left: 2.85em;
+  padding-left: 3em;
 
   > .icon {
-    background-color: rgba(0,0,0,0.075);
-    left: 0;
-    width: 3em;
+    background-color: rgba(0, 0, 0, 0.075);
+    width: 2.85em;
+
     @include absolute(left 0 top 0 bottom 0);
 
     &:before {
-      @include center(y, abs);
-      left: .1em; // 0.125em;
-      right: .1em; // 0.125em;
+      @include center(xy, abs);
+      // left: .1em;
+      // right: .1em;
       vertical-align: middle;
     }
   }
@@ -166,7 +166,6 @@ $button-padding-y: $default-pad-y;
 //=============================
 //  Button Icons
 //=============================
-
 
 // btn-grp-dropdown rules are for split buttons, providing dropdowns with only a caret and no inline labelling
 // @todo - rename this to split and move it..
