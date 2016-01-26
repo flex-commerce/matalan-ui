@@ -36,7 +36,7 @@ a {
   &:active
    {
     color: $primary-color;
-    text-decoration: underline;
+/*     text-decoration: underline; */
   }
   &.link:focus {
     @include tab-focus();
@@ -60,7 +60,7 @@ a.link--nostyle {
 }
 
 p a {
-  border-bottom: 1px dotted $base-text-color;
+  border-bottom: 1px dotted;
   text-decoration: none;
   &:hover,
   &:active,
@@ -81,3 +81,6 @@ input:focus {
   @include input-focus();
 }
 
+table {
+  width: 100%;
+}

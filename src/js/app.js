@@ -45,7 +45,7 @@ $(document).ready(function() {
 // pointer events polyfill
 // ===========================
 
-// require("pepjs");
+require("pepjs");
 // pepjs added to bring some sensibility to ios touch events. to investigate buggy ipad behaviour yet.
 
 // cross touch / mouse events are now available via

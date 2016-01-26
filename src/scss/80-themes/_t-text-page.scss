@@ -1,11 +1,21 @@
-.page--text__header {
+.page--text__header-wrapper {
   background-color: $primary-color;
   color: $white;
   min-height: 170px;
+  position: relative;
+
+  .page--text__header {
+    @include center(y, abs);
+
+    h1 {
+      @include font-size(48px);
+    }
+  }
 
   @include mq($from: md) {
     min-height: 240px;
   }
+
 
   @include mq($from: lg) {
     min-height: 295px;
@@ -13,13 +23,50 @@
 }
 
 .page--text {
-
   .page--text__content {
+    // @include font-size(12px);
+
+    padding-top: 3em;
+    padding-bottom: 6em;
+
+    > .row {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    img {
+      margin-top: rem-calc(42);
+    }
+
+    h3 {
+      margin-top: 1.5em;
+    }
+
+    p + {
+      p,
+      ul,
+      ol,
+      dl,
+      table {
+        margin-top: 1.5em;
+      }
+    }
+
+    li + li,
+    dd + dt {
+      margin-top: 0.25em;
+    }
+
+    ol,
+    ul,
+    dl {
+      margin-bottom: 0.5em;
+    }
+
     p,
     li,
-    a,
     span {
-      @include font-size(16px, 1.5);
+      @include font-size(16px, 1.6);
     }
 
     ol {
@@ -42,8 +89,6 @@
       dt {
         font-weight: bold;
       }
-
-      dd {}
     }
 
     h2 {
@@ -58,6 +103,7 @@
     h3 {
       @include font-size(28px, 1.5);
     }
+
   }
 }
 

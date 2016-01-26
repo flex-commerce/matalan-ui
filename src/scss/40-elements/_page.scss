@@ -40,13 +40,25 @@ html, body {
   overflow-x: hidden;
  }
 
-// hack to disable y overflow to prevent scrolling
-// html.body--modal-open {
-//   padding-right: 5px;
-//   overflow: -moz-scrollbars-vertical;
-//   height:100%; overflow: hidden;
-//   body {
-//     height:100%; overflow: hidden;
-//   }
-// }
 
+
+
+
+// new rules, to be moved
+
+.o-header__container {
+  background: $white;
+}
+
+.container[role=main] {
+/*   background: $white; */
+}
+
+body.page--text {
+  background: $light-grey;
+}
+
+body .container[role=main] > .row {
+    margin-bottom: 60px;
+    background: #fff;
+}

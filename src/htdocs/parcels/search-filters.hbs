@@ -1,200 +1,164 @@
-<div class="o-filters__contain modal modal--custom modal--filters" id="filters__contain">
+<div class="o-filters__contain modal modal--default modal--filters" id="filters__contain">
 
-  <div class="o-filters">
+  <div class="modal-dialog">
+    <div class="o-filters">
 
-
-
-    <div class="o-filters__header">
-      <div class="u-cf">
-        <h2 class="u-fl hidden@lg-up">Filter Products</h2>
-        <h4 class="u-fl hidden@md-down">Filter Products by:</h4>
-        <span class="meta clear__filters js-clear__filters hidden@md-down" >clear all (&times;)</span>
-        <a class=" u-font-ta-c u-fr hidden@lg-up u-mar-l-large" data-dismiss="modal" aria-label="Close">
-          <i class="icon icon-large-tick"></i>
-          <div class="">apply</div>
-        </a>
-        <a class="o-filters__clear u-font-ta-c u-fr hidden@lg-up  ">
-          <i class="icon icon-menu-close js-clear__filters"></i>
-          <div class="js-clear__filters">clear all</div>
-        </a>
+      <div class="o-filters__header">
+        <div class="u-cf">
+          <h2 class="u-fl hidden@lg-up">Filter Products</h2>
+          <h4 class="u-fl hidden@md-down">Filter Products by:</h4>
+          <span class="meta clear__filters js-clear__filters hidden@md-down" >clear all (&times;)</span>
+          <a class=" u-font-ta-c u-fr hidden@lg-up u-mar-l-large" data-dismiss="modal" aria-label="Close">
+            <i class="icon icon-large-tick"></i>
+            <div class="">apply</div>
+          </a>
+          <a class="o-filters__clear u-font-ta-c u-fr hidden@lg-up  ">
+            <i class="icon icon-menu-close js-clear__filters"></i>
+            <div class="js-clear__filters">clear all</div>
+          </a>
+        </div>
+        <div class="separator u-pad-0"></div>
       </div>
-      <div class="separator u-pad-0"></div>
-    </div>
 
-    <div class="o-filters__inner js-scroll-hold u-scrollbar" data-scroll-responsive="sm-md">
-      <ul class="o-filters__list-contain">
-        {{#each filters}}
+      <div class="o-filters__inner js-scroll-hold u-scrollbar" data-scroll-responsive="sm-md">
+        <ul class="o-filters__list-contain">
+          {{#each filters}}
+            <li class="o-filters__list o-filters__list-item u-cf">
+              <div class="o-filters__list-item-detail">
+                <p data-icon-toggle="icon-minus icon-plus" class="filter--title collapse u-font-wb u-color-grey60">
+                  {{filterTitle}}
+                  <i class="icon icon-plus"></i>
+                  <span class="meta expand">expand</span>
+                  <span class="meta collapse">collapse</span>
+                </p>
+                <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium">
+                  {{#with filtersDetail}} {{#each this}}
+                  <label class="o-form__label o-form__label-option u-color-grey60">
+                    <input type="checkbox">
+                    <span class="check-holder"></span>
+                    {{{this}}} <span class="meta">({{ randomnum }})</span>
+                  </label>
+                  {{/each}} {{/with}}
+                  <span class="filters--show-more meta hidden@md-down" href="#">
+                    <span class="meta expand">show more</span>
+                    <i class="icon icon-arr-down"></i>
+                  </span>
+                </div>
+              </div>
+            </li>
+          {{/each }}
           <li class="o-filters__list o-filters__list-item u-cf">
-            <div class="o-filters__list-item-detail">
-              <p data-icon-toggle="icon-minus icon-plus" class="filter--title collapse u-font-wb u-color-grey60">
-                {{filterTitle}}
-                <i class="icon icon-plus"></i>
+            <div class="o-filters__list-item-detail col-12@xs col-12@sm col-12@md col-12@lg u-pad-h-0">
+              <p class="filter--title collapse u-font-wb u-color-grey60">Colours<i class="icon icon-plus"></i>
                 <span class="meta expand">expand</span>
                 <span class="meta collapse">collapse</span>
               </p>
-              <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium">
-                {{#with filtersDetail}} {{#each this}}
-                <label class="o-form__label o-form__label-option u-color-grey60">
+              <ul class="filter--colours u-pad-b-small">
+                {{# times 20 }}
+                <li title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
+                {{/ times }}
+              </ul>
+            </div>
+          </li>
+          <li class="o-filters__list o-filters__list-item u-cf">
+            <div class="o-filters__list-item-detail col-12@xs col-12@md col-12@lg u-pad-h-0">
+              <p class="filter--title collapse u-font-wb u-color-grey60">Rating<i class="icon icon-plus"></i>
+                <span class="meta expand">expand</span>
+                <span class="meta collapse">collapse</span>
+              </p>
+              <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium ">
+                <label class="o-form__label o-form__label-option">
                   <input type="checkbox">
                   <span class="check-holder"></span>
-                  {{{this}}} <span class="meta">({{ randomnum }})</span>
+                  <div class="rating rating__inline">
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <span class="u-color-grey60">({{ randomnum }})</span>
+                  </div>
                 </label>
-                {{/each}} {{/with}}
-                <span class="filters--show-more meta hidden@md-down" href="#">
-                  <span class="meta expand">show more</span>
-                  <i class="icon icon-arr-down"></i>
-                </span>
+                <label class="o-form__label o-form__label-option">
+                  <input type="checkbox">
+                  <span class="check-holder"></span>
+                  <div class="rating rating__inline">
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill"></i>
+                     <span class="u-color-grey60">({{ randomnum }})</span>
+                  </div>
+                </label>
+                <label class="o-form__label o-form__label-option">
+                  <input type="checkbox">
+                  <span class="check-holder"></span>
+                  <div class="rating rating__inline">
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <span class="u-color-grey60">({{ randomnum }})</span>
+                  </div>
+                </label>
+                <label class="o-form__label o-form__label-option">
+                  <input type="checkbox">
+                  <span class="check-holder"></span>
+                  <div class="rating rating__inline">
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <span class="u-color-grey60">({{ randomnum }})</span>
+                  </div>
+                </label>
+                <label class="o-form__label o-form__label-option">
+                  <input type="checkbox">
+                  <span class="check-holder"></span>
+                  <div class="rating rating__inline">
+                    <i class="icon icon-star-fill active"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <span class="u-color-grey60">({{ randomnum }})</span>
+                  </div>
+                </label>
+                <label class="o-form__label o-form__label-option">
+                  <input type="checkbox">
+                  <span class="check-holder"></span>
+                  <div class="rating rating__inline">
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <i class="icon icon-star-fill"></i>
+                    <span class="u-color-grey60">({{ randomnum }})</span>
+                  </div>
+                </label>
               </div>
             </div>
           </li>
-        {{/each }}
-        <li class="o-filters__list o-filters__list-item u-cf">
-          <div class="o-filters__list-item-detail col-12@xs col-12@sm col-12@md col-12@lg u-pad-h-0">
-            <p class="filter--title collapse u-font-wb u-color-grey60">Colours<i class="icon icon-plus"></i>
-              <span class="meta expand">expand</span>
-              <span class="meta collapse">collapse</span>
-            </p>
-            <ul class="filter--colours u-pad-b-small">
-              {{# times 20 }}
-              <li title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
-              {{/ times }}
-            </ul>
-          </div>
-        </li>
-        <li class="o-filters__list o-filters__list-item u-cf">
-          <div class="o-filters__list-item-detail col-12@xs col-12@md col-12@lg u-pad-h-0">
-            <p class="filter--title collapse u-font-wb u-color-grey60">Rating<i class="icon icon-plus"></i>
-              <span class="meta expand">expand</span>
-              <span class="meta collapse">collapse</span>
-            </p>
-            <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium ">
-              <label class="o-form__label o-form__label-option">
-                <input type="checkbox">
-                <span class="check-holder"></span>
-                <div class="rating rating__inline">
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <span class="u-color-grey60">({{ randomnum }})</span>
-                </div>
-              </label>
-              <label class="o-form__label o-form__label-option">
-                <input type="checkbox">
-                <span class="check-holder"></span>
-                <div class="rating rating__inline">
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill"></i>
-                   <span class="u-color-grey60">({{ randomnum }})</span>
-                </div>
-              </label>
-              <label class="o-form__label o-form__label-option">
-                <input type="checkbox">
-                <span class="check-holder"></span>
-                <div class="rating rating__inline">
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <span class="u-color-grey60">({{ randomnum }})</span>
-                </div>
-              </label>
-              <label class="o-form__label o-form__label-option">
-                <input type="checkbox">
-                <span class="check-holder"></span>
-                <div class="rating rating__inline">
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <span class="u-color-grey60">({{ randomnum }})</span>
-                </div>
-              </label>
-              <label class="o-form__label o-form__label-option">
-                <input type="checkbox">
-                <span class="check-holder"></span>
-                <div class="rating rating__inline">
-                  <i class="icon icon-star-fill active"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <span class="u-color-grey60">({{ randomnum }})</span>
-                </div>
-              </label>
-              <label class="o-form__label o-form__label-option">
-                <input type="checkbox">
-                <span class="check-holder"></span>
-                <div class="rating rating__inline">
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <i class="icon icon-star-fill"></i>
-                  <span class="u-color-grey60">({{ randomnum }})</span>
-                </div>
-              </label>
+          <li class="o-filters__list o-filters__list-item u-cf">
+            <div class="o-filters__list-item-detail col-12@xs col-12@md col-12@lg u-pad-h-0">
+              <p class="filter--title collapse u-font-wb u-color-grey60">
+                Price
+                <i class="icon icon icon-plus"></i>
+                <span class="meta expand">expand</span>
+                <span class="meta collapse">collapse</span>
+              </p>
+              <div id="filters--range" class="filters--range">
+                <span class="filters--range-value-left u-color-grey60" id="slider-value-lower">20</span>
+                <span class="filters--range-value-right u-color-grey60" id="slider-value-upper">80</span>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="o-filters__list o-filters__list-item u-cf">
-          <div class="o-filters__list-item-detail col-12@xs col-12@md col-12@lg u-pad-h-0">
-            <p class="filter--title collapse u-font-wb u-color-grey60">
-              Price
-              <i class="icon icon icon-plus"></i>
-              <span class="meta expand">expand</span>
-              <span class="meta collapse">collapse</span>
-            </p>
-            <div id="filters--range" class="filters--range">
-              <span class="filters--range-value-left u-color-grey60" id="slider-value-lower">20</span>
-              <span class="filters--range-value-right u-color-grey60" id="slider-value-upper">80</span>
-            </div>
-          </div>
-        </li>
-       <!--  <li class="o-filters__list o-filters__list-item u-cf">
-          <div class="o-filters__list-item-detail col-12@xs col-12@md col-12@lg u-pad-h-0">
-            <p class="filter--title collapse u-font-wb u-color-grey60">
-              Price - Alternative
-              <i class="icon icon icon-plus"></i>
-              <span class="meta expand">expand</span>
-              <span class="meta collapse">collapse</span>
-            </p>
-            <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium">
-              <label class="o-form__label o-form__label-option u-color-grey60">
-                <input type="radio" name="priceRange">
-                <span></span>
-                £0 - £10 <span class="meta">({{ randomnum }})</span>
-              </label>
-              <label class="o-form__label o-form__label-option u-color-grey60">
-                <input type="radio" name="priceRange">
-                <span></span>
-                £10 - £20 <span class="meta">({{ randomnum }})</span>
-              </label>
-              <label class="o-form__label o-form__label-option u-color-grey60">
-                <input type="radio" name="priceRange">
-                <span></span>
-                £20 - £30 <span class="meta">({{ randomnum }})</span>
-              </label>
-              <label class="o-form__label o-form__label-option u-color-grey60">
-                <input type="radio" name="priceRange">
-                <span></span>
-                £30 - £40 <span class="meta">({{ randomnum }})</span>
-              </label>
-              <label class="o-form__label o-form__label-option u-color-grey60">
-                <input type="radio" name="priceRange">
-                <span></span>
-                £40 - £50 <span class="meta">({{ randomnum }})</span>
-              </label>
-            </div>
-          </div>
-        </li> -->
-      </ul>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </div>
