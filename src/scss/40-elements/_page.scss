@@ -58,7 +58,7 @@ body.page--text {
   background: $light-grey;
 }
 
-body .container[role=main] > .row {
+.page--text .container[role=main] > .row {
     margin-bottom: 60px;
     background: #fff;
 }
