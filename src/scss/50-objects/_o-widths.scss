@@ -1,5 +1,0 @@
-@for $i from 1 through $susy-columns {
-  .span-wide-#{$i} {
-    @include span($i);
-  }
-}

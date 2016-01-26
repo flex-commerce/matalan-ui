@@ -1,8 +1,0 @@
-// re-usable chunk to add standardised top / bottom border
-// potential for rewrite / recycle
-
-@mixin border-tb-default ($width: 1px){
-  border-style: solid none;
-  border-width: $width;
-  border-color: $keyline-color;
-}
