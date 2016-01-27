@@ -86,14 +86,14 @@
   display: block;
 }
 
-.ui-row {
+.xx-row {
   @include clearfix;
   width: 100%;
   // min-height: 15em;
   // border-bottom: 1px solid #aaa;
   margin-top: 2em;
   // outline: 1px solid;
-  .ui-row {
+  .xx-row {
     border-style: none;
     padding-bottom: 0;
     margin-bottom: 0.2em;
@@ -189,7 +189,7 @@ code {
 }
 
 .ui-colors {
-  .span-wide-3 {
+  .colspan-3 {
     padding-left: 5em;
     padding-right: 5em;
     margin-bottom: 2em;
