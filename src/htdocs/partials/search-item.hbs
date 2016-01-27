@@ -19,10 +19,12 @@
 
     <div class="results__detail">
       <div class="u-mar-v-small">{{productTitle}}</div>
-      <div class=" u-font-wb u-mar-t-a {{#if nowPrice}}u-font-strikethrough u-color-cgrey{{/if}}">{{#if nowPrice}}<span>Was </span>{{/if}}{{productPrice}}</div>
       {{#if nowPrice}}
-      <div class=" u-font-wb u-mar-t-a"><span>Now </span>{{nowPrice}}</div>
+      <div class=" u-font-wb u-mar-t-a u-color-pri"><span>Now </span>{{nowPrice}}</div>
       {{/if}}
+      <div class=" u-font-wb u-mar-t-a {{#if nowPrice}}u-font-strikethrough{{/if}}">{{#if nowPrice}}<span>Was </span>{{/if}}{{productPrice}}</div>
+
+      <a class="c-btn c-btn-primary c-btn--small u-mar-v-small ">View</a>
       <div class="u-mar-b-small rating rating__small u-mar-v-small">
         <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
         <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
@@ -33,6 +35,6 @@
     </div>
   </a>
 
-  <a class="c-btn c-btn-tertiary--alt c-btn--small u-mar-t-a ">More Colours Available</a>
+  <a class="link--underline">More Colours Available</a>
 
 </div>
