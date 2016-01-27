@@ -1,52 +1,22 @@
-<div class="xx-row">
+
+
+<div class="row">
   <div class="col-12@xs">
     <h3>Button Groups <small>(_objects/_o-button-grp.scss)</small></h3>
-    <p>Buttons groups can be displayed horzontally or verticlally and grouped together with any combination of button. e.g. Standalone button, dropdown button, split dropdown button</p>
+    <p>Buttons groups can be displayed horzontally or verticlally and grouped together with any combination of
+      button. e.g. Standalone button, dropdown button, split dropdown button
+    </p>
   </div>
-  <div class="xx-row">
-    <div class="col-12@xs">
-      <h3>Button Groups Default</h3>
-      <div class="o-btn-group">
+</div>
 
-        {{# times 2}}
-        <a class="c-btn c-btn-primary">{{lorem}}</a>
-        {{/ times}}
-
-        <div class="c-btn-split-dropdown">
-
-          <div class="c-dropdown">
-            <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
-              Dropdown
-              <span class="caret"></span>
-            </button>
-            <ul class="c-dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li class="active"><a href="#">Active item</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="separator"></li>
-              <li class="dropdown-header">Header</li>
-              <li class="disabled"><a href="#">Disabled link</a></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="xx-row">
-    <div class="col-12@xs">
-      <h3>Button Groups Vertical</h3>
-    </div>
-    <div class="col-6@xs">
-
-      <div class="o-btn-group-vertical colspan-6">
-        {{# times 2}}
-        <a class="c-btn c-btn-primary">{{lorem}}</a>
-        {{/ times}}
+<div class="row">
+  <div class="col-4@xs">
+    <h3>Button Groups Default</h3>
+    <div class="o-btn-group">
+      {{# times 2}}
+      <a class="c-btn c-btn-primary">{{lorem}}</a>
+      {{/ times}}
+      <div class="c-btn-split-dropdown">
         <div class="c-dropdown">
           <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
             Dropdown
@@ -63,38 +33,61 @@
           </ul>
         </div>
       </div>
-
-
-    </div>
-    <div class="col-6@xs">
-
-
-      <div class="o-btn-group-vertical colspan-6">
-        {{# times 2}}
-          <a class="c-btn c-btn-secondary">{{lorem}}</a>
-        {{/ times}}
-        <div class="c-dropdown">
-          <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
-            Dropdown xx
-            <span class="caret"></span>
-          </button>
-          <ul class="c-dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li class="active"><a href="#">Active item</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="separator"></li>
-            <li class="dropdown-header">Header</li>
-            <li class="disabled"><a href="#">Disabled link</a></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div>
-      </div>
-
-
-
-
     </div>
   </div>
+</div>
+
+<div class="row">
+  <div class="col-12@xs">
+    <h3>Button Groups Vertical</h3>
+  </div>
+
+  <div class="col-6@xs">
+    <div class="o-btn-group-vertical colspan-6">
+      {{# times 2}}
+      <a class="c-btn c-btn-primary">{{lorem}}</a>
+      {{/ times}}
+      <div class="c-dropdown">
+        <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </button>
+        <ul class="c-dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li class="active"><a href="#">Active item</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="separator"></li>
+          <li class="dropdown-header">Header</li>
+          <li class="disabled"><a href="#">Disabled link</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6@xs">
+    <div class="o-btn-group-vertical colspan-6">
+      {{# times 2}}
+      <a class="c-btn c-btn-secondary">{{lorem}}</a>
+      {{/ times}}
+      <div class="c-dropdown">
+        <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </button>
+        <ul class="c-dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li class="active"><a href="#">Active item</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="separator"></li>
+          <li class="dropdown-header">Header</li>
+          <li class="disabled"><a href="#">Disabled link</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 

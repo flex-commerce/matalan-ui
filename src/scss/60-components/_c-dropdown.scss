@@ -138,8 +138,16 @@ $dropdown-pad-y: $default-pad-y;
 //
 // Add this class to `.c-dropdown-menu` to flip the alignment of the dropdown
 
+.c-btn-split-dropdown {
+  // split button is left aligned
+  .c-dropdown-menu {
+    right: auto;
+    left: 0;
+  }
+}
+
 .c-dropdown-menu {
-  // right by default
+  // default - right by default
   left: auto;
   right: 0;
 }
