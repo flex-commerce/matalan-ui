@@ -197,6 +197,9 @@ html.flexbox {
   position: relative;
   display: block;
   padding: 10px 15px;
+  @include mq($until: md) {
+    @include font-size(11px);
+  }
 }
 
 .c-tabs--tab--horizontal .c-tabs__header__item.active {
