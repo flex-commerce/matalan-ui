@@ -149,7 +149,7 @@ $button-padding-y: $default-pad-y;
   padding-left: 3em;
 
   > .icon {
-    // background-color: rgba(0, 0, 0, 0.075);
+    background-color: rgba(0, 0, 0, 0.075);
     width: 2.85em;
 
     @include absolute(left 0 top 0 bottom 0);
