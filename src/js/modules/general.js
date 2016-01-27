@@ -64,13 +64,13 @@
         $("#newaddress").prop('checked', true);
     });
 
-    $('.o-login__email-submit').on('click', function(e) {
+    $('.is-dev .o-login__email-submit').on('click', function(e) {
         e.preventDefault();
         $('.o-login__email').hide();
         $('.o-login__password').show();
     });
 
-    $('.o-login__password-forgotten').on('click', function(e) {
+    $('.is-dev .o-login__password-forgotten').on('click', function(e) {
         e.preventDefault();
         $('.o-login__password').hide();
         $('.o-login__forgotten-password').show();
