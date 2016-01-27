@@ -145,19 +145,16 @@ $button-padding-y: $default-pad-y;
 
 .c-btn--icon.c-btn--icon {
   position: relative;
-  display: block;
   padding-left: 3em;
 
   > .icon {
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: rgba(0, 0, 0, 0.1);
     width: 2.85em;
 
     @include absolute(left 0 top 0 bottom 0);
 
     &:before {
       @include center(xy, abs);
-      // left: .1em;
-      // right: .1em;
       vertical-align: middle;
     }
   }
@@ -167,44 +164,17 @@ $button-padding-y: $default-pad-y;
 //  Button Icons
 //=============================
 
-// btn-grp-dropdown rules are for split buttons, providing dropdowns with only a caret and no inline labelling
-// @todo - rename this to split and move it..
-.c-btn-split-dropdown {
-  .c-btn-secondary__alt:hover + .c-btn-dropdown {
-    &:after {
-      border-color: transparent;
-    }
-  }
-
-  .c-btn-primary__alt:last-of-type {
-    &:after {
-      border-color: $cool-grey;
-    }
-  }
-}
-
-.c-btn-dropdown .caret {
-  margin-left: 12px;
-}
-
-.c-btn-split-dropdown .c-btn-dropdown .caret {
-  margin-left: 0px;
-}
-
-.c-btn-dropdown {
-  .caret {}
-}
 
 //
 // Block button
 //
-.c-btn-block {
+.c-btn--block {
   display: block;
   width: 100%;
 }
 
 // Vertically space out multiple block buttons ?
-.c-btn-block + .c-btn-block {
+.c-btn--block + .c-btn--block {
   margin-top: 5px;
 }
 

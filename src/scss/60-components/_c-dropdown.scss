@@ -4,7 +4,6 @@ $dropdown-pad-y: $default-pad-y;
 
 // Dropdown menus
 // --------------------------------------------------
-
 .c-btn-split-dropdown .c-dropdown {
   display: inline-block;
 }
@@ -15,30 +14,23 @@ $dropdown-pad-y: $default-pad-y;
   position: relative;
   display: inline-block;
 }
+
 .o-btn-group-vertical .c-dropup,
 .o-btn-group-vertical .c-dropdown {
   display: block;
 }
 
-
-// Prevent the focus on the dropdown toggle when closing dropdowns
-.c-btn-dropdown:focus {
+.c-dropdown-menu {
+  // Prevent the focus on the dropdown toggle when closing dropdowns
   outline: 0;
 }
-// positioning
-.c-dropdown-menu {
-  // left: 0;
-  // right: 0;
-  // transform: translateX(50%);
-}
-
-
 
 // The dropdown menu (ul)
 .c-dropdown-menu {
   position: absolute;
   z-index: 1;
   top: 100%;
+
   // display none by default, but block on "open" of the menu
   display: none;
   min-width: 160px;
@@ -46,9 +38,11 @@ $dropdown-pad-y: $default-pad-y;
   margin: 2px 0 0;
   background-color: $white;
   border: 1px solid $cool-grey;
+
   // Ensures proper alignment if parent has it changed (e.g., modal footer)
   text-align: left;
-  box-shadow: 0px 3px 0px -1px rgba($black, .1);
+  box-shadow: 0px 3px 0px -1px rgba($black, 0.1);
+
   // Links within the dropdown menu
   > li > a {
     clear: both;
@@ -56,18 +50,24 @@ $dropdown-pad-y: $default-pad-y;
     padding: $dropdown-pad-y $dropdown-pad-x;
     font-weight: normal;
     line-height: $dropdown-line-height;
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    white-space: nowrap;
+
+    // prevent links from randomly breaking onto new lines
     text-decoration: none;
   }
 
-  // Dividers (basically an hr) within the dropdown
-  .divider {
-    height: 1px;
-    margin: 9px 0; //-0.5em; // @todo - sort magic
-    overflow: hidden;
-    background-color: #e5e5e5;
+  .separator + .dropdown-header {
+    margin-top: 0.5em;
+    background-color: #eee;
   }
 
+  // Dividers (basically an hr) within the dropdown
+  // .divider {
+  //   height: 1px;
+  //   margin: 9px 0;
+  //   overflow: hidden;
+  //   background-color: #e5e5e5;
+  // }
 }
 
 // Hover/Focus state
@@ -75,20 +75,12 @@ $dropdown-pad-y: $default-pad-y;
   &:hover,
   &:focus {
     background-color: $light-grey-hover;
-    // color: @dropdown-link-hover-color;
-    // background-color: @dropdown-link-hover-bg;
   }
 }
 
 // Active state
 .c-dropdown-menu > .active > a {
   color: $primary-color;
-  // &:hover,
-  // &:focus {
-  //   text-decoration: none;
-  //   outline: 0;
-  //   // background-color: @dropdown-link-active-bg;
-  // }
 }
 
 // Disabled state
@@ -101,6 +93,7 @@ $dropdown-pad-y: $default-pad-y;
   &:focus {
     color: $cool-grey;
   }
+
   // Nuke hover/focus effects
   &:hover,
   &:focus {
@@ -116,13 +109,12 @@ $dropdown-pad-y: $default-pad-y;
   > .c-dropdown-menu {
     display: block;
   }
+
   // Remove the outline when :focus is triggered
   > a {
     outline: 0;
   }
 }
-
-
 
 // Dropdown o-section headers
 .dropdown-header {
@@ -130,7 +122,7 @@ $dropdown-pad-y: $default-pad-y;
   padding: $dropdown-pad-y $dropdown-pad-x;
   font-size: 90%;
   font-weight: bold;
-  white-space: nowrap; // as with > li > a
+  white-space: nowrap;
 }
 
 // Backdrop to catch body clicks on mobile, etc.
@@ -142,33 +134,24 @@ $dropdown-pad-y: $default-pad-y;
   top: 0;
 }
 
-
-
 // Menu positioning
 //
-// Add extra class to `.c-dropdown-menu` to flip the alignment of the dropdown
-// menu with the parent.
-.c-dropdown-menu-right {
-  left: auto; // Reset the default from `.c-dropdown-menu`
+// Add this class to `.c-dropdown-menu` to flip the alignment of the dropdown
+
+.c-dropdown-menu {
+  // right by default
+  left: auto;
   right: 0;
 }
 
-// With v3, we enabled auto-flipping if you have a dropdown within a right
-// aligned nav component. To enable the undoing of that, we provide an override
-// to restore the default dropdown menu alignment.
-//
-// This is only for left-aligning a dropdown menu within a `.navbar-right` or
-// `.pull-right` nav component.
-.c-dropdown-menu-left {
+.c-dropdown-menu.c-dropdown-menu-block {
+  left: 0;
+  right: 0;
+}
+
+.c-dropdown-menu.c-dropdown-menu-left {
   left: 0;
   right: auto;
-}
-
-
-// Right aligned dropdowns
-.pull-right > .c-dropdown-menu {
-  right: 0;
-  left: auto;
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
@@ -181,10 +164,9 @@ $dropdown-pad-y: $default-pad-y;
   // Reverse the caret
   .caret {
     border-top: 0;
-    // border-bottom: @caret-width-base dashed;
-    // border-bottom: @caret-width-base solid ~"\9"; // IE8
     content: "";
   }
+
   // Different positioning for bottom up menu
   .c-dropdown-menu {
     top: auto;
@@ -193,6 +175,40 @@ $dropdown-pad-y: $default-pad-y;
   }
 }
 
+// Caret placement
+//
+
+.c-btn-dropdown {
+  position: relative;
+}
+
+// target the non split version of the dropdown
+:not(.c-btn-split-dropdown) > .c-dropdown {
+  .c-btn-dropdown {
+    padding-right: 3em;
+  }
+
+  .caret {
+    margin-left: 1em;
+    right: 1em;
+
+    @include center(y, abs);
+  }
+}
+
+
+// target the split version of the dropdown
+.c-btn-split-dropdown {
+  .c-dropdown {
+    margin-left: -0.1em;
+  }
+  .c-btn-dropdown {
+    .caret {
+      margin-left: 0px;
+      position: initial;
+    }
+  }
+}
 
 // Component alignment
 //
@@ -210,4 +226,3 @@ $dropdown-pad-y: $default-pad-y;
 //     }
 //   }
 // }
-

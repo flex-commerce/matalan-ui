@@ -77,7 +77,8 @@ input[type="email"] {
   -webkit-appearance: none;
   border-radius: 0;
 }
-input:focus {
+
+input:focus, textarea:focus {
   @include input-focus();
 }
 

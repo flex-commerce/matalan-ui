@@ -1,68 +1,84 @@
-<div class="ui-row">
+<div class="row">
+
   <div class="col-12@xs">
-    <h2>Dropdowns
-      <br />
-    </h2>
+    <h2>Dropdowns</h2>
     <h3>Dropdown styling</h3>
     <p>Dropdowns can easily be created from standard buttons by adding c-btn-dropdown class and appending a span with a class of caret</p>
   </div>
+
   <div class="col-12@xs">
     <h3>Dropdown Buttons</h3>
-    <div class="ui-grid-50">
 
-
-    <div class="c-dropdown">
-      <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
-        Dropdown Single Pri
-        <span class="caret"></span>
-      </button>
-      <ul class="c-dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li class="active"><a href="#">Active item</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li role="separator" class="divider"></li>
-        <li class="dropdown-header">Header</li>
-        <li class="disabled"><a href="#">Disabled link</a></li>
-        <li><a href="#">Separated link</a></li>
-      </ul>
+    <div class="col-4@xs">
+      <div class="c-dropdown">
+        <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
+          Right Aligned (default)
+          <span class="caret"></span>
+        </button>
+        <ul class="c-dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li class="active"><a href="#">Active item</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="separator"></li>
+          <li class="dropdown-header">Header</li>
+          <li class="disabled"><a href="#">Disabled link</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
     </div>
 
+    <div class="col-4@xs">
 
-    </div>
-    <div class="ui-grid-50">
-
-    <div class="c-dropdown">
-      <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
-        Dropdown Single Sec
-        <span class="caret"></span>
-      </button>
-      <ul class="c-dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li class="active"><a href="#">Active item</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li role="separator" class="divider"></li>
-        <li class="dropdown-header">Header</li>
-        <li class="disabled"><a href="#">Disabled link</a></li>
-        <li><a href="#">Separated link</a></li>
-      </ul>
+      <div class="c-dropdown">
+        <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
+          Full block width aligned
+          <span class="caret"></span>
+        </button>
+        <ul class="c-dropdown-menu c-dropdown-menu-block">
+          <li><a href="#">Action</a></li>
+          <li class="active"><a href="#">Active item</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="separator"></li>
+          <li class="dropdown-header">Header</li>
+          <li class="disabled"><a href="#">Disabled link</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
     </div>
 
+    <div class="col-4@xs">
+      <div class="c-dropdown">
+        <button class="c-btn-dropdown c-btn c-btn-tertiary--alt" type="button" data-toggle="dropdown">
+          Left Aligned
+          <span class="caret"></span>
+        </button>
+        <ul class="c-dropdown-menu c-dropdown-menu-left">
+          <li><a href="#">Action</a></li>
+          <li class="active"><a href="#">Active item</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="separator"></li>
+          <li class="dropdown-header">Header</li>
+          <li class="disabled"><a href="#">Disabled link</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
     </div>
+
     <h3>Split Dropdown Buttons</h3>
     <div class="ui-grid-50">
 
       <div class="c-btn-split-dropdown">
-        <a class="c-btn c-btn-primary">Split Pri</a>
+        <a class="c-btn c-btn-primary">An action</a>
 
         <div class="c-dropdown">
           <button class="c-btn-dropdown c-btn c-btn-primary" type="button" data-toggle="dropdown">
             <span class="caret"></span>
           </button>
           <ul class="c-dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
             <li class="active"><a href="#">Active item</a></li>
             <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
+            <li role="separator" class="separator"></li>
             <li class="dropdown-header">Header</li>
             <li class="disabled"><a href="#">Disabled link</a></li>
             <li><a href="#">Separated link</a></li>
@@ -73,16 +89,16 @@
     </div>
     <div class="ui-grid-50">
       <div class="c-btn-split-dropdown">
-        <a class="c-btn c-btn-secondary">Split Sec</a>
+        <a class="c-btn c-btn-secondary">An action</a>
         <div class="c-dropdown">
           <button class="c-btn-dropdown c-btn c-btn-secondary" type="button" data-toggle="dropdown">
             <span class="caret"></span>
           </button>
           <ul class="c-dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
             <li class="active"><a href="#">Active item</a></li>
             <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
+            <li role="separator" class="separator"></li>
             <li class="dropdown-header">Header</li>
             <li class="disabled"><a href="#">Disabled link</a></li>
             <li><a href="#">Separated link</a></li>
@@ -95,7 +111,7 @@
     <div class="ui-grid-50">
       <select id="gender">
         <option>Male</option>
-        <option>Female</option>
+        <option selected>Female</option>
         <option>Cylon</option>
       </select>
     </div>

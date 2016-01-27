@@ -158,6 +158,10 @@ html.flexbox {
       &:not(:last-child) {
         margin-right: 1em;
       }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
