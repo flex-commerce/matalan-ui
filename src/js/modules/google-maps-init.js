@@ -313,6 +313,8 @@
        var currCenter = mobilemap.map.getCenter();
        google.maps.event.trigger(mobilemap.map, 'resize');
        mobilemap.map.setCenter(currCenter);
+       var y = $(window).scrollTop();  //your current y position on the page
+        $(window).scrollTop(y+300);
 
    });
 
