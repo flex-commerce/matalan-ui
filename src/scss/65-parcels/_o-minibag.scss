@@ -137,6 +137,13 @@ $minibag-desktop-width: 353px;
         padding: 1em 0 1em 0;
       }
 
+      &:last-child .o-minibag--list-item--image,
+      &:last-child .o-minibag--list-item--detail,
+      &:last-child .o-minibag--list-item--control,
+      &:last-child .o-minibag--list-item--price-col {
+        border-bottom: none;
+      }
+
 
       .o-minibag--list-item--image {
         width: 20%;
