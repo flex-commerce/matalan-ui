@@ -163,7 +163,7 @@
                                $('.o-store-locator__locations').scrollTo('#store-' + e.id);
                            }
                            var locattionIcon = $('.use-location').find('i').prop('outerHTML');
-                           $('.use-location').html(locattionIcon + 'Use my location');
+                           $('.use-location').html(locattionIcon + 'Use my location').removeClass('c-loading');
 
 
                        }
@@ -332,8 +332,8 @@
    });
 
    $('body').on('click', '.use-location', function(e) {
-      var locattionIcon = $(this).find('i').prop('outerHTML');
-      $(this).html(locattionIcon + 'Searching ...');
+       var locattionIcon = $(this).find('i').prop('outerHTML');
+       $(this).html(locattionIcon + 'Searching').addClass('c-loading');
 
        e.preventDefault();
        getClientLocation();
