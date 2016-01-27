@@ -57,13 +57,13 @@ $mq-classgen-models: (pad: padding, mar: margin);
     @if variable-exists(prev-bp) {
 
       // ignore the first BP for min value mq - we dont need xs-up
-      @if $prev-bp != $breakpoint-first {
-        @include mq($from: $prev-bp) {
-          @include make-spacer-classes(#{$prev-bp}-up);
-          @include generate-responsive-grid-offsets(#{$prev-bp}-up);
-          @include generate-responsive-hide-classes(#{$prev-bp}-up);
-        }
+
+      @include mq($from: $prev-bp) {
+        @include make-spacer-classes(#{$prev-bp}-up);
+        @include generate-responsive-grid-offsets(#{$prev-bp}-up);
+        @include generate-responsive-hide-classes(#{$prev-bp}-up);
       }
+
 
       // build the bp specific mq with min max bp values
       @include mq($from: $prev-bp, $until: $curr-bp) {
