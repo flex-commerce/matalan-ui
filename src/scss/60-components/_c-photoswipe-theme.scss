@@ -77,7 +77,7 @@
 }
 
 .pswp__button--arrow--left {
-    left: 45px;
+    left: 15px;
     [dir="rtl"] & {
         left: auto;
     }
@@ -90,7 +90,7 @@
 }
 
 .pswp__button--arrow--right {
-    right: 45px;
+    right: 15px;
     [dir="rtl"] & {
         right: auto;
     }
@@ -103,7 +103,7 @@
 }
 
 .pswp__button--close {
-    right: 45px;
+    right: 15px;
     &:before {
         content: $icon-ui-cross;
     }
