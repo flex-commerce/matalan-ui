@@ -208,11 +208,11 @@
                                 <div class="o-minibag--list-item--control hidden@md-down col-3@lg">
                                     1
                                 </div>
-                                <div class="o-minibag--list-item--price-col o-minibag--list-item--price--save colspan-2 hidden@md-down">
-                                    &pound;0.00
+                                <div class="o-minibag--list-item--price-col o-minibag--list-item--price--save span-wide-2 hidden@md-down u-color-pri">
+                                    {{#if nowPrice}}{{ difference productPrice nowPrice }}{{/if}}
                                 </div>
-                                <div class="o-minibag--list-item--price-col o-minibag--list-item--price--total colspan-2 hidden@md-down u-font-ta-r">
-                                    &pound;0.00
+                                <div class="o-minibag--list-item--price-col o-minibag--list-item--price--total span-wide-2 hidden@md-down u-font-ta-r">
+                                    {{productPrice}}
                                 </div>
                             </li>
                             {{/ each }}
