@@ -4,7 +4,8 @@
   <div class="o-product__slider" id="cascade-slider">
       <figure>
         <a href="./img-assets/product-1.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-1.jpg" />
+            <img src="./img-assets/product-1.jpg"
+                 data-lazy="./img-assets/product-1.jpg"  alt="" />
             <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
             <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
         </a>
@@ -14,7 +15,8 @@
       </figure>
       <figure>
         <a href="./img-assets/product-2.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-2.jpg"/>
+            <img src="./img-assets/product-2.jpg"
+                 data-lazy="./img-assets/product-2.jpg"  alt="" />
             <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
             <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
         </a>
@@ -25,7 +27,8 @@
 
       <figure>
         <a href="./img-assets/product-3.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-3.jpg"/>
+            <img src="./img-assets/product-3.jpg"
+                 data-lazy="./img-assets/product-3.jpg"  alt="" />
             <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
             <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
         </a>
@@ -41,11 +44,69 @@
       </div>
     </div>
     <div class="u-pad-t-medium">
-      <a class="c-btn c-btn-primary  col-12@xs u-font-upper">
-        <i class="icon icon-eye u-pad-r-huge icon--vertical-middle"></i>
+      <a class="c-btn c-btn--icon c-btn-primary">
+        <i class="icon icon-eye"></i>
         Get the Look
       </a>
     </div>
+
+</div>
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <div class="pswp__container">
+            <!-- don't modify these 3 pswp__item elements, data is added later on -->
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
 
 </div>
 
@@ -110,8 +171,9 @@
         <a class="c-btn c-btn-primary col-12@xs selectbox-full u-font-upper">Size Guide</a>
       </div>
       <div class="col-12@xs col-8@lg u-mar-t-medium">
-        <a class="c-btn c-btn-secondary col-12@xs selectbox-full u-font-upper">
-          <i class="icon icon-mini-bag u-pad-r-huge icon--vertical-middle"></i>Add to Bag
+        <a class="c-btn c-btn--icon c-btn-secondary">
+          <i class="icon icon-mini-bag"></i>
+          Add to Bag
         </a>
       </div>
       <div class="col-12@xs u-mar-t-medium">

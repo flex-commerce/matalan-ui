@@ -8,13 +8,20 @@
 
 
 
- var $filtersContain = $('#filters__contain');
+ // var $filtersContain = $('#filters__contain');
 
 
 
-  $('body').on('click', '.modal-backdrop', function() {
-      $filtersContain.modal('hide');
-  });
+  // $('body').on('click', '.modal-backdrop', function() {
+  //     $filtersContain.modal('hide');
+  // });
+
+
+  // $('body').on('click', '.modal-backdrop', function() {
+  //     $filtersContain.modal('hide');
+  // });
+
+
 
   // function limitFilters() {
 

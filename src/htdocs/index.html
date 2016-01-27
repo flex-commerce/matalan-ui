@@ -17,26 +17,51 @@
       <div class="col-12@sm">
         <h2>Website</h2>
         <div class="o-btn-group-vertical auto-column-3">
-          <a class="c-btn c-btn-primary__alt" href="homepage.html">Matalan Homepage</a>
 
-          <a class="c-btn c-btn-primary__alt" href="homepage.html">Homepage layout 1</a>
-          <a class="c-btn c-btn-primary__alt" href="homepage-2.html">Homepage layout 2</a>
-          <a class="c-btn c-btn-primary__alt" href="pdp.html">Product Detail Page</a>
-          <a class="c-btn c-btn-primary__alt" href="plp.html">Product List Page</a>
+
+          <div class="o-btn-group o-btn-group--flex">
+            <a class="c-btn c-btn-primary__alt" href="homepage.html">Matalan Homepage</a>
+            <a class="c-btn c-btn-primary__alt" href="homepage.html">Layout 1</a>
+            <a class="c-btn c-btn-primary__alt" href="homepage-2.html">Layout 2</a>
+          </div>
+
           <a class="c-btn c-btn-primary__alt" href="search-results.html">Search Results</a>
-          <a class="c-btn c-btn-primary__alt" href="checkout1.html">Checkout 1</a>
-          <a class="c-btn c-btn-primary__alt" href="checkout2.html">Checkout 2</a>
-          <a class="c-btn c-btn-primary__alt" href="checkout3.html">Checkout 3</a>
-          <a class="c-btn c-btn-primary__alt" href="checkout4.html">Checkout 4</a>
-          <a class="c-btn c-btn-primary__alt" href="checkout5.html">Checkout 5</a>
-          <a class="c-btn c-btn-primary__alt" href="secure-login-winter.html">Secure Login - Winter</a>
-          <a class="c-btn c-btn-primary__alt" href="secure-login-spring.html">Secure Login - Spring</a>
-          <a class="c-btn c-btn-primary__alt" href="secure-login-summer.html">Secure Login - Summer</a>
-          <a class="c-btn c-btn-primary__alt" href="secure-login-autumn.html">Secure Login - Autumn</a>
+          <a class="c-btn c-btn-primary__alt" href="plp.html">Product List Page</a>
+          <a class="c-btn c-btn-primary__alt" href="pdp.html">Product Detail Page</a>
+          <div class="o-btn-group o-btn-group--flex">
+            <a class="c-btn c-btn-primary__alt" href="secure-login-winter.html">Secure Login - Winter</a>
+            <a class="c-btn c-btn-primary__alt" href="secure-login-spring.html">Spring</a>
+            <a class="c-btn c-btn-primary__alt" href="secure-login-summer.html">Summer</a>
+            <a class="c-btn c-btn-primary__alt" href="secure-login-autumn.html">Autumn</a>
+          </div>
+          <a class="c-btn c-btn-primary__alt" href="product-suite.html">Product Suite</a>
           <a class="c-btn c-btn-primary__alt" href="mybag.html">My Bag</a>
           <a class="c-btn c-btn-primary__alt" href="myaccount.html">My Account</a>
+
+
+          <div class="o-btn-group o-btn-group--flex">
+            <a class="c-btn c-btn-primary__alt" href="checkout1.html">Checkout 1</a>
+            <a class="c-btn c-btn-primary__alt" href="checkout2.html">2</a>
+            <a class="c-btn c-btn-primary__alt" href="checkout3.html">3</a>
+            <a class="c-btn c-btn-primary__alt" href="checkout4.html">4</a>
+            <a class="c-btn c-btn-primary__alt" href="checkout5.html">5</a>
+          </div>
+
           <a class="c-btn c-btn-primary__alt" href="store-locator-google.html">Store Finder - Google</a>
-          <a class="c-btn c-btn-primary__alt" href="product-suite.html">Product Suite</a>
+
+          <!--removeIf(production)-->
+          <a class="c-btn c-btn-primary__alt" href="affiliate.html">affiliate</a>
+          <a class="c-btn c-btn-primary__alt" href="contact.html">contact</a>
+          <a class="c-btn c-btn-primary__alt" href="cookies.html">cookies</a>
+          <a class="c-btn c-btn-primary__alt" href="customer-services.html">customer-services</a>
+          <a class="c-btn c-btn-primary__alt" href="delivery.html">delivery</a>
+          <a class="c-btn c-btn-primary__alt" href="faq.html">faq</a>
+          <a class="c-btn c-btn-primary__alt" href="gift-vouchers.html">gift-vouchers</a>
+          <a class="c-btn c-btn-primary__alt" href="recall.html">recall</a>
+          <a class="c-btn c-btn-primary__alt" href="returns.html">returns</a>
+          <a class="c-btn c-btn-primary__alt" href="sitemap.html">sitemap</a>
+          <!--endRemoveIf(production)-->
+
 
         </div>
       </div>
@@ -51,7 +76,7 @@
       <div class="col-12@sm">
         <h2>Kit Contents</h2>
         <div class="o-btn-group-vertical auto-column-3">
-          <a class="c-btn c-btn-primary__alt" href="#grid">Grid</a>
+          <!-- <a class="c-btn c-btn-primary__alt" href="#grid">Grid</a> -->
           <a class="c-btn c-btn-primary__alt" href="#logo">Logos</a>
           <a class="c-btn c-btn-primary__alt" href="#colors">Colours</a>
           <a class="c-btn c-btn-primary__alt" href="#typography">Typography</a>
@@ -70,7 +95,7 @@
       </div>
     </div>
 
-    <div class="row" id="grid">{{> partials/grid }}</div>
+    <!-- <div class="row" id="grid">{{> partials/grid }}</div> -->
 
     <div class="row" id="logo">{{> partials/logo }}</div>
     <div class="row" id="colors">{{> partials/colors }}</div>
@@ -99,7 +124,7 @@
   <a href="#top" class="back-to-top">Back to top</a>
 
 
-{{> partials/js-footer}}
+  {{> partials/js-footer}}
 </body>
 
 </html>

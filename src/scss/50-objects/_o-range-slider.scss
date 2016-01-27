@@ -28,9 +28,9 @@ $barHeight: 0.4em;
 .noUi-origin {
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -1px;
 	left: 0;
-	bottom: 0;
+	bottom: -1px;
 }
 .noUi-handle {
 	position: relative;
@@ -63,10 +63,10 @@ $barHeight: 0.4em;
 	height: $barHeight;
 }
 .noUi-horizontal .noUi-handle {
-	width: 1.2em;
-  height: 1.2em;
+	width: 1.3em;
+  height: 1.3em;
 	left: -0.6em;
-	top: -8px;
+	top: -0.5em;
 }
 
 /* Styling;

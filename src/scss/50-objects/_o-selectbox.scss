@@ -8,6 +8,7 @@ select {
 }
 
 
+
 /* Make webkit behave */
 
 select.selectbox {
@@ -222,7 +223,7 @@ select,
     outline: 0;
     vertical-align: middle;
     display: inline-block;
-    cursor: default;
+
     max-width: 100%;
     min-width: 100%;
 }
@@ -243,4 +244,11 @@ select,
         display: inline-block;
         font-weight: bold;
     }
+}
+
+
+
+.selectbox {
+  // required to init cick events on ios. wish i was making this up.
+  cursor: pointer;
 }
