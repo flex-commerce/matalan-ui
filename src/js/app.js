@@ -73,7 +73,8 @@ require("pepjs");
 // http://github.hubspot.com/tether/
 // ===========================
 
-var Tether = require("tether");
+window.Tether = require("tether");
+
 var tether;
 
 var tetherTarget = $('.checkout-bag');
@@ -261,6 +262,30 @@ $("[data-myacc='address-delete']").on('click', function(e) {
     });
 
 })
+
+
+
+// ===========================
+// Bootstrap components init
+// ===========================
+
+require("./vendors/bootstrap/tooltip");
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+require("./vendors/bootstrap/popover");
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+// ===========================
+// Bootstrap components end
+// ===========================
+
 
 
 
