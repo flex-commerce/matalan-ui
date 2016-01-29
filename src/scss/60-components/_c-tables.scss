@@ -1,37 +1,133 @@
+$dark-th-color: $white;
+$dark-th-bg: $dark-grey;
+$default-th-color: $primary-color;
+$default-th-bg: $light-grey;
+
+$inverse-table-color: $light-grey;
+$inverse-table-bg: $dark-grey;
+$inverse-table-border: $light-grey;
+
+$table-border-width: 1px;
+$table-border-color: $keyline-color;
+
+// ===========================
+// Table Base
+// ===========================
+
 .c-table {
   width: 100%;
   text-align: left;
 
-  th {
-    @extend .u-color-pri;
-
+  th,
+  .th {
     font-weight: bold;
     text-transform: uppercase;
   }
 
-  td, th {
+  td,
+  .td,
+  th,
+  .th {
     vertical-align: top;
   }
 }
 
-.c-table__default {
+// ===========================
+// Table Base End
+// ===========================
+
+
+
+// ===========================
+// Table Default
+// ===========================
+
+.c-table--default {
   font-size: rem-calc(14);
 
   td,
-  th {
+  .td,
+  th,
+  .th {
     padding: 0.65em;
   }
 }
 
-.c-table__striped {
-  tbody tr:nth-of-type(odd) {
+// ===========================
+// Table Default End
+// ===========================
+
+
+
+// ===========================
+// Table Stripes
+// ===========================
+
+.c-table--striped {
+  tbody tr:nth-of-type(odd),
+  .tr:nth-of-type(odd) {
     @extend .u-bgcolor-lgrey-hover;
   }
 
-  tbody tr {
-    border-top: 1px solid $keyline-color;
+}
+
+.c-table--scored {
+  th, .th {
+    border-width: ($table-border-width * 2);
+    border-style: none none solid none;
+    border-color:  $table-border-color;
+  }
+  tr, .tr {
+    border-width: $table-border-width;
+    border-style: none none solid none;
+    border-color:  $table-border-color;
+  }
+
+}
+
+
+
+// ===========================
+// Table Stripes End
+// ===========================
+
+
+
+// ===========================
+// Table Spacing
+// ===========================
+
+.c-table--spaced {
+  th, .th {
+    padding-bottom: 1em;
+  }
+
+  td, .td {
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 }
+
+.c-table--spaced--large {
+  th, .th {
+    padding-bottom: 2em;
+  }
+
+  td, .td {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+// ===========================
+// Table Spacing End
+// ===========================
+
+
+
+// ===========================
+// Table Collapsible
+// ===========================
 
 .c-table--collapses {
   .th {
@@ -57,7 +153,6 @@
     }
   }
 
-
   @include mq($from: md) {
     display: table;
 
@@ -76,7 +171,6 @@
     }
   }
 
-
   .th--inline {
     font-weight: bold;
 
@@ -86,20 +180,100 @@
   }
 }
 
-// .c-table--spaced {
-//   td, .td {
-//     padding-top: 1em;
-//     padding-bottom: 1em;
-//   }
-// }
+// ===========================
+// Table Collapsible End
+// ===========================
 
-.c-table--spaced--large {
-  th, .th {
-    padding-bottom: 2em;
-  }
 
-  td, .td {
-    padding-top: 2em;
-    padding-bottom: 2em;
+
+
+
+// ===========================
+// Color & Display Rules
+// ===========================
+.c-table {
+  th,
+  .th {
+    color: $default-th-color;
   }
 }
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.c-table--bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $table-border-width);
+    }
+  }
+}
+
+
+.c-table__thead--inverted {
+  th {
+    color: $dark-th-color;
+    background-color: $dark-th-bg;
+  }
+}
+
+.c-table__thead--default {
+  th {
+    color: $default-th-color;
+    background-color: $default-th-bg;
+  }
+}
+
+
+.c-table--inverted {
+  color: $inverse-table-color;
+  background-color: $inverse-table-bg;
+
+  thead th {
+    color: $dark-th-color;
+  }
+
+  &.c-table--bordered {
+    border: 0;
+  }
+
+  th,
+  td,
+  thead th {
+    border-color: $inverse-table-border;
+  }
+}
+
+
+// Responsive tables
+//
+// Wrap your tables in `.c-table--responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+@include mq($until:lg) {
+  .c-table--responsive {
+    display: block;
+    width: 100%;
+    min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+    overflow-x: auto;
+    > table {
+        min-width: 720px;
+    }
+    // TODO: find out if we need this still.
+    //
+    // border: $table-border-width solid $table-border-color;
+    // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+  }
+}
+
+
