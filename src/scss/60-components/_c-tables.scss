@@ -42,7 +42,7 @@ $table-border-color: $keyline-color;
 // Table Default
 // ===========================
 
-.c-table__default {
+.c-table--default {
   font-size: rem-calc(14);
 
   td,
@@ -63,7 +63,7 @@ $table-border-color: $keyline-color;
 // Table Stripes
 // ===========================
 
-.c-table__striped {
+.c-table--striped {
   tbody tr:nth-of-type(odd),
   .tr:nth-of-type(odd) {
     @extend .u-bgcolor-lgrey-hover;
@@ -202,7 +202,7 @@ $table-border-color: $keyline-color;
 //
 // Add borders all around the table and between all the columns.
 
-.table-bordered {
+.c-table--bordered {
   border: $table-border-width solid $table-border-color;
 
   th,
@@ -219,14 +219,14 @@ $table-border-color: $keyline-color;
 }
 
 
-.thead-inverted {
+.c-table__thead--inverted {
   th {
     color: $dark-th-color;
     background-color: $dark-th-bg;
   }
 }
 
-.thead-default {
+.c-table__thead--default {
   th {
     color: $default-th-color;
     background-color: $default-th-bg;
@@ -234,7 +234,7 @@ $table-border-color: $keyline-color;
 }
 
 
-.table-inverted {
+.c-table--inverted {
   color: $inverse-table-color;
   background-color: $inverse-table-bg;
 
@@ -242,7 +242,7 @@ $table-border-color: $keyline-color;
     color: $dark-th-color;
   }
 
-  &.table-bordered {
+  &.c-table--bordered {
     border: 0;
   }
 
@@ -256,12 +256,12 @@ $table-border-color: $keyline-color;
 
 // Responsive tables
 //
-// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// Wrap your tables in `.c-table--responsive` and we'll make them mobile friendly
 // by enabling horizontal scrolling. Only applies <768px. Everything above that
 // will display normally.
 
 @include mq($until:lg) {
-  .table-responsive {
+  .c-table--responsive {
     display: block;
     width: 100%;
     min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
