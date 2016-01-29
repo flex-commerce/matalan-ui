@@ -37,28 +37,28 @@
                                         <div class="o-form__input-contain auto-column-2">
                                             <div class="o-form__label-contain u-pad-v-tiny">
                                                 <label class="o-form__label-option">
-                                                    <input type="radio" name="billingaddress" value="bililngaddress" checked>
+                                                    <input type="radio" name="deliveryaddress" value="bililngaddress" checked>
                                                     <span></span>
                                                     Use my billing address
                                                 </label>
                                             </div>
                                             <div class="o-form__label-contain u-pad-v-tiny">
                                                 <label class="o-form__label-option">
-                                                    <input type="radio" name="billingaddress" value="addressbook">
+                                                    <input type="radio" name="deliveryaddress" value="addressbook">
                                                     <span></span>
                                                     Use my address book
                                                 </label>
                                             </div>
                                             <div class="o-form__label-contain u-pad-v-tiny">
                                                 <label class="o-form__label-option">
-                                                    <input type="radio" name="billingaddress" value="newaddress">
+                                                    <input type="radio" name="deliveryaddress" value="newaddress">
                                                     <span></span>
                                                     Enter a new address
                                                 </label>
                                             </div>
                                             <div class="o-form__label-contain u-pad-v-tiny">
                                                 <label class="o-form__label-option">
-                                                    <input type="radio" name="billingaddress" value="click-and-collect">
+                                                    <input type="radio" name="deliveryaddress" value="click-and-collect">
                                                     <span></span>
                                                     Click &amp; Collect (FREE)
                                                 </label>
@@ -66,24 +66,40 @@
                                         </div>
                                     </div>
                                 </form>
-                                <form class="o-form--inline c-search-form has-focus">
-                                    <div class="o-form__row u-pad-b-0">
-                                        <div class="o-form--input-pack o-form__input-contain">
-                                            <div class="input-group--addon unstyled input-group--addon__inset">
-                                                <i class="icon icon-menu-storefinder"></i>
+                                <div class="o-box o-click-and-collect" style="display:none;">
+                                    <form class="o-form--inline c-search-form has-focus">
+                                        <div class="o-form__row u-pad-b-0">
+                                            <div class="o-form--input-pack o-form__input-contain">
+                                                <div class="input-group--addon unstyled input-group--addon__inset">
+                                                    <i class="icon icon-menu-storefinder"></i>
+                                                </div>
+                                                <input id="addressEntry" type="text" class="o-input o-input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter address, city, postcode">
+                                                <a id="findStore" data-click-collect='click-collect' class="input-group--addon c-search__button find-store">Find</a>
                                             </div>
-                                            <input id="addressEntry" type="text" class="o-input o-input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter address, city, postcode">
-                                            <a id="findStore" data-click-collect='click-collect' class="input-group--addon c-search__button find-store">Find</a>
                                         </div>
+                                    </form>
+                                    <div class="separator__inline-text--unstyled">
+                                        <span>or</span>
                                     </div>
-                                </form>
-                                <div class="separator__inline-text--unstyled">
-                                    <span>or</span>
+                                    <a id="geolocate" data-click-collect='click-collect' class="c-btn c-btn--icon c-btn--block c-btn-secondary use-location">
+                                        <i class="icon icon-menu-storefinder"></i> Use my location
+                                    </a>
                                 </div>
-                                <a id="geolocate" data-click-collect='click-collect' class="c-btn c-btn--icon c-btn--block c-btn-secondary use-location">
-                                    <i class="icon icon-menu-storefinder"></i> Use my location
-                                </a>
-                                <button type="submit" class="c-btn c-btn-secondary c-btn--block">Next step</button>
+                                <div class="o-box o-addressbook" style="display: none">
+                                    {{> partials/address-book }}
+                                </div>
+                                <div class="o-box o-newaddress" style="display: none">
+                                    <form action="" class="o-form o-form--default collapse o-myacc--address-panel" id="check1--address-panel">
+                                        {{> partials/address-form }}
+                                        <div class="o-myacc__address-actions">
+                                            <a class="c-btn c-btn-primary o-myacc__cancel u-font-upper u-mar-t-large" data-toggle="collapse" href="#myacc--address-panel">Cancel</a>
+                                            <button type="submit" class="c-btn c-btn-secondary c-btn--block u-mar-v-large">Add</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="o-box o-submit-button u-mar-t-medium">
+                                    <button type="submit" class="c-btn c-btn-secondary c-btn--block">Next step</button>
+                                </div>
                             </div>
                         </fieldset>
                         <fieldset class="u-pad-v-medium u-border2-t">

@@ -50,7 +50,7 @@
        });
 
        loadResults(data, longitude, latitude);
-       printResults(data);
+       printResults(data, isModal);
 
 
 
@@ -220,7 +220,7 @@
        el.find('.o-store-locator__listings-wrapper').addClass('active');
    }
 
-   var printResults = function(data) {
+   var printResults = function(data, isModal) {
 
        listings.innerHTML = "";
        for (var i = 0, len = data.length; i < len; i++) {
@@ -273,6 +273,22 @@
            opening.innerHTML = "";
            if (prop.hours) {
                opening.innerHTML += prop.hours.replace(/\n/g, '<br />');
+           }
+
+           if (isModal) {
+              var actionRow = detailsRow.appendChild(document.createElement('div'));
+             actionRow.className = "col-12@xs col-6@lg";
+             var actionButton = details.appendChild(document.createElement('div'));
+             actionButton.className = 'c-btn c-btn-secondary col-10@xs u-mar-t-medium u-font-upper';
+             actionButton.innerHTML = "Select this store";
+           }
+
+           if (!isModal) {
+              var actionRow = detailsRow.appendChild(document.createElement('div'));
+             actionRow.className = "col-12@xs col-6@lg";
+             var actionButton = details.appendChild(document.createElement('div'));
+             actionButton.className = 'c-btn c-btn-primary col-10@xs u-mar-t-medium u-font-upper';
+             actionButton.innerHTML = "View on Map";
            }
 
            var callButton = listings.appendChild(document.createElement('div'));
