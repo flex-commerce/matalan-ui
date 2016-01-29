@@ -60,11 +60,7 @@
     });
 
     $('input[name=deliveryaddress]').on('change', function() {
-        if($(this).attr("value") === "click-and-collect"){
-            $(".o-box").not(".o-click-and-collect").hide();
-            $(".o-click-and-collect").show();
-        }
-        else if ($(this).attr("value")=="addressbook"){
+        if ($(this).attr("value")=="addressbook"){
             $(".o-box").not(".o-addressbook").hide();
             $(".o-addressbook").show();
             $(".o-submit-button").show();
@@ -72,6 +68,17 @@
         else if ($(this).attr("value")=="newaddress"){
             $(".o-box").not(".o-newaddress").hide();
             $(".o-newaddress").show();
+        }
+        else {
+            $(".o-box").not(".o-submit-button").hide();
+            $(".o-submit-button").show();
+        }
+    });
+
+    $('input[name=deliverytype]').on('change', function() {
+        if($(this).attr("value") === "click-and-collect"){
+            $(".o-box").not(".o-click-and-collect").hide();
+            $(".o-click-and-collect").show();
         }
         else {
             $(".o-box").not(".o-submit-button").hide();

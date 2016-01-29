@@ -2,75 +2,103 @@
 <html class="no-js" lang="">
 
 <head>
-  {{> partials/html-head }}
+    {{> partials/html-head }}
 </head>
 
 <body class="is-dev">
-  <div class="hidden@md-down">
-    {{> partials/header-checkout }}
-  </div>
-  <div class="hidden@lg-up">
-    {{> parcels/header }}
-  </div>
-  <div class="container o-checkout__container" role="main">
-    <div class="row">
-      <div class="col-12@xs">
-        <div class="u-mar-v-large">
-          {{> partials/progress-checkout-3 }}
-        </div>
-        <div class="row">
-          <div class="o-checkout__detail col-12@xs col-8@lg">
-            <form action="">
-              <fieldset class="u-pad-v-medium u-border2-t completed">
-                <div class="o-checkout__title u-font-upper">1. Billing Address<i class="icon icon-plus icon--vertical-right"></i></div>
-              </fieldset>
-              <fieldset class="u-pad-v-medium u-border2-t completed">
-                <div class="o-checkout__title u-font-upper">2. Delivery Address<i class="icon icon-plus icon--vertical-right"></i></div>
-              </fieldset>
-              <fieldset class="u-pad-v-medium u-border2-t active">
-                <div class="o-checkout__title u-font-upper">3. Delivery Method<i class="icon icon-minus icon--vertical-right"></i></div>
-                <div class="o-checkout__content u-mar-t-small">
-
-                  <p class="u-mar-v-medium">Please choose your preferred delivery address</p>
-
-                  <div class="o-form__row col-12@xs col-8@md">
-                    <div class="o-form__input-contain o-option--inline auto-column-2">
-
-                    <div class="o-form__label-contain u-pad-v-tiny">
-                      <label class="o-form__label-option">
-                        <input type="radio" name="foo" value="Red" checked>
-                        <span></span>
-                        Standard (&pound;3.95)
-                      </label>
-                    </div>
-
-                    <div class="o-form__label-contain u-pad-v-tiny">
-                      <label class="o-form__label-option">
-                        <input type="radio" name="foo" value="Red" checked>
-                        <span></span>
-                        Next Day (&pound;4.95)
-                      </label>
-                      </div>
-
-                    </div>
-                  </div>
-
-
-                  <button type="submit" class="c-btn c-btn-secondary c-btn--block">Continue</button>
-                </div>
-              </fieldset>
-            </form>
-          </div>
-          <div class="col-4@lg hidden@md-down">
-            <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
-              {{> partials/minibag-checkout-footer }}
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="hidden@md-down">
+        {{> partials/header-checkout }}
     </div>
-  </div>
-  {{> parcels/footer }} {{> partials/js-footer}}
+    <div class="hidden@lg-up">
+        {{> parcels/header }}
+    </div>
+    <div class="container o-checkout__container" role="main">
+        <div class="row">
+            <div class="col-12@xs">
+                <div class="u-mar-v-large">
+                    {{> partials/progress-checkout-3 }}
+                </div>
+                <div class="row">
+                    <div class="o-checkout__detail col-12@xs col-8@lg">
+                        <form action="">
+                            <fieldset class="u-pad-v-medium u-border2-t completed">
+                                <div class="o-checkout__title u-font-upper">1. Billing Address<i class="icon icon-plus icon--vertical-right"></i></div>
+                            </fieldset>
+                            <fieldset class="u-pad-v-medium u-border2-t completed">
+                                <div class="o-checkout__title u-font-upper">2. Delivery Address<i class="icon icon-plus icon--vertical-right"></i></div>
+                            </fieldset>
+                            <fieldset class="u-pad-v-medium u-border2-t active">
+                                <div class="o-checkout__title u-font-upper">3. Delivery Method<i class="icon icon-minus icon--vertical-right"></i></div>
+                                <div class="o-checkout__content u-mar-t-small u-cf">
+                                    <p class="u-mar-v-medium">Please choose your preferred delivery address</p>
+                                    <div class="o-form__row col-12@xs col-8@md">
+                                        <div class="o-form__input-contain o-option--inline auto-column-2">
+                                            <div class="o-form__label-contain u-pad-v-tiny">
+                                                <label class="o-form__label-option">
+                                                    <input type="radio" name="deliverytype" value="standard" checked>
+                                                    <span></span>
+                                                    Standard (&pound;3.95)
+                                                </label>
+                                            </div>
+                                            <div class="o-form__label-contain u-pad-v-tiny">
+                                                <label class="o-form__label-option">
+                                                    <input type="radio" name="deliverytype" value="express">
+                                                    <span></span>
+                                                    Next Day (&pound;4.95)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="o-form__label-contain u-pad-v-tiny">
+                                            <label class="o-form__label-option">
+                                                <input type="radio" name="deliverytype" value="click-and-collect">
+                                                <span></span>
+                                                Click & Collect (FREE)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o-box o-click-and-collect" style="display:none;">
+                                    <div class="o-store-finder__actions">
+                                        <form class="o-form--inline c-search-form has-focus">
+                                            <div class="o-form__row u-pad-b-0">
+                                                <div class="o-form--input-pack o-form__input-contain">
+                                                    <div class="input-group--addon unstyled input-group--addon__inset">
+                                                        <i class="icon icon-menu-storefinder"></i>
+                                                    </div>
+                                                    <input id="addressEntry" type="text" class="o-input o-input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter address, city, postcode">
+                                                    <a id="findStore" data-click-collect='click-collect' class="input-group--addon c-search__button find-store">Find</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="separator__inline-text--unstyled">
+                                            <span>or</span>
+                                        </div>
+                                        <a id="geolocate" data-click-collect='click-collect' class="c-btn c-btn--icon c-btn--block c-btn-secondary use-location">
+                                            <i class="icon icon-menu-storefinder"></i> Use my location
+                                        </a>
+                                    </div>
+                                    <div class="o-store-finder__selected" style="display:none;">
+                                        <h5>Thank you for selecting:
+                                            <span class="u-color-pri"></span>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="o-box o-submit-button u-mar-t-medium">
+                                    <button type="submit" class="c-btn c-btn-secondary c-btn--block">Continue</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="col-4@lg hidden@md-down">
+                        <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
+                            {{> partials/minibag-checkout-footer }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> parcels/footer }} {{> partials/js-footer}}
 </body>
 
 </html>
