@@ -1,0 +1,146 @@
+.o-form--input-pack {
+  // display: inline-table;
+  // position: relative;
+
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+
+  > * {
+    display: table-cell !important;
+  }
+
+  .input-group--addon {
+    width: 1%;
+    text-align: center;
+
+    // z-index keeps the addon icon visible on input focus
+    z-index: 2;
+
+    a {
+      color: $white;
+      padding: 0 em-calc(10px);
+      height: 100%;
+    }
+
+    &:not(.input-group--addon__inset) {
+      padding: 0 em-calc(10px);
+    }
+
+    &:not(.input-group--addon__button) {
+      padding: 0 em-calc(10px);
+    }
+
+    &:not(.unstyled) {
+      background: $primary-color;
+      color: $white;
+    }
+
+    button {
+      border-style: none;
+      background-color: transparent;
+      padding: 0 em-calc(10px);
+      height: 100%;
+    }
+
+    &.input-group--addon__button {
+      padding: 0;
+    }
+
+    .icon:before {
+      color: $keyline-color;
+      line-height: 1.6;
+    }
+  }
+
+  .input-addon--expand {
+    width: 100%;
+  }
+}
+
+.input-group--addon__inset {
+  @include center($xy: y, $pos: abs);
+}
+
+.input-group--addon__inset-left {
+  // offset input left padding to accommodate icon
+  padding-left: 2.75em !important;
+}
+
+// temp input pack rules & styles
+
+.o-form--input-pack {
+  .input-group__btn {
+    width: 1%;
+  }
+}
+
+.o-form--input-pack--styled {
+  .o-input--textual:focus {
+    & + .input-group__btn.input-group__btn {
+      > a,
+      > button,
+      .c-btn-dropdown {
+        background: $dark-grey;
+        border-color: $dark-grey;
+
+        &:hover {
+          background: $dark-grey-hover;
+        }
+      }
+    }
+  }
+
+  .input-group__btn.input-group__btn {
+    > a,
+    > button,
+    .c-btn-dropdown {
+      background: $cool-grey-hover;
+      border-color: $cool-grey-hover;
+
+      &:hover {
+        background: $cool-grey;
+      }
+    }
+  }
+}
+
+//=============================
+//  Form Icons
+//=============================
+.o-form__input--icon {
+  position: relative;
+
+  .o-input--textual {
+    padding-left: 3.85em;
+
+    &:focus {
+      padding-left: 1em;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:hover + .icon {
+      color: $dark-grey;
+    }
+  }
+
+  > .icon {
+    width: 2.85em;
+    color: $cool-grey;
+
+    @include absolute(left 0 top 0 bottom 0);
+
+    &:before {
+      @include center(xy, abs);
+
+      vertical-align: middle;
+    }
+  }
+}
+
+//=============================
+//  Form Icons
+//=============================
