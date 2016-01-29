@@ -579,7 +579,6 @@ initPhotoSwipeFromDOM('.product-images');
 
 // Self Initialising...
 require("./modules/minibag");
-require("./modules/click-and-collect");
 require("./modules/filters");
 require("./modules/scroll-lock");
 // Self Initialising end

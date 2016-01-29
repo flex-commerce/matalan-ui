@@ -4,7 +4,7 @@ $modal-content-bg: #fff;
 $modal-content-border-color: rgba(0, 0, 0, 0.2);
 $modal-backdrop-bg: #000;
 $modal-backdrop-opacity: 0.2;
-$modal-title-padding: 14px;
+$modal-title-padding: 5px 14px;
 $modal-header-border-color: $light-grey;
 $modal-title-line-height: 2;
 $modal-inner-padding: 15px;
@@ -178,27 +178,6 @@ $screen-md-min: 720px;
     -webkit-overflow-scrolling: touch;
     outline: 0;
 }
-
-// .modal.modal--click-and-collect {
-//     display: none;
-//     overflow: hidden;
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     -webkit-overflow-scrolling: touch;
-//     outline: 1px solid $primary-color;
-//     margin: 40px auto;
-//     width: 80%;
-
-//     .modal-dialog {
-//       margin:0;
-//     }
-//     .modal-content {
-//       border: none;
-//     }
-// }
 
 .modal--nav {
     @include mq($until: lg) {

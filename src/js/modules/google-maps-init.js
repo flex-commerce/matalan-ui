@@ -8,6 +8,16 @@
        data = require("json!../../data/locations.json"),
        latlng;
 
+   var clickCollectContain = $('#click-and-collect-contain');
+
+   function closeMiniBag() {
+       clickCollectContain.modal('hide');
+   }
+
+   function openMiniBag() {
+       clickCollectContain.modal('show');
+   }
+
    // Calculates the distance from the current location (clientLatitude1, clientLongitude2) to the data location co-ordinates (dataLatitude1, dataLongitude2)
    var calculateDistance = function(clientLatitude1, clientLongitude2, dataLatitude1, dataLongitude2, unit) {
        var radclientLatitude1 = Math.PI * clientLatitude1 / 180
@@ -30,7 +40,7 @@
    }
 
    // Build the main map
-   var generateMap = function(data, longitude, latitude) {
+   var generateMap = function(data, longitude, latitude, isModal) {
        map = new GMaps({
            div: '#map',
            lat: latitude,
@@ -41,6 +51,8 @@
 
        loadResults(data, longitude, latitude);
        printResults(data);
+
+
 
        $('html, body').animate({
            scrollTop: $('#storeFinderContainer').offset().top
@@ -74,13 +86,14 @@
 
        loadResults(mobileData);
 
+
        // var firstMarker = map.markers[0];
        // firstMarker.infoWindow.open();
        // google.maps.event.trigger(firstMarker, 'click');
 
    }
 
-   var GetLocation = function(address) {
+   var GetLocation = function(address, isModal) {
        var geocoder = new google.maps.Geocoder();
        geocoder.geocode({
            'address': address
@@ -98,15 +111,18 @@
                data.sort(function(a, b) {
                    return a.distance - b.distance;
                });
+               if (isModal) {
+                   openMiniBag();
+               }
 
-               generateMap(data, longitude, latitude);
+               generateMap(data, longitude, latitude, isModal);
            } else {
                alert("Request failed.")
            }
        });
    };
 
-   var getClientLocation = function() {
+   var getClientLocation = function(isModal) {
 
        if (navigator.geolocation) {
            navigator.geolocation.getCurrentPosition(function(position) {
@@ -121,8 +137,11 @@
                data.sort(function(a, b) {
                    return a.distance - b.distance;
                });
+               if (isModal) {
+                   openMiniBag();
+               }
 
-               generateMap(data, longitude, latitude);
+               generateMap(data, longitude, latitude, isModal);
 
            });
        } else {
@@ -131,7 +150,7 @@
        }
    }
 
-   var loadResults = function(fulldata, longitude, latitude) {
+   var loadResults = function(fulldata, longitude, latitude, isModal) {
        var items, markers_data = [];
        var icon = '../../img/marker.svg';
        var newicon = '../../img/marker-current.svg';
@@ -313,8 +332,8 @@
        var currCenter = mobilemap.map.getCenter();
        google.maps.event.trigger(mobilemap.map, 'resize');
        mobilemap.map.setCenter(currCenter);
-       var y = $(window).scrollTop();  //your current y position on the page
-        $(window).scrollTop(y+300);
+       var y = $(window).scrollTop(); //your current y position on the page
+       $(window).scrollTop(y + 300);
 
    });
 
@@ -328,17 +347,25 @@
 
    $('body').on('click', '.find-store', function(e) {
        e.preventDefault();
+       var isModal = false;
+       if ($(this).data('click-collect') === 'click-collect') {
+           var isModal = true;
+       }
        var address = $('#addressEntry').val();
-       GetLocation(address);
+
+       GetLocation(address, isModal);
 
    });
 
    $('body').on('click', '.use-location', function(e) {
+       e.preventDefault();
        var locattionIcon = $(this).find('i').prop('outerHTML');
        $(this).html(locattionIcon + 'Searching').addClass('c-loading');
-
-       e.preventDefault();
-       getClientLocation();
+       var isModal = false;
+       if ($(this).data('click-collect') === 'click-collect') {
+           var isModal = true;
+       }
+       getClientLocation(isModal);
    });
 
    if ($('.map-wrapper').length > 0) {
