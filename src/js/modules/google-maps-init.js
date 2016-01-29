@@ -9,6 +9,7 @@
        latlng;
 
    var clickCollectContain = $('#click-and-collect-contain');
+   var isModal = false;
 
    function closeMap() {
        clickCollectContain.modal('hide');
@@ -62,7 +63,7 @@
        google.maps.event.trigger(firstMarker, 'click');
 
        var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
-       if (width > 0) {
+       if (width > 0 && !isModal) {
            $('.map-wrapper').css('right', -width);
        }
    }
@@ -364,9 +365,9 @@
 
    $('body').on('click', '.find-store', function(e) {
        e.preventDefault();
-       var isModal = false;
+       isModal = false;
        if ($(this).data('click-collect') === 'click-collect') {
-           var isModal = true;
+           isModal = true;
        }
        var address = $('#addressEntry').val();
 
@@ -378,14 +379,14 @@
        e.preventDefault();
        var locattionIcon = $(this).find('i').prop('outerHTML');
        $(this).html(locattionIcon + 'Searching').addClass('c-loading');
-       var isModal = false;
+       isModal = false;
        if ($(this).data('click-collect') === 'click-collect') {
-           var isModal = true;
+           isModal = true;
        }
        getClientLocation(isModal);
    });
 
-   if ($('.map-wrapper').length > 0) {
+   if ($('.map-wrapper').length > 0 && !isModal ) {
        $(window).resize(function() {
            var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
            if (width > 0) {

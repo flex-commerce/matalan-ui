@@ -60,12 +60,15 @@
     });
 
     $('input[name=deliveryaddress]').on('change', function() {
-        if ($(this).attr("value")=="addressbook"){
+
+      console.log($(this).attr("value"));
+
+        if ($(this).attr("value") === "addressbook"){
             $(".o-box").not(".o-addressbook").hide();
             $(".o-addressbook").show();
             $(".o-submit-button").show();
         }
-        else if ($(this).attr("value")=="newaddress"){
+        else if ($(this).attr("value") === "newaddress"){
             $(".o-box").not(".o-newaddress").hide();
             $(".o-newaddress").show();
         }
