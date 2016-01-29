@@ -179,26 +179,26 @@ $screen-md-min: 720px;
     outline: 0;
 }
 
-.modal.modal--click-and-collect {
-    display: none;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    -webkit-overflow-scrolling: touch;
-    outline: 1px solid $primary-color;
-    margin: 40px auto;
-    width: 80%;
+// .modal.modal--click-and-collect {
+//     display: none;
+//     overflow: hidden;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     -webkit-overflow-scrolling: touch;
+//     outline: 1px solid $primary-color;
+//     margin: 40px auto;
+//     width: 80%;
 
-    .modal-dialog {
-      margin:0;
-    }
-    .modal-content {
-      border: none;
-    }
-}
+//     .modal-dialog {
+//       margin:0;
+//     }
+//     .modal-content {
+//       border: none;
+//     }
+// }
 
 .modal--nav {
     @include mq($until: lg) {
@@ -243,6 +243,14 @@ $screen-md-min: 720px;
         }
     }
 }
+
+@include mq($from: lg) {
+  .modal-lg.modal-lg .modal-dialog {
+    width: 90vw;
+  }
+}
+
+
 
 // ========================
 // boostrap-dialog.js rules
