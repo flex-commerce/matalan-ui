@@ -67,6 +67,7 @@
                                     </div>
                                 </form>
                                 <div class="o-box o-click-and-collect" style="display:none;">
+                                  <div class="o-store-finder__actions">
                                     <form class="o-form--inline c-search-form has-focus">
                                         <div class="o-form__row u-pad-b-0">
                                             <div class="o-form--input-pack o-form__input-contain">
@@ -77,13 +78,17 @@
                                                 <a id="findStore" data-click-collect='click-collect' class="input-group--addon c-search__button find-store">Find</a>
                                             </div>
                                         </div>
-                                    </form>
-                                    <div class="separator__inline-text--unstyled">
-                                        <span>or</span>
+                                      </form>
+                                      <div class="separator__inline-text--unstyled">
+                                          <span>or</span>
+                                      </div>
+                                      <a id="geolocate" data-click-collect='click-collect' class="c-btn c-btn--icon c-btn--block c-btn-secondary use-location">
+                                          <i class="icon icon-menu-storefinder"></i> Use my location
+                                      </a>
                                     </div>
-                                    <a id="geolocate" data-click-collect='click-collect' class="c-btn c-btn--icon c-btn--block c-btn-secondary use-location">
-                                        <i class="icon icon-menu-storefinder"></i> Use my location
-                                    </a>
+                                    <div class="o-store-finder__selected" style="display:none;">
+                                      <h5>Thank you for selecting: <span class="u-color-pri"></span></h5>
+                                    </div>
                                 </div>
                                 <div class="o-box o-addressbook" style="display: none">
                                     {{> partials/address-book }}

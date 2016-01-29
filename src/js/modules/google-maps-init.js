@@ -10,11 +10,11 @@
 
    var clickCollectContain = $('#click-and-collect-contain');
 
-   function closeMiniBag() {
+   function closeMap() {
        clickCollectContain.modal('hide');
    }
 
-   function openMiniBag() {
+   function openMap() {
        clickCollectContain.modal('show');
    }
 
@@ -112,7 +112,7 @@
                    return a.distance - b.distance;
                });
                if (isModal) {
-                   openMiniBag();
+                   openMap();
                }
 
                generateMap(data, longitude, latitude, isModal);
@@ -138,7 +138,7 @@
                    return a.distance - b.distance;
                });
                if (isModal) {
-                   openMiniBag();
+                   openMap();
                }
 
                generateMap(data, longitude, latitude, isModal);
@@ -276,19 +276,20 @@
            }
 
            if (isModal) {
-              var actionRow = detailsRow.appendChild(document.createElement('div'));
-             actionRow.className = "col-12@xs col-6@lg";
-             var actionButton = details.appendChild(document.createElement('div'));
-             actionButton.className = 'c-btn c-btn-secondary col-10@xs u-mar-t-medium u-font-upper';
-             actionButton.innerHTML = "Select this store";
+               var actionRow = detailsRow.appendChild(document.createElement('div'));
+               actionRow.className = "col-12@xs col-6@lg";
+               var actionButton = details.appendChild(document.createElement('div'));
+               actionButton.className = 'c-btn c-btn-secondary col-10@xs u-mar-t-medium u-font-upper o-select-store';
+               actionButton.setAttribute('data-storeName', prop.city + ' - ' + prop.address);
+               actionButton.innerHTML = "Select this store";
            }
 
            if (!isModal) {
-              var actionRow = detailsRow.appendChild(document.createElement('div'));
-             actionRow.className = "col-12@xs col-6@lg";
-             var actionButton = details.appendChild(document.createElement('div'));
-             actionButton.className = 'c-btn c-btn-primary col-10@xs u-mar-t-medium u-font-upper';
-             actionButton.innerHTML = "View on Map";
+               var actionRow = detailsRow.appendChild(document.createElement('div'));
+               actionRow.className = "col-12@xs col-6@lg";
+               var actionButton = details.appendChild(document.createElement('div'));
+               actionButton.className = 'c-btn c-btn-primary col-10@xs u-mar-t-medium u-font-upper';
+               actionButton.innerHTML = "View on Map";
            }
 
            var callButton = listings.appendChild(document.createElement('div'));
@@ -392,6 +393,17 @@
            }
        });
    }
-   // ===========================
-   // Mapbox End
-   // ===========================
+
+   $('body').on('click', '.o-select-store', function() {
+        var selectedStore = $(this).attr('data-storeName')
+        $('.o-store-finder__actions').hide();
+        $('.o-store-finder__selected').show();
+
+        $('.o-store-finder__selected span').text(selectedStore);
+        $(".o-submit-button").show();
+         closeMap();
+
+     })
+       // ===========================
+       // Mapbox End
+       // ===========================
