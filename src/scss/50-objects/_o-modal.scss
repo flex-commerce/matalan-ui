@@ -9,200 +9,165 @@ $modal-header-border-color: $light-grey;
 $modal-title-line-height: 2;
 $modal-inner-padding: 15px;
 $modal-footer-border-color: $light-grey;
-
 $modal-lg: 900px;
 $modal-md: 600px;
 $modal-sm: 300px;
-
 $screen-sm-min: 320px;
 $screen-md-min: 720px;
-
 //
 // Modals
 // --------------------------------------------------
-
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and shit
-
 // Kill the scroll on the body
 .modal-open {
-  position: fixed;
-  left: 0;
-  right: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 
 // Container that the modal scrolls within
 .modal.modal--default {
-  display: none;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  // z-index: $zindex-modal;
-  -webkit-overflow-scrolling: touch;
-
-  // Prevent Chrome on Windows from adding a focus outline. For details, see
-  // https://github.com/twbs/bootstrap/pull/10951.
-  outline: 0;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // z-index: $zindex-modal;
+    -webkit-overflow-scrolling: touch;
+    // Prevent Chrome on Windows from adding a focus outline. For details, see
+    // https://github.com/twbs/bootstrap/pull/10951.
+    outline: 0;
 }
 
 .modal.modal--custom {
-  display: none;
-
-  // z-index: $zindex-modal;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
+    display: none;
+    // z-index: $zindex-modal;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
 }
 
 .modal.in {
-  &.modal--default {
-    z-index: $zindex-modal;
-  }
-
-  &.modal--custom {
-    z-index: $zindex-modal;
-  }
+    &.modal--default {
+        z-index: $zindex-modal;
+    }
+    &.modal--custom {
+        z-index: $zindex-modal;
+    }
 }
 
 .modal-open .modal--default {
-  overflow-x: hidden;
-  overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
-  position: relative;
-  width: auto;
-  margin: 0 15px;
+    position: relative;
+    width: auto;
+    margin: 0 15px;
 }
 
 // Actual modal
 .modal-content {
-  position: relative;
-  background-color: $modal-content-bg;
-  border: 1px solid $modal-content-border-color;
-  background-clip: padding-box;
-
-  // Remove focus outline from opened modal
-  outline: 0;
+    position: relative;
+    background-color: $modal-content-bg;
+    border: 1px solid $modal-content-border-color;
+    background-clip: padding-box;
+    // Remove focus outline from opened modal
+    outline: 0;
 }
 
 // Modal background
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: $zindex-modal-background;
-  background-color: $modal-backdrop-bg;
-
-  // Fade for backdrop
-  &.fade {
-    opacity: 0;
-  }
-
-  &.in {
-    opacity: $modal-backdrop-opacity;
-  }
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-modal-background;
+    background-color: $modal-backdrop-bg;
+    // Fade for backdrop
+    &.fade {
+        opacity: 0;
+    }
+    &.in {
+        opacity: $modal-backdrop-opacity;
+    }
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  padding: $modal-title-padding;
-  border-bottom: 1px solid $modal-header-border-color;
-
-  @include clearfix;
+    padding: $modal-title-padding;
+    border-bottom: 1px solid $modal-header-border-color;
+    @include clearfix;
 }
 
 // close placement
 .modal-header {
-  position: relative;
-
-  .close {
-    @include center($xy: y, $pos: abs);
-  }
+    position: relative;
+    .close {
+        @include center($xy: y, $pos: abs);
+    }
 }
 
 // Title text within header
 .modal-title {
-  margin: 0;
-  line-height: $modal-title-line-height;
+    margin: 0;
+    line-height: $modal-title-line-height;
 }
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
-  position: relative;
-  padding: $modal-inner-padding;
+    position: relative;
+    padding: $modal-inner-padding;
 }
 
 // Footer (for actions)
 .modal-footer {
-  padding: $modal-inner-padding;
-  text-align: right;
-
-  // right align buttons
-  border-top: 1px solid $modal-footer-border-color;
-
-  @include clearfix;
-
-  // clear it in case folks use .pull-* classes on buttons
-
-  // Properly space out buttons
-  .btn + .btn {
-    margin-left: 5px;
-    margin-bottom: 0;
-
-    // account for input[type="submit"] which gets the bottom margin like all other inputs
-
-  }
-
-  // but override that for button groups
-  .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-
-  // and override it for block buttons as well
-  .btn-block + .btn-block {
-    margin-left: 0;
-  }
+    padding: $modal-inner-padding;
+    text-align: right;
+    // right align buttons
+    border-top: 1px solid $modal-footer-border-color;
+    @include clearfix;
+    // clear it in case folks use .pull-* classes on buttons
+    // Properly space out buttons
+    .btn + .btn {
+        margin-left: 5px;
+        margin-bottom: 0;
+        // account for input[type="submit"] which gets the bottom margin like all other inputs
+    }
+    // but override that for button groups
+    .btn-group .btn + .btn {
+        margin-left: -1px;
+    }
+    // and override it for block buttons as well
+    .btn-block + .btn-block {
+        margin-left: 0;
+    }
 }
 
 // Measure scrollbar width for padding body during modal show/hide
 .modal-scrollbar-measure {
-  position: absolute;
-  top: -9999px;
-  width: 50px;
-  height: 50px;
-  overflow: scroll;
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
 }
 
 .minibag--modal-open .o-minibag-contain {
-  // display: block;
-  // overflow: auto;
+    // display: block;
+    // overflow: auto;
 }
 
 .modal.modal--minibag {
-  display: none;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-overflow-scrolling: touch;
-  outline: 0;
-}
-
-.modal--nav {
-  @include mq($until: lg) {
     display: none;
     overflow: hidden;
     position: fixed;
@@ -212,126 +177,145 @@ $screen-md-min: 720px;
     left: 0;
     -webkit-overflow-scrolling: touch;
     outline: 0;
-  }
+}
 
+.modal.modal--click-and-collect {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    outline: 1px solid $primary-color;
+    margin: 40px auto;
+    width: 80%;
 
-  @include mq($from: lg) {
-    display: block !important;
-  }
+    .modal-dialog {
+      margin:0;
+    }
+    .modal-content {
+      border: none;
+    }
+}
+
+.modal--nav {
+    @include mq($until: lg) {
+        display: none;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+    }
+    @include mq($from: lg) {
+        display: block !important;
+    }
 }
 
 // Scale up the modal
 .modal:not(.modal--custom) {
-  @include mq($from: md) {
-    // Automatically set modal's width for larger viewports
-    .modal-dialog {
-      width: $modal-md;
-      margin: 110px auto;
+    @include mq($from: md) {
+        // Automatically set modal's width for larger viewports
+        .modal-dialog {
+            width: $modal-md;
+            margin: 110px auto;
+        }
+        // Modal sizes
+        .modal-sm {
+            width: $modal-sm;
+        }
     }
-
-    // Modal sizes
-    .modal-sm {
-      width: $modal-sm;
+    @include mq($from: lg) {
+        .modal-dialog {
+            width: $modal-md;
+            margin: 40px auto;
+        }
     }
-  }
-
-
-  @include mq($from: lg) {
-    .modal-dialog {
-      width: $modal-md;
-      margin: 40px auto;
+    @include mq($until: md) {
+        .modal-dialog {
+            width: 100%;
+            margin: 0 auto;
+        }
     }
-  }
-
-
-  @include mq($until: md) {
-    .modal-dialog {
-      width: 100%;
-      margin: 0 auto;
-    }
-  }
 }
-
 
 // ========================
 // boostrap-dialog.js rules
 // ========================
-
 .bootstrap-dialog {
-  @extend .modal--default;
+    @extend .modal--default;
 }
 
 .bootstrap-dialog .bootstrap-dialog-message {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .bootstrap-dialog .bootstrap-dialog-button-icon {
-  margin-right: 3px;
+    margin-right: 3px;
 }
 
 .bootstrap-dialog .bootstrap-dialog-close-button {
-  font-size: 20px;
-  float: right;
-  opacity: 0.9;
-  filter: alpha(opacity = 90);
+    font-size: 20px;
+    float: right;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
 }
 
 .bootstrap-dialog .bootstrap-dialog-close-button:hover {
-  cursor: pointer;
-  opacity: 1;
-  filter: alpha(opacity = 100);
+    cursor: pointer;
+    opacity: 1;
+    filter: alpha(opacity=100);
 }
 
 .bootstrap-dialog.type-default .modal-header {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .bootstrap-dialog.type-default .bootstrap-dialog-title {
-  color: #333;
+    color: #333;
 }
 
 // .bootstrap-dialog.type-info .modal-header {
 //   background-color: #5bc0de;
 // }
-
 // .bootstrap-dialog.type-primary .modal-header {
 //   background-color: #337ab7;
 // }
-
 // .bootstrap-dialog.type-success .modal-header {
 //   background-color: #5cb85c;
 // }
-
 // .bootstrap-dialog.type-warning .modal-header {
 //   background-color: #f0ad4e;
 // }
-
 // .bootstrap-dialog.type-danger .modal-header {
 //   background-color: #d9534f;
 // }
-
 .bootstrap-dialog.size-large .bootstrap-dialog-title {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .bootstrap-dialog.size-large .bootstrap-dialog-close-button {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .bootstrap-dialog.size-large .bootstrap-dialog-message {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .bootstrap-dialog .icon-spin {
-  display: inline-block;
-  animation: spin 2s infinite linear;
+    display: inline-block;
+    animation: spin 2s infinite linear;
 }
 
 // @keyframes spin {
 //   0% {
 //     transform: rotate(0deg);
 //   }
-
 //   100% {
 //     transform: rotate(359deg);
 //   }
