@@ -23,7 +23,8 @@
   }
 }
 
-.search-results--item {
+.search-results--item,
+.search-results--item-full {
   .results__image {
     position: relative;
 
@@ -36,7 +37,13 @@
     }
 
     .img {
-      width: 100%;
+      width: auto;
+      max-height: 310px;
+    }
+
+    .img.abbey {
+      width: auto;
+      height: 310px;
     }
   }
 
