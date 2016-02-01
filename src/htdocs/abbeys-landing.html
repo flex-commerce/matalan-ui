@@ -9,12 +9,12 @@
     {{> parcels/header }}
     <div class="o-hero  u-mar-b-large">
         <div class="overlay" style="opacity: 0.8;   top: 0; right: 0; left: 0; bottom: 0; z-index: 2"></div>
-        <img src="img-assets/mono.svg" width="200" class="u-pad-t-large" style="width: 100%; position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: -1;">
+        <img src="img-assets/mono.svg" class="u-pad-t-large" style="width: 100%; position: absolute; bottom: -25%; right: 0; left: 0; z-index: -1;">
         <div style="width: 100%; position: absolute; top: 0; right: 0; left: 0; bottom: 0;" class="o-hero__bg o-hero__bg-1">
           <img src="img-assets/abbey-4.jpeg" width="200" style="width: 100%; position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: -1">
         </div>
-        <div class="down-arrow" style="width: 100%; position: absolute; bottom: 0; left: 0; text-align:center">
-          <i class="icon icon-ui-down" style="font-size: 30px"></i>
+        <div class="down-arrow" style="width: 100%; position: absolute; bottom: 0; left: 0; text-align:center; cursor: pointer; z-index: 99999;">
+          <a href="#abbeyProducts" class="link--nostyle"><i class="icon icon-ui-down abbey-down" style="font-size: 30px"></i></a>
         </div>
         <div class="o-hero__container--abbey" style="z-index: 2">
             <div class="o-hero__detail-left">
@@ -77,14 +77,14 @@
       animation: opacity-up 1s 2.5s forwards;
     }
     </style>
-    <div class="container">
+    <div id="abbeyProducts" class="container product-1">
         <div class="row">
             <div class="search-results__main--full search-results__tight">
                 <div class="search-results--inner row">
                     <div class="search-results--item u-font-ta-c u-mar-b-medium">
                         <a href="#" class="link--nostyle">
                             <div class="results__image">
-                                <img class="img" src="img-assets/abbey-1.gif">
+                                <img class="img" src="img-assets/abbey-1.jpg" onmouseover="this.src='img-assets/abbey-1-alt.jpg'" onmouseout="this.src='img-assets/abbey-1.jpg'">
                             </div>
                             <div class="u-mar-b-medium u-cf">
                                 <!-- @TODO! - make banner class when finalised -->
@@ -118,7 +118,7 @@
                     <div class="search-results--item u-font-ta-c u-mar-b-medium">
                         <a href="#" class="link--nostyle">
                             <div class="results__image">
-                                <img class="img" src="img-assets/abbey-3.gif">
+                                <img class="img" src="img-assets/abbey-3.jpg" onmouseover="this.src='img-assets/abbey-3-alt.jpg'" onmouseout="this.src='img-assets/abbey-3.jpg'">
                             </div>
                             <div class="u-mar-b-medium u-cf">
                                 <!-- @TODO! - make banner class when finalised -->
@@ -135,7 +135,7 @@
                     <div class="search-results--item u-font-ta-c u-mar-b-medium">
                         <a href="#" class="link--nostyle">
                             <div class="results__image">
-                                <img class="img" src="img-assets/abbey.gif">
+                                <img class="img" src="img-assets/abbey.jpg" onmouseover="this.src='img-assets/abbey-alt.jpg'" onmouseout="this.src='img-assets/abbey.jpg'">
                             </div>
                             <div class="u-mar-b-medium u-cf">
                                 <!-- @TODO! - make banner class when finalised -->
@@ -162,9 +162,9 @@
         </style>
         <div class="container--fluid">
             <div class="row">
-                <div class="col-6@xs o-section--bg o-section--full-1" style="min-height: 450px;">
+                <div class="col-6@xs o-section--bg o-section--full-1" style="min-height: 600px;">
                 </div>
-                <div class="col-6@xs" style="min-height: 450px;"></div>
+                <div class="col-6@xs" style="min-height: 600px;"></div>
             </div>
             <div class="container" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
                 <div class="row" style="height: 100%">
@@ -208,7 +208,7 @@
                                 <div class="search-results--item-full u-font-ta-c u-mar-b-medium">
                                     <a href="#" class="link--nostyle">
                                         <div class="results__image">
-                                            <img class="img abbey" src="img-assets/abbey-3.gif">
+                                            <img class="img abbey" src="img-assets/abbey-3.jpg" onmouseover="this.src='img-assets/abbey-3-alt.jpg'" onmouseout="this.src='img-assets/abbey-3.jpg'">
                                         </div>
                                         <div class="u-mar-b-medium u-cf">
                                             <!-- @TODO! - make banner class when finalised -->
@@ -225,7 +225,7 @@
                                 <div class="search-results--item-full u-font-ta-c u-mar-b-medium">
                                     <a href="#" class="link--nostyle">
                                         <div class="results__image">
-                                            <img class="img abbey" src="img-assets/abbey-4.gif">
+                                            <img class="img abbey" src="img-assets/abbey-4.jpg" onmouseover="this.src='img-assets/abbey-4-alt.jpg'" onmouseout="this.src='img-assets/abbey-4.jpg'">
                                         </div>
                                         <div class="u-mar-b-medium u-cf">
                                             <!-- @TODO! - make banner class when finalised -->
@@ -294,17 +294,30 @@
             background-image: url("img-assets/abbey-7.jpeg");
             background-position: top right;
         }
+
+        .abbey-store {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color:#222;
+          color: #fff;
+          cursor: pointer;
+          z-index: 9999;
+        }
+        .abbey-store:hover {
+          background-color: white;
+          color: black;
+        }
         </style>
         <div class="container--fluid">
             <div class="row">
                 <div class="col-6@xs o-section--bg o-section--half-4" style="min-height: 750px;">
                 </div>
                 <div class="col-6@xs" style="min-height: 750px;">
-                    <div class="abbey-store u-pad-h-large u-pad-t-small" style="position: absolute; bottom: 0; left: 0; right: 0; background-color:#222; color: #fff;">
+                    <div class="abbey-store u-pad-h-large u-pad-t-small" style="">
                         <p class="u-mar-0" style="font-size: 10px; font-family: Times New Roman">Abby by Abby Clancy is only available in selected stores</p>
-                        <a class="u-color-white" href="">
-                            <h3 class="u-font-upper" style="font-family: Times New Roman">Store Finder <i class="icon icon-ui-forward icon--vertical"></i></h3>
-                        </a>
+                        <h3 class="u-font-upper" style="font-family: Times New Roman">Store Finder <i class="icon icon-ui-forward icon--vertical"></i></h3>
                     </div>
                 </div>
             </div>
@@ -318,7 +331,7 @@
                             <div class="search-results--item-full u-font-ta-c u-mar-b-medium">
                                 <a href="#" class="link--nostyle">
                                     <div class="results__image">
-                                        <img class="img abbey" src="img-assets/abbey-3.gif">
+                                        <img class="img abbey" src="img-assets/abbey-3.jpg" onmouseover="this.src='img-assets/abbey-3-alt.jpg'" onmouseout="this.src='img-assets/abbey-3.jpg'">
                                     </div>
                                     <div class="u-mar-b-medium u-cf">
                                         <!-- @TODO! - make banner class when finalised -->
@@ -335,7 +348,7 @@
                             <div class="search-results--item-full u-font-ta-c u-mar-b-medium">
                                 <a href="#" class="link--nostyle">
                                     <div class="results__image">
-                                        <img class="img abbey" src="img-assets/abbey-4.gif">
+                                        <img class="img abbey" src="img-assets/abbey-4.jpg" onmouseover="this.src='img-assets/abbey-4-alt.jpg'" onmouseout="this.src='img-assets/abbey-4.jpg'">
                                     </div>
                                     <div class="u-mar-b-medium u-cf">
                                         <!-- @TODO! - make banner class when finalised -->
