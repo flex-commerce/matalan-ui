@@ -120,31 +120,6 @@
 }
 
 
-/* Flexbox display of tiles where supported, allows bottom alignment of buttons */
-
-html.flexbox {
-  .search-results--inner {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .search-results--item {
-    display: flex;
-    flex-direction: column;
-
-    .results__detail {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .c-btn-primary {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-
 /* Handling for tile width icons */
 
 .js-results-tight {
