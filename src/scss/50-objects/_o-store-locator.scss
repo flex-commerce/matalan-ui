@@ -3,7 +3,9 @@
 }
 
 .o-map__outer-container {
-    position: relative
+    position: relative;
+    height: 100%;
+    min-height: 688px;
 }
 
 .o-store-locator {
@@ -14,18 +16,14 @@
     }
     .map-wrapper {
         position: absolute;
-        top: 0;
-        right: 0;
         left: 0;
+        right: 0;
         bottom: 0;
-        display: block;
-        @include mq($from: md) {
-            height: 688px;
-        }
+        top: 0;
     }
     .o-store-locator__locations {
         @include mq($from: md) {
-            height: 600px;
+            min-height: 600px;
             overflow-y: auto;
         }
         overflow-x: hidden;
@@ -33,10 +31,11 @@
     .map {
         position: absolute;
         top: 0;
+        right: 0;
         bottom: 0;
         left: 0;
-        right: 0;
-        width: 100%;
+        margin: 0;
+        padding: 0;
     }
     .o-store-map-mobile {
         display: none;

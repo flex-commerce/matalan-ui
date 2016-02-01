@@ -6,6 +6,10 @@
   @include column((xs: 12, lg: 9.5));
 }
 
+.search-results__main--full {
+  @include column((xs: 12, lg: 12));
+}
+
 // .search--header--filter {
 //   padding-right: 0;
 // }
@@ -21,12 +25,19 @@
   margin-bottom: 1em;
 }
 
-.search-results--item {
+.search-results--item,
+.search-results--item-full {
   .results__image {
     position: relative;
 
     .img {
-      width: 100%;
+      width: auto;
+      max-height: 310px;
+    }
+
+    .img.abbey {
+      width: auto;
+      height: 310px;
     }
   }
 }
@@ -85,6 +96,13 @@
       @include column((lg: 3));
 
       &:nth-child(4n+1) {
+        clear: left;
+      }
+    }
+    .search-results--item-full {
+      @include column((lg: 6));
+
+      &:nth-child(2n+1) {
         clear: left;
       }
     }

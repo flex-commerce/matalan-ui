@@ -42,6 +42,7 @@
 
    // Build the main map
    var generateMap = function(data, longitude, latitude, isModal) {
+      console.log(isModal)
        map = new GMaps({
            div: '#map',
            lat: latitude,
@@ -52,12 +53,14 @@
 
        loadResults(data, longitude, latitude);
        printResults(data, isModal);
+       var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
 
-
-
-       $('html, body').animate({
-           scrollTop: $('#storeFinderContainer').offset().top
-       }, 'slow');
+       if (width > 0 && !isModal) {
+          console.log
+           $('html, body').animate({
+               scrollTop: $('#storeFinderContainer').offset().top
+           }, 'slow');
+       }
        var firstMarker = map.markers[0];
        firstMarker.infoWindow.open();
        google.maps.event.trigger(firstMarker, 'click');
@@ -386,25 +389,25 @@
        getClientLocation(isModal);
    });
 
-   if ($('.map-wrapper').length > 0 && !isModal ) {
+   if ($('.map-wrapper').length > 0) {
        $(window).resize(function() {
            var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
-           if (width > 0) {
+           if (width > 0 && !isModal) {
                $('.map-wrapper').css('right', -width);
            }
        });
    }
 
    $('body').on('click', '.o-select-store', function() {
-        var selectedStore = $(this).attr('data-storeName')
-        $('.o-store-finder__actions').hide();
-        $('.o-store-finder__selected').show();
+           var selectedStore = $(this).attr('data-storeName')
+           $('.o-store-finder__actions').hide();
+           $('.o-store-finder__selected').show();
 
-        $('.o-store-finder__selected span').text(selectedStore);
-        $(".o-submit-button").show();
-         closeMap();
+           $('.o-store-finder__selected span').text(selectedStore);
+           $(".o-submit-button").show();
+           closeMap();
 
-     })
+       })
        // ===========================
        // Mapbox End
        // ===========================
