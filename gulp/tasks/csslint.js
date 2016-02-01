@@ -22,16 +22,17 @@ var reporter = stylish({
 var scssToCheck = path.join(
     config.app.src,
     config.tasks.css.src,
-    '/**/main' + '.{' + config.tasks.css.extensions + '}'
+    '/**/*' + '.{' + config.tasks.css.extensions + '}'
 );
 
 var scsslintTask = function() {
     return gulp.src(scssToCheck)
-        // .pipe(cache('scsslint'))
+        .pipe(cache('scsslint'))
         .pipe(scssLint({
-            customReport: reporter.issues,
-            config: '.scsslint.yml',
-            maxBuffer: 307200
+            // customReport: reporter.issues,
+            config: '.scss-lint.yml',
+            verbose: true,
+            maxBuffer: 600 * 1024
         }))
     .pipe( reporter.printSummary )
     .on('error', handleErrors);
