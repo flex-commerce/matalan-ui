@@ -10,6 +10,19 @@
   min-height: 465px;
 }
 
+.o-hero__container--abbey {
+  position: relative;
+  @include make-container();
+  height: calc(100vh - 59px);
+  max-width: $container-maxwidth;
+    @include mq($until: lg) {
+        height: calc(100vh- 59px);
+    }
+    @include mq($from: lg) {
+        height: calc(100vh - 187px);
+    }
+}
+
 .o-hero__bg {
   background-size: cover;
   background-position: top center;
@@ -34,6 +47,38 @@
     left:30%;
   }
 
+}
+
+.o-hero__detail-center {
+  @include center(y, abs);
+  left: 40%;
+  top:35%;
+  text-align: left;
+  @include mq($until: md) {
+    width: 60%;
+  }
+
+  @include mq($from: md) {
+    width: 38%;
+    left: 40%;
+  }
+
+  h3 {
+    font-family: "Times New Roman";
+  }
+
+}
+
+.o-hero__detail--bottom-right {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  width: 24%;
+  text-align: left;
+
+  p {
+    @include font-size(11px);
+  }
 }
 
 
