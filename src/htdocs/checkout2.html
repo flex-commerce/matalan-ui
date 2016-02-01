@@ -1,205 +1,81 @@
 <!doctype html>
 <html class="no-js" lang="">
-
 <head>
-    {{> partials/html-head }}
+  {{> partials/html-head }}
 </head>
 
-<body class="is-dev">
-    <div class="hidden@md-down">
-        {{> partials/header-checkout }}
-    </div>
-    <div class="hidden@lg-up">
-        {{> parcels/header }}
-    </div>
-    <div class="container o-checkout__container" role="main">
-        <div class="row">
-            <div class="col-12@xs">
-                <div class="u-mar-v-large">
-                    {{> partials/progress-checkout-2 }}
-                </div>
-                <div class="row">
-                    <div class="o-checkout__detail col-12@xs col-8@lg">
-                        <div class="o-accord__container" id="checkout2Accord">
-                            <div class="panel">
-                                <div class="o-accord__title u-font-upper">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#checkout2Accord" href="#billingAddressAccord">
-                                      1. Billing Address
-                                      <i class="icon icon-plus icon--vertical-right"></i>
-                                      <i class="icon icon-minus icon--vertical-right"></i>
-                                    </a>
-                                </div>
-                                <div class="o-accord__content collapse" id="billingAddressAccord">
-                                    Your billing address must match your card statement address
-                                    <div class="o-form__row">
-                                        <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium">
-                                            <label class="o-form__label o-form__label-option">
-                                                <input id="addressbook" type="radio" name="billingaddress" value="addressbook" checked>
-                                                <span class="check-holder"></span>Use my address book
-                                            </label>
-                                            <label class="o-form__label o-form__label-option">
-                                                <input id="newaddress" type="radio" name="billingaddress" value="newaddress">
-                                                <span class="check-holder"></span>Enter a new address
-                                            </label>
-                                        </div>
-                                    </div>
-                                    {{> partials/address-book }}
-                                    <div class="o-form__row">
-                                        <div class="o-form__label-contain u-mar-v-medium">
-                                            <label class="o-form__label-primary">I would like to receive exclusive offers &amp; style advice from Matalan:</label>
-                                        </div>
-                                        <div class="o-form__input-contain o-option--inline">
-                                            <label class="o-form__label-option">
-                                                <input type="checkbox" checked>
-                                                <span class="check-holder"></span>
-                                                via post
-                                            </label>
-                                            <label class="o-form__label-option">
-                                                <input type="checkbox" checked>
-                                                <span class="check-holder"></span>
-                                                via email
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="c-btn c-btn-secondary c-btn--block u-font-upper">Next Step</button>
-                                </div>
-                            </div>
-                            <div class="panel">
-                                <div class="o-accord__title u-font-upper">
-                                    <a class="" data-toggle="collapse" data-parent="#checkout2Accord" href="#deliveryAddressAccord" aria-expanded="true">
-                                      2. Delivery Address
-                                      <i class="icon icon-plus icon--vertical-right"></i>
-                                      <i class="icon icon-minus icon--vertical-right"></i>
-                                    </a>
-                                </div>
-                                <div class="o-accord__content collapse in" id="deliveryAddressAccord">
-                                    <div class="o-form__row">
-                                        <div class="o-form__input-contain auto-column-2">
-                                            <div class="o-form__label-contain u-pad-v-tiny">
-                                                <label class="o-form__label-option">
-                                                    <input type="radio" name="deliveryaddress" value="bililngaddress" checked>
-                                                    <span></span>
-                                                    Use my billing address
-                                                </label>
-                                            </div>
-                                            <div class="o-form__label-contain u-pad-v-tiny">
-                                                <label class="o-form__label-option">
-                                                    <input type="radio" name="deliveryaddress" value="addressbook">
-                                                    <span></span>
-                                                    Use my address book
-                                                </label>
-                                            </div>
-                                            <div class="o-form__label-contain u-pad-v-tiny">
-                                                <label class="o-form__label-option">
-                                                    <input type="radio" name="deliveryaddress" value="newaddress">
-                                                    <span></span>
-                                                    Enter a new address
-                                                </label>
-                                            </div>
-                                            <div class="o-form__label-contain u-pad-v-tiny">
-                                                <label class="o-form__label-option">
-                                                    <input type="radio" name="deliveryaddress" value="click-and-collect">
-                                                    <span></span>
-                                                    Click &amp; Collect (FREE)
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="o-box o-addressbook" style="display: none">
-                                        {{> partials/address-book }}
-                                    </div>
-                                    <div class="o-box o-newaddress" style="display: none">
-                                        <form action="" class="o-form o-form--default o-myacc--address-panel" id="check1--address-panel">
-                                            {{> partials/address-form }}
-                                            <div class="o-myacc__address-actions">
-                                                <a class="c-btn c-btn-primary o-myacc__cancel u-font-upper" data-toggle="collapse" href="#myacc--address-panel">Cancel</a>
-                                                <button type="submit" class="c-btn c-btn-secondary c-btn--block">Add</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="o-box o-submit-button u-mar-t-medium">
-                                        <button type="submit" class="c-btn c-btn-secondary c-btn--block">Next step</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel">
-                                <div class="o-accord__title u-font-upper">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#checkout2Accord" href="#deliveryMethodAccord">
-                                      3. Delivery Method
-                                      <i class="icon icon-plus icon--vertical-right"></i>
-                                      <i class="icon icon-minus icon--vertical-right"></i>
-                                    </a>
-                                </div>
-                                <div class="o-accord__content collapse" id="deliveryMethodAccord">
-                                    <p class="u-mar-v-medium">Please choose your preferred delivery address</p>
-                                    <div class="o-form__row col-12@xs col-8@md">
-                                        <div class="o-form__input-contain o-option--inline auto-column-2">
-                                            <div class="o-form__label-contain u-pad-v-tiny">
-                                                <label class="o-form__label-option">
-                                                    <input type="radio" name="deliverytype" value="standard" checked>
-                                                    <span></span>
-                                                    Standard (&pound;3.95)
-                                                </label>
-                                            </div>
-                                            <div class="o-form__label-contain u-pad-v-tiny">
-                                                <label class="o-form__label-option">
-                                                    <input type="radio" name="deliverytype" value="express">
-                                                    <span></span>
-                                                    Next Day (&pound;4.95)
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="o-form__label-contain u-pad-v-tiny">
-                                            <label class="o-form__label-option">
-                                                <input type="radio" name="deliverytype" value="click-and-collect">
-                                                <span></span>
-                                                Click & Collect (FREE)
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="o-box o-click-and-collect" style="display:none;">
-                                        <div class="o-store-finder__actions">
-                                            <form class="o-form--inline c-search-form has-focus">
-                                                <div class="o-form__row u-pad-b-0">
-                                                    <div class="o-form--input-pack o-form__input-contain">
-                                                        <div class="input-group--addon unstyled input-group--addon__inset">
-                                                            <i class="icon icon-menu-storefinder"></i>
-                                                        </div>
-                                                        <input id="addressEntry" type="text" class="o-input o-input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter address, city, postcode">
-                                                        <a id="findStore" data-click-collect='click-collect' class="input-group--addon c-search__button find-store">Find</a>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                            <div class="separator__inline-text--unstyled">
-                                                <span>or</span>
-                                            </div>
-                                            <a id="geolocate" data-click-collect='click-collect' class="c-btn c-btn--icon c-btn--block c-btn-secondary use-location">
-                                                <i class="icon icon-menu-storefinder"></i> Use my location
-                                            </a>
-                                        </div>
-                                        <div class="o-store-finder__selected" style="display:none;">
-                                            <h5>Thank you for selecting:
-                                                <span class="u-color-pri"></span>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                    <div class="o-box o-submit-button u-mar-t-medium">
-                                        <button type="submit" class="c-btn c-btn-secondary c-btn--block">Continue</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4@lg hidden@md-down">
-                        <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
-                            {{> partials/minibag-checkout-footer }}
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body class="is-dev page--checkout-2">
+
+  <div class="hidden@md-down">
+    {{> partials/header-checkout }}
+  </div>
+
+  <div class="hidden@lg-up">
+    {{> parcels/header }}
+  </div>
+
+  <div class="container" role="main">
+    <div class="">
+      <div class="">
+
+        <div class="u-mar-v-large">
+          {{> partials/progress-checkout-2 }}
         </div>
+
+        <div class="row">
+
+          <div class="o-checkout__detail col-12@xs col-8@lg">
+            <div class="o-accord__container" id="checkout1Accord">
+
+              <div class="panel">
+                <div class="o-accord__title u-font-upper">
+                  <a class="" data-toggle="collapse" data-parent="#checkout1Accord" href="#billingAddressAccord" aria-expanded="true">
+                    1. Billing Address
+                    <i class="icon icon-plus icon--vertical-right"></i>
+                    <i class="icon icon-minus icon--vertical-right"></i>
+                  </a>
+                </div>
+                {{> parcels/checkout-form1 }}
+              </div>
+
+              <div class="panel">
+                <div class="o-accord__title u-font-upper">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#checkout1Accord" href="#deliveryAddressAccord">
+                    2. Delivery Address
+                    <i class="icon icon-plus icon--vertical-right"></i>
+                    <i class="icon icon-minus icon--vertical-right"></i>
+                  </a>
+                </div>
+                {{> parcels/checkout-form2 }}
+              </div>
+
+              <div class="panel disabled">
+                <div class="o-accord__title u-font-upper">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#checkout1Accord" href="#deliveryMethodAccord">
+                    3. Delivery Method
+                    <i class="icon icon-plus icon--vertical-right"></i>
+                    <i class="icon icon-minus icon--vertical-right"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-4@lg hidden@md-down">
+            <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
+              {{> partials/minibag-checkout-footer }}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
-    {{> parcels/footer }} {{> partials/js-footer}}
+  </div>
+
+{{> parcels/footer }}
+{{> partials/js-footer}}
 </body>
 
 </html>

@@ -161,7 +161,7 @@ require("./modules/collapse");
 // todo - currently issues with pre opening tabs this way - to investigate
 // $('#collapseThree').collapse('show');
 
-// open all on load example (for non accordion accordion, eg filters)
+// open collapse examples
 $(document).ready(function() {
     if (!window.isMobileOrTablet.matches) {
 
@@ -186,6 +186,22 @@ $(document).ready(function() {
 
         }
     }, 250));
+
+    var pageBody = $('body');
+
+    if (pageBody.hasClass('page--checkout-1')) {
+      $('#billingAddressAccord').collapse('show');
+    }
+
+    if (pageBody.hasClass('page--checkout-2')) {
+      $('#deliveryAddressAccord').collapse('show');
+    }
+
+    if (pageBody.hasClass('page--checkout-3')) {
+      $('#deliveryMethodAccord').collapse('show');
+    }
+
+
 });
 
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js u-scrollbar" lang="">
+<html class="no-js" lang="">
 
 <head>
   {{> partials/html-head }}
@@ -7,16 +7,17 @@
 
 <body class="is-dev">
   {{> parcels/header }}
+
   <div class="o-fullscreen-container store-hero" role="main">
     {{> parcels/store-finder}}
   </div>
+
   <div id="storeFinderContainer" class="container o-map-conatiner" role="main" style="display:none">
     {{> parcels/store-finder-google}}
   </div>
+
   {{> parcels/footer }}
-
   {{> partials/js-footer}}
+
 </body>
-
-
 </html>

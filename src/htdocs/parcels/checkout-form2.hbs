@@ -1,0 +1,50 @@
+
+                <div class="o-accord__content collapse" id="deliveryAddressAccord">
+                  <div class="o-form__row">
+                    <div class="o-form__input-contain auto-column-2">
+                      <div class="o-form__label-contain u-pad-v-tiny">
+                        <label class="o-form__label-option">
+                          <input type="radio" name="deliveryaddress" value="bililngaddress" checked>
+                          <span></span>
+                          Use my billing address
+                        </label>
+                      </div>
+                      <div class="o-form__label-contain u-pad-v-tiny">
+                        <label class="o-form__label-option">
+                          <input type="radio" name="deliveryaddress" value="addressbook">
+                          <span></span>
+                          Use my address book
+                        </label>
+                      </div>
+                      <div class="o-form__label-contain u-pad-v-tiny">
+                        <label class="o-form__label-option">
+                          <input type="radio" name="deliveryaddress" value="newaddress">
+                          <span></span>
+                          Enter a new address
+                        </label>
+                      </div>
+                      <div class="o-form__label-contain u-pad-v-tiny">
+                        <label class="o-form__label-option">
+                          <input type="radio" name="deliveryaddress" value="click-and-collect">
+                          <span></span>
+                          Click &amp; Collect (FREE)
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="o-box o-addressbook" style="display: none">
+                    {{> partials/address-book }}
+                  </div>
+                  <div class="o-box o-newaddress" style="display: none">
+                    <form action="" class="o-form o-form--default o-myacc--address-panel" id="check1--address-panel">
+                      {{> partials/address-form }}
+                      <div class="o-myacc__address-actions">
+                        <a class="c-btn c-btn-primary o-myacc__cancel u-font-upper" data-toggle="collapse" href="#myacc--address-panel">Cancel</a>
+                        <button type="submit" class="c-btn c-btn-secondary c-btn--block">Add</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="o-box o-submit-button u-mar-t-medium">
+                    <button type="submit" class="c-btn c-btn-secondary c-btn--block">Next step</button>
+                  </div>
+                </div>

@@ -1,0 +1,39 @@
+<div class="o-accord__content collapse" id="billingAddressAccord">
+  Your billing address must match your card statement address
+
+  <div class="o-form__row">
+    <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium">
+      <label class="o-form__label o-form__label-option">
+        <input id="addressbook" type="radio" name="billingaddress" value="addressbook" checked>
+        <span class="check-holder"></span>Use my address book
+      </label>
+      <label class="o-form__label o-form__label-option">
+        <input id="newaddress" type="radio" name="billingaddress" value="newaddress">
+        <span class="check-holder"></span>Enter a new address
+      </label>
+    </div>
+  </div>
+
+  {{> partials/address-book }}
+
+  <div class="o-form__row">
+    <div class="o-form__label-contain u-mar-v-medium">
+      <label class="o-form__label-primary">I would like to receive exclusive offers &amp; style advice from Matalan:</label>
+    </div>
+    <div class="o-form__input-contain o-option--inline">
+      <label class="o-form__label-option">
+        <input type="checkbox" checked>
+        <span class="check-holder"></span>
+        via post
+      </label>
+      <label class="o-form__label-option">
+        <input type="checkbox" checked>
+        <span class="check-holder"></span>
+        via email
+      </label>
+    </div>
+  </div>
+
+  <button type="submit" class="c-btn c-btn-secondary c-btn--block u-font-upper">Next Step</button>
+
+</div>

@@ -1,0 +1,61 @@
+<div class="o-accord__content collapse" id="deliveryMethodAccord">
+  <p class="u-mar-v-medium">Please choose your preferred delivery address</p>
+
+  <div class="o-form__row col-12@xs col-8@md">
+    <div class="o-form__input-contain o-option--inline auto-column-2">
+      <div class="o-form__label-contain u-pad-v-tiny">
+        <label class="o-form__label-option">
+          <input type="radio" name="deliverytype" value="standard" checked>
+          <span></span>
+          Standard (&pound;3.95)
+        </label>
+      </div>
+      <div class="o-form__label-contain u-pad-v-tiny">
+        <label class="o-form__label-option">
+          <input type="radio" name="deliverytype" value="express">
+          <span></span>
+          Next Day (&pound;4.95)
+        </label>
+      </div>
+    </div>
+    <div class="o-form__label-contain u-pad-v-tiny">
+      <label class="o-form__label-option">
+        <input type="radio" name="deliverytype" value="click-and-collect">
+        <span></span>
+        Click &amp; Collect (FREE)
+      </label>
+    </div>
+  </div>
+
+  <div class="o-box o-click-and-collect" style="display:none;">
+    <div class="o-store-finder__actions">
+      <form class="o-form--inline c-search-form has-focus">
+        <div class="o-form__row u-pad-b-0">
+          <div class="o-form--input-pack o-form__input-contain">
+            <div class="input-group--addon unstyled input-group--addon__inset">
+              <i class="icon icon-menu-storefinder"></i>
+            </div>
+            <input id="addressEntry" type="text" class="o-input o-input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter address, city, postcode">
+            <a id="findStore" data-click-collect="click-collect" class="input-group--addon c-search__button find-store">Find</a>
+          </div>
+        </div>
+      </form>
+      <div class="separator__inline-text--unstyled">
+        <span>or</span>
+      </div>
+      <a id="geolocate" data-click-collect="click-collect" class="c-btn c-btn--icon c-btn--block c-btn-secondary use-location">
+        <i class="icon icon-menu-storefinder"></i> Use my location
+      </a>
+    </div>
+    <div class="o-store-finder__selected" style="display:none;">
+      <h5>Thank you for selecting:
+        <span class="u-color-pri"></span>
+      </h5>
+    </div>
+  </div>
+
+  <div class="o-box o-submit-button u-mar-t-medium">
+    <button type="submit" class="c-btn c-btn-secondary c-btn--block">Continue</button>
+  </div>
+
+</div>
