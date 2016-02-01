@@ -10,31 +10,48 @@
       <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
     </div>
 
-    <div class="u-mar-b-medium u-cf">
-     <!-- @TODO! - make banner class when finalised -->
-      <div class="u-bgcolor-pri u-color-white u-pad-tiny u-font-upper">
+    <div class="u-mar-b-tiny u-cf">
+      <div class="results__banner u-bgcolor-pri u-color-white u-font-upper">
         <strong>50% off</strong>
       </div>
     </div>
 
     <div class="results__detail">
-      <div class="u-mar-v-small">{{productTitle}}</div>
-      {{#if nowPrice}}
-      <div class=" u-font-wb u-mar-t-a u-color-pri"><span>Now </span>{{nowPrice}}</div>
-      {{/if}}
-      <div class=" u-font-wb u-mar-t-a {{#if nowPrice}}u-font-strikethrough{{/if}}">{{#if nowPrice}}<span>Was </span>{{/if}}{{productPrice}}</div>
+      <div class="results__detail__title u-mar-t-small u-pad-h-medium u-font--small">{{productTitle}}</div>
 
-      <a class="c-btn c-btn-primary c-btn--small u-mar-v-small ">View</a>
-      <div class="u-mar-b-small rating rating__small u-mar-v-small">
-        <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
-        <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
-        <i class="icon icon-star-fill {{ isactive productRating 2 }}"></i>
-        <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
-        <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
+      <div class="results__detail__price u-font-wb">
+        {{#if nowPrice}}
+        <span class="u-color-pri">Now {{nowPrice}}</span>
+        {{else}}
+          <span>{{productPrice}}</span>
+        {{/if}}
       </div>
+
+      <div class="results__detail__price--was u-font--small">
+        {{#if nowPrice}}
+        <span class="u-font-strikethrough u-font--small">Was {{productPrice}}</span>
+        {{ else }}
+        <span>&nbsp;</span>
+        {{/if}}
+      </div>
+
     </div>
+
   </a>
 
-  <a class="link--underline">More Colours Available</a>
+  <a class="c-btn--block u-mar-v-small" href="">
+    <div class="c-btn c-btn-tertiary--alt c-btn--small u-font-upper">View</div>
+  </a>
+
+  <div class="rating rating__small">
+    <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
+    <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
+    <i class="icon icon-star-fill {{ isactive productRating 2 }}"></i>
+    <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
+    <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
+  </div>
+
+
+  <a class="link u-font--smaller" href="#">More Colours Available</a>
 
 </div>

@@ -1,0 +1,50 @@
+/* Flexbox display of tiles where supported, allows bottom alignment of buttons */
+
+// html.flexbox {
+//   .search-results--inner {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+
+//   .search-results--item {
+//     display: flex;
+//     flex-direction: column;
+
+//     .c-btn {
+//       margin-left: auto;
+//       margin-right: auto;
+//     }
+//   }
+// }
+
+.results__detail {
+  .results__detail__title {
+    height: 3em;
+  }
+}
+
+.search-results--item {
+  .results__image {
+    position: relative;
+
+    // font-size rule to remove the gap between the image block and banner
+    font-size: 0;
+
+    > * {
+      // undo font size rule from above
+      font-size: 1rem;
+    }
+
+    .img {
+      width: 100%;
+    }
+  }
+
+  .results__banner {
+    padding: 0.5px;
+  }
+}
+
+.search--header--products {
+  @include font-size(12px);
+}

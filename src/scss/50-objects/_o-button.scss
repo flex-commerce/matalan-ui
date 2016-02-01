@@ -45,7 +45,7 @@ $button-padding-y: $default-pad-y;
   }
 }
 
-.c-btn.c-btn-primary__alt {
+.c-btn.c-btn-primary--alt {
   @include style-variant($dark-grey, $light-grey-hover, $secondary-color);
 
   &.hover,
@@ -71,7 +71,7 @@ $button-padding-y: $default-pad-y;
   }
 }
 
-.c-btn.c-btn-secondary__alt {
+.c-btn.c-btn-secondary--alt {
   @include style-variant($white, $primary-color, $primary-color);
 
   &.hover,
@@ -187,20 +187,20 @@ fieldset[disabled] .c-btn {
 //
 // Alternate buttons
 //
-.c-btn-primary__alt {
+.c-btn-primary--alt {
   // @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 
-.c-btn-secondary__alt {
+.c-btn-secondary--alt {
   // @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
 
 // Remove all backgrounds
-.c-btn-primary__alt-outline {
+.c-btn-primary--alt-outline {
   // @include button-outline-variant($btn-primary-bg);
 }
 
-.c-btn-secondary__alt-outline {
+.c-btn-secondary--alt-outline {
   // @include button-outline-variant($btn-secondary-border);
 }
 
