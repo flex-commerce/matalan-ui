@@ -5,7 +5,7 @@ $footer-bg-color: $light-grey-hover;
   border-top: 1px solid $cool-grey;
   background-color: $footer-bg-color;
 
-  .input--textual:focus {
+  .o-input--textual:focus {
     + a,
     + button {
       background: $dark-grey;

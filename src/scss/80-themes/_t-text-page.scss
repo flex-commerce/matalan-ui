@@ -19,32 +19,38 @@
 }
 
 .page--text {
-
   @include mq($until: md) {
     h1 {
       @include font-size(36px);
     }
+
     h3 {
       @include font-size(22px);
     }
   }
 
+
   @include mq($from: md) {
     h1 {
       @include font-size(42px);
     }
+
     h3 {
       @include font-size(24px);
     }
   }
+
+
   @include mq($from: lg) {
     h1 {
       @include font-size(48px);
     }
+
     h3 {
       @include font-size(28px);
     }
   }
+
 
   .page--text__content {
     // @include font-size(12px);
@@ -62,18 +68,19 @@
     }
 
     h3 {
-      margin-top: 1.5em;
       + p, + ol, + ul, + dl {
         margin-top: 1.5em;
       }
     }
 
-    p + {
-      p,
-      ul,
-      ol,
-      dl,
-      table {
+    p, ol, ul, dl {
+      + h3 {
+        margin-top: 1.5em;
+      }
+    }
+
+    p, .island {
+      + p, + ul, + ol, + dl, + table {
         margin-top: 1.5em;
       }
     }
@@ -83,15 +90,11 @@
       margin-top: 0.75em;
     }
 
-    ol,
-    ul,
-    dl {
+    ol, ul, dl {
       margin-bottom: 1.5em;
     }
 
-    p,
-    li,
-    span {
+    p, li, span {
       @include font-size(16px, 1.6);
     }
 
@@ -102,10 +105,11 @@
     ul {
       list-style: none;
 
-      li {
+      li:not(.o-list__item) {
         @include mq($until: lg) {
           margin-left: 1em;
         }
+
         &:before {
           content: "•";
           position: absolute;
@@ -126,12 +130,13 @@
 
     dl {
       @include font-size(16px, 1.3);
+
       dd, dt {
         margin-bottom: 0.3em;
       }
-      dd {
 
-      }
+      dd {}
+
       dt {
         font-weight: bold;
       }
@@ -148,8 +153,8 @@
 
     h3 {
       // @include font-size(28px, 1.5);
-    }
 
+    }
   }
 }
 

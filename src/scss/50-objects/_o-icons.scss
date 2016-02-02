@@ -18,3 +18,9 @@
   @include center(y, abs);
 }
 
+.icon--block {
+  &::before {
+    vertical-align: middle;
+    width: 1.75em;
+  }
+}

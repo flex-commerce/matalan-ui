@@ -43,59 +43,35 @@ $input-padding-y: $default-pad-y;
   }
 }
 
-
-
 // form wide dev rules
 .o-form--wide {
   .o-form__label-contain {
-    @include span(4);
-
     text-align: right;
+
+    @include span(4);
   }
 
   .o-form__input-contain {
-    @include span(8 no-gutter);
-
     text-align: left;
+
+    @include span(8 no-gutter);
   }
 }
 
-//testing new rules - invelstigate this as a pattern
-//used in ui kitchen sink input alert 3col layout
-// .o-form--inline-fixed__threecol {
-//   .o-form__label-contain {
-//     @include span(3);
 
-//     @include form-item-size;
-
-//     text-align: right;
-//   }
-
-//   .o-form__input-contain {
-//     @include span(3);
-//   }
-
-//   .o-form-message--contain {
-//     @include span(6);
-
-//     @include form-item-size;
-//   }
-// }
-
+// vertical form label bottom margin
 .form-default .o-form__row .o-form__label-contain {
-  // vertical form label bottom margin
   margin-bottom: rem-calc(7);
 }
 
-// labels
-// above field
+// labels above field
 .o-form--default {
   .o-form__label-contain {
-    padding-bottom: .5em;
+    padding-bottom: .25em;
   }
 }
 
-// left of field
+// labels left of field
 .o-form--wide,
 .o-form--inline {
   .o-option--inline,
@@ -189,4 +165,3 @@ $input-padding-y: $default-pad-y;
     width: 100%;
   }
 }
-

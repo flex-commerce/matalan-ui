@@ -1,5 +1,5 @@
 .o-accord__container {
-  // hide / display classes
+  // hide / display icon classes
   .collapse {
     display: none;
   }
@@ -12,6 +12,7 @@
   .icon-plus {
     display: none;
   }
+
   .icon-minus {
     display: inline;
   }
@@ -25,9 +26,7 @@
       display: inline;
     }
   }
-
 }
-
 
 .c-tabs--responsive {
   .accord--active {
@@ -47,21 +46,16 @@
 
 .o-accord__title {
   a {
-    display: block;
+    display    : block;
     font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    padding: 1.5em 0;
-    // outline: 1px solid red;
+    cursor     : pointer;
+    position   : relative;
+    padding    : 1.5em 0;
+
     .panel.disabled & {
-      color: #888;
+      color : #888;
       cursor: default;
     }
   }
-
 }
 
-.o-accord__content {
-    // outline: 1px solid green;
-
-}

@@ -2,7 +2,7 @@ $minibag-border-color: $keyline-color;
 $minibag-desktop-width: 353px;
 
 // double classes for specificty hack - overriding button focus z index
-.js-minibag.js-minibag,
+.js-minibag--checkout.js-minibag--checkout,
 .js-minibag--view.js-minibag--view {
   z-index: 1050;
   position: relative;
@@ -347,7 +347,7 @@ $minibag-desktop-width: 353px;
 
 @include mq($from: lg) {
   .body--modal-open {
-    .js-minibag--view, .js-minibag {
+    .js-minibag--view, .js-minibag--checkout {
       position: relative;
       z-index: 5;
     }

@@ -11,21 +11,24 @@
 
 
       <div class="o-form__row">
-        <div class="o-form__label-contain">
-          <label class="">Input Label</label>
-        </div>
 
+        <div class="o-form__label-contain">
+          <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover" data-trigger="focus"
+          title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">
+          </i>
+          <label class="o-form__label-primary">Input Label</label>
+        </div> <!-- .o-form__label-contain -->
         <div class="o-form__input-contain">
-          <input type="text" class="o-input o-input--textual" placeholder="placeholder" />
+          <input type="text" class="o-input o-input--textual" placeholder="placeholder" required/>
+          <span class="input__required">*</span>
           <p class="o-form__help-text">example block-level help text here.</p>
           <label class="o-form__label o-form__label-option">
             <input type="checkbox" />
             <span></span>
             Remember me
           </label>
-        </div>
-
-      </div>
+        </div> <!-- .o-form__input-contain -->
+      </div> <!-- .o-form__row -->
 
 
       <div class="o-form__row">
@@ -162,10 +165,14 @@
 
       <div class="o-form__row">
         <div class="o-form__label-contain">
+          <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover" data-trigger="focus"
+          title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">
+          </i>
           <label class="o-form__label-primary">Input Label</label>
         </div>
         <div class="o-form__input-contain">
-          <input type="text" class="o-input o-input--textual" placeholder="placeholder" />
+          <input type="text" class="o-input o-input--textual" placeholder="placeholder" required/>
+          <span class="input__required">*</span>
           <p class="o-form__help-text">example block-level help text here.</p>
           <label class="o-form__label o-form__label-option">
             <input type="checkbox">

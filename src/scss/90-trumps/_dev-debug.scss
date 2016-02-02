@@ -48,7 +48,7 @@ $debug-mode : true;
 
     /**
     * Links sometimes, though not always, benefit from `title` attributes. Links
-    * without are never invalid but it’s a good idea to check.
+    * without are never invalid but it's a good idea to check.
     */
     a {
       outline: 2px solid green;
@@ -70,7 +70,7 @@ $debug-mode : true;
 
 
     /**
-    * The `target` attribute ain’t too nice...
+    * The `target` attribute ain't too nice...
     */
     a[target] {
       outline: 2px solid yellow;
@@ -89,7 +89,7 @@ $debug-mode : true;
 
 
     /**
-    * It’s always nice to give `th`s `scope` attributes.
+    * It's always nice to give `th`s `scope` attributes.
     */
     th {
       outline: 2px solid orange;
@@ -101,7 +101,7 @@ $debug-mode : true;
 
 
     /**
-    * `tr`s as children of `table`s ain’t great, did you need a `thead`/`tbody`?
+    * `tr`s as children of `table`s ain't great, did you need a `thead`/`tbody`?
     */
     table > tr {
       outline: 5px solid orange;

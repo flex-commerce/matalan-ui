@@ -106,7 +106,7 @@ $tab-border-color: #ddd;
 // pills horizontal
 .c-tabs--pills--horizontal {
   .c-tabs__header {
-    @extend .u-cf;
+    @extend %u-cf;
   }
 
   .c-tabs__header__item {
@@ -207,7 +207,7 @@ html.flexbox {
 }
 
 .c-tabs--tab--horizontal .c-tabs__header {
-  @extend .u-cf;
+  @extend %u-cf;
 }
 
 .c-tabs__header__item > a {

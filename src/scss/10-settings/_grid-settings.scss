@@ -5,7 +5,6 @@ $susy-gutter-width: 15px;
 $site-maxwidth: 1280px;
 
 // matalan compatible breakpoints
-// choose the names you want!
 $mq-breakpoints: (
   xs:  0px,
   sm:  321px,
@@ -16,6 +15,7 @@ $mq-breakpoints: (
 
 // this developer flag will output the current class names & breakpoint as an :after pseudo element
 $output-developer-content: false;
-@if ($output-developer-content==true) {
-  $mq-show-breakpoints: (xs, sm, md, lg, xl);
+
+@if $output-developer-content == true {
+  $mq-show-breakpoints: xs, sm, md, lg, xl;
 }

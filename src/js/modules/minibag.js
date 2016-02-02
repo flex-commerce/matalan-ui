@@ -1,33 +1,18 @@
 (function() {
+  'use strict'
 
-  var miniBagControl = $('.js-minibag, .js-minibag--view');
-  var miniBagContain = $('#minibag-contain');
-
-  // open on hover for 250ms
-  delayWithClear(miniBagControl, openMiniBag);
-
-  // close on mouseover BG
-  $('body').on('mouseover', '.modal-backdrop', function() {
-    if (!window.isMobileOrTablet.matches) {
-      closeMiniBag();
-    }
-  });
-
-  // close on click
-  // $('body').on('click', '.modal-backdrop', function() {
-  //   if (window.isMobileOrTablet.matches) {
-  //     closeMiniBag();
-  //   }
-  // });
+  var $miniBagControl = $('.js-minibag--checkout, .js-minibag--view');
+  var $miniBagContain = $('#minibag-contain');
+  var modalBG         = '.modal-backdrop';
 
 
   function closeMiniBag() {
-    miniBagContain.modal('hide');
+    $miniBagContain.modal('hide');
   }
 
 
   function openMiniBag() {
-    miniBagContain.modal('show');
+    $miniBagContain.modal('show');
   }
 
 
@@ -49,12 +34,14 @@
 
 
 
-//   // $(document).ready(function() {
-//   //   $(window).on('resize', _.debounce(function() {
-//   //     if (miniBagActive === true) {
-//   //       closeMiniBag(miniBagControl);
-//   //     }
-//   //   }, 250));
-//   // });
+  // open on hover for 250ms
+  delayWithClear($miniBagControl, openMiniBag);
+
+  // close on mouseover BG
+  $('body').on('mouseover', modalBG, function() {
+    if (!window.isMobileOrTablet.matches) {
+      closeMiniBag();
+    }
+  });
 
 })();

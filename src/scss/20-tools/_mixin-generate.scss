@@ -4,21 +4,20 @@
 $mq-classgen-directions: ( t: top, r: right, b: bottom, l: left);
 $mq-classgen-models: (pad: padding, mar: margin);
 
-
 @mixin make-spacer-classes($scoped-bp) {
   $scoped-bp: if($scoped-bp, \@#{$scoped-bp}, null);
-  //each model
+
+  // each model
   @each $shortmod, $model in $mq-classgen-models {
     // each size
     @each $key, $val in $sizing-sizes {
-
-      //each direction - t/l/b/r
+      // each direction - t/l/b/r
       @each $shortdir, $dir in $mq-classgen-directions {
         .u-#{$shortmod}-#{$shortdir}-#{$key}#{$scoped-bp} {
           #{$model}-#{$dir}: #{$val};
         }
       }
-      //each direction
+      // end each direction
 
       // horizontal
       .u-#{$shortmod}-h-#{$key}#{$scoped-bp} {
@@ -39,31 +38,27 @@ $mq-classgen-models: (pad: padding, mar: margin);
         #{$model}: #{$val};
       }
       // end directionless
-
     }
-    // each size
+    // end each size
   }
-  //each model
+  // end each model
 }
-
-
 
 
 @mixin make-responsive-generated-classes() {
   $breakpoint-first: nth(first($mq-breakpoints), 1);
   $breakpoint-last: nth(last($mq-breakpoints), 1);
+
   @each $curr-bp in map-keys($mq-breakpoints) {
     // ignore the first loop until we have a previous breakpoint as a min value
     @if variable-exists(prev-bp) {
 
-      // ignore the first BP for min value mq - we dont need xs-up
-
+      // ignore the first BP for min value mq - we dont need 'extra small up'
       @include mq($from: $prev-bp) {
         @include make-spacer-classes(#{$prev-bp}-up);
         @include generate-responsive-grid-offsets(#{$prev-bp}-up);
         @include generate-responsive-hide-classes(#{$prev-bp}-up);
       }
-
 
       // build the bp specific mq with min max bp values
       @include mq($from: $prev-bp, $until: $curr-bp) {
@@ -90,22 +85,20 @@ $mq-classgen-models: (pad: padding, mar: margin);
         }
       }
     }
+
     $prev-bp: $curr-bp;
+
   }
 }
 
 
-
-
-
 @mixin make-automargin-classes() {
-
-    @each $shortdir, $dir in $mq-classgen-directions { //each dir
+    // each dir
+    @each $shortdir, $dir in $mq-classgen-directions {
       .u-mar-#{$shortdir}-a {
         margin-#{$dir}: auto;
       }
-    } //each dir
-
+    }
     // horizontal
     .u-mar-h-a {
       margin-left: auto;
@@ -116,12 +109,11 @@ $mq-classgen-models: (pad: padding, mar: margin);
       margin-top: auto;
       margin-bottom: auto;
     }
-
-} //each model
+}
 
 
 @mixin make-border-classes() {
-  @each $shortdir, $dir in $mq-classgen-directions { //each dir
+  @each $shortdir, $dir in $mq-classgen-directions {
       %u-keyline-#{$shortdir},
       .u-keyline-#{$shortdir}, {
         border-#{$dir}: 1px solid $keyline-color;
@@ -130,7 +122,7 @@ $mq-classgen-models: (pad: padding, mar: margin);
       .u-border2-#{$shortdir}, {
         border-#{$dir}: 1px solid $cool-grey;
       }
-  } //each model
+  }
   %u-border2,
   .u-border2, {
     border: 1px solid $cool-grey;

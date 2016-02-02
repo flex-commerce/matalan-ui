@@ -5,10 +5,12 @@
 @mixin justify-children {
   text-align: justify;
   font-size: 0;
+
   > * {
     display: inline-block;
     font-size: rem-calc(12);
   }
+
   &:after {
     content: "";
     width: 100%;
@@ -16,10 +18,10 @@
   }
 }
 
-
 @mixin justify-parent {
   text-align: justify;
   font-size: 0;
+
   &:after {
     content: "";
     width: 100%;
@@ -29,5 +31,5 @@
 
 @mixin justified-child {
   display: inline-block;
-  font-size: 1rem ;
+  font-size: 1rem;
 }

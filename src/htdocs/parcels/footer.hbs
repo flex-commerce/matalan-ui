@@ -5,19 +5,21 @@
 
       <div class="row">
         <div class="o-footer__subscribe col-12@xs col-5@md">
+
           <form id="email-signup" name="email-signup" class="o-form--inline c-search-form">
             <div class="o-form__row">
-              <div class="o-form--input-pack o-form__input-contain">
-                <div class="input-group--addon unstyled input-group--addon__inset">
-                  <i class="icon icon-email"></i>
+
+              <div class="o-form__input-contain o-form--input-pack o-form--input-pack--styled o-form__input--icon">
+                <input type="text" class="o-input o-input--textual input-addon--expand" placeholder="Enter Email Address">
+                <div class="input-group__btn">
+                  <button class="c-btn c-btn-secondary" href="">Sign&nbsp;Up</button>
                 </div>
-                <input type="email" class="o-input o-input--textual input-addon--expand input-group--addon__inset-left" placeholder="Enter email address" pattern=".{3,}" title="3 characters minimum" required>
-                <div class="input-group--addon input-group--addon__button unstyled c-search__button">
-                  <button type="submit" class="">Sign&nbsp;Up</button>
-                </div>
+                <i class="icon icon-email"></i>
               </div>
+
             </div>
           </form>
+
           <div class="c-alert c-alert-dismissible signup-success u-mar-t-large">You have been signed up to our newsletter</div>
         </div>
         <div class="col-12@xs col-offset-1@md-up col-6@md col-5@lg">

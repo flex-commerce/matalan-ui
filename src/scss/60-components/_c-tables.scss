@@ -24,12 +24,14 @@ $table-border-color: $keyline-color;
     text-transform: uppercase;
   }
 
-  td,
-  .td,
-  th,
-  .th {
+  td, .td, th, .th {
     vertical-align: top;
   }
+
+  tbody th {
+    text-align: left;
+  }
+
 }
 
 // ===========================
@@ -99,7 +101,7 @@ $table-border-color: $keyline-color;
 
 .c-table--spaced {
   th, .th {
-    padding-bottom: 1em;
+    padding: 1em;
   }
 
   td, .td {
@@ -110,7 +112,7 @@ $table-border-color: $keyline-color;
 
 .c-table--spaced--large {
   th, .th {
-    padding-bottom: 2em;
+    padding: 2em;
   }
 
   td, .td {

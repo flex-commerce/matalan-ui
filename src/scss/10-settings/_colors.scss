@@ -7,7 +7,8 @@ $black: #000;
 
 // Brand Colors
 $matalan-brand: #eb0000;
-// $matalan-brand: #e70202;
+
+// #e70202;
 $dark-grey: #383838;
 $cool-grey: #b2b3b5;
 $light-grey: #ececec;
@@ -30,11 +31,8 @@ $primary-color: $matalan-brand;
 $primary-color-hover: $matalan-brand-hover;
 $secondary-color: $light-grey;
 
-
 // ===============
 // Fading primary color
-
-
 $primary-lighten-100: mix($white, $primary-color-hover, 0);
 $primary-lighten-90: mix($white, $primary-color-hover, 10);
 $primary-lighten-80: mix($white, $primary-color-hover, 20);
@@ -59,20 +57,12 @@ $dark-grey-lighten-30: mix($white, $dark-grey, 70);
 $dark-grey-lighten-20: mix($white, $dark-grey, 80);
 $dark-grey-lighten-10: mix($white, $dark-grey, 90);
 
-
-// $primary-color-darken: mix($black, $primary-color, 10%);
-// $primary-color-darker: mix($black, $primary-color, 20%);
-// $secondary-color-darken: mix($black, $secondary-color, 10%);
-// $secondary-color-darker: mix($black, $secondary-color, 20%);
-
-
 // We use these as default colors throughout
 
 $warning-color: #c09853;
 $error-color: #b94a48;
 $info-color: #3a87ad;
 $success-color: #468847;
-
 
 $base-alert-color-text: $primary-color;
 $base-alert-color-bg: #f0f0f0;

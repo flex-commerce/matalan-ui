@@ -9,13 +9,12 @@ require("lodash");
 
 
 // ===========================
-// Lodash
+// ..
 // ===========================
 require("./vendors/deckard");
-console.log($.os);
-console.log($.browser);
+// require("./modules/modal-helpers");
 // ===========================
-// Lodash end
+// .. end
 // ===========================
 
 

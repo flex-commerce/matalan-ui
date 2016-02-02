@@ -57,9 +57,18 @@ $list-border: $cool-grey;
   > .o-list__item {
     position: relative;
     display: block;
-    padding: $list-padding;
+    padding: $default-pad-y 0;
   }
 }
+
+.o-list-block {
+  > .o-list__item {
+    position: relative;
+    display: block;
+    padding: $default-pad-y 0;
+  }
+}
+
 
 .o-list-ui {
    > .o-list__item {

@@ -57,17 +57,10 @@ $dropdown-pad-y: $default-pad-y;
   }
 
   .separator + .dropdown-header {
-    margin-top: 0.5em;
+    margin-top: -0.55em;
     background-color: #eee;
   }
 
-  // Dividers (basically an hr) within the dropdown
-  // .divider {
-  //   height: 1px;
-  //   margin: 9px 0;
-  //   overflow: hidden;
-  //   background-color: #e5e5e5;
-  // }
 }
 
 // Hover/Focus state
@@ -204,12 +197,12 @@ $dropdown-pad-y: $default-pad-y;
   }
 }
 
-
 // target the split version of the dropdown
 .c-btn-split-dropdown {
   .c-dropdown {
     margin-left: -0.1em;
   }
+
   .c-btn-dropdown {
     .caret {
       margin-left: 0px;

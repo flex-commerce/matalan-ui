@@ -1,7 +1,9 @@
-.o-form--input-pack {
-  // display: inline-table;
-  // position: relative;
+// .input-group--addon__inset now deprecated, see single line form bars on http://localhost:3000/#forms
+.input-group--addon__inset {
+  outline: 1px dotted red;
+}
 
+.o-form--input-pack {
   position: relative;
   display: table;
   border-collapse: separate;
@@ -17,41 +19,36 @@
 
     // z-index keeps the addon icon visible on input focus
     z-index: 2;
+    padding: 0 em-calc(10px);
 
-    a {
-      color: $white;
-      padding: 0 em-calc(10px);
-      height: 100%;
-    }
+    // &:not(.input-group--addon__inset) {
+    //   padding: 0 em-calc(10px);
+    // }
 
-    &:not(.input-group--addon__inset) {
-      padding: 0 em-calc(10px);
-    }
-
-    &:not(.input-group--addon__button) {
-      padding: 0 em-calc(10px);
-    }
+    // &:not(.input-group--addon__button) {
+    //   padding: 0 em-calc(10px);
+    // }
 
     &:not(.unstyled) {
       background: $primary-color;
       color: $white;
     }
 
-    button {
-      border-style: none;
-      background-color: transparent;
-      padding: 0 em-calc(10px);
-      height: 100%;
-    }
+    // button {
+    //   border-style: none;
+    //   background-color: transparent;
+    //   padding: 0 em-calc(10px);
+    //   height: 100%;
+    // }
 
-    &.input-group--addon__button {
-      padding: 0;
-    }
+    // &.input-group--addon__button {
+    //   padding: 0;
+    // }
 
-    .icon:before {
-      color: $keyline-color;
-      line-height: 1.6;
-    }
+    // .icon:before {
+    //   color: $keyline-color;
+    //   line-height: 1.6;
+    // }
   }
 
   .input-addon--expand {
@@ -77,24 +74,20 @@
 }
 
 .o-form--input-pack--styled {
-  .o-input--textual:focus {
-    & + .input-group__btn.input-group__btn {
-      > a,
-      > button,
-      .c-btn-dropdown {
-        background: $dark-grey;
-        border-color: $dark-grey;
+  .o-input--textual:focus + .input-group__btn {
+    > .c-btn,
+    .c-btn-dropdown {
+      background: $dark-grey;
+      border-color: $dark-grey;
 
-        &:hover {
-          background: $dark-grey-hover;
-        }
+      &:hover {
+        background: $dark-grey-hover;
       }
     }
   }
 
-  .input-group__btn.input-group__btn {
-    > a,
-    > button,
+  .input-group__btn {
+    > .c-btn,
     .c-btn-dropdown {
       background: $cool-grey-hover;
       border-color: $cool-grey-hover;
@@ -113,10 +106,11 @@
   position: relative;
 
   .o-input--textual {
-    padding-left: 3.85em;
+    padding-left: 2.85em;
 
     &:focus {
       padding-left: 1em;
+
       &::placeholder {
         color: transparent;
       }
@@ -134,13 +128,15 @@
     @include absolute(left 0 top 0 bottom 0);
 
     &:before {
-      @include center(xy, abs);
-
       vertical-align: middle;
+
+      @include font-size(21px, none);
+
+      @include center(xy, abs);
     }
   }
 }
 
 //=============================
-//  Form Icons
+//  Form Icons End
 //=============================

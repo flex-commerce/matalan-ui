@@ -19,7 +19,7 @@
 
 @mixin arrow($edge, $location, $color, $size: 20px, $offset: 0) {
 
-  // If an offset has been defined, let’s use it.
+  // If an offset has been defined, let's use it.
   @if ($offset != 0) {
     $offset: $offset;
   }
@@ -49,8 +49,8 @@
    * 2. Use borders to create the arrow effect.
    * 3. Defensively reset a bunch of things so we can have different arrows
    *    across multiple breakpoints. This produces a lot of redundancy *if*
-   *    we have multiple responsive arrows, but it’s the most simple and
-   *    robust way of managing things. I’d rather have clarity than terseness
+   *    we have multiple responsive arrows, but it's the most simple and
+   *    robust way of managing things. I'd rather have clarity than terseness
    *    in a situation like this.
    */
   &:before {

@@ -34,31 +34,51 @@ $button-padding-y: $default-pad-y;
 //=============================
 
 .c-btn.c-btn-primary {
-  @include style-variant($color: $dark-grey, $background: $secondary-color, $border: $secondary-color);
+  @include style-variant(
+    $color: $dark-grey,
+    $background: $secondary-color,
+    $border: $secondary-color
+    );
 
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
 
-    @include style-variant($color: $dark-grey-hover, $background: $white, $border: $secondary-color);
+    @include style-variant(
+      $color: $dark-grey-hover,
+      $background: $white,
+      $border: $secondary-color
+      );
   }
 }
 
 .c-btn.c-btn-primary--alt {
-  @include style-variant($dark-grey, $light-grey-hover, $secondary-color);
+  @include style-variant(
+    $color: $dark-grey,
+    $background: $light-grey-hover,
+    $border: $secondary-color
+    );
 
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
 
-    @include style-variant($primary-color, $light-grey, $secondary-color);
+    @include style-variant(
+      $color: $primary-color,
+      $background: $light-grey,
+      $border: $secondary-color
+      );
   }
 }
 
 .c-btn.c-btn-secondary {
-  @include style-variant($color: $white, $background: $primary-color, $border: $primary-color);
+  @include style-variant(
+    $color: $white,
+    $background: $primary-color,
+    $border: $primary-color
+    );
 
   text-transform: uppercase;
 
@@ -67,19 +87,31 @@ $button-padding-y: $default-pad-y;
   &:focus {
     text-decoration: underline;
 
-    @include style-variant($color: $white, $background: $primary-color-hover, $border: $primary-color-hover);
+    @include style-variant(
+      $color: $white,
+      $background: $primary-color-hover,
+      $border: $primary-color-hover
+      );
   }
 }
 
 .c-btn.c-btn-secondary--alt {
-  @include style-variant($white, $primary-color, $primary-color);
+  @include style-variant(
+    $color: $white,
+    $background: $primary-color,
+    $border: $primary-color
+    );
 
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
 
-    @include style-variant($primary-color, $white, $primary-color);
+    @include style-variant(
+      $color: $primary-color,
+      $background: $white,
+      $border: $primary-color
+      );
   }
 }
 
@@ -87,27 +119,43 @@ $button-padding-y: $default-pad-y;
 .c-btn.c-btn-tertiary {
   background: #aaa;
 
-  @include style-variant($color: $white, $background: $dark-grey, $border: $dark-grey);
+  @include style-variant(
+    $color: $white,
+    $background: $dark-grey,
+    $border: $dark-grey
+    );
 
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
 
-    @include style-variant($color: $white, $background: $dark-grey-hover, $border: $dark-grey-hover);
+    @include style-variant(
+      $color: $white,
+      $background: $dark-grey-hover,
+      $border: $dark-grey-hover
+      );
   }
 }
 
 %c-btn-tertiary--alt,
 .c-btn.c-btn-tertiary--alt {
-  @include style-variant($color: $dark-grey, $background: $white, $border: $cool-grey);
+  @include style-variant(
+    $color: $dark-grey,
+    $background: $white,
+    $border: $cool-grey
+    );
 
   &.hover,
   &:hover,
   &:focus {
     text-decoration: underline;
 
-    @include style-variant($color: $dark-grey-hover, $background: $white, $border: $cool-grey-hover);
+    @include style-variant(
+      $color: $dark-grey-hover,
+      $background: $white,
+      $border: $cool-grey-hover
+      );
   }
 }
 
@@ -120,19 +168,35 @@ $button-padding-y: $default-pad-y;
 //=============================
 
 .c-btn {
-  @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
+  @include button-size(
+    $button-padding-y,
+    $button-padding-x,
+    1em, $base-line-height
+  );
 }
 
 .c-btn.c-btn--large {
-  @include button-size($button-padding-y * 1.5, $button-padding-x * 1.5, 1.125em, $base-line-height);
+  @include button-size(
+    $button-padding-y * 1.5,
+    $button-padding-x * 1.5,
+    1.125em, $base-line-height
+  );
 }
 
 .c-btn.c-btn--small {
-  @include button-size(halve($button-padding-y), halve($button-padding-x), 0.825em, $base-line-height);
+  @include button-size(
+    halve($button-padding-y),
+    halve($button-padding-x),
+    0.825em, $base-line-height
+  );
 }
 
 .c-btn.c-btn--tiny {
-  @include button-size(quarter($button-padding-y), quarter($button-padding-x), 0.7em, $base-line-height);
+  @include button-size(
+    quarter($button-padding-y),
+    quarter($button-padding-x),
+    0.7em, $base-line-height
+  );
 }
 
 //=============================
@@ -164,10 +228,7 @@ $button-padding-y: $default-pad-y;
 //  Button Icons
 //=============================
 
-
-//
 // Block button
-//
 .c-btn--block {
   display: block;
   width: 100%;
@@ -182,40 +243,4 @@ $button-padding-y: $default-pad-y;
 .c-btn.disabled,
 fieldset[disabled] .c-btn {
   pointer-events: none;
-}
-
-//
-// Alternate buttons
-//
-.c-btn-primary--alt {
-  // @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-}
-
-.c-btn-secondary--alt {
-  // @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
-}
-
-// Remove all backgrounds
-.c-btn-primary--alt-outline {
-  // @include button-outline-variant($btn-primary-bg);
-}
-
-.c-btn-secondary--alt-outline {
-  // @include button-outline-variant($btn-secondary-border);
-}
-
-//
-// Link buttons
-//
-// Make a button look and behave like a link
-// Button Sizes
-//
-.c-btn-lg {
-  // line-height: ensure even-numbered height of button next to large input
-  // @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
-}
-
-.c-btn-sm {
-  // line-height: ensure proper height of button next to small input
-  // @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }

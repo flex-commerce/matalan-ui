@@ -20,15 +20,13 @@
 
   <div class="container" role="main">
     <div class="row">
-      <div class="col-8@lg col-push-2@lg-up page--text__content">
-
-
+      <div class="col-8@lg col-push-2@lg-up">
 
 
         {{#each menuItems}}
         <div class="island">
           <a class="u-font-ta-c" href="{{seclink}}">
-            <h3>--{{secTitle}}--</h3>
+            <h3 class="u-mar-v-large">{{secTitle}}</h3>
           </a>
 
           {{#if categories}}
@@ -36,16 +34,16 @@
             <div class="">
 
               {{#with categories}} {{#each this}}
-              <ul class="auto-column--nobreak">
+              <ul class="auto-column--nobreak o-list-block">
 
-                <li class="">
+                <li class="o-list__item">
                   <a class="link" href="{{catLink}}">
-                    <h4><strong>{{catTitle}}</strong></h4>
+                    <h4 class="u-mar-t-medium u-mar-b-small"><strong>{{catTitle}}</strong></h4>
                   </a>
                 </li>
 
                 {{#with collection}} {{#each this}}
-                <li class="">
+                <li class="o-list__item">
                   <a class="link" href="#">
                     {{{@key}}}
                   </a>
@@ -65,7 +63,10 @@
 
     </div>
   </div>
-  {{> parcels/footer }} {{> partials/js-footer}}
+
+  {{> parcels/footer }}
+  {{> partials/js-footer}}
+
 </body>
 
 </html>
