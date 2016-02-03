@@ -57,6 +57,12 @@
       "extensions": ["jpg", "png", "svg", "gif"]
     },
 
+    "videos": {
+      "src": "vid",
+      "dest": "vid",
+      "extensions": ["mp4"]
+    },
+
     "imageAssets": {
       "src": "img-assets",
       "dest": "img-assets",

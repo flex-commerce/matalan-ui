@@ -16,7 +16,7 @@
   height: calc(100vh - 59px);
   max-width: $container-maxwidth;
     @include mq($until: lg) {
-        height: calc(100vh- 59px);
+        height: calc(100vh - 59px);
     }
     @include mq($from: lg) {
         height: calc(100vh - 187px);
@@ -50,17 +50,16 @@
 }
 
 .o-hero__detail-center {
-  @include center(y, abs);
-  left: 40%;
-  top:35%;
+  position: absolute;
+  left: -20%;
+  top: 10%;
+  width: 100%;
   text-align: left;
-  @include mq($until: md) {
-    width: 60%;
-  }
-
   @include mq($from: md) {
-    width: 38%;
-    left: 40%;
+    left: -10%;
+  }
+  @include mq($from: lg) {
+    width: 60%;
   }
 
   h3 {
@@ -71,10 +70,13 @@
 
 .o-hero__detail--bottom-right {
   position: absolute;
-  bottom: 2%;
-  right: 2%;
-  width: 24%;
+  right: 5%;
+  bottom: 5%;
+  width: 80%;
   text-align: left;
+  @include mq($from: lg) {
+    width: 40%;
+  }
 
   p {
     @include font-size(11px);

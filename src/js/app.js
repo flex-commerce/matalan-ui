@@ -286,15 +286,15 @@ $("[data-myacc='address-delete']").on('click', function(e) {
 
 require("./vendors/bootstrap/tooltip");
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip()
 })
 
 
 require("./vendors/bootstrap/popover");
 
-$(function () {
-  $('[data-toggle="popover"]').popover()
+$(function() {
+    $('[data-toggle="popover"]').popover()
 })
 
 // ===========================
@@ -501,10 +501,10 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 };
             },
             bgOpacity: 0.5,
-            disableAnimation,
-            true,
+            disableAnimation: true,
             hideAnimationDuration: 0,
-            showAnimationDuration: 0
+            showAnimationDuration: 0,
+            zoomTo: 3
 
         };
 
@@ -539,6 +539,23 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         // Pass data to PhotoSwipe and initialize it
         gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
+        //zoomed in image on initialisation
+        // gallery.zoomTo(1, {
+        //         x: gallery.viewportSize.x / 2,
+        //         y: gallery.viewportSize.y / 2
+        //     }, 0, false, function(now) {
+        //       $('.pswp--zoom-allowed').addClass('pswp--zoomed-in');
+        //     });
+
+        // gallery.listen('afterChange', function(e) {
+        //     gallery.zoomTo(1, {
+        //         x: gallery.viewportSize.x / 2,
+        //         y: gallery.viewportSize.y / 2
+        //     }, 0, false, function(now) {
+        //       $('.pswp--zoom-allowed').addClass('pswp--zoomed-in');
+        //     });
+
+        // });
         var psIndex = gallery.getCurrentIndex();
         var psIndexSlick = psIndex - 1;
     };
@@ -550,6 +567,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     for (var i = 0, l = galleryElements.length; i < l; i++) {
         galleryElements[i].setAttribute('data-pswp-uid', i + 1);
         galleryElements[i].onclick = onThumbnailsClick;
+
     }
 };
 
