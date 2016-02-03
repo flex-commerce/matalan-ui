@@ -193,15 +193,15 @@ $(document).ready(function() {
     var pageBody = $('body');
 
     if (pageBody.hasClass('page--checkout-1')) {
-      $('#billingAddressAccord').collapse('show');
+        $('#billingAddressAccord').collapse('show');
     }
 
     if (pageBody.hasClass('page--checkout-2')) {
-      $('#deliveryAddressAccord').collapse('show');
+        $('#deliveryAddressAccord').collapse('show');
     }
 
     if (pageBody.hasClass('page--checkout-3')) {
-      $('#deliveryMethodAccord').collapse('show');
+        $('#deliveryMethodAccord').collapse('show');
     }
 
 
@@ -300,15 +300,56 @@ require("./vendors/bootstrap/popover");
 $(function() {
     $('[data-toggle="popover"]').popover();
 });
+var charLength = 0;
+var showPopover = function() {
+        $(this).val('');
+        $(this).popover('show');
+    },
+    hidePopover = function() {
+        charLength = 0;
+        $(this).popover('hide');
+    };
 
-var showPopover = function () {
-    $(this).popover('show');
-}
-, hidePopover = function () {
-    $(this).popover('hide');
-};
+$('[data-validation="password"]').popover({
+        trigger: 'manual',
+        html: true,
+        content: function() {
+            return "<ul class='o-list__validation'><li class='pass-check-1'>Must be 8 to 32 characters</li><li class='pass-check-2'>Must container upper and lowercase letters</li><li class='pass-check-3'>Must contain at least 1 number</li><li class='pass-check-4'>Must contain at least 1 special character</li></ul>"
+        }
+    })
+    .focus(showPopover)
+    .blur(hidePopover)
+    .keyup(function() {
 
-$('[data-validation="password"]').popover({trigger: 'manual', html: true}).focus(showPopover).blur(hidePopover);
+        if(this.value.length >= 8 && this.value.length <= 32) {
+          $('.pass-check-1').addClass('success');
+        } else {
+          $('.pass-check-1').removeClass('success');
+        }
+
+        /*contains lowercase and uppercase characters*/
+        if(this.value.match(/[a-z]+/) && this.value.match(/[A-Z]+/)) {
+          $('.pass-check-2').addClass('success');
+        } else {
+          $('.pass-check-2').removeClass('success');
+        }
+
+        /*contains digits*/
+        if(this.value.match(/[0-9]+/)) {
+          $('.pass-check-3').addClass('success');
+        } else {
+          $('.pass-check-3').removeClass('success');
+        }
+
+        if(this.value.match(/[$£&+,:;=?@#|'<>.^*()%!-]+/)) {
+          $('.pass-check-4').addClass('success');
+        } else {
+          $('.pass-check-4').removeClass('success');
+        }
+
+    });
+
+
 
 
 // ===========================
