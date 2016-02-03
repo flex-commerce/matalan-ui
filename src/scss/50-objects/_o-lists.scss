@@ -236,23 +236,26 @@ $list-border: $cool-grey;
     padding-left: 0;
     font-family: flex-icons;
     li {
+        padding-top:2px;
+        padding-bottom:2px;
         position: relative;
         padding-left: 25px;
-        color: $dark-grey;
+        color: $cool-grey;
     }
     li:before {
         content: $icon-large-tick;
         position: absolute;
-        left: 0px;
-        color: $dark-grey;
+        left: 4px;
+        color: $cool-grey;
     }
     li.success {
-        color: green;
+        color: #6fc458;
         &:before {
+            font-weight:bold;
             content: $icon-large-tick;
             position: absolute;
-            left: 0px;
-            color: green;
+            left: 4px;
+            color: #6fc458;
         }
     }
     li.error {
@@ -260,7 +263,7 @@ $list-border: $cool-grey;
         &:before {
             content: $icon-large-tick;
             position: absolute;
-            left: 0px;
+            left: 4px;
             color: $primary-color;
         }
     }

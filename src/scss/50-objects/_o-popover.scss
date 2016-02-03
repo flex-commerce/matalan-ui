@@ -138,6 +138,7 @@ $popover-arrow-width: 10px !default;
 
 // Offset the popover to account for the popover arrow
 .popover-title {
+  display: none;
   padding: $popover-title-padding-y $popover-title-padding-x;
   margin: 0; // reset heading margin
   font-size: $font-size-base;
@@ -174,3 +175,5 @@ $popover-arrow-width: 10px !default;
   content: "";
   border-width: $popover-arrow-width;
 }
+
+

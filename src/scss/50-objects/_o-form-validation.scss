@@ -8,10 +8,10 @@
 
 
 .form-validate__error {
-  color: $error-color;
+  color: $primary-color;
 
   .o-input {
-    border-color: $error-color;
+    border-color: $primary-color;
   }
 }
 

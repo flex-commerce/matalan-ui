@@ -320,13 +320,15 @@ $('[data-validation="password"]').popover({
         trigger: 'manual',
         html: true,
         placement: function(context, source) {
-          var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
-          console.log(offset);
-          if (offset < 300) return 'top';
-          return 'right';
+            var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
+            console.log(offset);
+            if (offset < 300) return 'top';
+            return 'right';
         },
-        content: function() {
-            return "<ul class='o-list__validation'><li class='pass-check-1'>Must be 8 to 32 characters</li><li class='pass-check-2'>Must container upper and lowercase letters</li><li class='pass-check-3'>Must contain at least 1 number</li><li class='pass-check-4'>Must contain at least 1 special character</li></ul>"
+        content: function(context, source) {
+            var thisId = $(source).attr('id');
+            console.log(thisId);
+            return "<p><strong>Passwords must use 3 of the below:</strong></p><ul class='o-list__validation'><li class='pass-check-1'>Must be 8 to 32 characters</li><li class='pass-check-2'>Must container upper and lowercase letters</li><li class='pass-check-3'>Must contain at least 1 number</li><li class='pass-check-4'>Must contain at least 1 special character</li></ul>"
         }
     })
     .focus(showPopover)
@@ -361,6 +363,32 @@ $('[data-validation="password"]').popover({
 
     });
 
+$('[data-validation="password-confirm"]').popover({
+        trigger: 'manual',
+        html: true,
+        placement: function(context, source) {
+            var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
+            console.log(offset);
+            if (offset < 300) return 'top';
+            return 'right';
+        },
+        content: function(context, source) {
+            return "<p><strong>Passwords must correctly match:</strong></p><ul class='o-list__validation'><li class='pass-confirm-check-1'>Passwords match</li></ul>"
+        }
+    })
+    .focus(showPopover)
+    .blur(hidePopover)
+    .keyup(function() {
+        var password = $('[data-validation="password"]').val();
+        var confirmPassword = $('[data-validation="password-confirm"').val();
+
+        if (password === confirmPassword && this.value.length >= 8) {
+            $('.pass-confirm-check-1').addClass('success');
+        } else {
+            $('.pass-confirm-check-1').removeClass('success');
+        }
+
+    });
 
 
 

@@ -43,7 +43,7 @@
           <div class="col-12@xs col-6@lg">
             <form id="createAccountForm" action="#" name="createAccountForm" class="o-form o-form--default">
 
-            <div class="c-alert" role="alert">
+<!--             <div class="c-alert" role="alert">
               <strong>Problems with the form</strong>
               <span class="meta">Click error to autofocus field..</span>
               <div class="separator"></div>
@@ -60,7 +60,7 @@
                 </label>
               </div>
 
-            </div>
+            </div> -->
 
               <div class="row">
                 <div class="col-12@xs col-6@lg">
@@ -123,20 +123,18 @@
                       </i>
                     </div>
                     <div class="o-form__input-contain">
-                      <input type="text" class="o-input o-input--textual" id="passwordEntry" placeholder="Password" required/>
+                      <input id="passwordEntry" type="password"  data-validation="password" class="o-input o-input--textual" placeholder="Enter new password" required>
                       <span class="input__required">*</span>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
                 <div class="col-12@xs col-6@lg">
                   <div class="o-form__row form-validate__error">
                     <div class="o-form__label-contain">
                       <label for="passwordConfirm" class="">Confirm Password:</label>
                     </div>
                     <div class="o-form__input-contain">
-                      <input type="text" class="o-input o-input--textual" id="passwordConfirm" placeholder="Confirm password" required/>
+                      <input id="passwordConfirm" type="password" data-validation="password-confirm" class="o-input o-input--textual" placeholder="Confirm new password" required>
                       <span class="input__required">*</span>
                     </div>
                   </div>
