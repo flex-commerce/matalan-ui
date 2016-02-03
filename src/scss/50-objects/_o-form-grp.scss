@@ -24,6 +24,7 @@ $input-padding-y: $default-pad-y;
   position: relative;
 }
 
+// inline form rules
 .o-form--inline {
   .o-form__row {
     width: auto;
@@ -33,8 +34,20 @@ $input-padding-y: $default-pad-y;
   .o-form__input-contain:not(.o-form--input-pack) {
     display: inline-block;
   }
+
+  .o-option--inline,
+  .o-option--block {
+    padding: .5em 0;
+  }
+
+  .o-form__label-contain {
+    padding: .5em 0;
+  }
 }
 
+// inline form rules end
+
+// default and wide form rules
 .o-form--default,
 .o-form--wide {
   .o-form__row {
@@ -43,21 +56,30 @@ $input-padding-y: $default-pad-y;
   }
 }
 
-// form wide dev rules
+// default and wide form rules end
+
+// form wide rules
 .o-form--wide {
   .o-form__label-contain {
-    text-align: right;
-
     @include span(4);
+
+    padding: .5em;
+    text-align: right;
   }
 
   .o-form__input-contain {
-    text-align: left;
-
     @include span(8 no-gutter);
+
+    text-align: left;
+  }
+
+  .o-option--inline,
+  .o-option--block {
+    padding: .5em 0;
   }
 }
 
+// form wide rules end
 
 // vertical form label bottom margin
 .form-default .o-form__row .o-form__label-contain {
@@ -84,28 +106,6 @@ $input-padding-y: $default-pad-y;
     // keep first line of text inline with input for wide form
     border: 1px solid transparent;
     padding: .5em;
-  }
-}
-
-.o-form--wide {
-  .o-option--inline,
-  .o-option--block {
-    padding: .5em 0;
-  }
-
-  .o-form__label-contain {
-    padding: .5em;
-  }
-}
-
-.o-form--inline {
-  .o-option--inline,
-  .o-option--block {
-    padding: .5em 0;
-  }
-
-  .o-form__label-contain {
-    padding: .5em 0;
   }
 }
 

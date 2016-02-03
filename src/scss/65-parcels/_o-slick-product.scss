@@ -127,7 +127,7 @@
       left: auto;
     }
 
-    &:before {
+    &::before {
       content: $icon-ui-back;
 
       [dir="rtl"] & {
@@ -143,7 +143,7 @@
       right: auto;
     }
 
-    &:before {
+    &::before {
       content: $icon-ui-forward;
 
       [dir="rtl"] & {
@@ -196,12 +196,12 @@
         &:focus {
           outline: none;
 
-          &:before {
+          &::before {
             opacity: $slick-opacity-on-hover;
           }
         }
 
-        &:before {
+        &::before {
           position: absolute;
           top: 0;
           left: 0;

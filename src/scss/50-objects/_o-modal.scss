@@ -29,6 +29,7 @@ $screen-md-min: 720px;
 }
 
 // Container that the modal scrolls within
+%modal--default,
 .modal.modal--default {
     display: none;
     overflow: hidden;
@@ -235,7 +236,7 @@ $screen-md-min: 720px;
 // boostrap-dialog.js rules
 // ========================
 .bootstrap-dialog {
-    @extend .modal--default;
+    @extend %modal--default;
 }
 
 .bootstrap-dialog .bootstrap-dialog-message {

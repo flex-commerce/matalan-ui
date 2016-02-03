@@ -18,189 +18,31 @@ $button-padding-y: $default-pad-y;
     @include tab-focus;
   }
 
+  // scss-lint:disable QualifyingElement
   &.disabled,
   &:disabled,
   fieldset[disabled] & {
     opacity: .65;
+    pointer-events: none;
+  }
+
+  // scss-lint:enable QualifyingElement
+}
+
+// Block button
+.c-btn--block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons ?
+
+  + .c-btn--block {
+    margin-top: 5px;
   }
 }
 
 //=============================
 //  Button Base Styles End
-//=============================
-
-//=============================
-//  Button Display Styles
-//=============================
-
-.c-btn.c-btn-primary {
-  @include style-variant(
-    $color: $dark-grey,
-    $background: $secondary-color,
-    $border: $secondary-color
-    );
-
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-
-    @include style-variant(
-      $color: $dark-grey-hover,
-      $background: $white,
-      $border: $secondary-color
-      );
-  }
-}
-
-.c-btn.c-btn-primary--alt {
-  @include style-variant(
-    $color: $dark-grey,
-    $background: $light-grey-hover,
-    $border: $secondary-color
-    );
-
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-
-    @include style-variant(
-      $color: $primary-color,
-      $background: $light-grey,
-      $border: $secondary-color
-      );
-  }
-}
-
-.c-btn.c-btn-secondary {
-  @include style-variant(
-    $color: $white,
-    $background: $primary-color,
-    $border: $primary-color
-    );
-
-  text-transform: uppercase;
-
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-
-    @include style-variant(
-      $color: $white,
-      $background: $primary-color-hover,
-      $border: $primary-color-hover
-      );
-  }
-}
-
-.c-btn.c-btn-secondary--alt {
-  @include style-variant(
-    $color: $white,
-    $background: $primary-color,
-    $border: $primary-color
-    );
-
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-
-    @include style-variant(
-      $color: $primary-color,
-      $background: $white,
-      $border: $primary-color
-      );
-  }
-}
-
-%c-btn-tertiary,
-.c-btn.c-btn-tertiary {
-  background: #aaa;
-
-  @include style-variant(
-    $color: $white,
-    $background: $dark-grey,
-    $border: $dark-grey
-    );
-
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-
-    @include style-variant(
-      $color: $white,
-      $background: $dark-grey-hover,
-      $border: $dark-grey-hover
-      );
-  }
-}
-
-%c-btn-tertiary--alt,
-.c-btn.c-btn-tertiary--alt {
-  @include style-variant(
-    $color: $dark-grey,
-    $background: $white,
-    $border: $cool-grey
-    );
-
-  &.hover,
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-
-    @include style-variant(
-      $color: $dark-grey-hover,
-      $background: $white,
-      $border: $cool-grey-hover
-      );
-  }
-}
-
-//=============================
-//  Button Display Styles End
-//=============================
-
-//=============================
-//  Button Sizes
-//=============================
-
-.c-btn {
-  @include button-size(
-    $button-padding-y,
-    $button-padding-x,
-    1em, $base-line-height
-  );
-}
-
-.c-btn.c-btn--large {
-  @include button-size(
-    $button-padding-y * 1.5,
-    $button-padding-x * 1.5,
-    1.125em, $base-line-height
-  );
-}
-
-.c-btn.c-btn--small {
-  @include button-size(
-    halve($button-padding-y),
-    halve($button-padding-x),
-    0.825em, $base-line-height
-  );
-}
-
-.c-btn.c-btn--tiny {
-  @include button-size(
-    quarter($button-padding-y),
-    quarter($button-padding-x),
-    0.7em, $base-line-height
-  );
-}
-
-//=============================
-//  Button Sizes End
 //=============================
 
 //=============================
@@ -212,35 +54,19 @@ $button-padding-y: $default-pad-y;
   padding-left: 3.85em;
 
   > .icon {
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 2.85em;
-
     @include absolute(left 0 top 0 bottom 0);
 
-    &:before {
+    background-color: rgba($black, .1);
+    width: 2.85em;
+
+    &::before {
       @include center(xy, abs);
+
       vertical-align: middle;
     }
   }
 }
 
 //=============================
-//  Button Icons
+//  Button Icons End
 //=============================
-
-// Block button
-.c-btn--block {
-  display: block;
-  width: 100%;
-}
-
-// Vertically space out multiple block buttons ?
-.c-btn--block + .c-btn--block {
-  margin-top: 5px;
-}
-
-// Future-proof disabling of clicks on `<a>` elements
-.c-btn.disabled,
-fieldset[disabled] .c-btn {
-  pointer-events: none;
-}

@@ -147,7 +147,7 @@ $table-border-color: $keyline-color;
         display: inline-block;
 
         &:last-of-type {
-          &:before {
+          &::before {
             content: ' - ';
           }
         }
@@ -176,7 +176,7 @@ $table-border-color: $keyline-color;
   .th--inline {
     font-weight: bold;
 
-    &:after {
+    &::after {
       content: ': ';
     }
   }

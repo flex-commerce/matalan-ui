@@ -1,21 +1,9 @@
-.o-btn-group.o-btn-group--flex {
-  display: flex;
-  border: 1px solid #fff;
-
-  > .c-btn {
-    flex: auto;
-    border-style: none;
-  }
-}
-
 .o-btn-group {
+  @extend %auto-column--nobreak;
+  @extend %u-cf;
+
   display: block;
 
-  @extend .auto-column--nobreak;
-  @extend %u-cf;
-}
-
-.o-btn-group:not(.o-btn-group-vertical) {
   > .c-btn,
   > .c-btn-dropdown {
     margin-left: rem-calc(-1);
@@ -25,6 +13,17 @@
   > .c-btn + .c-dropdown {
     margin-left: rem-calc(-3);
   }
+
+  &.o-btn-group--flex {
+    display: flex;
+    border: 1px solid $white;
+
+    > .c-btn {
+      flex: auto;
+      border-style: none;
+    }
+  }
+
 }
 
 .o-btn-group-vertical {

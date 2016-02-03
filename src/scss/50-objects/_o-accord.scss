@@ -1,12 +1,11 @@
 .o-accord__container {
-  // hide / display icon classes
   .collapse {
     display: none;
-  }
 
-  .collapse.in {
-    display: block;
-    padding-bottom: 1.5em;
+    &.in {
+      display: block;
+      padding-bottom: 1.5em;
+    }
   }
 
   .icon-plus {
@@ -46,16 +45,15 @@
 
 .o-accord__title {
   a {
-    display    : block;
+    display: block;
     font-weight: bold;
-    cursor     : pointer;
-    position   : relative;
-    padding    : 1.5em 0;
+    cursor: pointer;
+    position: relative;
+    padding: 1.5em 0;
 
     .panel.disabled & {
-      color : #888;
+      color: $cool-grey;
       cursor: default;
     }
   }
 }
-

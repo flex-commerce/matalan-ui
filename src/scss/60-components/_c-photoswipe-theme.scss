@@ -81,7 +81,7 @@
     [dir="rtl"] & {
         left: auto;
     }
-    &:before {
+    &::before {
         content: $icon-ui-back;
         [dir="rtl"] & {
             content: $icon-ui-forward;
@@ -94,7 +94,7 @@
     [dir="rtl"] & {
         right: auto;
     }
-    &:before {
+    &::before {
         content: $icon-ui-forward;
         [dir="rtl"] & {
             content: $icon-ui-back;
@@ -104,7 +104,7 @@
 
 .pswp__button--close {
     right: 15px;
-    &:before {
+    &::before {
         content: $icon-ui-cross;
     }
 }
@@ -142,7 +142,7 @@
     bottom: 15px;
     left: 15px;
     top: calc(100vh - 35px);
-    &:before {
+    &::before {
       font-family: flex-icons;
       content: $icon-plus;
     };

@@ -9,7 +9,7 @@ form .c-alert {
     outline: none;
   }
 
-  &:before {
+  &::before {
     vertical-align: middle;
     color: $cool-grey;
 

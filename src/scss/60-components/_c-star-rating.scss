@@ -5,21 +5,21 @@
   .icon-star-fill {
     margin-bottom: 0;
     &.active {
-      &:before {
+      &::before {
         color: $supp-gold;
       }
       &:hover {
-        &:before {
+        &::before {
           color: $supp-gold;
         }
       }
     }
     &:hover {
-      &:before {
+      &::before {
         color: $cool-grey;
       }
     }
-    &:before {
+    &::before {
       font-size: inherit;
       color: $cool-grey;
     }

@@ -110,7 +110,7 @@
           margin-left: 1em;
         }
 
-        &:before {
+        &::before {
           content: "•";
           position: absolute;
           left: 16px;

@@ -53,8 +53,8 @@ a.link--nostyle {
 
 .link--underline {
   text-decoration: underline;
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     text-decoration: underline;
   }
 }

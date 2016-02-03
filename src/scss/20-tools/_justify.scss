@@ -11,7 +11,7 @@
     font-size: rem-calc(12);
   }
 
-  &:after {
+  &::after {
     content: "";
     width: 100%;
     display: inline-block;
@@ -22,7 +22,7 @@
   text-align: justify;
   font-size: 0;
 
-  &:after {
+  &::after {
     content: "";
     width: 100%;
     display: inline-block;

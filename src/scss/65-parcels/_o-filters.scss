@@ -155,7 +155,7 @@ $filters-border-color: $keyline-color;
   float: right;
   margin-top: -3px; // magic line height fix, pls forgive me
   color: $cool-grey;
-  &:before {
+  &::before {
     font-size: 1.5em;
   }
 }

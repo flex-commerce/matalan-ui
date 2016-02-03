@@ -5,19 +5,25 @@
   font-size: 90%;
 }
 
+%u-font--small
 .u-font--small {
   font-size: 90%;
 }
+
+%u-font--smaller
 .u-font--smaller {
   font-size: 85%;
 }
+
+%u-font--smallest
 .u-font--smallest {
   font-size: 75%;
 }
+
+%u-font--italic
 .u-font--italic {
   font-style: italic;
 }
-
 
 %u-font-pri,
 .u-font-pri {
@@ -28,6 +34,7 @@
 .u-font-sec {
   font-family: 'Archer', Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
+
   // font-weight: 500;
 }
 
@@ -60,10 +67,8 @@
 
 %u-font-strikethrough,
 .u-font-strikethrough {
-  text-decoration: line-through
+  text-decoration: line-through;
 }
-
-
 
 // for light gray text (80% opacity)
 %u-fade-el,
@@ -98,8 +103,9 @@
 %u-font-underline,
 .u-font-underline {
   text-decoration: underline !important;
-  &:before,
-  &:after {
+
+  &::before,
+  &::after {
     text-decoration: underline !important;
   }
 }
@@ -107,8 +113,9 @@
 %u-font-no-underline,
 .u-font-no-underline {
   text-decoration: none !important;
-  &:before,
-  &:after {
+
+  &::before,
+  &::after {
     text-decoration: none !important;
   }
 }
@@ -140,7 +147,6 @@
 .u-font-smallest {
   font-size: .715rem;
 }
-
 
 // relative font sizer
 .u-font-small-rel {

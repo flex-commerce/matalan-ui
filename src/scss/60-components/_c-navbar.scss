@@ -33,12 +33,12 @@ body {
   z-index: 1000;
 
   .modal--nav {
-    &:before {
+    &::before {
       content: '';
       border-top: 1px solid $light-grey;
       display: block;
     }
-    &:after {
+    &::after {
       content: '';
       border-bottom: 1px solid $light-grey;
       display: block;

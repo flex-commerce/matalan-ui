@@ -131,7 +131,7 @@
   i {
     // provides enough width for the icon and some margin
     // margin-right: 1em;
-    &:before {
+    &::before {
       color: $dark-grey-lighten-60;
       // abs positioning so the doesnt affect button height
       // position: absolute;

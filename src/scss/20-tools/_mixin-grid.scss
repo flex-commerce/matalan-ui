@@ -35,7 +35,7 @@ $susy: (
 
   @include clearfix;
 
-  &:after {
+  &::after {
     content: '';
     display: table;
     clear: both;

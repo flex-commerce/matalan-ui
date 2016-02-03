@@ -1,41 +1,31 @@
 // breadcrumbs
 //
 .c-breadcrumb-bar {
-  @extend .o-list-inline;
   padding: 0.5em 0;
-  a {
-    @extend .u-font-no-underline;
+
+  @extend %o-list-inline;
+
+  .link {
     color: $primary-color;
-  }
-  li {
-    &.has-link {
-      // &.hover,
-      // &:hover,
-      // &:focus {
-      //   text-decoration: underline;
-      //   @include primary-style(hover);
-      // }
-    }
+
+    @extend %u-font-no-underline;
   }
 }
 
-
 .c-breadcrumb-bar__item + .c-breadcrumb-bar__item {
-  &:before {
+  &::before {
     @extend %list-inline__delimited--content;
   }
 }
 
-
 .c-breadcrumb-bar__item.no-link {
-  &:before {
+  &::before {
     color: $cool-grey;
   }
 }
 
-
 .c-breadcrumb-bar__item + .c-breadcrumb-bar__item.has-link {
-  &:before {
+  &::before {
     color: $primary-color;
   }
 }

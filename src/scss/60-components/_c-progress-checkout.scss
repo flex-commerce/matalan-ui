@@ -1,4 +1,4 @@
-/* Copyright 2013-2015 etc Chris Tabor. Licensed under MIT. */
+/*! Copyright 2013-2015 etc Chris Tabor. Licensed under MIT. */
 
 // colors
 $inactive: #ccc;
@@ -21,17 +21,19 @@ $border-thickness: 5px;
         background-color: $completed-bg;
         content: "1";
     }
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         background-color: $active;
         z-index: -2;
     }
 }
 
+%flexer,
 .flexer {
     display: flex;
     justify-content: space-between;
 }
+%flexer--vertical,
 .flexer--vertical {
     display: flex;
     flex-direction: column;
@@ -41,7 +43,7 @@ $border-thickness: 5px;
 
 
 .c-progress-checkout {
-    @extend .flexer;
+    @extend %flexer;
     font-size: 80%;
     margin-bottom: 1em;
     @include mq($until: md) {
@@ -120,7 +122,7 @@ $border-thickness: 5px;
         a {
           color: $active;
         }
-        &:after {
+        &::after {
             /*Add another block-level blank space*/
             font-family: 'flex-icons';
             content: $icon-large-tick;

@@ -1,14 +1,15 @@
 .c-roundel {
-  @extend .u-round;
+  @extend %u-round;
+
   position: relative;
-  border-radius: 50%;
-  width: 30%; /// @TODO - magic number - size
-  padding-top: 30%; /// @TODO - magic number - size
+  width: 30%; // @TODO - magic number - size
+  padding-top: 30%; // @TODO - magic number - size
   font-size: 80%;
   text-align: center;
   line-height: 1.2;
-  &:after {
-    @include center(xy, abs)
+
+  &::after {
+    @include center(xy, abs);
   }
 }
 
@@ -20,29 +21,24 @@
 
 .c-roundel__sec {
   background-color: $white;
-  color: #777; // @todo - check this colour for a var
+  color: $mid-grey;
+
+  // @todo - check this colour for a var
   border: 1px dashed;
   font-weight: 600;
 }
 
-
 .roundel-pos-tl {
   @include absolute(top 0.75em left 0.75em);
 }
+
 .roundel-pos-tr {
   @include absolute(top 0.75em right 0.75em);
 }
+
 .roundel-pos-br {
   @include absolute(bottom 1em right 0.75em);
 }
-
-
-
-
-
-
-
-
 
 .c-roundel--custom:after {
   content: attr(data-content);

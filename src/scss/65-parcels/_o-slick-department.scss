@@ -91,7 +91,7 @@
             outline: none;
             background: transparent;
             color: transparent;
-            &:before {
+            &::before {
                 opacity: $slick-opacity-on-hover;
             }
         }
@@ -114,7 +114,7 @@
             left: auto;
             right: -10px;
         }
-        &:before {
+        &::before {
             font-family: 'flex-icons';
             content: $icon-ui-back;
             [dir="rtl"] & {
@@ -128,7 +128,7 @@
             left: -10px;
             right: auto;
         }
-        &:before {
+        &::before {
             font-family: 'flex-icons';
             content: $icon-ui-forward;
             [dir="rtl"] & {
@@ -169,11 +169,11 @@
                 &:hover,
                 &:focus {
                     outline: none;
-                    &:before {
+                    &::before {
                         opacity: $slick-opacity-on-hover;
                     }
                 }
-                &:before {
+                &::before {
                     position: absolute;
                     top: 0;
                     left: 0;

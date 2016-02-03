@@ -53,7 +53,7 @@
    *    robust way of managing things. I'd rather have clarity than terseness
    *    in a situation like this.
    */
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     z-index: 1; /* [1] */

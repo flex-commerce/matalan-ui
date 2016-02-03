@@ -225,7 +225,7 @@
   }
 
   .c-navbar__container .icon-minus {
-    &:after {
+    &::after {
       @include absolute(top 0 bottom 0 right 2em);
 
       content: '';
