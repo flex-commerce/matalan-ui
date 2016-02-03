@@ -229,3 +229,42 @@ $list-border: $cool-grey;
     color: $primary-color;
   }
 }
+
+.o-list__validation {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    font-family: flex-icons;
+    li {
+        position: relative;
+        padding-left: 25px;
+        color: $dark-grey;
+    }
+    li:before {
+        content: $icon-large-tick;
+        position: absolute;
+        left: 0px;
+        color: $dark-grey;
+    }
+    li.success {
+        color: green;
+        &:before {
+            content: $icon-large-tick;
+            position: absolute;
+            left: 0px;
+            color: green;
+        }
+    }
+    li.error {
+        color: $primary-color;
+        &:before {
+            content: $icon-large-tick;
+            position: absolute;
+            left: 0px;
+            color: $primary-color;
+        }
+    }
+}
+
+
+

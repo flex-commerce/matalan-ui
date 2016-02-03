@@ -44,6 +44,7 @@ $(document).ready(function() {
 // pointer events polyfill
 // ===========================
 
+
 require("pepjs");
 // pepjs added to bring some sensibility to ios touch events. to investigate buggy ipad behaviour yet.
 
@@ -108,6 +109,9 @@ $('#minibag-contain').on('hidden.bs.modal', function(e) {
 // Tether end
 // ===========================
 
+
+
+// require("./modules/validation-tooltip");
 
 
 
@@ -294,8 +298,18 @@ $(function() {
 require("./vendors/bootstrap/popover");
 
 $(function() {
-    $('[data-toggle="popover"]').popover()
-})
+    $('[data-toggle="popover"]').popover();
+});
+
+var showPopover = function () {
+    $(this).popover('show');
+}
+, hidePopover = function () {
+    $(this).popover('hide');
+};
+
+$('[data-validation="password"]').popover({trigger: 'manual', html: true}).focus(showPopover).blur(hidePopover);
+
 
 // ===========================
 // Bootstrap components end
