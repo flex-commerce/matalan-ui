@@ -310,9 +310,21 @@ var showPopover = function() {
         $(this).popover('hide');
     };
 
+function wheretoplace() {
+    var offset = $("#target").offset();
+    if (width < 1000) return 'top';
+    return 'right';
+}
+
 $('[data-validation="password"]').popover({
         trigger: 'manual',
         html: true,
+        placement: function(context, source) {
+          var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
+          console.log(offset);
+          if (offset < 300) return 'top';
+          return 'right';
+        },
         content: function() {
             return "<ul class='o-list__validation'><li class='pass-check-1'>Must be 8 to 32 characters</li><li class='pass-check-2'>Must container upper and lowercase letters</li><li class='pass-check-3'>Must contain at least 1 number</li><li class='pass-check-4'>Must contain at least 1 special character</li></ul>"
         }
@@ -321,30 +333,30 @@ $('[data-validation="password"]').popover({
     .blur(hidePopover)
     .keyup(function() {
 
-        if(this.value.length >= 8 && this.value.length <= 32) {
-          $('.pass-check-1').addClass('success');
+        if (this.value.length >= 8 && this.value.length <= 32) {
+            $('.pass-check-1').addClass('success');
         } else {
-          $('.pass-check-1').removeClass('success');
+            $('.pass-check-1').removeClass('success');
         }
 
         /*contains lowercase and uppercase characters*/
-        if(this.value.match(/[a-z]+/) && this.value.match(/[A-Z]+/)) {
-          $('.pass-check-2').addClass('success');
+        if (this.value.match(/[a-z]+/) && this.value.match(/[A-Z]+/)) {
+            $('.pass-check-2').addClass('success');
         } else {
-          $('.pass-check-2').removeClass('success');
+            $('.pass-check-2').removeClass('success');
         }
 
         /*contains digits*/
-        if(this.value.match(/[0-9]+/)) {
-          $('.pass-check-3').addClass('success');
+        if (this.value.match(/[0-9]+/)) {
+            $('.pass-check-3').addClass('success');
         } else {
-          $('.pass-check-3').removeClass('success');
+            $('.pass-check-3').removeClass('success');
         }
 
-        if(this.value.match(/[$£&+,:;=?@#|'<>.^*()%!-]+/)) {
-          $('.pass-check-4').addClass('success');
+        if (this.value.match(/[$£&+,:;=?@#|'<>.^*()%!-]+/)) {
+            $('.pass-check-4').addClass('success');
         } else {
-          $('.pass-check-4').removeClass('success');
+            $('.pass-check-4').removeClass('success');
         }
 
     });
