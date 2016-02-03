@@ -16,27 +16,44 @@ var handleErrors = require('../util/handleErrors');
 var cache = require('gulp-cached');
 
 var reporter = stylish({
-    errorsOnly: true
+    errorsOnly: false
 });
 
-var scssToCheck = path.join(
-    config.app.src,
-    config.tasks.css.src,
-    '/**/*' + '.{' + config.tasks.css.extensions + '}'
-);
+// var scssToCheck = path.join(
+//     config.app.src,
+//     config.tasks.css.src,
+//     '/40-elements/*' + '.{' + config.tasks.css.extensions + '}'
+// );
 
-var scsslintTask = function() {
-    return gulp.src(scssToCheck)
-        .pipe(cache('scsslint'))
+// var scsslintTask = function() {
+//     return gulp.src(scssToCheck)
+//         // .pipe(cache('scsslint'))
+//         .pipe(scssLint({
+//             customReport: reporter.issues,
+//             // 'filePipeOutput': 'scssReport.json',
+//             config: '.scss-lint.yml',
+//             endless: true,
+//             sync: true,
+//             maxBuffer: 600 * 1024
+//         }));
+//     // .pipe( reporter.printSummary );
+// }
+
+gulp.task('csslint', function() {
+    return gulp.src('./src/scss/**/*.scss')
         .pipe(scssLint({
-            // customReport: reporter.issues,
+            customReport: reporter.issues,
             config: '.scss-lint.yml',
-            verbose: true,
             maxBuffer: 600 * 1024
         }))
-    .pipe( reporter.printSummary )
-    .on('error', handleErrors);
-}
+        .pipe(scssLint.failReporter('E'));
+});
 
-gulp.task('csslint', scsslintTask);
-module.exports = scsslintTask;
+// gulp.task('sass', ['scss-lint'], function() {
+//     return gulp.src('**/*.scss')
+//         .pipe(scss());
+// });
+
+
+// gulp.task('csslint', scsslintTask);
+// module.exports = scsslintTask;

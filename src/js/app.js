@@ -6,7 +6,8 @@ require("lodash");
 // Deckard end
 // ===========================
 
-
+var foo = require("./modules/amodule");
+console.log(foo);
 
 // ===========================
 // ..
@@ -284,7 +285,9 @@ $("[data-myacc='address-delete']").on('click', function(e) {
 // Bootstrap components init
 // ===========================
 
-require("./vendors/bootstrap/tooltip");
+var Tooltip = require("./vendors/bootstrap/tooltip");
+console.warn(Tooltip.VERSION);
+
 
 $(function() {
     $('[data-toggle="tooltip"]').tooltip()
