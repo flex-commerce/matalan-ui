@@ -19,7 +19,7 @@
     height:10px;
     border-width: 3px;
     border-style: solid none none solid;
-    border-color: #eb0000;
+    border-color: $primary-color;
 }
 
 .c-frame-tr {
@@ -30,7 +30,7 @@
     height:10px;
     border-width: 3px;
     border-style: solid solid none none;
-    border-color: #eb0000;
+    border-color: $primary-color;
 }
 
 .c-frame-br {
@@ -41,7 +41,7 @@
     height:10px;
     border-width: 3px;
     border-style: none solid solid none;
-    border-color: #eb0000;
+    border-color: $primary-color;
 }
 
 .c-frame-bl {
@@ -52,7 +52,7 @@
     height:10px;
     border-width: 3px;
     border-style: none none solid solid;
-    border-color: #eb0000;
+    border-color: $primary-color;
 }
 
 .c-frame-content {
