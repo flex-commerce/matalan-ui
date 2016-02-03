@@ -138,16 +138,23 @@
 }
 
 .pswp__button--zoom {
-    display: none;
-    background-position: -88px 0;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    top: calc(100vh - 35px);
+    &:before {
+      font-family: flex-icons;
+      content: $icon-plus;
+    };
 }
 
 .pswp--zoom-allowed .pswp__button--zoom {
     display: block;
 }
 
-.pswp--zoomed-in .pswp__button--zoom {
-    background-position: -132px 0;
+.pswp--zoomed-in .pswp__button--zoom:before {
+    font-family: flex-icons;
+    content: $icon-minus;
 }
 
 
@@ -371,12 +378,12 @@ a.pswp__share--download:hover {
 /* pswp__ui--idle class is added when mouse isn't moving for several seconds (JS option timeToIdle) */
 
 .pswp__ui--idle .pswp__top-bar {
-    opacity: 0;
+    opacity: 1;
 }
 
 .pswp__ui--idle .pswp__button--arrow--left,
 .pswp__ui--idle .pswp__button--arrow--right {
-    opacity: 0;
+    opacity: 1;
 }
 
 
@@ -390,7 +397,7 @@ a.pswp__share--download:hover {
 .pswp__ui--hidden .pswp__button--arrow--left,
 .pswp__ui--hidden .pswp__button--arrow--right {
     /* Force paint & create composition layer for controls. */
-    opacity: 0.001;
+    opacity: 1;
 }
 
 

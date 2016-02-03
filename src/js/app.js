@@ -524,22 +524,23 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         // Pass data to PhotoSwipe and initialize it
         gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
-        gallery.zoomTo(1, {
-                x: gallery.viewportSize.x / 2,
-                y: gallery.viewportSize.y / 2
-            }, 0, false, function(now) {
-              $('.pswp--zoom-allowed').addClass('pswp--zoomed-in');
-            });
+        //zoomed in image on initialisation
+        // gallery.zoomTo(1, {
+        //         x: gallery.viewportSize.x / 2,
+        //         y: gallery.viewportSize.y / 2
+        //     }, 0, false, function(now) {
+        //       $('.pswp--zoom-allowed').addClass('pswp--zoomed-in');
+        //     });
 
-        gallery.listen('afterChange', function(e) {
-            gallery.zoomTo(1, {
-                x: gallery.viewportSize.x / 2,
-                y: gallery.viewportSize.y / 2
-            }, 0, false, function(now) {
-              $('.pswp--zoom-allowed').addClass('pswp--zoomed-in');
-            });
+        // gallery.listen('afterChange', function(e) {
+        //     gallery.zoomTo(1, {
+        //         x: gallery.viewportSize.x / 2,
+        //         y: gallery.viewportSize.y / 2
+        //     }, 0, false, function(now) {
+        //       $('.pswp--zoom-allowed').addClass('pswp--zoomed-in');
+        //     });
 
-        });
+        // });
         var psIndex = gallery.getCurrentIndex();
         var psIndexSlick = psIndex - 1;
     };
