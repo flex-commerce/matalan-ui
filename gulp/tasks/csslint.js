@@ -1,59 +1,47 @@
-'use strict';
-/**
- * Lint SCSS files
- * `gem install scss-lint` needed
- */
+// 'use strict';
 
-var config = require('../config');
-if (!config.tasks.css) return;
+// var config = require('../config');
+// if (!config.tasks.css) return;
 
-var gulp = require('gulp');
-var path = require('path');
-var handleErrors = require('../util/handleErrors');
-var scssLint = require('gulp-scss-lint');
-var stylish = require('gulp-scss-lint-stylish2');
-var handleErrors = require('../util/handleErrors');
-var cache = require('gulp-cached');
+// var gulp     = require('gulp');
+// var sass     = require('gulp-sass');
+// var scsslint = require('gulp-scss-lint');
+// var stylish  = require('gulp-scss-lint-stylish2');
+// var cache    = require('gulp-cached');
+// var path     = require('path');
 
-var reporter = stylish({
-    errorsOnly: false
-});
 
-// var scssToCheck = path.join(
-//     config.app.src,
-//     config.tasks.css.src,
-//     '/40-elements/*' + '.{' + config.tasks.css.extensions + '}'
-// );
-
-// var scsslintTask = function() {
-//     return gulp.src(scssToCheck)
-//         // .pipe(cache('scsslint'))
-//         .pipe(scssLint({
-//             customReport: reporter.issues,
-//             // 'filePipeOutput': 'scssReport.json',
-//             config: '.scss-lint.yml',
-//             endless: true,
-//             sync: true,
-//             maxBuffer: 600 * 1024
-//         }));
-//     // .pipe( reporter.printSummary );
-// }
-
-gulp.task('csslint', function() {
-    return gulp.src('./src/scss/**/*.scss')
-        .pipe(scssLint({
-            customReport: reporter.issues,
-            config: '.scss-lint.yml',
-            maxBuffer: 600 * 1024
-        }))
-        .pipe(scssLint.failReporter('E'));
-});
-
-// gulp.task('sass', ['scss-lint'], function() {
-//     return gulp.src('**/*.scss')
-//         .pipe(scss());
+// var reporter = stylish({
+//   errorsOnly: false
 // });
 
+// var scssToCheck = path.join(
+//   config.app.src,
+//   config.tasks.css.src,
+//   '**/*' + '.{' + config.tasks.css.extensions + '}'
+// );
 
-// gulp.task('csslint', scsslintTask);
-// module.exports = scsslintTask;
+
+//   var scssLintTask = function() {
+//   console.log('');
+//   console.log('==================================================');
+//   console.log('');
+
+//   return gulp.src('./src/scss/**/*.scss')
+//   .pipe(cache('scsslint'))
+//   .pipe(scsslint({
+//     customReport: reporter.issues,
+//     config: '.scss-lint.yml',
+//     sync: true,
+//     maxBuffer: 600 * 1024
+//   }))
+//   // .pipe(scsslint.failReporter('E'));
+// };
+
+// // gulp.task('csslint', scssLintTask);
+
+// gulp.task('csslint', function() {
+//   gulp.watch(scssToCheck, scssLintTask);
+// });
+
+// module.exports = scssLintTask;

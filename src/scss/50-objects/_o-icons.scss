@@ -5,6 +5,7 @@
 
 .icon--vertical-right:before {
   @include center(y, abs);
+
   right: 0;
 }
 
@@ -13,9 +14,10 @@
 }
 
 .icon--vertical-middle:before {
+  @include center(y, abs);
+
   vertical-align: middle;
   line-height: 0;
-  @include center(y, abs);
 }
 
 .icon--block {
@@ -24,3 +26,4 @@
     width: 1.75em;
   }
 }
+

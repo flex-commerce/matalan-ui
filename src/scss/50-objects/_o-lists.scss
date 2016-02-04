@@ -71,19 +71,19 @@ $list-border: $cool-grey;
       background-color: $list-ui-active-bg;
     }
   }
-}
 
-.o-list-ui.o-list--bordered {
-  > .o-list__item {
-    border: 1px solid $cool-grey;
-    margin-top: rem-calc(-1);
+  .o-list--bordered {
+    > .o-list__item {
+      border: 1px solid $cool-grey;
+      margin-top: rem-calc(-1);
 
-    @include not-list-heading {
-      position: relative;
-      z-index: 2;
+      @include not-list-heading {
+        position: relative;
+        z-index: 2;
 
-      // Place active items above their siblings for proper border styling
-      border-color: $list-ui-active-border;
+        // Place active items above their siblings for proper border styling
+        border-color: $list-ui-active-border;
+      }
     }
   }
 }
@@ -131,10 +131,10 @@ $list-border: $cool-grey;
   }
 
   dd {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
     font-size: rem-calc(14px);
     line-height: 1.4;
-    color: #666;
+    color: $mid-grey;
   }
 }
 
@@ -145,13 +145,13 @@ $list-border: $cool-grey;
     width: 120px;
 
     &::after {
-      content: ":";
+      content: ':';
     }
   }
 
   dd {
     margin: 0 0 0 130px;
-    padding: 0 0 0.5em 0;
+    padding: 0 0 0.5em;
   }
 }
 
@@ -163,7 +163,7 @@ $list-border: $cool-grey;
     width: 50%;
 
     &::after {
-      content: ":";
+      content: ':';
     }
   }
 
@@ -225,7 +225,7 @@ $list-border: $cool-grey;
   li:before {
     content: $icon-large-tick;
     position: absolute;
-    left: 0px;
+    left: 0;
     color: $primary-color;
   }
 }

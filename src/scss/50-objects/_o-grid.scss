@@ -20,6 +20,7 @@
 //  .MyComponent-wrapper {
 //    @include row;
 //  }
+
 //    .MyComponent-child {
 //      @include column( (xs: 12, md: 4, lg: 2) );
 //    }
@@ -31,7 +32,6 @@
 //    <div class="MyComponent-child col-xs-12 col-md-4 col-lg-2"></div>
 //  </div>`
 
-
 ///////////////////////////////
 
-@include make-bootstrap-classes();
+@include make-bootstrap-classes;

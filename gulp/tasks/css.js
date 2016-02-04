@@ -3,18 +3,17 @@
 var config = require('../config');
 if (!config.tasks.css) return;
 
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+var gulp         = require('gulp');
+var browserSync  = require('browser-sync');
+var sass         = require('gulp-sass');
+var sourcemaps   = require('gulp-sourcemaps');
 var handleErrors = require('../util/handleErrors');
 var autoprefixer = require('gulp-autoprefixer');
-var path = require('path');
-var logger = require('../util/compileLogger');
-var pkg = require('../../package.json');
-var minifyCSS = require('gulp-minify-css');
-var header = require('gulp-header');
-
+var path         = require('path');
+var pkg          = require('../../package.json');
+var minifyCSS    = require('gulp-minify-css');
+var header       = require('gulp-header');
+var duration = require('gulp-duration');
 
 var paths = {
     src: path.join(config.app.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}'),
@@ -32,11 +31,9 @@ var banner = [
 ].join('\n');
 
 var scssTask = function() {
-
     return gulp.src(paths.src)
         .pipe(sourcemaps.init())
         .pipe(sass(config.tasks.css.sass))
-        .on('error', handleErrors)
         .pipe(autoprefixer(config.tasks.css.autoprefixer))
         .pipe(minifyCSS({
             keepSpecialComments: "*",
@@ -50,9 +47,10 @@ var scssTask = function() {
             pkg: pkg
         }))
         .pipe(sourcemaps.write())
+        .pipe(duration('rebuilding styles'))
         .pipe(gulp.dest(paths.dest))
         .pipe(browserSync.stream());
 }
 
-gulp.task('css', ['csslint'], scssTask);
+gulp.task('css', scssTask);
 module.exports = scssTask;
