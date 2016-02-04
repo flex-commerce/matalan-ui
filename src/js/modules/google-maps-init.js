@@ -1,12 +1,22 @@
    // ===========================
    // Mapbox
    // ===========================
-   var GMaps = require('../vendors/gmaps'),
-       map,
+   var map,
        mobilemap,
        listings = document.getElementById('listings'),
-       data = require("json!../../data/locations.json"),
        latlng;
+
+   // an array as the first require argument will split the requested code into a chunk
+   // automatically split from the main app.js as x.y.js, copied to dist and loaded only when needed
+   // perfect for occasional external libraries and big json packets :)
+   require.ensure(["json!../../data/locations.json", '../vendors/gmaps'], function(){
+    // once we're in this function, the external files have been loaded, we can safely continue
+    // we'll wanna investigate fail states for this..
+    var data = require("json!../../data/locations.json");
+    var GMaps = require("../vendors/gmaps");
+
+    console.log(data);
+    console.log(GMaps);
 
    var clickCollectContain = $('#click-and-collect-contain');
    var isModal = false;
@@ -399,7 +409,7 @@
    }
 
    $('body').on('click', '.o-select-store', function() {
-           var selectedStore = $(this).attr('data-storeName')
+           var selectedStore = $(this).attr('data-storeName');
            $('.o-store-finder__actions').hide();
            $('.o-store-finder__selected').show();
 
@@ -407,7 +417,8 @@
            $(".o-submit-button").show();
            closeMap();
 
-       })
+       });
        // ===========================
        // Mapbox End
        // ===========================
+   });

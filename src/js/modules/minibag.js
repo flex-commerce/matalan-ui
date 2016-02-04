@@ -22,7 +22,7 @@
 
     $(el).hover(function() {
       timer = setTimeout(function() {
-      if (!window.isMobileOrTablet.matches) {
+      if (!window.isMobileOrTablet) {
         func();
       }
       }, delay);
@@ -39,7 +39,7 @@
 
   // close on mouseover BG
   $('body').on('mouseover', modalBG, function() {
-    if (!window.isMobileOrTablet.matches) {
+    if (!window.isMobileOrTablet) {
       closeMiniBag();
     }
   });

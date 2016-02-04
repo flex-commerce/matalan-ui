@@ -1,3 +1,8 @@
+var $body = $('body');
+// console.log($body);
+
+
+
 // ===========================
 // Deckard (x-browser detection)
 // ===========================
@@ -11,33 +16,28 @@ require("lodash");
 // ===========================
 // Examples
 // ===========================
-console.warn('Module 0');
-var module0 = require("./examples/module0");
-console.log( module0('Hello') );
+// console.warn('Module 0');
+// var module0 = require("./examples/module0");
+// console.log( module0('Hello') );
 
 
-console.warn('Module 1');
-var module1 = require("./examples/module1");
-console.log('module1', module1);
-module1.incrementCounter();
-console.log(module1.incrementCounter());
-module1.multiply();
-console.log('x', module1.show());
+// console.warn('Module 1');
+// var module1 = require("./examples/module1");
+// console.log('module1', module1);
+// module1.incrementCounter();
+// console.log(module1.incrementCounter());
+// module1.multiply();
+// console.log('x', module1.show());
 
 
-console.warn('Module 2');
-var module2 = require("./examples/module2");
-console.log('myPublicVar is ', module2().myPublicVar);
-module2().myPublicFunction('bar');
-
-
-
-
-
+// console.warn('Module 2');
+// var module2 = require("./examples/module2");
+// console.log('myPublicVar is ', module2().myPublicVar);
+// module2().myPublicFunction('bar');
 
 
 // ===========================
-// ..
+// deckard - xBrowser detections
 // ===========================
 require("./vendors/deckard");
 // ===========================
@@ -47,18 +47,23 @@ require("./vendors/deckard");
 
 
 // ===========================
-// setup detection for mobile or tablet
+// custom setup detection for mobile or tablet
+// - could be modified to work with deckard above
 // ===========================
-window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
+window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)").matches;
 
 $(document).ready(function() {
     $(window).on('resize', _.debounce(function() {
-        window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)");
+        window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)").matches;
     }, 250));
 });
 
+console.log('isMobileOrTablet', window.isMobileOrTablet);
+
+// true | false
+// example simple throttled check
 // $(window).on('resize', _.debounce(function() {
-//   console.log('isMobileOrTablet', window.isMobileOrTablet.matches) // true | false
+//   console.log('isMobileOrTablet', window.isMobileOrTablet)
 // }));
 
 // ===========================
@@ -100,6 +105,7 @@ require("pepjs");
 // http://github.hubspot.com/tether/
 // ===========================
 
+// current tooltip dependency checks for window.tether so we require it there
 window.Tether = require("tether");
 
 var tether;
@@ -109,7 +115,7 @@ var tetherElement = $('.o-minibag-contain');
 
 $('#minibag-contain').on('shown.bs.modal', function(e) {
 
-    if (!window.isMobileOrTablet.matches) {
+    if (!window.isMobileOrTablet) {
         // for minibag click shower
         tether = new Tether({
             element: tetherElement,
@@ -163,7 +169,12 @@ require("./modules/dropdown");
 
 
 require("./vendors/jquery.scrollto");
-require("./modules/google-maps-init");
+
+
+if ($body.hasClass('page--storefinder')) {
+  require("./modules/google-maps-init");
+}
+
 
 
 // ===========================
@@ -193,7 +204,7 @@ require("./modules/collapse");
 
 // open collapse examples
 $(document).ready(function() {
-    if (!window.isMobileOrTablet.matches) {
+    if (!window.isMobileOrTablet) {
 
         // on load, open if desktop
         // $("#accordion2 [role='tabpanel']").each(function() {
@@ -202,7 +213,7 @@ $(document).ready(function() {
 
     }
     $(window).on('resize', _.debounce(function() {
-        if (!window.isMobileOrTablet.matches) {
+        if (!window.isMobileOrTablet) {
             //   // on resize, open if desktop
             //   $("#accordion2 [role='tabpanel']").each(function() {
             //     $(this).collapse('show');
@@ -264,7 +275,7 @@ function megamenuInit() {
 }
 
 
-if (!window.isMobileOrTablet.matches) {
+if (!window.isMobileOrTablet) {
     megamenuInit();
 }
 
@@ -273,7 +284,7 @@ if (!window.isMobileOrTablet.matches) {
 // Megamenu end
 // ===========================
 
-if (window.isMobileOrTablet.matches) {
+if (window.isMobileOrTablet) {
     require("./modules/off-canvas");
 }
 
@@ -808,7 +819,7 @@ require('./modules/address-lookup');
         toggleFilterCollapse($(this));
     });
     // console.log(isMobileOrTablet);
-    if (!window.isMobileOrTablet.matches) {
+    if (!window.isMobileOrTablet) {
         toggleFilterCollapse('.filter--title');
     }
 })();
