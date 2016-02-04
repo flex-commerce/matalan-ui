@@ -11,29 +11,27 @@ require("lodash");
 // ===========================
 // Examples
 // ===========================
-
-// var stickyHeaders = require("./examples/new-sticky");
-
-// $(function() {
-//   stickyHeaders($(".search-results--header")).load();
-// });
-
-// $(function() {
-  // stickyHeaders($(".search-results--header")).load();
-  // stickyHeaders($(".search-results--header")).identify();
-// });
-
-// // var plugin = require("./examples/plugin");
-// // console.log(stickyHeaders);
-// stickyHeaders('#searchHeader').load();
-// stickyHeaders('#searchHeader').identify();
+console.warn('Module 0');
+var module0 = require("./examples/module0");
+console.log( module0('Hello') );
 
 
+console.warn('Module 1');
+var module1 = require("./examples/module1");
+console.log('module1', module1);
+module1.incrementCounter();
+console.log(module1.incrementCounter());
+module1.multiply();
+console.log('x', module1.show());
 
-var weekDay = require("./examples/object");
-console.log(weekDay().name("1"));
-console.log(weekDay().name(weekDay().number("Saturday")));
-// weekDay().alert();
+
+console.warn('Module 2');
+var module2 = require("./examples/module2");
+console.log('myPublicVar is ', module2().myPublicVar);
+module2().myPublicFunction('bar');
+
+
+
 
 
 
