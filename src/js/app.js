@@ -6,14 +6,42 @@ require("lodash");
 // Deckard end
 // ===========================
 
-var foo = require("./modules/amodule");
-console.log(foo);
+
+
+// ===========================
+// Examples
+// ===========================
+
+// var stickyHeaders = require("./examples/new-sticky");
+
+// $(function() {
+//   stickyHeaders($(".search-results--header")).load();
+// });
+
+// $(function() {
+  // stickyHeaders($(".search-results--header")).load();
+  // stickyHeaders($(".search-results--header")).identify();
+// });
+
+// // var plugin = require("./examples/plugin");
+// // console.log(stickyHeaders);
+// stickyHeaders('#searchHeader').load();
+// stickyHeaders('#searchHeader').identify();
+
+
+
+var weekDay = require("./examples/object");
+console.log(weekDay().name("1"));
+console.log(weekDay().name(weekDay().number("Saturday")));
+// weekDay().alert();
+
+
+
 
 // ===========================
 // ..
 // ===========================
 require("./vendors/deckard");
-// require("./modules/modal-helpers");
 // ===========================
 // .. end
 // ===========================
@@ -290,11 +318,11 @@ $("[data-myacc='address-delete']").on('click', function(e) {
 // ===========================
 
 var Tooltip = require("./vendors/bootstrap/tooltip");
-console.warn(Tooltip.VERSION);
+// console.warn(Tooltip.VERSION);
 
 
 $(function() {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
 })
 
 
@@ -420,6 +448,7 @@ $('select').selectBox({
 // Sticky Headers
 // ===========================
 
+// currently rewriting - ih 04/02/16
 require("./modules/sticky-headers");
 
 // =========================
@@ -813,3 +842,7 @@ require('./modules/address-lookup');
 //   bh.src = '//www.bugherd.com/sidebarv2.js?apikey=uswxmej5ryhotdtsi4yw9g';
 //   s.parentNode.insertBefore(bh, s);
 // })(document, 'script');
+
+
+
+
