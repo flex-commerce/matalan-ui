@@ -6,14 +6,40 @@ require("lodash");
 // Deckard end
 // ===========================
 
-var foo = require("./modules/amodule");
-console.log(foo);
+
+
+// ===========================
+// Examples
+// ===========================
+console.warn('Module 0');
+var module0 = require("./examples/module0");
+console.log( module0('Hello') );
+
+
+console.warn('Module 1');
+var module1 = require("./examples/module1");
+console.log('module1', module1);
+module1.incrementCounter();
+console.log(module1.incrementCounter());
+module1.multiply();
+console.log('x', module1.show());
+
+
+console.warn('Module 2');
+var module2 = require("./examples/module2");
+console.log('myPublicVar is ', module2().myPublicVar);
+module2().myPublicFunction('bar');
+
+
+
+
+
+
 
 // ===========================
 // ..
 // ===========================
 require("./vendors/deckard");
-// require("./modules/modal-helpers");
 // ===========================
 // .. end
 // ===========================
@@ -290,11 +316,11 @@ $("[data-myacc='address-delete']").on('click', function(e) {
 // ===========================
 
 var Tooltip = require("./vendors/bootstrap/tooltip");
-console.warn(Tooltip.VERSION);
+// console.warn(Tooltip.VERSION);
 
 
 $(function() {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
 })
 
 
@@ -420,6 +446,7 @@ $('select').selectBox({
 // Sticky Headers
 // ===========================
 
+// currently rewriting - ih 04/02/16
 require("./modules/sticky-headers");
 
 // =========================
@@ -813,3 +840,7 @@ require('./modules/address-lookup');
 //   bh.src = '//www.bugherd.com/sidebarv2.js?apikey=uswxmej5ryhotdtsi4yw9g';
 //   s.parentNode.insertBefore(bh, s);
 // })(document, 'script');
+
+
+
+
