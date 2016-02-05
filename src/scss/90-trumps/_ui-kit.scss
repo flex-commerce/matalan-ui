@@ -1,7 +1,7 @@
 .container--full {
     min-height: 100vh;
     min-width: 100vw;
-    padding: 20px;
+    padding: 0;
     @include clearfix();
     position: relative;
 }
