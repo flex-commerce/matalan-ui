@@ -89,17 +89,17 @@ linters:
     width: 2
 
   LeadingZero:
-    enabled: true
-    style: exclude_zero # or 'include_zero'
+    enabled: false
+    style: include_zero # or 'include_zero'
 
   MergeableSelector:
     enabled: true
     force_nesting: true
 
   NameFormat:
-    enabled: true
-    allow_leading_underscore: true
-    convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
+    enabled: false
+    allow_leading_underscore: false
+    convention: hyphenated_lowercase # hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
 
   NestingDepth:
     enabled: true

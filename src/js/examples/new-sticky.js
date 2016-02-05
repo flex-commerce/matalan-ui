@@ -1,36 +1,40 @@
-var stickyHeaders = (function() {
+// var stickyHeaders = (function() {
 
-  var $window = $(window),
-  $stickies;
 
-  var load = function(stickies) {
+module.exports = function(el) {
 
-    if (typeof stickies === "object" && stickies instanceof jQuery && stickies.length > 0) {
+  var $window = $(window);
+  var $el = $(el);
 
-      $stickies = stickies.each(function() {
-        var $thisSticky = $(this).wrap('<div class="followWrap u-mar-b-medium" />');
-        $thisSticky
-        .data('originalPosition', $thisSticky.offset().top)
-        .data('originalHeight', $thisSticky.outerHeight())
-        .parent()
-        .height($thisSticky.outerHeight());
-      });
+  var load = function() {
 
-      $window.off("scroll.stickies").on("scroll.stickies", function() {
+    if (typeof el === "object" && el instanceof jQuery && el.length > 0) {
+
+      // $el = el.each(function() {
+    var $thisSticky = $el.wrap('<div class="followWrap u-mar-b-medium" />');
+    $thisSticky
+      .data('originalPosition', $thisSticky.offset().top)
+      .data('originalHeight', $thisSticky.outerHeight())
+      .parent().height($thisSticky.outerHeight());
+      // });
+
+      $window.on("scroll", function() {
         _whenScrolling();
       });
+
     }
 
   };
 
+
   var _whenScrolling = function() {
 
-    $stickies.each(function(i) {
+    $el.each(function(i) {
       var $thisSticky = $(this),
       $stickyPosition = $thisSticky.data('originalPosition');
 
       if ($stickyPosition <= $window.scrollTop()) {
-        var $nextSticky = $stickies.eq(i + 1),
+        var $nextSticky = $el.eq(i + 1),
         $nextStickyPosition = $nextSticky.data('originalPosition') - $thisSticky.data('originalHeight');
         $thisSticky.addClass("fixed");
         if ($nextSticky.length > 0 && $thisSticky.offset().top >= $nextStickyPosition) {
@@ -38,7 +42,7 @@ var stickyHeaders = (function() {
         }
 
       } else {
-        var $prevSticky = $stickies.eq(i - 1);
+        var $prevSticky = $el.eq(i - 1);
         $thisSticky.removeClass("fixed");
         if ($prevSticky.length > 0 && $window.scrollTop() <= $thisSticky.data('originalPosition') - $thisSticky.data('originalHeight')) {
           $prevSticky.removeClass("absolute").removeAttr("style");
@@ -51,8 +55,8 @@ var stickyHeaders = (function() {
     load: load
   };
 
-})();
+}
 
-$(function() {
-  stickyHeaders.load($(".search-results--header"));
-});
+// })();
+
+

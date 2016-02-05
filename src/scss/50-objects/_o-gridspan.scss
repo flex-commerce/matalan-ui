@@ -2,20 +2,16 @@
 // ideally these will the only children from the parent div wrapper
 // required for floats and the '.colspan-x--gutter' classes
 
-
 @for $i from 1 through $susy-columns {
-
   // the default column span, with no gutters outside or between items
   .colspan-#{$i} {
     @include span($i no-gutter);
   }
 
-
   // the 'outer' column span, with gutters outside and between items
   .colspan-#{$i}--gutter-outer {
     @include span($i);
   }
-
 
   // the 'gutter' column span, with no gutters outside but gutters between items
   .colspan-#{$i}--gutter {
@@ -29,5 +25,4 @@
       padding-right: 0;
     }
   }
-
 }

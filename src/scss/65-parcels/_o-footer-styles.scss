@@ -17,6 +17,7 @@ $footer-bg-color: $light-grey-hover;
   float: left;
   height: 50px;
   padding: 0.5em 0;
+
   .svg {
     height: 100%;
   }
@@ -24,8 +25,10 @@ $footer-bg-color: $light-grey-hover;
 
 .o-footer__card-svg:not(.o-footer__card-svg__small) {
   width: 25%;
+
   .svg {
     @include center(x);
+
     height: 100%;
   }
 }
@@ -34,14 +37,13 @@ $footer-bg-color: $light-grey-hover;
   width: 20%;
 }
 
-
 // ===============================
-
 
 .o-footer--social {
   .icon:before {
     color: $cool-grey;
   }
+
   .icon:hover:before {
     color: $cool-grey-hover;
   }
@@ -57,10 +59,12 @@ $footer-bg-color: $light-grey-hover;
   }
 }
 
+
 @include mq($until: md) {
   .o-footer--title {
     text-align: center;
   }
+
   .o-footer--social {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -71,9 +75,9 @@ $footer-bg-color: $light-grey-hover;
 
 // ===============================
 
-
 .o-footer--list {
   @include font-size(12px);
+
   .o-list__item {
     padding: 0.25em 0;
   }
@@ -81,30 +85,29 @@ $footer-bg-color: $light-grey-hover;
 
 .o-footer--list {
   text-align: center;
+
   @include mq($from: md) {
     text-align: left;
   }
 }
 
-
 // ===============================
-
 
 .c-frame-caption {
   width: 250px;
+
   @include mq($until: md) {
     @include center(x);
   }
 }
 
-
-
-
 .o-footer__subscribe .o-form--input-pack {
-    @include mq($from: md) {
-  min-width: 350px;
-}
+  @include mq($from: md) {
+    min-width: 350px;
+  }
+
+
   @include mq($from: lg) {
-  min-width: 450px;
-}
+    min-width: 450px;
+  }
 }

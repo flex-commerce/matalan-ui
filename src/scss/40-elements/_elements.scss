@@ -1,8 +1,8 @@
+// scss-lint:disable QualifyingElement
 
 hr {
   margin: 2rem 0;
 }
-
 
 img {
   max-width: 100%;
@@ -11,7 +11,6 @@ img {
 /*------------------------------------*\
     #LISTS
 \*------------------------------------*/
-
 
 /**
  * Remove extra vertical spacing when nesting lists.
@@ -24,35 +23,36 @@ li {
   }
 }
 
-
-
 /*------------------------------------*\
     #ANCHOR
 \*------------------------------------*/
 a {
   text-decoration: none;
   color: $base-text-color;
-  &:hover,
-  &:active
-   {
-    color: $primary-color;
-/*     text-decoration: underline; */
-  }
-  &.link:focus {
-    @include tab-focus();
-  }
-}
 
-a.link--nostyle {
   &:hover,
-  &.active {
-    color: inherit;
-    text-decoration: none;
+  &:active {
+    color: $primary-color;
+
+    /*     text-decoration: underline; */
+  }
+
+  &.link:focus {
+    @include tab-focus;
+  }
+
+  .link--nostyle {
+    &:hover,
+    &.active {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 }
 
 .link--underline {
   text-decoration: underline;
+
   &::before,
   &::after {
     text-decoration: underline;
@@ -62,13 +62,13 @@ a.link--nostyle {
 p a {
   border-bottom: 1px dotted;
   text-decoration: none;
+
   &:hover,
   &:active,
   &:focus {
     color: $primary-color;
   }
 }
-
 
 input[type="text"],
 input[type="submit"],
@@ -78,8 +78,9 @@ input[type="email"] {
   border-radius: 0;
 }
 
-input:focus, textarea:focus {
-  @include input-focus();
+input:focus,
+textarea:focus {
+  @include input-focus;
 }
 
 table {
