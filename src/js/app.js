@@ -17,11 +17,6 @@ require("lodash");
 // Examples
 // ===========================
 
-    // replace with - if pdp page, body onclick select-disabled
-    $('#dev-pdpworks--show1').on('click', function(){
-      $('#dev-pdpworks--panel1').collapse('show');
-    })
-
 // console.warn('Module 0');
 // var module0 = require("./examples/module0");
 // console.log( module0('Hello') );
