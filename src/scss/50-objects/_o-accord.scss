@@ -1,26 +1,31 @@
-.o-accord__container {
-  .collapse {
-    display: none;
+// low spec version - investigate if this is needed
+.collapse {
+  display: none;
+  &.in {
+    display: block;
+    padding-bottom: 1.5em;
+  }
+}
 
+// end low spec version
+.o-accord__container {
+  > .panel > .collapse {
+    display: none;
     &.in {
       display: block;
       padding-bottom: 1.5em;
     }
   }
-
   .icon-plus {
     display: none;
   }
-
   .icon-minus {
     display: inline;
   }
-
   .collapsed {
     .icon-minus {
       display: none;
     }
-
     .icon-plus {
       display: inline;
     }
@@ -32,7 +37,6 @@
     .icon-plus {
       display: none;
     }
-
     .icon-minus {
       display: inline;
     }
@@ -50,10 +54,10 @@
     cursor: pointer;
     position: relative;
     padding: 1.5em 0;
-
     .panel.disabled & {
       color: $cool-grey;
       cursor: default;
     }
   }
 }
+

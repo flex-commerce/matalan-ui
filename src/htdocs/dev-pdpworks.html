@@ -11,21 +11,37 @@
   <div class="container" role="main">
     <div class="row">
 
+<script>
 
-      <button id="dev-pdpworks" class="c-btn c-btn-primary">show me</button>
+    // replace with - if pdp page, body onclick select-disabled
+    // $('#dev-pdpworks--show1').on('click', function(){
+    //   $('#dev-pdpworks--panel1').collapse('show');
+    // })
 
-      <div class="o-accord__container" id="accordion2" role="tablist">
+</script>
+
+
+      <!-- use any markup for this button, we'll handle the events in JS -->
+      <button id="dev-pdpworks--show1" class="c-btn c-btn-primary">show me</button>
+
+        <!-- panel 1 -->
         <div class="panel">
-          <div id="headingOne2">
-            <a class="collapsed" data-toggle="collapse" href="#collapseOne2">
-              <strong>Collapsible Group Item #1</strong>
-            </a>
-          </div>
-          <div id="collapseOne2" class="collapse" role="tabpanel">
-            {{ lorem count=50 }}
+          <div id="dev-pdpworks--panel1" class="collapse" role="tabpanel">
+            <p>We're sorry but this size is not in stock.
+
+            <!-- button 2, gets its triggers from the data attributes -->
+            <a href="#dev-pdpworks--panel2" data-toggle="collapse" class="c-btn c-btn-primary--alt">show me 2</a>
+            to register your email address and we'll let you know when it's available.</p>
+
+            <!-- panel 2 -->
+              <div id="dev-pdpworks--panel2" class="collapse" role="tabpanel">
+                {{ lorem count=50 }}
+              </div>
+            <!-- panel 2 end -->
+
           </div>
         </div>
-      </div>
+        <!-- panel 1 end -->
 
     </div>
   </div>

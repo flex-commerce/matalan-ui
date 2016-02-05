@@ -17,8 +17,9 @@ require("lodash");
 // Examples
 // ===========================
 
-    $('#dev-pdpworks').on('click', function(){
-      $('#collapseOne2').collapse('show');
+    // replace with - if pdp page, body onclick select-disabled
+    $('#dev-pdpworks--show1').on('click', function(){
+      $('#dev-pdpworks--panel1').collapse('show');
     })
 
 // console.warn('Module 0');
