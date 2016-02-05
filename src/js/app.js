@@ -16,6 +16,11 @@ require("lodash");
 // ===========================
 // Examples
 // ===========================
+
+    $('#dev-pdpworks').on('click', function(){
+      $('#collapseOne2').collapse('show');
+    })
+
 // console.warn('Module 0');
 // var module0 = require("./examples/module0");
 // console.log( module0('Hello') );
@@ -448,6 +453,10 @@ $('select').selectBox({
     mobile: false,
     loopOptions: true
 });
+
+
+
+
 // ===========================
 // SelectBox End
 // ===========================
