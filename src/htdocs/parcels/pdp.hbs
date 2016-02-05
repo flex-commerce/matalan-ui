@@ -149,18 +149,21 @@
           </div>
         </div>
       </div>
+
       <div class="u-cf">
         <div class="col-12@xs col-9@lg u-mar-t-medium">
           <select class="col-12@xs u-pad-0 selectbox-full select-box__label-size">
             <option>Small</option>
             <option>Medium</option>
-            <option>Large</option>
+            <option value="Large" disabled>Large - Email me when in stock</option>
+            <option>X Large</option>
           </select>
         </div>
         <div class="col-3@lg hidden@md-down  u-mar-t-medium">
           <a class="c-btn c-btn-primary col-12@xs selectbox-full u-font-upper">Size Guide</a>
         </div>
       </div>
+      <div class="u-cf">
       <div class="col-6@xs col-4@lg u-mar-t-medium">
         <select class="col-12@xs u-pad-0 selectbox-full select-box__label-quantity">
           <option>1</option>
@@ -177,7 +180,74 @@
           Add to Bag
         </a>
       </div>
-      <div class="col-12@xs u-mar-t-medium">
+      </div>
+      <div class="col-12@xs">
+
+
+          <div id="dev-pdpworks--panel1" class="collapse u-mar-t-medium u-pad-b-0" role="tabpanel">
+          <div class="island">
+            <p>We're sorry but this size is not in stock.
+
+            <!-- button 2, gets its triggers from the data attributes -->
+            <a href="#dev-pdpworks--panel2" data-toggle="collapse">Click here</a>
+            to register your email address and we'll let you know when it's available.</p>
+
+            <!-- panel 2 -->
+              <div id="dev-pdpworks--panel2" class="collapse u-pad-b-0" role="tabpanel">
+                <form class="o-form o-form--default" action="">
+                <div class="row">
+                  <div class="col-12@xs col-4@lg">
+
+                    <div class="o-form__row">
+                      <div class="o-form__label-contain">
+                        <label class="o-form__label-primary">Full name:</label>
+                      </div>
+
+                      <div class="o-form__input-contain">
+                        <input type="text" class="o-input o-input--textual" placeholder="Full Name" required="">
+                        <span class="input__required">*</span>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-12@xs col-5@lg">
+                    <div class="o-form__row">
+                      <div class="o-form__label-contain">
+                    <!--     <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover"
+                          data-trigger="focus" title="" data-content="And here's some amazing content. It's very engaging. Right?"
+                          data-original-title="Dismissible popover"></i> -->
+                        <label class="o-form__label-primary">Email: </label>
+                      </div>
+
+                      <div class="o-form__input-contain">
+                        <input type="text" class="o-input o-input--textual" placeholder="Email address" required="">
+                        <span class="input__required">*</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-12@xs col-3@lg">
+                  <div class="o-form__row">
+                      <div class="o-form__label-contain hidden@md-down">
+                        <label class="o-form__label-primary">&nbsp;</label>
+                      </div>
+
+                      <div class="o-form__input-contain">
+                        <button type="submit" form="createAccountForm" class="c-btn c-btn-tertiary c-btn--block">Let&nbsp;me&nbsp;know</button>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+                </form>
+              </div>
+            <!-- panel 2 end -->
+           </div>
+        </div>
+        </div>
+      <div class="col-12@xs u-mar-t-small">
 
         <ul class="o-list__tick">
           <li>
