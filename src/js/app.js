@@ -154,6 +154,11 @@ $('#minibag-contain').on('hidden.bs.modal', function(e) {
 // Common JS functions
 // ===========================
 require("./modules/general");
+require("./dev/misc-dev");
+require("./dev/pdp-dev");
+require("./dev/mini-mybag-dev");
+require("./dev/dev-dev");
+
 // ===========================
 // Common JS end
 // ===========================
