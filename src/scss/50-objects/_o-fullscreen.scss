@@ -1,18 +1,16 @@
 .o-fullscreen-container {
     position: relative;
-    height: calc(100% - 59px);
+    height: calc(100vh - 59px);
     display: block;
     @include mq($until: lg) {
-        height: calc(100% - 59px);
+        height: calc(100vh - 59px);
     }
     @include mq($from: lg) {
-        height: calc(100% - 110px);
+        height: calc(100vh - 110px);
     }
     &.winter-hero {
-        @include mq($from: md) {
-            background: url('../img-assets/winter-hero.jpg') no-repeat top center;
-            background-size: cover;
-        }
+        background: url('../img-assets/winter-hero.jpg') no-repeat top center;
+        background-size: cover;
     }
     &.spring-hero {
         @include mq($from: md) {
