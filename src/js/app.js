@@ -646,7 +646,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                     w: rect.width
                 };
             },
-            bgOpacity: 0.5,
+            bgOpacity: 0.7,
             disableAnimation: true,
             hideAnimationDuration: 0,
             showAnimationDuration: 0,

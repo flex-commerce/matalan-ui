@@ -100,7 +100,7 @@
 
             <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
             </button>
-            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <!-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> -->
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
             </div>
@@ -186,7 +186,7 @@
 
           <div id="dev-pdpworks--panel1" class="collapse u-mar-t-medium u-pad-b-0" role="tabpanel">
           <div class="island">
-            <p>We're sorry but this size is not in stock.
+            <p>We're sorry but this item is not in stock.
 
             <!-- button 2, gets its triggers from the data attributes -->
             <a href="#dev-pdpworks--panel2" data-toggle="collapse">Click here</a>
@@ -282,27 +282,33 @@
           <ul class="c-tabs__content">
 
             <li role="tabpanel-title" class="c-tabs__header__item--accord accord--active">
-              <a href="#information" data-toggle="tab" role="tab">Product Information</a>
-              <i class="icon icon-plus icon--vertical-right"></i>
+              <a href="#information" data-toggle="tab" role="tab">Product Information
+                <i class="icon icon-plus icon--vertical-right"></i>
               <i class="icon icon-minus icon--vertical-right"></i>
+              </a>
+
             </li>
             <li role="tabpanel" class="c-tabs__content__pane" id="information">
               Product information content - {{lorem count=100}}
             </li>
 
             <li role="tabpanel-title" class="c-tabs__header__item--accord">
-              <a href="#ratings" data-toggle="tab" role="tab">Ratings &amp; Reviews</a>
+              <a href="#ratings" data-toggle="tab" role="tab">Ratings &amp; Reviews
               <i class="icon icon-plus icon--vertical-right"></i>
               <i class="icon icon-minus icon--vertical-right"></i>
+              </a>
+
             </li>
             <li role="tabpanel" class="c-tabs__content__pane" id="ratings">
               Ratings &amp; Reviews content - {{lorem count=50}}
             </li>
 
             <li role="tabpanel-title" class="c-tabs__header__item--accord">
-              <a href="#delivery" data-toggle="tab" role="tab">Delivery &amp; Returns</a>
-              <i class="icon icon-plus icon--vertical-right"></i>
+              <a href="#delivery" data-toggle="tab" role="tab">Delivery &amp; Returns
+                <i class="icon icon-plus icon--vertical-right"></i>
               <i class="icon icon-minus icon--vertical-right"></i>
+              </a>
+
             </li>
             <li role="tabpanel" class="c-tabs__content__pane" id="delivery">
               Delivery &amp; Returns content -{{lorem count=60}}
