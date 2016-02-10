@@ -69,7 +69,8 @@
   // Postcode Anywhere
   // ==========================
 
-  $('.pa-address-lookup').on('click', function(e) {
+// TODO - this has been renamed
+  $('.js-address-lookup').on('click', function(e) {
 
       e.preventDefault();
       var thisParentWrapper = $(this).closest('[data-app="address-lookup--wrapper"]');

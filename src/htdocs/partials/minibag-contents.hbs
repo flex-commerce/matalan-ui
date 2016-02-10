@@ -13,6 +13,8 @@
     </div>
       {{> partials/minibag-contents-out-of-stock }}
     </div>
+
+
     <ul class="o-minibag--list-contain">
 
       {{#each minibag.category.collection.products}}
@@ -21,12 +23,14 @@
           <img class="img" src="{{productImages.[0]}}">
         </div>
         <div class="o-minibag--list-item--detail col-9@xs col-10@md col-5@lg">
-          <p class="detail--description u-font-wb"><a href="./pdp.html" class="ink--nostyle link--underline" style="border-bottom: none;">{{productTitle}}</a></p>
+          <p class="detail--description u-font-wb">
+            <a href="./pdp.html" class="ink--nostyle link--underline">{{productTitle}}</a>
+          </p>
           <ul class="detail--vars u-pad-b-small list-space__small">
             <li class="list__item">Color:
               <span class="color-swatch__inline u-bgcolor-cgrey"></span>
             </li>
-            <li class="list__item">Size: Small</li>
+            <li class="list__item">Size: {{productSize}}</li>
           </ul>
           <ul class="detail--price list-space__small">
             <li class="list__item">
@@ -51,7 +55,7 @@
         <div class="o-minibag--list-item--control o-minibag--list-item--quant col-9@xs col-10@md hidden@lg-up u-fr">
             <div class="o-minibag--control--remove col-4@xs u-pad-0">
               <a class="c-btn c-btn-tertiary--alt u-font-no-underline" href="#">
-                <span class="hidden@lg-down">&times;</span> remove</a>
+              <span class="hidden@lg-down">&times;</span> remove</a>
             </div>
             <div class="o-form__input-contain o-form__input-contain--quantity col-8@xs u-pad-0 u-font-ta-r">
               <a class="c-btn c-btn-primary u-font-no-underline js-remove-item">-</a>

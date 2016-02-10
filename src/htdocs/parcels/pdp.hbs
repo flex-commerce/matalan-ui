@@ -1,39 +1,39 @@
 {{> partials/breadcrumb }}
+
 <div class="row">
   <div class="col-12@xs col-7@md col-5@lg u-mar-t-medium product-images">
-  <div class="o-product__slider" id="cascade-slider">
+    <div class="o-product__slider" id="cascade-slider">
+
       <figure>
-        <a href="./img-assets/product-1.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-1.jpg"
-                 data-lazy="./img-assets/product-1.jpg"  alt="" />
-            <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
-            <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
+        <a href="./img-assets/product-1.jpg" data-size="846x1184">
+          <img src="./img-assets/product-1.jpg" data-lazy="./img-assets/product-1.jpg" alt="" />
+          <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
+          <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
         </a>
         <div class="slick-zoom">
-            <i class="icon icon-plus"></i>
-        </div>
-      </figure>
-      <figure>
-        <a href="./img-assets/product-2.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-2.jpg"
-                 data-lazy="./img-assets/product-2.jpg"  alt="" />
-            <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
-            <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
-        </a>
-        <div class="slick-zoom">
-            <i class="icon icon-plus"></i>
+          <i class="icon icon-plus"></i>
         </div>
       </figure>
 
       <figure>
-        <a href="./img-assets/product-3.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-3.jpg"
-                 data-lazy="./img-assets/product-3.jpg"  alt="" />
-            <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
-            <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
+        <a href="./img-assets/product-2.jpg" data-size="846x1184">
+          <img src="./img-assets/product-2.jpg" data-lazy="./img-assets/product-2.jpg" alt="" />
+          <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
+          <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
         </a>
         <div class="slick-zoom">
-            <i class="icon icon-plus"></i>
+          <i class="icon icon-plus"></i>
+        </div>
+      </figure>
+
+      <figure>
+        <a href="./img-assets/product-3.jpg" data-size="846x1184">
+          <img src="./img-assets/product-3.jpg" data-lazy="./img-assets/product-3.jpg" alt="" />
+          <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
+          <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
+        </a>
+        <div class="slick-zoom">
+          <i class="icon icon-plus"></i>
         </div>
       </figure>
 
@@ -45,74 +45,72 @@
     </div>
     <div class="u-pad-t-medium">
       <a class="c-btn c-btn--icon c-btn--block c-btn-primary">
-        <i class="icon icon-eye"></i>
-        Get the Look
+        <i class="icon icon-eye"></i> Get the Look
       </a>
     </div>
+  </div>
 
-</div>
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     <!-- Background of PhotoSwipe.
-         It's a separate element, as animating opacity is faster than rgba(). -->
+    It's a separate element, as animating opacity is faster than rgba(). -->
     <div class="pswp__bg"></div>
 
     <!-- Slides wrapper with overflow:hidden. -->
     <div class="pswp__scroll-wrap">
 
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <div class="pswp__container">
-            <!-- don't modify these 3 pswp__item elements, data is added later on -->
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
+      <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+      <div class="pswp__container">
+        <!-- don't modify these 3 pswp__item elements, data is added later on -->
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
 
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
 
-            <div class="pswp__top-bar">
+        <div class="pswp__top-bar">
 
-                <!--  Controls are self-explanatory. Order can be changed. -->
+          <!--  Controls are self-explanatory. Order can be changed. -->
 
-                <div class="pswp__counter"></div>
+          <div class="pswp__counter"></div>
 
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
             </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
           </div>
-
         </div>
 
-</div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+        </button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+        </button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 
   <div class="col-12@xs col-5@md col-7@lg">
-      <div class="row">
+    <div class="row">
       <div class="col-12@xs">
         <div class="row u-mar-t-small">
           <div class="col-8@xs">
@@ -125,23 +123,30 @@
         <div class="row u-mar-t-small">
           <div class="col-8@xs">
             <span class="rating">
-             <i class="icon icon-star-fill active"></i>
-             <i class="icon icon-star-fill active"></i>
-             <i class="icon icon-star-fill active"></i>
-             <i class="icon icon-star-fill active"></i>
-             <i class="icon icon-star-fill"></i>
-           </span>
+              <i class="icon icon-star-fill active"></i>
+              <i class="icon icon-star-fill active"></i>
+              <i class="icon icon-star-fill active"></i>
+              <i class="icon icon-star-fill active"></i>
+              <i class="icon icon-star-fill"></i>
+            </span>
           </div>
           <div class="col-4@xs u-font-ta-r">
-            <p>Was £0.00<br />Save £0.00</p>
+            <p>Was £0.00
+              <br />Save £0.00</p>
           </div>
         </div>
         <div class="row">
           <div class="col-8@xs">
             <ul class="filter--colours u-pad-b-small">
-              <li class="active" title="{{ randomcolour }} - ({{randomnum}})" ><div style="background-color:{{ randomcolour }}"></div></li>
-              <li title="{{ randomcolour }} - ({{randomnum}})"><div style="background-color:{{ randomcolour }}"></div></li>
-              <li title="{{ randomcolour }} - ({{randomnum}})"><div style="background-color:{{ randomcolour }}"></div></li>
+              <li class="active" title="{{ randomcolour }} - ({{randomnum}})">
+                <div style="background-color:{{ randomcolour }}"></div>
+              </li>
+              <li title="{{ randomcolour }} - ({{randomnum}})">
+                <div style="background-color:{{ randomcolour }}"></div>
+              </li>
+              <li title="{{ randomcolour }} - ({{randomnum}})">
+                <div style="background-color:{{ randomcolour }}"></div>
+              </li>
             </ul>
           </div>
           <div class="col-4@xs u-font-ta-r">
@@ -152,11 +157,11 @@
 
       <div class="u-cf">
         <div class="col-12@xs col-9@lg u-mar-t-medium">
-          <select class="col-12@xs u-pad-0 selectbox-full select-box__label-size">
-            <option>Small</option>
-            <option>Medium</option>
-            <option value="Large" disabled>Large - Email me when in stock</option>
-            <option>X Large</option>
+          <select value="Default message" class="js-product-select--size col-12@xs u-pad-0 selectbox-full select-box__label-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large" disabled>Large - Email me when in stock</option>
+            <option value="xlarge">X Large</option>
           </select>
         </div>
         <div class="col-3@lg hidden@md-down  u-mar-t-medium">
@@ -164,41 +169,39 @@
         </div>
       </div>
       <div class="u-cf">
-      <div class="col-6@xs col-4@lg u-mar-t-medium">
-        <select class="col-12@xs u-pad-0 selectbox-full select-box__label-quantity">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-        </select>
-      </div>
-      <div class="col-6@xs hidden@lg-up u-mar-t-medium">
-        <a class="c-btn c-btn-primary col-12@xs selectbox-full u-font-upper">Size Guide</a>
-      </div>
-      <div class="col-12@xs col-8@lg u-mar-t-medium">
-        <a class="c-btn c-btn--icon c-btn--block c-btn-secondary">
-          <i class="icon icon-mini-bag"></i>
-          Add to Bag
-        </a>
-      </div>
+        <div class="col-6@xs col-4@lg u-mar-t-medium">
+          <select class="col-12@xs u-pad-0 selectbox-full select-box__label-quantity">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="col-6@xs hidden@lg-up u-mar-t-medium">
+          <a class="c-btn c-btn-primary col-12@xs selectbox-full u-font-upper">Size Guide</a>
+        </div>
+        <div class="col-12@xs col-8@lg u-mar-t-medium">
+          <a class="c-btn c-btn--icon c-btn--block c-btn-secondary">
+            <i class="icon icon-mini-bag"></i> Add to Bag
+          </a>
+        </div>
       </div>
       <div class="col-12@xs">
 
 
-          <div id="dev-pdpworks--panel1" class="collapse u-mar-t-medium u-pad-b-0" role="tabpanel">
+        <div id="dev-pdpworks--panel1" class="collapse u-mar-t-medium u-pad-b-0" role="tabpanel">
           <div class="island">
             <p>We're sorry but this size is not in stock.
 
-            <!-- button 2, gets its triggers from the data attributes -->
-            <a href="#dev-pdpworks--panel2" data-toggle="collapse">Click here</a>
-            to register your email address and we'll let you know when it's available.</p>
+              <!-- button 2, gets its triggers from the data attributes -->
+              <a href="#dev-pdpworks--panel2" data-toggle="collapse">Click here</a> to register your email address and we'll let you know when it's available.</p>
 
             <!-- panel 2 -->
-              <div id="dev-pdpworks--panel2" class="collapse u-pad-b-0" role="tabpanel">
-                <form class="o-form o-form--default" action="">
+            <div id="dev-pdpworks--panel2" class="collapse u-pad-b-0" role="tabpanel">
+              <form class="o-form o-form--default" action="">
                 <div class="row">
                   <div class="col-12@xs col-4@lg">
 
-                    <div class="o-form__row">
+                    <div class="o-form__row u-pad-b-0">
                       <div class="o-form__label-contain">
                         <label class="o-form__label-primary">Full name:</label>
                       </div>
@@ -211,24 +214,19 @@
                     </div>
                   </div>
                   <div class="col-12@xs col-5@lg">
-                    <div class="o-form__row">
+                    <div class="o-form__row u-pad-b-0">
                       <div class="o-form__label-contain">
-                    <!--     <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover"
-                          data-trigger="focus" title="" data-content="And here's some amazing content. It's very engaging. Right?"
-                          data-original-title="Dismissible popover"></i> -->
                         <label class="o-form__label-primary">Email: </label>
                       </div>
-
                       <div class="o-form__input-contain">
                         <input type="text" class="o-input o-input--textual" placeholder="Email address" required="">
                         <span class="input__required">*</span>
                       </div>
-
                     </div>
                   </div>
 
                   <div class="col-12@xs col-3@lg">
-                  <div class="o-form__row">
+                    <div class="o-form__row u-pad-b-0">
                       <div class="o-form__label-contain hidden@md-down">
                         <label class="o-form__label-primary">&nbsp;</label>
                       </div>
@@ -241,12 +239,12 @@
 
                   </div>
                 </div>
-                </form>
-              </div>
+              </form>
+            </div>
             <!-- panel 2 end -->
-           </div>
+          </div>
         </div>
-        </div>
+      </div>
       <div class="col-12@xs u-mar-t-small">
 
         <ul class="o-list__tick">
@@ -314,23 +312,25 @@
       </div>
       <div class="col-12@lg u-mar-t-medium u-cf">
         <!-- AddToAny BEGIN -->
-          <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-            <a class="a2a_button_facebook"></a>
-            <a class="a2a_button_twitter"></a>
-            <a class="a2a_button_google_plus"></a>
-            <a class="a2a_button_email"></a>
-            <a class="a2a_button_pinterest"></a>
-          </div>
-          <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+          <a class="a2a_button_facebook"></a>
+          <a class="a2a_button_twitter"></a>
+          <a class="a2a_button_google_plus"></a>
+          <a class="a2a_button_email"></a>
+          <a class="a2a_button_pinterest"></a>
+        </div>
+        <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
         <!-- AddToAny END -->
       </div>
     </div>
     <div class="col-12@xs hidden@md-up u-pad-h-0">
       <div class="u-mar-t-medium">
         <a class="c-btn c-btn-primary  col-12@xs u-font-upper">
-         Back To Top
-        </a>
+           Back To Top
+         </a>
       </div>
     </div>
   </div>
+
 </div>
+

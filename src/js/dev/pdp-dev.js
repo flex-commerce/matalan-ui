@@ -1,3 +1,6 @@
+var selectBox = require("../modules/selectbox");
+
+
 
 
 $('body.page--pdp').on('click', '.selectbox-disabled', function() {
