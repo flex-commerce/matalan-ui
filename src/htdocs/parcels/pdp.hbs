@@ -1,11 +1,12 @@
 {{> partials/breadcrumb }}
+
 <div class="row">
   <div class="col-12@xs col-7@md col-5@lg u-mar-t-medium product-images">
   <div class="o-product__slider" id="cascade-slider">
+
       <figure>
         <a href="./img-assets/product-1.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-1.jpg"
-                 data-lazy="./img-assets/product-1.jpg"  alt="" />
+          <img src="./img-assets/product-1.jpg" data-lazy="./img-assets/product-1.jpg" alt="" />
             <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
             <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
         </a>
@@ -13,10 +14,10 @@
             <i class="icon icon-plus"></i>
         </div>
       </figure>
+
       <figure>
         <a href="./img-assets/product-2.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-2.jpg"
-                 data-lazy="./img-assets/product-2.jpg"  alt="" />
+          <img src="./img-assets/product-2.jpg" data-lazy="./img-assets/product-2.jpg" alt="" />
             <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
             <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
         </a>
@@ -27,8 +28,7 @@
 
       <figure>
         <a href="./img-assets/product-3.jpg"  data-size="846x1184">
-            <img src="./img-assets/product-3.jpg"
-                 data-lazy="./img-assets/product-3.jpg"  alt="" />
+          <img src="./img-assets/product-3.jpg" data-lazy="./img-assets/product-3.jpg" alt="" />
             <div data-content="New" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl"></div>
             <div data-content="Top Right" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr"></div>
         </a>
@@ -45,12 +45,11 @@
     </div>
     <div class="u-pad-t-medium">
       <a class="c-btn c-btn--icon c-btn--block c-btn-primary">
-        <i class="icon icon-eye"></i>
-        Get the Look
+        <i class="icon icon-eye"></i> Get the Look
       </a>
     </div>
+  </div>
 
-</div>
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
@@ -108,7 +107,6 @@
           </div>
 
         </div>
-
 </div>
 
   <div class="col-12@xs col-5@md col-7@lg">
@@ -134,15 +132,22 @@
            </span>
           </div>
           <div class="col-4@xs u-font-ta-r">
-            <p>Was £0.00<br />Save £0.00</p>
+            <p>Was £0.00
+              <br />Save £0.00</p>
           </div>
         </div>
         <div class="row">
           <div class="col-8@xs">
             <ul class="filter--colours u-pad-b-small">
-              <li class="active" title="{{ randomcolour }} - ({{randomnum}})" ><div style="background-color:{{ randomcolour }}"></div></li>
-              <li title="{{ randomcolour }} - ({{randomnum}})"><div style="background-color:{{ randomcolour }}"></div></li>
-              <li title="{{ randomcolour }} - ({{randomnum}})"><div style="background-color:{{ randomcolour }}"></div></li>
+              <li class="active" title="{{ randomcolour }} - ({{randomnum}})">
+                <div style="background-color:{{ randomcolour }}"></div>
+              </li>
+              <li title="{{ randomcolour }} - ({{randomnum}})">
+                <div style="background-color:{{ randomcolour }}"></div>
+              </li>
+              <li title="{{ randomcolour }} - ({{randomnum}})">
+                <div style="background-color:{{ randomcolour }}"></div>
+              </li>
             </ul>
           </div>
           <div class="col-4@xs u-font-ta-r">
@@ -153,11 +158,11 @@
 
       <div class="u-cf">
         <div class="col-12@xs col-9@lg u-mar-t-medium">
-          <select class="col-12@xs u-pad-0 selectbox-full select-box__label-size">
-            <option>Small</option>
-            <option>Medium</option>
-            <option value="Large" disabled>Large - Email me when in stock</option>
-            <option>X Large</option>
+          <select value="Default message" class="js-product-select--size col-12@xs u-pad-0 selectbox-full select-box__label-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large" disabled>Large - Email me when in stock</option>
+            <option value="xlarge">X Large</option>
           </select>
         </div>
         <div class="col-3@lg hidden@md-down  u-mar-t-medium">
@@ -177,8 +182,7 @@
         </div>
         <div class="col-12@xs col-8@lg u-mar-t-medium js-ewis-hide">
           <a class="c-btn c-btn--icon c-btn--block c-btn-secondary">
-            <i class="icon icon-mini-bag"></i>
-            Add to Bag
+            <i class="icon icon-mini-bag"></i> Add to Bag
           </a>
         </div>
       </div>
@@ -194,7 +198,7 @@
                 <div class="row">
                   <div class="col-12@xs col-4@lg">
 
-                    <div class="o-form__row">
+                    <div class="o-form__row u-pad-b-0">
                       <div class="o-form__label-contain">
                         <label class="o-form__label-primary">Full name:</label>
                       </div>
@@ -207,24 +211,19 @@
                     </div>
                   </div>
                   <div class="col-12@xs col-5@lg">
-                    <div class="o-form__row">
+                    <div class="o-form__row u-pad-b-0">
                       <div class="o-form__label-contain">
-                    <!--     <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover"
-                          data-trigger="focus" title="" data-content="And here's some amazing content. It's very engaging. Right?"
-                          data-original-title="Dismissible popover"></i> -->
                         <label class="o-form__label-primary">Email: </label>
                       </div>
-
                       <div class="o-form__input-contain">
                         <input type="text" class="o-input o-input--textual" placeholder="Email address" required="">
                         <span class="input__required">*</span>
                       </div>
-
                     </div>
                   </div>
 
                   <div class="col-12@xs col-3@lg">
-                  <div class="o-form__row">
+                    <div class="o-form__row u-pad-b-0">
                       <div class="o-form__label-contain hidden@md-down">
                         <label class="o-form__label-primary">&nbsp;</label>
                       </div>
@@ -335,4 +334,6 @@
       </div>
     </div>
   </div>
+
 </div>
+

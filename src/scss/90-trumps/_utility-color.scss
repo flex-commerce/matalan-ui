@@ -2,10 +2,18 @@
  * Matalan UI Kit Color helper classes
  */
 
+// THESE COLOURS SHOULD NOT EXIST
+ .u-color-customgrey1-investigate-me {color: $faq-grey-light;}
+ .u-color-customgrey2-investigate-me {color: $faq-grey-mid;}
+// THESE COLOURS SHOULD NOT EXIST
+
 
 // Brand Colors
 .u-color-pri {color: $primary-color;}
 .u-bgcolor-pri {background-color: $primary-color;}
+
+.u-color-midgrey {color: $mid-grey;}
+.u-bgcolor-midgrey {background-color: $mid-grey;}
 
 .u-color-dgrey {color: $dark-grey;}
 .u-bgcolor-dgrey {background-color: $dark-grey;}

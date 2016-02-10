@@ -10,13 +10,13 @@
   </div>
 
   <div class="u-bgcolor-lgrey">
-    <div class="container page--text--faq" role="main">
+    <div class="container page--text--faq page--text--custom" role="main">
       <div class="row">
         <div class="col-8@lg col-push-2@lg-up page--text__header faq__wrapper">
 
-          <div class="page--text__header-wrapper">
+          <div class="header-wrapper--faq">
             <div class="u-font-ta-c">
-              <h1>How can we help?</h1>
+              <h1 class="u-mar-v-huge u-color-customgrey1-investigate-me">How can we help?</h1>
               <p>If you have any queries about our website, or are experiencing any problems using it, please look at our
                 frequently asked questions below. You may also wish to refer to our <a href="">terms &amp; conditions</a>,
                 <a href="">delivery policy</a> and our <a href="">returns policy</a>.
@@ -39,7 +39,7 @@
 
                 <div id="faq-section-0" class="collapse o-accord__container" role="tabpanel">
                   {{# times 8 }}
-                  <div class="panel panel--subpanel">
+                  <div class="panel panel--subpanel u-mar-v-small">
                     <div class="u-cf">
                       <a class="collapsed" data-toggle="collapse" data-parent="#faq-section-0" href="#faq0-sub-{{this}}">
                         <h4 class="u-dis-ib">Can I order a product as a gift?</h4>
@@ -48,11 +48,26 @@
                       </a>
                     </div>
 
-                    <div id="faq0-sub-{{this}}" class="collapse" role="tabpanel">
+                    <div id="faq0-sub-{{this}}" class="collapse u-color-customgrey2-investigate-me" role="tabpanel">
                       <p>Yes, we can deliver to addresses other than the address associated with your payment card. Unfortunately we don't
                         offer a gift wrapping service at the moment. To keep up to date on the latest developments with our website,
                         subscribe to our e-mail newsletter below.
                       </p>
+
+                      <div class="row">
+                        <div class="col-12@xs col-6@md">
+                          <h4 class="u-font-sec u-color-pri u-pad-small">Sign up for the latest offers and promotions</h4>
+                        </div>
+                         <div class="col-12@xs col-6@md">
+                          <div class="o-form--input-pack o-form--input-pack--styled o-form__input-contain">
+                            <input type="text" class="o-input o-input--textual input-addon--expand" placeholder="Styled input pack with button">
+                            <div class="input-group__btn">
+                              <button type="submit" class="c-btn c-btn-secondary">Subscribe</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                   {{/ times }}
