@@ -71,3 +71,11 @@ body.page--text {
   background-color: transparent;
 }
 
+  html.ios {
+    overflow-x: hidden;
+    body {
+      overflow-x: hidden;
+    }
+  }
+
+
