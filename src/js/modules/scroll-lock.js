@@ -4,7 +4,6 @@
 // // TODO - check this is needed - Ian/
 
 $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
-    console.log(ev)
     var $this = $(this),
         scrollTop = this.scrollTop,
         scrollHeight = this.scrollHeight,

@@ -3,7 +3,7 @@
   display: none;
   &.in {
     display: block;
-    padding-bottom: 1.5em;
+    // padding-bottom: 1.5em;
   }
 }
 
@@ -16,12 +16,14 @@
       padding-bottom: 1.5em;
     }
   }
+
   .icon-plus {
     display: none;
   }
   .icon-minus {
     display: inline;
   }
+
   .collapsed {
     .icon-minus {
       display: none;
