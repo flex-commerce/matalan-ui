@@ -119,9 +119,7 @@ $border-thickness: 5px;
     // completed state
     //
     li.completed {
-        a {
-          color: $active;
-        }
+        color: $active;
         &::after {
             /*Add another block-level blank space*/
             font-family: 'flex-icons';
@@ -138,10 +136,8 @@ $border-thickness: 5px;
         }
     }
     li.active {
-      a {
-        color: $active;
-        text-decoration: none;
-      }
+      color: $active;
+      text-decoration: none;
       .c-donut {
           @include donut-style("active");
       }

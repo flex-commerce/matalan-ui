@@ -15,9 +15,6 @@
        var data = require("json!../../data/locations.json");
        var GMaps = require("../vendors/gmaps");
 
-       console.log(data);
-       console.log(GMaps);
-
        var clickCollectContain = $('#click-and-collect-contain');
        var isModal = false;
 
@@ -52,7 +49,6 @@
 
        // Build the main map
        var generateMap = function(data, longitude, latitude, isModal) {
-           console.log(isModal)
            map = new GMaps({
                div: '#map',
                lat: latitude,
@@ -64,12 +60,10 @@
            loadResults(data, longitude, latitude);
            printResults(data, isModal);
            var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
-
-           if (width > 0 && !isModal) {
-               console.log
-               $('html, body').animate({
-                   scrollTop: $('#storeFinderContainer').offset().top
-               }, 'slow');
+           console.log(isModal);
+           if (!isModal) {
+               console.log('in this function')
+               document.getElementById('storeFinderContainer').scrollIntoView();
            }
            var firstMarker = map.markers[0];
            firstMarker.infoWindow.open();
@@ -302,7 +296,7 @@
                    var actionRow = detailsRow.appendChild(document.createElement('div'));
                    actionRow.className = "col-12@xs col-6@lg";
                    var actionButton = details.appendChild(document.createElement('div'));
-                   actionButton.className = 'c-btn c-btn-primary col-10@xs u-mar-t-medium u-font-upper';
+                   actionButton.className = 'c-btn c-btn-primary col-10@xs hidden@sm-down u-mar-t-medium u-font-upper';
                    actionButton.innerHTML = "View on Map";
                }
 

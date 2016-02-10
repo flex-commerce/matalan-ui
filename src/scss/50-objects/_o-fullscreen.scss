@@ -1,18 +1,16 @@
 .o-fullscreen-container {
     position: relative;
-    height: calc(100% - 59px);
+    height: calc(100vh - 59px);
     display: block;
     @include mq($until: lg) {
-        height: calc(100% - 59px);
+        height: calc(100vh - 59px);
     }
     @include mq($from: lg) {
-        height: calc(100% - 110px);
+        height: calc(100vh - 110px);
     }
     &.winter-hero {
-        @include mq($from: md) {
-            background: url('../img-assets/winter-hero.jpg') no-repeat top center;
-            background-size: cover;
-        }
+        background: url('../img-assets/winter-hero.jpg') no-repeat top center;
+        background-size: cover;
     }
     &.spring-hero {
         @include mq($from: md) {
@@ -22,8 +20,9 @@
     }
     &.summer-hero {
         @include mq($from: md) {
-            background: url('../img-assets/summer-hero.jpg') no-repeat left top;
+            background: url('../img-assets/summer-hero.png') no-repeat left top;
             background-size: cover;
+            background-position: center bottom;
         }
     }
     &.autumn-hero {
@@ -36,7 +35,7 @@
         background-size: cover;
     }
     &.store-hero {
-        background: url('../img/matalan-store.jpg') no-repeat left center;
+        background: url('../img-assets/matalan-store.jpg') no-repeat left center;
         background-size: cover;
     }
     &.faq__hero {
