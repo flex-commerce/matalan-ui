@@ -103,20 +103,19 @@
       <div class="col-12@xs header--search-bar hidden@lg-up u-mar-b-small">
           <div class="o-header--search">
             <form name="searchProducts" class="o-form--inline c-search-form">
-              <div class="o-form__row">
-                <div class="o-form--input-pack o-form__input-contain">
-                  <div class="input-group--addon unstyled input-group--addon__inset">
+                <div class="o-form__row">
+                  <div class="o-form__input-contain o-form--input-pack o-form--input-pack--styled o-form__input--icon">
+                    <input type="text" name="searchTerm" minlength="3" required
+                    class="o-input o-input--textual input-addon--expand"
+                    placeholder="Enter Keyword or Product Code"
+                    pattern=".{3,}" title="3 characters minimum">
+                    <div class="input-group__btn">
+                      <button class="c-btn c-btn-secondary" href="">Search</button>
+                    </div>
                     <i class="icon icon-search"></i>
                   </div>
-                  <input type="text" name="searchTermMobile" minlength="3" required autofocus
-                    class="o-input o-input--textual input-addon--expand input-group--addon__inset-left"
-                    placeholder="Enter Keyword or Product Code" pattern=".{3,}" title="3 characters minimum">
-                  <div class="input-group--addon input-group--addon__button unstyled c-search__button">
-                    <button type="submit" class="">Search</button>
-                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
           </div>
       </div>
     </div>

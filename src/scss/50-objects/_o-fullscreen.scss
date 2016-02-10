@@ -8,26 +8,10 @@
     @include mq($from: lg) {
         height: calc(100vh - 110px);
     }
-    &.winter-hero {
-        background: url('../img-assets/winter-hero.jpg') no-repeat top center;
-        background-size: cover;
-    }
-    &.spring-hero {
-        @include mq($from: md) {
-            background: url('../img-assets/spring-hero.jpg') no-repeat center bottom;
-            background-size: cover;
-        }
-    }
     &.summer-hero {
-        @include mq($from: md) {
-            background: url('../img-assets/summer-hero.png') no-repeat left top;
-            background-size: cover;
-            background-position: center bottom;
-        }
-    }
-    &.autumn-hero {
-        background: url('../img-assets/autumn-hero.jpg') no-repeat right center;
-        background-size: cover;
+      background: url('../img-assets/summer-hero.png') no-repeat left top;
+      background-size: cover;
+      background-position: center bottom;
     }
     &.general-hero {
         height: auto;
