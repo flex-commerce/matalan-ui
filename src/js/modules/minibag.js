@@ -3,18 +3,23 @@
 
   var $miniBagControl = $('.js-minibag--checkout, .js-minibag--view');
   var $miniBagContain = $('#minibag-contain');
+  var $body           = $('body');
   var modalBG         = '.modal-backdrop';
-
 
   function closeMiniBag() {
     $miniBagContain.modal('hide');
   }
 
-
   function openMiniBag() {
     $miniBagContain.modal('show');
   }
 
+  $miniBagContain.on('show.bs.modal', function(){
+    $body.addClass('modal-open--minibag');
+  })
+  $miniBagContain.on('hide.bs.modal', function(){
+    $body.removeClass('modal-open--minibag');
+  })
 
   function delayWithClear(el, func) {
     var timer;
@@ -38,10 +43,13 @@
   delayWithClear($miniBagControl, openMiniBag);
 
   // close on mouseover BG
-  $('body').on('mouseover', modalBG, function() {
+  $('body').on('click', modalBG, function() {
     if (!window.isMobileOrTablet) {
       closeMiniBag();
     }
   });
+
+
+
 
 })();
