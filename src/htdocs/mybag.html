@@ -4,8 +4,9 @@
 <head>
     {{> partials/html-head }}
 </head>
+
 <body class="is-dev">
-  {{> parcels/header }}
+    {{> parcels/header }}
     <div class="container" role="main">
         <div class="row">
             <div class="col-12@xs">
@@ -15,7 +16,7 @@
                             <h1 class="title--page-title u-fl">My Bag</h1>
                             <a class="c-btn c-btn-secondary hidden@lg-down u-fr">Continue to Checkout</a>
                         </div>
-         <!--                <div class="row">
+                        <!--                <div class="row">
                             <div class="col-6@xs col-offset-3@xs col-4@sm col-offset-4@sm col-2@md col-2@lg">
                                     <img class="svg" src="img/secure-cta.svg" />
                             </div>
@@ -40,7 +41,7 @@
                                 </div>
                             </div>
                         </div> -->
-            <a class="c-btn c-btn-secondary c-btn--block hidden@lg-up u-mar-v-small">Continue to Checkout</a>
+                        <a class="c-btn c-btn-secondary c-btn--block hidden@lg-up u-mar-v-small">Continue to Checkout</a>
                         <div class="u-cf u-mar-b-large">
                             <p class="u-fl u-pad-v-small u-mar-0 u-font-wb">
                                 {{minibag.category.collection.products.length}} Items in your bag
@@ -128,28 +129,31 @@
                             <ul class="o-minibag--action--contain">
                                 <li class="separator u-mar-v-small"></li>
                                 <li class="o-minibag--list-actions">
-                                    <form action=""  class="o-form--default c-search-form">
-                                      <div class="row">
-                                        <div class="col-12@xs col-6@md col-4@lg">
-                                          <div class="o-form__row u-pad-v-0">
-                                              <div class="o-form__label-contain">
-                                                  <label class="o-form__label-primary u-font-upper">Promo Code</label>
-                                              </div>
-                                          </div>
-                                            <div class="o-form__row">
-                                              <div class="o-form__input-contain o-form--input-pack o-form--input-pack--styled o-form__input--icon">
-                                                <input type="text" name="searchTerm" minlength="3" required
-                                                class="o-input o-input--textual input-addon--expand"
-                                                placeholder="Enter code"
-                                                pattern=".{3,}" title="3 characters minimum">
-                                                <div class="input-group__btn">
-                                                  <button class="c-btn c-btn-secondary" href="">Apply Code</button>
-                                                </div>
-                                                <i class="icon icon-reward-card"></i>
-                                              </div>
+                                    <form action="" class="o-form--default c-search-form">
+
+                                        <div class="o-form__row u-pad-v-0">
+                                            <div class="o-form__label-contain">
+                                                <label class="o-form__label-primary u-font-upper">Promo Code</label>
                                             </div>
-                                          </div>
-                                      </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12@xs col-6@md col-4@lg">
+                                                <div class="o-form__row">
+                                                    <div class="o-form__input-contain o-form--input-pack o-form--input-pack--styled o-form__input--icon">
+                                                        <input type="text" name="searchTerm" minlength="3" required class="o-input o-input--textual input-addon--expand" placeholder="Enter code">
+                                                        <div class="input-group__btn">
+                                                            <button class="c-btn c-btn-secondary" href="">Apply Code</button>
+                                                        </div>
+                                                        <i class="icon icon-reward-card"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12@xs col-6@md col-8@lg u-pad-v-large">
+                                                <ul class="o-list__tick">
+                                                  <li class="success">You have successfully added the promotion code <strong>3treat2k</strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </form>
                                 </li>
                                 <li class="separator u-mar-v-small"></li>
@@ -178,6 +182,8 @@
                                     <div class="col-12@xs col-6@lg o-minibag--list o-minibag--list-total">
                                         <div class="separator hidden@lg-up u-cl"></div>
                                         <dl class="o-deflist-right u-pad-t-small">
+                                            <dt class="u-font-ta-r u-color-pri">20% off</dt>
+                                            <dd class="u-color-pri">£20.00</dd>
                                             <dt class="u-font-ta-r">Shipping</dt>
                                             <dd>£2.95</dd>
                                             <dt class="u-font-ta-r u-color-pri">Total Savings</dt>
@@ -194,13 +200,13 @@
                                     </div>
                                     <div class="o-minibag--list-actions col-12@xs col-4@lg">
                                         <div class="">
-                        <a class="c-btn c-btn-secondary c-btn--block">Continue To Checkout</a>
+                                            <a class="c-btn c-btn-secondary c-btn--block">Continue To Checkout</a>
                                         </div>
                                         <div class="separator__inline-text hidden@md-down">
                                             <span>or</span>
                                         </div>
                                         <br class="separator__inline-text hidden@lg-up u-mar-v-small">
-                      <a class="c-btn--block u-font-ta-c">
+                                        <a class="c-btn--block u-font-ta-c">
                                             <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
                                         </a>
                                     </div>

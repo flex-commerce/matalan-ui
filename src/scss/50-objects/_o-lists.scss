@@ -228,6 +228,15 @@ $list-border: $cool-grey;
     left: 0;
     color: $primary-color;
   }
+
+  li.success:before {
+    color: #6fc458;
+  }
+
+  li.error:before {
+    content: $icon-menu-close;
+    position: absolute;
+  }
 }
 
 .o-list__validation {
