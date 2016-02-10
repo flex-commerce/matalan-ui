@@ -1,119 +1,110 @@
-
-
+// custom grid widths for filters sidebar (we need decimal accuracy)
 .search-results__side {
-    @include column((xs: 2.5));
+  @include column((xs: 2.5));
 }
 
+// custom grid widths for main results pane
 .search-results__main {
-    @include column((xs: 12, lg: 9.5));
+  @include column((xs: 12, lg: 9.5));
 }
 
-.search-results__main--full {
-    @include column((xs: 12, lg: 12));
+.search-results--item {
+  // mobile view portrait, 2x items per row
+  @include mq($from: xs, $until: md, $and: "(orientation: portrait)") {
+    @include column((xs: 6, sm: 6));
+
+    &:nth-child(2n+1) {
+      clear: left;
+    }
+  }
+
+
+  // mobile view landscape, 3x items per row
+  @include mq($from: xs, $until: md, $and: "(orientation: landscape)") {
+    @include column((xs: 4, sm: 4));
+
+    &:nth-child(3n+1) {
+      clear: left;
+    }
+  }
+
+
+  // tablet view portrait, 3x wide
+  @include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
+    @include column((md: 4));
+
+    &:nth-child(3n+1) {
+      clear: left;
+    }
+  }
+
+
+  // tablet view portrait, 4x wide
+  @include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
+    @include column((md: 3));
+
+    &:nth-child(4n+1) {
+      clear: left;
+    }
+  }
+
+  // desktop rules follow the layout method chosen
+  @include mq($from: lg) {
+    .search-results__tight & {
+      @include column((lg: 3));
+
+      &:nth-child(4n+1) {
+        clear: left;
+      }
+    }
+
+    .search-results__wide & {
+      @include column((lg: 4));
+
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+    }
+  }
+
 }
 
-// .search--header--filter {
-//   padding-right: 0;
-// }
-// .search--header--sort {
-//   padding-left: 0;
-// }
+
+
+
+// header bar rules
 .search-results--header {
-    @include border-tb-default(1px);
-    padding: 0.5em 0;
-    margin-bottom: 1em;
+  @include border-tb-default(1px);
+
+  padding: 0.5em 0;
+  margin-bottom: 1em;
 }
 
 .search--header--products {
-    @include font-size(12px);
+  @include font-size(12px);
 }
-
-@include mq($from: xs, $until: md) {
-    .search-results--item {
-        @include column((xs: 6, sm: 6));
-        &:nth-child(2n+1) {
-            clear: left;
-        }
-    }
-}
-
-@include mq($from: xs, $until: md, $and: "(orientation: landscape)") {
-    .search-results--item {
-        @include column((xs: 4, sm: 4));
-        &:nth-child(4n+1) {
-            clear: left;
-        }
-    }
-}
-
-.search-results--item-full {
-    @include column((xs: 6, sm: 6));
-}
-
-@include mq($from: md, $until: lg) {
-    .search-results--item {
-        @include column((md: 4));
-        &:nth-child(3n+1) {
-            clear: left;
-        }
-    }
-}
-
-@include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
-    .search-results--item {
-        @include column((md: 3));
-        &:nth-child(4n+1) {
-            clear: left;
-        }
-    }
-}
-
-@include mq($from: lg) {
-    .search-results__tight {
-        .search-results--item {
-            @include column((lg: 3));
-            &:nth-child(4n+1) {
-                clear: left;
-            }
-        }
-        .search-results--item-full {
-            @include column((lg: 6));
-            &:nth-child(2n+1) {
-                clear: left;
-            }
-        }
-    }
-    .search-results__wide {
-        .search-results--item {
-            @include column((lg: 4));
-            &:nth-child(3n+1) {
-                clear: left;
-            }
-        }
-    }
-}
-
 
 /* Handling for tile width icons */
 
 .js-results-tight {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 .js-results-tight,
 .js-results-wide {
-    i:before {
-        font-size: 2.4em;
-    }
+  .icon:before {
+    font-size: 2.4em;
+  }
 }
 
 .ui-icon {
-    .icon:before {
-        color: $cool-grey;
+  .icon {
+    color: $cool-grey;
+  }
+
+  &.active {
+    .icon {
+      color: $dark-grey;
     }
-    &.active {
-        .icon:before {
-            color: $dark-grey;
-        }
-    }
+  }
 }

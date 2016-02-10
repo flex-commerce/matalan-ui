@@ -1,3 +1,4 @@
+
 /* Text classes */
 
 .meta {
@@ -5,22 +6,23 @@
   font-size: 90%;
 }
 
-%u-font--small
+%u-font--small,
 .u-font--small {
   font-size: 90%;
 }
 
-%u-font--smaller
+%u-font--smaller,
 .u-font--smaller {
   font-size: 85%;
+
 }
 
-%u-font--smallest
+%u-font--smallest,
 .u-font--smallest {
   font-size: 75%;
 }
 
-%u-font--italic
+%u-font--italic,
 .u-font--italic {
   font-style: italic;
 }
