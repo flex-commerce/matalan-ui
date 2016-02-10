@@ -1,7 +1,7 @@
 
     <a class="c-btn c-btn-secondary c-btn--block hidden@md-up u-mar-v-small">Checkout</a>
     <div class="u-cf hidden@lg-up">
-      <p class="u-fl u-pad-v-small u-mar-0">
+      <p class="u-fl u-pad-v-0 u-mar-0">
         {{minibag.category.collection.products.length}} Items in your bag
       </p>
     </div>
@@ -14,9 +14,8 @@
           <img class="img" src="{{productImages.[0]}}">
         </div>
         <div class="o-minibag--list-item--detail col-9@xs col-10@md col-5@lg">
-          <p class="detail--description u-font-wb">
-            <a href="./pdp.html" class="ink--nostyle link--underline">{{productTitle}}</a>
-          </p>
+          <a href="./pdp.html" class="detail--description u-font-wb">
+            {{productTitle}}</a>
           <ul class="detail--vars u-pad-b-small list-space__small">
             <li class="list__item">Color:
               <span class="color-swatch__inline u-bgcolor-cgrey"></span>

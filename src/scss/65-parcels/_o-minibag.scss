@@ -1,366 +1,319 @@
 $minibag-border-color: $keyline-color;
 $minibag-desktop-width: 353px;
-
 // double classes for specificty hack - overriding button focus z index
 .js-minibag--checkout.js-minibag--checkout,
 .js-minibag--view.js-minibag--view {
-  z-index: 1050;
-  position: relative;
+    z-index: 1050;
+    position: relative;
 }
 
 @include mq($from: lg) {
-  body.modal-open {
-    .o-minibag-contain {
-      pointer-events: none;
-
-      > * {
-        pointer-events: auto;
-      }
+    body.modal-open {
+        .o-minibag-contain {
+            pointer-events: none;
+            > * {
+                pointer-events: auto;
+            }
+        }
     }
-  }
 }
 
 .minibag__wrapper--sidebar {
-  // outline: 1px dotted red;
+    // outline: 1px dotted red;
 }
-
 
 .minibag__wrapper--sidebar {
-  // outline: 1px dotted red;
+    // outline: 1px dotted red;
 }
-
-
-
 
 // flexbox here to allow the inner panel to expand to max allowed size
 // flex start ======================================
 @include mq($from: md) {
-  .o-minibag {
-    display: flex;
-    flex-direction: column;
-
-    .o-minibag--inner {
-      flex-grow: 1;
-      overflow-y: scroll;
-      will-change: transform;
+    .o-minibag {
+        display: flex;
+        flex-direction: column;
+        .o-minibag--inner {
+            flex-grow: 1;
+            overflow-y: scroll;
+            will-change: transform;
+        }
     }
-  }
 }
-
 
 @include mq($from: md, $until: lg) {
-  .o-minibag--inner {
-    max-height: 380px;
-  }
+    .o-minibag--inner {
+        max-height: 380px;
+    }
 }
 
+@include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
+    .o-minibag--inner {
+        max-height: 190px;
+    }
+}
+
+@include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
+    .o-minibag--inner {
+        max-height: 300px;
+    }
+}
 
 // flex end ======================================
-
 // layout begin ======================================
 @include mq($until: md) {
-  .o-minibag {
-    @include fixed(top 0 left 0);
-
-    overflow-y: scroll;
-    width: 100%;
-    height: 100%;
-  }
-
-
+    .o-minibag {
+        @include fixed(top 0 left 0);
+        overflow-y: scroll;
+        width: 100%;
+        height: 100%;
+    }
 }
-
-
 
 @include mq($from: md, $until: lg) {
-  .o-minibag {
-    @include fixed(top 1em right 1em bottom 1em left 1em);
-
-    max-width: 580px;
-    max-height: 780px;
-    margin: auto;
-  }
-
-  .o-minibag--list-item--control {
-    // todo - check paddings
-    padding: 0 0 0 1em;
-    margin-top: 1em;
-  }
-
-  .o-minibag--control--select {
-    position: absolute;
-    right: 0;
-  }
-
-  select {
-    right: 0;
-  }
+    .o-minibag {
+        @include fixed(top 1em right 1em bottom 1em left 1em);
+        max-width: 580px;
+        max-height: 780px;
+        margin: auto;
+    }
+    .o-minibag--list-item--control {
+        // todo - check paddings
+        padding: 0 0 0 1em;
+        margin-top: 1em;
+    }
+    .o-minibag--control--select {
+        position: absolute;
+        right: 0;
+    }
+    select {
+        right: 0;
+    }
 }
-
 
 @include mq($from: lg) {
-  .o-minibag {
-    border-color: blue;
-    position: absolute;
-    width: $minibag-desktop-width;
-    right: 0;
-  }
-
-  .o-minibag--inner {
-    max-height: 260px;
-    // magic height
-  }
-
-
-  .o-orderlist--itemtable.o-orderlist--mybag-full {
-
-    .o-minibag--list-item--control {
-      text-align: right;
-      padding: 0;
+    .o-minibag {
+        border-color: blue;
+        position: absolute;
+        width: $minibag-desktop-width;
+        right: 0;
     }
-
-    .o-orderlist--itemtable {
-      display: table;
+    .o-minibag--inner {
+        max-height: 260px;
+        // magic height
     }
-
-    .o-minibag--list-item {
-      display: table-row;
-
-      .o-minibag--list-item--image,
-      .o-minibag--list-item--detail,
-      .o-minibag--list-item--control,
-      .o-minibag--list-item--price-col {
-        display: table-cell;
-        vertical-align: top;
-        float: none;
-        border-bottom: 1px solid $cool-grey;
-        padding: 1em 0 1em 0;
-      }
-
-      &:last-child .o-minibag--list-item--image,
-      &:last-child .o-minibag--list-item--detail,
-      &:last-child .o-minibag--list-item--control,
-      &:last-child .o-minibag--list-item--price-col {
-        border-bottom: none;
-      }
-
-
-      .o-minibag--list-item--image {
-        width: 20%;
-      }
-      .o-minibag--list-item--detail {
-        width: 25%;
-      }
-      .o-minibag--list-item--control {
-        width: 20%;
-        text-align: left;
-      }
-      .o-minibag--list-item--price--save {
-        width: auto;
-      }
-      .o-minibag--list-item--price--total {
-        width: 10%;
-      }
-
-      .o-minibag--list-item--image {
-        img {
-          max-width: 90%;
-          margin-right: 2em;
+    .o-orderlist--itemtable.o-orderlist--mybag-full {
+        .o-minibag--list-item--control {
+            text-align: right;
+            padding: 0;
         }
-      }
+        .o-orderlist--itemtable {
+            display: table;
+        }
+        .o-minibag--list-item {
+            display: table-row;
+            .o-minibag--list-item--image,
+            .o-minibag--list-item--detail,
+            .o-minibag--list-item--control,
+            .o-minibag--list-item--price-col {
+                display: table-cell;
+                vertical-align: top;
+                float: none;
+                border-bottom: 1px solid $cool-grey;
+                padding: 1em 0 1em 0;
+            }
+            &:last-child .o-minibag--list-item--image,
+            &:last-child .o-minibag--list-item--detail,
+            &:last-child .o-minibag--list-item--control,
+            &:last-child .o-minibag--list-item--price-col {
+                border-bottom: none;
+            }
+            .o-minibag--list-item--image {
+                width: 20%;
+            }
+            .o-minibag--list-item--detail {
+                width: 25%;
+            }
+            .o-minibag--list-item--control {
+                width: 20%;
+                text-align: left;
+            }
+            .o-minibag--list-item--price--save {
+                width: auto;
+            }
+            .o-minibag--list-item--price--total {
+                width: 10%;
+            }
+            .o-minibag--list-item--image {
+                img {
+                    max-width: 90%;
+                    margin-right: 2em;
+                }
+            }
+        }
+        .o-minibag--list__header {
+            display: table-row;
+            .o-minibag--list__header__item {
+                float: none;
+                display: table-cell;
+                padding-bottom: 1em;
+                border-bottom: 1px solid $cool-grey;
+            }
+        }
     }
-
-    .o-minibag--list__header {
-      display: table-row;
-
-      .o-minibag--list__header__item {
-        float: none;
-        display: table-cell;
-        padding-bottom: 1em;
-        border-bottom: 1px solid $cool-grey;
-      }
-    }
-  }
 }
-
 
 // layout end ======================================
-
 // small screen specific tweaks to details layout ======================================
 @include mq($until: lg) {
-  .o-minibag--list-item--detail {
-    .detail--description {
-      float: left;
-      max-width: 40%;
+    .o-minibag--list-item--detail {
+        .detail--description {
+            float: left;
+            max-width: 40%;
+        }
+        .detail--vars {
+            clear: both;
+            float: left;
+        }
+        .detail--price {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     }
-
-    .detail--vars {
-      clear: both;
-      float: left;
-    }
-
-    .detail--price {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
 }
 
-
 // small screen specific tweaks to details layout end ======================================
-
 // misc rules ======================================
 .o-minibag-contain {
-  // removed for modals - to test
-  // position: relative;
-  // z-index: 10;
-  // pointer-events: none;
-
-  .o-minibag {
-    // pointer-events: auto;
-
-  }
+    // removed for modals - to test
+    // position: relative;
+    // z-index: 10;
+    // pointer-events: none;
+    .o-minibag {
+        // pointer-events: auto;
+    }
 }
 
 .o-minibag {
-  border: 1px solid $primary-color;
-  background: $white;
+    border: 1px solid $primary-color;
+    background: $white;
 }
 
 .o-minibag--list-actions {
-  img {
-    cursor: pointer;
-  }
+    img {
+        cursor: pointer;
+    }
 }
 
 // misc rules end ======================================
-
 // separators, borders, and padding begin ======================================
 .o-minibag {
-  /*   padding-top: 1.5em; */
-  padding-bottom: 1em;
-
-  .o-minibag--header,
-  .o-minibag--inner,
-  .o-minibag--footer {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
+    /*   padding-top: 1.5em; */
+    padding-bottom: 1em;
+    .o-minibag--header,
+    .o-minibag--inner,
+    .o-minibag--footer {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
 
 .o-minibag--inner {
-  padding-top: 1em;
+    padding-top: 1em;
 }
-
-
 
 // auto separator for the list
 .o-minibag--list-item:not(:last-child):after {
-  content: '';
-  display: block;
-  padding-top: 0.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid $minibag-border-color;
+    content: '';
+    display: block;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid $minibag-border-color;
 }
 
 // separators, borders, and padding end  ======================================
-
 .o-minibag--list-item--image {
-  img {
-    width: 100%;
-  }
+    img {
+        width: 100%;
+    }
 }
 
 .o-minibag--list-total {
-  line-height: 1.3;
+    line-height: 1.3;
 }
 
-.o-minibag--list-total, .o-minibag--list-checkout {
-  @include mq($from: lg) {
-    // padding-left: 0.75em;
-    // padding-right: 0.75em;
-  }
+.o-minibag--list-total,
+.o-minibag--list-checkout {
+    @include mq($from: lg) {
+        // padding-left: 0.75em;
+        // padding-right: 0.75em;
+    }
 }
 
 .detail--description,
 .detail--vars,
 .detail--price {
-  @include font-size(12px, 1.1);
+    @include font-size(12px, 1.1);
 }
 
 .o-minibag--control--remove {
-  @include font-size(10px, 1.2);
-
-  text-transform: uppercase;
-
-  span {
-    font-size: 1.5em;
-  }
-
-  @include mq($until: md) {
-    padding-left: 15px;
-  }
-
-
-  @include mq($until: lg) {
-    // need to include these button styles raw, we can't extend into a media query
-    .link {
-      @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey);
-
-      @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
-
-      border: 1px solid;
-      display: inline-block;
-
-      &.hover,
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-
-        @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey-hover);
-      }
+    @include font-size(10px, 1.2);
+    text-transform: uppercase;
+    span {
+        font-size: 1.5em;
     }
-  }
-
-
-  @include mq($from: lg) {
-    margin-top: 1em;
-  }
+    @include mq($until: md) {
+        padding-left: 15px;
+    }
+    @include mq($until: lg) {
+        // need to include these button styles raw, we can't extend into a media query
+        .link {
+            @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey);
+            @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
+            border: 1px solid;
+            display: inline-block;
+            &.hover,
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+                @include style-variant($color: $dark-grey, $background: $white, $border: $dark-grey-hover);
+            }
+        }
+    }
+    @include mq($from: lg) {
+        margin-top: 1em;
+    }
 }
 
 // header visibility overrides
 .o-header__container .o-minibag-contain {
-  display: none;
+    display: none;
 }
 
 .o-header__container .open > .o-minibag-contain {
-  display: block;
+    display: block;
 }
 
 .color-swatch__inline {
-  width: 1em;
-  padding-top: 1em;
-  display: inline-block;
-  border-radius: 50%;
+    width: 1em;
+    padding-top: 1em;
+    display: inline-block;
+    border-radius: 50%;
 }
 
 @include mq($from: lg) {
-  .body--modal-open {
-    .js-minibag--view, .js-minibag--checkout {
-      position: relative;
-      z-index: 5;
+    .body--modal-open {
+        .js-minibag--view,
+        .js-minibag--checkout {
+            position: relative;
+            z-index: 5;
+        }
+        .js-minibag--view {
+            background: $white;
+        }
     }
-
-    .js-minibag--view {
-      background: $white;
-    }
-  }
 }
 
-
-
-
-  .o-minibag--list-item--control {
+.o-minibag--list-item--control {
     padding-right: 0;
-  }
+}
