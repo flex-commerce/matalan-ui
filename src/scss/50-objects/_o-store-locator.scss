@@ -23,7 +23,7 @@
     }
     .o-store-locator__locations {
         @include mq($from: md) {
-            min-height: 600px;
+            height: 600px;
             overflow-y: auto;
         }
         overflow-x: hidden;

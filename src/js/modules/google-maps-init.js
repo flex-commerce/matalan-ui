@@ -60,10 +60,10 @@
            loadResults(data, longitude, latitude);
            printResults(data, isModal);
            var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
+           console.log(isModal);
            if (!isModal) {
-               $('html, body').animate({
-                   scrollTop: $('#storeFinderContainer').offset().top
-               }, 'slow');
+               console.log('in this function')
+               document.getElementById('storeFinderContainer').scrollIntoView();
            }
            var firstMarker = map.markers[0];
            firstMarker.infoWindow.open();

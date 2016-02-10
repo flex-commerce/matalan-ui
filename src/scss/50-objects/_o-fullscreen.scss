@@ -20,8 +20,9 @@
     }
     &.summer-hero {
         @include mq($from: md) {
-            background: url('../img-assets/summer-hero.jpg') no-repeat left top;
+            background: url('../img-assets/summer-hero.png') no-repeat left top;
             background-size: cover;
+            background-position: center bottom;
         }
     }
     &.autumn-hero {
@@ -34,7 +35,7 @@
         background-size: cover;
     }
     &.store-hero {
-        background: url('../img/matalan-store.jpg') no-repeat left center;
+        background: url('../img-assets/matalan-store.jpg') no-repeat left center;
         background-size: cover;
     }
     &.faq__hero {
