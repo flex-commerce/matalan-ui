@@ -44,7 +44,8 @@
   };
 
   Collapse.prototype.show = function () {
-    if (this.transitioning || this.$element.hasClass('in')) return;
+
+    if (this.transitioning || this.$element.hasClass('in') || this.$trigger.hasClass('disabled') ) return;
 
     var activesData;
     var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing');
