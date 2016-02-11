@@ -1,11 +1,12 @@
-$dark-th-color: $white;
 $dark-th-bg: $dark-grey;
 $default-th-color: $primary-color;
 $default-th-bg: $light-grey;
 
-$inverse-table-color: $light-grey;
-$inverse-table-bg: $dark-grey;
-$inverse-table-border: $light-grey;
+$inverse-table-color: $dark-grey;
+$inverse-table-bg: $light-grey;
+$inverse-table-border: $light-grey-hover;
+$dark-th-color: $dark-grey;
+
 
 $table-border-width: 1px;
 $table-border-color: $keyline-color;

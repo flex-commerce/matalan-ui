@@ -21,33 +21,25 @@
  */
 
 html {
-  font-size: ($base-font-size / 16px) * 1em;
-  /* [1] */
-  line-height: $base-line-height / $base-font-size;
-  /* [1] */
+  font-size: ($base-font-size / 16px) * 1em;  /* [1] */
+  line-height: $base-line-height / $base-font-size;  /* [1] */
   color: $base-text-color;
-  min-height: 100%;
-  /* [3] */
-  -webkit-text-size-adjust: 100%;
-  /* [4] */
-  -ms-text-size-adjust: 100%;
-  /* [4] */
-  -moz-osx-font-smoothing: grayscale;
-  /* [5] */
-  -webkit-font-smoothing: antialiased;
-  /* [5] */
+  min-height: 100%;  /* [3] */
+  -webkit-text-size-adjust: 100%;  /* [4] */
+  -ms-text-size-adjust: 100%;  /* [4] */
+  -moz-osx-font-smoothing: grayscale;  /* [5] */
+  -webkit-font-smoothing: antialiased;  /* [5] */
 }
 
 html,
 body {
   height: 100%;
   min-height: 100%;
-  // background: red !important;
 }
 
-body {
-  overflow-x: hidden;
-}
+// body {
+//   overflow-x: hidden;
+// }
 
 // new rules, to be moved
 .o-header__container {
@@ -71,11 +63,11 @@ body.page--text {
   background-color: transparent;
 }
 
-  html.ios {
+html.ios {
+  overflow-x: hidden;
+  body {
     overflow-x: hidden;
-    body {
-      overflow-x: hidden;
-    }
   }
+}
 
 
