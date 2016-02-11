@@ -14,8 +14,9 @@
   }
 
   .o-product-detail__title {
-    cursor: pointer;
+    // cursor: pointer;
     position: relative;
+    @include font-size(32px, 1.2);
   }
 
   .o-product-detail__content {
