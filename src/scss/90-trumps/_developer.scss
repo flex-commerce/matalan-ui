@@ -8,6 +8,11 @@
   }
 }
 
+.disabled {
+  // i'm only here for some temp accordion rules and will be moved sooon - IH
+  outline: 1px dotted red;
+  opacity: 0.4;
+}
 
 /**
  *  Various developer rules for testing and such
