@@ -8,11 +8,11 @@ $tab-border-color: #ddd;
 // ========================
 // Tab Rules
 // ========================
-.c-tabs__content > .c-tabs__content__pane {
+.c-tabs__content__pane {
   display: none;
 }
 
-.c-tabs__content > .c-tabs__content__pane.active {
+.c-tabs__content__pane.active {
   display: block;
 }
 
