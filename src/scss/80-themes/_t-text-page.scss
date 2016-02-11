@@ -54,8 +54,8 @@
   .page--text__content {
     // @include font-size(12px);
 
-    padding-top: 3em;
-    padding-bottom: 6em;
+    margin-top: 3em;
+    margin-bottom: 6em;
 
     > .row {
       margin-top: 2em;
@@ -151,30 +151,14 @@
   }
 }
 
-.o-fullscreen-container.faq__hero {
-  position: relative;
-  height: 450px;
-  min-height: 450px;
-
-  @include mq($until: lg) {
-    display: none;
-  }
 
 
-  @include mq($from: lg) {
-    background: url(../img/matalan-store.jpg) no-repeat;
-    background-size: cover;
-  }
-}
-
-.page--text--faq {
-  .faq__wrapper {
+.page--text--custom {
+  .page--text--custom--wrapper {
     background-color: $white;
     position: relative;
 
-    @include mq($from: lg) {
-      margin-top: -350px;
-    }
+
   }
 
   .panel.panel--subpanel {

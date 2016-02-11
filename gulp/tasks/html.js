@@ -30,7 +30,7 @@ var paths = {
 var htmlTask = function() {
 
   return gulp.src(paths.src)
-    // .pipe(changed(paths.dest)) // Ignore unchanged files
+    .pipe(changed(paths.dest)) // Ignore unchanged files
     .pipe(hb({
         data: path.join(config.app.src, config.tasks.hbs.data, '/*.{js,json}'),
         helpers: path.join(config.app.src, config.tasks.hbs.helpers, '/*.js'),
@@ -41,8 +41,8 @@ var htmlTask = function() {
     .pipe(gulpif(process.env.NODE_ENV == 'production', removeCode({ production: true })))
     // .pipe(gulpif(process.env.NODE_ENV == 'production', htmlmin(config.tasks.html.htmlmin)))
     // .pipe(prettify({config: '.jsbeautifyrc'}))
-    .pipe(htmlhint())
-    .pipe(htmlhint.reporter('htmlhint-stylish'))
+    // .pipe(htmlhint())
+    // .pipe(htmlhint.reporter('htmlhint-stylish'))
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream());
 };

@@ -159,6 +159,7 @@ require("./dev/pdp-dev");
 require("./dev/mini-mybag-dev");
 require("./dev/dev-dev");
 require("./modules/star-ratings");
+require("./modules/sizeguide.js");
 
 // ===========================
 // Common JS end

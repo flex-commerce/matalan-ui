@@ -6,13 +6,13 @@
 <body class="page--text">
   {{> parcels/header }}
 
-  <div class="o-fullscreen-container faq__hero">
+  <div class="o-hero-bg o-hero-bg--faq">
   </div>
 
-  <div class="u-bgcolor-lgrey">
+  <div class="u-bgcolor-lgrey o-hero-bg__content">
     <div class="container page--text--faq page--text--custom" role="main">
       <div class="row">
-        <div class="col-8@lg col-push-2@lg-up page--text__header faq__wrapper">
+        <div class="col-8@lg col-push-2@lg-up page--text__header page--text--custom--wrapper">
 
           <div class="header-wrapper--faq">
             <div class="u-font-ta-c">
@@ -31,7 +31,7 @@
 
                 <div class="o-accord__title">
                   <a data-toggle="collapse" data-parent="#faq-accordion" href="#faq-section-0" class="u-font-ta-c">
-                    <h3><span class="u-fl">0</span> Orders</h3>
+                    <h3 class="o-accord__title__text"><span class="o-accord__title__index">0</span> Orders</h3>
                     <i class="icon icon-plus icon--vertical-right"></i>
                     <i class="icon icon-minus icon--vertical-right"></i>
                   </a>
@@ -80,7 +80,7 @@
 
                 <div class="o-accord__title">
                   <a class="collapsed u-font-ta-c" data-toggle="collapse" data-parent="#faq-accordion" href="#faq-section-{{this}}">
-                    <h3><span class="u-fl">{{this}}</span> Accordion Group</h3>
+                    <h3 class="o-accord__title__text"><span class="o-accord__title__index">{{this}}</span> Accordion Group</h3>
                     <i class="icon icon-plus icon--vertical-right"></i>
                     <i class="icon icon-minus icon--vertical-right"></i>
                   </a>

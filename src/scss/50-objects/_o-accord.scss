@@ -61,5 +61,13 @@
       cursor: default;
     }
   }
+   .o-accord__title__text {
+    position: relative;
+    .o-accord__title__index {
+      @include absolute(left 0);
+      line-height: 40px; // magic - matches title line-height for vertical align
+      // @include center(y);
+    }
+  }
 }
 

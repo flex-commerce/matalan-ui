@@ -1,56 +1,99 @@
 .o-fullscreen-container {
-    position: relative;
+  position: relative;
+  height: calc(100vh - 59px);
+
+  // magic - header-height
+  display: block;
+
+  @include mq($until: lg) {
     height: calc(100vh - 59px);
-    display: block;
-    @include mq($until: lg) {
-        height: calc(100vh - 59px);
+
+    // magic - header-height
+  }
+
+
+  @include mq($from: lg) {
+    height: calc(100vh - 110px);
+
+    // magic - header-height
+  }
+
+
+  &.summer-hero {
+    background: url("../img-assets/summer-hero.png") no-repeat left top;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  &.general-hero {
+    height: auto;
+    background: url("../img-assets/healthy-lifestyle.jpg") no-repeat left center;
+    background-size: cover;
+  }
+
+  &.store-hero {
+    background: url("../img-assets/matalan-store.jpg") no-repeat left center;
+    background-size: cover;
+  }
+
+  .row {
+    height: 100%;
+  }
+
+  .o-fullscreen-container__wrapper {
+    height: 100%;
+  }
+
+  .o-fullscreen-container__box {
+    @include center(x);
+
+    padding: 20px;
+    margin: 20px 0;
+
+    @include mq($from: md) {
+      top: 20%;
     }
-    @include mq($from: lg) {
-        height: calc(100vh - 110px);
+
+
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .o-fullscreen-container__box-large {
+    @include center(x);
+
+    padding: 20px;
+    top: 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+  }
+}
+
+.o-hero-bg {
+  position: relative;
+  height: 640px;
+  min-height: 640px;
+  background-size: cover;
+
+  @include mq($until: lg) {
+    display: none;
+  }
+
+
+  @include mq($from: lg) {
+    background-size: cover;
+
+    &.o-hero-bg--faq {
+      background: url("../img-assets/matalan-store.jpg") no-repeat center 70%;
     }
-    &.summer-hero {
-      background: url('../img-assets/summer-hero.png') no-repeat left top;
-      background-size: cover;
-      background-position: center bottom;
+
+    &.o-hero-bg--sizeguide {
+      background: url("../img-assets/matalan-store.jpg") no-repeat center 70%;
     }
-    &.general-hero {
-        height: auto;
-        background: url('../img-assets/healthy-lifestyle.jpg') no-repeat left center;
-        background-size: cover;
-    }
-    &.store-hero {
-        background: url('../img-assets/matalan-store.jpg') no-repeat left center;
-        background-size: cover;
-    }
-    &.faq__hero {
-        background: url('../img-assets/matalan-store.jpg') no-repeat left center;
-        background-size: cover;
-    }
-    .row {
-        height: 100%;
-    }
-    .o-fullscreen-container__wrapper {
-        height: 100%;
-    }
-    .o-fullscreen-container__box {
-        @include center(x);
-        padding: 20px;
-        margin: 20px 0;
-        @include mq($from: md) {
-            top: 20%;
-        }
-        background-color: rgba(255,
-        255,
-        255,
-        0.9);
-        ;
-    }
-    .o-fullscreen-container__box-large {
-        @include center(x);
-        padding: 20px;
-        top: 5%;
-        background-color: rgba(255, 255, 255, 0.9);
-        ;
-        margin: 20px 0;
-    }
+  }
+}
+
+.o-hero-bg__content {
+  @include mq($from: lg) {
+    margin-top: -540px;
+  }
 }
