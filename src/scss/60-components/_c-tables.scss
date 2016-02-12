@@ -1,20 +1,16 @@
 $dark-th-bg: $dark-grey;
 $default-th-color: $primary-color;
 $default-th-bg: $light-grey;
-
 $inverse-table-color: $dark-grey;
 $inverse-table-bg: $light-grey;
 $inverse-table-border: $light-grey-hover;
 $dark-th-color: $dark-grey;
-
-
 $table-border-width: 1px;
 $table-border-color: $keyline-color;
 
 // ===========================
 // Table Base
 // ===========================
-
 .c-table {
   width: 100%;
   text-align: left;
@@ -25,26 +21,30 @@ $table-border-color: $keyline-color;
     text-transform: uppercase;
   }
 
-  td, .td, th, .th {
+  td,
+  .td,
+  th,
+  .th {
     vertical-align: top;
   }
 
   tbody th {
     text-align: left;
   }
+}
 
+ul.c-table .th,
+ul.c-table .td {
+  list-style-type: none;
+  outline: 1px solid red;
 }
 
 // ===========================
 // Table Base End
 // ===========================
-
-
-
 // ===========================
 // Table Default
 // ===========================
-
 .c-table--default {
   font-size: rem-calc(14);
 
@@ -59,64 +59,60 @@ $table-border-color: $keyline-color;
 // ===========================
 // Table Default End
 // ===========================
-
-
-
 // ===========================
 // Table Stripes
 // ===========================
-
 .c-table--striped {
   tbody tr:nth-of-type(odd),
   .tr:nth-of-type(odd) {
     @extend .u-bgcolor-lgrey-hover;
   }
-
 }
 
 .c-table--scored {
-  th, .th {
-    border-width: ($table-border-width * 2);
+  th,
+  .th {
+    border-width: $table-border-width * 2;
     border-style: none none solid none;
-    border-color:  $table-border-color;
+    border-color: $table-border-color;
   }
-  tr, .tr {
+
+  tr,
+  .tr {
     border-width: $table-border-width;
     border-style: none none solid none;
-    border-color:  $table-border-color;
+    border-color: $table-border-color;
   }
-
 }
-
-
 
 // ===========================
 // Table Stripes End
 // ===========================
-
-
-
 // ===========================
 // Table Spacing
 // ===========================
-
 .c-table--spaced {
-  th, .th {
-    padding: 1em;
+  th,
+  .th {
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
-  td, .td {
+  td,
+  .td {
     padding-top: 1em;
     padding-bottom: 1em;
   }
 }
 
 .c-table--spaced--large {
-  th, .th {
+  th,
+  .th {
     padding: 2em;
   }
 
-  td, .td {
+  td,
+  .td {
     padding-top: 2em;
     padding-bottom: 2em;
   }
@@ -125,72 +121,6 @@ $table-border-color: $keyline-color;
 // ===========================
 // Table Spacing End
 // ===========================
-
-
-
-// ===========================
-// Table Collapsible
-// ===========================
-
-.c-table--collapses {
-  .th {
-    font-weight: bold;
-  }
-
-  @include mq($until: md) {
-    .td {
-      padding-top: 0.25em;
-      padding-bottom: 0.25em;
-    }
-
-    .collapse--inline {
-      > .td {
-        display: inline-block;
-
-        &:last-of-type {
-          &::before {
-            content: ' - ';
-          }
-        }
-      }
-    }
-  }
-
-  @include mq($from: md) {
-    display: table;
-
-    .tr {
-      display: table-row;
-      width: 100%;
-    }
-
-    .th, .td {
-      display: table-cell;
-    }
-
-    .td {
-      padding-top: 1em;
-      padding-bottom: 1em;
-    }
-  }
-
-  .th--inline {
-    font-weight: bold;
-
-    &::after {
-      content: ': ';
-    }
-  }
-}
-
-// ===========================
-// Table Collapsible End
-// ===========================
-
-
-
-
-
 // ===========================
 // Color & Display Rules
 // ===========================
@@ -204,7 +134,6 @@ $table-border-color: $keyline-color;
 // Bordered version
 //
 // Add borders all around the table and between all the columns.
-
 .c-table--bordered {
   border: $table-border-width solid $table-border-color;
 
@@ -216,11 +145,10 @@ $table-border-color: $keyline-color;
   thead {
     th,
     td {
-      border-bottom-width: (2 * $table-border-width);
+      border-bottom-width: 2 * $table-border-width;
     }
   }
 }
-
 
 .c-table__thead--inverted {
   th {
@@ -235,7 +163,6 @@ $table-border-color: $keyline-color;
     background-color: $default-th-bg;
   }
 }
-
 
 .c-table--inverted {
   color: $inverse-table-color;
@@ -256,27 +183,105 @@ $table-border-color: $keyline-color;
   }
 }
 
-
 // Responsive tables
 //
 // Wrap your tables in `.c-table--responsive` and we'll make them mobile friendly
 // by enabling horizontal scrolling. Only applies <768px. Everything above that
 // will display normally.
-
-@include mq($until:lg) {
+@include mq($until: lg) {
   .c-table--responsive {
     display: block;
     width: 100%;
-    min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+    min-height: 0.01%;
+
+    // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
     overflow-x: auto;
+
     > table {
-        min-width: 720px;
+      min-width: 720px;
     }
+
     // TODO: find out if we need this still.
     //
     // border: $table-border-width solid $table-border-color;
     // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+
   }
 }
 
 
+// ===========================
+// Table Collapsible
+// ===========================
+// testing this inside text pages (cookies, faq etc)
+.c-table--collapses {
+  @include mq($until: md) {
+    text-align: center;
+  }
+
+
+  td, th {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.separator--table td {
+  background-color: $white;
+  max-height: 1em;
+  padding: 0.25em;
+}
+
+// .c-table--collapses {
+//   .th {
+//     font-weight: bold;
+//   }
+
+//   @include mq($until: md) {
+//     .td {
+//       padding-top: 0.25em;
+//       padding-bottom: 0.25em;
+//     }
+
+//     .collapse--inline {
+//       > .td {
+//         display: inline-block;
+
+//         &:last-of-type {
+//           &::before {
+//             content: ' - ';
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   @include mq($from: md) {
+//     display: table;
+
+//     .tr {
+//       display: table-row;
+//       width: 100%;
+//     }
+
+//     .th, .td {
+//       display: table-cell;
+//     }
+
+//     .td {
+//       padding-top: 1em;
+//       padding-bottom: 1em;
+//     }
+//   }
+
+//   .th--inline {
+//     font-weight: bold;
+
+//     &::after {
+//       content: ': ';
+//     }
+//   }
+// }
+// ===========================
+// Table Collapsible End
+// ===========================
