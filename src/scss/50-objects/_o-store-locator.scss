@@ -20,6 +20,10 @@
         right: 0;
         bottom: 0;
         top: 0;
+
+        img {
+          width: 100%;
+        }
     }
     .o-store-locator__locations {
         @include mq($from: md) {
