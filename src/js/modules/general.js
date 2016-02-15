@@ -99,10 +99,10 @@
 
 
 
-    //   $('.editAddress').on('click', function() {
-    //     $('.address-picker').toggle();
-    //     $("#newaddress").prop('checked', true);
-    //   });
+//   $('.js-edit-address').on('click', function() {
+//     $('.address-picker').toggle();
+//     $("#newaddress").prop('checked', true);
+//   });
 
     //   $('.is-dev .o-login__email-submit').on('click', function(e) {
     //     e.preventDefault();

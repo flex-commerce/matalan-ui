@@ -34,6 +34,7 @@ var scssTask = function() {
     return gulp.src(paths.src)
         .pipe(sourcemaps.init())
         .pipe(sass(config.tasks.css.sass))
+        .on('error', handleErrors)
         .pipe(autoprefixer(config.tasks.css.autoprefixer))
         .pipe(minifyCSS({
             keepSpecialComments: "*",
@@ -51,6 +52,7 @@ var scssTask = function() {
         .pipe(gulp.dest(paths.dest))
         .pipe(browserSync.stream());
 }
+
 
 gulp.task('css', scssTask);
 module.exports = scssTask;

@@ -78,6 +78,7 @@
   }
 
   img {
+    height: auto;
 
     @include mq($until: sm) {
       margin: rem-calc(14 0 0 0);

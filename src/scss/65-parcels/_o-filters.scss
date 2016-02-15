@@ -219,6 +219,7 @@ $filters-border-color: $keyline-color;
     display: none;
     text-decoration: none;
     cursor: pointer;
+    color: $dark-grey;
 
     &:nth-child(n+10) {
       display: block;
@@ -250,6 +251,7 @@ $filters-border-color: $keyline-color;
 
 .filters__clear {
   float: right;
-  line-height: 32px;
+  line-height: 2;
   cursor: pointer;
+  color: $dark-grey;
 }

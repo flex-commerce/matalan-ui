@@ -1,5 +1,6 @@
 .o-btn-group {
   @extend %auto-column--nobreak;
+
   @extend %u-cf;
 
   display: block;
@@ -13,17 +14,6 @@
   > .c-btn + .c-dropdown {
     margin-left: rem-calc(-3);
   }
-
-  &.o-btn-group--flex {
-    display: flex;
-    border: 1px solid $white;
-
-    > .c-btn {
-      flex: auto;
-      border-style: none;
-    }
-  }
-
 }
 
 .o-btn-group-vertical {
@@ -33,5 +23,34 @@
     max-width: 100%;
     border: 1px solid $white;
     text-align: left;
+  }
+}
+
+html.flexbox {
+  .o-btn-group--flex {
+    display: flex;
+    border: 1px solid $white;
+
+    > .c-btn {
+      flex: auto;
+      border-style: none;
+    }
+  }
+}
+
+html.no-flexbox {
+  .o-btn-group--flex {
+    display: table;
+    border: 1px solid $white;
+    width: 100%;
+
+    > .c-btn {
+      display: table-cell;
+    }
+
+    > .c-btn,
+    > .c-btn-dropdown {
+      float: none;
+    }
   }
 }

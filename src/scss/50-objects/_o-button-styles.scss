@@ -2,19 +2,21 @@
 //  Button Display Styles
 //=============================
 
+$button-line-height: $base-line-height;
+
 .c-btn {
-  @include button-size($button-padding-y, $button-padding-x, 1em, $base-line-height);
+  @include button-size($button-padding-y, $button-padding-x, 1em, $button-line-height);
 
   &.c-btn--large {
-    @include button-size($button-padding-y * 1.5, $button-padding-x * 1.5, 1.125em, $base-line-height);
+    @include button-size($button-padding-y * 1.5, $button-padding-x * 1.5, 1.125em, $button-line-height);
   }
 
   &.c-btn--small {
-    @include button-size(halve($button-padding-y), halve($button-padding-x), .825em, $base-line-height);
+    @include button-size(halve($button-padding-y), halve($button-padding-x), .825em, $button-line-height);
   }
 
   &.c-btn--tiny {
-    @include button-size(quarter($button-padding-y), quarter($button-padding-x), .7em, $base-line-height);
+    @include button-size(quarter($button-padding-y), quarter($button-padding-x), .7em, $button-line-height);
   }
 
   &.c-btn-primary {

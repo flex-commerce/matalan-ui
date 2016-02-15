@@ -41,25 +41,49 @@ require("lodash");
 // deckard - xBrowser detections
 // ===========================
 require("./vendors/deckard");
+
+function isIE9() {
+  if ($.browser.ie && $.browser.version === "9.0") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
 // ===========================
 // .. end
 // ===========================
 
 
 
+
+
 // ===========================
 // custom setup detection for mobile or tablet
 // - could be modified to work with deckard above
-// ===========================
-window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)").matches;
+// =========================//
 
-$(document).ready(function() {
-  $(window).on('resize', _.debounce(function() {
+function handleMatchMedia () {
+  if ( isIE9() ) {
+    window.isMobileOrTablet = false;
+
+  } else {
     window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)").matches;
-  }, 250));
-});
 
-console.log('isMobileOrTablet', window.isMobileOrTablet);
+    $(window).on('resize', _.debounce(function() {
+      window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)").matches;
+      console.log(window.isMobileOrTablet);
+    }, 250));
+
+  }
+}
+
+handleMatchMedia();
+
+
+// console.log('isMobileOrTablet', window.isMobileOrTablet);
 
 // true | false
 // example simple throttled check
@@ -761,9 +785,9 @@ require("./modules/minibag");
 
 require("./modules/filters");
 
-require("./modules/scroll-lock");
-// Self Initialising end
-
+if ( !isIE9() ) {
+  require("./modules/scroll-lock");
+}
 
 // ===========================
 // Misc rules to tidy

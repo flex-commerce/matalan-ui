@@ -6,7 +6,7 @@
 
       <div class="modal-header o-minibag--header hidden@lg-up">
         <div class="u-cf">
-          <h3 class="u-fl">Shopping Bag</h3>
+          <h3 class="u-fl u-mar-v-medium">Shopping Bag</h3>
           <a class="close" data-dismiss="modal" aria-label="Close">
             <i class="icon icon-ui-cross"></i>
           </a>
@@ -15,29 +15,30 @@
       <div data-scroll-responsive="md+" class="o-minibag--inner modal-body js-scroll-hold u-scrollbar">
         {{> partials/minibag-contents }}
       </div>
+
       <div class="o-minibag--footer">
         <ul class="o-minibag--action--contain">
           <li class="separator"></li>
           <li class="o-minibag--list-actions">
-              <form action=""  class="o-form--default c-search-form">
-                <div class="o-form__row u-pad-v-0">
-                    <div class="o-form__label-contain">
-                        <label class="o-form__label-primary u-font-upper">Promo Code</label>
-                    </div>
+            <!-- <form action="" class="o-form--default c-search-form"> -->
+              <div class="o-form__row u-pad-v-0">
+                <div class="o-form__label-contain">
+                  <label class="o-form__label-primary u-font-upper">Promo Code</label>
                 </div>
-                <div class="o-form__row">
-                  <div class="o-form__input-contain o-form--input-pack o-form--input-pack--styled o-form__input--icon">
-                    <input type="text" name="searchTerm" minlength="3" required
-                    class="o-input o-input--textual input-addon--expand"
-                    placeholder="Enter code"
-                    pattern=".{3,}" title="3 characters minimum">
-                    <div class="input-group__btn">
-                      <button class="c-btn c-btn-secondary" href="">Apply Code</button>
-                    </div>
-                    <i class="icon icon-reward-card"></i>
+              </div>
+              <div class="o-form__row">
+                <div class="o-form__input-contain o-form--input-pack o-form--input-pack--styled o-form__input--icon">
+                  <input type="text" name="searchTerm" minlength="3" required
+                  class="o-input o-input--textual input-addon--expand"
+                  placeholder="Enter code"
+                  pattern=".{3,}" title="3 characters minimum">
+                  <div class="input-group__btn">
+                    <button class="c-btn c-btn-secondary" href="">Apply Code</button>
                   </div>
-                  </div>
-              </form>
+                  <i class="icon icon-reward-card"></i>
+                </div>
+              </div>
+            <!-- </form> -->
           </li>
           <li class="separator"></li>
 
@@ -78,14 +79,13 @@
                 <span>or</span>
               </div>
               <a class="c-btn--block u-font-ta-c">
-              <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
-            </a>
+                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
+              </a>
             </div>
 
           </li>
         </ul>
       </div>
-
 
     </div>
   </form>

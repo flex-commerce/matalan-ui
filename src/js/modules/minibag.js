@@ -42,7 +42,7 @@
   // open on hover for 250ms
   delayWithClear($miniBagControl, openMiniBag);
 
-  // close on mouseover BG
+  // close on click BG
   $('body').on('click', modalBG, function() {
     if (!window.isMobileOrTablet) {
       closeMiniBag();

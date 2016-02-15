@@ -7,8 +7,14 @@
   }
 }
 
+
+
 // end low spec version
 .o-accord__container {
+  .disabled {
+    opacity: 0.4;
+
+  }
   > .panel > .collapse {
     display: none;
     &.in {

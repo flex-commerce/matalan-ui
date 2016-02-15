@@ -35,42 +35,61 @@ $minibag-desktop-width: 353px;
 // flexbox here to allow the inner panel to expand to max allowed size
 // flex start ======================================
 @include mq($from: md) {
+  // html.flexbox {
+  //   .o-minibag {
+  //     display: flex;
+  //     flex-direction: column;
+
+  //     .o-minibag--inner {
+  //       flex-grow: 1;
+  //       overflow-y: scroll;
+  //     }
+  //   }
+
+  //   .o-minibag-contain {
+  //     will-change: transform;
+  //   }
+  // }
+
+  // html.no-flexbox {
   .o-minibag {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 
     .o-minibag--inner {
-      flex-grow: 1;
+      // flex-grow: 1;
       overflow-y: scroll;
     }
   }
 
   .o-minibag-contain {
-    will-change: transform;
+    // will-change: transform;
+
   }
+
+  // }
 }
 
 
-@include mq($from: md, $until: lg) {
-  .o-minibag--inner {
+.o-minibag--inner {
+  @include mq($from: md, $until: lg) {
     max-height: 380px;
   }
-}
 
 
-@include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
-  .o-minibag--inner {
-    max-height: 190px;
+  @include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
+    max-height: 250px;
   }
-}
 
 
-@include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
-  .o-minibag--inner {
+  @include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
+    max-height: 300px;
+  }
+
+  @include mq($from: lg) {
     max-height: 300px;
   }
 }
-
 
 // flex end ======================================
 // layout begin ======================================
@@ -119,7 +138,7 @@ $minibag-desktop-width: 353px;
   }
 
   .o-minibag--inner {
-    max-height: 260px;
+    // max-height: 260px;
   }
 
   .o-orderlist--itemtable.o-orderlist--mybag-full {

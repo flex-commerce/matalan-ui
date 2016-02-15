@@ -13,6 +13,7 @@
       @include mq($until: lg) {
         padding: 0 0.25em;
         height: 2em;
+
         // max-width: 60px;
       }
 
@@ -20,6 +21,7 @@
       @include mq($from: lg) {
         padding: 0 0.5em;
         height: 3em;
+
         // max-width: 80px;
       }
     }
@@ -41,7 +43,6 @@
     //   &::before {
     //     color: $cool-grey;
     //   }
-
     // }
 
     .o-checkout__title {
@@ -115,3 +116,22 @@
     }
   }
 }
+
+
+
+
+  @include mq($until: md) {
+    .address-picker {
+    }
+    .address-picker__block:nth-child(3) {
+      font-size: 95%;
+      clear: left;
+    }
+  }
+  @include mq($from: md) {
+    .address-picker {
+    }
+    .address-picker__block:nth-child(4) {
+      clear: left;
+    }
+  }

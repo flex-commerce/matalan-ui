@@ -3,7 +3,7 @@
 
   position: relative;
   width: 30%; // @TODO - magic number - size
-  padding-top: 30%; // @TODO - magic number - size
+/*   padding-top: 30%; // @TODO - magic number - size */
   font-size: 80%;
   text-align: center;
   line-height: 1.2;
@@ -14,9 +14,9 @@
 }
 
 .c-roundel__pri {
-  background-color: $cool-grey;
-  color: $white;
-  font-weight: 600;
+/*   background-color: $cool-grey; */
+/*   color: $white; */
+/*   font-weight: 600; */
 }
 
 .c-roundel__sec {
@@ -29,11 +29,11 @@
 }
 
 .roundel-pos-tl {
-  @include absolute(top 0.75em left 0.75em);
+  @include absolute(top 0.5em left 0.5em);
 }
 
 .roundel-pos-tr {
-  @include absolute(top 0.75em right 0.75em);
+  @include absolute(top 0.5em right 0.5em);
 }
 
 .roundel-pos-br {

@@ -178,7 +178,9 @@ $list-border: $cool-grey;
 // ================================
 
 .list__text {
-  list-style-type: disc;
+  li {
+    list-style-type: disc;
+  }
   margin-left: 1.5em;
 }
 

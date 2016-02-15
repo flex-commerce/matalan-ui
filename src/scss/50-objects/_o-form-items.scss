@@ -28,7 +28,7 @@ textarea {
 
   /* style all elements with a required attribute */
   &:required + .input__required {
-    @include absolute(top .2em right .3em);
+    @include absolute(top 0.2em right 0.3em);
 
     @include font-size(18px);
 
@@ -118,11 +118,22 @@ textarea {
 
 // making inline labels
 .o-option--inline > .o-form__label-option {
-  float: left;
-  margin-right: 2em;
+  @include mq($until: md) {
+    display: block;
 
-  + .o-form__label-option {
-    margin-left: 1em;
+    + .o-form__label-option {
+      margin-top: 1em;
+    }
+  }
+
+
+  @include mq($from: md) {
+    float: left;
+    margin-right: 2em;
+
+    + .o-form__label-option {
+      margin-left: 1em;
+    }
   }
 }
 

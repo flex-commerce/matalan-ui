@@ -87,7 +87,7 @@
 
 
 
-  $('.editAddress').on('click', function() {
+  $('.js-edit-address').on('click', function() {
     $('.address-picker').toggle();
     $("#newaddress").prop('checked', true);
   });

@@ -64,6 +64,7 @@ $screen-md-min: 720px;
 .modal.in {
   &.modal--default {
     z-index: $zindex-modal;
+    overflow-y: scroll;
   }
 
   &.modal--custom {
@@ -173,7 +174,7 @@ $screen-md-min: 720px;
 
 .modal.modal--minibag {
   display: none;
-  overflow: hidden;
+/*   overflow: hidden; */
   position: fixed;
   top: 0;
   right: 0;
