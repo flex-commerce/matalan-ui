@@ -1,9 +1,11 @@
-  .modal--custom.modal--minibag {
-    background-color: #aaa;
-    pointer-events: none;
-  }
+
 
 html.ie {
+
+  // .modal--custom.modal--minibag {
+  //   background-color: #aaa;
+  //   pointer-events: none;
+  // }
 
   &.no-flexbox .o-minibag--list-actions .c-btn {
     margin-right: 0;
@@ -20,7 +22,5 @@ html.ie {
       padding-right: 0 !important;
     }
   }
-
-
 
 }

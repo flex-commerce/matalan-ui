@@ -2,7 +2,6 @@
     #PAGE
 \*------------------------------------*/
 
-
 /**
  * High-, page-level styling.
  *
@@ -63,11 +62,13 @@ body.page--text {
   background-color: transparent;
 }
 
-html.ios {
-  overflow-x: hidden;
-  body {
-    overflow-x: hidden;
-  }
-}
+
+
+// html.ios {
+//   overflow-x: hidden;
+//   body {
+//     overflow-x: hidden;
+//   }
+// }
 
 
