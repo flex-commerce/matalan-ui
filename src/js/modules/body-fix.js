@@ -11,7 +11,7 @@
     }
   });
 
-  var bodyFix = {
+  module.exports = {
 
     classes: {
       CONTAINER: 'container--bodyfix',
@@ -146,21 +146,5 @@
   };
 
 
-  // ======================================
-  // ======================================
-
-  // before the modal is to be shown
-  $('body').on('show.bs.modal', function() {
-    // but not for the minibag
-    if ($('body').hasClass('modal-open--minibag') && !window.isMobileOrTablet) {
-      return;
-    }
-    bodyFix.lock();
-  });
-
-  // then after the modal has already been hidden
-  $('body').on('hidden.bs.modal', function() {
-    bodyFix.unlock();
-  });
 
 })($);

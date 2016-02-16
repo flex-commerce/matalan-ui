@@ -24,14 +24,14 @@ $screen-md-min: 720px;
 // .modal-content   - actual modal w/ bg and corners and shit
 // Kill the scroll on the body
 .modal-open {
-  position: fixed;
-  left: 0;
-  right: 0;
+  // position: fixed;
+  // left: 0;
+  // right: 0;
 
-  .modal--default {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
+  // .modal--default {
+  //   overflow-x: hidden;
+  //   overflow-y: auto;
+  // }
 }
 
 // Container that the modal scrolls within
