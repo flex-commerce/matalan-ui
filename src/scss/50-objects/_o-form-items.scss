@@ -109,6 +109,7 @@ textarea {
 .o-form__label-option {
   font-size: 90%;
   cursor: pointer;
+  display: block;
 
   [type="checkbox"],
   [type="radio"] {
@@ -124,8 +125,7 @@ textarea {
     + .o-form__label-option {
       margin-top: 1em;
     }
-  }
-
+}
 
   @include mq($from: md) {
     float: left;
