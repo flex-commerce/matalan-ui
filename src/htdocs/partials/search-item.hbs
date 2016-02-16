@@ -1,10 +1,9 @@
 <div class="search-results--item u-font-ta-c u-mar-b-medium">
 
-  <a href="{{ productLink }}" class="link--nostyle">
+  <a href="{{ productLink }}" class="">
 
     <div class="results__image">
-      <img class="img"  src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
-
+      <img class="product__image" src="{{productImages.[0]}}" onmouseover="this.src='{{productImages.[1]}}'" onmouseout="this.src='{{productImages.[0]}}'">
       <img src="img/roundel/plp-size1828.svg" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tl" />
       <img src="img/roundel/test-roundel.svg" class="c-roundel c-roundel__pri c-roundel--custom roundel-pos-tr" />
     </div>
@@ -20,15 +19,15 @@
 
       <div class="results__detail__price u-font-wb">
         {{#if nowPrice}}
-        <span class="u-color-pri">Now {{nowPrice}}</span>
+        <span class="u-color-pri">Now {{nowPrice}} to {{nowPrice}}</span>
         {{else}}
-          <span>{{productPrice}}</span>
+          <span>{{productPrice}} to {{productPrice}}</span>
         {{/if}}
       </div>
 
       <div class="results__detail__price--was u-font--small">
         {{#if nowPrice}}
-        <span class="u-font-strikethrough u-font--small">Was {{productPrice}}</span>
+        <span class="u-font-strikethrough u-font--small">Was {{productPrice}} to {{productPrice}}</span>
         {{ else }}
         <span>&nbsp;</span>
         {{/if}}

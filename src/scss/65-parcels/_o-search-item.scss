@@ -16,6 +16,11 @@
 //     }
 //   }
 // }
+.results__detail__title,
+.results__detail__price,
+.results__detail__price--was {
+    color: $base-text-color;
+}
 
 .results__detail {
   .results__detail__title {
@@ -36,7 +41,7 @@
       font-size: 1rem;
     }
 
-    .img {
+    .product__image {
       width: 100%;
     }
   }

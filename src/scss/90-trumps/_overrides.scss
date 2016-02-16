@@ -9,8 +9,12 @@
     // pad important for scrollbar pop
     padding-right: 0 !important;
     position: initial;
-
   }
+
+  html.ios .modal-open--minibag.modal-open {
+    position: fixed;
+  }
+
 
   .modal-open--minibag {
 
