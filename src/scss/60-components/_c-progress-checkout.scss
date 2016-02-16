@@ -32,8 +32,19 @@ $border-thickness: 5px;
 
 %flexer,
 .flexer {
-  display: flex;
-  justify-content: space-between;
+  html.flexbox & {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  html.no-flexbox & {
+    display: table;
+    width: 100%;
+
+    > * {
+      display: table-cell;
+    }
+  }
 }
 
 %flexer--vertical,

@@ -11,10 +11,15 @@
 
   > * {
     display: table-cell !important;
+/*     vertical-align: top; */
   }
 
   .input-group__btn {
     width: 1%;
+
+    .c-btn {
+      width: auto;
+    }
   }
 
   .input-group--addon {

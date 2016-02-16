@@ -1,0 +1,29 @@
+// modal
+// overrides default modal behaviour for redesigned minibag modal
+// removes darkened background, allows scroll, prevents scrollbar pop
+// ie targetted separately
+
+@include mq($from: lg) {
+
+  html:not(.ie) .modal-open--minibag.modal-open {
+    // pad important for scrollbar pop
+    padding-right: 0 !important;
+    position: initial;
+
+  }
+
+  .modal-open--minibag {
+
+    .modal-backdrop {
+      opacity: 0;
+    }
+
+    .o-minibag-contain {
+      pointer-events: none;
+
+      > * {
+        pointer-events: auto;
+      }
+    }
+  }
+}

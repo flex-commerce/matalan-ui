@@ -9,27 +9,6 @@ $minibag-desktop-width: 353px;
   position: relative;
 }
 
-@include mq($from: lg) {
-  // todo - hacky override for default modal behaviour
-  // current requirements have changed again, re check this once aproved - IH 10/02/16
-  body.modal-open--minibag {
-    &.modal-open {
-      position: initial;
-    }
-
-    .modal-backdrop {
-      opacity: 0;
-    }
-
-    .o-minibag-contain {
-      pointer-events: none;
-
-      > * {
-        pointer-events: auto;
-      }
-    }
-  }
-}
 
 
 // flexbox here to allow the inner panel to expand to max allowed size
@@ -240,17 +219,6 @@ $minibag-desktop-width: 353px;
 
 // small screen specific tweaks to details layout end ======================================
 // misc rules ======================================
-.o-minibag-contain {
-  // removed for modals - to test
-  // position: relative;
-  // z-index: 10;
-  // pointer-events: none;
-
-  .o-minibag {
-    // pointer-events: auto;
-
-  }
-}
 
 .o-minibag {
   border: 1px solid $primary-color;
@@ -266,7 +234,6 @@ $minibag-desktop-width: 353px;
 // misc rules end ======================================
 // separators, borders, and padding begin ======================================
 .o-minibag {
-  /*   padding-top: 1.5em; */
   padding-bottom: 1em;
 
   .o-minibag--header,
@@ -299,14 +266,6 @@ $minibag-desktop-width: 353px;
 
 .o-minibag--list-total {
   line-height: 1.3;
-}
-
-.o-minibag--list-total,
-.o-minibag--list-checkout {
-  @include mq($from: lg) {
-    // padding-left: 0.75em;
-    // padding-right: 0.75em;
-  }
 }
 
 .detail--description,
