@@ -125,6 +125,14 @@ require("pepjs");
 
 
 
+// =============================
+// the bit that fixed the modals
+// =============================
+require("./modules/body-fix");
+// =============================
+// =============================
+
+
 // ===========================
 // Tether
 // http://github.hubspot.com/tether/
