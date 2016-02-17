@@ -308,18 +308,18 @@ $icon-menu-storefinder: '\EA12';
 }
 
 // Save variable
-$icon-mini-bag: '\EA13';
+$icon-minibag: '\EA13';
 
 // Save mixin
-@mixin icon--mini-bag {
-  @include icon($icon-mini-bag) {
+@mixin icon--minibag {
+  @include icon($icon-minibag) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-mini-bag:before {
-  content: $icon-mini-bag;
+.icon.icon-minibag:before {
+  content: $icon-minibag;
 }
 
 // Save variable
@@ -668,33 +668,33 @@ $icon-telephone: '\EA2A';
 }
 
 // Save variable
-$icon-ui-3-across: '\EA2B';
+$icon-padlock-s: '\EA2B';
 
 // Save mixin
-@mixin icon--ui-3-across {
-  @include icon($icon-ui-3-across) {
+@mixin icon--padlock-s {
+  @include icon($icon-padlock-s) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-ui-3-across:before {
-  content: $icon-ui-3-across;
+.icon.icon-padlock-s:before {
+  content: $icon-padlock-s;
 }
 
 // Save variable
-$icon-ui-4-across: '\EA2C';
+$icon-padlock-u: '\EA2C';
 
 // Save mixin
-@mixin icon--ui-4-across {
-  @include icon($icon-ui-4-across) {
+@mixin icon--padlock-u {
+  @include icon($icon-padlock-u) {
     @content;
   }
 }
 
 // Expose as class
-.icon.icon-ui-4-across:before {
-  content: $icon-ui-4-across;
+.icon.icon-padlock-u:before {
+  content: $icon-padlock-u;
 }
 
 // Save variable
@@ -800,6 +800,36 @@ $icon-user-male: '\EA33';
 // Expose as class
 .icon.icon-user-male:before {
   content: $icon-user-male;
+}
+
+// Save variable
+$icon-ui-3-across: '\EA34';
+
+// Save mixin
+@mixin icon--ui-3-across {
+  @include icon($icon-ui-3-across) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-ui-3-across:before {
+  content: $icon-ui-3-across;
+}
+
+// Save variable
+$icon-ui-4-across: '\EA36';
+
+// Save mixin
+@mixin icon--ui-4-across {
+  @include icon($icon-ui-4-across) {
+    @content;
+  }
+}
+
+// Expose as class
+.icon.icon-ui-4-across:before {
+  content: $icon-ui-4-across;
 }
 
 

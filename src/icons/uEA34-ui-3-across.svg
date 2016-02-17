@@ -6,10 +6,14 @@
 <style type="text/css">
 	.st0{fill:#383838;}
 </style>
-<title>Empty Star</title>
+<title>3 Across</title>
 <desc>Created with Sketch.</desc>
-<path class="st0" d="M128,49.9l-4.1-0.6l0,0l-2.5-0.3l-37.6-5.4L64,4.3L62.1,8l0,0l-1.4,2.9L44.2,43.6L0,49.9l3,2.9l0,0.1l4.8,4.6
-	l0.1,0l24.1,23l-7.6,43.2l3.7-1.9l0.1,0.1l5.8-3l0-0.2l30-15.4l30,15.4l0,0.2l5.8,3l0.1-0.1l3.7,1.9L96,80.5l24.2-23.1l0,0l4.8-4.6
-	l0,0L128,49.9z M90.1,74.4l-3.3,3.1l0.8,4.5l4.6,26.4L67.9,95.9l-3.9-2l-3.9,2l-24.3,12.5l4.6-26.3l0.8-4.5l-3.3-3.1L18.5,56
-	l26.9-3.9l4.4-0.6l2-4L64,23.1l12.2,24.3l2,4l4.4,0.6l26.9,3.9L90.1,74.4z"/>
+<g>
+	<path class="st0" d="M2,23v36h36V23H2z M34,55H6V27h28V55z"/>
+	<path class="st0" d="M2,69v36h36V69H2z M34,101H6V73h28V101z"/>
+	<path class="st0" d="M90,69v36h36V69H90z M122,101H94V73h28V101z"/>
+	<path class="st0" d="M90,23v36h36V23H90z M122,55H94V27h28V55z"/>
+	<path class="st0" d="M46,69v36h36V69H46z M78,101H50V73h28V101z"/>
+	<path class="st0" d="M46,23v36h36V23H46z M78,55H50V27h28V55z"/>
+</g>
 </svg>
