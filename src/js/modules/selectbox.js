@@ -221,8 +221,8 @@
       .addClass('selectbox')
       .data('selectbox-control', control)
       .data('selectbox-settings', settings)
-      .css('opacity', '0');
-
+      .css('opacity', '0')
+      .css('position', 'absolute');
   };
 
   /**

@@ -130,8 +130,6 @@ require("pepjs");
 // =============================
 var bodyFix = require("./modules/body-fix");
 
-console.log(bodyFix);
-
 // before the modal is to be shown
 $('body').on('show.bs.modal', function() {
   // but not for the minibag

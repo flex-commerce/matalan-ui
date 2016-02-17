@@ -1,18 +1,20 @@
 
+<!-- minibag modal wrapper -->
 <div class="modal modal--custom modal--minibag o-minibag-contain" id="minibag-contain">
+
   <form action="" class="modal-dialog">
 
     <div data-scroll-responsive="sm" class="modal-content o-minibag u-scrollbar">
 
       <div class="modal-header o-minibag--header hidden@lg-up">
         <div class="u-cf">
-          <h3 class="u-fl u-mar-v-small">Shopping Bag</h3>
+          <h4 class="u-fl u-mar-v-small">Shopping Bag</h4>
           <a class="close" data-dismiss="modal" aria-label="Close">
             <i class="icon icon-ui-cross"></i>
           </a>
         </div>
       </div>
-      <div data-scroll-responsive="md+" class="o-minibag--inner modal-body js-scroll-hold u-scrollbar">
+      <div class="o-minibag--inner modal-body">
         {{> partials/minibag-contents }}
       </div>
 
@@ -20,7 +22,7 @@
         <ul class="o-minibag--action--contain">
           <li class="separator hidden@lg-up"></li>
           <li class="o-minibag--list-actions hidden@lg-up">
-            <!-- <form action="" class="o-form--default c-search-form"> -->
+            <form action="" class="o-form--default c-search-form">
               <div class="o-form__row u-pad-v-0">
                 <div class="o-form__label-contain">
                   <label class="o-form__label-primary u-font-upper">Promo Code</label>
@@ -38,10 +40,9 @@
                   <i class="icon icon-reward-card"></i>
                 </div>
               </div>
-            <!-- </form> -->
+            </form>
           </li>
-          <li class="separator"></li>
-
+          <li class="separator u-pad-t-0"></li>
           <li class="o-minibag--list o-minibag--list-total">
             <dl class="o-deflist-right">
               <dt>Shipping</dt>
@@ -59,11 +60,11 @@
 
             <div class="callout-panel u-mar-b-small">
               <p>You are
-                <span class="u-font-wb">£3.00</span> away from qualifying for
-                <span class="u-font-wb">FREE</span> standard home delivery.
+                <span class="u-font-wb u-color-pri">£3.00</span> away from qualifying for
+                <span class="u-font-wb u-color-pri">FREE</span> standard home delivery.
               </p>
               <p class="u-mar-b-0">Our click &amp; collect service is
-                <span class="u-font-wb">FREE</span> whatever your order value.
+                <span class="u-font-wb u-color-pri">FREE</span> whatever your order value.
               </p>
             </div>
 
