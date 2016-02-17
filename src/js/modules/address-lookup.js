@@ -23,7 +23,7 @@
                     else {
                         $(thisParentWrapper).find('.find-address-wrapper').show();
                         $(thisParentWrapper).find('.populateAddresses').html('');
-                        var toAppend = '<select data-app="pa-address-select" class="col-12@xs u-pad-0 selectbox-full ">';
+                        var toAppend = '<select data-app="pa-address-select" class="col-12@xs u-pad-0">';
                         $.each(data.Items, function(i, o) {
                             toAppend += '<option value="' + o.Id + '">' + o.StreetAddress + ", " + o.Place + '</option>';
                         });

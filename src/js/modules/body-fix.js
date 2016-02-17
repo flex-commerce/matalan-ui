@@ -118,7 +118,8 @@
      * Undo all the things above
      */
     unlock: function() {
-      if (this.isFixed()) {
+
+      if (this.$container && this.isFixed()) {
         this.$doc.on('touchmove', this._preventDefault);
         this.$container.removeClass(this.classes.FIXED);
 
