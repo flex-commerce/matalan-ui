@@ -45,9 +45,8 @@ require("./vendors/deckard");
 function isIE9() {
   if ($.browser.ie && $.browser.version === "9.0") {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 
@@ -62,7 +61,6 @@ function isIE9() {
 
 // ===========================
 // custom setup detection for mobile or tablet
-// - could be modified to work with deckard above
 // =========================//
 
 function handleMatchMedia () {
@@ -129,6 +127,8 @@ require("pepjs");
 // the bit that fixed the modals
 // =============================
 var bodyFix = require("./modules/body-fix");
+
+console.log(bodyFix);
 
 // before the modal is to be shown
 $('body').on('show.bs.modal', function() {
@@ -262,9 +262,6 @@ require("./modules/collapse");
 $(document).ready(function() {
 
 
-
-
-
   // $(window).on('resize', _.debounce(function() {
   //   if (!window.isMobileOrTablet) {
   //     //   // on resize, open if desktop
@@ -297,7 +294,6 @@ $(document).ready(function() {
 
 
 });
-
 
 // ===========================
 // accordion end

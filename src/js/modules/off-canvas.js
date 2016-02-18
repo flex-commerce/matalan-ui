@@ -10,11 +10,7 @@
     // ===========================
     // Off Canvas
     // ===========================
-    // var clickCatcher = '<div id="js-clickcatcher-canvas" class="js-clickcatcher"></div>'
     var offCanvasActive;
-
-
-
 
     $navContain.on('show.bs.modal', function(e) {
         $parentNavMenu.addClass("active");
@@ -26,39 +22,8 @@
         $('body').removeClass("modal-open--nav");
     });
 
-    // $('body').on('pointerdown', '.modal-backdrop', function() {
-    //   if (window.isMobileOrTablet.matches) {
-    //     $navContain.modal('hide');
-    //   }
-    // });
-
-    // $('#minibag-contain').on('hidden.bs.modal', function (e) {
-    //   tether.disable();
-    //   $('#minibag-contain').attr('style', '');
-    // });
-
-
-
-    function closingOffCanvas() {
-        // $('html').removeClass("body--modal-open");
-        // $parentNavMenu.removeClass("active");
-        // $('#js-clickcatcher-canvas').remove();
-        // offCanvasActive = false;
-    }
-
-    function openingOffCanvas() {
-        //   $('html').addClass("body--modal-open");
-        //   $parentNavMenu.addClass("active");
-        //   $('body').append(clickCatcher);
-        //   offCanvasActive = true;
-    }
-
-
     // off canvas navigation rules
     function offCanvas() {
-        // $('body').on('mousedown', '#js-clickcatcher-canvas', function() {
-        //   closeOffCanvas();
-        // })
 
         // toggle top level nav item
         $parentNavMenu.on('mousedown', '.navbar__top-item > .link', function(e) {
@@ -69,7 +34,6 @@
             }
             $(this).toggleClass('open').next('.sub-nav').toggleClass('open');
         })
-
 
         // toggle second level (sub nav) item
         $parentNavMenu.on('mousedown', '.sub-nav-title', function(e) {
@@ -89,28 +53,7 @@
 
     }
 
-
-    // ===========================
-    // off canvas button event handler
-    // $("body").on('mousedown', '.js-nav-mobile-button',  function() {
-    //   if ($('html').hasClass('body--modal-open')) {
-    //     closeOffCanvas();
-    //   } else {
-    //     openOffCanvas();
-    //   }
-    // })
-
-    // $('body').on('click touchstart', '#js-clickcatcher-canvas', function() {
-    //   closeOffCanvas();
-    // });
-
-
-
-
-
-
     function handleWindowSize() {
-
         if (window.isMobileOrTablet) {
             if (offCanvasActive !== true) {
                 offCanvas();

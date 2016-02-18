@@ -11,7 +11,7 @@
     }
   });
 
-  module.exports = {
+  var Bodyfix = {
 
     classes: {
       CONTAINER: 'container--bodyfix',
@@ -119,7 +119,7 @@
      */
     unlock: function() {
 
-      if (this.$container && this.isFixed()) {
+      if (this.isFixed()) {
         this.$doc.on('touchmove', this._preventDefault);
         this.$container.removeClass(this.classes.FIXED);
 
@@ -143,14 +143,22 @@
     },
 
     isFixed: function() {
-      return this.$container.hasClass(this.classes.FIXED);
+      if (this.$container) {
+        return this.$container.hasClass(this.classes.FIXED);
+      }
+      return false;
     },
 
     _preventDefault: function(e) {
       e.preventDefault();
     }
+
   };
 
-
+  module.exports = {
+      lock: Bodyfix.lock.bind(Bodyfix),
+      unlock: Bodyfix.unlock.bind(Bodyfix),
+      isFixed: Bodyfix.isFixed.bind(Bodyfix)
+  };
 
 })($);

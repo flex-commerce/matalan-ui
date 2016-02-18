@@ -208,4 +208,25 @@
     Plugin.call($target, option);
   });
 
+  // collapse disabled handling
+  // as per checkout 1-2-3 stages
+  $(document).on('click', '[data-disabledtarget]', function (e) {
+    var $this   = $(this);
+
+    if ($this.attr('href')) {
+      e.preventDefault();
+    }
+
+    var $target = getTargetFromTrigger($this);
+    var $parentPanel = $target.closest($('.panel'));
+
+    if (!$parentPanel.hasClass('disabled')) return;
+    $parentPanel.removeClass('disabled');
+  });
+
+
+
+
+
+
 })(jQuery);
