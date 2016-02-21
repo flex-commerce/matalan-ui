@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   {{> partials/html-head }}
@@ -9,11 +9,11 @@
 <body class="page--storefinder is-dev">
   {{> parcels/header }}
 
-  <div class="o-fullscreen-container store-hero" role="main">
+  <div class="o-fullscreen-container store-hero js-height-fix" role="main">
     {{> parcels/store-finder}}
   </div>
 
-  <div id="storeFinderContainer" class="container o-map-conatiner" style="display:none">
+  <div id="storeFinderContainer" class="container o-map-container" style="display:none">
     {{> parcels/store-finder-google}}
   </div>
 

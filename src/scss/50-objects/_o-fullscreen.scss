@@ -1,19 +1,23 @@
 .o-fullscreen-container {
+
   position: relative;
-  height: calc(100vh - 59px);
+  // height: calc(100vh - 59px);
+  height: 100vh;
 
   // magic - header-height
   display: block;
 
   @include mq($until: lg) {
-    height: calc(100vh - 59px);
+    // height: calc(100vh - 59px);
+    height: 100vh;
 
     // magic - header-height
   }
 
 
   @include mq($from: lg) {
-    height: calc(100vh - 110px);
+    // height: calc(100vh - 110px);
+    height: 100vh;
 
     // magic - header-height
   }
