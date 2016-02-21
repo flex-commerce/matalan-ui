@@ -112,8 +112,13 @@ body {
   .sub-nav-title {
     color: $primary-color;
     margin: .75em 0;
-    padding-bottom: .5em;
-    border-bottom: 1px solid $cool-grey;
+    // padding-bottom: .5em;
+    font-size: 0.9rem;
+/*     border-bottom: 1px solid $cool-grey; */
+  }
+
+  .sub-nav-group {
+    font-size: 0.9rem;
   }
 
   .sub-nav-header {

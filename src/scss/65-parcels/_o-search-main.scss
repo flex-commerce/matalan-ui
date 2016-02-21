@@ -48,6 +48,7 @@
     }
   }
 
+
   // desktop rules follow the layout method chosen
   @include mq($from: lg) {
     .search-results__tight & {
@@ -66,11 +67,7 @@
       }
     }
   }
-
 }
-
-
-
 
 // header bar rules
 .search-results--header {
@@ -82,7 +79,33 @@
   .results-layout {
     line-height: 0;
   }
+
+  .ui-icon {
+    display: inline-block;
+    width: 42px;
+    opacity: 0.5;
+    margin-top: 3px; // offset for image alignment next to buttons
+
+    &.active {
+      opacity: 1;
+    }
+  }
+  // html.flexbox & {
+  //   > .row {
+  //     display: flex;
+  //     .search--header--products,
+  //     .search--header--sort {
+  //       flex: 0 1 auto;
+  //     }
+  //     .search--header--pagination {
+  //       flex: 1 0 auto;
+  //     }
+  //   }
+  // }
 }
+
+
+
 
 .search--header--products {
   @include font-size(12px);

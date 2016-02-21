@@ -1,12 +1,23 @@
 .caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 6px;
-  vertical-align: middle;
-  border-top: 6px solid;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
+  @extend .icon-ui-down;
+
+  @extend .icon;
+
+  // height: 100%;
+
+  &:before {
+    vertical-align: bottom;
+    // height: 100%;
+  }
+
+  // display: inline-block;
+  // width: 0;
+  // height: 0;
+  // margin-left: 6px;
+  // vertical-align: middle;
+  // border-top: 6px solid;
+  // border-right: 6px solid transparent;
+  // border-left: 6px solid transparent;
 }
 
 .color-primary {

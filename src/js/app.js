@@ -12,7 +12,7 @@ require("lodash");
 // ===========================
 
 
-
+require("modules/fullscreen-handle");
 // ===========================
 // Examples
 // ===========================

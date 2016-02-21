@@ -1,8 +1,8 @@
 $pill-spacing: rem-calc(4);
 $tab-spacing: rem-calc(8);
 $tab-border-width: rem-calc(1);
-$tab-background-colour: $cool-grey;
-$tab-background-colour-hover: $cool-grey-hover;
+$tab-background-colour: $light-grey;
+$tab-background-colour-hover: $light-grey-hover;
 $tab-border-color: #ddd;
 
 // ========================
@@ -14,6 +14,16 @@ $tab-border-color: #ddd;
 
 .c-tabs__content__pane.active {
   display: block;
+}
+
+.c-tabs--tab--horizontal {
+  .c-tabs__header__item:not(.active) {
+    position: relative;
+    z-index: 1;
+
+    // pops inactive tab behind the content border
+
+  }
 }
 
 // Tab Default (horizontal)
@@ -86,6 +96,7 @@ $tab-border-color: #ddd;
 
     .active a {
       color: $white;
+      background-color: $cool-grey;
     }
   }
 
@@ -227,7 +238,7 @@ html.flexbox {
 // global tab colours
 .c-tabs__header {
   a {
-    color: $white;
+    color: $dark-grey;
   }
 
   .active a {
@@ -235,10 +246,10 @@ html.flexbox {
   }
 
   .c-tabs__header__item:not(.active):hover {
-    background-color: $cool-grey-hover;
+    background-color: $tab-background-colour-hover;
 
     a {
-      color: $white;
+      color: $dark-grey-hover;
     }
   }
 }

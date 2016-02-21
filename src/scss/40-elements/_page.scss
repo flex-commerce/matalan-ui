@@ -55,7 +55,7 @@ body.page--text {
 }
 
 // hacky..
-.page--text .container[role=main]:not(.page--text--custom) > .row {
+.page--text .container[role=main]:not(.page--text__custom) > .row {
   background: $white;
 }
 

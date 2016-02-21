@@ -225,11 +225,20 @@ $filters-border-color: $keyline-color;
       display: block;
     }
 
-    i {
+    .icon {
       float: right;
       margin-top: -3px;
     }
   }
+
+  // custom line height for alignment
+  .o-filters__header__title {
+    line-height: 36px;
+  }
+  .filters__clear {
+    line-height: 42px;
+  }
+
 }
 
 
@@ -251,7 +260,6 @@ $filters-border-color: $keyline-color;
 
 .filters__clear {
   float: right;
-  line-height: 2;
   cursor: pointer;
   color: $dark-grey;
 }
