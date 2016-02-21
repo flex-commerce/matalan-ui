@@ -33,22 +33,15 @@
             <div class="o-minibag--list__header__item u-font-ta-r">Subtotal</div>
           </li>
           {{#each minibag.category.collection.products}}
-          <li class="o-minibag--list o-minibag--list-item u-cf">
+          <li class="o-minibag--list o-minibag--list-item row">
 
-            <div class="o-minibag--list-item--image col-3@xs col-2@md col-3@lg u-pad-none">
+            <div class="o-minibag--list-item--image col-3@xs col-2@md col-3@lg u-pad-r-0">
               <img class="img" src="{{productImages.[0]}}">
             </div>
 
             <div class="o-minibag--list-item--detail col-9@xs col-10@md col-6@lg ">
-              <p class="detail--description u-font-wb">{{productTitle}}</p>
-              <ul class="detail--vars u-pad-b-small list-space__small">
-                <li class="list__item">Product ID: 123445</li>
-                <li class="list__item">Color:
-                  <span class="color-swatch__inline u-bgcolor-cgrey"></span>
-                </li>
-                <li class="list__item">Qty: val</li>
-                <li class="list__item">Size: Small</li>
-              </ul>
+              <p class="detail--description u-font-wb u-font-larger">{{productTitle}}</p>
+
               <ul class="detail--price hidden@lg-up">
                 <li class="list__item u-font-ta-r">
                   <strong>{{productPrice}}</strong>
@@ -62,6 +55,19 @@
                 {{/if}}
                 <!-- <li class="list__item hidden@lg-up">Save: £0.00</li> -->
               </ul>
+
+              <dl class="detail--vars u-pad-b-small o-deflist-left o-deflist-left--small colspan-9">
+                <dt class="u-color-dgrey">Product ID</dt>
+                <dd class="u-font-large-rel">123445</dd>
+                <dt class="u-color-dgrey">Color</dt>
+                <dd>
+                  <span class="color-swatch__inline u-bgcolor-cgrey"></span>
+                </dd>
+                <dt class="u-color-dgrey">Qty</dt>
+                <dd class="u-font-large-rel">5</dd>
+                <dt class="u-color-dgrey">Size</dt>
+                <dd class="u-font-large-rel">Small</dd>
+              </dl>
             </div>
             <div class="o-minibag--list-item--control col-3@lg hidden@md-down">
               <select class="o-minibag--control--select selectbox-dropdown__inline">
@@ -74,24 +80,24 @@
                   <span class="hidden@md-down">&times;</span> remove</a>
               </div>
             </div>
-            <div class="o-minibag--list-item--control o-minibag--list-item--quant col-9@xs col-10@md hidden@lg-up u-fr">
-              <div class="o-minibag--control--remove col-4@xs u-pad-none">
+            <div class="o-minibag--list-item--control o-minibag--list-item--quant col-12@xs col-10@md hidden@lg-up u-fr">
+              <div class="o-minibag--control--remove colspan-4 u-pad-none">
                 <a class="c-btn c-btn-primary u-font-no-underline" href="#">
                   <span class="hidden@lg-down">&times;</span> remove
                 </a>
                 &nbsp;
               </div>
-              <div class="o-form__input-contain o-form__input-contain--quantity col-8@xs u-pad-none u-font-ta-r">
+              <div class="o-form__input-contain o-form__input-contain--quantity colspan-8 u-font-ta-r">
                 <a class="c-btn c-btn-primary u-font-no-underline js-remove-item">-</a>
                 <span class="o-input--textual js-item-count">1</span>
                 <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
                 <a class="c-btn c-btn-primary u-font-no-underline js-add-item">+</a>
               </div>
             </div>
-            <div class="o-minibag--list-item--price-col o-minibag--list-item--price--save span-wide-2 hidden@md-down u-color-pri">
+            <div class="o-minibag--list-item--price-col o-minibag--list-item--price--save colspan-2 hidden@md-down u-color-pri u-font-wb">
               {{#if nowPrice}}{{ difference productPrice nowPrice }}{{/if}}
             </div>
-            <div class="o-minibag--list-item--price-col o-minibag--list-item--price--total span-wide-2 hidden@md-down u-font-ta-r">
+            <div class="o-minibag--list-item--price-col o-minibag--list-item--price--total colspan-2 hidden@md-down u-font-ta-r">
               {{productPrice}}
             </div>
           </li>

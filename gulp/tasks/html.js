@@ -30,7 +30,7 @@ var paths = {
 var htmlTask = function() {
 
   return gulp.src(paths.src)
-    // .pipe(changed(paths.dest)) // Ignore unchanged files
+    .pipe(changed(paths.dest)) // Ignore unchanged files
     .pipe(hb({
         data: path.join(config.app.src, config.tasks.hbs.data, '/*.{js,json}'),
         helpers: path.join(config.app.src, config.tasks.hbs.helpers, '/*.js'),

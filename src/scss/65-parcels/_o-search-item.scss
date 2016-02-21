@@ -24,7 +24,13 @@
 
 .results__detail {
   .results__detail__title {
-    height: 3em;
+    @include mq($until: lg) {
+      min-height: 3em;
+    }
+    @include mq($from: lg) {
+      height: 3em;
+    }
+
   }
 }
 

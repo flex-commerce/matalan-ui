@@ -138,26 +138,39 @@
 
 // non-relative font sizer
 .u-font-small {
-  font-size: .925rem;
+  font-size: .95rem;
 }
-
 .u-font-smaller {
   font-size: .85rem;
 }
-
 .u-font-smallest {
   font-size: .715rem;
 }
-
+.u-font-large {
+  font-size: 1.125rem;
+}
+.u-font-larger {
+  font-size: 1.225rem;
+}
+.u-font-largest {
+  font-size: 1.35rem;
+}
 // relative font sizer
 .u-font-small-rel {
-  font-size: .925em;
+  font-size: .95em;
 }
-
 .u-font-smaller-rel {
   font-size: .85em;
 }
-
 .u-font-smallest-rel {
   font-size: .715em;
+}
+.u-font-large-rel {
+  font-size: 1.125em;
+}
+.u-font-larger-rel {
+  font-size: 1.225em;
+}
+.u-font-largest-rel {
+  font-size: 1.35em;
 }

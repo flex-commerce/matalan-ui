@@ -96,7 +96,7 @@ $minibag-desktop-width: 353px;
 
   .o-minibag--list-item--control {
     // todo - check paddings
-    padding: 0 0 0 1em;
+/*     padding: 0 0 0 1em; */
     margin-top: 1em;
   }
 
@@ -122,14 +122,15 @@ $minibag-desktop-width: 353px;
     // max-height: 260px;
   }
 
-  .o-orderlist--itemtable.o-orderlist--mybag-full {
+  .o-orderlist--itemtable {
+      display: table;
+
     .o-minibag--list-item--control {
       text-align: right;
       padding: 0;
     }
 
     .o-orderlist--itemtable {
-      display: table;
     }
 
     .o-minibag--list-item {
@@ -158,7 +159,7 @@ $minibag-desktop-width: 353px;
       }
 
       .o-minibag--list-item--detail {
-        width: 25%;
+        width: auto;
       }
 
       .o-minibag--list-item--control {
@@ -167,7 +168,8 @@ $minibag-desktop-width: 353px;
       }
 
       .o-minibag--list-item--price--save {
-        width: auto;
+        width: 20%;
+/*         width: auto; */
       }
 
       .o-minibag--list-item--price--total {
@@ -202,7 +204,7 @@ $minibag-desktop-width: 353px;
   .o-minibag--list-item--detail {
     .detail--description {
       float: left;
-      max-width: 40%;
+      max-width: 75%;
     }
 
     .detail--vars {
@@ -212,6 +214,7 @@ $minibag-desktop-width: 353px;
 
     .detail--price {
       float: right;
+      max-width: 25%;
 /*       position: absolute;
       right: 0;
       top: 0; */

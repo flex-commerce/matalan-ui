@@ -189,8 +189,8 @@
                                if (longitude && latitude) {
                                    $('.o-store-locator__locations').scrollTo('#store-' + e.id);
                                }
-                               var locattionIcon = $('.use-location').find('i').prop('outerHTML');
-                               $('.use-location').html(locattionIcon + 'Use my location').removeClass('c-loading');
+                               var locationIcon = $('.use-location').find('i').prop('outerHTML');
+                               $('.use-location').html(locationIcon + 'Use my location').removeClass('c-loading');
 
 
                            }
@@ -296,7 +296,7 @@
                    var actionRow = detailsRow.appendChild(document.createElement('div'));
                    actionRow.className = "col-12@xs col-6@lg";
                    var actionButton = details.appendChild(document.createElement('div'));
-                   actionButton.className = 'c-btn c-btn-primary col-10@xs hidden@sm-down u-mar-t-medium u-font-upper';
+                   actionButton.className = 'c-btn c-btn-primary--alt col-10@xs hidden@sm-down u-mar-t-medium u-font-upper';
                    actionButton.innerHTML = "View on Map";
                }
 
@@ -384,8 +384,8 @@
 
        $('body').on('click', '.use-location', function(e) {
            e.preventDefault();
-           var locattionIcon = $(this).find('i').prop('outerHTML');
-           $(this).html(locattionIcon + 'Searching').addClass('c-loading');
+           var locationIcon = $(this).find('i').prop('outerHTML');
+           $(this).html(locationIcon + 'Searching').addClass('c-loading');
            isModal = false;
            if ($(this).data('click-collect') === 'click-collect') {
                isModal = true;

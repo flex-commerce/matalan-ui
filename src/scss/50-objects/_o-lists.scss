@@ -151,10 +151,23 @@ $list-border: $cool-grey;
   }
 
   dd {
-    margin: 0 0 0 130px;
-    padding: 0 0 0.5em;
+    // margin: 0 0 0.5em 130px;
+    padding: 0 0 0.5rem 130px;
   }
 }
+.o-deflist-left--small {
+  dt {
+    width: 60px;
+    padding: 0.5rem 0;
+  }
+  dd {
+    padding: 0.5rem 0 0.5rem 70px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $keyline-color;
+    }
+  }
+}
+
 
 // def list 2 column fixed
 .o-deflist-right {
