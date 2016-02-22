@@ -28,6 +28,7 @@
     "test": "gulp production && karma start --single-run"
   },
   "dependencies": {
+    "gmaps": "^0.4.22",
     "jquery": "^2.1.4",
     "lodash": "^3.10.0",
     "pepjs": "^0.4.1",
