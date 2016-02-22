@@ -64,14 +64,14 @@ $listings-keyline-color: $keyline-color;
     display: none;
   }
 
-  // .o-store-locator__listings {
-  //   // position: relative;
+  .o-store-locator__listings {
+    // required for scrolltop + position
+    position: relative;
 
-  //   p {
-  //     @include font-size(11px);
-
-  //   }
-  // }
+    // p {
+    //   @include font-size(11px);
+    // }
+  }
 
   .o-store-locator__listings-city {
     @include font-size(22px, 20px);
