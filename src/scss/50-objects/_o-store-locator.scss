@@ -75,10 +75,19 @@ $listings-keyline-color: $keyline-color;
 
   .o-store-locator__listings__city {
     @include font-size(22px, 20px);
+    @include mq($from: lg) {
+      float: left;
+      padding-top: 1rem;
+    }
   }
 
   .o-store-locator__listings__distance {
-    @include font-size(12px, 2);
+    @include font-size(13px, 2);
+    @include mq($from: lg) {
+      float: right;
+      padding-top: 1rem;
+      padding-right: 1em;
+    }
 
     color: $primary-color;
   }
@@ -97,7 +106,7 @@ $listings-keyline-color: $keyline-color;
     content: $icon-menu-storefinder;
     position: absolute;
     left: 0.3em;
-    top: 0.5em;
+    top: 1.3em;
     color: $cool-grey;
   }
 
