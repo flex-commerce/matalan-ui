@@ -143,6 +143,19 @@ textarea {
   margin-bottom: rem-calc(4);
 }
 
+
+.o-form__help-text {
+  @include font-size(13px, 2);
+  color: $dark-grey;
+  margin: 0.25em 0 0.5em;
+}
+
+a.o-form__help-text,
+.o-form__help-text a {
+  text-decoration: underline;
+}
+
+
 // custom radio and checkbox styling here
 [type="checkbox"] + span {
   display: inline-block;

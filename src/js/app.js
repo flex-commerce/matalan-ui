@@ -181,6 +181,7 @@ $('#minibag-contain').on('hidden.bs.modal', function(e) {
     tether.disable();
   }
 
+  // clear any inline styles that we've set with JS
   $('#minibag-contain').attr('style', '');
 
 });
@@ -224,7 +225,7 @@ require("./modules/dropdown");
 
 
 
-require("./vendors/jquery.scrollto");
+// require("./vendors/jquery.scrollto");
 
 
 if ($body.hasClass('page--storefinder')) {

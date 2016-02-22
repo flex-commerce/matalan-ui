@@ -61,10 +61,13 @@ require.ensure(["json!../../data/locations.json", 'gmaps'], function() {
     loadResults(data, longitude, latitude);
     printResults(data, isModal);
     var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
-    console.log(isModal);
+    // console.log(isModal);
     if (!isModal) {
-      console.log('in this function')
-      document.getElementById('storeFinderContainer').scrollIntoView();
+      // console.log('in this function')
+      // document.getElementById('storeFinderContainer').scrollIntoView();
+      $('body, html').animate({
+        scrollTop: $('#storeFinderContainer').offset().top
+      }, 500);
     }
     var firstMarker = map.markers[0];
     firstMarker.infoWindow.open();
