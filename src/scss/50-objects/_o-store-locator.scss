@@ -49,7 +49,7 @@ $listings-keyline-color: $keyline-color;
     height: 300px !important;
   }
 
-  .o-store-locator__listings-wrapper {
+  .o-store-locator__listing-wrapper {
     // outline: 2px solid red;
     // display: block;
     // text-decoration: none;
@@ -73,35 +73,44 @@ $listings-keyline-color: $keyline-color;
     // }
   }
 
-  .o-store-locator__listings-city {
+  .o-store-locator__listings__city {
     @include font-size(22px, 20px);
+    @include mq($from: lg) {
+      float: left;
+      padding-top: 1rem;
+    }
   }
 
-  .o-store-locator__listings-distance {
-    @include font-size(12px);
+  .o-store-locator__listings__distance {
+    @include font-size(13px, 2);
+    @include mq($from: lg) {
+      float: right;
+      padding-top: 1rem;
+      padding-right: 1em;
+    }
 
     color: $primary-color;
   }
 
-  .o-store-locator__listings-address {
+  .o-store-locator__listings__address {
     @include font-size(16px);
   }
 
-  .o-store-locator__listings-postcode {}
+  .o-store-locator__listings__postcode {}
 
   // map marker icon in list tile
-  .o-store-locator__listings-content:before {
+  .o-store-locator__listings__content:before {
     @include font-size(16px);
 
     font-family: flex-icons;
     content: $icon-menu-storefinder;
     position: absolute;
     left: 0.3em;
-    top: 0.5em;
+    top: 1.3em;
     color: $cool-grey;
   }
 
-  .active .o-store-locator__listings-content:before {
+  .active .o-store-locator__listings__content:before {
     color: $primary-color;
   }
 
@@ -109,13 +118,13 @@ $listings-keyline-color: $keyline-color;
     border-bottom: none;
   }
 
-  // hover states for the lhs list
+  // hover states for the left hand list
   @include mq($from: lg) {
-    .o-store-locator__listings-wrapper:hover {
+    .o-store-locator__listing-wrapper:hover {
       background-color: $store-listings--hover;
     }
 
-    .o-store-locator__listings-wrapper.active {
+    .o-store-locator__listing-wrapper.active {
       background-color: $store-listings--active;
 
       @include arrow(right, right, $light-grey, 15px);
