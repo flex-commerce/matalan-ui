@@ -11,7 +11,7 @@ $minibag-desktop-width: 353px;
 
 // temp
 .o-minibag--list-item--detail {
-  min-height: 105px; // magic - min height for avg item - required for slider maths
+  min-height: 110px; // magic - min height for avg item - required for slider maths
 }
 
 // flexbox here to allow the inner panel to expand to max allowed size
@@ -261,6 +261,8 @@ $minibag-desktop-width: 353px;
   display: block;
   padding-top: 0.5em;
   margin-bottom: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
   border-bottom: 1px solid $minibag-border-color;
 }
 

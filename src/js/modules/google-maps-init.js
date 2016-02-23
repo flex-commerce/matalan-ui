@@ -446,7 +446,6 @@ require.ensure(["json!../../data/locations.json", 'gmaps'], function() {
 
 
   $('body').on('click', '.find-store', function(e) {
-    console.log('xxxxxxxxx');
     e.preventDefault();
     isModal = false;
     if ($(this).data('click-collect') === 'click-collect') {

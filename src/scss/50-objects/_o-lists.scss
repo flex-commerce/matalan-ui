@@ -163,7 +163,7 @@ $list-border: $cool-grey;
   dd {
     padding: 0.5rem 0 0.5rem 70px;
     &:not(:last-child) {
-      border-bottom: 1px solid $keyline-color;
+/*       border-bottom: 1px solid $keyline-color; */
     }
   }
 }
