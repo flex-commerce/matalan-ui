@@ -286,7 +286,7 @@ $minibag-desktop-width: 353px;
 
 .detail--vars,
 .detail--price {
-  @include font-size(12px, 1.1);
+  @include font-size(12px, 1em);
 }
 
 .o-minibag--control--remove {

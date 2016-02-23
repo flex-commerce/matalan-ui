@@ -228,7 +228,7 @@ require("./modules/dropdown");
 // require("./vendors/jquery.scrollto");
 
 
-if ($body.hasClass('page--storefinder')) {
+if ($body.hasClass('page--requiremaps')) {
   require("./modules/google-maps-init");
 }
 

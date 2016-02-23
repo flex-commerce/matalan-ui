@@ -45,7 +45,7 @@
 
   Collapse.prototype.show = function () {
 
-    if (this.transitioning || this.$element.hasClass('in') || this.$trigger.hasClass('disabled') ) return;
+    if (this.transitioning || this.$element.hasClass('in') || this.$element.closest('.panel').hasClass('disabled') ) return;
 
     var activesData;
     var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing');
@@ -200,33 +200,31 @@
     var $this   = $(this);
 
     if (!$this.attr('data-target')) e.preventDefault();
+    if ($this.attr('href')) e.preventDefault();
 
     var $target = getTargetFromTrigger($this);
     var data    = $target.data('bs.collapse');
     var option  = data ? 'toggle' : $this.data();
 
+
+    // collapse disabled handling
+    // as per checkout 1-2-3 stages
+    //
+
+
+    if ($this.is('[data-disabledtarget]')) {
+
+      var $parentPanel = $target.closest($('.panel'));
+      if (!$parentPanel.hasClass('disabled')) return;
+      $parentPanel.removeClass('disabled');
+
+    }
+
+
     Plugin.call($target, option);
   });
 
-  // collapse disabled handling
-  // as per checkout 1-2-3 stages
-  $(document).on('click', '[data-disabledtarget]', function (e) {
-    var $this   = $(this);
-
-    if ($this.attr('href')) {
-      e.preventDefault();
-    }
-
-    var $target = getTargetFromTrigger($this);
-    var $parentPanel = $target.closest($('.panel'));
-
-    if (!$parentPanel.hasClass('disabled')) return;
-    $parentPanel.removeClass('disabled');
-  });
-
-
-
-
-
-
 })(jQuery);
+
+
+

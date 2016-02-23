@@ -20,11 +20,12 @@ $listings-keyline-color: $keyline-color;
   }
 
   .map-wrapper {
-    @include absolute(top 0 right 0 bottom 0 left 0);
+    @include absolute(top 0 right 1em bottom 0 left 0);
 
     // img {
     //   width: 100%;
     // }
+
   }
 
   .o-store-locator__locations {
@@ -55,7 +56,6 @@ $listings-keyline-color: $keyline-color;
     // text-decoration: none;
 
     padding-left: 2em;
-    margin-right: 1em;
     border-bottom: 1px solid $listings-keyline-color;
     position: relative;
   }
@@ -71,10 +71,12 @@ $listings-keyline-color: $keyline-color;
     // p {
     //   @include font-size(11px);
     // }
+
   }
 
   .o-store-locator__listings__city {
     @include font-size(22px, 20px);
+
     @include mq($from: lg) {
       float: left;
       padding-top: 1rem;
@@ -83,11 +85,13 @@ $listings-keyline-color: $keyline-color;
 
   .o-store-locator__listings__distance {
     @include font-size(13px, 2);
+
     @include mq($from: lg) {
       float: right;
       padding-top: 1rem;
       padding-right: 1em;
     }
+
 
     color: $primary-color;
   }
@@ -124,13 +128,18 @@ $listings-keyline-color: $keyline-color;
       background-color: $store-listings--hover;
     }
 
-    .o-store-locator__listing-wrapper.active {
-      background-color: $store-listings--active;
+    .o-store-locator__listing-wrapper {
+      &.active {
+        background-color: $store-listings--active;
 
-      @include arrow(right, right, $light-grey, 15px);
+        // arrow for store locator listing
+        //
+        // margin-right: 1em;
+        //   @include arrow(right, right, $light-grey, 15px);
+        // &:before {
+        //   @include center(y, abs);
+        // }
 
-      &:before {
-        @include center(y, abs);
       }
     }
   }
