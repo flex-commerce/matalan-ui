@@ -3,7 +3,6 @@ $('nav a').on('click', function(e) {
   e.preventDefault();
 })
 
-
 $('#dev-debug').on('click', function() {
   $(this).parent('li').toggleClass('active');
   $('html').toggleClass('dev-debug');

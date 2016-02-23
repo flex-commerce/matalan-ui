@@ -22,15 +22,21 @@
     color: $base-text-color;
 }
 
+// handling for alingment of details on results page
 .results__detail {
+  @include mq($until: md) {
+    min-height: 8em;
+  }
+  @include mq($from: md, $until: lg) {
+    min-height: 6em;
+  }
   .results__detail__title {
     @include mq($until: lg) {
-      min-height: 3em;
+      min-height: 4em;
     }
     @include mq($from: lg) {
       height: 3em;
     }
-
   }
 }
 

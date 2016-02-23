@@ -17,8 +17,8 @@ $input-padding-y: $default-pad-y;
 
 .o-form__row {
   @include clearfix;
-
-  padding: $form-row-padding-y $form-row-padding-x;
+  padding-top: $form-row-padding-y;
+  padding-bottom: $form-row-padding-y;
   line-height: $line-height;
   color: $input-color;
   position: relative;
@@ -89,6 +89,7 @@ $input-padding-y: $default-pad-y;
 // labels above field
 .o-form--default {
   .o-form__label-contain {
+    padding-top: .25em;
     padding-bottom: .25em;
   }
 }

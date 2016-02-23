@@ -84,28 +84,69 @@
     display: inline-block;
     width: 42px;
     opacity: 0.5;
-    margin-top: 3px; // offset for image alignment next to buttons
+    margin-top: 3px;
+
+    // offset for image alignment next to buttons
 
     &.active {
       opacity: 1;
     }
   }
-  // html.flexbox & {
-  //   > .row {
-  //     display: flex;
-  //     .search--header--products,
-  //     .search--header--sort {
-  //       flex: 0 1 auto;
-  //     }
-  //     .search--header--pagination {
-  //       flex: 1 0 auto;
-  //     }
-  //   }
-  // }
 }
 
+// no-flexbox version for this header bar
+// cuurently in use throughout, flexbox version disabled
+//
+// html.no-flexbox {
+.search--header--products {
+  @include column((xs: 6, lg: 1.75));
+}
 
+.search--header--pagination {
+  @include column((lg: 6.5));
+  text-align: center;
+  .c-pagination-bar__list,
+  .results-layout {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
 
+.search--header--sort {
+  @include column((xs: 6, lg: 3.75));
+}
+// }
+
+// potential flexbox version for this header bar
+//
+// html.flexbox {
+//   .search-results--header > .row {
+//     display: flex;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//   }
+
+//   .search--header--products {
+//     flex: 0 1 auto;
+//     min-width: 120px;     // magic width
+//   }
+
+//   .search--header--pagination {
+//     flex: 1 0 auto;
+//     text-align: center;
+
+//     .c-pagination-bar__list,
+//     .results-layout {
+//       display: inline-block;
+//       vertical-align: top;
+//     }
+//   }
+
+//   .search--header--sort {
+//     flex: 1 0 auto;
+//     min-width: 260px;     // magic width
+//   }
+// }
 
 .search--header--products {
   @include font-size(12px);

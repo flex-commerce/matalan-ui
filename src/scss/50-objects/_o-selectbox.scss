@@ -180,6 +180,8 @@ select,
 .selectbox-options li.selectbox-disabled a {
     color: #888;
     background-color: transparent;
+    cursor: not-allowed;
+
 }
 
 .selectbox-options .selectbox-optgroup {
@@ -248,7 +250,15 @@ select,
     }
 }
 
-
+.selectbox--short-selectbox-dropdown-menu {
+  max-height: 2.5em * 4; // 4 items
+}
+.selectbox--mid-selectbox-dropdown-menu {
+  max-height: 2.5em * 6; // 6 items
+}
+.selectbox--long-selectbox-dropdown-menu {
+  max-height: 2.5em * 9; // 10 items
+}
 
 .selectbox {
   // required to init cick events on ios. wish i was making this up.

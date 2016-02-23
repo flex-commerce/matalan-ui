@@ -2,7 +2,6 @@
 // // to be checked for x browser and toggled for mob if mouse events trigger there
 
 $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
-  console.log('scroll blocked');
 
   var $this        = $(this),
       scrollTop    = this.scrollTop,
@@ -19,14 +18,8 @@ $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
     return false;
   };
 
-  if (
-    (window.matchMedia("(min-width: 0)").matches && activeBreak == 'sm+') ||
-    (window.matchMedia("(max-width: 720px)").matches && activeBreak == 'sm') ||
-    (window.matchMedia("(max-width: 1024px)").matches && activeBreak == 'sm-md') ||
-    (window.matchMedia("(min-width: 720px) and (max-width: 1024px)").matches && activeBreak == 'md') ||
-    (window.matchMedia("(min-width: 720px)").matches && activeBreak == 'md+') ||
-    (window.matchMedia("(min-width: 1025px)").matches && activeBreak == 'lg')
-  ) {
+
+  function scrollLocker() {
     // adjust delta for edge case scrolls - default is * -1
     if (!up && (delta * -1) > scrollHeight - height - scrollTop) {
       // Scrolling down, but this will take us past the bottom.
@@ -39,4 +32,18 @@ $(document).on('DOMMouseScroll mousewheel', '.js-scroll-hold', function(ev) {
       return prevent();
     }
   }
+
+  if (!activeBreak) {
+    scrollLocker();
+  } else if (
+    (window.matchMedia("(min-width: 0)").matches && activeBreak == 'sm+') ||
+    (window.matchMedia("(max-width: 720px)").matches && activeBreak == 'sm') ||
+    (window.matchMedia("(max-width: 1024px)").matches && activeBreak == 'sm-md') ||
+    (window.matchMedia("(min-width: 720px) and (max-width: 1024px)").matches && activeBreak == 'md') ||
+    (window.matchMedia("(min-width: 720px)").matches && activeBreak == 'md+') ||
+    (window.matchMedia("(min-width: 1025px)").matches && activeBreak == 'lg')
+  ) {
+    scrollLocker();
+  }
+
 });

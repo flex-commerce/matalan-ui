@@ -8,9 +8,9 @@ $('body.page--pdp').on('change', 'select.js-product-select--size', function() {
   var selectedOption = $(this).val();
   if (selectedOption.toLowerCase().indexOf("ewis") >= 0) {
     $('.js-ewis-hide').hide();
-    $('#dev-pdpworks--panel1').collapse('show');
+    $('#pdp__ewis__panel').collapse('show');
   } else {
     $('.js-ewis-hide').show();
-    $('#dev-pdpworks--panel1').collapse('hide');
+    $('#pdp__ewis__panel').collapse('hide');
   }
 });

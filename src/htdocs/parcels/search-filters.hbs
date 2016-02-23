@@ -5,7 +5,7 @@
     <div class="o-filters__header">
       <div class="u-cf">
         <h2 class="u-fl o-filters__header__title hidden@lg-up">Filter Products</h2>
-        <h4 class="u-fl o-filters__header__title hidden@md-down u-mar-b-medium">Filter Products by:</h4>
+        <h4 class="u-fl o-filters__header__title hidden@md-down u-mar-b-medium">Filter Products:</h4>
         <span class="js-filters__clear meta filters__clear hidden@md-down u-color-grey60">clear all (&times;)</span>
         <div class="u-fr hidden@lg-up">
           <a class="js-filters__clear c-btn c-btn-primary u-mar-r-small hidden@lg-up">Clear All</a>
@@ -65,7 +65,9 @@
 
             <ul class="filter--colours u-pad-b-small collapse in" id="filter101">
               {{# times 20 }}
-                <li title="{{ randomcolour }} - ({{randomnum}})" style="background-color:{{ randomcolour }}"></li>
+                <li title="{{ randomcolour }} - ({{randomnum}})">
+                  <div style="background-color:{{ randomcolour }}"></div>
+                </li>
               {{/ times }}
             </ul>
           </div>
