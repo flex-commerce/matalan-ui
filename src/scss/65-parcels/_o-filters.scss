@@ -15,7 +15,6 @@ $filters-border-color: $keyline-color;
 //   }
 // }
 
-
 // flex end
 
 // layout begin
@@ -168,7 +167,7 @@ $filters-border-color: $keyline-color;
 
 .filter--title.collapse + div,
 .filter--title.collapse + ul {
-/*   display: none; */
+  /*   display: none; */
 }
 
 .filter--colours {
@@ -235,10 +234,10 @@ $filters-border-color: $keyline-color;
   .o-filters__header__title {
     line-height: 36px;
   }
+
   .filters__clear {
     line-height: 42px;
   }
-
 }
 
 
@@ -262,4 +261,10 @@ $filters-border-color: $keyline-color;
   float: right;
   cursor: pointer;
   color: $dark-grey;
+}
+
+.filters--range {
+  input {
+    display: none;
+  }
 }

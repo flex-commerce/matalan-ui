@@ -128,8 +128,6 @@ require("pepjs");
 // =============================
 var bodyFix = require("./modules/body-fix");
 
-console.log(bodyFix);
-
 // before the modal is to be shown
 $('body').on('show.bs.modal', function() {
   // but not for the minibag
@@ -777,22 +775,41 @@ initPhotoSwipeFromDOM('.product-images');
     var noUiSlider = require("./modules/nouislider");
 
     var slider = document.getElementById('filters--range');
+
+    var sliderDisplay = [
+      document.getElementById('slider-display-lower'),
+      document.getElementById('slider-display-upper')
+    ];
+
     var sliderValues = [
       document.getElementById('slider-value-lower'),
       document.getElementById('slider-value-upper')
     ];
 
+    var actualSliderValues = [
+      document.getElementById('slider-value-lower').value,
+      document.getElementById('slider-value-upper').value
+    ];
+
     noUiSlider.create(slider, {
-      start: [20, 80],
+      start: actualSliderValues,
       connect: true,
       range: {
         'min': 0,
         'max': 100
       }
     });
+
+    // value display - leave this one 'bounced' for speedy user feedback
     slider.noUiSlider.on('update', function(values, handle) {
-      sliderValues[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
+      sliderDisplay[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
     });
+
+    // debounced update of underlying inputs
+    slider.noUiSlider.on('update', _.debounce(function(values, handle) {
+      sliderValues[handle].value = Math.round(values[handle]).toFixed(0);
+    }, 500));
+
   }
 })();
 // ===========================
