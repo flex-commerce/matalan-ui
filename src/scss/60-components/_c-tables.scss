@@ -233,56 +233,56 @@ ul.c-table .td {
   padding: 0.25em;
 }
 
-// .c-table--collapses {
-//   .th {
-//     font-weight: bold;
-//   }
+.c-table--collapses {
+  .th {
+    font-weight: bold;
+  }
 
-//   @include mq($until: md) {
-//     .td {
-//       padding-top: 0.25em;
-//       padding-bottom: 0.25em;
-//     }
+  @include mq($until: md) {
+    .td {
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+    }
 
-//     .collapse--inline {
-//       > .td {
-//         display: inline-block;
+    .collapse--inline {
+      > .td {
+        display: inline-block;
 
-//         &:last-of-type {
-//           &::before {
-//             content: ' - ';
-//           }
-//         }
-//       }
-//     }
-//   }
+        &:last-of-type {
+          &::before {
+            content: ' - ';
+          }
+        }
+      }
+    }
+  }
 
-//   @include mq($from: md) {
-//     display: table;
+  @include mq($from: md) {
+    display: table;
 
-//     .tr {
-//       display: table-row;
-//       width: 100%;
-//     }
+    .tr {
+      display: table-row;
+      width: 100%;
+    }
 
-//     .th, .td {
-//       display: table-cell;
-//     }
+    .th, .td {
+      display: table-cell;
+    }
 
-//     .td {
-//       padding-top: 1em;
-//       padding-bottom: 1em;
-//     }
-//   }
+    .td {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+  }
 
-//   .th--inline {
-//     font-weight: bold;
+  .th--inline {
+    font-weight: bold;
 
-//     &::after {
-//       content: ': ';
-//     }
-//   }
-// }
+    &::after {
+      content: ': ';
+    }
+  }
+}
 // ===========================
 // Table Collapsible End
 // ===========================
