@@ -26,11 +26,11 @@
   .slick-current img {
     transform: scale(1);
   }
-  .slick-slide .slick-zoom,
+/*   .slick-slide .slick-zoom,
   .slick-slide .c-roundel {
     display: none;
-  }
-  .slick-slide.slick-current .c-roundel {
+  } */
+  .slick-slide .c-roundel {
     display: block;
   }
   .slick-slide.slick-current .slick-zoom {
