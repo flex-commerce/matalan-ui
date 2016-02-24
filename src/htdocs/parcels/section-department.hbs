@@ -1,23 +1,25 @@
-<div class="o-section col-12@xs">
-    <div class="o-section-department__slick">
-      {{#each departmentmenu}}
-        <div class="o-section-department__outer">
-          <div class="o-section-department__inner">
-            <span class="o-section-department__title u-font-sec">{{menuTitle}}</span>
-            <div class="o-section-department__list">
-                <ul class="">
-                  {{#each menuItems}}
-                    <li><a href="">{{{this}}}</a></li>
-                  {{/each}}
-                </ul>
+<div class="row">
+  <div class="o-section col-12@xs">
+      <div class="o-section-department__slick">
+        {{#each departmentmenu}}
+          <div class="o-section-department__outer">
+            <div class="o-section-department__inner">
+              <span class="o-section-department__title u-font-sec">{{menuTitle}}</span>
+              <div class="o-section-department__list">
+                  <ul class="">
+                    {{#each menuItems}}
+                      <li><a href="">{{{this}}}</a></li>
+                    {{/each}}
+                  </ul>
+              </div>
+              <div class="o-section-department__image">
+                <img src="{{menuImage}}">
+              </div>
+              <a href="#" class="o-section-department__link c-btn">View&nbsp;More</a>
             </div>
-            <div class="o-section-department__image">
-              <img src="{{menuImage}}">
-            </div>
-            <a href="#" class="o-section-department__link c-btn">View&nbsp;More</a>
-          </div>
 
-        </div>
-      {{/each}}
-    </div>
+          </div>
+        {{/each}}
+      </div>
+  </div>
 </div>
