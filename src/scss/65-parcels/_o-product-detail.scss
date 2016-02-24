@@ -16,7 +16,10 @@
   .o-product-detail__title {
     // cursor: pointer;
     position: relative;
-    @include font-size(32px, 1.2);
+    @include font-size(20px, 2);
+    @include mq($from: lg) {
+      @include font-size(32px, 1.2);
+    }
   }
 
   .o-product-detail__content {
