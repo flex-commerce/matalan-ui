@@ -94,6 +94,13 @@
   }
 }
 
+
+.search--header--products,
+.search--header--pagination {
+  white-space: nowrap;
+}
+
+
 // no-flexbox version for this header bar
 // cuurently in use throughout, flexbox version disabled
 //
