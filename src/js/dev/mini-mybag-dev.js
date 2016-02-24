@@ -14,9 +14,6 @@
     });
 
 
-
-
-
     $('.js-remove-item').on('click', function() {
         var valueBox = $(this).parent().find('span'),
             hiddenInput = $(this).parent().find('input'),
