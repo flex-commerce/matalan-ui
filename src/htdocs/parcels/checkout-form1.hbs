@@ -4,16 +4,37 @@
   <div class="o-form__row">
     <div class="o-form__input-contain o-option--block filter--list--checkbox auto-column__medium">
       <label class="o-form__label o-form__label-option">
-        <input id="addressbook" type="radio" name="billingaddress" value="addressbook" checked>
+        <input id="addressbook" type="radio" name="billingaddress" value="addressbook" checked
+          data-target="#checkout-addressexisting" data-event="allow" role="tab" data-toggle="tab">
         <span class="check-holder"></span>Use my address book
       </label>
       <label class="o-form__label o-form__label-option">
-        <input id="newaddress" type="radio" name="billingaddress" value="newaddress">
+        <input id="newaddress" type="radio" name="billingaddress" value="newaddress"
+          data-target="#checkout-addressnew" data-event="allow" role="tab" data-toggle="tab">
         <span class="check-holder"></span>Enter a new address
       </label>
     </div>
   </div>
-  {{> partials/address-book }}
+
+  <div class="islet u-cf">
+    <div class="c-tabs__content__pane active address-picker" id='checkout-addressexisting'>
+        <h5 class>
+          <strong>Select address</strong>
+        </h5>
+      <form action="">
+        {{> partials/address-book }}
+      </form>
+    </div>
+    <div class="c-tabs__content__pane address-picker" id="checkout-addressnew">
+        <h5 class>
+          <strong>Enter new address</strong>
+        </h5>
+      <form action="" class="o-form o-form--default o-myacc--address-panel">
+        {{> partials/address-form }}
+      </form>
+    </div>
+  </div>
+
   <div class="o-form__row">
     <div class="o-form__label-contain u-mar-v-medium">
       <label class="o-form__label-primary">I would like to receive exclusive offers &amp; style advice from Matalan:</label>
@@ -32,7 +53,6 @@
     </div>
   </div>
 
-  <a type="button" data-toggle="collapse" data-target="#deliveryAddressAccord"
-    data-disabledtarget class="c-btn c-btn-secondary c-btn--block u-font-upper">Next Step</a>
+  <a type="button" data-toggle="collapse" data-target="#deliveryAddressAccord" data-disabledtarget class="c-btn c-btn-secondary c-btn--block u-font-upper">Next Step</a>
 
 </div>

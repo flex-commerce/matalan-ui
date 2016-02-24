@@ -163,7 +163,9 @@
   // ============
 
   var clickHandler = function (e) {
-    e.preventDefault();
+    if ($(this).data('event') !== 'allow') {
+      e.preventDefault();
+    };
     Plugin.call($(this), 'show');
   };
 
