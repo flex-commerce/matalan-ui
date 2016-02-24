@@ -554,15 +554,22 @@ $('.o-product-suite__slick').slick({
 var PhotoSwipe = require("./vendors/photoswipe");
 var PhotoSwipeUI_Default = require("./vendors/photoswipe-ui");
 
-
-
-$('.o-product__slider').slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: '40px'
-});
+if ($('.o-product__slider figure').length > 1) {
+  $('.o-product__slider').slick({
+    infinite: true,
+    centerMode: true,
+    centerPadding: '40px',
+    responsive: [{
+    breakpoint: 1025,
+    settings: {
+      centerPadding: '0px',
+      dots: true
+    }
+  }]
+  });
+} else {
+  $('.o-product__slider').slick({});
+}
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
