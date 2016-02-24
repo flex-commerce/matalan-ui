@@ -1,19 +1,19 @@
-var config = require('../config')
-if(!config.tasks.js) return
+var config = require('../config');
+if(!config.tasks.js) return;
 
-var path            = require('path')
-var webpack         = require('webpack')
-var webpackManifest = require('./webpackManifest')
+var path            = require('path');
+var webpack         = require('webpack');
+var webpackManifest = require('./webpackManifest');
 
 module.exports = function(env) {
-  var jsSrc = path.resolve(config.app.src, config.tasks.js.src)
-  var jsDest = path.resolve(config.app.dest, config.tasks.js.dest)
-  var publicPath = path.join(config.tasks.js.dest, '/')
+  var jsSrc = path.resolve(config.app.src, config.tasks.js.src);
+  var jsDest = path.resolve(config.app.dest, config.tasks.js.dest);
+  var publicPath = path.join(config.tasks.js.dest, '/');
   // var filenamePattern = env === 'production' ? '[name]-[hash].js' : '[name].js' // rev for app.js on build
-  var filenamePattern = '[name].js'
+  var filenamePattern = '[name].js';
   var extensions = config.tasks.js.extensions.map(function(extension) {
-    return '.' + extension
-  })
+    return '.' + extension;
+  });
 
   var webpackConfig = {
     context: jsSrc,
@@ -39,17 +39,17 @@ module.exports = function(env) {
         }
       ]
     }
-  }
+  };
 
   if(env !== 'test') {
     // Karma doesn't need entry points or output settings
-    webpackConfig.entry = config.tasks.js.entries
+    webpackConfig.entry = config.tasks.js.entries;
 
     webpackConfig.output= {
       path: path.normalize(jsDest),
       filename: filenamePattern,
       publicPath: publicPath
-    }
+    };
 
     if(config.tasks.js.extractSharedJs) {
       // Factor out common dependencies into a shared.js
@@ -58,13 +58,13 @@ module.exports = function(env) {
           name: 'shared',
           filename: filenamePattern,
         })
-      )
+      );
     }
   }
 
   if(env === 'development') {
-    webpackConfig.devtool = 'source-map'
-    webpack.debug = true
+    webpackConfig.devtool = 'source-map';
+    webpack.debug = true;
   }
 
   if(env === 'production') {
@@ -78,8 +78,8 @@ module.exports = function(env) {
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin(),
       new webpack.NoErrorsPlugin()
-    )
+    );
   }
 
-  return webpackConfig
-}
+  return webpackConfig;
+};

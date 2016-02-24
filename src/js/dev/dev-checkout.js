@@ -1,3 +1,5 @@
+// this is ready to come out of dev - IH 24-02
+
 $('#deliveryAddressAccord').on('change', function(e) {
 
   var chooseDelivery = $('#checkout-delivery-delivery');

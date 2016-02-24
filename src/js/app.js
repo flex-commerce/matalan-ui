@@ -1,26 +1,12 @@
 var $body = $('body');
-// console.log($body);
 
-
-
-// ===========================
-// Deckard (x-browser detection)
-// ===========================
 require("lodash");
-// ===========================
-// Deckard end
-// ===========================
 
-
-require("modules/fullscreen-handle");
-// ===========================
 // Examples
 // ===========================
-
 // console.warn('Module 0');
 // var module0 = require("./examples/module0");
 // console.log( module0('Hello') );
-
 
 // console.warn('Module 1');
 // var module1 = require("./examples/module1");
@@ -30,14 +16,13 @@ require("modules/fullscreen-handle");
 // module1.multiply();
 // console.log('x', module1.show());
 
-
 // console.warn('Module 2');
 // var module2 = require("./examples/module2");
 // console.log('myPublicVar is ', module2().myPublicVar);
 // module2().myPublicFunction('bar');
 
 
-// ===========================
+
 // deckard - xBrowser detections
 // ===========================
 require("./vendors/deckard");
@@ -48,23 +33,19 @@ function isIE9() {
   }
   return false;
 }
-
-
-
-// ===========================
-// .. end
+// .. end deckard
 // ===========================
 
 
 
 
 
-// ===========================
+
 // custom setup detection for mobile or tablet
 // =========================//
 
-function handleMatchMedia () {
-  if ( isIE9() ) {
+function handleMatchMedia() {
+  if (isIE9()) {
     window.isMobileOrTablet = false;
 
   } else {
@@ -89,20 +70,23 @@ handleMatchMedia();
 //   console.log('isMobileOrTablet', window.isMobileOrTablet)
 // }));
 
-// ===========================
+
 // end setup detection for mobile or tablet
 // ===========================
 
 
 
-// ===========================
+require("modules/fullscreen-handle");
+
+
+
 // pointer events polyfill
 // ===========================
 
-
 require("pepjs");
-// pepjs added to bring some sensibility to ios touch events. to investigate buggy ipad behaviour yet.
 
+// pepjs added to bring some sensibility to ios touch events. to investigate buggy ipad behaviour yet.
+//
 // cross touch / mouse events are now available via
 // pointermove:   pointer moves, similar to touchmove or mousemove.
 // pointerdown:   pointer is activated, or a device button held.
@@ -117,23 +101,20 @@ require("pepjs");
 //   alert(e.target);
 // })
 
-// ===========================
 // end pointer events polyfill
 // ===========================
 
 
 
-// =============================
 // the bit that fixed the modals
 // =============================
+
 var bodyFix = require("./modules/body-fix");
 
 // before the modal is to be shown
 $('body').on('show.bs.modal', function() {
   // but not for the minibag
-  if ($('body').hasClass('modal-open--minibag') && !window.isMobileOrTablet) {
-    return;
-  }
+  if ($('body').hasClass('modal-open--minibag') && !window.isMobileOrTablet) return;
   bodyFix.lock();
 });
 
@@ -142,12 +123,11 @@ $('body').on('hidden.bs.modal', function() {
   bodyFix.unlock();
 });
 
+// end the bit that fixed the modals
+// =================================
 
-// =============================
-// =============================
 
 
-// ===========================
 // Tether
 // http://github.hubspot.com/tether/
 // ===========================
@@ -156,7 +136,6 @@ $('body').on('hidden.bs.modal', function() {
 window.Tether = require("tether");
 
 var tether;
-
 var tetherTarget = $('.checkout-bag');
 var tetherElement = $('.o-minibag-contain');
 
@@ -181,76 +160,40 @@ $('#minibag-contain').on('hidden.bs.modal', function(e) {
 
   // clear any inline styles that we've set with JS
   $('#minibag-contain').attr('style', '');
-
 });
 
-
-
-// ===========================
 // Tether end
 // ===========================
 
 
 
 // require("./modules/validation-tooltip");
-
-
-
-
-// ===========================
-// Common JS functions
-// ===========================
-require("./modules/general");
-require("./dev/misc-dev");
-require("./dev/pdp-dev");
-require("./dev/mini-mybag-dev");
-require("./dev/dev-checkout");
-require("./dev/dev-dev");
 require("./modules/star-ratings");
 require("./modules/sizeguide.js");
 
-// ===========================
-// Common JS end
-// ===========================
 
 
-// ===========================
-// Dropdown load - no init required
+// Dropdown
 // ===========================
 require("./modules/dropdown");
 // ===========================
-// Dropdown end
+
+
+// Tabs
+// ===========================
+require("./modules/tabs-init");
 // ===========================
 
 
-
-// require("./vendors/jquery.scrollto");
-
-
+// Google maps init
+// ===========================
 if ($body.hasClass('page--requiremaps')) {
   require("./modules/google-maps-init");
 }
-
-
-
-// ===========================
-// Tabs
-// ===========================
-
-require("./modules/tabs-init");
-
-
-
-
-// ===========================
-// Tabs end
 // ===========================
 
 
-
-
-// ===========================
-// accordion
+// accordion /collapse
 // ===========================
 require("./modules/collapse");
 
@@ -260,51 +203,26 @@ require("./modules/collapse");
 
 // open collapse examples
 $(document).ready(function() {
-
-
-  // $(window).on('resize', _.debounce(function() {
-  //   if (!window.isMobileOrTablet) {
-  //     //   // on resize, open if desktop
-  //     //   $("#accordion2 [role='tabpanel']").each(function() {
-  //     //     $(this).collapse('show');
-  //     //   });
-
-  //     // } else {
-  //     //   // on resize, close if not desktop
-  //     //   $("#accordion2 [role='tabpanel']").each(function() {
-  //     //     $(this).collapse('hide');
-  //     //   });
-
-  //   }
-  // }, 250));
-
   var pageBody = $('body');
-
   if (pageBody.hasClass('page--checkout-1')) {
     $('#billingAddressAccord').collapse('show');
   }
-
-  if (pageBody.hasClass('page--checkout-2')) {
-    $('#deliveryAddressAccord').collapse('show');
-  }
-
-  if (pageBody.hasClass('page--checkout-3')) {
-    $('#deliveryMethodAccord').collapse('show');
-  }
-
-
 });
 
+// accordion /collapse end
 // ===========================
-// accordion end
+
+
+
+
+// Mobile Nav
 // ===========================
+if (window.isMobileOrTablet) {
+  require("./modules/off-canvas");
+}
 
 
-
-
-
-// ===========================
-// Megamenu init
+// Desktop Nav
 // ===========================
 function megamenuInit() {
   var accessibleMegaMenu = require("./modules/menu-accessible");
@@ -328,19 +246,14 @@ if (!window.isMobileOrTablet) {
   megamenuInit();
 }
 
-
-// ===========================
-// Megamenu end
+// Nav end
 // ===========================
 
-if (window.isMobileOrTablet) {
-  require("./modules/off-canvas");
-}
+
+
 
 
 // modal temp
-
-
 var BootstrapDialog = require("./vendors/bs-dialog");
 
 $("[data-myacc='address-delete']").on('click', function(e) {
@@ -376,7 +289,6 @@ $("[data-myacc='address-delete']").on('click', function(e) {
 // ===========================
 
 var Tooltip = require("./vendors/bootstrap/tooltip");
-// console.warn(Tooltip.VERSION);
 
 
 $(function() {
@@ -480,7 +392,6 @@ $('[data-validation="password-confirm"]').popover({
   });
 
 
-
 // ===========================
 // Bootstrap components end
 // ===========================
@@ -488,8 +399,8 @@ $('[data-validation="password-confirm"]').popover({
 
 
 
-// ===========================
-// SelectBox init
+
+// UI Modules
 // ===========================
 var selectBox = require("./modules/selectbox");
 
@@ -499,412 +410,21 @@ $('select').selectBox({
 });
 
 
-
-
-// ===========================
-
-// SelectBox End
-// ===========================
-
-
-// ===========================
-// Sticky Headers
-// ===========================
-
-// currently rewriting - ih 04/02/16
-require("./modules/sticky-headers");
-
-// =========================
-// Sticky Headers End
-// ===========================
-
-
-// ===========================
-// Slick Slider initialisation
-// ===========================
-var slick = require("./vendors/slick");
-
-
-$('.o-section-department__slick').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [{
-    breakpoint: 1024,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 2
-    }
-  }, {
-    breakpoint: 768,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1
-    }
-  }]
-});
-
-$('.o-product-suite__slick').slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1
-});
-
-
-var PhotoSwipe = require("./vendors/photoswipe");
-var PhotoSwipeUI_Default = require("./vendors/photoswipe-ui");
-
-if ($('.o-product__slider figure').length > 1) {
-  $('.o-product__slider').slick({
-    infinite: true,
-    centerMode: true,
-    centerPadding: '40px',
-    responsive: [{
-    breakpoint: 1025,
-    settings: {
-      centerPadding: '0px',
-      dots: true
-    }
-  }]
-  });
-} else {
-  $('.o-product__slider').slick({});
-}
-
-var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-  // parse slide data (url, title, size ...) from DOM elements
-  // (children of gallerySelector)
-  var parseThumbnailElements = function(el) {
-    var thumbElements = el.childNodes,
-      numNodes = thumbElements.length,
-      items = [],
-      figureEl,
-      linkEl,
-      size,
-      item;
-
-    for (var i = 0; i < numNodes; i++) {
-      figureEl = thumbElements[i]; // <figure> element
-
-      // include only element nodes
-      if (figureEl.nodeType !== 1) {
-        continue;
-      }
-      linkEl = figureEl.children[0]; // <a> element
-      size = linkEl.getAttribute('data-size').split('x');
-
-      // create slide object
-      item = {
-        src: linkEl.getAttribute('href'),
-        w: parseInt(size[0], 10),
-        h: parseInt(size[1], 10)
-      };
-
-
-      if (figureEl.children.length > 1) {
-        // <figcaption> content
-        item.title = figureEl.children[1].innerHTML;
-      }
-
-      if (linkEl.children.length > 0) {
-        // <img> thumbnail element, retrieving thumbnail url
-        item.msrc = linkEl.children[0].getAttribute('src');
-      }
-
-      item.el = figureEl; // save link to element for getThumbBoundsFn
-      items.push(item);
-    }
-
-    return items;
-  };
-
-  // find nearest parent element
-  var closest = function closest(el, fn) {
-    return el && (fn(el) ? el : closest(el.parentNode, fn));
-  };
-
-  // triggers when user clicks on thumbnail
-  var onThumbnailsClick = function(e) {
-    e = e || window.event;
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-    var eTarget = e.target || e.srcElement;
-
-    // find root element of slide
-    var clickedListItem = closest(eTarget, function(el) {
-      return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
-    });
-
-    if (!clickedListItem) {
-      return;
-    }
-
-    // find index of clicked item by looping through all child nodes
-    // alternatively, you may define index via data- attribute
-    var clickedGallery = clickedListItem.parentNode,
-      childNodes = clickedListItem.parentNode.childNodes,
-      numChildNodes = childNodes.length,
-      nodeIndex = 0,
-      index;
-
-    for (var i = 0; i < numChildNodes; i++) {
-      if (childNodes[i].nodeType !== 1) {
-        continue;
-      }
-
-      if (childNodes[i] === clickedListItem) {
-        index = nodeIndex;
-        break;
-      }
-      nodeIndex++;
-    }
-
-
-
-    if (index >= 0) {
-      // open PhotoSwipe if valid index found
-      openPhotoSwipe(index, clickedGallery);
-    }
-    return false;
-  };
-
-  // parse picture index and gallery index from URL (#&pid=1&gid=2)
-
-  var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
-    var pswpElement = document.querySelectorAll('.pswp')[0],
-      gallery,
-      options,
-      items;
-
-    items = parseThumbnailElements(galleryElement);
-
-    // define options (if needed)
-    options = {
-      //             loop:false,
-      // define gallery index (for URL)
-      galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-      getThumbBoundsFn: function(index) {
-        // See Options -> getThumbBoundsFn section of documentation for more info
-        var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-          pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-          rect = thumbnail.getBoundingClientRect();
-
-        return {
-          x: rect.left,
-          y: rect.top + pageYScroll,
-          w: rect.width
-        };
-      },
-      bgOpacity: 0.7,
-      disableAnimation: true,
-      hideAnimationDuration: 0,
-      showAnimationDuration: 0,
-      zoomTo: 3
-
-    };
-
-    // PhotoSwipe opened from URL
-    if (fromURL) {
-      if (options.galleryPIDs) {
-        // parse real index when custom PIDs are used
-        // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-        for (var j = 0; j < items.length; j++) {
-          if (items[j].pid == index) {
-            options.index = j;
-            break;
-          }
-        }
-      } else {
-        // in URL indexes start from 1
-        options.index = parseInt(index, 10) - 1;
-      }
-    } else {
-      options.index = parseInt(index, 10);
-    }
-
-    // exit if index not found
-    if (isNaN(options.index)) {
-      return;
-    }
-
-    if (disableAnimation) {
-      options.showAnimationDuration = 0;
-    }
-
-    // Pass data to PhotoSwipe and initialize it
-    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-    //zoomed in image on initialisation
-    // gallery.zoomTo(1, {
-    //         x: gallery.viewportSize.x / 2,
-    //         y: gallery.viewportSize.y / 2
-    //     }, 0, false, function(now) {
-    //       $('.pswp--zoom-allowed').addClass('pswp--zoomed-in');
-    //     });
-
-    // gallery.listen('afterChange', function(e) {
-    //     gallery.zoomTo(1, {
-    //         x: gallery.viewportSize.x / 2,
-    //         y: gallery.viewportSize.y / 2
-    //     }, 0, false, function(now) {
-    //       $('.pswp--zoom-allowed').addClass('pswp--zoomed-in');
-    //     });
-
-    // });
-    var psIndex = gallery.getCurrentIndex();
-    var psIndexSlick = psIndex - 1;
-  };
-
-
-  // loop through all gallery elements and bind events
-  var galleryElements = document.querySelectorAll(gallerySelector);
-
-  for (var i = 0, l = galleryElements.length; i < l; i++) {
-    galleryElements[i].setAttribute('data-pswp-uid', i + 1);
-    galleryElements[i].onclick = onThumbnailsClick;
-
-  }
-};
-
-// execute above function
-initPhotoSwipeFromDOM('.product-images');
-// ===========================
-// PhotoSwipe End
-// ===========================
-
-
-// ===========================
-// Range Slider init
-// ===========================
-(function() {
-  if ($("#filters--range").length) {
-    var noUiSlider = require("./modules/nouislider");
-
-    var slider = document.getElementById('filters--range');
-
-    var sliderDisplay = [
-      document.getElementById('slider-display-lower'),
-      document.getElementById('slider-display-upper')
-    ];
-
-    var sliderValues = [
-      document.getElementById('slider-value-lower'),
-      document.getElementById('slider-value-upper')
-    ];
-
-    var actualSliderValues = [
-      document.getElementById('slider-value-lower').value,
-      document.getElementById('slider-value-upper').value
-    ];
-
-    noUiSlider.create(slider, {
-      start: actualSliderValues,
-      connect: true,
-      range: {
-        'min': 0,
-        'max': 100
-      }
-    });
-
-    // value display - leave this one 'bounced' for speedy user feedback
-    slider.noUiSlider.on('update', function(values, handle) {
-      sliderDisplay[handle].innerHTML = '£' + Math.round(values[handle]).toFixed(0);
-    });
-
-    // debounced update of underlying inputs
-    slider.noUiSlider.on('update', _.debounce(function(values, handle) {
-      sliderValues[handle].value = Math.round(values[handle]).toFixed(0);
-    }, 500));
-
-  }
-})();
-// ===========================
-// Range Slider End
-// ===========================
-
-
-
 // Self Initialising...
+require("./modules/slickswipe-init");
+require("./modules/rangeslider-init");
 require("./modules/minibag");
-
 require("./modules/filters");
+require('./modules/address-lookup');
 
-if ( !isIE9() ) {
+if (!isIE9()) {
   require("./modules/scroll-lock");
 }
 
-// ===========================
-// Misc rules to tidy
-// ===========================
-
-require('./modules/address-lookup');
 
 
 
 
-(function() {
-  // header - show mobile search input field
-  $('.header--mobile-search').on('click', function() {
-    $(this).toggleClass('active');
-    $('.header--search-bar').toggleClass('active').find('input').focus();
-  });
-})();
-
-(function() {
-  // search results layout switch
-  $('.js-results-tight').on('click', function(e) {
-    e.preventDefault();
-    if (!$(this).hasClass('active')) {
-
-      $(this).addClass('active')
-        .siblings().removeClass('active')
-        .closest('.search-results__main')
-        .removeClass('search-results__wide')
-        .addClass('search-results__tight');
-    }
-  });
-  // search results layout switch cont.
-  $('.js-results-wide').on('click', function(e) {
-    e.preventDefault();
-    if (!$(this).hasClass('active')) {
-
-      $(this).addClass('active')
-        .siblings().removeClass('active')
-        .closest('.search-results__main')
-        .removeClass('search-results__tight')
-        .addClass('search-results__wide');
-    }
-  });
-})();
-
-(function() {
-  // global alert event
-  $(".global-test").click(function() {
-    $(".c-alert-global").toggleClass("active");
-  });
-})();
-
-
-
-// (function() {
-
-//     // filter collapse / expand
-//     var toggleFilterCollapse = function(target) {
-//         $(target).toggleClass('collapse');
-//         // console.log($(target));
-//         $(target).find('.icon').toggleClass("icon-plus icon-minus");
-//     };
-
-//     $('body').on('click', '.filter--title', function() {
-//         toggleFilterCollapse($(this));
-//     });
-//     // console.log(isMobileOrTablet);
-//     if (!window.isMobileOrTablet) {
-//         toggleFilterCollapse('.filter--title');
-//     }
-// })();
 
 
 // syntax highlighter
@@ -913,17 +433,6 @@ require('./modules/address-lookup');
 //   fixMarkup: true
 // });
 // hljs.initHighlighting();
-
-
-// Filters Show more
-(function() {
-  $('body').on('click', '.filters--show-more', function() {
-    $(this).hide();
-    $(this).parent().find('label').css('display', 'block');
-  });
-})();
-
-
 
 // bugherd
 // (function(d, t) {
