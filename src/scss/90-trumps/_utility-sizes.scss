@@ -5,3 +5,15 @@
 
 @include make-spacer-classes(null);
 @include make-responsive-generated-classes();
+
+.u-h-800 {
+  height: 800px;
+}
+
+.u-h-400 {
+  height: 400px;
+}
+
+.u-h-full {
+ height: 100%;
+}

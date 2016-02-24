@@ -8,30 +8,24 @@
 <body class="is-dev">
     {{> parcels/header }}
     <div class="o-hero  o-hero__fullbg">
-        <div class="down-arrow" style="width: 100%; position: absolute; bottom: 0; left: 0; text-align:center; cursor: pointer; z-index: 99999;">
-            <a href="#abbeyProducts" class="link--nostyle"><i class="icon icon-ui-down abbey-down" style="font-size: 30px"></i></a>
+        <div class="u-down-arrow">
+            <a href="#abbeyProducts" class="link--nostyle"><i class="icon icon-ui-down abbey-down"></i></a>
         </div>
-        <div class="o-hero__container--abbey" style="z-index: 2">
+        <div class="o-hero__container--abbey">
             <div class="o-hero__detail-center">
                 <h1>New for Spring 2016</h1>
                 <button class="c-btn c-btn-custom c-btn--huge u-mar-v-huge">Shop&nbsp;new&nbsp;arrivals</button>
             </div>
         </div>
     </div>
-    <div style="position: relative;">
-        <style>
-        .o-section--full-1 {
-            background-image: url("img-assets/underwear.png");
-            background-position: top left;
-        }
-        </style>
+    <div class="u-p-rel">
         <div class="container--fluid">
             <div class="row">
-                <div class="col-12@xs col-6@md o-section--bg o-section--full-1" style="min-height: 800px;">
+                <div class="col-12@xs col-6@md o-section--bg bg-underwear u-h-800">
                 </div>
-                <div class="col-12@xs col-6@md" style="min-height: 800px;">
+                <div class="col-12@xs col-6@md u-h-800">
                     <div class="row">
-                        <div class="col-6@xs" style=" height: 400px;">
+                        <div class="col-6@xs u-h-400">
                             <div class="search-results__main--full search-results__tight u-pad-v-large">
                                 <div class="search-results--inner row">
                                     <div class="search-results--item-full u-font-ta-c u-mar-b-medium">
@@ -54,7 +48,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6@xs" style=" height: 400px;">
+                        <div class="col-6@xs u-h-400">
                             <div class="search-results__main--full search-results__tight u-pad-v-large">
                                 <div class="search-results--inner row">
                                     <div class="search-results--item-full u-font-ta-c u-mar-b-medium">
@@ -79,7 +73,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6@xs" style=" height: 400px;">
+                        <div class="col-6@xs u-h-400">
                             <div class="search-results__main--full search-results__tight u-pad-v-large">
                                 <div class="search-results--inner row">
                                     <div class="search-results--item-full u-font-ta-c u-mar-b-medium">
@@ -102,7 +96,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6@xs" style=" height: 400px;">
+                        <div class="col-6@xs u-h-400">
                             <div class="search-results__main--full search-results__tight u-pad-v-large">
                                 <div class="search-results--inner row">
                                     <div class="search-results--item-full u-font-ta-c u-mar-b-medium">
@@ -127,18 +121,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="container" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
-                    <div class="row" style="height: 100%">
-                        <div class="col-6@xs" style="height: 100%">
+                <div class="container u-abs-fill">
+                    <div class="row u-h-full">
+                        <div class="col-6@xs u-h-full">
                             &nbsp;
                         </div>
-                        <div class="col-6@xs" style="height: 100%">
+                        <div class="col-6@xs u-h-full">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="o-hero  o-hero__fullbg2" style="height:800px;">
+        <div class="o-hero  o-hero__fullbg2 u-h-800">
             <div class="o-hero__detail-center-right u-font-ta-c u-f-r">
                 <h1>Stripes are back</h1>
                 <button class="c-btn c-btn-custom-alt c-btn--large u-mar-v-huge">Shop&nbsp;Tops&nbsp;&&nbsp;blouses</button>
@@ -240,8 +234,7 @@
         .o-hero__bg {
             background-image: url("img-assets/hero.jpg");
         }
-        </style>
-        <style>
+
         .o-hero__fullbg {
             background: url('img-assets/cat1.png');
             background-size: cover;
@@ -252,6 +245,11 @@
             background: url('img-assets/cat-2.png');
             background-size: cover;
             background-position: top center;
+        }
+
+        .bg-underwear {
+            background-image: url("img-assets/underwear.png");
+            background-position: top left;
         }
         </style>
         {{> parcels/footer }} {{> partials/js-footer}}
