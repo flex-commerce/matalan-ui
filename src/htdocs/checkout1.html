@@ -1,8 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
+
 <head>
   {{> partials/html-head }}
-  <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script> -->
 </head>
 
 <body class="is-dev page--checkout-1 page--requiremaps">
@@ -16,68 +16,63 @@
   </div>
 
   <div class="container" role="main">
-    <div class="">
-      <div class="">
 
-        <div class="u-mar-v-large">
-          {{> partials/progress-checkout-1 }}
-        </div>
+    <div class="u-mar-v-large">
+      {{> partials/progress-checkout-1 }}
+    </div>
 
-        <div class="row">
+    <div class="row">
+      <div class="o-checkout__detail col-12@xs col-8@lg">
+        <div class="o-accord__container" id="checkout1Accord">
 
-          <div class="o-checkout__detail col-12@xs col-8@lg">
-            <div class="o-accord__container" id="checkout1Accord">
-
-              <div class="panel">
-                <div class="o-accord__title u-font-upper">
-                  <a class="collapsed" data-toggle="collapse" href="#billingAddressAccord" aria-expanded="true"> <!-- data-parent="#checkout1Accord" -->
-                    1. Billing Address
-                    <i class="icon icon-plus icon--vertical-right"></i>
-                    <i class="icon icon-minus icon--vertical-right"></i>
-                  </a>
-                </div>
-                {{> parcels/checkout-form1 }}
-              </div>
-
-              <div class="panel disabled">
-                <div class="o-accord__title u-font-upper">
-                  <a class="collapsed" data-toggle="collapse" href="#deliveryAddressAccord"> <!-- data-parent="#checkout1Accord" -->
-                    2. Delivery Address
-                    <i class="icon icon-plus icon--vertical-right"></i>
-                    <i class="icon icon-minus icon--vertical-right"></i>
-                  </a>
-                </div>
-                {{> parcels/checkout-form2 }}
-              </div>
-
-              <div class="panel disabled">
-                <div class="o-accord__title u-font-upper">
-                  <a class="collapsed" data-toggle="collapse" href="#deliveryMethodAccord"> <!-- data-parent="#checkout1Accord" -->
-                    3. Delivery Method
-                    <i class="icon icon-plus icon--vertical-right"></i>
-                    <i class="icon icon-minus icon--vertical-right"></i>
-                  </a>
-                </div>
-                {{> parcels/checkout-form3 }}
-              </div>
-
+          <div class="panel">
+            <div class="o-accord__title u-font-upper">
+              <a class="collapsed" data-toggle="collapse" href="#billingAddressAccord"> <!-- data-parent="#checkout1Accord" -->
+                1. Billing Address
+                <i class="icon icon-plus icon--vertical-right"></i>
+                <i class="icon icon-minus icon--vertical-right"></i>
+              </a>
             </div>
+            {{> parcels/checkout-form1 }}
           </div>
 
-          <div class="col-4@lg hidden@md-down">
-            <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
-              {{> partials/minibag-checkout-footer }}
+          <div class="panel disabled">
+            <div class="o-accord__title u-font-upper">
+              <a class="collapsed" data-toggle="collapse" href="#deliveryAddressAccord"> <!-- data-parent="#checkout1Accord" -->
+                2. Delivery Address
+                <i class="icon icon-plus icon--vertical-right"></i>
+                <i class="icon icon-minus icon--vertical-right"></i>
+              </a>
             </div>
+            {{> parcels/checkout-form2 }}
+          </div>
+
+          <div class="panel disabled">
+            <div class="o-accord__title u-font-upper">
+              <a class="collapsed" data-toggle="collapse" href="#deliveryMethodAccord"> <!-- data-parent="#checkout1Accord" -->
+                3. Delivery Method
+                <i class="icon icon-plus icon--vertical-right"></i>
+                <i class="icon icon-minus icon--vertical-right"></i>
+              </a>
+            </div>
+            {{> parcels/checkout-form3 }}
           </div>
 
         </div>
+      </div>
 
+      <div class="col-4@lg hidden@md-down">
+        <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
+          {{> partials/minibag-checkout-footer }}
+        </div>
       </div>
     </div>
+
   </div>
 
-{{> partials/footer-checkout }}
-{{> partials/js-footer}}
+  {{> partials/footer-checkout }}
+  {{> partials/js-footer}}
+
 </body>
 
 </html>

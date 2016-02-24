@@ -15,6 +15,10 @@ $input-padding-y: $default-pad-y;
   line-height: $line-height;
 }
 
+.o-form {
+  position: relative;
+}
+
 .o-form__row {
   @include clearfix;
   padding-top: $form-row-padding-y;

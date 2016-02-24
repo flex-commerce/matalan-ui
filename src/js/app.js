@@ -204,6 +204,7 @@ require("./modules/general");
 require("./dev/misc-dev");
 require("./dev/pdp-dev");
 require("./dev/mini-mybag-dev");
+require("./dev/dev-checkout");
 require("./dev/dev-dev");
 require("./modules/star-ratings");
 require("./modules/sizeguide.js");
