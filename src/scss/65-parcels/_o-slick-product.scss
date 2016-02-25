@@ -26,7 +26,7 @@
   .slick-current img {
     transform: scale(1);
   }
-/*   .slick-slide .slick-zoom,
+  /*   .slick-slide .slick-zoom,
   .slick-slide .c-roundel {
     display: none;
   } */
@@ -142,7 +142,10 @@
       }
     }
   }
-  .slick-zoom {
+  .slick-slide .slick-zoom {
+    display: none;
+  }
+  .slick-current .slick-zoom {
     position: absolute;
     bottom: 15px;
     left: 15px;
