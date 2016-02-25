@@ -58,28 +58,15 @@
       "extensions": ["jpg", "png", "svg", "gif"]
     },
 
-    "videos": {
-      "src": "vid",
-      "dest": "vid",
-      "extensions": ["mp4"]
+    "destCopy": {
+      "src": "copy",
+      "dest": ""
     },
 
     "imageAssets": {
       "src": "img-assets",
       "dest": "img-assets",
       "extensions": ["jpg", "png", "svg", "gif"]
-    },
-
-    "favicon": {
-      "src": "favicon",
-      "dest": "./",
-      "extensions": ["ico"]
-    },
-
-    "data": {
-      "src": "data",
-      "dest": "data",
-      "extensions": ["json"]
     },
 
     "fonts": {
