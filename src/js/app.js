@@ -53,7 +53,7 @@ function handleMatchMedia() {
 
     $(window).on('resize', _.debounce(function() {
       window.isMobileOrTablet = window.matchMedia("only screen and (max-width: 1025px)").matches;
-      console.log(window.isMobileOrTablet);
+      // console.log(window.isMobileOrTablet);
     }, 250));
 
   }

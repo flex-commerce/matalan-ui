@@ -28,8 +28,10 @@
 
   $('body.is-dev form[name=searchProducts]').submit(function(e) {
     if ($('input[name=searchTerm]').val() == 'dresses' || $('input[name=searchTermMobile]').val() == 'dresses') {
+      e.preventDefault();
       window.location.href = './search-results.html';
     } else {
+      e.preventDefault();
       window.location.href = './no-results.html';
     }
   });

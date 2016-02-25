@@ -1,5 +1,4 @@
 $('body.page--pdp').on('change', 'select.js-product-select--size', function() {
-    console.log('changes')
   var selectedOption = $(this).val();
   if (selectedOption.toLowerCase().indexOf("ewis") >= 0) {
     $('.js-ewis-hide').hide();

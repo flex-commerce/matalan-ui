@@ -15,7 +15,7 @@
     "js": {
       "src": "js",
       "dest": "js",
-      "extractSharedJs": false,
+      "extractSharedJs": true,
       "entries": {
         "app": ["./app.js"],
         "dev": ["./dev.js"]
