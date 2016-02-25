@@ -9,293 +9,252 @@
   {{> parcels/header }}
   <div class="container o-checkout__container" role="main">
 
-
     <div class="row">
       <div class="col-12@xs u-mar-v-large">
         {{> partials/progress-checkout-5 }}
       </div>
     </div>
 
-
-    <div class="row">
-      <div class="col-12@xs account-created-container" style="display:none">
-        <a id="loginButton" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr hidden@md-down">Login</a>
-        <h4 class="u-color-pri">Your account has been created</h4>
-        <p class="u-mar-t-medium">You are now able to login and view your order.</p>
-      </div>
-
-      <div class="col-12@xs create-account-container">
-        <a id="checkoutCreateAccount" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr">Create account</a>
-        <h4 class="u-color-pri">Thank you for your order</h4>
-        <p class="u-mar-t-medium">Become part of the Matalan family and be the first to hear about the latest offers, news, collections, and much more.</p>
-      </div>
-
-      <div class="col-12@xs create-account-container u-mar-b-medium" style="display:none">
-        <h4 class="u-color-pri">Create your account</h4>
-        <p class="u-mar-t-medium">
-          We are delighted to have you as part of the family. Al we ask is that you fill in the missing details
-          <span class="u-color-pri">highlighted</span> in the form below:
-        </p>
-
-
-        <div class="row">
-
-          <div class="col-12@xs col-6@lg">
-            <form id="createAccountForm" action="#" name="createAccountForm" class="o-form o-form--default">
-
-<!--             <div class="c-alert" role="alert">
-              <strong>Problems with the form</strong>
-              <span class="meta">Click error to autofocus field..</span>
-              <div class="separator"></div>
-
-              <div class="o-list-block">
-                <label for="emailConfirm" class="o-list__item">
-                  Please confirm your email address
-                </label>
-                <label for="passwordEntry" class="o-list__item">
-                  Please choose a password
-                </label>
-                <label for="passwordConfirm" class="o-list__item">
-                  Please confirm your chosen password
-                </label>
-              </div>
-
-            </div> -->
-
-              <div class="row">
-                <div class="col-12@xs col-6@lg">
-                  <div class="o-form__row">
-                    <div class="o-form__label-contain">
-                      <label class="">First Name:</label>
-                    </div>
-                    <div class="o-form__input-contain">
-                      <input type="text" class="o-input o-input--textual" value="John" placeholder="First name" required/>
-                      <span class="input__required">*</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12@xs col-6@lg">
-                  <div class="o-form__row">
-                    <div class="o-form__label-contain">
-                      <label class="">Last Name:</label>
-                    </div>
-                    <div class="o-form__input-contain">
-                      <input type="text" class="o-input o-input--textual" value="Doe" placeholder="Last name" required/>
-                      <span class="input__required">*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12@xs col-6@lg">
-                  <div class="o-form__row">
-                    <div class="o-form__label-contain">
-                      <label class="">Email Address:</label>
-                      <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover" data-trigger="focus"
-                      title="Helper info" data-content="Always available, doesn't require an error to be present">
-                      </i>
-                    </div>
-                    <div class="o-form__input-contain">
-                      <input type="text" class="o-input o-input--textual" value="john.doe@gmail.com" placeholder="Email address" required/>
-                      <span class="input__required">*</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12@xs col-6@lg">
-                  <div class="o-form__row form-validate__error">
-                    <div class="o-form__label-contain">
-                      <label class="">Confirm Email Address:</label>
-                    </div>
-                    <div class="o-form__input-contain">
-                      <input type="text" class="o-input o-input--textual" value="" id="emailConfirm" placeholder="Confirm email address" required/>
-                      <span class="input__required">*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12@xs col-6@lg">
-                  <div class="o-form__row form-validate__error">
-                    <div class="o-form__label-contain">
-                      <label for="passwordEntry" class="">Password:</label>
-                      <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover" data-trigger="focus"
-                      title="Helper info" data-content="Always available, doesn't require an error to be present">
-                      </i>
-                    </div>
-                    <div class="o-form__input-contain">
-                      <input id="passwordEntry" type="password"  data-validation="password" class="o-input o-input--textual" placeholder="Enter new password" required>
-                      <span class="input__required">*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12@xs col-6@lg">
-                  <div class="o-form__row form-validate__error">
-                    <div class="o-form__label-contain">
-                      <label for="passwordConfirm" class="">Confirm Password:</label>
-                    </div>
-                    <div class="o-form__input-contain">
-                      <input id="passwordConfirm" type="password" data-validation="password-confirm" class="o-input o-input--textual" placeholder="Confirm new password" required>
-                      <span class="input__required">*</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button type="submit" form="createAccountForm" class="c-btn c-btn-secondary c-btn--block">Create Account</button>
-            </form>
-          </div>
-        </div>
-
-      </div>
-
+    <div class="account-created-container" style="display:none">
+      <a id="loginButton" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr hidden@md-down">Login</a>
+      <h4 class="u-color-pri">Your account has been created</h4>
+      <p class="u-mar-t-medium">You are now able to login and view your order.</p>
     </div>
 
+    <div class="create-account-container">
+      <a id="checkoutCreateAccount" class="c-btn c-btn-secondary u-font-upper u-mar-t-small u-fr">Create account</a>
+      <h4 class="u-color-pri">Thank you for your order</h4>
+      <p class="u-mar-t-medium">Become part of the Matalan family and be the first to hear about the latest offers, news, collections, and much more.</p>
+    </div>
+
+    <div class="create-account-container u-mar-b-medium" style="display:none">
+      <h4 class="u-color-pri">Create your account</h4>
+      <p class="u-mar-t-medium">
+        We are delighted to have you as part of the family. Al we ask is that you fill in the missing details
+        <span class="u-color-pri">highlighted</span> in the form below:
+      </p>
+      <div class="row">
+
+        <div class="col-12@xs col-6@lg">
+          <form id="createAccountForm" action="#" name="createAccountForm" class="o-form o-form--default">
+            <div class="row">
+              <div class="col-12@xs col-6@lg">
+                <div class="o-form__row">
+                  <div class="o-form__label-contain">
+                    <label class="">First Name:</label>
+                  </div>
+                  <div class="o-form__input-contain">
+                    <input type="text" class="o-input o-input--textual" value="John" placeholder="First name" required/>
+                    <span class="input__required">*</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12@xs col-6@lg">
+                <div class="o-form__row">
+                  <div class="o-form__label-contain">
+                    <label class="">Last Name:</label>
+                  </div>
+                  <div class="o-form__input-contain">
+                    <input type="text" class="o-input o-input--textual" value="Doe" placeholder="Last name" required/>
+                    <span class="input__required">*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12@xs col-6@lg">
+                <div class="o-form__row">
+                  <div class="o-form__label-contain">
+                    <label class="">Email Address:</label>
+                    <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover" data-trigger="focus" title="Helper info" data-content="Always available, doesn't require an error to be present">
+                    </i>
+                  </div>
+                  <div class="o-form__input-contain">
+                    <input type="text" class="o-input o-input--textual" value="john.doe@gmail.com" placeholder="Email address" required/>
+                    <span class="input__required">*</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12@xs col-6@lg">
+                <div class="o-form__row form-validate__error">
+                  <div class="o-form__label-contain">
+                    <label class="">Confirm Email Address:</label>
+                  </div>
+                  <div class="o-form__input-contain">
+                    <input type="text" class="o-input o-input--textual" value="" id="emailConfirm" placeholder="Confirm email address" required/>
+                    <span class="input__required">*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12@xs col-6@lg">
+                <div class="o-form__row form-validate__error">
+                  <div class="o-form__label-contain">
+                    <label for="passwordEntry" class="">Password:</label>
+                    <i tabindex="0" class="icon icon-information" role="button" data-toggle="popover" data-trigger="focus" title="Helper info" data-content="Always available, doesn't require an error to be present">
+                    </i>
+                  </div>
+                  <div class="o-form__input-contain">
+                    <input id="passwordEntry" type="password" data-validation="password" class="o-input o-input--textual" placeholder="Enter new password" required>
+                    <span class="input__required">*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12@xs col-6@lg">
+                <div class="o-form__row form-validate__error">
+                  <div class="o-form__label-contain">
+                    <label for="passwordConfirm" class="">Confirm Password:</label>
+                  </div>
+                  <div class="o-form__input-contain">
+                    <input id="passwordConfirm" type="password" data-validation="password-confirm" class="o-input o-input--textual" placeholder="Confirm new password" required>
+                    <span class="input__required">*</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" form="createAccountForm" class="c-btn c-btn-secondary c-btn--block">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <div class="separator"></div>
 
+    <a class="c-btn c-btn-primary--alt u-font-upper u-mar-t-small u-fr hidden@md-down">Print Page</a>
+    <h4 class="u-color-pri">Order Confirmation</h4>
+    <p class="u-mar-t-medium">Your order number is:
+      <strong class="u-font-upper">Order Number</strong>
+    </p>
+    <p>Email confirmation has been sent to:
+      <strong class="u-font-upper">Email Address</strong>
+    </p>
 
-    <div class="row">
-      <div class="col-12@xs">
-        <a class="c-btn c-btn-primary--alt u-font-upper u-mar-t-small u-fr hidden@md-down">Print Page</a>
-        <h4 class="u-color-pri">Order Confirmation</h4>
-        <p class="u-mar-t-medium">Your order number is:
-          <strong class="u-font-upper">Order Number</strong>
-        </p>
-        <p>Email confirmation has been sent to:
-          <strong class="u-font-upper">Email Address</strong>
-        </p>
-      </div>
-    </div>
-
-
-    <div class="row">
-
-      <div class="col-12@xs u-mar-v-large">
-        <div class="auto-column-2 u-pad-medium u-border2">
-          <div class="auto-column--nobreak u-mar-b-medium">
-            <h5 class="u-mar-b-medium u-font-upper u-color-pri">Delivery Address</h5>
-            <ul>
-              <li>Mr John Doe</li>
-              <li>Dow</li>
-              <li>0 John Doe Avenue</li>
-              <li>United Kingdom</li>
-              <li>AB1 CD2</li>
-            </ul>
-          </div>
-          <div class="auto-column--nobreak u-mar-b-medium">
-            <h5 class="u-mar-b-medium u-font-upper u-color-pri">Billing Address</h5>
-            <ul>
-              <li>Mr John Doe</li>
-              <li>Dow</li>
-              <li>0 John Doe Avenue</li>
-              <li>United Kingdom</li>
-              <li>AB1 CD2</li>
-            </ul>
-          </div>
+    <div class="u-mar-v-large">
+      <div class="auto-column-2 u-pad-medium u-border2">
+        <div class="auto-column--nobreak u-mar-b-medium">
+          <h5 class="u-mar-b-medium u-font-upper u-color-pri">Delivery Address</h5>
+          <ul>
+            <li>Mr John Doe</li>
+            <li>Dow</li>
+            <li>0 John Doe Avenue</li>
+            <li>United Kingdom</li>
+            <li>AB1 CD2</li>
+          </ul>
         </div>
-      </div>
-
-      <div class="col-12@xs">
-        <ul class="o-bag-list--itemtable">
-          <li class="o-bag--list__header hidden@md-down u-font-wb u-font-upper">
-            <div class="o-bag--list__header__item">Your Items</div>
-            <div class="o-bag--list__header__item"></div>
-            <div class="o-bag--list__header__item">Quantity</div>
-            <div class="o-bag--list__header__item">You Save</div>
-            <div class="o-bag--list__header__item u-font-ta-r">Subtotal</div>
-          </li>
-          {{#each minibag.category.collection.products}}
-          <li class="o-bag--list-item row">
-
-            <div class="o-bag--list-item--image col-3@xs col-2@md col-3@lg u-pad-r-0">
-              <img class="img" src="{{productImages.[0]}}">
-            </div>
-
-            <div class="o-bag--list-item--detail col-9@xs col-10@md col-6@lg ">
-              <p class="detail--description u-font-wb u-font-large">{{productTitle}}</p>
-
-              <ul class="detail--price hidden@lg-up">
-                <li class="list__item u-font-ta-r">
-                  <strong>{{productPrice}}</strong>
-                </li>
-                {{#if nowPrice}}
-                <li class="list__item u-font-ta-r">
-                  <strong>
-                    <span class="u-color-pri">Save: {{ difference productPrice nowPrice }}</span>
-                  </strong>
-                </li>
-                {{/if}}
-                <!-- <li class="list__item hidden@lg-up">Save: £0.00</li> -->
-              </ul>
-
-              <dl class="detail--vars u-pad-b-small o-deflist-left o-deflist-left--small colspan-9">
-                <dt class="u-color-dgrey">Product ID</dt>
-                <dd class="u-font-large-rel">123445</dd>
-                <dt class="u-color-dgrey">Color</dt>
-                <dd>
-                  <span class="color-swatch__inline u-bgcolor-cgrey"></span>
-                </dd>
-                <dt class="u-color-dgrey">Qty</dt>
-                <dd class="u-font-large-rel">5</dd>
-                <dt class="u-color-dgrey">Size</dt>
-                <dd class="u-font-large-rel">Small</dd>
-              </dl>
-            </div>
-            <div class="o-bag--list-item--control hidden@md-down col-3@lg">
-              1
-            </div>
-            <div class="o-bag--list-item--control o-bag--list-item--quant col-12@xs col-10@md hidden@lg-up u-fr">
-              <div class="o-bag--control--remove colspan-4 u-pad-none">
-                <a class="c-btn c-btn-primary u-font-no-underline" href="#">
-                  <span class="hidden@lg-down">&times;</span> remove
-                </a>
-                &nbsp;
-              </div>
-              <div class="o-form__input-contain o-form__input-contain--quantity colspan-8 u-font-ta-r">
-                <a class="c-btn c-btn-primary u-font-no-underline js-remove-item">-</a>
-                <span class="o-input--textual js-item-count">1</span>
-                <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
-                <a class="c-btn c-btn-primary u-font-no-underline js-add-item">+</a>
-              </div>
-            </div>
-            <div class="o-bag--list-item--price-col o-bag--list-item--price--save colspan-2 hidden@md-down u-color-pri u-font-wb">
-              {{#if nowPrice}}{{ difference productPrice nowPrice }}{{/if}}
-            </div>
-            <div class="o-bag--list-item--price-col o-bag--list-item--price--total colspan-2 hidden@md-down u-font-ta-r">
-              {{productPrice}}
-            </div>
-          </li>
-          {{/ each }}
-        </ul>
-      </div>
-
-      <div class="col-12@xs">
-        <div class="o-bag--footer u-mar-t-large">
-          <ul class="o-bag--action--contain">
-            <li class="separator u-mar-v-medium"></li>
-            <li class="row">
-              <div class="col-12@xs col-6@lg col-offset-6@lg-up o-bag--list-total">
-                <dl class="o-deflist-right u-pad-t-medium">
-                  <dt class="u-font-ta-r">Shipping</dt>
-                  <dd>£2.95</dd>
-                  <dt class="u-font-ta-r u-color-pri">Total Savings</dt>
-                  <dd class="u-color-pri">£00.00</dd>
-                  <dt class="u-font-wb u-mar-b-small u-font-ta-r">Sub Total</dt>
-                  <dd class="u-font-wb u-mar-b-small">£147.00</dd>
-                </dl>
-              </div>
-            </li>
+        <div class="auto-column--nobreak u-mar-b-medium">
+          <h5 class="u-mar-b-medium u-font-upper u-color-pri">Billing Address</h5>
+          <ul>
+            <li>Mr John Doe</li>
+            <li>Dow</li>
+            <li>0 John Doe Avenue</li>
+            <li>United Kingdom</li>
+            <li>AB1 CD2</li>
           </ul>
         </div>
       </div>
     </div>
 
+    <div class="">
+      <ul class="o-bag-list--itemtable">
+        <li class="o-bag--list__header hidden@md-down u-font-wb u-font-upper">
+          <div class="o-bag--list__header__item">Your Items</div>
+          <div class="o-bag--list__header__item"></div>
+          <div class="o-bag--list__header__item">Quantity</div>
+          <div class="o-bag--list__header__item">You Save</div>
+          <div class="o-bag--list__header__item u-font-ta-r">Subtotal</div>
+        </li>
+        {{#each minibag.category.collection.products}}
+        <li class="o-bag--list-item row">
+
+          <div class="o-bag--list-item--image col-3@xs col-2@md col-3@lg u-pad-r-0">
+            <img class="img" src="{{productImages.[0]}}">
+          </div>
+
+          <div class="o-bag--list-item--detail col-9@xs col-10@md col-6@lg ">
+            <p class="detail--description u-font-wb u-font-large">{{productTitle}}</p>
+
+            <ul class="detail--price hidden@lg-up">
+              <li class="list__item u-font-ta-r">
+                <strong>{{productPrice}}</strong>
+              </li>
+              {{#if nowPrice}}
+              <li class="list__item u-font-ta-r">
+                <strong>
+                  <span class="u-color-pri">Save: {{ difference productPrice nowPrice }}</span>
+                </strong>
+              </li>
+              {{/if}}
+              <!-- <li class="list__item hidden@lg-up">Save: £0.00</li> -->
+            </ul>
+
+            <dl class="detail--vars u-pad-b-small o-deflist-left o-deflist-left--small colspan-9">
+              <dt class="u-color-dgrey">Product ID</dt>
+              <dd class="u-font-large-rel">123445</dd>
+              <dt class="u-color-dgrey">Color</dt>
+              <dd>
+                <span class="color-swatch__inline u-bgcolor-cgrey"></span>
+              </dd>
+              <dt class="u-color-dgrey">Qty</dt>
+              <dd class="u-font-large-rel">5</dd>
+              <dt class="u-color-dgrey">Size</dt>
+              <dd class="u-font-large-rel">Small</dd>
+            </dl>
+          </div>
+          <div class="o-bag--list-item--control hidden@md-down col-3@lg">
+            1
+          </div>
+          <div class="o-bag--list-item--control o-bag--list-item--quant col-12@xs col-10@md hidden@lg-up u-fr">
+            <div class="o-bag--control--remove colspan-4 u-pad-none">
+              <a class="c-btn c-btn-primary u-font-no-underline" href="#">
+                <span class="hidden@lg-down">&times;</span> remove
+              </a>
+              &nbsp;
+            </div>
+            <div class="o-form__input-contain o-form__input-contain--quantity colspan-8 u-font-ta-r">
+              <a class="c-btn c-btn-primary u-font-no-underline js-remove-item">-</a>
+              <span class="o-input--textual js-item-count">1</span>
+              <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
+              <a class="c-btn c-btn-primary u-font-no-underline js-add-item">+</a>
+            </div>
+          </div>
+          <div class="o-bag--list-item--price-col o-bag--list-item--price--save colspan-2 hidden@md-down u-color-pri u-font-wb">
+            {{#if nowPrice}}{{ difference productPrice nowPrice }}{{/if}}
+          </div>
+          <div class="o-bag--list-item--price-col o-bag--list-item--price--total colspan-2 hidden@md-down u-font-ta-r">
+            {{productPrice}}
+          </div>
+        </li>
+        {{/ each }}
+      </ul>
+    </div>
+
+    <div class="">
+      <div class="o-bag--footer u-mar-t-large">
+        <ul class="o-bag--action--contain">
+          <li class="separator u-mar-v-medium"></li>
+          <li class="row">
+            <div class="col-12@xs col-6@lg col-offset-6@lg-up o-bag--list-total">
+              <dl class="o-deflist-right u-pad-t-medium">
+                <dt class="u-font-ta-r">Shipping</dt>
+                <dd>£2.95</dd>
+                <dt class="u-font-ta-r u-color-pri">Total Savings</dt>
+                <dd class="u-color-pri">£00.00</dd>
+                <dt class="u-font-wb u-mar-b-small u-font-ta-r">Sub Total</dt>
+                <dd class="u-font-wb u-mar-b-small">£147.00</dd>
+              </dl>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 
-  {{> parcels/footer }}
-  {{> partials/js-footer}}
+  {{> parcels/footer }} {{> partials/js-footer}}
 
 </body>
+
 </html>

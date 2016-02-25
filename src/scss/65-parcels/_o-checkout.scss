@@ -13,16 +13,12 @@
       @include mq($until: lg) {
         padding: 0 0.25em;
         height: 2em;
-
-        // max-width: 60px;
       }
 
 
       @include mq($from: lg) {
         padding: 0 0.5em;
         height: 3em;
-
-        // max-width: 80px;
       }
     }
   }
@@ -31,107 +27,91 @@
 .o-checkout__container {
   @include clearfix;
 
-  fieldset {
-    @include clearfix;
+  // fieldset {
+  //   outline: 2px dotted red;
 
-    position: relative;
+  //   @include clearfix;
 
-    // .icon {
-    //   @include center(y, abs);
-    //   right: 0;
+  //   position: relative;
 
-    //   &::before {
-    //     color: $cool-grey;
-    //   }
-    // }
+  //   &.active,
+  //   &.completed {
+  //     .o-checkout__content {
+  //       display: block;
+  //     }
 
-    .o-checkout__title {
-      font-weight: 600;
-      cursor: pointer;
-      position: relative;
-      color: $dark-grey-lighten-40;
-    }
-
-    .o-checkout__content {
-      display: none;
-
-      &.active {
-        display: block;
-      }
-    }
-
-    &.active,
-    &.completed {
-      .o-checkout__content {
-        display: block;
-      }
-
-      .o-checkout__title {
-        color: $dark-grey-lighten-100;
-      }
-    }
-  }
-
-  // .icon:before {
-  //   @include font-size(18px);
+  //     .o-checkout__title {
+  //       color: $dark-grey-lighten-100;
+  //     }
+  //   }
   // }
 
-  .icon-small-tick:before {
+  .icon-small-tick::before {
     color: $primary-color;
   }
 }
 
-.o-bag-list--itemtable {}
+.o-checkout__title {
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  color: $dark-grey-lighten-40;
+}
 
-.orderlist--item-total {
-  @include mq($until: md) {
-    text-align: right;
+.o-checkout__content {
+  display: none;
+
+  &.active {
+    display: block;
   }
 }
 
-.orderlist--item-image {
-  @include mq($from: lg) {
-    width: 220px;
+// .orderlist--item-total {
+//   @include mq($until: md) {
+//     text-align: right;
+//   }
+// }
 
-    img {
-      max-width: 80%;
-    }
-  }
+// .orderlist--item-image {
+//   @include mq($from: lg) {
+//     width: 220px;
 
-
-  @include mq($until: lg) {
-    width: 180px;
-
-    img {
-      max-width: 90%;
-    }
-  }
+//     img {
+//       max-width: 80%;
+//     }
+//   }
 
 
-  @include mq($until: md) {
-    width: 120px;
+//   @include mq($until: lg) {
+//     width: 180px;
 
-    img {
-      max-width: 100%;
-    }
+//     img {
+//       max-width: 90%;
+//     }
+//   }
+
+
+//   @include mq($until: md) {
+//     width: 120px;
+
+//     img {
+//       max-width: 100%;
+//     }
+//   }
+// }
+
+@include mq($until: md) {
+
+  .address-picker__block:nth-child(3) {
+    font-size: 95%;
+    clear: left;
   }
 }
 
 
+@include mq($from: md) {
 
-
-  @include mq($until: md) {
-    .address-picker {
-    }
-    .address-picker__block:nth-child(3) {
-      font-size: 95%;
-      clear: left;
-    }
+  .address-picker__block:nth-child(4) {
+    clear: left;
   }
-  @include mq($from: md) {
-    .address-picker {
-    }
-    .address-picker__block:nth-child(4) {
-      clear: left;
-    }
-  }
+}
