@@ -37,9 +37,6 @@ $minibag-desktop-width: 353px;
 
 // layout begin ======================================
 
-.o-bag {
-  outline: 2px solid green;
-}
 
 @include mq($until: md) {
   .o-bag {
