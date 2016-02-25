@@ -197,42 +197,72 @@
       </div>
 
       <div class="col-12@xs">
-        <ul class="o-orderlist--itemtable o-orderlist--mybag-full">
-          <li class="o-minibag--list__header hidden@md-down u-font-wb u-font-upper">
-            <div class="o-minibag--list__header__item">Your Items</div>
-            <div class="o-minibag--list__header__item"></div>
-            <div class="o-minibag--list__header__item">Quantity</div>
-            <div class="o-minibag--list__header__item">You Save</div>
-            <div class="o-minibag--list__header__item u-font-ta-r">Subtotal</div>
+        <ul class="o-bag-list--itemtable">
+          <li class="o-bag--list__header hidden@md-down u-font-wb u-font-upper">
+            <div class="o-bag--list__header__item">Your Items</div>
+            <div class="o-bag--list__header__item"></div>
+            <div class="o-bag--list__header__item">Quantity</div>
+            <div class="o-bag--list__header__item">You Save</div>
+            <div class="o-bag--list__header__item u-font-ta-r">Subtotal</div>
           </li>
           {{#each minibag.category.collection.products}}
-          <li class="o-minibag--list o-minibag--list-item u-cf">
-            <div class="o-minibag--list-item--image col-3@xs col-2@md col-3@lg u-pad-none">
+          <li class="o-bag--list-item row">
+
+            <div class="o-bag--list-item--image col-3@xs col-2@md col-3@lg u-pad-r-0">
               <img class="img" src="{{productImages.[0]}}">
             </div>
-            <div class="o-minibag--list-item--detail col-9@xs col-10@md col-6@lg ">
-              <p class="detail--description u-font-wb">{{productTitle}}</p>
-              <ul class="detail--vars u-pad-b-small list-space__small">
-                <li class="list__item">Color:
-                  <span class="color-swatch__inline u-bgcolor-cgrey"></span>
-                </li>
-                <li class="list__item">Qty: 1</li>
-                <li class="list__item">Size: Small</li>
-              </ul>
-              <ul class="detail--price">
-                <li class="list__item">
+
+            <div class="o-bag--list-item--detail col-9@xs col-10@md col-6@lg ">
+              <p class="detail--description u-font-wb u-font-large">{{productTitle}}</p>
+
+              <ul class="detail--price hidden@lg-up">
+                <li class="list__item u-font-ta-r">
                   <strong>{{productPrice}}</strong>
                 </li>
+                {{#if nowPrice}}
+                <li class="list__item u-font-ta-r">
+                  <strong>
+                    <span class="u-color-pri">Save: {{ difference productPrice nowPrice }}</span>
+                  </strong>
+                </li>
+                {{/if}}
                 <!-- <li class="list__item hidden@lg-up">Save: £0.00</li> -->
               </ul>
+
+              <dl class="detail--vars u-pad-b-small o-deflist-left o-deflist-left--small colspan-9">
+                <dt class="u-color-dgrey">Product ID</dt>
+                <dd class="u-font-large-rel">123445</dd>
+                <dt class="u-color-dgrey">Color</dt>
+                <dd>
+                  <span class="color-swatch__inline u-bgcolor-cgrey"></span>
+                </dd>
+                <dt class="u-color-dgrey">Qty</dt>
+                <dd class="u-font-large-rel">5</dd>
+                <dt class="u-color-dgrey">Size</dt>
+                <dd class="u-font-large-rel">Small</dd>
+              </dl>
             </div>
-            <div class="o-minibag--list-item--control hidden@md-down col-3@lg">
+            <div class="o-bag--list-item--control hidden@md-down col-3@lg">
               1
             </div>
-            <div class="o-minibag--list-item--price-col o-minibag--list-item--price--save span-wide-2 hidden@md-down u-color-pri">
+            <div class="o-bag--list-item--control o-bag--list-item--quant col-12@xs col-10@md hidden@lg-up u-fr">
+              <div class="o-bag--control--remove colspan-4 u-pad-none">
+                <a class="c-btn c-btn-primary u-font-no-underline" href="#">
+                  <span class="hidden@lg-down">&times;</span> remove
+                </a>
+                &nbsp;
+              </div>
+              <div class="o-form__input-contain o-form__input-contain--quantity colspan-8 u-font-ta-r">
+                <a class="c-btn c-btn-primary u-font-no-underline js-remove-item">-</a>
+                <span class="o-input--textual js-item-count">1</span>
+                <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
+                <a class="c-btn c-btn-primary u-font-no-underline js-add-item">+</a>
+              </div>
+            </div>
+            <div class="o-bag--list-item--price-col o-bag--list-item--price--save colspan-2 hidden@md-down u-color-pri u-font-wb">
               {{#if nowPrice}}{{ difference productPrice nowPrice }}{{/if}}
             </div>
-            <div class="o-minibag--list-item--price-col o-minibag--list-item--price--total span-wide-2 hidden@md-down u-font-ta-r">
+            <div class="o-bag--list-item--price-col o-bag--list-item--price--total colspan-2 hidden@md-down u-font-ta-r">
               {{productPrice}}
             </div>
           </li>
@@ -241,11 +271,11 @@
       </div>
 
       <div class="col-12@xs">
-        <div class="o-minibag--footer u-mar-t-large">
-          <ul class="o-minibag--action--contain">
+        <div class="o-bag--footer u-mar-t-large">
+          <ul class="o-bag--action--contain">
             <li class="separator u-mar-v-medium"></li>
             <li class="row">
-              <div class="col-12@xs col-6@lg col-offset-6@lg-up o-minibag--list o-minibag--list-total">
+              <div class="col-12@xs col-6@lg col-offset-6@lg-up o-bag--list-total">
                 <dl class="o-deflist-right u-pad-t-medium">
                   <dt class="u-font-ta-r">Shipping</dt>
                   <dd>£2.95</dd>

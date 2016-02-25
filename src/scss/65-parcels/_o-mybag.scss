@@ -1,0 +1,82 @@
+  // =====================================
+  // mybag page
+  // =====================================
+
+  .o-bag-list--itemtable {
+    display: table;
+
+    .o-bag--list-item--control {
+      text-align: right;
+      padding: 0;
+    }
+
+    .o-bag-list--itemtable {}
+
+    .o-bag--list-item {
+      display: table-row;
+      outline: 2px solid red;
+
+      .o-bag--list-item--image,
+      .o-bag--list-item--detail,
+      .o-bag--list-item--control,
+      .o-bag--list-item--price-col {
+        display: table-cell;
+        vertical-align: top;
+        float: none;
+        border-bottom: 1px solid $light-grey;
+        padding: 1em 0 1em 0;
+      }
+
+      &:last-child .o-bag--list-item--image,
+      &:last-child .o-bag--list-item--detail,
+      &:last-child .o-bag--list-item--control,
+      &:last-child .o-bag--list-item--price-col {
+        border-bottom: none;
+      }
+
+      .o-bag--list-item--image {
+        width: 20%;
+      }
+
+      .o-bag--list-item--detail {
+        width: auto;
+      }
+
+      .o-bag--list-item--control {
+        width: 20%;
+        text-align: left;
+      }
+
+      .o-bag--list-item--price--save {
+        width: 20%;
+
+        /*         width: auto; */
+      }
+
+      .o-bag--list-item--price--total {
+        width: 10%;
+      }
+
+      .o-bag--list-item--image {
+        img {
+          max-width: 90%;
+          margin-right: 2em;
+        }
+      }
+    }
+
+    .o-bag--list__header {
+      display: table-row;
+
+      .o-bag--list__header__item {
+        float: none;
+        display: table-cell;
+        padding-bottom: 1em;
+        border-bottom: 1px solid $cool-grey;
+      }
+    }
+  }
+
+  // =====================================
+  // mybag page end
+  // =====================================

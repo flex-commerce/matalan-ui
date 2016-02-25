@@ -25,7 +25,7 @@
 
 
   // pattern - make something active, remove active from siblings
-  $('.filter--colours li').click(function(e) {
+  $('.filter__colours .filter__colour').click(function(e) {
     $(this).toggleClass('active');
     $(this).siblings().removeClass('active');
   });
