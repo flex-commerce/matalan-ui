@@ -86,7 +86,7 @@ $input-padding-y: $default-pad-y;
 // form wide rules end
 
 // vertical form label bottom margin
-.form-default .o-form__row .o-form__label-contain {
+.o-form--default .o-form__row .o-form__label-contain {
   margin-bottom: rem-calc(7);
 }
 

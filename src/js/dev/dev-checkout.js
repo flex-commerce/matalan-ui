@@ -18,14 +18,14 @@ $('#deliveryAddressAccord').on('change', function(e) {
 
 
 
-  // // checkout navigation method - these to be moved to checkout js file
-  // $("#termsAndConditionsAccepted").on("click", function(e) {
-  //   if ($(this).is(':checked')) {
-  //     $('.iFrameWrapper').show();
-  //   } else {
-  //     $('.iFrameWrapper').hide();
-  //   }
-  // });
+  // checkout navigation method - these to be moved to checkout js file
+  $("#termsAndConditionsAccepted").on("click", function(e) {
+    if ($(this).is(':checked')) {
+      $('.iFrameWrapper').show();
+    } else {
+      $('.iFrameWrapper').hide();
+    }
+  });
 
   // // checkout navigation method - these to be moved to checkout js file
   // $('form#email-signup').submit(function(e) {
