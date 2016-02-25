@@ -73,7 +73,7 @@ var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
   'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
 ];
 
-$('.js').typeahead({
+$('.js-search-typeahead').typeahead({
   hint: true,
   highlight: true,
   minLength: 1
