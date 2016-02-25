@@ -9,10 +9,19 @@
   border-collapse: separate;
   width: 100%;
 
+  &.o-form--input-pack--typeahead {
+    > * {
+      vertical-align: top;
+      .js-search-typeahead {
+        border-left-style: solid !important;
+      }
+    }
+  }
+
   > * {
     display: table-cell !important;
-/*     vertical-align: top; */
   }
+
 
   .input-group__btn {
     width: 1%;
