@@ -1,8 +1,4 @@
-// var selectBox = require("../modules/selectbox");
-
-
-
-/* This needs to be re-written into the selectbox plugin */
+// PDP ewis handling
 
 $('body.page--pdp').on('change', 'select.js-product-select--size', function() {
   var selectedOption = $(this).val();
