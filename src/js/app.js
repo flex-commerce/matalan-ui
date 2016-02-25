@@ -172,6 +172,9 @@ require("./modules/star-ratings");
 require("./modules/sizeguide.js");
 
 
+//Ewis
+require("./modules/ewis");
+
 
 // Dropdown
 // ===========================
