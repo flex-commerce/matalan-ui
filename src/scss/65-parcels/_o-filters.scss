@@ -42,17 +42,23 @@ $filters-border-color: $keyline-color;
 
 // small screen specific tweaks to details layout
 @include mq($until: lg) {
-  .o-filters__list-item-detail {
-    .detail--vars {
-      clear: both;
-      float: left;
-    }
+  .o-filters__list__item {
 
-    .detail--price {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
+    // no idea why these are here, investigate
+    //
+    // outline: 2px solid blue;
+    // .detail--vars {
+    //   outline: 2px solid purple;
+    //   clear: both;
+    //   float: left;
+    // }
+
+    // .detail--price {
+    //   outline: 2px solid orange;
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
+    // }
   }
 
   .o-filters {
@@ -89,18 +95,12 @@ $filters-border-color: $keyline-color;
   @include mq($until: lg) {
     display: none;
     overflow: hidden;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include fixed(top 0 right 0 bottom 0 left 0);
     -webkit-overflow-scrolling: touch;
     outline: 0;
   }
 
-
   @include mq($from: lg) {
-    // todo - revisit - important to override JS addition of display none via modal
     display: block;
   }
 }
@@ -109,13 +109,6 @@ $filters-border-color: $keyline-color;
 
 // separators, borders, and padding begin
 
-// .filter--list--checkbox {
-//   padding: 0 !important;
-// }
-
-// .o-filters__header {
-//   border-bottom: 1px solid $filters-border-color;
-// }
 
 // separator within the markup
 .o-filters .separator {
@@ -135,9 +128,9 @@ $filters-border-color: $keyline-color;
 
 // separators, borders, and padding end
 
-.o-filters__list-total {
-  line-height: 1.3;
-}
+// .o-filters__list-total {
+//   line-height: 1.3;
+// }
 
 .filter--title {
   @include font-size(12px, 1.1);
@@ -156,22 +149,14 @@ $filters-border-color: $keyline-color;
 .filter--title .icon {
   float: right;
   margin-top: -1px;
-
-  // magic line height fix, pls forgive me
   color: $cool-grey;
-
   &::before {
     font-size: 1.5em;
   }
 }
 
-.filter--title.collapse + div,
-.filter--title.collapse + ul {
-  /*   display: none; */
-}
-
-.filter--colours {
-  li {
+.filter__colours {
+  .filter__colour {
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -180,11 +165,11 @@ $filters-border-color: $keyline-color;
     border-radius: 16px;
   }
 
-  li.active {
+  .filter__colour.active {
     border: 1px solid $cool-grey;
   }
 
-  li div {
+  .filter__colour div {
     width: 24px;
     height: 24px;
     border-radius: 12px;

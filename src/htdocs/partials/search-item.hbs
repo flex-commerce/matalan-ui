@@ -1,4 +1,4 @@
-<div class="search-results--item u-font-ta-c u-mar-b-medium">
+<div class="search-results__item u-font-ta-c u-mar-b-medium">
 
   <a href="{{ productLink }}" class="">
 
@@ -9,10 +9,20 @@
     </div>
 
     <div class="u-mar-b-tiny u-cf">
-      <div class="c-promo c-promo--block c-promo--small c-promo-primary">
-        <strong>50% off</strong>
+
+      <!-- this is fake logic, just to provide a bit of randomisation until we have products flagged for sale properly -->
+      {{#xif " this.productRating == 4 "}}
+      <div class="c-promo c-promo--block c-promo--small c-promo--primary">
+        <strong>50% off </strong>
       </div>
+      {{else}}
+      <div class="c-promo c-promo--block c-promo--small c-promo--none">
+        &nbsp;
+      </div>
+      {{/xif}}
+
     </div>
+
 
     <div class="results__detail">
       <div class="results__detail__title u-mar-t-small u-pad-h-medium u-font--small">{{productTitle}}</div>
@@ -41,12 +51,12 @@
     <div class="c-btn c-btn-tertiary--alt c-btn--small u-font-upper">View</div>
   </a>
 
-  <div class="rating rating__small">
-    <i class="icon icon-star-fill {{ isactive productRating 0 }}"></i>
-    <i class="icon icon-star-fill {{ isactive productRating 1 }}"></i>
-    <i class="icon icon-star-fill {{ isactive productRating 2 }}"></i>
-    <i class="icon icon-star-fill {{ isactive productRating 3 }}"></i>
-    <i class="icon icon-star-fill {{ isactive productRating 4 }}"></i>
+  <div class="rating rating__small" data-rating="{{productRating}}">
+    <i class="icon icon-star-fill"></i>
+    <i class="icon icon-star-fill"></i>
+    <i class="icon icon-star-fill"></i>
+    <i class="icon icon-star-fill"></i>
+    <i class="icon icon-star-fill"></i>
   </div>
 
 

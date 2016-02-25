@@ -1,12 +1,12 @@
-
 <!-- minibag modal wrapper -->
-<div class="modal modal--custom modal--minibag o-minibag-contain" id="minibag-contain">
+<div class="modal modal--custom modal--minibag o-bag-contain" id="minibag-contain">
 
   <form action="" class="modal-dialog">
 
-    <div data-scroll-responsive="sm" class="modal-content o-minibag u-scrollbar">
+    <div class="modal-content o-bag u-scrollbar">
+    <!-- <div data-scroll-responsive="sm" class="modal-content o-bag u-scrollbar"> -->
 
-      <div class="modal-header o-minibag--header hidden@lg-up">
+      <div class="modal-header o-bag--header hidden@lg-up">
         <div class="u-cf">
           <h4 class="u-fl u-mar-v-small">Shopping Bag</h4>
           <a class="close" data-dismiss="modal" aria-label="Close">
@@ -14,14 +14,17 @@
           </a>
         </div>
       </div>
-      <div class="o-minibag--inner modal-body">
+
+      <div class="o-bag--inner modal-body">
         {{> partials/minibag-contents }}
       </div>
 
-      <div class="o-minibag--footer">
-        <ul class="o-minibag--action--contain">
+      <div class="o-bag--footer">
+        <ul class="o-bag--action--contain">
+
           <li class="separator hidden@lg-up"></li>
-          <li class="o-minibag--list-actions hidden@lg-up">
+
+          <li class="o-bag--list-actions hidden@lg-up">
             <form action="" class="o-form--default c-search-form">
               <div class="o-form__row u-pad-v-0">
                 <div class="o-form__label-contain">
@@ -30,10 +33,8 @@
               </div>
               <div class="o-form__row u-pad-v-small">
                 <div class="o-form__input-contain o-form--input-pack o-form--input-pack--styled o-form__input--icon">
-                  <input type="text" name="searchTerm" minlength="3" required
-                  class="o-input o-input--textual input-addon--expand"
-                  placeholder="Enter code"
-                  pattern=".{3,}" title="3 characters minimum">
+                  <input type="text" name="searchTerm" minlength="3" placeholder="Enter code" required
+                    class="o-input o-input--textual input-addon--expand" pattern=".{3,}" title="3 characters minimum">
                   <div class="input-group__btn">
                     <button class="c-btn c-btn-secondary" href="">Apply Code</button>
                   </div>
@@ -42,8 +43,10 @@
               </div>
             </form>
           </li>
+
           <li class="separator u-pad-t-0"></li>
-          <li class="o-minibag--list o-minibag--list-total">
+
+          <li class="o-bag--list-total">
             <dl class="o-deflist-right">
               <dt>Shipping</dt>
               <dd>£2.95</dd>
@@ -56,8 +59,7 @@
 
           <li class="separator"></li>
 
-          <li class="o-minibag--list o-minibag--list-checkout">
-
+          <li class="o-bag--list-checkout">
             <div class="callout-panel u-mar-b-small">
               <p>You are
                 <span class="u-font-wb u-color-pri">£3.00</span> away from qualifying for
@@ -67,11 +69,7 @@
                 <span class="u-font-wb u-color-pri">FREE</span> whatever your order value.
               </p>
             </div>
-
-
-
-
-            <div class="o-minibag--list-actions">
+            <div class="o-bag--list-actions">
               <div class="flexer">
                 <a class="c-btn c-btn-secondary col-6@lg hidden@md-down flexer-element u-mar-r-small u-font-upper">View Bag</a>
                 <a class="c-btn c-btn-secondary col-12@xs col-6@lg flexer-element u-font-upper">Checkout</a>
@@ -83,7 +81,6 @@
                 <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
               </a>
             </div>
-
           </li>
         </ul>
       </div>

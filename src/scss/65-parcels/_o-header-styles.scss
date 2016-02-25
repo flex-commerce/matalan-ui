@@ -273,7 +273,7 @@
 
 
 @include mq($until: lg) {
-  .search-results--header.fixed {
+  .search-results__header.fixed {
     @include fixed(top 0 right 0 left 0);
     position: fixed;
     padding: 5px 15px;
@@ -281,7 +281,7 @@
     z-index: 5;
     background-color: $white;
   }
-  .search-results--header.fixed.absolute {
+  .search-results__header.fixed.absolute {
     position: absolute;
   }
 }

@@ -10,7 +10,7 @@ $promo-line-height: $base-line-height;
   &.c-promo--none {
     visibility: hidden;
   }
-  &.c-promo-primary {
+  &.c-promo--primary {
     @include style-variant($color: $white, $background: $primary-color, $border: $primary-color);
     text-transform: uppercase;
     &.c-promo--link {

@@ -10,83 +10,45 @@ $minibag-desktop-width: 353px;
 }
 
 // temp
-.o-minibag--list-item--detail {
-  min-height: 110px; // magic - min height for avg item - required for slider maths
+.o-bag--list-item--detail {
+  min-height: 110px;
+
+  // magic - min height for avg item - required for slider maths
 }
 
-// flexbox here to allow the inner panel to expand to max allowed size
-// flex start ======================================
-@include mq($from: md) {
-  // html.flexbox {
-  //   .o-minibag {
-  //     display: flex;
-  //     flex-direction: column;
+// rules for modal bag height
+// .o-bag--inner {
+//   @include mq($from: md, $until: lg) {
+//     max-height: 380px;
+//   }
 
-  //     .o-minibag--inner {
-  //       flex-grow: 1;
-  //       overflow-y: scroll;
-  //     }
-  //   }
+//   @include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
+//     max-height: 190px;
+//   }
 
-  //   .o-minibag-contain {
-  //     will-change: transform;
-  //   }
-  // }
+//   @include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
+//     max-height: 290px;
+//   }
 
-  // html.no-flexbox {
-  .o-minibag {
-    // display: flex;
-    // flex-direction: column;
+//   @include mq($from: lg) {
+//     // max-height: 290px;
+//   }
+// }
 
-    .o-minibag--inner {
-      // flex-grow: 1;
-/*       overflow-y: scroll; */
-    }
-  }
-
-  .o-minibag-contain {
-    // will-change: transform;
-
-  }
-
-  // }
-}
-
-
-.o-minibag--inner {
-  @include mq($from: md, $until: lg) {
-    max-height: 380px;
-  }
-
-  @include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
-    max-height: 190px;
-  }
-
-
-  @include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
-    max-height: 290px;
-  }
-
-  @include mq($from: lg) {
-    // max-height: 290px;
-  }
-}
-
-// flex end ======================================
 // layout begin ======================================
+
+
 @include mq($until: md) {
-  .o-minibag {
+  .o-bag {
     @include fixed(top 0 left 0 right 0 bottom 0);
 
     overflow-y: scroll;
-/*     width: 100%; */
-/*     height: 100%; */
   }
 }
 
 
 @include mq($from: md, $until: lg) {
-  .o-minibag {
+  .o-bag {
     @include fixed(top 1em right 1em bottom 1em left 1em);
 
     max-width: 580px;
@@ -94,114 +56,38 @@ $minibag-desktop-width: 353px;
     margin: auto;
   }
 
-  .o-minibag--list-item--control {
-    // todo - check paddings
-/*     padding: 0 0 0 1em; */
+  .o-bag--list-item--control {
     margin-top: 1em;
   }
 
-  .o-minibag--control--select {
+  .o-bag--control--select {
     position: absolute;
     right: 0;
   }
 
-  select {
-    right: 0;
-  }
+  // select {
+  //   right: 0;
+  // }
 }
 
 
 @include mq($from: lg) {
-  .o-minibag {
+  .o-bag {
     position: absolute;
     width: $minibag-desktop-width;
     right: 0;
   }
 
-  .o-minibag--inner {
-    // max-height: 260px;
-  }
 
-  .o-orderlist--itemtable {
-      display: table;
-
-    .o-minibag--list-item--control {
-      text-align: right;
-      padding: 0;
-    }
-
-    .o-orderlist--itemtable {
-    }
-
-    .o-minibag--list-item {
-      display: table-row;
-
-      .o-minibag--list-item--image,
-      .o-minibag--list-item--detail,
-      .o-minibag--list-item--control,
-      .o-minibag--list-item--price-col {
-        display: table-cell;
-        vertical-align: top;
-        float: none;
-        border-bottom: 1px solid $light-grey;
-        padding: 1em 0 1em 0;
-      }
-
-      &:last-child .o-minibag--list-item--image,
-      &:last-child .o-minibag--list-item--detail,
-      &:last-child .o-minibag--list-item--control,
-      &:last-child .o-minibag--list-item--price-col {
-        border-bottom: none;
-      }
-
-      .o-minibag--list-item--image {
-        width: 20%;
-      }
-
-      .o-minibag--list-item--detail {
-        width: auto;
-      }
-
-      .o-minibag--list-item--control {
-        width: 20%;
-        text-align: left;
-      }
-
-      .o-minibag--list-item--price--save {
-        width: 20%;
-/*         width: auto; */
-      }
-
-      .o-minibag--list-item--price--total {
-        width: 10%;
-      }
-
-      .o-minibag--list-item--image {
-        img {
-          max-width: 90%;
-          margin-right: 2em;
-        }
-      }
-    }
-
-    .o-minibag--list__header {
-      display: table-row;
-
-      .o-minibag--list__header__item {
-        float: none;
-        display: table-cell;
-        padding-bottom: 1em;
-        border-bottom: 1px solid $cool-grey;
-      }
-    }
-  }
 }
 
 
 // layout end ======================================
-// small screen specific tweaks to details layout ======================================
+
+// small screen specific tweaks to details layout
 @include mq($until: lg) {
-  .o-minibag--list-item--detail {
+  .o-bag--list-item--detail {
+
     .detail--description {
       float: left;
       max-width: 75%;
@@ -215,48 +101,53 @@ $minibag-desktop-width: 353px;
     .detail--price {
       float: right;
       max-width: 25%;
-/*       position: absolute;
-      right: 0;
-      top: 0; */
+
+      /*       position: absolute;
+            right: 0;
+            top: 0; */
     }
   }
 }
 
 
-// small screen specific tweaks to details layout end ======================================
-// misc rules ======================================
+// small screen specific tweaks to details layout end
 
-.o-minibag {
+// misc rules ======================================
+.o-bag {
   border: 1px solid $light-grey;
   background: $white;
 }
 
-.o-minibag--list-actions {
+.o-bag--list-actions {
   img {
     cursor: pointer;
   }
 }
 
-// misc rules end ======================================
-// separators, borders, and padding begin ======================================
-.o-minibag {
+// misc rules end
+// ======================================
+
+// separators, borders, and padding begin
+// ======================================
+
+.o-bag {
   padding-bottom: 1em;
 
-  .o-minibag--header,
-  .o-minibag--inner,
-  .o-minibag--footer {
+  .o-bag--header,
+  .o-bag--inner,
+  .o-bag--footer {
     padding-left: 1em;
     padding-right: 1em;
   }
 }
 
-.o-minibag--inner {
+.o-bag--inner {
   padding-top: 1em;
   padding-bottom: 0.5em;
 }
 
 // auto separator for the list
-.o-minibag--list-item:not(:last-child):after {
+.o-bag--list-item:not(:last-child):after {
   content: '';
   display: block;
   padding-top: 0.5em;
@@ -267,21 +158,21 @@ $minibag-desktop-width: 353px;
 }
 
 // separators, borders, and padding end  ======================================
-.o-minibag--list-item--image {
+.o-bag--list-item--image {
   img {
     width: 100%;
   }
 }
 
-.o-minibag--list-total {
+.o-bag--list-total {
   line-height: 1.3;
 }
 
 .detail--description {
-    font-size: .9rem;
-    line-height: 1.4;
-    margin-bottom: 0.5em;
-    display: block;
+  font-size: .9rem;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+  display: block;
 }
 
 .detail--vars,
@@ -289,7 +180,7 @@ $minibag-desktop-width: 353px;
   @include font-size(12px, 1em);
 }
 
-.o-minibag--control--remove {
+.o-bag--control--remove {
   @include font-size(10px, 1.2);
 
   text-transform: uppercase;
@@ -329,14 +220,15 @@ $minibag-desktop-width: 353px;
   }
 }
 
-// header visibility overrides
-.o-header__container .o-minibag-contain {
-  display: none;
-}
+// // header visibility overrides
+// .o-header__container .o-bag-contain {
+//   display: none;
+// }
 
-.o-header__container .open > .o-minibag-contain {
-  display: block;
-}
+// .o-header__container .open > .o-bag-contain {
+//   display: block;
+//   outline: 2px solid green;
+// }
 
 .color-swatch__inline {
   width: 1em;
@@ -360,33 +252,30 @@ $minibag-desktop-width: 353px;
 }
 
 
-
-
 // ===================
 // desktop slick rules
 // ===================
 
-.o-minibag--list-contain {
-
-  .o-minibag--list-item:focus {
+.o-bag--list-contain {
+  .o-bag--list-item:focus {
     outline: none;
   }
 
   .slick-arrow {
     display: block;
     width: 100%;
+
     &:focus {
       outline: none;
     }
   }
-  .slick-prev{
+
+  .slick-prev {
     margin-bottom: 0.5em;
   }
-  .slick-next {
-  }
+
   .slick-disabled {
     opacity: 0.5;
     pointer-events: none;
   }
 }
-

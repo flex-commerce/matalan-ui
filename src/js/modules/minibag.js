@@ -9,17 +9,18 @@
 // =================================
 // Modal Desktop Swipe Paginate
 // =================================
+
 // ===========================
 // Slick Slider initialisation
 // ===========================
 var slick = require("../vendors/slick");
 
-// .o-minibag--inner.modal-body parent container
-// .o-minibag--list-contain list container
+// .o-bag--inner.modal-body parent container
+// .o-bag--list-contain list container
 
 function initialiseMinibagSlick() {
 
-  $('.o-minibag--list-contain').slick({
+  $('#minibag-contain .o-bag--list-contain').slick({
     vertical: true,
     infinite: false,
     slidesToShow: 2,
@@ -30,11 +31,6 @@ function initialiseMinibagSlick() {
                + '<i class="icon--block icon icon-ui-down"></i></button>'
   });
 }
-
-
-
-
-
 
 // ===========================
 // PhotoSwipe End
@@ -63,7 +59,6 @@ function initialiseMinibagSlick() {
   $miniBagContain.on('hide.bs.modal', function(){
     $body.removeClass('modal-open--minibag');
   });
-
 
   function delayWithClear(el, func) {
     var timer;

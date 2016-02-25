@@ -6,7 +6,7 @@
 //     flex-wrap: wrap;
 //   }
 
-//   .search-results--item {
+//   .search-results__item {
 //     display: flex;
 //     flex-direction: column;
 
@@ -40,8 +40,8 @@
   }
 }
 
-.search-results--item,
-.search-results--item-full {
+.search-results__item,
+.search-results__item--full {
   .results__image {
     position: relative;
 

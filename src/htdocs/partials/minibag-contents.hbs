@@ -3,16 +3,16 @@
   {{minibag.category.collection.products.length}} Items in your bag
 </p>
 
-<ul class="o-minibag--list-contain">
+<ul class="o-bag--list-contain">
 
   {{#each minibag.category.collection.products}}
-  <li class="o-minibag--list o-minibag--list-item row">
+  <li class="o-bag--list-item row">
 
-    <div class="o-minibag--list-item--image col-3@xs col-2@md col-3@lg u-pad-r-0">
+    <div class="o-bag--list-item--image col-3@xs col-2@md col-3@lg u-pad-r-0">
       <img class="img" src="{{productImages.[0]}}">
     </div>
 
-    <div class="o-minibag--list-item--detail col-9@xs col-10@md col-6@lg u-pad-r-0">
+    <div class="o-bag--list-item--detail col-9@xs col-10@md col-6@lg u-pad-r-0">
       <a href="./pdp.html" class="detail--description u-font-wb">{{productTitle}}</a>
       <ul class="detail--price">
         <li class="list__item">
@@ -29,27 +29,20 @@
       </ul>
     </div>
 
-    <div class="o-minibag--list-item--control col-3@lg hidden@md-down u-font-ta-r">
-      <select class="o-minibag--control--select selectbox--mid selectbox-dropdown__inline">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
+    <div class="o-bag--list-item--control col-3@lg hidden@md-down u-font-ta-r">
+      <select class="o-bag--control--select selectbox--mid selectbox-dropdown__inline">
+         {{# times 10}}
+        <option>{{this}}</option>
+        {{/ times }}
       </select>
-      <div class="o-minibag--control--remove">
+      <div class="o-bag--control--remove">
         <a class="link u-font-no-underline" href="#">
           <span class="hidden@md-down">&times;</span> remove</a>
       </div>
     </div>
 
-    <div class="o-minibag--list-item--control o-minibag--list-item--quant col-9@xs col-10@md hidden@lg-up u-fr">
-        <div class="o-minibag--control--remove col-4@xs u-pad-0">
+    <div class="o-bag--list-item--control o-bag--list-item--quant col-9@xs col-10@md hidden@lg-up u-fr">
+        <div class="o-bag--control--remove col-4@xs u-pad-0">
           <a class="c-btn c-btn-tertiary--alt u-font-no-underline" href="#">
             <span class="hidden@lg-down">&times;</span> remove</a>
         </div>

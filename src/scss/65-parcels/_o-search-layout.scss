@@ -8,7 +8,7 @@
   @include column((xs: 12, lg: 9.5));
 }
 
-.search-results--item {
+.search-results__item {
   // mobile view portrait, 2x items per row
   @include mq($from: xs, $until: md, $and: "(orientation: portrait)") {
     @include column((xs: 6, sm: 6));
@@ -51,7 +51,7 @@
 
   // desktop rules follow the layout method chosen
   @include mq($from: lg) {
-    .search-results__tight & {
+    .search-results--tight & {
       @include column((lg: 3));
 
       &:nth-child(4n+1) {
@@ -59,7 +59,7 @@
       }
     }
 
-    .search-results__wide & {
+    .search-results--wide & {
       @include column((lg: 4));
 
       &:nth-child(3n+1) {
@@ -70,7 +70,7 @@
 }
 
 // header bar rules
-.search-results--header {
+.search-results__header {
   @include border-tb-default(1px);
 
   padding: 0.5em 0;
@@ -84,9 +84,8 @@
     display: inline-block;
     width: 42px;
     opacity: 0.5;
-    margin-top: 3px;
-
     // offset for image alignment next to buttons
+    margin-top: 3px;
 
     &.active {
       opacity: 1;
@@ -94,24 +93,21 @@
   }
 }
 
-
-.search--header--products,
-.search--header--pagination {
+.search__header__products,
+.search__header__pagination {
   white-space: nowrap;
 }
 
-
-// no-flexbox version for this header bar
-// cuurently in use throughout, flexbox version disabled
-//
-// html.no-flexbox {
-.search--header--products {
+.search__header__products {
+  @include font-size(12px);
   @include column((xs: 6, lg: 1.75));
 }
 
-.search--header--pagination {
+.search__header__pagination {
   @include column((lg: 6.5));
+
   text-align: center;
+
   .c-pagination-bar__list,
   .results-layout {
     display: inline-block;
@@ -119,45 +115,10 @@
   }
 }
 
-.search--header--sort {
+.search__header__sort {
   @include column((xs: 6, lg: 3.75));
 }
-// }
 
-// potential flexbox version for this header bar
-//
-// html.flexbox {
-//   .search-results--header > .row {
-//     display: flex;
-//     padding-left: 15px;
-//     padding-right: 15px;
-//   }
-
-//   .search--header--products {
-//     flex: 0 1 auto;
-//     min-width: 120px;     // magic width
-//   }
-
-//   .search--header--pagination {
-//     flex: 1 0 auto;
-//     text-align: center;
-
-//     .c-pagination-bar__list,
-//     .results-layout {
-//       display: inline-block;
-//       vertical-align: top;
-//     }
-//   }
-
-//   .search--header--sort {
-//     flex: 1 0 auto;
-//     min-width: 260px;     // magic width
-//   }
-// }
-
-.search--header--products {
-  @include font-size(12px);
-}
 
 /* Handling for tile width icons */
 

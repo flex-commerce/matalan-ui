@@ -54,5 +54,5 @@ var stickyHeaders = (function() {
 })();
 
 $(function() {
-  stickyHeaders.load($(".search-results--header"));
+  stickyHeaders.load($(".search-results__header"));
 });

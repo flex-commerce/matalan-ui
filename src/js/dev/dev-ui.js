@@ -25,7 +25,7 @@
 
 
   // pattern - make something active, remove active from siblings
-  $('.filter--colours li').click(function(e) {
+  $('.filter__colours .filter__colour').click(function(e) {
     $(this).toggleClass('active');
     $(this).siblings().removeClass('active');
   });
@@ -69,8 +69,8 @@
         $(this).addClass('active')
           .siblings().removeClass('active')
           .closest('.search-results__main')
-          .removeClass('search-results__wide')
-          .addClass('search-results__tight');
+          .removeClass('search-results--wide')
+          .addClass('search-results--tight');
       }
     });
     // search results layout switch cont.
@@ -81,8 +81,8 @@
         $(this).addClass('active')
           .siblings().removeClass('active')
           .closest('.search-results__main')
-          .removeClass('search-results__tight')
-          .addClass('search-results__wide');
+          .removeClass('search-results--tight')
+          .addClass('search-results--wide');
       }
     });
   })();
