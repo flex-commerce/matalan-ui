@@ -6,7 +6,7 @@ var path   = require('path');
 var watch  = require('gulp-watch');
 
 var watchTask = function() {
-  var watchableTasks = ['fonts', 'iconFont', 'images', 'imageAssets', 'videos', 'svgSprite', 'html', 'css'];
+  var watchableTasks = ['fonts', 'iconFont', 'images', 'imageAssets', 'svgSprite', 'html', 'css'];
 
   // var cssLintGlob = path.join(config.app.dest, config.tasks.css.dest, 'main.css')
   // watch(cssLintGlob, function() {
