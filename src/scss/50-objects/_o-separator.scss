@@ -66,3 +66,18 @@
     @include font-size(12px);
   }
 }
+
+
+
+// =============================
+// temp rule for vertical separator - harcoded mq's
+
+.separator--vertical\@lg-up {
+  @include mq($from: lg) {
+    @include center(x, abs);
+    border-style: none solid none none;
+    top: 0;
+    bottom: 0;
+  }
+}
+
