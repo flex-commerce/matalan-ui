@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body class="is-dev page--checkout-1 page--requiremaps">
+  <div class="hidden@md-down">
+    {{> partials/header-checkout }}
+  </div>
+  <div class="hidden@lg-up">
+    {{> parcels/header }}
+  </div>
+  <div class="container" role="main">
+    <div class="u-mar-v-large">
+      {{> partials/progress-checkout-1 }}
+    </div>
+    <div class="row">
+      <div class="o-checkout__detail col-12@xs col-8@lg">
+        <h1 class="h3 u-mar-b-medium">Paypal Click and Collect</h1>
+        <div id="checkout-delivery-collect" class="o-box islet o-click-and-collect usebilling">
+          <div class="o-store-finder__actions u-cl">
+            <form class="o-form--inline c-search-form has-focus">
+              <div class="o-form__row u-pad-b-0">
+                <div class="o-form__input-contain o-form--input-pack o-form__input--icon">
+                  <input id="addressEntry" type="text" placeholder="Enter address, city, postcode" class="o-input o-input--textual">
+                  <div class="input-group__btn">
+                    <a id="findStore" data-click-collect class="c-btn c-btn-secondary js-find-store">Find</a>
+                  </div>
+                  <i class="icon icon-search"></i>
+                </div>
+              </div>
+            </form>
+            <div class="separator__inline-text--unstyled">
+              <span>or</span>
+            </div>
+            <a id="geolocate" data-click-collect class="c-btn c-btn--icon c-btn--block c-btn-secondary js-use-location">
+              <i class="icon icon-menu-storefinder"></i> Use my location
+            </a>
+          </div>
+          <div class="o-store-finder__selected" style="display:none;">
+            <h5>Thank you for selecting:
+              <span class="u-color-pri"></span>
+            </h5>
+          </div>
+        </div>
+        {{> partials/click-and-collect }}
+        <div class="o-box o-submit-button u-mar-t-medium">
+          <button type="submit" class="c-btn c-btn-secondary c-btn--block">Continue</button>
+        </div>
+      </div>
+      <div class="col-4@lg hidden@md-down">
+        <div class="minibag__wrapper--sidebar minibag__wrapper--checkout">
+          {{> partials/minibag-checkout-footer }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{> partials/footer-checkout }} {{> partials/js-footer}}
+</body>
+
+</html>
