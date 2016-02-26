@@ -24,11 +24,11 @@ function initialize() {
   // an array as the first require argument will split the requested code into a chunk
   // automatically split from the main app.js as x.y.js, copied to dist and loaded only when needed
   // perfect for occasional external libraries and big json packets :)
-  require.ensure(["json!../../data/locations.json", 'gmaps'], function() {
+  require.ensure(["json!../../js-data/locations.json", 'gmaps'], function() {
     // once we're in this function, the external files have been loaded, we can safely continue
     // we'll wanna investigate fail states for this..
 
-    var data = require("json!../../data/locations.json");
+    var data = require("json!../../js-data/locations.json");
     var GMaps = require("gmaps");
 
     var clickCollectContain = $('#click-and-collect-contain');
