@@ -82,8 +82,17 @@ $('.js-search-typeahead').typeahead({
   source: substringMatcher(states)
 });
 
+$('.o-form--input-pack--typeahead input').focus(function() {
+  $('.o-form--input-pack--typeahead .icon').css('color', 'transparent');
+}).blur(function() {
+  $('.o-form--input-pack--typeahead .icon').css('color', 'inherit');
+});
+
 // .. end Typeahead JS
 // ===========================
+
+
+
 
 
 

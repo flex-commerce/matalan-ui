@@ -97,7 +97,12 @@
     &:focus {
       padding-left: 1em;
 
+      &i {
+        outline: 1px solid green;
+      }
+
       &::placeholder {
+        outline: 1px solid red;
         color: transparent;
       }
     }
