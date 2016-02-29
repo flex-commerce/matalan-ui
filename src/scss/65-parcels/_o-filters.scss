@@ -43,6 +43,7 @@ $filters-border-color: $keyline-color;
 // small screen specific tweaks to details layout
 @include mq($until: lg) {
   .o-filters__list__item {
+    position: relative;
     // no idea why these are here, investigate
     //
     // outline: 2px solid blue;
@@ -95,7 +96,7 @@ $filters-border-color: $keyline-color;
 .o-filters__contain.modal--filters {
   @include mq($until: lg) {
     display: none;
-    overflow: hidden;
+/*     overflow: hidden; */
 
     @include fixed(top 0 right 0 bottom 0 left 0);
 
@@ -150,12 +151,14 @@ $filters-border-color: $keyline-color;
 }
 
 .filter--title .icon {
-  float: right;
-  margin-top: -1px;
+  // float: right;
+  @include absolute(right 0);
+  margin-top: 0.5em;
   color: $cool-grey;
 
   &::before {
-    font-size: 1.5em;
+/*     font-size: 1.5em; */
+    line-height: 0;
   }
 }
 
@@ -275,28 +278,30 @@ $filters-border-color: $keyline-color;
     break-inside: avoid;
     display: inline-block;
     width: 100%;
-    @include font-size(14px, 1);
+
 
     > .check-holder {
       @include absolute(left 0);
     }
 
     @include mq($until: lg) {
+      padding-left: 28px;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
+      @include font-size(14px, 1.4);
 
       > .check-holder {
-        width: 24px;
-        height: 24px;
-        margin-top: -5px;
+        width: 22px;
+        height: 22px;
+        margin-top: -2px;
       }
     }
   }
 }
 
 .filter__header__actions--small {
-  margin-top: -3px;
-  margin-bottom: 10px;
+  margin-top: -2px;
+  margin-bottom: 7px;
 
   .filter__header__clear {
     vertical-align: bottom;
