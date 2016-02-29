@@ -40,9 +40,9 @@
   // dodgy beforeunload method - this is unstylable
   $('body').on('click', '#checkoutCreateAccount', function() {
     $('.create-account-container').toggle();
-    window.onbeforeunload = function() {
-      return "Are you sure you don't want to create an account?";
-    };
+    // window.onbeforeunload = function() {
+    //   return "Are you sure you don't want to create an account?";
+    // };
   });
 
 
@@ -50,9 +50,9 @@
     e.preventDefault();
     $('.create-account-container').hide();
     $('.account-created-container').show();
-    window.onbeforeunload = function() {
-      // blank function do nothing
-    };
+    // window.onbeforeunload = function() {
+    //   // blank function do nothing
+    // };
   });
 
 

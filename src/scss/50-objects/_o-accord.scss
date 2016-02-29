@@ -1,25 +1,28 @@
 // low spec version - investigate if this is needed
 .collapse {
   display: none;
+
   &.in {
     display: block;
+
     // padding-bottom: 1.5em;
+
   }
 }
 
-
-
 // end low spec version
 .o-accord__container {
-
-
-
   .disabled {
     opacity: 0.4;
-
+    .collapsed {
+      font-weight: normal;
+    }
+    
   }
+
   > .panel > .collapse {
     display: none;
+
     &.in {
       display: block;
       padding-bottom: 1.5em;
@@ -29,6 +32,7 @@
   .icon-plus {
     display: none;
   }
+
   .icon-minus {
     display: inline;
   }
@@ -37,6 +41,7 @@
     .icon-minus {
       display: none;
     }
+
     .icon-plus {
       display: inline;
     }
@@ -48,6 +53,7 @@
     .icon-plus {
       display: none;
     }
+
     .icon-minus {
       display: inline;
     }
@@ -64,19 +70,25 @@
     font-weight: bold;
     cursor: pointer;
     position: relative;
-    padding: 1.5em 0;
+    padding: 1.5em 2em 1.5em 0;
+
     .panel.disabled & {
       color: $cool-grey;
       cursor: default;
     }
   }
-   .o-accord__title__block {
+
+  .o-accord__title__block {
     position: relative;
+
     .o-accord__title__index {
       @include absolute(left 0);
-      line-height: 40px; // magic - matches title line-height for vertical align
+
+      line-height: 40px;
+
+      // magic - matches title line-height for vertical align
       // @include center(y);
+
     }
   }
 }
-

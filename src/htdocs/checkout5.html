@@ -38,7 +38,7 @@
         <div class="col-12@xs col-6@lg">
           <form id="createAccountForm" action="#" name="createAccountForm" class="o-form o-form--default">
             <div class="row">
-              <div class="col-12@xs col-6@lg">
+              <div class="col-12@xs col-6@md">
                 <div class="o-form__row">
                   <div class="o-form__label-contain">
                     <label class="">First Name:</label>
@@ -49,7 +49,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12@xs col-6@lg">
+              <div class="col-12@xs col-6@md">
                 <div class="o-form__row">
                   <div class="o-form__label-contain">
                     <label class="">Last Name:</label>
@@ -62,7 +62,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-12@xs col-6@lg">
+              <div class="col-12@xs col-6@md">
                 <div class="o-form__row">
                   <div class="o-form__label-contain">
                     <label class="">Email Address:</label>
@@ -75,7 +75,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12@xs col-6@lg">
+              <div class="col-12@xs col-6@md">
                 <div class="o-form__row form-validate__error">
                   <div class="o-form__label-contain">
                     <label class="">Confirm Email Address:</label>
@@ -88,7 +88,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-12@xs col-6@lg">
+              <div class="col-12@xs col-6@md">
                 <div class="o-form__row form-validate__error">
                   <div class="o-form__label-contain">
                     <label for="passwordEntry" class="">Password:</label>
@@ -103,7 +103,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-12@xs col-6@lg">
+              <div class="col-12@xs col-6@md">
                 <div class="o-form__row form-validate__error">
                   <div class="o-form__label-contain">
                     <label for="passwordConfirm" class="">Confirm Password:</label>
@@ -162,8 +162,10 @@
         <li class="o-bag--list__header hidden@md-down u-font-wb u-font-upper">
           <div class="o-bag--list__header__item">Your Items</div>
           <div class="o-bag--list__header__item"></div>
-          <div class="o-bag--list__header__item">Quantity</div>
+          <div class="o-bag--list__header__item u-font-ta-c">Quantity</div>
+<!--
           <div class="o-bag--list__header__item">You Save</div>
+-->
           <div class="o-bag--list__header__item u-font-ta-r">Subtotal</div>
         </li>
         {{#each minibag.category.collection.products}}
@@ -191,22 +193,22 @@
             </ul>
 
             <dl class="detail--vars u-pad-b-small o-deflist-left o-deflist-left--small colspan-9">
-              <dt class="u-color-dgrey">Product ID</dt>
+              <dt class="u-font-small-rel u-color-dgrey">Product ID</dt>
               <dd class="u-font-large-rel">123445</dd>
-              <dt class="u-color-dgrey">Color</dt>
+              <dt class="u-font-small-rel u-color-dgrey">Color</dt>
               <dd>
                 <span class="color-swatch__inline u-bgcolor-cgrey"></span>
               </dd>
-              <dt class="u-color-dgrey">Qty</dt>
+              <dt class="u-font-small-rel u-color-dgrey">Qty</dt>
               <dd class="u-font-large-rel">5</dd>
-              <dt class="u-color-dgrey">Size</dt>
+              <dt class="u-font-small-rel u-color-dgrey">Size</dt>
               <dd class="u-font-large-rel">Small</dd>
             </dl>
           </div>
-          <div class="o-bag--list-item--control hidden@md-down col-3@lg">
+          <div class="o-bag--list-item--control hidden@md-down col-3@lg u-font-ta-c">
             1
           </div>
-          <div class="o-bag--list-item--control o-bag--list-item--quant col-12@xs col-10@md hidden@lg-up u-fr">
+<!--           <div class="o-bag--list-item--control o-bag--list-item--quant col-12@xs col-10@md hidden@lg-up u-fr">
             <div class="o-bag--control--remove colspan-4 u-pad-none">
               <a class="c-btn c-btn-primary u-font-no-underline" href="#">
                 <span class="hidden@lg-down">&times;</span> remove
@@ -219,10 +221,12 @@
               <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
               <a class="c-btn c-btn-primary u-font-no-underline js-add-item">+</a>
             </div>
-          </div>
+          </div> -->
+<!--
           <div class="o-bag--list-item--price-col o-bag--list-item--price--save colspan-2 hidden@md-down u-color-pri u-font-wb">
             {{#if nowPrice}}{{ difference productPrice nowPrice }}{{/if}}
           </div>
+-->
           <div class="o-bag--list-item--price-col o-bag--list-item--price--total colspan-2 hidden@md-down u-font-ta-r">
             {{productPrice}}
           </div>

@@ -192,11 +192,10 @@ $('body').on('hidden.bs.modal', function() {
 window.Tether = require("tether");
 
 var tether;
-var tetherTarget = $('.checkout-bag');
+var tetherTarget = $('.js-minibag--checkout');
 var tetherElement = $('.o-bag-contain');
 
 $('#minibag-contain').on('shown.bs.modal', function(e) {
-
   if (!window.isMobileOrTablet) {
     // for minibag click shower
     tether = new Tether({
@@ -347,20 +346,39 @@ $("[data-myacc='address-delete']").on('click', function(e) {
 // Bootstrap components init
 // ===========================
 
-var Tooltip = require("./vendors/bootstrap/tooltip");
+var Tooltip = require('./vendors/bootstrap/tooltip');
+require('./vendors/bootstrap/popover');
 
+$(document).ready(function() {
 
-$(function() {
-  $('[data-toggle="tooltip"]').tooltip();
-})
+  $(function() {
+    $('.o-form--default [data-toggle="tooltip"]').tooltip({
+      placement: 'left',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
 
+    $('.o-form--wide [data-toggle="tooltip"]').tooltip({
+      placement: 'right',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
+  });
 
-require("./vendors/bootstrap/popover");
-
-$(function() {
-  $('[data-toggle="popover"]').popover();
+  $(function() {
+    $('.o-form--default [data-toggle="popover"]').popover({
+      placement: 'left',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
+    $('.o-form--wide [data-toggle="popover"]').popover({
+      placement: 'right',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
+  });
 });
+
+
+
 var charLength = 0;
+
 var showPopover = function() {
     $(this).val('');
     $(this).popover('show');
@@ -371,9 +389,9 @@ var showPopover = function() {
   };
 
 function wheretoplace() {
-  var offset = $("#target").offset();
-  if (width < 1000) return 'top';
-  return 'right';
+  // var offset = $("#target").offset();
+  // if (width < 1000) return 'top';
+  return 'top';
 }
 
 $('[data-validation="password"]').popover({
@@ -382,8 +400,8 @@ $('[data-validation="password"]').popover({
     placement: function(context, source) {
       var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
       console.log(offset);
-      if (offset < 300) return 'top';
-      return 'right';
+      // if (offset < 300) return 'top';
+      return 'top';
     },
     content: function(context, source) {
       var thisId = $(source).attr('id');
@@ -428,9 +446,9 @@ $('[data-validation="password-confirm"]').popover({
     html: true,
     placement: function(context, source) {
       var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
-      console.log(offset);
-      if (offset < 300) return 'top';
-      return 'right';
+      // console.log(offset);
+      // if (offset < 300) return 'top';
+      return 'top';
     },
     content: function(context, source) {
       return "<p><strong>Passwords must correctly match:</strong></p><ul class='o-list__validation'><li class='pass-confirm-check-1'>Passwords match</li></ul>"
