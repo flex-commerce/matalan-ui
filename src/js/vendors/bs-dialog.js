@@ -197,7 +197,7 @@
     /**
      *  Some constants.
      */
-    BootstrapDialog.NAMESPACE = 'bootstrap-dialog';
+    BootstrapDialog.NAMESPACE = 'bs-dialog';
     BootstrapDialog.TYPE_DEFAULT = 'type-default';
     BootstrapDialog.TYPE_INFO = 'type-info';
     BootstrapDialog.TYPE_PRIMARY = 'type-primary';
@@ -768,7 +768,7 @@
             return $container;
         },
         createTitleContent: function () {
-            var $title = $('<div></div>');
+            var $title = $('<h4 class="modal-title"></h4>');
             $title.addClass(this.getNamespace('title'));
 
             return $title;
@@ -776,7 +776,7 @@
         createCloseButton: function () {
             var $container = $('<div></div>');
             $container.addClass(this.getNamespace('close-button'));
-            var $icon = $('<button class="close">&times;</button>');
+            var $icon = $('<a type="button" class="close"><i class="icon icon-ui-cross"></i></a>');
             $container.append($icon);
             $container.on('click', {dialog: this}, function (event) {
                 event.data.dialog.close();

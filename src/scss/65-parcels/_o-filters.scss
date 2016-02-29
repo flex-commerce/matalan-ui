@@ -43,10 +43,11 @@ $filters-border-color: $keyline-color;
 // small screen specific tweaks to details layout
 @include mq($until: lg) {
   .o-filters__list__item {
-
+    position: relative;
     // no idea why these are here, investigate
     //
     // outline: 2px solid blue;
+
     // .detail--vars {
     //   outline: 2px solid purple;
     //   clear: both;
@@ -59,10 +60,11 @@ $filters-border-color: $keyline-color;
     //   right: 0;
     //   top: 0;
     // }
+
   }
 
   .o-filters {
-    padding-top: 1.5em;
+    padding-top: 1em;
     padding-bottom: 1em;
 
     .o-filters__header,
@@ -94,11 +96,14 @@ $filters-border-color: $keyline-color;
 .o-filters__contain.modal--filters {
   @include mq($until: lg) {
     display: none;
-    overflow: hidden;
+/*     overflow: hidden; */
+
     @include fixed(top 0 right 0 bottom 0 left 0);
+
     -webkit-overflow-scrolling: touch;
     outline: 0;
   }
+
 
   @include mq($from: lg) {
     display: block;
@@ -108,7 +113,6 @@ $filters-border-color: $keyline-color;
 // misc rules end
 
 // separators, borders, and padding begin
-
 
 // separator within the markup
 .o-filters .separator {
@@ -147,11 +151,14 @@ $filters-border-color: $keyline-color;
 }
 
 .filter--title .icon {
-  float: right;
-  margin-top: -1px;
+  // float: right;
+  @include absolute(right 0);
+  margin-top: 0.5em;
   color: $cool-grey;
+
   &::before {
-    font-size: 1.5em;
+/*     font-size: 1.5em; */
+    line-height: 0;
   }
 }
 
@@ -165,8 +172,12 @@ $filters-border-color: $keyline-color;
     border-radius: 16px;
   }
 
-  .filter__colour.active {
-    border: 1px solid $cool-grey;
+  .filter__colour {
+    border: 1px solid $light-grey;
+
+    &.active {
+      border: 1px solid $cool-grey;
+    }
   }
 
   .filter__colour div {
@@ -251,5 +262,54 @@ $filters-border-color: $keyline-color;
 .filters--range {
   input {
     display: none;
+  }
+}
+
+// =============
+// New Icon inset Rules
+// =============
+// currently used for filters lists multi line support
+// and increase of tap targets on smaller devices
+//
+.filter--list--checkbox {
+  .o-form__label-option {
+    padding-left: 25px;
+    position: relative;
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+
+
+    > .check-holder {
+      @include absolute(left 0);
+    }
+
+    @include mq($until: lg) {
+      padding-left: 28px;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      @include font-size(14px, 1.4);
+
+      > .check-holder {
+        width: 22px;
+        height: 22px;
+        margin-top: -2px;
+      }
+    }
+  }
+}
+
+.filter__header__actions--small {
+  margin-top: -2px;
+  margin-bottom: 7px;
+
+  .filter__header__clear {
+    vertical-align: bottom;
+  }
+
+  .filter__header__close {
+    .icon::before {
+      vertical-align: middle;
+    }
   }
 }
