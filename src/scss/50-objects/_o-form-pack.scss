@@ -12,6 +12,7 @@
   &.o-form--input-pack--typeahead {
     > * {
       vertical-align: top;
+
       .js-search-typeahead {
         border-left-style: solid !important;
       }
@@ -21,7 +22,6 @@
   > * {
     display: table-cell !important;
   }
-
 
   .input-group__btn {
     width: 1%;
@@ -131,3 +131,14 @@
 //=============================
 //  Form Icons End
 //=============================
+
+.o-form__input--validated {
+  .icon {
+    @extend .icon-small-tick;
+
+    &::before {
+      font-size: 2rem;
+      color: #6fc458;
+    }
+  }
+}

@@ -346,116 +346,127 @@ $("[data-myacc='address-delete']").on('click', function(e) {
 // Bootstrap components init
 // ===========================
 
-var Tooltip = require("./vendors/bootstrap/tooltip");
+var Tooltip = require('./vendors/bootstrap/tooltip');
+require('./vendors/bootstrap/popover');
 
+$(document).ready(function() {
 
-$(function() {
-  $('[data-toggle="tooltip"]').tooltip({
-    placement: 'top',
-    viewport: { "selector": "body", "padding": 0 }
+  $(function() {
+    $('.o-form--default [data-toggle="tooltip"]').tooltip({
+      placement: 'left',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
+
+    $('.o-form--wide [data-toggle="tooltip"]').tooltip({
+      placement: 'right',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
   });
-})
 
-
-require("./vendors/bootstrap/popover");
-
-$(function() {
-  $('[data-toggle="popover"]').popover({
-    placement: 'top',
-    viewport: { "selector": "body", "padding": 0 }
+  $(function() {
+    $('.o-form--default [data-toggle="popover"]').popover({
+      placement: 'left',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
+    $('.o-form--wide [data-toggle="popover"]').popover({
+      placement: 'right',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
   });
 });
 
-var charLength = 0;
 
-var showPopover = function() {
-    $(this).val('');
-    $(this).popover('show');
-  },
-  hidePopover = function() {
-    charLength = 0;
-    $(this).popover('hide');
-  };
 
-function wheretoplace() {
-  var offset = $("#target").offset();
-  // if (width < 1000) return 'top';
-  return 'right';
-}
+// var charLength = 0;
 
-$('[data-validation="password"]').popover({
-    trigger: 'manual',
-    html: true,
-    placement: function(context, source) {
-      var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
-      console.log(offset);
-      // if (offset < 300) return 'top';
-      return 'top';
-    },
-    content: function(context, source) {
-      var thisId = $(source).attr('id');
-      console.log(thisId);
-      return "<p><strong>Passwords must use 3 of the below:</strong></p><ul class='o-list__validation'><li class='pass-check-1'>Must be 8 to 32 characters</li><li class='pass-check-2'>Must container upper and lowercase letters</li><li class='pass-check-3'>Must contain at least 1 number</li><li class='pass-check-4'>Must contain at least 1 special character</li></ul>"
-    }
-  })
-  .focus(showPopover)
-  .blur(hidePopover)
-  .keyup(function() {
+// var showPopover = function() {
+//     $(this).val('');
+//     $(this).popover('show');
+//   },
+//   hidePopover = function() {
+//     charLength = 0;
+//     $(this).popover('hide');
+//   };
 
-    if (this.value.length >= 8 && this.value.length <= 32) {
-      $('.pass-check-1').addClass('success');
-    } else {
-      $('.pass-check-1').removeClass('success');
-    }
+// function wheretoplace() {
+//   // var offset = $("#target").offset();
+//   // if (width < 1000) return 'top';
+//   return 'top';
+// }
 
-    /*contains lowercase and uppercase characters*/
-    if (this.value.match(/[a-z]+/) && this.value.match(/[A-Z]+/)) {
-      $('.pass-check-2').addClass('success');
-    } else {
-      $('.pass-check-2').removeClass('success');
-    }
+// $('[data-validation="password"]').popover({
+//     trigger: 'manual',
+//     html: true,
+//     placement: function(context, source) {
+//       var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
+//       console.log(offset);
+//       // if (offset < 300) return 'top';
+//       return 'top';
+//     },
+//     content: function(context, source) {
+//       var thisId = $(source).attr('id');
+//       console.log(thisId);
+//       return "<p><strong>Passwords must use 3 of the below:</strong></p><ul class='o-list__validation'><li class='pass-check-1'>Must be 8 to 32 characters</li><li class='pass-check-2'>Must container upper and lowercase letters</li><li class='pass-check-3'>Must contain at least 1 number</li><li class='pass-check-4'>Must contain at least 1 special character</li></ul>"
+//     }
+//   })
+//   .focus(showPopover)
+//   .blur(hidePopover)
+//   .keyup(function() {
 
-    /*contains digits*/
-    if (this.value.match(/[0-9]+/)) {
-      $('.pass-check-3').addClass('success');
-    } else {
-      $('.pass-check-3').removeClass('success');
-    }
+//     if (this.value.length >= 8 && this.value.length <= 32) {
+//       $('.pass-check-1').addClass('success');
+//     } else {
+//       $('.pass-check-1').removeClass('success');
+//     }
 
-    if (this.value.match(/[$£&+,:;=?@#|'<>.^*()%!-]+/)) {
-      $('.pass-check-4').addClass('success');
-    } else {
-      $('.pass-check-4').removeClass('success');
-    }
+//     /*contains lowercase and uppercase characters*/
+//     if (this.value.match(/[a-z]+/) && this.value.match(/[A-Z]+/)) {
+//       $('.pass-check-2').addClass('success');
+//     } else {
+//       $('.pass-check-2').removeClass('success');
+//     }
 
-  });
+//     /*contains digits*/
+//     if (this.value.match(/[0-9]+/)) {
+//       $('.pass-check-3').addClass('success');
+//     } else {
+//       $('.pass-check-3').removeClass('success');
+//     }
 
-$('[data-validation="password-confirm"]').popover({
-    trigger: 'manual',
-    html: true,
-    placement: function(context, source) {
-      var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
-      console.log(offset);
-      if (offset < 300) return 'top';
-      return 'right';
-    },
-    content: function(context, source) {
-      return "<p><strong>Passwords must correctly match:</strong></p><ul class='o-list__validation'><li class='pass-confirm-check-1'>Passwords match</li></ul>"
-    }
-  })
-  .focus(showPopover)
-  .blur(hidePopover)
-  .keyup(function() {
-    var password = $('[data-validation="password"]').val();
-    var confirmPassword = $('[data-validation="password-confirm"').val();
+//     if (this.value.match(/[$£&+,:;=?@#|'<>.^*()%!-]+/)) {
+//       $('.pass-check-4').addClass('success');
+//     } else {
+//       $('.pass-check-4').removeClass('success');
+//     }
 
-    if (password === confirmPassword && this.value.length >= 8) {
-      $('.pass-confirm-check-1').addClass('success');
-    } else {
-      $('.pass-confirm-check-1').removeClass('success');
-    }
+//   });
 
-  });
+// $('[data-validation="password-confirm"]').popover({
+//     trigger: 'manual',
+//     html: true,
+//     placement: function(context, source) {
+//       var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
+//       // console.log(offset);
+//       // if (offset < 300) return 'top';
+//       return 'right';
+//     },
+//     content: function(context, source) {
+//       return "<p><strong>Passwords must correctly match:</strong></p><ul class='o-list__validation'><li class='pass-confirm-check-1'>Passwords match</li></ul>"
+//     }
+//   })
+//   .focus(showPopover)
+//   .blur(hidePopover)
+//   .keyup(function() {
+//     var password = $('[data-validation="password"]').val();
+//     var confirmPassword = $('[data-validation="password-confirm"').val();
+
+//     if (password === confirmPassword && this.value.length >= 8) {
+//       $('.pass-confirm-check-1').addClass('success');
+//     } else {
+//       $('.pass-confirm-check-1').removeClass('success');
+//     }
+
+//   });
 
 
 // ===========================
