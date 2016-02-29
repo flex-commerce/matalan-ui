@@ -253,7 +253,9 @@ select,
 .selectbox--short-selectbox-dropdown-menu {
   max-height: 2.5em * 4; // 4 items
 }
-.selectbox--mid-selectbox-dropdown-menu {
+// .selectbox--mid-selectbox-dropdown-menu {
+// default
+.selectbox-dropdown-menu {
   max-height: 2.5em * 6; // 6 items
 }
 .selectbox--long-selectbox-dropdown-menu {

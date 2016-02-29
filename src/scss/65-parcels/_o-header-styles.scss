@@ -214,14 +214,14 @@
   }
 }
 
-.header-pb-20 {
-  outline: 1px solid red;
-  padding-bottom: 0px;
+// .header-pb-20 {
+//   outline: 1px solid red;
+//   padding-bottom: 0px;
 
-  @include mq($from: lg) {
-    padding-bottom: 20px;
-  }
-}
+//   @include mq($from: lg) {
+//     padding-bottom: 20px;
+//   }
+// }
 
 .header-p-0 {
   padding: 0;

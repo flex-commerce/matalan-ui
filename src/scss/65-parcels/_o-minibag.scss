@@ -150,7 +150,6 @@ $minibag-desktop-width: 353px;
   padding-bottom: 0.5em;
 }
 
-
 // separators, borders, and padding end  ======================================
 .o-bag--list-item--image {
   img {
@@ -173,6 +172,15 @@ $minibag-desktop-width: 353px;
 .detail--price {
   @include font-size(12px, 1em);
 }
+
+@include mq($until: lg) {
+  .o-bag-list--itemtable {
+    .detail--price {
+      @include font-size(14px, 2);
+    }
+  }
+}
+
 
 .o-bag--control--remove {
   @include font-size(10px, 1.2);
@@ -259,7 +267,7 @@ $minibag-desktop-width: 353px;
 
 // copied for auto separator for the mybag
 .o-bag--list-item:not(:last-child):after {
-  @include mq($until : lg) {
+  @include mq($until: lg) {
     content: '';
     display: block;
     padding-top: 0.5em;
@@ -269,8 +277,6 @@ $minibag-desktop-width: 353px;
     border-bottom: 1px solid $minibag-border-color;
   }
 }
-
-
 
 // ===================
 // desktop slick rules
@@ -299,5 +305,3 @@ $minibag-desktop-width: 353px;
     pointer-events: none;
   }
 }
-
-

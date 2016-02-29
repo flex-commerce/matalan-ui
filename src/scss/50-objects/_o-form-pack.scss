@@ -98,7 +98,7 @@
       padding-left: 1em;
 
       &i {
-        outline: 1px solid green;
+/*         outline: 1px solid green; */
       }
 
       &::placeholder {
@@ -117,6 +117,7 @@
 
     width: 2.85em;
     color: $cool-grey;
+    pointer-events: none;
 
     &::before {
       @include font-size(21px, none);
