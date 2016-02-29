@@ -350,16 +350,24 @@ var Tooltip = require("./vendors/bootstrap/tooltip");
 
 
 $(function() {
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip({
+    placement: 'top',
+    viewport: { "selector": "body", "padding": 0 }
+  });
 })
 
 
 require("./vendors/bootstrap/popover");
 
 $(function() {
-  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="popover"]').popover({
+    placement: 'top',
+    viewport: { "selector": "body", "padding": 0 }
+  });
 });
+
 var charLength = 0;
+
 var showPopover = function() {
     $(this).val('');
     $(this).popover('show');
@@ -371,7 +379,7 @@ var showPopover = function() {
 
 function wheretoplace() {
   var offset = $("#target").offset();
-  if (width < 1000) return 'top';
+  // if (width < 1000) return 'top';
   return 'right';
 }
 
@@ -381,8 +389,8 @@ $('[data-validation="password"]').popover({
     placement: function(context, source) {
       var offset = ($(window).width() - ($(source).offset().left + $(source).outerWidth()));
       console.log(offset);
-      if (offset < 300) return 'top';
-      return 'right';
+      // if (offset < 300) return 'top';
+      return 'top';
     },
     content: function(context, source) {
       var thisId = $(source).attr('id');

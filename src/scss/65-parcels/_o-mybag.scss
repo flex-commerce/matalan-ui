@@ -7,7 +7,8 @@
     display: table;
 
     .o-bag--list-item--control {
-      text-align: right;
+      text-align: center;
+/*       color: blue; */
       padding: 0;
     }
 
@@ -41,12 +42,12 @@
       }
 
       .o-bag--list-item--detail {
-        width: 35%;
+        width: auto;
       }
 
       .o-bag--list-item--control {
         width: 20%;
-        text-align: left;
+/*         text-align: left; */
       }
 
       .o-bag--list-item--price--save {
@@ -77,7 +78,7 @@
 
 @include mq($until: lg) {
   .o-bag--list-item {
-    @include container;
+/*     @include container; */
   }
 }
   // =====================================

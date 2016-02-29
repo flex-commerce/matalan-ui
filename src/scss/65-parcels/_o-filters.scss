@@ -282,8 +282,8 @@ $filters-border-color: $keyline-color;
     }
 
     @include mq($until: lg) {
-      padding-top: 0.4em;
-      padding-bottom: 0.4em;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
 
       > .check-holder {
         width: 24px;

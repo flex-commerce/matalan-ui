@@ -13,7 +13,6 @@ $table-border-color: $keyline-color;
 // ===========================
 .c-table {
   width: 100%;
-  text-align: left;
 
   th,
   .th {
@@ -26,6 +25,14 @@ $table-border-color: $keyline-color;
   th,
   .th {
     vertical-align: top;
+    text-align: center;
+
+    &:first-of-type{
+      text-align: left;
+    }
+    &:last-of-type{
+      text-align: right;
+    }
   }
 
   tbody th {
@@ -158,20 +165,26 @@ ul.c-table .td {
   }
 }
 
-.c-table__thead--default {
-  th {
-    color: $default-th-color;
-    background-color: $default-th-bg;
-  }
-}
-
 .c-table--inverted {
   color: $inverse-table-color;
   background-color: $inverse-table-bg;
+  @include mq($until: lg) {
+    padding-bottom: 1em;
+  }
 
   thead th {
     color: $dark-th-color;
   }
+
+  th, td, .th, .td {
+    &:first-of-type{
+      padding-left: 1em;
+    }
+    &:last-of-type{
+      padding-right: 1em;
+    }
+  }
+
 
   &.c-table--bordered {
     border: 0;
