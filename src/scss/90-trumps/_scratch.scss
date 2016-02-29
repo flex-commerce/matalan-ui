@@ -1,5 +1,4 @@
 // temporary rule dump file - comments *everywhere* pls
-
 .svg {
   max-width: 100%;
 }
@@ -8,22 +7,3 @@
   // outline: 1px solid red;
 }
 
-
-
-// =============
-// New Icon inset Rules
-// =============
-// currently used for filters lists multi line support
-// todo - turn this into a mixin
-
-
-.filter--list--checkbox .o-form__label-option {
-  padding-left: 25px;
-  position: relative;
-  break-inside: avoid;
-  display: inline-block;
-  width: 100%;
-  > .check-holder {
-    @include absolute(left 0);
-  }
-}

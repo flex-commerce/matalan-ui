@@ -43,10 +43,10 @@ $filters-border-color: $keyline-color;
 // small screen specific tweaks to details layout
 @include mq($until: lg) {
   .o-filters__list__item {
-
     // no idea why these are here, investigate
     //
     // outline: 2px solid blue;
+
     // .detail--vars {
     //   outline: 2px solid purple;
     //   clear: both;
@@ -59,10 +59,11 @@ $filters-border-color: $keyline-color;
     //   right: 0;
     //   top: 0;
     // }
+
   }
 
   .o-filters {
-    padding-top: 1.5em;
+    padding-top: 1em;
     padding-bottom: 1em;
 
     .o-filters__header,
@@ -95,10 +96,13 @@ $filters-border-color: $keyline-color;
   @include mq($until: lg) {
     display: none;
     overflow: hidden;
+
     @include fixed(top 0 right 0 bottom 0 left 0);
+
     -webkit-overflow-scrolling: touch;
     outline: 0;
   }
+
 
   @include mq($from: lg) {
     display: block;
@@ -108,7 +112,6 @@ $filters-border-color: $keyline-color;
 // misc rules end
 
 // separators, borders, and padding begin
-
 
 // separator within the markup
 .o-filters .separator {
@@ -150,6 +153,7 @@ $filters-border-color: $keyline-color;
   float: right;
   margin-top: -1px;
   color: $cool-grey;
+
   &::before {
     font-size: 1.5em;
   }
@@ -165,8 +169,12 @@ $filters-border-color: $keyline-color;
     border-radius: 16px;
   }
 
-  .filter__colour.active {
-    border: 1px solid $cool-grey;
+  .filter__colour {
+    border: 1px solid $light-grey;
+
+    &.active {
+      border: 1px solid $cool-grey;
+    }
   }
 
   .filter__colour div {
@@ -251,5 +259,52 @@ $filters-border-color: $keyline-color;
 .filters--range {
   input {
     display: none;
+  }
+}
+
+// =============
+// New Icon inset Rules
+// =============
+// currently used for filters lists multi line support
+// and increase of tap targets on smaller devices
+//
+.filter--list--checkbox {
+  .o-form__label-option {
+    padding-left: 25px;
+    position: relative;
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+    @include font-size(14px, 1);
+
+    > .check-holder {
+      @include absolute(left 0);
+    }
+
+    @include mq($until: lg) {
+      padding-top: 0.4em;
+      padding-bottom: 0.4em;
+
+      > .check-holder {
+        width: 24px;
+        height: 24px;
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
+.filter__header__actions--small {
+  margin-top: -3px;
+  margin-bottom: 10px;
+
+  .filter__header__clear {
+    vertical-align: bottom;
+  }
+
+  .filter__header__close {
+    .icon::before {
+      vertical-align: middle;
+    }
   }
 }

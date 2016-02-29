@@ -5,6 +5,7 @@
   padding: 0.5em 0;
   background-color: $light-grey;
   color: $dark-grey;
+
   // overide default padding to keep text center
   p {
     margin-bottom: 0;
@@ -12,7 +13,9 @@
 
   .close {
     padding: 1px 12px;
+
     @include font-size(24px, 24px);
+
     margin-right: 10px;
   }
 }
@@ -25,11 +28,14 @@
       border-bottom: 1px solid $keyline-color;
     }
   }
+
   .o-icon-with-addon {
     i:before {
       color: $dark-grey-lighten-60;
     }
+
     position: relative;
+
     span {
       color: $white;
       position: absolute;
@@ -45,13 +51,16 @@
       font-size: 1em;
     }
   }
+
   //remove default padding on the search bar
   .o-form__row {
     padding: 0;
+
     @include mq($until: lg) {
       margin: 10px 0;
     }
   }
+
   //custom button styles for the header icons
   .u-mar-t-huge {
     @include mq($until: lg) {
@@ -62,58 +71,56 @@
 
 // header spacing handling
 //
-.o-header__container {
-  @include mq($from: xs, $until: lg) {
-    margin-top: 1em;
-  }
-}
 .o-header__brand {
-  @include mq($until: md) {
-    text-align: center;
-  }
   position: relative;
   margin: 0 auto;
+
+  @include mq($until: lg) {
+    text-align: center;
+    margin-top: 1em;
+  }
+
+
   @include mq($from: lg) {
     margin-left: 0;
   }
 
-  img {
+
+  .o-header__brand__logo {
     height: auto;
 
-    @include mq($until: sm) {
-      margin: rem-calc(14 0 0 0);
+    @include mq($until: md) {
+      max-width: 130px;
     }
 
-    @include mq($from: sm, $until: md) {
-      max-width: 130px;
-      margin: rem-calc(14 0 0 0);
-    }
+
     @include mq($from: md, $until: lg) {
       max-width: 155px;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
     }
+
+
     @include mq($from: lg) {
-      margin-top: 3.5em;
       max-width: 250px;
       margin-bottom: -5px;
     }
   }
 }
 
-
-.o-header__search {
+.minibag--view-btn {
   @include font-size(13px);
-  a {
-    color: $dark-grey;
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
+
+  color: $dark-grey;
+  text-decoration: underline;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: none;
   }
-  i:before {
+
+  .icon:before {
     color: $dark-grey-lighten-60;
   }
+
   .input-group--addon__inset-left:focus + a {
     background: $dark-grey;
   }
@@ -125,29 +132,36 @@
   display: block;
   cursor: pointer;
   color: $dark-grey-lighten-60;
+
   // .c-btn {
   //   &:hover {
   //     border-color: $white;
   //   }
   // }
+
   i {
     // provides enough width for the icon and some margin
     // margin-right: 1em;
+
     &::before {
       color: $dark-grey-lighten-60;
+
       // abs positioning so the doesnt affect button height
       // position: absolute;
       // top: 0;
       // bottom: 0;
       // left: 0.25em;
+
     }
   }
+
   span {
     margin-top: -.7em;
     color: $dark-grey-lighten-60;
     display: block;
     font-size: 0.8em;
   }
+
   @include mq($until: md) {
     text-align: left;
   }
@@ -157,17 +171,21 @@
   margin-top: 10px;
   text-align: right;
   font-size: 11px;
+
   a {
     color: $dark-grey-lighten-60;
     text-decoration: none;
+
     &:hover {
       text-decoration: underline;
     }
   }
+
   > li {
     display: inline-block;
     padding: 5px 15px;
   }
+
   li + li {
     border-left: 2px solid $dark-grey-lighten-10;
   }
@@ -175,9 +193,12 @@
 
 .header--search-bar {
   background-color: $light-grey;
+
   @include mq($until: lg) {
     display: none;
   }
+
+
   &.active {
     display: inline;
   }
@@ -187,13 +208,16 @@
 //margin-top-20
 .header-mt-20 {
   margin-top: 20px;
+
   @include mq($until: lg) {
     margin-top: 10px;
   }
 }
 
 .header-pb-20 {
+  outline: 1px solid red;
   padding-bottom: 0px;
+
   @include mq($from: lg) {
     padding-bottom: 20px;
   }
@@ -204,11 +228,11 @@
 }
 
 @include mq($until: lg) {
-
   .header--border-top {
     border-top: 1px solid $keyline-color;
   }
 }
+
 
 @include mq($from: lg) {
   .margin-bottom-lg {
@@ -216,15 +240,16 @@
   }
 }
 
+
 // ===================== nub
 .o-header__search {
   position: relative;
   text-align: right;
 }
 
-.minibag-link {
+/* .minibag-link {
   float: right;
-}
+} */
 
 .checkout-bag {
   @include mq($until: lg) {
@@ -233,7 +258,10 @@
 }
 
 .header--mobile-search {
-   @include no-focus();
+  @include no-focus;
+
+  color: $dark-grey-lighten-60;
+
   .icon-nub {
     display: none;
     background-color: $light-grey;
@@ -244,13 +272,17 @@
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     z-index: 3;
+
     @include mq($until: md) {
       top: 90%;
     }
+
+
     @include mq($from: md) {
       top: 107%;
     }
   }
+
   &.active {
     .icon-nub {
       display: inline-block;
@@ -263,24 +295,23 @@
   z-index: 1;
 }
 
-
-
-#searchHeader{
-    // width: 100%;
-    // height: 7.5em;
-    // z-index: 1000;
+#searchHeader {
+  // width: 100%;
+  // height: 7.5em;
+  // z-index: 1000;
 }
-
 
 @include mq($until: lg) {
   .search-results__header.fixed {
     @include fixed(top 0 right 0 left 0);
+
     position: fixed;
     padding: 5px 15px;
     box-sizing: border-box;
     z-index: 5;
     background-color: $white;
   }
+
   .search-results__header.fixed.absolute {
     position: absolute;
   }

@@ -4,8 +4,8 @@
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
-    color: $primary-color-hover;
+    text-decoration: none;
+    // color: $primary-color-hover;
   }
 }
 
@@ -156,3 +156,10 @@ body {
 
 
 // end indentation of menu items
+@include mq($until: lg) {
+  .accessible-navmenu.c-navbar {
+    a {
+      @include black-link;
+    }
+  }
+}

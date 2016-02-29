@@ -3,6 +3,12 @@
   display: inline-block;
 }
 
+.icon.icon--small:before {
+  font-size: 1em;
+  display: inline-block;
+}
+
+
 .icon--vertical-right:before {
   @include center(y, abs);
 

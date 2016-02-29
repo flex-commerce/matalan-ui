@@ -192,11 +192,10 @@ $('body').on('hidden.bs.modal', function() {
 window.Tether = require("tether");
 
 var tether;
-var tetherTarget = $('.checkout-bag');
+var tetherTarget = $('.js-minibag--checkout');
 var tetherElement = $('.o-bag-contain');
 
 $('#minibag-contain').on('shown.bs.modal', function(e) {
-
   if (!window.isMobileOrTablet) {
     // for minibag click shower
     tether = new Tether({
