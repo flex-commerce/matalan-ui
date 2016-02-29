@@ -34,11 +34,9 @@
           </li>
           {{#each minibag.category.collection.products}}
           <li class="o-bag--list-item row">
-
             <div class="o-bag--list-item--image col-3@xs col-2@md col-3@lg u-pad-r-0">
               <img class="img" src="{{productImages.[0]}}">
             </div>
-
             <div class="o-bag--list-item--detail col-9@xs col-10@md col-6@lg ">
               <p class="detail--description u-font-wb u-font-large">{{productTitle}}</p>
 
@@ -57,15 +55,15 @@
               </ul>
 
               <dl class="detail--vars u-pad-b-small o-deflist-left o-deflist-left--small colspan-9">
-                <dt class="u-color-dgrey">Product ID</dt>
+                <dt class="u-font-small-rel u-color-dgrey">Product ID</dt>
                 <dd class="u-font-large-rel">123445</dd>
-                <dt class="u-color-dgrey">Color</dt>
+                <dt class="u-font-small-rel u-color-dgrey">Color</dt>
                 <dd>
                   <span class="color-swatch__inline u-bgcolor-cgrey"></span>
                 </dd>
-                <dt class="u-color-dgrey">Qty</dt>
+                <dt class="u-font-small-rel u-color-dgrey">Qty</dt>
                 <dd class="u-font-large-rel">5</dd>
-                <dt class="u-color-dgrey">Size</dt>
+                <dt class="u-font-small-rel u-color-dgrey">Size</dt>
                 <dd class="u-font-large-rel">Small</dd>
               </dl>
             </div>
@@ -194,9 +192,7 @@
 
                 <a href="" class="c-btn c-btn-secondary c-btn--block">Continue To Checkout</a>
 
-                <div class="separator__inline-text hidden@md-down">
-                  <span>or</span>
-                </div>
+                <div class="separator__inline-text"><span>or</span></div>
                 <br class="separator__inline-text hidden@lg-up u-mar-v-small">
                 <a class="c-btn--block u-font-ta-c">
                   <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />

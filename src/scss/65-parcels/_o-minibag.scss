@@ -150,16 +150,6 @@ $minibag-desktop-width: 353px;
   padding-bottom: 0.5em;
 }
 
-// auto separator for the list
-.o-bag--list-item:not(:last-child):after {
-  content: '';
-  display: block;
-  padding-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: 1em;
-  margin-right: 1em;
-  border-bottom: 1px solid $minibag-border-color;
-}
 
 // separators, borders, and padding end  ======================================
 .o-bag--list-item--image {
@@ -256,6 +246,32 @@ $minibag-desktop-width: 353px;
 }
 
 
+// auto separator for the list
+.modal--minibag .o-bag--list-item:not(:last-child):after {
+  content: '';
+  display: block;
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-bottom: 1px solid $minibag-border-color;
+}
+
+// copied for auto separator for the mybag
+.o-bag--list-item:not(:last-child):after {
+  @include mq($until : lg) {
+    content: '';
+    display: block;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-bottom: 1px solid $minibag-border-color;
+  }
+}
+
+
+
 // ===================
 // desktop slick rules
 // ===================
@@ -283,3 +299,5 @@ $minibag-desktop-width: 353px;
     pointer-events: none;
   }
 }
+
+

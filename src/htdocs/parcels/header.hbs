@@ -54,14 +54,13 @@
 
       <!-- view your bag + checkout desktop -->
       <div class="col-2@lg">
-        <a href="mybag.html" class="c-btn hidden@md-down js-minibag--view minibag--view-btn
+        <a href="mybag.html" class="c-btn js-minibag--view minibag--view-btn c-btn--block
           u-font-upper u-no-bord-vis u-bgcolor-white">
           View your bag ({{minibag.category.collection.products.length}})
         </a>
       </div>
       <div class="col-2@lg">
-        <a href="checkout1.html" class="js-minibag--checkout c-btn c-btn-secondary c-btn--block
-          hidden@md-down u-font-upper">Checkout</a>
+        <a href="checkout1.html" class="js-minibag--checkout c-btn c-btn-secondary c-btn--block u-font-upper">Checkout</a>
       </div>
       <!-- end view your bag + checkout desktop -->
     </div>
@@ -94,7 +93,7 @@
 
       <!-- mobile minibag button begin -->
       <div class="col-2@xs col-1@md col-offset-2@md u-pad-r-0 u-font-ta-c">
-        <a class="c-btn hidden@lg-up minibag-link u-no-bord" data-toggle="modal" data-target="#minibag-contain">
+        <a class="c-btn minibag-link u-no-bord" data-toggle="modal" data-target="#minibag-contain">
           <span class="o-icon-with-addon"><i class="icon icon-minibag"></i>
             <span class="">{{minibag.category.collection.products.length}}</span>
           </span>
@@ -104,7 +103,7 @@
 
       <!-- search button mobile begin -->
       <div class="col-2@xs col-1@md u-pad-h-0 u-font-ta-c">
-        <a class="c-btn hidden@lg-up header--mobile-search u-no-bord-vis u-pad-l-0@xs">
+        <a class="c-btn header--mobile-search u-no-bord-vis u-pad-h-0@xs">
           <i class="icon icon-search"></i>
           <span class="icon-nub">&nbsp;</span>
         </a>

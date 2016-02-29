@@ -51,7 +51,7 @@ $button-padding-y: $default-pad-y;
 
 .c-btn--icon.c-btn--icon {
   position: relative;
-  padding-left: 3.85em;
+  // padding-left: 3.85em;
 
   > .icon {
     @include absolute(left 0 top 0 bottom 0);

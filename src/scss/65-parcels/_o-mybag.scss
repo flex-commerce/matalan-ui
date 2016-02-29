@@ -2,6 +2,7 @@
   // mybag page
   // =====================================
 
+@include mq($from: lg) {
   .o-bag-list--itemtable {
     display: table;
 
@@ -9,8 +10,6 @@
       text-align: right;
       padding: 0;
     }
-
-    .o-bag-list--itemtable {}
 
     .o-bag--list-item {
       display: table-row;
@@ -34,11 +33,15 @@
       }
 
       .o-bag--list-item--image {
-        width: 20%;
+        width: 15%;
+        img {
+          max-width: 90%;
+          margin-right: 2em;
+        }
       }
 
       .o-bag--list-item--detail {
-        width: auto;
+        width: 35%;
       }
 
       .o-bag--list-item--control {
@@ -56,12 +59,7 @@
         width: 10%;
       }
 
-      .o-bag--list-item--image {
-        img {
-          max-width: 90%;
-          margin-right: 2em;
-        }
-      }
+
     }
 
     .o-bag--list__header {
@@ -75,7 +73,21 @@
       }
     }
   }
+}
 
+@include mq($until: lg) {
+  .o-bag--list-item {
+    @include container;
+  }
+}
   // =====================================
   // mybag page end
   // =====================================
+
+
+  // o-bag--list-item--image       col-3@xs col-2@md col-3@lg
+  // o-bag--list-item--detail      col-9@xs col-10@md col-6@lg
+  // o-bag--list-item--control       col-3@lg
+  // o-bag--list-item--control       col-12@xs col-10@md
+  // o-bag--list-item--price-col
+  // o-bag--list-item--price-col
