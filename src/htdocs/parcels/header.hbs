@@ -1,26 +1,78 @@
-<div id="o-super-header__container" class="o-super-header__container">
-  <div class="container">
-    <div class="global-messages row">
-      <div class="col-12@xs col-4@lg">
-        <a href="#"><p>Christmas shop is now only available in stores.</p></a>
-      </div>
-      <div class="col-12@xs col-4@lg hidden@md-down">
-        <a href="#"><p>Christmas shop is now only available in stores.</p></a>
-      </div>
-      <div class="col-12@xs col-4@lg hidden@md-down">
-        <a href="#"><p>Christmas shop is now only available in stores.</p></a>
-      </div>
-    </div>
-    <span data-ui-close="#o-super-header__container" class="close">&times;</span>
-  </div>
-</div>
+{{> partials/global-msg}}
 
 <div class="o-header__container">
   <div class="container">
 
-    <div class="row header-pb-20">
+    <!-- DESKTOP nav action bar -->
+    <div class="hidden@md-down u-pad-r-0 u-cf">
+      <ul class="o-list-inline-seperated u-fr">
+        <li><a href="myaccount.html">My Acount</a></li>
+        <!-- Only display if logged in -->
+        <li><a href="registration.html">Logout</a></li>
+        <!-- END -->
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="returns.html">Returns</a></li>
+        <li><a href="store-finder.html">Store Finder</a></li>
+        <li class="u-pad-r-0"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- DESKTOP nav action bar end -->
 
-      <div class="col-3@xs hidden@lg-up header--height u-pad-0">
+    <!-- DESKTOP BEGIN -->
+    <div class="row hidden@md-down u-mar-v-large u-pos-rel">
+
+      <!-- header logo -->
+      <div class="col-4@lg">
+        <div class="o-header__brand">
+          <a href="./homepage.html">
+            <img class="o-header__brand__logo svg" src="img/matalan-logo-responsive.svg" alt="">
+          </a>
+        </div>
+      </div>
+      <!-- header logo end -->
+
+      <!-- search bar desktop -->
+      <div class="col-4@lg">
+        <div class="o-header__search-bar">
+          <form name="searchProducts" class="o-form--inline c-search-form">
+            <div class="o-form__row">
+              <div class="o-form__input-contain o-form__input--icon
+                o-form--input-pack o-form--input-pack--styled o-form--input-pack--typeahead">
+                <input type="text" name="searchTerm" minlength="3" required
+                class="js-search-typeahead o-input o-input--textual input-addon--expand"
+                placeholder="Enter Keyword or Product Code" pattern=".{3,}" title="3 characters minimum">
+                <div class="input-group__btn">
+                  <button class="c-btn c-btn-secondary">Search</button>
+                </div>
+                <i class="icon icon-search"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- end search bar desktop -->
+
+      <!-- view your bag + checkout desktop -->
+      <div class="col-2@lg">
+        <a href="mybag.html" class="c-btn hidden@md-down js-minibag--view minibag--view-btn
+          u-font-upper u-no-bord-vis u-bgcolor-white">
+          View your bag ({{minibag.category.collection.products.length}})
+        </a>
+      </div>
+      <div class="col-2@lg">
+        <a href="checkout1.html" class="js-minibag--checkout c-btn c-btn-secondary c-btn--block
+          hidden@md-down u-font-upper">Checkout</a>
+      </div>
+      <!-- end view your bag + checkout desktop -->
+    </div>
+    <!-- DESKTOP END -->
+
+
+    <!-- MOBILE -->
+    <div class="row hidden@lg-up u-pad-v-small">
+
+      <!-- mobile + tablet hotdog -->
+      <div class="col-4@xs u-pad-l-0">
         <div class="o-header--menu-button">
           <a data-toggle="modal" data-target="#nav-contain"
             class="js-nav-mobile-button c-btn nav-mobile-button u-no-bord">
@@ -28,104 +80,75 @@
           </a>
         </div>
       </div>
+      <!-- mobile + tablet hotdog end -->
 
-      <div class="col-5@xs col-4@lg">
+      <!-- header logo -->
+      <div class="col-4@xs u-pad-0">
         <div class="o-header__brand">
-          <a href="./homepage.html"><img src="img/matalan-logo-responsive.svg" alt=""></a>
+          <a href="./homepage.html">
+            <img class="o-header__brand__logo svg" src="img/matalan-logo-responsive.svg" alt="">
+          </a>
         </div>
       </div>
+      <!-- header logo end -->
 
-      <div class="col-4@xs col-8@lg">
-
-        <div class="row">
-
-          <div class="hidden@md-down col-12@xs u-cf u-mar-b-medium">
-            <ul class="o-list-inline-seperated u-fr">
-              <li><a href="myaccount.html">My Acount</a></li>
-              <!-- Only display if logged in -->
-              <li><a href="registration.html">Logout</a></li>
-               <!-- END -->
-              <li><a href="delivery.html">Delivery</a></li>
-              <li><a href="returns.html">Returns</a></li>
-              <li><a href="store-finder.html">Store Finder</a></li>
-              <li class="u-pad-r-0"><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-6@xs col-3@md col-offset-6@md col-3@lg u-pad-r-0 col-push-6@lg-up">
-            <div class="o-header__search">
-              <a class="c-btn hidden@lg-up header--mobile-search u-no-bord-vis">
-                <i class="icon icon-search"></i>
-                <span class="icon-nub">&nbsp;</span>
-              </a>
-              <a href="mybag.html" class="c-btn hidden@md-down js-minibag--view u-font-upper u-no-bord-vis u-bgcolor-white">
-                View your bag ({{minibag.category.collection.products.length}})</a>
-            </div>
-          </div>
-
-          <div class="col-6@xs col-3@md col-3@lg u-pad-l-0 checkout-bag col-push-6@lg-up">
-          <!-- minibag small button -->
-            <a class="c-btn hidden@lg-up minibag-link u-no-bord"
-              data-toggle="modal" data-target="#minibag-contain">
-              <span class="o-icon-with-addon"><i class="icon icon-minibag"></i>
-                <span class="">{{minibag.category.collection.products.length}}</span>
-              </span>
-            </a>
-            <!-- minibag large button -->
-            <a href="checkout1.html" class="js-minibag--checkout c-btn c-btn-secondary c-btn--block hidden@md-down u-font-upper"
-              >Checkout</a>
-          </div>
-
-          <div class="col-12@xs col-8@md col-6@lg u-pad-0 hidden@md-down col-pull-6@lg-up">
-            <div class="o-header__search-bar">
-              <form name="searchProducts" class="o-form--inline c-search-form">
-                <div class="o-form__row">
-                  <div class="o-form__input-contain o-form--input-pack o-form--input-pack--typeahead o-form--input-pack--styled o-form__input--icon">
-                    <input type="text" name="searchTerm" minlength="3" required
-                    class="js-search-typeahead o-input o-input--textual input-addon--expand"
-                    placeholder="Enter Keyword or Product Code"
-                    pattern=".{3,}" title="3 characters minimum">
-                    <div class="input-group__btn">
-                      <button class="c-btn c-btn-secondary" href="">Search</button>
-                    </div>
-                    <i class="icon icon-search"></i>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-        </div>
+      <!-- mobile minibag button begin -->
+      <div class="col-2@xs col-1@md col-offset-2@md u-pad-r-0 u-font-ta-c">
+        <a class="c-btn hidden@lg-up minibag-link u-no-bord" data-toggle="modal" data-target="#minibag-contain">
+          <span class="o-icon-with-addon"><i class="icon icon-minibag"></i>
+            <span class="">{{minibag.category.collection.products.length}}</span>
+          </span>
+        </a>
       </div>
+      <!-- mobile minibag button end -->
+
+      <!-- search button mobile begin -->
+      <div class="col-2@xs col-1@md u-pad-h-0 u-font-ta-c">
+        <a class="c-btn hidden@lg-up header--mobile-search u-no-bord-vis u-pad-l-0@xs">
+          <i class="icon icon-search"></i>
+          <span class="icon-nub">&nbsp;</span>
+        </a>
+      </div>
+      <!-- search button mobile end -->
+
+
     </div>
+    <!-- MOBILE END -->
 
+    <!-- search bar mobile -->
     <div class="row">
-      <div class="col-12@xs header--search-bar hidden@lg-up u-mar-b-small">
+      <div class="col-12@xs">
+
+        <div class="header--search-bar hidden@lg-up u-mar-b-small u-cf">
           <div class="o-header--search">
             <form name="searchProducts" class="o-form--inline c-search-form">
-                <div class="o-form__row">
-                  <div class="o-form__input-contain o-form--input-pack o-form--input-pack--typeahead o-form--input-pack--styled o-form__input--icon">
-                    <input type="text" name="searchTerm" minlength="3" required
-                    class="js-search-typeahead o-input o-input--textual input-addon--expand"
-                    placeholder="Enter Keyword or Product Code"
-                    pattern=".{3,}" title="3 characters minimum">
-                    <div class="input-group__btn">
-                      <button class="c-btn c-btn-secondary" href="">Search</button>
-                    </div>
-                    <i class="icon icon-search"></i>
-                  </div>
+              <div class="o-form__row">
+                <div class="o-form__input-contain o-form--input-pack--styled o-form__input--icon
+                o-form--input-pack o-form--input-pack--typeahead">
+                <input type="text" name="searchTerm" minlength="3" required
+                  class="js-search-typeahead o-input o-input--textual input-addon--expand"
+                  placeholder="Enter Keyword or Product Code" pattern=".{3,}" title="3 characters minimum">
+                <div class="input-group__btn">
+                  <button class="c-btn c-btn-secondary">Search</button>
                 </div>
-              </form>
-          </div>
+                <i class="icon icon-search"></i>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
+
+
     </div>
   </div>
 
-</div>
+  <!-- end search bar mobile -->
 
+</div>
+</div>
 
 <div class="o-nav__container" role="navigation">
   <!-- <div class="container--fluid"> -->
-    {{> partials/nav-megamenu }}
+  {{> partials/nav-megamenu }}
   <!-- </div> -->
 </div>

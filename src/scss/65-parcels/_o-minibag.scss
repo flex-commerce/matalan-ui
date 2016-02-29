@@ -17,26 +17,33 @@ $minibag-desktop-width: 353px;
 }
 
 // rules for modal bag height
-// .o-bag--inner {
-//   @include mq($from: md, $until: lg) {
-//     max-height: 380px;
-//   }
+.o-bag--inner {
+  @include mq($from: md, $until: lg) {
+    // MAGIC tablet height
+    max-height: 380px;
+    border: 2px dotted red;
+  }
 
-//   @include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
-//     max-height: 190px;
-//   }
 
-//   @include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
-//     max-height: 290px;
-//   }
+  @include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
+    // MAGIC tablet height
+    max-height: 245px;
+    border: 2px solid green;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 
-//   @include mq($from: lg) {
-//     // max-height: 290px;
-//   }
-// }
+
+  @include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
+    // MAGIC tablet height
+    max-height: 350px;
+    border: 2px solid blue;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
 
 // layout begin ======================================
-
 
 @include mq($until: md) {
   .o-bag {
@@ -64,21 +71,18 @@ $minibag-desktop-width: 353px;
     position: absolute;
     right: 0;
   }
-
-  // select {
-  //   right: 0;
-  // }
 }
 
 
 @include mq($from: lg) {
-  .o-bag {
+  .modal-content.o-bag {
     position: absolute;
     width: $minibag-desktop-width;
-    right: 0;
+    right: -1em;
+
+    // margin-right: -1em;
+
   }
-
-
 }
 
 
@@ -87,7 +91,6 @@ $minibag-desktop-width: 353px;
 // small screen specific tweaks to details layout
 @include mq($until: lg) {
   .o-bag--list-item--detail {
-
     .detail--description {
       float: left;
       max-width: 75%;
@@ -131,6 +134,7 @@ $minibag-desktop-width: 353px;
 // ======================================
 
 .o-bag {
+  overflow-x: hidden;
   padding-bottom: 1em;
 
   .o-bag--header,
