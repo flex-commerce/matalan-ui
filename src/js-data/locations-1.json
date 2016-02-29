@@ -1,0 +1,26 @@
+[ {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-1.4698, 53.796631]
+        },
+        "properties": {
+            "storeid": 122,
+            "name": "Leeds Halton",
+            "address": "Matalan - Halton District Centre\n263 Selby Road\n",
+            "city": "Leeds",
+            "CountryCode": "GB",
+            "postcode": "LS15 7JR",
+            "Email": "",
+            "hours": "Monday - Friday: 09:00 - 20:00\nSaturday: 09:00 - 19:00\nSunday: 11:00 - 17:00\n",
+            "phone": "03330044444",
+            "phoneFormatted": "Tel:0333 0044444",
+            "ZoomLevel": "0",
+            "active": true,
+            "Comments": "",
+            "Description": "",
+            "StoreTypes": "Boutique",
+            "Categorynames": "",
+            "Region": "Yorkshire and the Humber"
+        }
+    }]

@@ -82,6 +82,17 @@
   color: $dark-grey;
 }
 
+.o-section__detail-title--large {
+  @include font-size(35px, 45px);
+
+  color: $mid-grey;
+}
+
+.o-section__detail-sub {
+  @include font-size(20px);
+  color: $dark-grey;
+}
+
 // .o-section--pos__top {
 
 // }

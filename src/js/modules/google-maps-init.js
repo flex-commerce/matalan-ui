@@ -3,8 +3,8 @@
 // ===========================
 
 var map,
-    mobilemap,
-    listings = document.getElementById('listings');
+  mobilemap,
+  listings = document.getElementById('listings');
 
 // async script loader
 // could move this to a utils module
@@ -29,6 +29,7 @@ function initialize() {
     // we'll wanna investigate fail states for this..
 
     var data = require("json!../../js-data/locations.json");
+    var singleData = require("json!../../js-data/locations-1.json");
     var GMaps = require("gmaps");
 
     var clickCollectContain = $('#click-and-collect-contain');
@@ -66,27 +67,43 @@ function initialize() {
 
     // Build the main map
     //
-    var generateMap = function(data, longitude, latitude, isModal) {
+    var generateMap = function(data, longitude, latitude, isModal, isSingleStore) {
 
-      map = new GMaps({
-        div: '#map',
-        lat: latitude,
-        lng: longitude,
-        zoom: 12,
-        scrollwheel: false
-      });
+      if (isSingleStore) {
+        map = new GMaps({
+          div: '#map',
+          lat: latitude,
+          lng: longitude,
+          zoom: 18,
+          draggable: true,
+          scrollwheel: false,
+          disableDoubleClickZoom: true,
+          zoomControl: false,
+          disableDefaultUI: true
+        });
+      } else {
+        map = new GMaps({
+          div: '#map',
+          lat: latitude,
+          lng: longitude,
+          zoom: 12,
+          scrollwheel: false,
 
-      loadResults(data, longitude, latitude);
-      printResults(data, isModal);
+        });
+      }
+      loadResults(data, longitude, latitude, isModal, isSingleStore);
+
 
       var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
 
-      if (!isModal) {
+      if (!isModal && !isSingleStore) {
+        printResults(data, isModal);
         // document.getElementById('storeFinderContainer').scrollIntoView();
         // scroll map & list into view when loaded
         $('body, html').animate({
           scrollTop: $('#storeFinderContainer').offset().top
         }, 500);
+
       }
 
       var firstMarker = map.markers[0];
@@ -96,6 +113,8 @@ function initialize() {
       if (width > 0 && !isModal) {
         $('.map-wrapper').css('right', -width);
       }
+
+
     };
 
     // Build the mobile map
@@ -124,9 +143,23 @@ function initialize() {
       // google.maps.event.trigger(firstMarker, 'click');
     };
 
+    function map_recenter(latlng, offsetx, offsety) {
+      var point1 = map.getProjection().fromLatLngToPoint(
+        (latlng instanceof google.maps.LatLng) ? latlng : map.getCenter()
+      );
+      var point2 = new google.maps.Point(
+        ((typeof(offsetx) == 'number' ? offsetx : 0) / Math.pow(2, map.getZoom())) || 0,
+        ((typeof(offsety) == 'number' ? offsety : 0) / Math.pow(2, map.getZoom())) || 0
+      );
+      map.setCenter(map.getProjection().fromPointToLatLng(new google.maps.Point(
+        point1.x - point2.x,
+        point1.y + point2.y
+      )));
+    }
+
     // GetLocation method used for input field and lookup of address / city / postcode
     //
-    var GetLocation = function(address, isModal) {
+    var GetLocation = function(address, isModal, isSingleStore) {
 
       var geocoder = new google.maps.Geocoder();
 
@@ -152,7 +185,7 @@ function initialize() {
           if (isModal) {
             openMap();
           }
-          generateMap(data, longitude, latitude, isModal);
+          generateMap(data, longitude, latitude, isModal, isSingleStore);
 
         } else {
           alert("Request failed.");
@@ -163,7 +196,7 @@ function initialize() {
     // GetLocation method for 'use my location'
     //
     var getClientLocation = function(isModal) {
-      console.warn('getClientLocation', isModal)
+
       // check for support
       if (navigator.geolocation) {
 
@@ -190,7 +223,7 @@ function initialize() {
       }
     };
 
-    var loadResults = function(fulldata, longitude, latitude, isModal) {
+    var loadResults = function(fulldata, longitude, latitude, isModal, isSingleStore) {
       var markers_data = [];
 
       var icon = '../../img/marker.svg';
@@ -201,56 +234,81 @@ function initialize() {
         for (var i = 0; i < fulldata.length; i++) {
 
           var item = fulldata[i];
+
           if (item.geometry.coordinates !== undefined) {
-            markers_data.push({
-              lat: item.geometry.coordinates[1],
-              lng: item.geometry.coordinates[0],
-              title: item.properties.name,
-              id: item.properties.storeid,
-              icon: {
-                size: new google.maps.Size(56, 56),
-                url: icon
-              },
-              infoWindow: {
-                content: '<h4 class="c-info-window__title">' + item.properties.city + '</h4>' +
-                  '<div class="c-info-window__title u-color-pri">' + item.distance.toFixed(1) +
-                  ' miles away</div>'
-              },
-              click: function(e) {
-                var element = $('[data-marker-index=' + e.id + ']');
-                setActive(element);
-                //
-                if (longitude && latitude) {
-                  // $('#store-' + e.id).get(0).scrollIntoView({block: "start", behavior: "smooth"});
-                  // $('.o-store-locator__locations').scrollTo('#store-' + e.id);
-                  //
-                  $('.o-store-locator__locations').animate({
-                    scrollTop: $('#store-' + e.id).position().top
-                  }, 500);
+            if (typeof item.distance == "undefined") {
+              markers_data.push({
+                lat: item.geometry.coordinates[1],
+                lng: item.geometry.coordinates[0],
+                title: item.properties.name,
+                id: item.properties.storeid,
+                icon: {
+                  size: new google.maps.Size(56, 56),
+                  url: icon
+                },
+                infoWindow: {
+                  content: '<h4 class="c-info-window__title">' + item.properties.city + '</h4>'
                 }
-                var locationIcon = $('.js-use-location').find('i').prop('outerHTML');
-                $('.js-use-location').html(locationIcon + 'Use my location').removeClass('c-loading');
-              }
-            });
+              });
+            } else {
+              markers_data.push({
+                lat: item.geometry.coordinates[1],
+                lng: item.geometry.coordinates[0],
+                title: item.properties.name,
+                id: item.properties.storeid,
+                icon: {
+                  size: new google.maps.Size(56, 56),
+                  url: icon
+                },
+                infoWindow: {
+                  content: '<h4 class="c-info-window__title">' + item.properties.city + '</h4>' +
+                    '<div class="c-info-window__title u-color-pri">' + item.distance.toFixed(1) +
+                    ' miles away</div>'
+                },
+                click: function(e) {
+                  var element = $('[data-marker-index=' + e.id + ']');
+                  setActive(element);
+                  //
+                  if (longitude && latitude) {
+                    // $('#store-' + e.id).get(0).scrollIntoView({block: "start", behavior: "smooth"});
+                    // $('.o-store-locator__locations').scrollTo('#store-' + e.id);
+                    //
+                    $('.o-store-locator__locations').animate({
+                      scrollTop: $('#store-' + e.id).position().top
+                    }, 500);
+                  }
+                  var locationIcon = $('.js-use-location').find('i').prop('outerHTML');
+                  $('.js-use-location').html(locationIcon + 'Use my location').removeClass('c-loading');
+                }
+              });
+
+            }
+
           }
         }
       }
-      if (longitude && latitude) {
-        markers_data.push({
-          lat: latitude,
-          lng: longitude,
-          title: 'Your location',
-          icon: {
-            size: new google.maps.Size(56, 56),
-            url: mapLocatorIcon
-          },
-          infoWindow: {
-            content: '<h5 class="c-info-window__title">Your location</h5>'
-          },
-        });
-        map.addMarkers(markers_data);
+      console.log(markers_data)
+
+      if (!isSingleStore) {
+        if (longitude && latitude) {
+          markers_data.push({
+            lat: latitude,
+            lng: longitude,
+            title: 'Your location',
+            icon: {
+              size: new google.maps.Size(56, 56),
+              url: mapLocatorIcon
+            },
+            infoWindow: {
+              content: '<h5 class="c-info-window__title">Your location</h5>'
+            },
+          });
+          map.addMarkers(markers_data);
+        } else {
+          mobilemap.addMarkers(markers_data);
+        }
       } else {
-        mobilemap.addMarkers(markers_data);
+        map.addMarkers(markers_data);
       }
     };
 
@@ -307,7 +365,8 @@ function initialize() {
         var blockTitle = document.createElement('div');
         blockTitle.className = "col-12@xs";
         blockTitle.innerHTML = '<div class="o-store-locator__listings__city">' + prop.city + '</div>';
-        if (prop.address) {
+
+        if (prop.address && typeof locale.distance != "undefined") {
           blockTitle.innerHTML += '<div class="o-store-locator__listings__distance">' + locale.distance.toFixed(1) + ' miles away</div>';
         }
 
@@ -499,6 +558,10 @@ function initialize() {
       }));
     }
 
+    if ($('body').hasClass('page--storepage')) {
+      generateMap(singleData, '-1.4698', '53.796631', false, true);
+      map.panBy(-100, 0);
+    };
 
     // ===========================
     // Mapbox End
@@ -508,9 +571,3 @@ function initialize() {
 
 
 }
-
-
-
-
-
-

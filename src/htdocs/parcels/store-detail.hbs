@@ -1,20 +1,35 @@
-<div class="row o-store-locator">
-  <!-- <div class="col-12@xs col-5@md">
-    <div class="row">
+<div class="row o-store-locator" style="position: relative;">
+  <div class="col-12@xs col-5@md o-store-single--detail  u-mar-l-huge">
+    <div class="row u-pad-medium">
       <div class="col-12@xs">
-        <h4 class="u-mar-t-medium">Postcode or Data result</h4>
-        <h5 class="u-border2-b u-border2-t u-mar-t-medium u-pad-v-small">All Stores</h5>
+        <div class="o-section__detail-title--large">Address</div>
       </div>
-      <div class="col-12@xs o-store-locator__locations">
-        <div id="listings" class="o-store-locator__listings"></div>
+      <div class="col-12@xs">
+        <div class="o-section__detail-sub u-mar-t-medium">Matalan - 760 Harrogate Road Greengates, BD10 0QS</div>
+        <div class="c-btn c-btn-primary--alt col-6@xs u-mar-t-medium u-font-upper">Get Directions</div>
+      </div>
+      <div class="col-12@xs">
+        <div class="o-section__detail-title--large u-mar-t-medium">Opening Hours</div>
+      </div>
+      <div class="col-12@xs">
+        <div class="o-section__detail-sub u-mar-t-medium">Monday - Friday: 09:00 - 20:00
+          <br>Saturday: 09:00 - 19:00
+          <br>Sunday: 11:00 - 17:00
+          <br>
+        </div>
+      </div>
+      <div class="col-12@xs">
+        <div class="o-section__detail-title--large u-mar-t-medium">Telephone</div>
+      </div>
+      <div class="col-12@xs">
+        <div class="o-section__detail-sub u-mar-t-medium"><a href="tel:03330044444">Tel:0333 0044444</a></div>
+        <div class="c-btn c-btn-primary--alt col-6@xs u-mar-t-medium u-font-upper">Click & Collect</div>
       </div>
     </div>
-  </div> -->
+  </div>
   <div class="col-12@xs u-pad-0 o-map__outer-container">
     <div class="map-wrapper">
-      <div id="storemap" class="storemap">
-        <img src="http://maps.google.com/maps/api/staticmap?center=53.796631,-1.4698&markers=icon:http://matalan-ui-kit.s3-website-eu-west-1.amazonaws.com/img/marker.svg|53.796631,-1.4698&zoom=6&size=56x56&sensor=false">
-      </div>
+      <div id="map" class="map"></div>
     </div>
   </div>
 </div>{{> partials/click-and-collect }}
