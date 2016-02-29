@@ -2,6 +2,18 @@
 <html class="no-js" lang="en">
 
 <head>
+  {{> partials/html-head }}
+</head>
+
+<body class="page--pdp is-dev">
+  {{> parcels/header }}
+  <div class="container o-product-detail" role="main">
+    {{> parcels/pdp}}
+  </div>
+
+  {{> parcels/footer }}
+  {{> partials/js-footer}}
+
   <script type="text/javascript" src="//matalan.ugc.bazaarvoice.com/bvstaging/static/4567-en_gb/bvapi.js"></script>
   <script type="text/javascript">
   $BV.configure("global", {
@@ -14,15 +26,6 @@
     productId: "S2595385"
   });
   </script>
-  {{> partials/html-head }}
-</head>
 
-<body class="page--pdp is-dev">
-  {{> parcels/header }}
-  <div class="container o-product-detail" role="main">
-    {{> parcels/pdp}}
-  </div>
-  {{> parcels/footer }} {{> partials/js-footer}}
 </body>
-
 </html>
