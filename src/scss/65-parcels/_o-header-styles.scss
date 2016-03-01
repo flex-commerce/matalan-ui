@@ -200,7 +200,7 @@
 
 
   &.active {
-    display: inline;
+    display: inline-block;
   }
 }
 
@@ -274,7 +274,7 @@
     z-index: 3;
 
     @include mq($until: md) {
-      top: 90%;
+      top: 95%;
     }
 
 

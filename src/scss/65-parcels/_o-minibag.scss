@@ -21,14 +21,12 @@ $minibag-desktop-width: 353px;
   @include mq($from: md, $until: lg) {
     // MAGIC tablet height
     max-height: 380px;
-    border: 2px dotted red;
   }
 
 
   @include mq($from: md, $until: lg, $and: "(orientation: landscape)") {
     // MAGIC tablet height
     max-height: 245px;
-    border: 2px solid green;
     overflow-x: hidden;
     overflow-y: scroll;
   }
@@ -37,7 +35,6 @@ $minibag-desktop-width: 353px;
   @include mq($from: md, $until: lg, $and: "(orientation: portrait)") {
     // MAGIC tablet height
     max-height: 350px;
-    border: 2px solid blue;
     overflow-x: hidden;
     overflow-y: scroll;
   }
@@ -61,6 +58,7 @@ $minibag-desktop-width: 353px;
     max-width: 580px;
     max-height: 780px;
     margin: auto;
+    overflow: hidden;
   }
 
   .o-bag--list-item--control {
@@ -79,9 +77,6 @@ $minibag-desktop-width: 353px;
     position: absolute;
     width: $minibag-desktop-width;
     right: -1em;
-
-    // margin-right: -1em;
-
   }
 }
 
@@ -104,10 +99,6 @@ $minibag-desktop-width: 353px;
     .detail--price {
       float: right;
       max-width: 25%;
-
-      /*       position: absolute;
-            right: 0;
-            top: 0; */
     }
   }
 }
@@ -221,16 +212,6 @@ $minibag-desktop-width: 353px;
     margin-top: 1em;
   }
 }
-
-// // header visibility overrides
-// .o-header__container .o-bag-contain {
-//   display: none;
-// }
-
-// .o-header__container .open > .o-bag-contain {
-//   display: block;
-//   outline: 2px solid green;
-// }
 
 .color-swatch__inline {
   width: 1em;
