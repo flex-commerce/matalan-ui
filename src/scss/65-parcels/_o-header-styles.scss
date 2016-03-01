@@ -31,7 +31,7 @@
 
   .o-icon-with-addon {
     i:before {
-      color: $dark-grey-lighten-60;
+      color: $dark-grey;
     }
 
     position: relative;
@@ -131,7 +131,7 @@
   position: relative;
   display: block;
   cursor: pointer;
-  color: $dark-grey-lighten-60;
+  color: $dark-grey;
 
   // .c-btn {
   //   &:hover {
@@ -144,7 +144,7 @@
     // margin-right: 1em;
 
     &::before {
-      color: $dark-grey-lighten-60;
+      color: $dark-grey;
 
       // abs positioning so the doesnt affect button height
       // position: absolute;
@@ -157,7 +157,7 @@
 
   span {
     margin-top: -.7em;
-    color: $dark-grey-lighten-60;
+    color: $dark-grey;
     display: block;
     font-size: 0.8em;
   }
@@ -260,7 +260,7 @@
 .header--mobile-search {
   @include no-focus;
 
-  color: $dark-grey-lighten-60;
+  color: $dark-grey;
 
   .icon-nub {
     display: none;
