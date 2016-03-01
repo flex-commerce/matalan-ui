@@ -1,3 +1,23 @@
+@mixin fullscreen-container-rules {
+  @include center(xy, abs);
+
+  min-width: 300px;
+  background-color: rgba(255, 255, 255, 0.95);
+
+  @include mq($until: md) {
+    padding: 1em;
+  }
+
+
+  @include mq($from: md) {
+    padding: 2em;
+  }
+}
+
+.o-fullscreen-container__wrapper {
+  height: 100%;
+}
+
 .o-fullscreen-container {
   position: relative;
   height: calc(100vh - 59px);
@@ -19,63 +39,6 @@
   }
 
 
-  // .row {
-  //   height: 100%;
-  // }
-
-  // .o-fullscreen-container__wrapper {
-  //   height: 100%;
-  // }
-
-  @mixin fullscreen-container-rules {
-    @include center(xy, abs);
-
-    background-color: rgba(255, 255, 255, 0.95);
-    
-    @include mq($until: md) {
-      padding: 1em;
-    }
-
-    @include mq($from: md) {
-      padding: 2em;
-    }
-    min-width: 300px;
-  }
-
-  .o-fullscreen-container__box {
-    @include fullscreen-container-rules;
-
-    min-width: 300px;
-
-    @include mq($from: xs, $until: md) {
-      min-width: 300px;
-      width: 80vw;
-    }
-
-    @include mq($from: md) {
-      width: 550px;
-    }
-
-  }
-
-  .o-fullscreen-container__box--large {
-    @include fullscreen-container-rules;
-
-    @include mq($from: xs, $until: md) {
-      width: 90vw;
-    }
-
-
-    @include mq($from: md, $until: lg) {
-      width: 600px;
-    }
-
-
-    @include mq($from: lg) {
-      width: 900px;
-    }
-  }
-
   &.summer-hero {
     background: url("../img-assets/summer-hero.png") no-repeat left top;
     background-size: cover;
@@ -91,6 +54,54 @@
     background: url("../img-assets/matalan-store.jpg") no-repeat left center;
     background-size: cover;
   }
+}
+
+.o-fullscreen-container__box {
+  @include fullscreen-container-rules;
+
+  min-width: 300px;
+
+  @include mq($from: xs, $until: md) {
+    min-width: 300px;
+    width: 80vw;
+  }
+
+
+  @include mq($from: md) {
+    width: 550px;
+  }
+}
+
+.o-fullscreen-container__box--large {
+  @include fullscreen-container-rules;
+
+  @include mq($from: xs, $until: md) {
+    width: 90vw;
+  }
+
+
+  @include mq($from: md, $until: lg) {
+    width: 600px;
+  }
+
+
+  @include mq($from: lg) {
+    width: 900px;
+  }
+}
+
+.o-fullscreen-container__header {
+  margin-bottom: 1em;
+  color: $primary-color;
+  text-align: center;
+}
+
+.o-fullscreen-container__body {
+  margin: 1em 0;
+  color: $mid-grey;
+  text-align: center;
+
+  @extend %h4;
 }
 
 .o-hero-bg {

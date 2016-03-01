@@ -8,7 +8,84 @@
 <body class="is-dev">
   {{> partials/header-checkout }}
   <div class="o-fullscreen-container summer-hero js-height-fix u-cf">
-    {{> parcels/register}}
+
+
+  <div class="container o-fullscreen-container__wrapper">
+    <div class="o-fullscreen-container__box--large o-login__email">
+      <div class="row u-pos-rel">
+
+        <div class="col-12@xs col-5@lg">
+
+        <h3 class="o-fullscreen-container__header">Existing Customer</h3>
+
+        <div class="o-fullscreen-container__body">
+          <p>Please enter your details now.</p>
+        </div>
+
+
+          <div class="o-form__row">
+            <div class="o-form__label-contain">
+              <label class="o-form__label-primary">Email Address:</label>
+            </div>
+            <div class="o-form__input-contain o-form__input--icon">
+              <input type="text" class="o-input o-input--textual" placeholder="Enter email address">
+              <i class="icon icon-email"></i>
+            </div>
+          </div>
+          <div class="o-form__row u-pad-t-0">
+            <div class="o-form__label-contain">
+              <label class="o-form__label-primary">Password:</label>
+            </div>
+            <div class="o-form__input-contain o-form__input--icon">
+              <input type="text" class="o-input o-input--textual" placeholder="Enter password">
+              <i class="icon icon-padlock-s"></i>
+            </div>
+            <div class="o-form__input-contain">
+              <label class="o-form__label o-form__label-option u-pad-t-medium">
+                <input type="checkbox">
+                <span class="check-holder"></span>
+                Remember me
+              </label>
+            </div>
+          </div>
+          <a class="c-btn c-btn--icon c-btn--block c-btn-secondary u-mar-t-medium o-login__email-submit">
+            <i class="icon icon-padlock-s"></i> Continue Securely
+          </a>
+          <a class="o-login__password-forgotten o-form__label-option u-font-ta-c">
+            <p class="u-font-ta-c u-mar-t-medium">Forgotten Password</p>
+          </a>
+        </div>
+
+        <div class="separator separator--dark separator--vertical@lg-up u-cl"></div>  <!-- hidden@md-up -->
+
+        <div class="col-12@xs col-5@lg col-offset-2@lg-up">
+
+          <h3 class="o-fullscreen-container__header">New Customer</h3>
+
+          <div class="o-fullscreen-container__body">
+            <p>Fill in a quick form to register your details with us.</p>
+          </div>
+
+
+          <div class="o-form__row">
+            <div class="o-form__label-contain">
+              <label class="o-form__label-primary">Email Address:</label>
+            </div>
+            <div class="o-form__input-contain o-form__input--icon">
+              <input type="text" class="o-input o-input--textual" placeholder="Enter email address">
+              <i class="icon icon-email"></i>
+            </div>
+          </div>
+          <!-- Should be a button-->
+          <a href="./register-account.html" class="c-btn c-btn-secondary c-btn--block">Continue</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
   </div>
 
   {{> parcels/footer }}
