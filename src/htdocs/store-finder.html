@@ -10,11 +10,15 @@
   {{> parcels/header }}
 
   <div class="o-fullscreen-container store-hero js-height-fix" role="main">
-    {{> parcels/store-finder}}
+    <div class="container">
+      {{> parcels/store-finder}}
+    </div>
   </div>
 
-  <div id="storeFinderContainer" class="container o-map-container" style="display:none">
-    {{> parcels/store-finder-google}}
+  <div id="storeFinderContainer" class="o-map-container" style="display:none">
+    <div class="container">
+      {{> parcels/store-finder-google}}
+    </div>
   </div>
 
   {{> parcels/footer }}

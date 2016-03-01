@@ -1,15 +1,12 @@
 .o-fullscreen-container {
-
   position: relative;
   height: calc(100vh - 59px);
-  // height: 100vh;
 
   // magic - header-height
   display: block;
 
   @include mq($until: lg) {
     height: calc(100vh - 59px);
-    // height: 100vh;
 
     // magic - header-height
   }
@@ -17,11 +14,67 @@
 
   @include mq($from: lg) {
     height: calc(100vh - 110px);
-    // height: 100vh;
 
     // magic - header-height
   }
 
+
+  // .row {
+  //   height: 100%;
+  // }
+
+  // .o-fullscreen-container__wrapper {
+  //   height: 100%;
+  // }
+
+  @mixin fullscreen-container-rules {
+    @include center(xy, abs);
+
+    background-color: rgba(255, 255, 255, 0.95);
+    
+    @include mq($until: md) {
+      padding: 1em;
+    }
+
+    @include mq($from: md) {
+      padding: 2em;
+    }
+    min-width: 300px;
+  }
+
+  .o-fullscreen-container__box {
+    @include fullscreen-container-rules;
+
+    min-width: 300px;
+
+    @include mq($from: xs, $until: md) {
+      min-width: 300px;
+      width: 80vw;
+    }
+
+    @include mq($from: md) {
+      width: 550px;
+    }
+
+  }
+
+  .o-fullscreen-container__box--large {
+    @include fullscreen-container-rules;
+
+    @include mq($from: xs, $until: md) {
+      width: 90vw;
+    }
+
+
+    @include mq($from: md, $until: lg) {
+      width: 600px;
+    }
+
+
+    @include mq($from: lg) {
+      width: 900px;
+    }
+  }
 
   &.summer-hero {
     background: url("../img-assets/summer-hero.png") no-repeat left top;
@@ -30,7 +83,6 @@
   }
 
   &.general-hero {
-    height: auto;
     background: url("../img-assets/healthy-lifestyle.jpg") no-repeat left center;
     background-size: cover;
   }
@@ -38,37 +90,6 @@
   &.store-hero {
     background: url("../img-assets/matalan-store.jpg") no-repeat left center;
     background-size: cover;
-  }
-
-  .row {
-    height: 100%;
-  }
-
-  .o-fullscreen-container__wrapper {
-    height: 100%;
-  }
-
-  .o-fullscreen-container__box {
-    @include center(x);
-
-    padding: 20px;
-    margin: 20px 0;
-
-    @include mq($from: md) {
-      top: 20%;
-    }
-
-
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-
-  .o-fullscreen-container__box-large {
-    @include center(x);
-
-    padding: 20px;
-    top: 5%;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 20px 0;
   }
 }
 
