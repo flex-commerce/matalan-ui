@@ -64,7 +64,8 @@
 
             <ul class="filter__colours u-pad-b-small collapse in" id="filter101">
               {{# times 20 }}
-              <li class="filter__colour" title="{{ randomcolour }} - ({{randomnum}})">
+              <li class="filter__colour" data-toggle="tooltip" data-placement="top"
+                title="{{ randomcolour }} - ({{randomnum}})">
                 <div style="background-color:{{ randomcolour }}"></div>
               </li>
               {{/ times }}

@@ -352,6 +352,12 @@ require('./vendors/bootstrap/popover');
 $(document).ready(function() {
 
   $(function() {
+
+    $('[data-toggle="tooltip"]').tooltip({
+      placement: 'top',
+      viewport: { 'selector': 'body', 'padding': 0 }
+    });
+
     $('.o-form--default [data-toggle="tooltip"]').tooltip({
       placement: 'left',
       viewport: { 'selector': 'body', 'padding': 0 }
