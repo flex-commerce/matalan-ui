@@ -416,7 +416,7 @@ function initialize() {
           actionRow.className = "col-12@xs col-6@lg";
 
           actionButton = document.createElement('div');
-          actionButton.className = 'c-btn c-btn-secondary col-10@xs u-mar-t-medium u-font-upper o-select-store';
+          actionButton.className = 'c-btn c-btn--secondary col-10@xs u-mar-t-medium u-font-upper o-select-store';
           actionButton.setAttribute('data-storeName', prop.city + ' - ' + prop.address);
           actionButton.innerHTML = "Select this store";
 
@@ -429,7 +429,7 @@ function initialize() {
           actionRow.className = "col-12@xs col-6@lg";
 
           actionButton = document.createElement('div');
-          actionButton.className = 'c-btn c-btn-primary--alt col-10@xs hidden@sm-down u-mar-t-medium u-font-upper';
+          actionButton.className = 'c-btn c-btn--primary--alt col-10@xs hidden@sm-down u-mar-t-medium u-font-upper';
           actionButton.innerHTML = "View on Map";
 
           actionRow.appendChild(actionButton);
@@ -438,14 +438,14 @@ function initialize() {
 
         var callButton = document.createElement('div');
         callButton.className = 'o-store-call hidden@md-up u-cf';
-        callButton.innerHTML = '<a href="tel:' + prop.phone + '"class="c-btn c-btn-primary col-12@xs u-font-upper u-mar-t-large"><i class="icon icon-telephone u-color-pri u-pad-r-huge icon--vertical-middle"></i>Call store</a>';
+        callButton.innerHTML = '<a href="tel:' + prop.phone + '"class="c-btn c-btn--primary col-12@xs u-font-upper u-mar-t-large"><i class="icon icon-telephone u-color-pri u-pad-r-huge icon--vertical-middle"></i>Call store</a>';
 
         resultsForDisplay.appendChild(callButton);
 
 
         var openMapButton = document.createElement('div');
         openMapButton.className = 'o-store-map-open hidden@md-up u-cf';
-        openMapButton.innerHTML = '<a class="c-btn c-btn-primary col-12@xs u-font-upper store-finder__map--mobile-open u-mar-v-large" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>View Map</a>';
+        openMapButton.innerHTML = '<a class="c-btn c-btn--primary col-12@xs u-font-upper store-finder__map--mobile-open u-mar-v-large" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>View Map</a>';
 
         resultsForDisplay.appendChild(openMapButton);
 
@@ -459,7 +459,7 @@ function initialize() {
 
         var closeMapButton = document.createElement('div');
         closeMapButton.className = 'o-store-map-close hidden@md-up u-cf';
-        closeMapButton.innerHTML = '<a class="c-btn c-btn-primary col-12@xs u-font-upper store-finder__map--mobile-close u-mar-t-large u-mar-b-huge" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>Close Map</a>';
+        closeMapButton.innerHTML = '<a class="c-btn c-btn--primary col-12@xs u-font-upper store-finder__map--mobile-close u-mar-t-large u-mar-b-huge" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>Close Map</a>';
 
         resultsForDisplay.appendChild(closeMapButton);
       };
