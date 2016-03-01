@@ -5,7 +5,8 @@
 
 .icon.icon--small:before {
   font-size: 1em;
-  display: inline-block;
+  display: inline;
+  vertical-align: sub;
 }
 
 

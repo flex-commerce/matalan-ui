@@ -25,9 +25,9 @@ function initialiseMinibagSlick() {
     infinite: false,
     slidesToShow: 2,
     slidesToScroll: 2,
-    prevArrow: '<button type="button" class="c-btn c-btn-primary c-btn--tiny slick-prev">'
+    prevArrow: '<button type="button" class="c-btn c-btn--primary c-btn--tiny slick-prev">'
                + '<i class="icon--block icon icon-ui-up"></i></button>',
-    nextArrow: '<button type="button" class="c-btn c-btn-primary c-btn--tiny slick-next">'
+    nextArrow: '<button type="button" class="c-btn c-btn--primary c-btn--tiny slick-next">'
                + '<i class="icon--block icon icon-ui-down"></i></button>'
   });
 }

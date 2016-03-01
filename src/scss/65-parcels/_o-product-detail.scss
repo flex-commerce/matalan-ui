@@ -1,22 +1,17 @@
 .o-product-detail {
-  @include clearfix();
-  fieldset {
-    @include clearfix();
-    position: relative;
-    // .icon {
-    //   @include center(y, abs);
-    //   right: 0;
-    //   &::before {
-    //     color: $cool-grey;
-    //   }
+  @include clearfix;
 
-    // }
+  fieldset {
+    @include clearfix;
+
+    position: relative;
   }
 
   .o-product-detail__title {
-    // cursor: pointer;
     position: relative;
+
     @include font-size(20px, 2);
+
     @include mq($from: lg) {
       @include font-size(32px, 1.2);
     }
@@ -24,26 +19,13 @@
 
   .o-product-detail__content {
     display: none;
+
     &.active {
       display: block;
     }
   }
 
-  // .icon:before {
-  //   @include font-size(18px);
-  // }
-
   .icon-small-tick:before {
     color: $primary-color;
   }
-
-  .c-roundel {
-/*     width: 20%; */
-/*     padding-top: 20%; */
-  }
-
-
-
-
-
 }

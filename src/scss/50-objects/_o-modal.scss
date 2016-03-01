@@ -23,16 +23,7 @@ $screen-md-min: 720px;
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and shit
 // Kill the scroll on the body
-.modal-open {
-  // position: fixed;
-  // left: 0;
-  // right: 0;
 
-  // .modal--default {
-  //   overflow-x: hidden;
-  //   overflow-y: auto;
-  // }
-}
 
 // Container that the modal scrolls within
 %modal--default,
@@ -51,18 +42,17 @@ $screen-md-min: 720px;
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
+
   .modal-header {
     .icon::before {
       font-size: 2rem;
       vertical-align: bottom;
     }
   }
-
 }
 
 .modal.modal--custom {
   display: none;
-
   // z-index: $zindex-modal;
   -webkit-overflow-scrolling: touch;
   position: relative;
@@ -123,6 +113,7 @@ $screen-md-min: 720px;
 
   .close {
     @include center($xy: y, $pos: abs);
+
     vertical-align: bottom;
   }
 }
@@ -182,7 +173,6 @@ $screen-md-min: 720px;
 
 .modal.modal--minibag {
   display: none;
-/*   overflow: hidden; */
   position: fixed;
   top: 0;
   right: 0;

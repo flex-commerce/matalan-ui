@@ -9,6 +9,21 @@
 }
 
 
+
+// form rows need to live inside forms
+.o-form__row, button[type=submit]{
+  outline: 5px solid darkorchid;
+}
+form {
+  button[type=submit],
+  .o-form__row {
+    outline: none;
+  }
+}
+
+
+
+
 /**
  *  Various developer rules for testing and such
  */

@@ -324,14 +324,14 @@ $("[data-myacc='address-delete']").on('click', function(e) {
     closable: true,
     buttons: [{
       label: 'Cancel',
-      cssClass: 'c-btn c-btn-primary',
+      cssClass: 'c-btn c-btn--primary',
       action: function(dialogRef) {
         dialogRef.close();
       }
     }, {
       id: 'delete-' + addressRef,
       label: 'Delete ' + addressRef,
-      cssClass: 'c-btn c-btn-secondary',
+      cssClass: 'c-btn c-btn--secondary',
       action: function(dialogRef) {
         dialogRef.close();
       }
