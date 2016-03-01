@@ -263,7 +263,7 @@ require("./modules/collapse");
 $(document).ready(function() {
   var pageBody = $('body');
   if (pageBody.hasClass('page--checkout-1')) {
-    $('#billingAddressAccord').collapse('show');
+    // $('#billingAddressAccord').collapse('show');
   }
 });
 

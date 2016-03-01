@@ -11,16 +11,16 @@
 
 
 // form rows need to live inside forms
-.o-form__row, button[type=submit]{
-  outline: 5px solid darkorchid;
-  content: 'cant have a form row outside of a form'
-}
-form {
-  button[type=submit],
-  .o-form__row {
-    outline: none;
-  }
-}
+// .o-form__row, button[type=submit]{
+//   outline: 1px dotted darkorchid;
+//   content: 'cant have a form row outside of a form'
+// }
+// form {
+//   button[type=submit],
+//   .o-form__row {
+//     outline: none;
+//   }
+// }
 
 
 
