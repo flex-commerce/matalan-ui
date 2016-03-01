@@ -56,7 +56,7 @@ $button-line-height: $base-line-height;
             text-decoration: underline;
         }
     }
-    &.c-btn-tertiary {
+    &.c-btn--tertiary {
         @include style-variant($color: $white, $background: $dark-grey, $border: $dark-grey);
         &.hover,
         &:hover,
@@ -65,7 +65,7 @@ $button-line-height: $base-line-height;
             text-decoration: underline;
         }
     }
-    &.c-btn-tertiary--alt {
+    &.c-btn--tertiary--alt {
         @include style-variant($color: $dark-grey, $background: $white, $border: $cool-grey);
         &.hover,
         &:hover,
