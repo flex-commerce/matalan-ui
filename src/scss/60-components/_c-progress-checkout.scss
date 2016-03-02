@@ -135,7 +135,7 @@ html.no-flexbox {
     display: block;
     position: absolute;
     top: $donut-size / 2 - $border-thickness / 2;
-    min-width: 500px;
+    min-width: 22vw;
     height: $donut-line-thickness;
     content: '';
     background-color: $inactive;
@@ -152,6 +152,7 @@ html.no-flexbox {
   li:last-child span.c-donut:after {
     overflow-x: hidden;
     background-color: $white;
+    min-width: 0px;
   }
 
   // completed state
