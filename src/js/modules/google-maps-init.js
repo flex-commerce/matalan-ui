@@ -363,14 +363,18 @@ function initialize() {
 
 
         var blockTitle = document.createElement('div');
-        blockTitle.className = "col-12@xs";
+        blockTitle.className = "col-6@xs";
         blockTitle.innerHTML = '<div class="o-store-locator__listings__city">' + prop.city + '</div>';
-
+        detailsRow.appendChild(blockTitle);
         if (prop.address && typeof locale.distance != "undefined") {
-          blockTitle.innerHTML += '<div class="o-store-locator__listings__distance">' + locale.distance.toFixed(1) + ' miles away</div>';
+          var distanceTitle = document.createElement('div');
+          distanceTitle.className = "col-6@xs";
+          distanceTitle.innerHTML += '<div class="o-store-locator__listings__distance">' + locale.distance.toFixed(1) + ' miles away</div>';
+          detailsRow.appendChild(distanceTitle);
         }
 
-        detailsRow.appendChild(blockTitle);
+
+
 
 
         var blockAddress = document.createElement('div');

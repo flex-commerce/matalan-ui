@@ -68,7 +68,7 @@ $listings-keyline-color: $keyline-color;
   .o-store-locator__listings__distance {
     @include font-size(13px, 2);
     @include mq($from: lg) {
-      float: right;
+      float: left;
       padding-top: 1rem;
       padding-right: 1em;
     }
