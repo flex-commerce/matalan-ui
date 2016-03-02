@@ -9,6 +9,7 @@ $alert-padding-h: 18px;
   margin-bottom: 1em;
   border: 1px solid transparent;
   position: relative;
+
   @include style-variant($base-alert-color-text, $base-alert-color-bg, $base-alert-color-border);
 
   // Improve alignment and spacing of inner content
@@ -16,6 +17,7 @@ $alert-padding-h: 18px;
   > ul {
     margin-bottom: 0;
   }
+
   > p + p {
     margin-top: 5px;
   }
@@ -24,6 +26,7 @@ $alert-padding-h: 18px;
 // Headings for larger alerts
 .c-alert-heading {
   margin-top: 0;
+
   // Specified to prevent conflicts of changing $headings-color
   color: inherit;
 }
@@ -45,23 +48,25 @@ $alert-padding-h: 18px;
   position: absolute;
   padding: $alert-padding-v;
   right: 0;
-  top:  0;
+  top: 0;
+
   &:hover,
   &:focus {
     opacity: black;
   }
 }
 
-
 .c-alert-global {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  display:none;
+  display: none;
+
   &.active {
     display: inline;
   }
+
   &.fixed {
     position: fixed;
   }

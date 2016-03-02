@@ -2,54 +2,12 @@
   position: relative;
 }
 
-
 .o-myacc__address-actions {
   .o-myacc__cancel {
-     @include absolute(top 0 right 0);
+    @include absolute(top 0 right 0);
   }
 }
 
 .o-myacc--address-panel.in + [data-toggle="collapse"] {
   display: none;
 }
-
-
-// .o-my-account__container {
-//   @include clearfix();
-//   fieldset {
-//     @include clearfix();
-//     position: relative;
-
-//     .o-my-account__title {
-//       font-weight: 600;
-//       cursor: pointer;
-//       position: relative;
-
-//     }
-//     .o-my-account__content {
-//       display: none;
-//       &.active {
-//         display: block;
-//       }
-//     }
-//     &.active {
-//       .o-my-account__content {
-//         display: block;
-//       }
-
-//       .o-my-account__title {
-//         color: $dark-grey-lighten-100;
-//       }
-//     }
-//   }
-
-//   // .icon:before {
-//   //   @include font-size(18px);
-//   // }
-
-//   .icon-small-tick:before {
-//     color: $primary-color;
-//   }
-
-
-// }

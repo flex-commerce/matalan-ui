@@ -4,7 +4,6 @@
 // ie targetted separately
 
 @include mq($from: lg) {
-
   html:not(.ie) .modal-open--minibag.modal-open {
     // pad important for scrollbar pop
     padding-right: 0 !important;
@@ -15,9 +14,7 @@
     position: fixed;
   }
 
-
   .modal-open--minibag {
-
     .modal-backdrop {
       opacity: 0;
     }

@@ -14,10 +14,10 @@
 .o-accord__container {
   .disabled {
     opacity: 0.4;
+
     .collapsed {
       font-weight: normal;
     }
-    
   }
 
   > .panel > .collapse {
@@ -84,11 +84,8 @@
     .o-accord__title__index {
       @include absolute(left 0);
 
-      line-height: 40px;
-
       // magic - matches title line-height for vertical align
-      // @include center(y);
-
+      line-height: 40px;
     }
   }
 }
