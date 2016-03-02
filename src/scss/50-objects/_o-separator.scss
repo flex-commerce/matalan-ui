@@ -55,7 +55,8 @@
 // separator with centered 'or', no mid-line
 .separator__inline-text--unstyled {
   position: relative;
-  height: 2em;
+  height: 2.5em;
+  color: $dark-grey;
 
   span {
     position: absolute;
@@ -78,6 +79,8 @@
     border-style: none solid none none;
     top: 0;
     bottom: 0;
+    padding: 0;
+    margin: 0;
   }
 }
 

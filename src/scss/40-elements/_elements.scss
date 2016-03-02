@@ -46,6 +46,15 @@ a {
       text-decoration: none;
     }
   }
+
+  &.link--text {
+    text-decoration: underline;
+    &:hover,
+    &.active {
+      // color: inherit;
+    }
+  }
+
 }
 
 .link--underline {

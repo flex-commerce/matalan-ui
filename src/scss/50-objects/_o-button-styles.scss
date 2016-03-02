@@ -19,7 +19,7 @@ $button-line-height: $base-line-height;
     &.c-btn--tiny {
         @include button-size(quarter($button-padding-y), quarter($button-padding-x), .7em, $button-line-height);
     }
-    &.c-btn-primary {
+    &.c-btn--primary {
         @include style-variant($color: $dark-grey, $background: $secondary-color, $border: $secondary-color);
         &.hover,
         &:hover,
@@ -28,7 +28,7 @@ $button-line-height: $base-line-height;
             text-decoration: underline;
         }
     }
-    &.c-btn-primary--alt {
+    &.c-btn--primary--alt {
         @include style-variant($color: $dark-grey, $background: $light-grey-hover, $border: $secondary-color);
         &.hover,
         &:hover,
@@ -37,7 +37,7 @@ $button-line-height: $base-line-height;
             text-decoration: underline;
         }
     }
-    &.c-btn-secondary {
+    &.c-btn--secondary {
         @include style-variant($color: $white, $background: $primary-color, $border: $primary-color);
         text-transform: uppercase;
         &.hover,
@@ -47,7 +47,7 @@ $button-line-height: $base-line-height;
             text-decoration: underline;
         }
     }
-    &.c-btn-secondary--alt {
+    &.c-btn--secondary--alt {
         @include style-variant($color: $white, $background: $primary-color, $border: $primary-color);
         &.hover,
         &:hover,
@@ -56,7 +56,7 @@ $button-line-height: $base-line-height;
             text-decoration: underline;
         }
     }
-    &.c-btn-tertiary {
+    &.c-btn--tertiary {
         @include style-variant($color: $white, $background: $dark-grey, $border: $dark-grey);
         &.hover,
         &:hover,
@@ -65,7 +65,7 @@ $button-line-height: $base-line-height;
             text-decoration: underline;
         }
     }
-    &.c-btn-tertiary--alt {
+    &.c-btn--tertiary--alt {
         @include style-variant($color: $dark-grey, $background: $white, $border: $cool-grey);
         &.hover,
         &:hover,
@@ -75,12 +75,12 @@ $button-line-height: $base-line-height;
         }
     }
     //think of a better name
-    &.c-btn-custom {
+    &.c-btn--custom {
         @include style-variant($color: $white, $background: transparent, $border: $white);
         text-transform: uppercase;
     }
 
-    &.c-btn-custom-alt {
+    &.c-btn--custom--alt {
         @include style-variant($color: $dark-grey, $background: transparent, $border: $dark-grey);
         text-transform: uppercase;
     }

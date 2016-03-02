@@ -217,7 +217,7 @@
       var $parentPanel = $target.closest($('.panel'));
       if (!$parentPanel.hasClass('disabled')) return;
       $parentPanel.removeClass('disabled');
-
+      $this.remove();
     }
 
 

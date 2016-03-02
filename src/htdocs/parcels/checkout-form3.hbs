@@ -1,10 +1,9 @@
 <div class="o-accord__content collapse" id="deliveryMethodAccord">
-  <p class="u-mar-v-medium">Please choose your preferred delivery method</p>
 
-  <div class="o-form__row">
+  <div id="checkout-delivery-delivery" class="o-form__input-contain o-option--inline ">
 
-    <div id="checkout-delivery-delivery" class="o-form__input-contain o-option--inline auto-column-2">
-
+    <p class="u-mar-v-medium">Please choose your preferred delivery method</p>
+    <div class="o-form__row auto-column-2">
       <div class="o-form__label-contain u-pad-v-tiny">
         <label class="o-form__label-option">
           <input type="radio" name="deliverytype" value="standard" checked>
@@ -22,17 +21,7 @@
       </div>
     </div>
 
-<!--     <div class="o-form__label-contain u-pad-v-tiny">
-      <label class="o-form__label-option">
-        <input type="radio" name="deliverytype" value="click-and-collect">
-        <span></span>
-        Click &amp; Collect (FREE)
-      </label>
-    </div> -->
-
   </div>
-
-
 
   <div id="checkout-delivery-collect" class="o-box islet o-click-and-collect usebilling is-hidden">
 
@@ -40,10 +29,9 @@
       <form class="o-form--inline c-search-form has-focus">
         <div class="o-form__row u-pad-b-0">
           <div class="o-form__input-contain o-form--input-pack o-form__input--icon">
-            <input id="addressEntry" type="text" placeholder="Enter address, city, postcode"
-              class="o-input o-input--textual">
+            <input id="addressEntry" type="text" placeholder="Enter address, city, postcode" class="o-input o-input--textual">
             <div class="input-group__btn">
-              <a id="findStore" data-click-collect class="c-btn c-btn-secondary js-find-store">Find</a>
+              <a id="findStore" data-click-collect class="c-btn c-btn--secondary js-find-store">Find</a>
             </div>
             <i class="icon icon-search"></i>
           </div>
@@ -52,7 +40,7 @@
       <div class="separator__inline-text--unstyled">
         <span>or</span>
       </div>
-      <a id="geolocate" data-click-collect class="c-btn c-btn--icon c-btn--block c-btn-secondary js-use-location">
+      <a id="geolocate" data-click-collect class="c-btn c-btn--icon c-btn--block c-btn--secondary js-use-location">
         <i class="icon icon-menu-storefinder"></i> Use my location
       </a>
     </div>
@@ -65,11 +53,10 @@
 
   </div>
 
-    {{> partials/click-and-collect }}
-
+  {{> partials/click-and-collect }}
 
   <div class="o-box o-submit-button u-mar-t-medium">
-    <button type="submit" class="c-btn c-btn-secondary c-btn--block">Continue</button>
+    <button type="submit" class="c-btn c-btn--secondary c-btn--block">Continue</button>
   </div>
 
 </div>
