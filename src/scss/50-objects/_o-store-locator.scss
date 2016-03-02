@@ -85,7 +85,10 @@ $listings-keyline-color: $keyline-color;
     content: $icon-menu-storefinder;
     position: absolute;
     left: 0.3em;
-    top: 1.3em;
+    top: 0.5em;
+    @include mq($from: lg) {
+      top: 1.3em;
+    }
     color: $cool-grey;
   }
   .active .o-store-locator__listings__content:before {
