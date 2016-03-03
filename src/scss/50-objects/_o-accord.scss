@@ -67,7 +67,7 @@
     font-weight: bold;
     cursor: pointer;
     position: relative;
-    padding: 1.5em 2em 1.5em 0;
+    padding: 1.5em 2em;
 
     .panel.disabled & {
       color: $cool-grey;
@@ -78,7 +78,7 @@
   .o-accord__title__block {
     position: relative;
 
-    .o-accord__title__index {
+    .o-accord__index {
       @include absolute(left 0);
 
       // magic - matches title line-height for vertical align

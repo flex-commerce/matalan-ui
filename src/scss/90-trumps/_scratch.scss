@@ -7,13 +7,28 @@
   // outline: 1px solid red;
 }
 
-
 // sizeguide quick rules
-// hide the inline title if we're on the full accordion version
+
+// header titles
 .page--text--sizeguide {
-  .o-accord__container {
-    .sizeguide--content-title {
-      margin: 0.25em 0 0.5em;
+  .o-accord__title__text {
+    @include mq($until: md) {
+      font-size: 100%;
     }
   }
+
+  .sizeguide--content-title {
+    margin: 0.25em 0 0.5em;
+
+    @include mq($until: md) {
+      @include font-size(18px);
+    }
+  }
+}
+
+// accordion padding to accomodate left hand number
+.o-accord__index {
+  @include center(y, abs);
+
+  left: 0;
 }

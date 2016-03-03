@@ -105,12 +105,16 @@ ul.c-table .td {
   .th {
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   td,
   .td {
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 
@@ -199,9 +203,12 @@ ul.c-table .td {
     border-style: none none solid;
     border-width: 1px;
   }
+
+
   th {
     border-color: $dark-grey-lighten-30;
   }
+
   td {
     border-color: $dark-grey-lighten-20;
   }
@@ -214,15 +221,30 @@ ul.c-table .td {
 // will display normally.
 @include mq($until: lg) {
   .c-table--responsive {
-    display: block;
     width: 100%;
-    min-height: 0.01%;
-
-    // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+    min-height: .01%;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    display: block;
+    overflow-y: hidden;
+    // // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
     overflow-x: auto;
 
+    // border-bottom: 1px solid $cool-grey;
+
     > table {
-      min-width: 720px;
+      margin-bottom: 0;
+      border: 1px solid $cool-grey;
+      th,
+      td {
+        // white-space: nowrap;
+      }
+
+      tr:last-of-type {
+        td, th {
+          border-style: none;
+        }
+      }
+
     }
   }
 }
@@ -267,6 +289,7 @@ ul.c-table .td {
 
         &:last-of-type {
           outline: 3px solid red;
+
           &::before {
             content: ' - ';
           }
