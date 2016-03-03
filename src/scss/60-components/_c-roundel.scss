@@ -2,8 +2,10 @@
   @extend %u-round;
 
   position: relative;
-  width: 30%; // @TODO - magic number - size
-/*   padding-top: 30%; // @TODO - magic number - size */
+  width: 30%;
+
+  // @TODO - magic number - size
+  /*   padding-top: 30%; // @TODO - magic number - size */
   font-size: 80%;
   text-align: center;
   line-height: 1.2;
@@ -11,12 +13,6 @@
   &::after {
     @include center(xy, abs);
   }
-}
-
-.c-roundel__pri {
-/*   background-color: $cool-grey; */
-/*   color: $white; */
-/*   font-weight: 600; */
 }
 
 .c-roundel__sec {

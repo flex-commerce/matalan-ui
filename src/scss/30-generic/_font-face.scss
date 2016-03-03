@@ -1,7 +1,9 @@
-@include font-face("Archer", '../fonts/ArcherPro-MediumIta', 300);
-@include font-face("Archer", '../fonts/ArcherPro-SemiBoldIta', 500);
-@include font-face("Archer", '../fonts/ArcherPro-BoldIta', 700);
+@include font-face("Archer", "../fonts/ArcherPro-MediumIta", 300);
 
+@include font-face("Archer", "../fonts/ArcherPro-SemiBoldIta", 500);
 
-@include font-face("texheros", '../fonts/texgyreheros-regular-webfont');
-@include font-face("texheros", '../fonts/texgyreheros-bold-webfont', bold);
+@include font-face("Archer", "../fonts/ArcherPro-BoldIta", 700);
+
+@include font-face("texheros", "../fonts/texgyreheros-regular-webfont", normal);
+
+@include font-face("texheros", "../fonts/texgyreheros-bold-webfont", bold);

@@ -7,13 +7,7 @@ $container-maxwidth: rem-calc($site-maxwidth);
 //   gutter: $susy-gutter-width/120px
 // );
 
-$susy: (
-  columns: 12,
-  gutters: 1 / 4,
-  math: fluid,
-  output: float,
-  gutter-position: inside
-);
+$susy: (columns: 12, gutters: 1 / 4, math: fluid, output: float, gutter-position: inside);
 
 /* Base Classes and their mixins */
 
@@ -73,6 +67,7 @@ $susy: (
   margin-right: -$susy-gutter-width;
 
   @include break;
+
   @include susy-clearfix;
 }
 

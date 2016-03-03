@@ -1,8 +1,8 @@
-.c-btn-paginate, .c-btn-paginate__alt  {
+.c-btn-paginate, .c-btn-paginate__alt {
   text-decoration: none;
   background-color: $white;
   border-color: $secondary-color;
-// border-color: $cool-grey;
+
   &:hover {
     background-color: #f0f0f0;
     border-color: $secondary-color;
@@ -12,7 +12,8 @@
 .c-btn-paginate {
   color: $base-text-color;
 }
-.c-btn-paginate__alt  {
+
+.c-btn-paginate__alt {
   color: $primary-color;
 }
 
@@ -20,20 +21,25 @@
 .c-pagination-bar__wide {
   position: relative;
   padding: 0.75em 0;
+
   @include border-tb-default;
+
   @include clearfix;
+
   .c-pagination-bar__list {
     text-align: center;
+
     @include center(x, abs);
   }
+
   .c-pagination-bar__prev {
     float: left;
   }
+
   .c-pagination-bar__next {
     float: right;
   }
 }
-
 
 //dropdown
 .pagination--dropdown {
@@ -42,8 +48,10 @@
     vertical-align: middle;
     color: $dark-grey;
   }
+
   .selectbox__contain-mobile {
     padding: 0;
+
     select {
       width: 100%;
     }

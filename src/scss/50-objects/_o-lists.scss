@@ -155,19 +155,21 @@ $list-border: $cool-grey;
     padding: 0 0 0.5rem 130px;
   }
 }
+
 .o-deflist-left--small {
   dt {
     width: 70px;
     padding: 0.5rem 0;
   }
+
   dd {
     padding: 0.5rem 0 0.5rem 70px;
+
     &:not(:last-child) {
-/*       border-bottom: 1px solid $keyline-color; */
+      /*       border-bottom: 1px solid $keyline-color; */
     }
   }
 }
-
 
 // def list 2 column fixed
 .o-deflist-right {
@@ -194,6 +196,7 @@ $list-border: $cool-grey;
   li {
     list-style-type: disc;
   }
+
   margin-left: 1.5em;
 }
 

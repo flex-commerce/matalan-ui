@@ -18,7 +18,7 @@
 
 
 @mixin icon($content: '') {
-  &:before {
+  &::before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     content: $content;
@@ -48,7 +48,7 @@ $icon-aeroplane: '\EA01';
 }
 
 // Expose as class
-.icon.icon-aeroplane:before {
+.icon.icon-aeroplane::before {
   content: $icon-aeroplane;
 }
 
@@ -63,7 +63,7 @@ $icon-bin: '\EA02';
 }
 
 // Expose as class
-.icon.icon-bin:before {
+.icon.icon-bin::before {
   content: $icon-bin;
 }
 
@@ -78,7 +78,7 @@ $icon-calendar: '\EA03';
 }
 
 // Expose as class
-.icon.icon-calendar:before {
+.icon.icon-calendar::before {
   content: $icon-calendar;
 }
 
@@ -93,7 +93,7 @@ $icon-click-collect: '\EA04';
 }
 
 // Expose as class
-.icon.icon-click-collect:before {
+.icon.icon-click-collect::before {
   content: $icon-click-collect;
 }
 
@@ -108,7 +108,7 @@ $icon-credit-card: '\EA05';
 }
 
 // Expose as class
-.icon.icon-credit-card:before {
+.icon.icon-credit-card::before {
   content: $icon-credit-card;
 }
 
@@ -123,7 +123,7 @@ $icon-delivery-van: '\EA06';
 }
 
 // Expose as class
-.icon.icon-delivery-van:before {
+.icon.icon-delivery-van::before {
   content: $icon-delivery-van;
 }
 
@@ -138,7 +138,7 @@ $icon-desktop: '\EA07';
 }
 
 // Expose as class
-.icon.icon-desktop:before {
+.icon.icon-desktop::before {
   content: $icon-desktop;
 }
 
@@ -153,7 +153,7 @@ $icon-email: '\EA08';
 }
 
 // Expose as class
-.icon.icon-email:before {
+.icon.icon-email::before {
   content: $icon-email;
 }
 
@@ -168,7 +168,7 @@ $icon-eye: '\EA09';
 }
 
 // Expose as class
-.icon.icon-eye:before {
+.icon.icon-eye::before {
   content: $icon-eye;
 }
 
@@ -183,7 +183,7 @@ $icon-home: '\EA0A';
 }
 
 // Expose as class
-.icon.icon-home:before {
+.icon.icon-home::before {
   content: $icon-home;
 }
 
@@ -198,7 +198,7 @@ $icon-information: '\EA0B';
 }
 
 // Expose as class
-.icon.icon-information:before {
+.icon.icon-information::before {
   content: $icon-information;
 }
 
@@ -213,7 +213,7 @@ $icon-large-cross: '\EA0C';
 }
 
 // Expose as class
-.icon.icon-large-cross:before {
+.icon.icon-large-cross::before {
   content: $icon-large-cross;
 }
 
@@ -228,7 +228,7 @@ $icon-large-tick: '\EA0D';
 }
 
 // Expose as class
-.icon.icon-large-tick:before {
+.icon.icon-large-tick::before {
   content: $icon-large-tick;
 }
 
@@ -243,7 +243,7 @@ $icon-love: '\EA0E';
 }
 
 // Expose as class
-.icon.icon-love:before {
+.icon.icon-love::before {
   content: $icon-love;
 }
 
@@ -258,7 +258,7 @@ $icon-menu-close: '\EA0F';
 }
 
 // Expose as class
-.icon.icon-menu-close:before {
+.icon.icon-menu-close::before {
   content: $icon-menu-close;
 }
 
@@ -273,7 +273,7 @@ $icon-menu-menu: '\EA10';
 }
 
 // Expose as class
-.icon.icon-menu-menu:before {
+.icon.icon-menu-menu::before {
   content: $icon-menu-menu;
 }
 
@@ -288,7 +288,7 @@ $icon-menu-myaccount: '\EA11';
 }
 
 // Expose as class
-.icon.icon-menu-myaccount:before {
+.icon.icon-menu-myaccount::before {
   content: $icon-menu-myaccount;
 }
 
@@ -303,7 +303,7 @@ $icon-menu-storefinder: '\EA12';
 }
 
 // Expose as class
-.icon.icon-menu-storefinder:before {
+.icon.icon-menu-storefinder::before {
   content: $icon-menu-storefinder;
 }
 
@@ -318,7 +318,7 @@ $icon-minibag: '\EA13';
 }
 
 // Expose as class
-.icon.icon-minibag:before {
+.icon.icon-minibag::before {
   content: $icon-minibag;
 }
 
@@ -333,7 +333,7 @@ $icon-minus: '\EA14';
 }
 
 // Expose as class
-.icon.icon-minus:before {
+.icon.icon-minus::before {
   content: $icon-minus;
 }
 
@@ -348,7 +348,7 @@ $icon-mobile: '\EA15';
 }
 
 // Expose as class
-.icon.icon-mobile:before {
+.icon.icon-mobile::before {
   content: $icon-mobile;
 }
 
@@ -363,7 +363,7 @@ $icon-offer: '\EA16';
 }
 
 // Expose as class
-.icon.icon-offer:before {
+.icon.icon-offer::before {
   content: $icon-offer;
 }
 
@@ -378,7 +378,7 @@ $icon-pencil: '\EA17';
 }
 
 // Expose as class
-.icon.icon-pencil:before {
+.icon.icon-pencil::before {
   content: $icon-pencil;
 }
 
@@ -393,7 +393,7 @@ $icon-plus: '\EA18';
 }
 
 // Expose as class
-.icon.icon-plus:before {
+.icon.icon-plus::before {
   content: $icon-plus;
 }
 
@@ -408,7 +408,7 @@ $icon-question: '\EA19';
 }
 
 // Expose as class
-.icon.icon-question:before {
+.icon.icon-question::before {
   content: $icon-question;
 }
 
@@ -423,7 +423,7 @@ $icon-return: '\EA1A';
 }
 
 // Expose as class
-.icon.icon-return:before {
+.icon.icon-return::before {
   content: $icon-return;
 }
 
@@ -438,7 +438,7 @@ $icon-reward-card: '\EA1B';
 }
 
 // Expose as class
-.icon.icon-reward-card:before {
+.icon.icon-reward-card::before {
   content: $icon-reward-card;
 }
 
@@ -453,7 +453,7 @@ $icon-search: '\EA1C';
 }
 
 // Expose as class
-.icon.icon-search:before {
+.icon.icon-search::before {
   content: $icon-search;
 }
 
@@ -468,7 +468,7 @@ $icon-signal: '\EA1D';
 }
 
 // Expose as class
-.icon.icon-signal:before {
+.icon.icon-signal::before {
   content: $icon-signal;
 }
 
@@ -483,7 +483,7 @@ $icon-small-tick: '\EA1E';
 }
 
 // Expose as class
-.icon.icon-small-tick:before {
+.icon.icon-small-tick::before {
   content: $icon-small-tick;
 }
 
@@ -498,7 +498,7 @@ $icon-social-blog: '\EA1F';
 }
 
 // Expose as class
-.icon.icon-social-blog:before {
+.icon.icon-social-blog::before {
   content: $icon-social-blog;
 }
 
@@ -513,7 +513,7 @@ $icon-social-facebook: '\EA20';
 }
 
 // Expose as class
-.icon.icon-social-facebook:before {
+.icon.icon-social-facebook::before {
   content: $icon-social-facebook;
 }
 
@@ -528,7 +528,7 @@ $icon-social-google: '\EA21';
 }
 
 // Expose as class
-.icon.icon-social-google:before {
+.icon.icon-social-google::before {
   content: $icon-social-google;
 }
 
@@ -543,7 +543,7 @@ $icon-social-instagram: '\EA22';
 }
 
 // Expose as class
-.icon.icon-social-instagram:before {
+.icon.icon-social-instagram::before {
   content: $icon-social-instagram;
 }
 
@@ -558,7 +558,7 @@ $icon-social-pinterest: '\EA23';
 }
 
 // Expose as class
-.icon.icon-social-pinterest:before {
+.icon.icon-social-pinterest::before {
   content: $icon-social-pinterest;
 }
 
@@ -573,7 +573,7 @@ $icon-social-twitter: '\EA24';
 }
 
 // Expose as class
-.icon.icon-social-twitter:before {
+.icon.icon-social-twitter::before {
   content: $icon-social-twitter;
 }
 
@@ -588,7 +588,7 @@ $icon-social-youtube: '\EA25';
 }
 
 // Expose as class
-.icon.icon-social-youtube:before {
+.icon.icon-social-youtube::before {
   content: $icon-social-youtube;
 }
 
@@ -603,7 +603,7 @@ $icon-star-empty: '\EA26';
 }
 
 // Expose as class
-.icon.icon-star-empty:before {
+.icon.icon-star-empty::before {
   content: $icon-star-empty;
 }
 
@@ -618,7 +618,7 @@ $icon-star-fill: '\EA27';
 }
 
 // Expose as class
-.icon.icon-star-fill:before {
+.icon.icon-star-fill::before {
   content: $icon-star-fill;
 }
 
@@ -633,7 +633,7 @@ $icon-storefinder: '\EA28';
 }
 
 // Expose as class
-.icon.icon-storefinder:before {
+.icon.icon-storefinder::before {
   content: $icon-storefinder;
 }
 
@@ -648,7 +648,7 @@ $icon-tablet: '\EA29';
 }
 
 // Expose as class
-.icon.icon-tablet:before {
+.icon.icon-tablet::before {
   content: $icon-tablet;
 }
 
@@ -663,7 +663,7 @@ $icon-telephone: '\EA2A';
 }
 
 // Expose as class
-.icon.icon-telephone:before {
+.icon.icon-telephone::before {
   content: $icon-telephone;
 }
 
@@ -678,7 +678,7 @@ $icon-padlock-s: '\EA2B';
 }
 
 // Expose as class
-.icon.icon-padlock-s:before {
+.icon.icon-padlock-s::before {
   content: $icon-padlock-s;
 }
 
@@ -693,7 +693,7 @@ $icon-padlock-u: '\EA2C';
 }
 
 // Expose as class
-.icon.icon-padlock-u:before {
+.icon.icon-padlock-u::before {
   content: $icon-padlock-u;
 }
 
@@ -708,7 +708,7 @@ $icon-ui-back: '\EA2D';
 }
 
 // Expose as class
-.icon.icon-ui-back:before {
+.icon.icon-ui-back::before {
   content: $icon-ui-back;
 }
 
@@ -723,7 +723,7 @@ $icon-ui-cross: '\EA2E';
 }
 
 // Expose as class
-.icon.icon-ui-cross:before {
+.icon.icon-ui-cross::before {
   content: $icon-ui-cross;
 }
 
@@ -738,7 +738,7 @@ $icon-ui-down: '\EA2F';
 }
 
 // Expose as class
-.icon.icon-ui-down:before {
+.icon.icon-ui-down::before {
   content: $icon-ui-down;
 }
 
@@ -753,7 +753,7 @@ $icon-ui-forward: '\EA30';
 }
 
 // Expose as class
-.icon.icon-ui-forward:before {
+.icon.icon-ui-forward::before {
   content: $icon-ui-forward;
 }
 
@@ -768,7 +768,7 @@ $icon-ui-up: '\EA31';
 }
 
 // Expose as class
-.icon.icon-ui-up:before {
+.icon.icon-ui-up::before {
   content: $icon-ui-up;
 }
 
@@ -783,7 +783,7 @@ $icon-user-female: '\EA32';
 }
 
 // Expose as class
-.icon.icon-user-female:before {
+.icon.icon-user-female::before {
   content: $icon-user-female;
 }
 
@@ -798,7 +798,7 @@ $icon-user-male: '\EA33';
 }
 
 // Expose as class
-.icon.icon-user-male:before {
+.icon.icon-user-male::before {
   content: $icon-user-male;
 }
 
@@ -813,7 +813,7 @@ $icon-ui-3-across: '\EA34';
 }
 
 // Expose as class
-.icon.icon-ui-3-across:before {
+.icon.icon-ui-3-across::before {
   content: $icon-ui-3-across;
 }
 
@@ -828,7 +828,7 @@ $icon-ui-4-across: '\EA36';
 }
 
 // Expose as class
-.icon.icon-ui-4-across:before {
+.icon.icon-ui-4-across::before {
   content: $icon-ui-4-across;
 }
 

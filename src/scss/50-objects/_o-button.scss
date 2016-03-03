@@ -57,7 +57,7 @@ $button-padding-y: $default-pad-y;
   > .icon {
     @include absolute(left 0 top 0 bottom 0);
 
-    background-color: rgba($black, .1);
+    background-color: rgba($black, 0.1);
     width: 2.85em;
 
     &::before {

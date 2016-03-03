@@ -16,18 +16,13 @@
 // Font Face
 // =============================================================================
 
-@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf) {  // removed svg, woff2
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf) {
+  // removed svg, woff2
   $src: null;
 
-  $extmods: (
-    eot: "?",
-    svg: "#" + str-replace($name, " ", "_")
-  );
+  $extmods: (eot: "?", svg: "#" + str-replace($name, " ", "_"));
 
-  $formats: (
-    otf: "opentype",
-    ttf: "truetype"
-  );
+  $formats: (otf: "opentype", ttf: "truetype");
 
   @each $ext in $exts {
     $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);

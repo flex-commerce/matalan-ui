@@ -27,25 +27,6 @@
 .o-checkout__container {
   @include clearfix;
 
-  // fieldset {
-  //   outline: 2px dotted red;
-
-  //   @include clearfix;
-
-  //   position: relative;
-
-  //   &.active,
-  //   &.completed {
-  //     .o-checkout__content {
-  //       display: block;
-  //     }
-
-  //     .o-checkout__title {
-  //       color: $dark-grey-lighten-100;
-  //     }
-  //   }
-  // }
-
   .icon-small-tick::before {
     color: $primary-color;
   }
@@ -66,42 +47,7 @@
   }
 }
 
-// .orderlist--item-total {
-//   @include mq($until: md) {
-//     text-align: right;
-//   }
-// }
-
-// .orderlist--item-image {
-//   @include mq($from: lg) {
-//     width: 220px;
-
-//     img {
-//       max-width: 80%;
-//     }
-//   }
-
-
-//   @include mq($until: lg) {
-//     width: 180px;
-
-//     img {
-//       max-width: 90%;
-//     }
-//   }
-
-
-//   @include mq($until: md) {
-//     width: 120px;
-
-//     img {
-//       max-width: 100%;
-//     }
-//   }
-// }
-
 @include mq($until: md) {
-
   .address-picker__block:nth-child(3) {
     font-size: 95%;
     clear: left;
@@ -110,7 +56,6 @@
 
 
 @include mq($from: md) {
-
   .address-picker__block:nth-child(4) {
     clear: left;
   }

@@ -84,6 +84,7 @@
     display: inline-block;
     width: 42px;
     opacity: 0.5;
+
     // offset for image alignment next to buttons
     margin-top: 3px;
 
@@ -99,8 +100,9 @@
 }
 
 .search__header__products {
-  @include font-size(12px);
   @include column((xs: 6, lg: 1.75));
+
+  @include font-size(12px);
 }
 
 .search__header__pagination {
@@ -118,7 +120,6 @@
 .search__header__sort {
   @include column((xs: 6, lg: 3.75));
 }
-
 
 /* Handling for tile width icons */
 
