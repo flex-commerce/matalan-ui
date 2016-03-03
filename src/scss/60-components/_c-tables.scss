@@ -3,7 +3,7 @@ $default-th-color: $primary-color;
 $default-th-bg: $light-grey;
 $inverse-table-color: $dark-grey;
 $inverse-table-bg: $light-grey;
-$inverse-table-border: $light-grey-hover;
+$inverse-table-border: $cool-grey;
 $dark-th-color: $dark-grey;
 $table-border-width: 1px;
 $table-border-color: $keyline-color;
@@ -27,18 +27,18 @@ $table-border-color: $keyline-color;
     vertical-align: top;
     text-align: center;
 
-    &:first-of-type {
+    &:first-of-type:not(:last-of-type) {
       text-align: left;
     }
 
-    &:last-of-type {
+    &:last-of-type:not(:first-of-type) {
       text-align: right;
     }
   }
 
-  tbody th {
-    text-align: left;
-  }
+  // tbody th {
+  //   text-align: left;
+  // }
 }
 
 ul.c-table .th,
@@ -195,9 +195,15 @@ ul.c-table .td {
   }
 
   th,
-  td,
-  thead th {
-    border-color: $inverse-table-border;
+  td {
+    border-style: none none solid;
+    border-width: 1px;
+  }
+  th {
+    border-color: $dark-grey-lighten-30;
+  }
+  td {
+    border-color: $dark-grey-lighten-20;
   }
 }
 
@@ -218,12 +224,6 @@ ul.c-table .td {
     > table {
       min-width: 720px;
     }
-
-    // TODO: find out if we need this still.
-    //
-    // border: $table-border-width solid $table-border-color;
-    // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
-
   }
 }
 
@@ -266,6 +266,7 @@ ul.c-table .td {
         display: inline-block;
 
         &:last-of-type {
+          outline: 3px solid red;
           &::before {
             content: ' - ';
           }

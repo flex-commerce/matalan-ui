@@ -7,3 +7,13 @@
   // outline: 1px solid red;
 }
 
+
+// sizeguide quick rules
+// hide the inline title if we're on the full accordion version
+.page--text--sizeguide {
+  .o-accord__container {
+    .sizeguide--content-title {
+      margin: 0.25em 0 0.5em;
+    }
+  }
+}
