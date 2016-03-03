@@ -85,11 +85,12 @@
                 </a>
                 &nbsp;
               </div>
-              <div class="o-form__input-contain o-form__input-contain--quantity colspan-8 u-font-ta-r">
-                <a class="c-btn c-btn--primary u-font-no-underline js-remove-item">-</a>
-                <span class="o-input--textual js-item-count">1</span>
-                <input type="hidden" class="o-input o-input--textual u-pad-h-0 u-font-ta-r" value="1" readonly>
-                <a class="c-btn c-btn--primary u-font-no-underline js-add-item">+</a>
+              <div class="u-font-ta-r">
+                <select class="selectbox-dropdown__inline u-fr">
+                  {{# times 10}}
+                  <option>{{this}}</option>
+                  {{/ times }}
+                </select>
               </div>
             </div>
             <div class="o-bag--list-item--price-col o-bag--list-item--price--save colspan-2 hidden@md-down u-color-pri u-font-ta-c u-font-wb">
