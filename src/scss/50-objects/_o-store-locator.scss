@@ -45,7 +45,9 @@ $listings-keyline-color: $keyline-color;
     // display: block;
     // text-decoration: none;
     padding-left: 2em;
-    border-bottom: 1px solid $listings-keyline-color;
+    @include mq($from: md) {
+      border-bottom: 1px solid $listings-keyline-color;
+    }
     position: relative;
   }
   .o-store-map-close {

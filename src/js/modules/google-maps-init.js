@@ -466,7 +466,10 @@ function initialize() {
         closeMapButton.className = 'o-store-map-close hidden@md-up u-cf';
         closeMapButton.innerHTML = '<a class="c-btn c-btn--primary col-12@xs u-font-upper store-finder__map--mobile-close u-mar-t-large u-mar-b-huge" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>Close Map</a>';
 
-        resultsForDisplay.appendChild(closeMapButton);
+        var seperator = document.createElement('div');
+        seperator.className = 'separator u-mar-b-medium hidden@md-up';
+
+        resultsForDisplay.appendChild(seperator);
       };
 
       listings.appendChild(resultsForDisplay);
