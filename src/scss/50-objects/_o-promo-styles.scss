@@ -2,22 +2,29 @@
 //  Promotion Display Styles
 //=============================
 $promo-line-height: $base-line-height;
+
 .c-promo {
   @include button-size($promo-padding-y, $promo-padding-x, 1em, $promo-line-height);
+
   &.c-promo--small {
-    @include button-size(0.5px, 0.5px, .875em, $promo-line-height);
+    @include button-size(0.5px, 0.5px, 0.875em, $promo-line-height);
   }
+
   &.c-promo--none {
     visibility: hidden;
   }
+
   &.c-promo--primary {
     @include style-variant($color: $white, $background: $primary-color, $border: $primary-color);
+
     text-transform: uppercase;
+
     &.c-promo--link {
       &.hover,
       &:hover,
       &:focus {
         @include style-variant($color: $white, $background: $primary-color-hover, $border: $primary-color-hover);
+
         text-decoration: underline;
       }
     }

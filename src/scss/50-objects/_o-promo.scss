@@ -1,5 +1,6 @@
 $promo-padding-x: $default-pad-x;
 $promo-padding-y: $default-pad-y;
+
 //=============================
 //  promo Base Styles
 //=============================
@@ -8,8 +9,10 @@ $promo-padding-y: $default-pad-y;
   border-style: solid;
   border-width: 1px;
   text-align: center;
+
   &.c-promo--link {
     cursor: pointer;
+
     &:active,
     &.active,
     &:focus,
@@ -17,6 +20,7 @@ $promo-padding-y: $default-pad-y;
       @include tab-focus;
     }
   }
+
   // scss-lint:disable QualifyingElement
   &.disabled,
   &:disabled,
@@ -24,6 +28,7 @@ $promo-padding-y: $default-pad-y;
     opacity: .65;
     pointer-events: none;
   }
+
   // scss-lint:enable QualifyingElement
 }
 
@@ -31,6 +36,7 @@ $promo-padding-y: $default-pad-y;
 .c-promo--block {
   display: block;
   width: 100%;
+
   // Vertically space out multiple block promos ?
   + .c-promo--block {
     margin-top: 5px;
@@ -46,12 +52,16 @@ $promo-padding-y: $default-pad-y;
 .c-promo--icon.c-promo--icon {
   position: relative;
   padding-left: 3.85em;
+
   > .icon {
     @include absolute(left 0 top 0 bottom 0);
-    background-color: rgba($black, .1);
+
+    background-color: rgba($black, 0.1);
     width: 2.85em;
+
     &::before {
       @include center(xy, abs);
+
       vertical-align: middle;
     }
   }

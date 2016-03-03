@@ -9,7 +9,6 @@
   vertical-align: sub;
 }
 
-
 .icon--vertical-right:before {
   @include center(y, abs);
 
@@ -33,4 +32,3 @@
     width: 1.75em;
   }
 }
-

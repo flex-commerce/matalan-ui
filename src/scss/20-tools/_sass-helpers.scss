@@ -8,13 +8,14 @@
   @return nth($list, length($list));
 }
 
-
 @function last-index($list, $value) {
   $index: null;
+
   @for $i from 1 through length($list) {
     @if nth($list, $i) == $value {
       $index: $i;
     }
   }
+
   @return $index;
 }

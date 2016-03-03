@@ -16,7 +16,7 @@
 
 
 @mixin icon($content: '') {
-  &:before {
+  &::before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     content: $content;
@@ -48,7 +48,7 @@ $icon-{{icon.name}}: '\{{icon.code}}';
 }
 
 // Expose as class
-.icon.icon-{{icon.name}}:before {
+.icon.icon-{{icon.name}}::before {
   content: $icon-{{icon.name}};
 }
 

@@ -2,23 +2,28 @@
   span {
     display: inline-block;
   }
+
   .icon-star-fill {
     margin-bottom: 0;
+
     &.active {
       &::before {
         color: $supp-gold;
       }
+
       &:hover {
         &::before {
           color: $supp-gold;
         }
       }
     }
+
     &:hover {
       &::before {
         color: $cool-grey;
       }
     }
+
     &::before {
       font-size: inherit;
       color: $cool-grey;
@@ -26,11 +31,9 @@
   }
 }
 
-
 .rating__small {
   font-size: 85%;
 }
-
 
 .rating__inline {
   display: inline-block;

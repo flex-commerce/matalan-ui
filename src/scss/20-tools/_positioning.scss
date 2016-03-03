@@ -31,25 +31,50 @@
 
 @mixin position($position, $args: ()) {
   $offsets: top right bottom left;
-  position: $position;                                               // 1
 
-  @each $offset in $offsets {                                        // 3
-    $index: index($args, $offset);                                   // 4
+  position: $position;
 
-    @if $index {                                                     // 5
-      @if $index == length($args) {                                  // 6
-        #{$offset}: 0;                                               // 7
+  // 1
+
+  @each $offset in $offsets {
+    // 3
+    $index: index($args, $offset);
+
+    // 4
+
+    @if $index {
+      // 5
+      @if $index == length($args) {
+        // 6
+        #{$offset}: 0;
+
+        // 7
       }
-      @else {                                                        // 8
-        $next: nth($args, $index + 1);                               // 9
-        @if is-valid-length($next) {                                 // 10
-          #{$offset}: $next;                                         // 11
+
+      @else {
+        // 8
+        $next: nth($args, $index + 1);
+
+        // 9
+        @if is-valid-length($next) {
+          // 10
+          #{$offset}: $next;
+
+          // 11
         }
-        @else if index($offsets, $next) {                            // 12
-          #{$offset}: 0;                                             // 13
+
+        @else if index($offsets, $next) {
+          // 12
+          #{$offset}: 0;
+
+          // 13
         }
-        @else {                                                      // 14
-          @warn "Invalid value `#{$next}` for offset `#{$offset}`."; // 15
+
+        @else {
+          // 14
+          @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+
+          // 15
         }
       }
     }
@@ -63,8 +88,7 @@
 // @return [bool]
 
 @function is-valid-length($value) {
-  @return (type-of($value) == "number" and not unitless($value))
-       or (index(auto initial inherit 0, $value) != false);
+  @return type-of($value) == "number" and not unitless($value) or index(auto initial inherit 0, $value) != false;
 }
 
 // Shorthands
@@ -88,30 +112,39 @@
 // .a {
 //   @include absolute();
 // }
+
 // .b {
 //   @include absolute(top);
 // }
+
 // .c {
 //   @include absolute(top right);
 // }
+
 // .d {
 //   @include absolute(top right bottom);
 // }
+
 // .e {
 //   @include absolute(top right bottom left);
 // }
+
 // .f {
 //   @include absolute(top right 1em);
 // }
+
 // .g {
 //   @include absolute(top 1em right);
 // }
+
 // .h {
 //   @include absolute(top 1em right 100%);
 // }
+
 // .i {
 //   @include absolute(top right mistake);
 // }
+
 // .j {
 //   @include absolute(top 1em right 1em bottom 1em left 1em)
 // }

@@ -18,20 +18,25 @@
 // }
 
 @mixin arrow($edge, $location, $color, $size: 20px, $offset: 0) {
-
   // If an offset has been defined, let's use it.
-  @if ($offset != 0) {
+  @if $offset != 0 {
     $offset: $offset;
   }
 
   // Map keyword sizes to actual numbers. Use passed0in value if defined.
-  @if ($size == 'small') {
+  @if $size == "small" {
     $size: 10px;
-  } @elseif ($size == 'medium') {
+  }
+
+  @else if $size == "medium" {
     $size: 15px;
-  } @elseif ($size == 'large') {
+  }
+
+  @else if $size == "large" {
     $size: 20px;
-  } @else {
+  }
+
+  @else {
     $size: $size;
   }
 
@@ -40,7 +45,9 @@
    *
    * 1. Host element needs relative positioning.
    */
-  position: relative; /* [1] */
+  position: relative;
+
+  /* [1] */
 
   /**
    * This is where the magic happens. Pure CSS arrows.
@@ -56,90 +63,98 @@
   &::before {
     content: "";
     position: absolute;
-    z-index: 1; /* [1] */
-    border: $size solid transparent; /* [2] */
-    margin: 0;    /* [3] */
-    top:    auto; /* [3] */
-    right:  auto; /* [3] */
-    bottom: auto; /* [3] */
-    left:   auto; /* [3] */
+    z-index: 1;
 
-    @if ($edge == 'top') {
+    /* [1] */
+    border: $size solid transparent;
+
+    /* [2] */
+    margin: 0;
+
+    /* [3] */
+    top: auto;
+
+    /* [3] */
+    right: auto;
+
+    /* [3] */
+    bottom: auto;
+
+    /* [3] */
+    left: auto;
+
+    /* [3] */
+
+    @if $edge == "top" {
       bottom: 100%;
       border-bottom-color: $color;
 
-      @if ($location == 'left') {
+      @if $location == "left" {
         left: $offset;
       }
 
-      @if ($location == 'middle') {
+      @if $location == "middle" {
         left: 50%;
         margin-left: -$size;
       }
 
-      @if ($location == 'right') {
+      @if $location == "right" {
         right: $offset;
       }
-
     }
 
-    @if ($edge == 'right') {
+    @if $edge == "right" {
       left: 100%;
       border-left-color: $color;
 
-      @if ($location == 'top') {
+      @if $location == "top" {
         top: $offset;
       }
 
-      @if ($location == 'middle') {
+      @if $location == "middle" {
         top: 50%;
         margin-top: -$size;
       }
 
-      @if ($location == 'bottom') {
+      @if $location == "bottom" {
         bottom: $offset;
       }
-
     }
 
-    @if ($edge == 'bottom') {
+    @if $edge == "bottom" {
       top: 100%;
       border-top-color: $color;
 
-      @if ($location == 'left') {
+      @if $location == "left" {
         left: $offset;
       }
 
-      @if ($location == 'middle') {
+      @if $location == "middle" {
         left: 50%;
         margin-left: -$size;
       }
 
-      @if ($location == 'right') {
+      @if $location == "right" {
         right: $offset;
       }
-
     }
 
-    @if ($edge == 'left') {
+    @if $edge == "left" {
       right: 100%;
       border-right-color: $color;
 
-      @if ($location == 'top') {
+      @if $location == "top" {
         top: $offset;
       }
 
-      @if ($location == 'middle') {
+      @if $location == "middle" {
         top: 50%;
         margin-top: -$size;
       }
 
-      @if ($location == 'bottom') {
+      @if $location == "bottom" {
         bottom: $offset;
       }
-
     }
-
   }
-
 }
