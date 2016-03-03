@@ -3,7 +3,7 @@ $tab-spacing: rem-calc(8);
 $tab-border-width: rem-calc(1);
 $tab-background-colour: $light-grey;
 $tab-background-colour-hover: $light-grey-hover;
-$tab-border-color: #ddd;
+$tab-border-color: $cool-grey;
 
 // ========================
 // Tab Rules
@@ -20,6 +20,7 @@ $tab-border-color: #ddd;
   .c-tabs__header__item:not(.active) {
     position: relative;
     z-index: 1;
+    margin-top: -1px;
 
     // pops inactive tab behind the content border
 
