@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  {{> partials/html-head }}
+</head>
+
+<body class="page--text page--text__custom">
+  {{> parcels/header }}
+
+  <div class="container page--text__custom--wrapper" role="main">
+
+    <div class="size-guides">
+      <h1>Size Guides</h1>
+
+      <div class="o-accord__container" id="sizeguide" role="tablist">
+
+        <div class="panel">
+          <a data-toggle="collapse" data-parent="#sizeguide" href="#sizeguide-holder--womens">
+            <strong>sizeguide-holder--womens</strong>
+          </a>
+          <div id="sizeguide-holder--womens" class="collapse" role="tabpanel">
+            {{> parcels/sizeguide-womens }}
+          </div>
+        </div>
+
+        <div class="panel">
+          <a data-toggle="collapse" data-parent="#sizeguide" href="#sizeguide-holder--mens">
+            <strong>sizeguide-holder--mens</strong>
+          </a>
+          <div id="sizeguide-holder--mens" class="collapse" role="tabpanel">
+            {{> parcels/sizeguide-mens }}
+          </div>
+        </div>
+
+        <div class="panel">
+          <a data-toggle="collapse" data-parent="#sizeguide" href="#sizeguide-holder--kids">
+            <strong>sizeguide-holder--kids</strong>
+          </a>
+          <div id="sizeguide-holder--kids" class="collapse" role="tabpanel">
+            {{> parcels/sizeguide-kids }}
+          </div>
+        </div>
+
+        <div class="panel">
+          <a data-toggle="collapse" data-parent="#sizeguide" href="#sizeguide-holder--home">
+            <strong>sizeguide-holder--home</strong>
+          </a>
+          <div id="sizeguide-holder--home" class="collapse" role="tabpanel">
+            {{> parcels/sizeguide-home }}
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+  {{> parcels/footer }}
+  {{> partials/js-footer}}
+</body>
+
+</html>

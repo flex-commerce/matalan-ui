@@ -5,20 +5,7 @@
   font-size: 90%;
 }
 
-%u-font--small,
-.u-font--small {
-  font-size: 90%;
-}
 
-%u-font--smaller,
-.u-font--smaller {
-  font-size: 85%;
-}
-
-%u-font--smallest,
-.u-font--smallest {
-  font-size: 75%;
-}
 
 %u-font--italic,
 .u-font--italic {
@@ -122,7 +109,7 @@
 
 // text align center
 .u-font-ta-c {
-  text-align: center;
+  text-align: center !important;
 }
 
 // text align left
@@ -135,52 +122,73 @@
   text-align: right;
 }
 
-// non-relative font sizer
-.u-font-small {
-  font-size: .95rem;
+// // non-relative font sizer
+// .u-font-small {
+//   font-size: .95rem;
+// }
+
+// .u-font-smaller {
+//   font-size: .85rem;
+// }
+
+// .u-font-smallest {
+//   font-size: .715rem;
+// }
+
+// .u-font-large {
+//   font-size: 1.125rem;
+// }
+
+// .u-font-larger {
+//   font-size: 1.225rem;
+// }
+
+// .u-font-largest {
+//   font-size: 1.35rem;
+// }
+
+%u-font--small,
+.u-font--small {
+  font-size: 90%;
 }
 
-.u-font-smaller {
-  font-size: .85rem;
+%u-font--smaller,
+.u-font--smaller {
+  font-size: 85%;
 }
 
-.u-font-smallest {
-  font-size: .715rem;
-}
-
-.u-font-large {
-  font-size: 1.125rem;
-}
-
-.u-font-larger {
-  font-size: 1.225rem;
-}
-
-.u-font-largest {
-  font-size: 1.35rem;
+%u-font--smallest,
+.u-font--smallest {
+  font-size: 75%;
 }
 
 // relative font sizer
-.u-font-small-rel {
+%u-font--small-rel,
+.u-font--small-rel {
   font-size: .95em;
 }
 
-.u-font-smaller-rel {
+%u-font--smaller-rel,
+.u-font--smaller-rel {
   font-size: .85em;
 }
 
-.u-font-smallest-rel {
+%u-font--smallest-rel,
+.u-font--smallest-rel {
   font-size: .715em;
 }
 
-.u-font-large-rel {
+%u-font--large-rel,
+.u-font--large-rel {
   font-size: 1.125em;
 }
 
-.u-font-larger-rel {
+%u-font--larger-rel,
+.u-font--larger-rel {
   font-size: 1.225em;
 }
 
-.u-font-largest-rel {
+%u-font--largest-rel,
+.u-font--largest-rel {
   font-size: 1.35em;
 }

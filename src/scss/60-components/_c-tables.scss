@@ -3,7 +3,7 @@ $default-th-color: $primary-color;
 $default-th-bg: $light-grey;
 $inverse-table-color: $dark-grey;
 $inverse-table-bg: $light-grey;
-$inverse-table-border: $light-grey-hover;
+$inverse-table-border: $cool-grey;
 $dark-th-color: $dark-grey;
 $table-border-width: 1px;
 $table-border-color: $keyline-color;
@@ -27,18 +27,18 @@ $table-border-color: $keyline-color;
     vertical-align: top;
     text-align: center;
 
-    &:first-of-type {
+    &:first-of-type:not(:last-of-type) {
       text-align: left;
     }
 
-    &:last-of-type {
+    &:last-of-type:not(:first-of-type) {
       text-align: right;
     }
   }
 
-  tbody th {
-    text-align: left;
-  }
+  // tbody th {
+  //   text-align: left;
+  // }
 }
 
 ul.c-table .th,
@@ -105,12 +105,16 @@ ul.c-table .td {
   .th {
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   td,
   .td {
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 
@@ -195,9 +199,18 @@ ul.c-table .td {
   }
 
   th,
-  td,
-  thead th {
-    border-color: $inverse-table-border;
+  td {
+    border-style: none none solid;
+    border-width: 1px;
+  }
+
+
+  th {
+    border-color: $dark-grey-lighten-30;
+  }
+
+  td {
+    border-color: $dark-grey-lighten-20;
   }
 }
 
@@ -208,22 +221,31 @@ ul.c-table .td {
 // will display normally.
 @include mq($until: lg) {
   .c-table--responsive {
-    display: block;
     width: 100%;
-    min-height: 0.01%;
-
-    // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+    min-height: .01%;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    display: block;
+    overflow-y: hidden;
+    // // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
     overflow-x: auto;
 
+    // border-bottom: 1px solid $cool-grey;
+
     > table {
-      min-width: 720px;
+      margin-bottom: 0;
+      border: 1px solid $cool-grey;
+      th,
+      td {
+        // white-space: nowrap;
+      }
+
+      tr:last-of-type {
+        td, th {
+          border-style: none;
+        }
+      }
+
     }
-
-    // TODO: find out if we need this still.
-    //
-    // border: $table-border-width solid $table-border-color;
-    // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
-
   }
 }
 
@@ -266,6 +288,8 @@ ul.c-table .td {
         display: inline-block;
 
         &:last-of-type {
+          outline: 3px solid red;
+
           &::before {
             content: ' - ';
           }
