@@ -1,7 +1,5 @@
-
 <div class="modal modal--default modal-lg modal--click-and-collect" id="click-and-collect-contain">
   <div class="modal-dialog">
-
     <div class="modal-content">
       <div class="modal-header">
         <a type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -9,16 +7,15 @@
         </a>
         <h4 class="modal-title">Click &amp; Collect</h4>
       </div>
-
       <div class="modal-body">
         <div class="row o-store-locator">
           <div class="col-12@xs col-5@md">
             <h5 class="u-border2-b u-border2-t u-pad-v-small">All Stores</h5>
-            <div class="o-store-locator__locations u-scrollbar">
+            <div class="o-store-locator__locations u-scrollbar js-scroll-hold" data-scrollResponsive="lg">
               <div id="listings" class="o-store-locator__listings"></div>
             </div>
           </div>
-          <div class="col-12@xs col-7@md o-map__outer-container hidden@sm-down">
+          <div class="col-12@xs col-7@md u-pad-0 o-map__outer-container hidden@sm-down">
             <div class="map-wrapper">
               <div id="map" class="map"></div>
             </div>
@@ -26,6 +23,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>

@@ -273,9 +273,11 @@ function initialize() {
                     // $('#store-' + e.id).get(0).scrollIntoView({block: "start", behavior: "smooth"});
                     // $('.o-store-locator__locations').scrollTo('#store-' + e.id);
                     //
-                    $('.o-store-locator__locations').animate({
-                      scrollTop: $('#store-' + e.id).position().top
-                    }, 500);
+                    if (!isModal) {
+                      $('.o-store-locator__locations').animate({
+                        scrollTop: $('#store-' + e.id).position().top
+                      }, 500);
+                    }
                   }
                   var locationIcon = $('.js-use-location').find('i').prop('outerHTML');
                   $('.js-use-location').html(locationIcon + 'Use my location').removeClass('c-loading');
@@ -287,7 +289,6 @@ function initialize() {
           }
         }
       }
-      console.log(markers_data)
 
       if (!isSingleStore) {
         if (longitude && latitude) {
@@ -464,8 +465,8 @@ function initialize() {
 
         var closeMapButton = document.createElement('div');
         closeMapButton.className = 'o-store-map-close hidden@md-up u-cf';
-        closeMapButton.innerHTML = '<a class="c-btn c-btn--primary col-12@xs u-font-upper store-finder__map--mobile-close u-mar-t-large u-mar-b-huge" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>Close Map</a>';
-
+        closeMapButton.innerHTML = '<a class="c-btn c-btn--primary col-12@xs u-font-upper store-finder__map--mobile-close u-mar-t-large u-mar-b-small" data-storeId="' + prop.storeid + '"><i class="icon icon-menu-storefinder u-color-pri u-pad-r-huge icon--vertical-middle"></i>Close Map</a>';
+        resultsForDisplay.appendChild(closeMapButton);
         var seperator = document.createElement('div');
         seperator.className = 'separator u-mar-b-medium hidden@md-up';
 
