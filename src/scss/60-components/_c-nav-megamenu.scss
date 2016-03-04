@@ -94,6 +94,7 @@
 .navbar__header span {
   @include font-size(10px);
 }
+
 .navbar__header span,
 .navbar__top-item > .link,
 .sub-nav-title > .link {
@@ -371,11 +372,11 @@
 
   display: block;
   will-change: transform;
-  background-color: rgba($black, .2);
+  background-color: rgba($black, 0.2);
   z-index: 3;
 
   &.js-clickcatcher-white {
-    background-color: rgba($black, .2);
+    background-color: rgba($black, 0.2);
     margin-top: 200px;
   }
 }

@@ -3,7 +3,7 @@ $font-size-base: 1rem;
 
 $zindex-popover: 1060;
 $popover-max-width: 280px;
-$font-size-sm: .875rem;
+$font-size-sm: 0.875rem;
 
 $popover-bg: $white;
 $popover-border-color: $cool-grey;
@@ -14,22 +14,19 @@ $popover-border-width: 1px;
 $border-radius-lg: 0;
 $popover-box-shadow: none;
 
-$border-width : 1px;
+$border-width: 1px;
 $popover-arrow-width: 7px;
-$popover-arrow-outer-width: ($popover-arrow-width + 1px);
+$popover-arrow-outer-width: $popover-arrow-width + 1px;
 $popover-arrow-outer-color: fade-in($popover-border-color, 0.05);
 
 $popover-title-padding-y: 0.5em;
-$popover-title-padding-x: 1.0em;
+$popover-title-padding-x: 1em;
 
 $popover-content-padding-y: 1em;
 $popover-content-padding-x: $popover-title-padding-x;
 
-$offset-border-width: ($border-width / $font-size-root);
+$offset-border-width: $border-width / $font-size-root;
 $popover-arrow-width: 10px !default;
-
-
-
 
 .popover {
   position: absolute;
@@ -39,18 +36,20 @@ $popover-arrow-width: 10px !default;
   display: block;
   max-width: $popover-max-width;
   padding: 1px;
+
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   // @include reset-text();
   font-size: $font-size-sm;
+
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: $popover-bg;
   background-clip: padding-box;
   border: $popover-border-width solid $popover-border-color;
+
   // @include border-radius($border-radius-lg);
   // @include box-shadow($popover-box-shadow);
-
 
   // Popover directions
 
@@ -64,6 +63,7 @@ $popover-arrow-width: 10px !default;
       margin-left: -$popover-arrow-outer-width;
       border-top-color: $popover-arrow-outer-color;
       border-bottom-width: 0;
+
       &::after {
         bottom: 1px;
         margin-left: -$popover-arrow-width;
@@ -84,6 +84,7 @@ $popover-arrow-width: 10px !default;
       margin-top: -$popover-arrow-outer-width;
       border-right-color: $popover-arrow-outer-color;
       border-left-width: 0;
+
       &::after {
         bottom: -$popover-arrow-width;
         left: 1px;
@@ -104,6 +105,7 @@ $popover-arrow-width: 10px !default;
       margin-left: -$popover-arrow-outer-width;
       border-top-width: 0;
       border-bottom-color: $popover-arrow-outer-color;
+
       &::after {
         top: 1px;
         margin-left: -$popover-arrow-width;
@@ -124,6 +126,7 @@ $popover-arrow-width: 10px !default;
       margin-top: -$popover-arrow-outer-width;
       border-right-width: 0;
       border-left-color: $popover-arrow-outer-color;
+
       &::after {
         right: 1px;
         bottom: -$popover-arrow-width;
@@ -135,23 +138,25 @@ $popover-arrow-width: 10px !default;
   }
 }
 
-
 // Offset the popover to account for the popover arrow
 .popover-title {
   display: none;
   padding: $popover-title-padding-y $popover-title-padding-x;
-  margin: 0; // reset heading margin
+  margin: 0;
+
+  // reset heading margin
   font-size: $font-size-base;
   background-color: $popover-title-bg;
   border-bottom: $popover-border-width solid darken($popover-title-bg, 5%);
-  $offset-border-width: ($border-width / $font-size-root);
+
+  $offset-border-width: $border-width / $font-size-root;
+
   // @include border-radius(($border-radius-lg - $offset-border-width) ($border-radius-lg - $offset-border-width) 0 0);
 }
 
 .popover-content {
   padding: $popover-content-padding-y $popover-content-padding-x;
 }
-
 
 // Arrows
 //
@@ -168,12 +173,12 @@ $popover-arrow-width: 10px !default;
     border-style: solid;
   }
 }
+
 .popover-arrow {
   border-width: $popover-arrow-outer-width;
 }
+
 .popover-arrow::after {
   content: "";
   border-width: $popover-arrow-width;
 }
-
-

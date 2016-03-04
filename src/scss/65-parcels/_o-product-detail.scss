@@ -1,12 +1,6 @@
 .o-product-detail {
   @include clearfix;
 
-  fieldset {
-    @include clearfix;
-
-    position: relative;
-  }
-
   .o-product-detail__title {
     position: relative;
 

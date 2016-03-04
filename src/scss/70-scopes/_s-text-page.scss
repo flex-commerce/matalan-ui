@@ -12,6 +12,7 @@
     min-height: 240px;
   }
 
+
   @include mq($from: lg) {
     min-height: 295px;
   }
@@ -153,14 +154,10 @@
   }
 }
 
-
-
 .page--text__custom {
   .page--text__custom--wrapper {
     background-color: $white;
     position: relative;
-
-
   }
 
   .panel.panel--subpanel {
@@ -171,11 +168,6 @@
     }
   }
 
-  .o-accord-container {
-    .o-accord__title {}
-  }
 
-  .o-accord__title {}
 }
 
-.header-wrapper--faq {}

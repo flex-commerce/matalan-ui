@@ -4,9 +4,6 @@
 
   &.in {
     display: block;
-
-    // padding-bottom: 1.5em;
-
   }
 }
 
@@ -14,10 +11,10 @@
 .o-accord__container {
   .disabled {
     opacity: 0.4;
+
     .collapsed {
       font-weight: normal;
     }
-    
   }
 
   > .panel > .collapse {
@@ -70,7 +67,7 @@
     font-weight: bold;
     cursor: pointer;
     position: relative;
-    padding: 1.5em 2em 1.5em 0;
+    padding: 1.5em 2em;
 
     .panel.disabled & {
       color: $cool-grey;
@@ -81,14 +78,11 @@
   .o-accord__title__block {
     position: relative;
 
-    .o-accord__title__index {
+    .o-accord__index {
       @include absolute(left 0);
 
-      line-height: 40px;
-
       // magic - matches title line-height for vertical align
-      // @include center(y);
-
+      line-height: 40px;
     }
   }
 }

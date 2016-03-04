@@ -5,6 +5,7 @@
 //
 // @mixin label-variant($color) {
 //     background-color: $color;
+
 //     &[href] {
 //         &:hover,
 //         &:focus {
@@ -14,40 +15,40 @@
 // }
 
 .c-lbl {
-    display: inline-block;
-    font-size: rem-calc(12);
-    font-weight: bold;
-    color: $white;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    padding: rem-calc(5 20);
-    // @include border-radius();
-    // Empty labels collapse automatically
-    &:empty {
-        display: none;
-    }
+  display: inline-block;
+  font-size: rem-calc(12);
+  font-weight: bold;
+  color: $white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  padding: rem-calc(5 20);
+
+  // @include border-radius();
+
+  // Empty labels collapse automatically
+  &:empty {
+    display: none;
+  }
 }
 
 // Add hover effects, but only for links
-a.c-lbl {
-
-}
+a.c-lbl {}
 
 // Label badges
 //
 // Make them extra rounded with a modifier to replace v3's badges.
 .c-lbl-bdg {
-    padding-left: .6em;
-    padding-right: .6em;
-    border-radius: 1rem;
+  padding-left: .6em;
+  padding-right: .6em;
+  border-radius: 1rem;
 }
 
 // Colors
 //
 // Contextual variations (linked labels get darker on :hover).
 .c-lbl-primary {
-  @include primary-style();
+  @include primary-style;
 }
 
 a.c-lbl-primary {
@@ -55,7 +56,7 @@ a.c-lbl-primary {
 }
 
 .c-lbl-secondary {
-  @include secondary-style();
+  @include secondary-style;
 }
 
 a.c-lbl-secondary {

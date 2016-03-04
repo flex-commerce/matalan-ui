@@ -2,7 +2,6 @@
   display: none;
 }
 
-
 // clearfixes
 %u-cf,
 .u-cf {
@@ -76,13 +75,15 @@
   width: 100%;
   position: absolute;
   bottom: 0;
-  text-align:center;
+  text-align: center;
   cursor: pointer;
   z-index: 999;
+
   i {
     @include font-size(30px);
   }
 }
+
 .u-pos-rel {
   position: relative;
 }

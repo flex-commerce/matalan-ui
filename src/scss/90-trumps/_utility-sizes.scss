@@ -1,10 +1,10 @@
+@include make-automargin-classes;
 
-@include make-automargin-classes();
 // @include make-zeroall-classes();
 
-
 @include make-spacer-classes(null);
-@include make-responsive-generated-classes();
+
+@include make-responsive-generated-classes;
 
 .u-h-800 {
   height: 800px;
@@ -15,5 +15,5 @@
 }
 
 .u-h-full {
- height: 100%;
+  height: 100%;
 }

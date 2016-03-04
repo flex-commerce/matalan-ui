@@ -21,6 +21,7 @@ $input-padding-y: $default-pad-y;
 
 .o-form__row {
   @include clearfix;
+
   padding-top: $form-row-padding-y;
   padding-bottom: $form-row-padding-y;
   line-height: $line-height;
@@ -87,7 +88,7 @@ $input-padding-y: $default-pad-y;
 
 // vertical form label bottom margin
 .o-form--default .o-form__row .o-form__label-contain {
-/*   margin-bottom: rem-calc(7); */
+  /*   margin-bottom: rem-calc(7); */
 }
 
 // labels above field

@@ -1,6 +1,7 @@
 $store-listings--active: $light-grey;
 $store-listings--hover: $light-grey-hover;
 $listings-keyline-color: $keyline-color;
+
 .pan-to-marker {
   display: block;
   width: 100%;
@@ -17,103 +18,110 @@ $listings-keyline-color: $keyline-color;
     text-decoration: none;
     color: $base-text-color;
   }
+
   .map-wrapper {
     @include absolute(top 0 right 1em bottom 0 left 0);
-    // img {
-    //   width: 100%;
-    // }
   }
+
   .o-store-locator__locations {
-/*     overflow-x: hidden; */
+    overflow-x: hidden;
+
     @include mq($from: md) {
       height: 600px;
       overflow-y: auto;
     }
   }
+
   .map {
     @include absolute(top 0 right 0 bottom 0 left 0);
+
     margin: 0;
     padding: 0;
   }
+
   .o-store-map-mobile {
     display: none;
     width: 100% !important;
     height: 300px !important;
   }
+
   .o-store-locator__listing-wrapper {
-    // outline: 2px solid red;
-    // display: block;
-    // text-decoration: none;
     padding-left: 2em;
     @include mq($from: md) {
-      border-bottom: 1px solid $listings-keyline-color;
+    border-bottom: 1px solid $listings-keyline-color;
     }
     position: relative;
   }
+
   .o-store-map-close {
     display: none;
   }
+
   .o-store-locator__listings {
     // required for scrolltop + position
     position: relative;
-    // p {
-    //   @include font-size(11px);
-    // }
   }
+
   .o-store-locator__listings__city {
     @include font-size(22px, 20px);
+
     @include mq($from: lg) {
       float: left;
       padding-top: 1rem;
     }
   }
+
   .o-store-locator__listings__distance {
     @include font-size(13px, 2);
+
     @include mq($from: lg) {
       float: left;
       padding-top: 1rem;
       padding-right: 1em;
     }
+
+
     color: $primary-color;
   }
+
   .o-store-locator__listings__address {
     @include font-size(16px);
   }
+
   .o-store-locator__listings__postcode {}
+
   // map marker icon in list tile
   .o-store-locator__listings__content:before {
     @include font-size(16px);
+
     font-family: flex-icons;
     content: $icon-menu-storefinder;
     position: absolute;
     left: 0.3em;
     top: 0.5em;
     @include mq($from: lg) {
-      top: 1.3em;
+    top: 1.3em;
     }
     color: $cool-grey;
   }
+
   .active .o-store-locator__listings__content:before {
     color: $primary-color;
   }
+
   .o-store-locator__listings .pan-to-marker:last-child {
     border-bottom: none;
   }
+
   // hover states for the left hand list
   @include mq($from: lg) {
     .o-store-locator__listing-wrapper:hover {
       background-color: $store-listings--hover;
     }
+
     .o-store-locator__listing-wrapper {
       &.active {
         background-color: $store-listings--active;
-        // arrow for store locator listing
-        //
-        // margin-right: 1em;
-        //   @include arrow(right, right, $light-grey, 15px);
-        // &:before {
-        //   @include center(y, abs);
-        // }
       }
     }
   }
@@ -122,61 +130,10 @@ $listings-keyline-color: $keyline-color;
 .o-store-single--detail {
   background-color: white;
   z-index: 10;
+
   @include mq($from: md) {
     @include center(y, abs);
+
     left: 36px;
   }
 }
-
-// todo - check this exists
-// .o-store-locator__listings .o-store-locator__listings .title {
-//   display: block;
-//   font-weight: 700;
-// }
-// todo - check this exists
-// .o-store-locator__listings .o-store-locator__listings .title small {
-//   font-weight: 400;
-// }
-// doesnt exist
-// .c-info-window__container {
-//   .c-info-window__title {
-//     font-family: 'Open Sans Condensed', sans-serif;
-//     font-size: 22px;
-//     font-weight: 400;
-//     padding: 10px;
-//     background-color: #48b5e9;
-//     color: white;
-//     margin: 1px;
-//     border-radius: 2px 2px 0 0;
-//     /* In accordance with the rounding of the default infowindow corners.
-//   }
-// }
-
-/* Marker tweaks */
-
-// .leaflet-popup-close-button {
-//   display: none;
-// }
-// .leaflet-popup-content {
-//   padding: 0 !important;
-//   width: 200px;
-// }
-// .leaflet-popup-content-wrapper {
-//   padding: 0 !important;
-// }
-// .leaflet-popup-content div {
-//   padding: 5px;
-// }
-// .leaflet-popup-content h3 {
-//   background: $primary-color;
-//   color: #fff;
-//   margin: 0;
-//   display: block;
-//   padding: 10px;
-//   border-radius: 3px 3px 0 0;
-//   font-weight: 700;
-//   margin-top: -15px;
-// }
-// .leaflet-container .leaflet-marker-icon {
-//   cursor: pointer;
-// }

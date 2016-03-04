@@ -49,12 +49,13 @@ a {
 
   &.link--text {
     text-decoration: underline;
+
     &:hover,
     &.active {
       // color: inherit;
+
     }
   }
-
 }
 
 .link--underline {
