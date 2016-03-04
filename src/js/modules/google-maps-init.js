@@ -4,7 +4,8 @@
 
 var map,
   mobilemap,
-  listings = document.getElementById('listings');
+  listings = document.getElementById('listings'),
+  isModal = false;
 
 // async script loader
 // could move this to a utils module
@@ -95,15 +96,17 @@ function initialize() {
 
 
       var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
-
-      if (!isModal && !isSingleStore) {
+      if (!isSingleStore) {
         printResults(data, isModal);
-        // document.getElementById('storeFinderContainer').scrollIntoView();
-        // scroll map & list into view when loaded
-        $('body, html').animate({
-          scrollTop: $('#storeFinderContainer').offset().top
-        }, 500);
+        if (!isModal) {
 
+          // document.getElementById('storeFinderContainer').scrollIntoView();
+          // scroll map & list into view when loaded
+          $('body, html').animate({
+            scrollTop: $('#storeFinderContainer').offset().top
+          }, 500);
+
+        }
       }
 
       var firstMarker = map.markers[0];
@@ -112,6 +115,8 @@ function initialize() {
 
       if (width > 0 && !isModal) {
         $('.map-wrapper').css('right', -width);
+      } else {
+        $('.map-wrapper').css('right', 0);
       }
 
 
@@ -531,7 +536,7 @@ function initialize() {
     // find store by postcode
     $('body').on('click', '.js-find-store', function(e) {
       e.preventDefault();
-      var isModal = true;
+      isModal = true;
       $(this).is("[data-click-collect]") ? isModal = true : isModal = false;
       var address = $('#addressEntry').val();
       GetLocation(address, isModal);
@@ -540,7 +545,7 @@ function initialize() {
     // find store by current location
     $('body').on('click', '.js-use-location', function(e) {
       e.preventDefault();
-      var isModal = true;
+      isModal = true;
       var locationIcon = $(this).find('i').prop('outerHTML');
       $(this).html(locationIcon + 'Searching').addClass('c-loading');
       $(this).is("[data-click-collect]") ? isModal = true : isModal = false;
@@ -563,6 +568,8 @@ function initialize() {
         var width = ($(window).width() - ($('.o-store-locator').offset().left + $('.o-store-locator').outerWidth()));
         if (width > 0 && !isModal) {
           $('.map-wrapper').css('right', -width);
+        } else {
+          $('.map-wrapper').css('right', 0);
         }
       }));
     }
