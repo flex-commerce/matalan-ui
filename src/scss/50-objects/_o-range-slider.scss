@@ -14,6 +14,7 @@ $barHeight: 0.4em;
   -moz-user-select: none;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
 }
 
 .noUi-target {
@@ -52,6 +53,7 @@ $barHeight: 0.4em;
 .noUi-state-tap .noUi-origin {
   -webkit-transition: left 0.3s, top 0.3s;
   transition: left 0.3s, top 0.3s;
+  -webkit-backface-visibility: hidden;
 }
 
 .noUi-state-drag * {
@@ -62,8 +64,7 @@ $barHeight: 0.4em;
  * Browsers can paint handles in their own layer.
  */
 .noUi-base {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
 }
 
 /* Slider size and handle placement;
@@ -87,6 +88,7 @@ $barHeight: 0.4em;
   -webkit-transition: background 450ms;
   transition: background 450ms;
   height: $barHeight -1;
+  -webkit-backface-visibility: hidden;
 }
 
 .noUi-origin {
@@ -95,53 +97,62 @@ $barHeight: 0.4em;
 
 //bottom bar background
 .noUi-background {
-  background: #D3D3D3;
-  border: 1px solid #D3D3D3;
+  background: $cool-grey;
+  border: 1px solid $cool-grey;
+  -webkit-backface-visibility: hidden;
 }
 
 //bottom bar background
 .noUi-target {
   border-radius: 2px;
-  background: #D3D3D3;
-  border: 1px solid #D3D3D3;
+  background: $cool-grey;
+  //border: 1px solid $cool-grey;
+  //-webkit-backface-visibility: hidden;
 }
 
 /* Handles and cursors;
  */
 .noUi-draggable {
   cursor: w-resize;
+  -webkit-backface-visibility: hidden;
 }
 
 .noUi-vertical .noUi-draggable {
   cursor: n-resize;
+  -webkit-backface-visibility: hidden;
 }
 
 .noUi-handle {
   border-radius: 50%;
   background: $primary-color;
   cursor: default;
+  -webkit-backface-visibility: hidden;
 }
 
 .noUi-handle.noUi-handle-upper {
   margin-top: -1px;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Disabled state;
  */
 [disabled].noUi-connect,
 [disabled] .noUi-connect {
-  background: #B8B8B8;
+  background: $primary-color;
+  -webkit-backface-visibility: hidden;
 }
 
 [disabled].noUi-origin,
 [disabled] .noUi-handle {
   cursor: not-allowed;
+  -webkit-backface-visibility: hidden;
 }
 
 .filters--range-value-left,
 .filters--range-value-right {
   float: left;
   margin-top: 1em;
+  -webkit-backface-visibility: hidden;
 }
 
 .filters--range-value-right {
