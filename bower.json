@@ -1,16 +1,32 @@
 {
   "name": "matalan-ui",
+<<<<<<< HEAD
   "version": "0.0.11",
+=======
+  "version": "0.0.6",
+>>>>>>> 0c4a753b988800a1e328ec3df8450fe04bf0961d
 
   "description": "This package is for the front end integration of the matalan.co.uk website",
 
   "main": [
     "./dist/css/main.css",
     "./dist/js/app.js",
+<<<<<<< HEAD
     "./dist/js/dev.js",
     "./dist/js/shared.js",
     "./dist/js/1.1.js",
     "./dist/js/modernizr-custom.js"
+=======
+    "./dist/js/1.1.js",
+    "./dist/js/modernizr-custom.js",
+    "./dist/fonts/ArcherPro-BoldIta.woff",
+    "./dist/fonts/ArcherPro-MediumIta.woff",
+    "./dist/fonts/ArcherPro-SemiboldIta.woff",
+    "./dist/fonts/didot.woff",
+    "./dist/fonts/flex-icons.woff",
+    "./dist/fonts/texgyreheros-bold-webfont.woff",
+    "./dist/fonts/texgyreheros-regular-webfont.woff"
+>>>>>>> 0c4a753b988800a1e328ec3df8450fe04bf0961d
   ],
 
   "ignore": [
