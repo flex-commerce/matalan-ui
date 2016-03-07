@@ -1,7 +1,9 @@
 $filters-border-color: $keyline-color;
 
 // flex end
-
+.o-filters {
+  z-index: 1000;
+}
 // layout begin
 @include mq($until: md) {
   .o-filters {
