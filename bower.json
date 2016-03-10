@@ -1,28 +1,23 @@
 {
   "name": "matalan-ui",
-  "version": "0.0.17",
+  "version": "0.0.18",
 
   "description": "This package is for the front end integration of the matalan.co.uk website",
 
   "main": [
-    "./dist/css/main.css",
-    "./dist/js/app.js",
-    "./dist/js/dev.js",
-    "./dist/js/shared.js",
-    "./dist/js/1.1.js",
-    "./dist/js/modernizr-custom.js"
+    "css/main.css",
+    "js/app.js",
+    "js/dev.js",
+    "js/shared.js",
+    "js/1.1.js",
+    "js/modernizr-custom.js",
+    "js/610e8c9c16b036bf3940d7fb5081b52e.svg",
+    "js/610e8c9c16b036bf3940d7fb5081b52e.svg"
+
   ],
 
   "ignore": [
-    "source",
-    "spec",
-    ".bowerrc",
-    ".gitignore",
-    ".jshintignore",
-    ".jshintrc",
-    "gruntfile.js",
-    "package.json",
-    "README.md"
+    "bower.json"
   ],
 
   "dependencies": {
