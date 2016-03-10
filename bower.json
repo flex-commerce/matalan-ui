@@ -1,18 +1,11 @@
 {
   "name": "matalan-ui",
-  "version": "0.0.19",
+  "version": "0.0.20",
 
   "description": "This package is for the front end integration of the matalan.co.uk website",
 
   "main": [
-    "css/main.css",
-    "js/app.js",
-    "js/dev.js",
-    "js/shared.js",
-    "js/1.1.js",
-    "js/modernizr-custom.js",
-    "js/610e8c9c16b036bf3940d7fb5081b52e.svg",
-    "js/610e8c9c16b036bf3940d7fb5081b52e.svg"
+
   ],
 
   "ignore": [
